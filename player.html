@@ -79,14 +79,17 @@
 
   function seekOnce() { if (t0 > 0) video.currentTime = t0; applySpeed(); }
 
-  if (video.canPlayType('application/vnd.apple.mpegurl')) {          // iPhone / Safari: native HLS
-    video.src = src;
-    video.addEventListener('loadedmetadata', seekOnce, { once: true });
-  } else if (window.Hls && Hls.isSupported()) {                       // Android Chrome etc.
+  // hls.js first (Android Chrome, desktop); native only where hls.js cannot run (iPhone Safari).
+  // Chrome answers "maybe" to canPlayType for HLS but then stalls, so the order matters.
+  if (window.Hls && Hls.isSupported()) {
     const hls = new Hls({ startPosition: t0 > 0 ? t0 : -1 });
+    window.hls = hls;                                                 // handy in devtools
     hls.loadSource(src); hls.attachMedia(video);
     hls.on(Hls.Events.MANIFEST_PARSED, applySpeed);
     hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) showErr('Could not load the stream (' + d.type + '). Check signal and reload.'); });
+  } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+    video.src = src;
+    video.addEventListener('loadedmetadata', seekOnce, { once: true });
   } else {
     showErr('This browser cannot play the stream. Open in Chrome or Safari.');
   }
