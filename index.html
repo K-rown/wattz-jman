@@ -4,42 +4,58 @@
 <meta charset="utf-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <meta name="robots" content="noindex, nofollow">
+<meta name="theme-color" content="#1e7a3a">
 <title>Path to Journeyman</title>
 <style>
-  :root { --bg:#f6f7f9; --card:#fff; --ink:#111; --mute:#666; --line:#e3e5e8; --here:#ffe58a; --done:#dfeee3; }
-  * { box-sizing: border-box; }
+  :root { --bg:#f3f4f6; --card:#fff; --ink:#111; --mute:#666; --line:#e3e5e8; --green:#1e7a3a; --green-bg:#dff5e4; --done:#e9ecef; }
+  * { box-sizing: border-box; -webkit-tap-highlight-color: transparent; }
   body { margin:0; background:var(--bg); color:var(--ink); font:16px/1.4 system-ui,-apple-system,"Segoe UI",Roboto,sans-serif; }
-  main { max-width: 760px; margin: 0 auto; padding: 16px 16px 48px; }
-  h1 { font-size: 1.6rem; margin: 0; letter-spacing: .02em; }
-  .brand { font-weight: 800; color:#222; }
-  .brand b { color:#2f6fd6; }
-  .sub { color: var(--mute); margin: 4px 0 14px; }
-  .here-bar { background: var(--here); border-radius: 8px; padding: 10px 12px; margin: 0 0 16px; font-weight: 600; }
-  .here-bar small { display:block; font-weight: 400; color:#4a4a2a; }
-  .strip { background: var(--done); border-radius: 8px; padding: 10px 12px; margin: 0 0 16px; }
-  .strip h2 { font-size: .8rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 6px; color:#2c5a3a; }
-  .chip { display:inline-block; background:#c9e2d1; color:#1e3f2a; border-radius: 999px; padding: 3px 10px; margin: 2px 4px 2px 0; font-size: .85rem; }
-  .chip::before { content: "✓ "; }
-  .card { background: var(--card); border: 1px solid var(--line); border-radius: 10px; margin: 0 0 12px; overflow: hidden; }
-  .card.here { outline: 3px solid #f2c94c; }
-  .card.done { opacity: .72; }
-  .card.off { background: #ececec; color:#777; }
-  .top { display:flex; align-items:center; justify-content:space-between; padding: 6px 12px; color:#fff; font-size:.8rem; font-weight:700; letter-spacing:.04em; }
-  .body { padding: 10px 12px 12px; }
-  .date { font-size: 1.5rem; font-weight: 800; line-height: 1; }
-  .head { font-weight: 700; margin: 4px 0 8px; }
-  .group { margin: 0 0 8px; }
-  .group .gh { font-size: .8rem; color: var(--mute); text-transform: uppercase; letter-spacing:.04em; }
-  .part { display:flex; gap: 8px; align-items: baseline; flex-wrap: wrap; padding: 3px 0; }
-  .part a { color:#1d4ed8; font-weight:600; text-decoration:none; }
-  .part .dur { color: var(--mute); font-size: .85rem; }
-  .part .pick { background:#fff3c4; border-radius:4px; padding: 0 6px; font-size:.85rem; }
-  .quiz { margin-top: 8px; font-weight: 600; }
-  .stop { color: var(--mute); font-size: .9rem; margin-top: 6px; }
-  .banner { background:#222; color:#fff; text-align:center; font-weight:800; letter-spacing:.06em; padding: 5px; font-size:.85rem; }
+  main { max-width: 640px; margin: 0 auto; padding: 12px 12px 60px; }
+  h1 { font-size: 1.25rem; margin: 0; letter-spacing: .02em; }
+  .brand { font-weight: 800; } .brand b { color:#2f6fd6; }
+  .sub { color: var(--mute); margin: 2px 0 10px; font-size: .9rem; }
+  .here-bar { position: sticky; top: 0; z-index: 5; background: var(--green); color:#fff; border-radius: 10px; padding: 10px 12px; margin: 0 0 12px; font-weight: 700; box-shadow: 0 2px 8px rgba(0,0,0,.15); display:flex; justify-content:space-between; align-items:center; gap:8px; }
+  .here-bar small { display:block; font-weight: 400; opacity:.9; font-size:.8rem; }
+  .here-bar button { background:#fff; color:var(--green); border:0; border-radius:8px; padding:8px 10px; font-weight:700; font-size:.85rem; flex:none; }
+  .strip { background: var(--green-bg); border-radius: 10px; padding: 10px 12px; margin: 0 0 12px; }
+  .strip h2 { font-size: .75rem; text-transform: uppercase; letter-spacing: .05em; margin: 0 0 6px; color:var(--green); }
+  .chip { display:inline-block; background:#c3e6cc; color:#1e3f2a; border-radius: 999px; padding: 3px 10px; margin: 2px 4px 2px 0; font-size: .8rem; }
+  .chip::before { content: "\2713  "; }
+  .card { background: var(--card); border: 1px solid var(--line); border-radius: 12px; margin: 0 0 10px; overflow: hidden; }
+  .card.here { border: 3px solid var(--green); box-shadow: 0 0 0 4px var(--green-bg); }
+  .card.isdone { background: var(--done); }
+  .card.isdone .date, .card.isdone .head { text-decoration: line-through; color: var(--mute); }
+  .card.off { background: #e9eaec; color:#777; }
+  .top { display:flex; align-items:center; justify-content:space-between; padding: 6px 12px; color:#fff; font-size:.75rem; font-weight:700; letter-spacing:.04em; }
+  .card.here .top .tag { background:#fff; color:var(--green); border-radius:6px; padding:1px 6px; }
+  .summary { display:flex; align-items:center; gap:10px; padding: 10px 12px; cursor:pointer; user-select:none; }
+  .summary .grow { flex:1; min-width:0; }
+  .date { font-size: 1.35rem; font-weight: 800; line-height: 1.1; }
+  .date .was { font-size:.75rem; font-weight:500; color:var(--mute); margin-left:6px; text-decoration: line-through; }
+  .head { font-weight: 600; margin-top: 2px; }
+  .brief { color: var(--mute); font-size:.85rem; margin-top: 2px; }
+  .chev { color:#aaa; font-size: 1.4rem; transition: transform .15s; }
+  .card.open .chev { transform: rotate(90deg); }
+  .done-box { width: 26px; height: 26px; accent-color: var(--green); margin: 0; flex: none; }
+  .body { display:none; padding: 0 12px 12px; border-top: 1px solid var(--line); }
+  .card.open .body { display:block; }
+  .group { margin: 10px 0 4px; }
+  .group .gh { font-size: .75rem; color: var(--mute); text-transform: uppercase; letter-spacing:.04em; }
+  .part { display:flex; gap: 8px; align-items: center; flex-wrap: wrap; padding: 6px 0; border-bottom: 1px dashed var(--line); }
+  .part a.u { color:#1d4ed8; font-weight:600; text-decoration:none; flex: 1 1 auto; }
+  .part .dur { color: var(--mute); font-size: .8rem; }
+  .part .pick { background:#fff3c4; border-radius:4px; padding: 0 6px; font-size:.8rem; }
+  .part .watch { background:#1d4ed8; color:#fff; border-radius:6px; padding:6px 10px; font-size:.8rem; font-weight:700; text-decoration:none; flex:none; }
+  .quiz { margin-top: 10px; font-weight: 700; }
+  .stop { color: var(--mute); font-size: .85rem; margin-top: 4px; }
+  .actions { display:flex; gap:8px; margin-top: 12px; flex-wrap: wrap; }
+  .actions button { flex:1; border:0; border-radius:8px; padding:10px; font-weight:700; font-size:.9rem; }
+  .b-here { background: var(--green); color:#fff; } .b-here[disabled] { opacity:.5; }
+  .b-reset { background:#e5e7eb; color:#333; }
+  .banner { background:#222; color:#fff; text-align:center; font-weight:800; letter-spacing:.06em; padding: 5px; font-size:.8rem; }
   .exam .body p { margin: 4px 0; }
-  footer { margin-top: 28px; font-size: .9rem; color: #333; }
-  footer h3 { font-size: .85rem; text-transform: uppercase; letter-spacing:.05em; margin: 16px 0 6px; }
+  footer { margin-top: 24px; font-size: .9rem; color: #333; }
+  footer h3 { font-size: .8rem; text-transform: uppercase; letter-spacing:.05em; margin: 14px 0 6px; }
   footer ul { margin: 0; padding-left: 18px; }
   .sm { font-size:.8rem; color: var(--mute); }
 </style>
@@ -47,8 +63,8 @@
 <body>
 <main>
   <h1><span class="brand">WATTZ L<b>E</b>D</span> · PATH TO JOURNEYMAN</h1>
-  <p class="sub">Fridays 7:00 to 12:00 at the shop, on the clock. Twenty sessions. Check it off.</p>
-  <div class="here-bar" id="here"></div>
+  <p class="sub">Fridays 7:00 to 12:00 at the shop, on the clock. Tap a Friday to open it.</p>
+  <div class="here-bar" id="here"><div id="hereText"></div><button id="jump">Go</button></div>
   <div class="strip" id="done"></div>
   <div id="cards"></div>
   <footer id="foot"></footer>
@@ -60,58 +76,122 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","genera
   const esc = s => String(s).replace(/[&<>"]/g, c => ({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;'}[c]));
   const hms = s => { s = Math.round(s); const h = Math.floor(s/3600), m = Math.floor(s%3600/60), x = s%60;
     return (h ? h + ':' + String(m).padStart(2,'0') : m) + ':' + String(x).padStart(2,'0'); };
-  const dlab = iso => { const d = new Date(iso + 'T12:00:00'); return d.toLocaleDateString('en-US', {month:'short', day:'numeric'}).toUpperCase(); };
-  const today = new Date(); today.setHours(0,0,0,0);
-  const dates = DATA.sessions.filter(s => !s.off).map(s => new Date(s.date + 'T00:00:00'));
-  // "We're here": the first Friday on/after today (a Friday counts as current through Saturday).
-  const next = DATA.sessions.filter(s => !s.off).find(s => (new Date(s.date + 'T00:00:00') - today) >= -24*3600*1000);
+  const D = i => new Date(i + 'T00:00:00');
+  const iso = d => d.getFullYear() + '-' + String(d.getMonth()+1).padStart(2,'0') + '-' + String(d.getDate()).padStart(2,'0');
+  const dlab = i => D(i).toLocaleDateString('en-US', {month:'short', day:'numeric'}).toUpperCase();
   const link = (id, t) => DATA.player + '?v=' + id + (t ? '&t=' + t : '');
+  const DAY = 86400000;
 
-  const here = document.getElementById('here');
-  if (next) here.innerHTML = "We're here → <b>Friday " + next.n + " · " + dlab(next.date) + "</b><small>Pick up at " + esc(DATA.position.label) + (DATA.position.at ? " @ " + hms(DATA.position.at) : "") + ". Tap a unit to watch.</small>";
-  else here.textContent = "All twenty Fridays are behind you.";
+  // ---- per-phone state ----
+  const KEY = 'ptj.v1';
+  let state = { here: null, done: {}, open: {} };
+  try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} };
 
-  const done = document.getElementById('done');
-  if (DATA.done.length) { done.appendChild($('h2', null, 'Already done')); DATA.done.forEach(d => done.appendChild($('span', 'chip', esc(d)))); }
-  else done.hidden = true;
-
-  const cards = document.getElementById('cards');
-  DATA.sessions.forEach(s => {
-    if (s.off) { const c = $('div', 'card off'); c.appendChild($('div', 'body', '<div class="date">' + dlab(s.off) + '</div><div class="head">No session · ' + esc(s.label) + '</div>')); cards.appendChild(c); return; }
-    const isHere = next && s.n === next.n, past = next ? s.n < next.n : true;
-    const c = $('div', 'card' + (isHere ? ' here' : '') + (s.checked || (past && !isHere) ? ' done' : '') + (s.exam ? ' exam' : ''));
-    const color = s.exam ? DATA.colors.Exam : (DATA.colors[fullBook(s)] || '#444');
-    c.appendChild($('div', 'top', '<span>FRIDAY ' + s.n + ' of 20</span><span>' + (s.exam ? 'exam' : s.hours + ' hrs') + '</span>')).style.background = color;
-    const b = $('div', 'body'); c.appendChild(b);
-    b.appendChild($('div', 'date', dlab(s.date)));
-    if (s.exam) {
-      b.appendChild($('div', 'head', esc(s.exam)));
-      s.lines.forEach(l => b.appendChild($('p', null, esc(l))));
-    } else {
-      b.appendChild($('div', 'head', esc(s.head)));
-      s.groups.forEach(g => {
-        const gd = $('div', 'group');
-        gd.appendChild($('div', 'gh', esc(g.book + (g.chapter === 'intro' ? ' · Intro' : g.chapter === 'summary' ? ' · Summary' : g.book === 'Exam Prep' ? '' : ' · Ch ' + g.chapter) + (g.chapter_title ? ' ' + g.chapter_title : '') + (g.page ? ' (pg ' + g.page + ')' : ''))));
-        g.parts.forEach(p => {
-          const row = $('div', 'part');
-          const a = $('a', null, esc(p.unit.label)); a.href = link(p.unit.id, p.t); a.target = '_blank'; a.rel = 'noopener';
-          row.appendChild(a);
-          row.appendChild($('span', 'dur', hms(p.unit.dur)));
-          if (p.t) row.appendChild($('span', 'pick', 'pick up at ' + hms(p.t)));
-          if (!p.complete) row.appendChild($('span', 'pick', 'stop at ' + hms(p.end)));
-          gd.appendChild(row);
-        });
-        b.appendChild(gd);
-      });
-      if (s.note) b.appendChild($('div', 'sm', esc(s.note)));
-      if (s.extra) b.appendChild($('div', 'sm', esc(s.extra)));
-      b.appendChild($('div', 'quiz', esc(s.quiz)));
-      if (s.stop) b.appendChild($('div', 'stop', 'Next Friday starts at ' + esc(s.stop.unit.book + ': ' + s.stop.unit.label) + (s.stop.at ? ' @ ' + hms(s.stop.at) : '')));
+  // ---- dates: "We're here" on card N moves N to the coming Friday and shifts everything after it ----
+  const today = new Date(); today.setHours(0,0,0,0);
+  function comingFriday() { const d = new Date(today); d.setDate(d.getDate() + ((5 - d.getDay() + 7) % 7)); return d; }
+  function effectiveDates() {
+    const out = {}; let shift = 0, from = null;
+    if (state.here) {
+      const s = DATA.sessions.find(x => x.n === state.here);
+      if (s) { from = D(s.date); shift = Math.round((comingFriday() - from) / (7 * DAY)) * 7 * DAY; }
     }
-    if (s.banner) c.appendChild($('div', 'banner', esc(s.banner)));
-    cards.appendChild(c);
+    DATA.sessions.forEach(s => {
+      const key = s.date || s.off, orig = D(key);
+      out[key] = iso((from && orig >= from) ? new Date(orig.getTime() + shift) : orig);
+    });
+    return out;
+  }
+  let dates = effectiveDates();
+  function currentN() {
+    if (state.here) return state.here;
+    const s = DATA.sessions.filter(x => !x.off).find(x => (D(dates[x.date]) - today) >= -DAY);
+    return s ? s.n : null;
+  }
+  const bookFull = short => Object.keys(DATA.colors).find(k => k === short || k.endsWith(short)
+    || (short === 'Theory' && k === 'Electrical Theory') || (short === 'Calcs' && k.startsWith('Fundamental')) || (short === 'B&G' && k.startsWith('Bonding')));
+
+  function render() {
+    dates = effectiveDates();
+    const cur = currentN();
+    const curS = DATA.sessions.find(x => x.n === cur);
+    document.getElementById('hereText').innerHTML = curS
+      ? "We're here → Friday " + curS.n + " · " + dlab(dates[curS.date]) + "<small>" + esc(curS.exam || curS.head) + (state.here ? " · dates shifted" : "") + "</small>"
+      : "All twenty Fridays are behind you.";
+    const done = document.getElementById('done'); done.innerHTML = '';
+    if (DATA.done.length) { done.appendChild($('h2', null, 'Already done')); DATA.done.forEach(d => done.appendChild($('span', 'chip', esc(d)))); }
+    else done.hidden = true;
+
+    const cards = document.getElementById('cards'); cards.innerHTML = '';
+    DATA.sessions.forEach(s => {
+      if (s.off) {
+        const c = $('div', 'card off');
+        c.appendChild($('div', 'summary', '<div class="grow"><div class="date">' + dlab(dates[s.off]) + '</div><div class="head">No session · ' + esc(s.label) + '</div></div>'));
+        cards.appendChild(c); return;
+      }
+      const isHere = s.n === cur, isDone = !!state.done[s.n];
+      const isOpen = (s.n in state.open) ? !!state.open[s.n] : isHere;
+      const c = $('div', 'card' + (isHere ? ' here' : '') + (isDone ? ' isdone' : '') + (isOpen ? ' open' : '') + (s.exam ? ' exam' : ''));
+      c.id = 'f' + s.n;
+      const color = s.exam ? DATA.colors.Exam : (s.groups && s.groups[0] ? DATA.colors[bookFull(s.groups[0].book)] : '#444');
+      const top = $('div', 'top', '<span>FRIDAY ' + s.n + ' of 20' + (isHere ? ' <span class="tag">WE’RE HERE</span>' : '') + '</span><span>' + (s.exam ? 'exam' : s.hours + ' hrs') + '</span>');
+      top.style.background = color || '#444'; c.appendChild(top);
+
+      const sum = $('div', 'summary');
+      const cb = $('input', 'done-box'); cb.type = 'checkbox'; cb.checked = isDone; cb.title = 'Done';
+      cb.addEventListener('click', e => { e.stopPropagation(); if (cb.checked) state.done[s.n] = true; else delete state.done[s.n]; save(); render(); });
+      sum.appendChild(cb);
+      const g = $('div', 'grow');
+      const shifted = dates[s.date] !== s.date;
+      g.appendChild($('div', 'date', dlab(dates[s.date]) + (shifted ? '<span class="was">' + dlab(s.date) + '</span>' : '')));
+      g.appendChild($('div', 'head', esc(s.exam || s.head)));
+      if (!s.exam) g.appendChild($('div', 'brief', esc(s.quiz)));
+      sum.appendChild(g);
+      sum.appendChild($('div', 'chev', '›'));
+      sum.addEventListener('click', () => { state.open[s.n] = !isOpen; save(); render(); });
+      c.appendChild(sum);
+
+      const b = $('div', 'body'); c.appendChild(b);
+      if (s.exam) {
+        s.lines.forEach(l => b.appendChild($('p', null, esc(l))));
+      } else {
+        s.groups.forEach(gr => {
+          const gd = $('div', 'group');
+          gd.appendChild($('div', 'gh', esc(gr.book + (gr.chapter === 'intro' ? ' · Intro' : gr.chapter === 'summary' ? ' · Summary' : gr.book === 'Exam Prep' ? '' : ' · Ch ' + gr.chapter) + (gr.chapter_title ? ' ' + gr.chapter_title : '') + (gr.page ? ' (pg ' + gr.page + ')' : ''))));
+          gr.parts.forEach(p => {
+            const row = $('div', 'part');
+            const a = $('a', 'u', esc(p.unit.label)); a.href = link(p.unit.id, p.t); a.target = '_blank'; a.rel = 'noopener';
+            row.appendChild(a);
+            row.appendChild($('span', 'dur', hms(p.unit.dur)));
+            if (p.t) row.appendChild($('span', 'pick', 'pick up at ' + hms(p.t)));
+            if (!p.complete) row.appendChild($('span', 'pick', 'stop at ' + hms(p.end)));
+            const w = $('a', 'watch', 'Watch'); w.href = a.href; w.target = '_blank'; w.rel = 'noopener'; row.appendChild(w);
+            gd.appendChild(row);
+          });
+          b.appendChild(gd);
+        });
+        if (s.note) b.appendChild($('div', 'sm', esc(s.note)));
+        if (s.extra) b.appendChild($('div', 'sm', esc(s.extra)));
+        b.appendChild($('div', 'quiz', esc(s.quiz)));
+        if (s.stop) b.appendChild($('div', 'stop', 'Next Friday starts at ' + esc(s.stop.unit.book + ': ' + s.stop.unit.label) + (s.stop.at ? ' @ ' + hms(s.stop.at) : '')));
+      }
+      const act = $('div', 'actions');
+      const bh = $('button', 'b-here', state.here === s.n ? "We’re here ✓" : "We’re here");
+      bh.disabled = state.here === s.n;
+      bh.addEventListener('click', e => { e.stopPropagation(); state.here = s.n; state.open[s.n] = true; save(); render(); document.getElementById('f' + s.n).scrollIntoView({behavior:'smooth', block:'start'}); });
+      act.appendChild(bh);
+      if (state.here) { const br = $('button', 'b-reset', 'Reset dates'); br.addEventListener('click', e => { e.stopPropagation(); state.here = null; save(); render(); }); act.appendChild(br); }
+      b.appendChild(act);
+      if (s.banner) c.appendChild($('div', 'banner', esc(s.banner)));
+      cards.appendChild(c);
+    });
+  }
+  document.getElementById('jump').addEventListener('click', () => {
+    const n = currentN(); if (!n) return; state.open[n] = true; save(); render();
+    document.getElementById('f' + n).scrollIntoView({behavior:'smooth', block:'start'});
   });
-  function fullBook(s) { const g = s.groups && s.groups[0]; if (!g) return null; return Object.keys(DATA.colors).find(k => k.startsWith(g.book) || (g.book === 'Theory' && k === 'Electrical Theory') || (g.book === 'Calcs' && k.startsWith('Fundamental')) || (g.book === 'B&G' && k.startsWith('Bonding'))); }
+  render();
 
   const f = document.getElementById('foot');
   f.appendChild($('h3', null, 'How a Friday runs'));
@@ -120,7 +200,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","genera
   const ul2 = $('ul'); DATA.footer.rules.forEach(x => ul2.appendChild($('li', null, esc(x)))); f.appendChild(ul2);
   f.appendChild($('h3', null, 'Where this ends'));
   const ul3 = $('ul'); DATA.footer.ends.forEach(([t, x]) => ul3.appendChild($('li', null, '<b>' + esc(t) + '</b> — ' + esc(x)))); f.appendChild(ul3);
-  f.appendChild($('p', 'sm', 'Passing score is 70%. We aim higher. · Generated ' + DATA.generated + ' from progress.md'));
+  f.appendChild($('p', 'sm', "Passing score is 70%. We aim higher. · Done marks and We’re here are saved on this phone only. · Generated " + DATA.generated));
 })();
 </script>
 </body>
