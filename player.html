@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="robots" content="noindex, nofollow, noarchive">
+<meta name="referrer" content="no-referrer">
+<title>Wattz Player</title>
+<style>
+  :root { color-scheme: dark; }
+  html, body { margin: 0; background: #111; color: #eee; font: 16px/1.4 system-ui, -apple-system, Segoe UI, Roboto, sans-serif; }
+  main { max-width: 960px; margin: 0 auto; padding: 12px 16px 32px; }
+  .wrap { position: relative; width: 100%; aspect-ratio: 16 / 9; background: #000; border-radius: 8px; overflow: hidden; }
+  video { position: absolute; inset: 0; width: 100%; height: 100%; }
+  h1 { font-size: 1.15rem; margin: 14px 0 4px; }
+  .sub { color: #aaa; font-size: 0.9rem; margin: 0 0 12px; }
+  .row { display: flex; flex-wrap: wrap; gap: 8px; margin-top: 10px; }
+  button, a.btn { background: #1d4ed8; color: #fff; border: 0; border-radius: 6px; padding: 10px 14px; font-size: 0.95rem; text-decoration: none; }
+  button.alt, a.alt { background: #333; }
+  .err { background: #7f1d1d; color: #fee2e2; padding: 12px; border-radius: 6px; margin-top: 12px; }
+  .list { margin-top: 24px; }
+  .list a { display: block; color: #93c5fd; padding: 6px 0; border-bottom: 1px solid #222; text-decoration: none; }
+  .list h2 { font-size: 0.9rem; color: #aaa; margin: 18px 0 4px; text-transform: uppercase; letter-spacing: .04em; }
+  small { color: #777; }
+</style>
+</head>
+<body>
+<main>
+  <div class="wrap"><video id="v" controls playsinline preload="metadata"></video></div>
+  <h1 id="title">Loading…</h1>
+  <p class="sub" id="sub"></p>
+  <div class="row" id="ctl" hidden>
+    <button id="speed">1.5×</button>
+    <button id="resume" class="alt" hidden>Pick up at <span id="resumeAt"></span></button>
+    <a class="btn alt" id="back" href="./">Calendar</a>
+  </div>
+  <div id="err" class="err" hidden></div>
+  <div class="list" id="list"></div>
+  <p><small>Private crew link. Streams from Mike Holt's own servers; nothing is stored here.</small></p>
+</main>
+
+<script src="https://cdn.jsdelivr.net/npm/hls.js@1.5.15/dist/hls.min.js"></script>
+<script>
+(async function () {
+  const q = new URLSearchParams(location.search);
+  const id = (q.get('v') || '').replace(/[^A-Za-z0-9]/g, '');
+  const t0 = parseFloat(q.get('t') || '0') || 0;           // seconds to start at
+  const video = document.getElementById('v');
+  const $ = s => document.getElementById(s);
+
+  let units = [];
+  try { units = (await (await fetch('videos.json')).json()).units; } catch (e) {}
+  const u = units.find(x => x.video_id === id);
+
+  function fmt(s) { s = Math.round(s); const h = Math.floor(s / 3600), m = Math.floor(s % 3600 / 60), x = s % 60;
+    return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(x).padStart(2, '0'); }
+  function label(x) { return (x.kind === 'unit' ? (x.book === 'Fundamental NEC Calculations' ? 'Ch ' + x.chapter + ' ' : x.article ? 'Art ' + x.article + ' ' : 'Unit ' + x.unit + ' ') : '') + x.title; }
+
+  if (!id) {
+    $('title').textContent = 'Wattz LED · Path to Journeyman';
+    $('sub').textContent = 'Pick a video. Same order as the wall.';
+    renderList();
+    return;
+  }
+
+  const src = 'https://vod.mikeholt.com/' + id + '/HLS/' + id + '.m3u8';
+  $('title').textContent = u ? label(u) : id;
+  $('sub').textContent = u ? u.book + ' · Chapter ' + u.chapter + (u.chapter_title ? ' ' + u.chapter_title : '') + ' · ' + fmt(u.duration_s) : '';
+  document.title = (u ? label(u) : id) + ' · Wattz';
+  $('ctl').hidden = false;
+
+  // playback speed toggle: 1.5 (default, per the wall) → 1.25 → 1 → 1.5
+  const speeds = [1.5, 1.25, 1];
+  let si = 0;
+  function applySpeed() { video.playbackRate = speeds[si]; $('speed').textContent = speeds[si] + '×'; }
+  $('speed').onclick = () => { si = (si + 1) % speeds.length; applySpeed(); };
+
+  if (t0 > 0) { $('resume').hidden = false; $('resumeAt').textContent = fmt(t0); $('resume').onclick = () => { video.currentTime = t0; video.play(); }; }
+
+  function seekOnce() { if (t0 > 0) video.currentTime = t0; applySpeed(); }
+
+  if (video.canPlayType('application/vnd.apple.mpegurl')) {          // iPhone / Safari: native HLS
+    video.src = src;
+    video.addEventListener('loadedmetadata', seekOnce, { once: true });
+  } else if (window.Hls && Hls.isSupported()) {                       // Android Chrome etc.
+    const hls = new Hls({ startPosition: t0 > 0 ? t0 : -1 });
+    hls.loadSource(src); hls.attachMedia(video);
+    hls.on(Hls.Events.MANIFEST_PARSED, applySpeed);
+    hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) showErr('Could not load the stream (' + d.type + '). Check signal and reload.'); });
+  } else {
+    showErr('This browser cannot play the stream. Open in Chrome or Safari.');
+  }
+
+  function showErr(m) { const e = $('err'); e.textContent = m; e.hidden = false; }
+  renderList();
+
+  function renderList() {
+    if (!units.length) return;
+    const host = $('list'); let book = '';
+    units.filter(x => x.kind === 'unit').forEach(x => {
+      if (x.book !== book) { book = x.book; const h = document.createElement('h2'); h.textContent = book; host.appendChild(h); }
+      const a = document.createElement('a');
+      a.href = 'player.html?v=' + x.video_id;
+      a.textContent = label(x) + '  ·  ' + fmt(x.duration_s);
+      if (x.video_id === id) a.style.color = '#fff';
+      host.appendChild(a);
+    });
+  }
+})();
+</script>
+</body>
+</html>
