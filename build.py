@@ -204,3 +204,62 @@ total = sum(d["used"] for d in days)
 print(f"{len(days)} weekdays, {days[0]['date']} → {days[-1]['date']}, "
       f"{total / 3600:.1f} h of video = {total / SPEED / 3600:.1f} h at 1.5x, "
       f"avg {total / len(days) / SPEED / 60:.0f} min/day; exams {[e['date'] for e in exams]}")
+
+# ---- artifact.html: the same page for claude.ai, progress kept per viewer by Claude's own store ----
+A = html
+a0, a1 = A.index("<title>"), A.index("</head>")
+head = A[a0:a1]
+body = A[A.index("<body>") + len("<body>"):A.rindex("</body>")]
+# no name card, no Supabase
+body = re.sub(r'<div class="who" id="who" hidden>.*?</div>\n', "", body, count=1, flags=re.S)
+body = body.replace('  <div id="whoSlot"></div>\n', "")
+body = re.sub(r'// Progress sync: the Supabase project.*?\nconst SYNC = \{[^\n]*\n', "", body, count=1, flags=re.S)
+s0 = body.index("  const KEY = 'ptj.v2', WHO = 'ptj.who';")
+s1 = body.index("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n") + len("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n")
+CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
+  let state = { here: null, done: {}, open: {} };
+  try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
+  let store = null, syncWord = 'Saved on this device only.';
+  // open shows nothing across devices on purpose; done + here do
+  const shared = () => ({ here: state.here, done: state.done });
+  let writing = Promise.resolve();
+  function push() {
+    if (!store) return;
+    const body = shared();
+    writing = writing.then(() => store.set(body)).then(() => { syncWord = 'Synced to your Claude account'; paintSync(); },
+      e => { syncWord = e && e.code === 'quota_exceeded' ? 'Not saved: storage is full' : 'Not saved just now — kept on this device'; paintSync(); });
+  }
+  const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} push(); };
+  function paintSync() {
+    const el = document.getElementById('syncWord'); if (!el) return;
+    el.textContent = syncWord; el.className = 'sm' + (syncWord.startsWith('Synced') ? ' synced' : '');
+  }
+  (async () => {
+    const user = window.claude && await claude.use('user');
+    const db = window.claude && await claude.use('db');
+    const uid = user && await user.id();
+    if (!db || !uid) { paintSync(); return; }
+    store = db.doc('data/users/' + uid + '/progress');
+    let first = true;
+    store.onSnapshot(snap => {
+      if (snap.exists) { const s = snap.data(); state.here = s.here || null; state.done = s.done || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+      else if (first && (state.here || Object.keys(state.done).length)) push();   // this device had marks before sync: keep them
+      first = false;
+      syncWord = 'Synced to your Claude account'; render(); paintSync();
+    }, () => { store = null; syncWord = 'Saved on this device only.'; paintSync(); });
+  })();
+"""
+body = body[:s0] + CLAUDE_SYNC + body[s1:]
+f0 = body.index("  const sw = $('p', 'sm');")
+f1 = body.index("  f.appendChild(sw); paintSync();\n") + len("  f.appendChild(sw); paintSync();\n")
+body = body[:f0] + "  const sw = $('p', 'sm'); sw.appendChild($('span', null, '')); sw.lastChild.id = 'syncWord';\n  f.appendChild(sw); paintSync();\n" + body[f1:]
+body = body.replace("An hour or two every weekday, on your own time. Weekends are for catching up. Tap a day to open it.",
+                    "An hour or two every weekday, on your own time. Weekends are for catching up. Tap a day to open it. Your marks follow your Claude sign-in.")
+# both themes: the crew page is light; give the artifact a dark set on the same tokens
+head = head.replace("</style>", """  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#15171a; --card:#1f2226; --ink:#f2f2f2; --mute:#a3a7ad; --line:#33373d; --green:#3fa34d; --green-bg:#1c3a24; --done:#2a2d31; } }
+  :root[data-theme="dark"] { --bg:#15171a; --card:#1f2226; --ink:#f2f2f2; --mute:#a3a7ad; --line:#33373d; --green:#3fa34d; --green-bg:#1c3a24; --done:#2a2d31; }
+  body { background: var(--bg); }
+</style>""", 1)
+body = body.replace("  pull();\n})();", "})();")
+open("artifact.html", "w").write(head + body)
+print("artifact.html written")
