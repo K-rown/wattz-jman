@@ -176,12 +176,13 @@ DATA = {
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
             ["0:05", "The day's block at 1.5x with captions, NEC open, tabbing as you go"],
             ["Chapter day", "The quiz, on your own, scored before you put the book down"],
+            ["Done", "Tick the day. The next one is ready whenever you are — tonight if you like"],
             ["Last minute", "Write the stop point on this wall"],
         ],
         "rules": [
-            "An hour or two, every weekday. The days are the days.",
-            "Miss a day? Saturday and Sunday are for catching up, nothing else. On pace, the weekend is yours.",
-            "Never more than two days in the hole. Say so on Friday and the crew watches with you Saturday.",
+            "An hour or two a day, in order. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
+            "Behind? The weekend is for catching up. Ahead? The weekend is yours.",
+            "Never more than two days behind. Say so on Friday and the crew watches with you Saturday.",
             "Bring your NEC every day and tab it as you go. Tabs are the only thing you can take into the exam.",
             "Calcs are done on paper, before Mike shows the answer.",
         ],
@@ -221,7 +222,7 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
   try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
   let store = null, syncWord = 'Saved on this device only.';
   // open shows nothing across devices on purpose; done + here do
-  const shared = () => ({ here: state.here, done: state.done });
+  const shared = () => ({ done: state.done });
   let writing = Promise.resolve();
   function push() {
     if (!store) return;
@@ -242,8 +243,8 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
     store = db.doc('data/users/' + uid + '/progress');
     let first = true;
     store.onSnapshot(snap => {
-      if (snap.exists) { const s = snap.data(); state.here = s.here || null; state.done = s.done || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
-      else if (first && (state.here || Object.keys(state.done).length)) push();   // this device had marks before sync: keep them
+      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+      else if (first && Object.keys(state.done).length) push();   // this device had marks before sync: keep them
       first = false;
       syncWord = 'Synced to your Claude account'; render(); paintSync();
     }, () => { store = null; syncWord = 'Saved on this device only.'; paintSync(); });
@@ -253,8 +254,8 @@ body = body[:s0] + CLAUDE_SYNC + body[s1:]
 f0 = body.index("  const sw = $('p', 'sm');")
 f1 = body.index("  f.appendChild(sw); paintSync();\n") + len("  f.appendChild(sw); paintSync();\n")
 body = body[:f0] + "  const sw = $('p', 'sm'); sw.appendChild($('span', null, '')); sw.lastChild.id = 'syncWord';\n  f.appendChild(sw); paintSync();\n" + body[f1:]
-body = body.replace("An hour or two every weekday, on your own time. Weekends are for catching up. Tap a day to open it.",
-                    "An hour or two every weekday, on your own time. Weekends are for catching up. Tap a day to open it. Your marks follow your Claude sign-in.")
+body = body.replace("Tap a day to open it.",
+                    "Tap a day to open it. Your marks follow your Claude sign-in.")
 # both themes: the crew page is light; give the artifact a dark set on the same tokens
 head = head.replace("</style>", """  @media (prefers-color-scheme: dark) { :root:not([data-theme="light"]) { --bg:#15171a; --card:#1f2226; --ink:#f2f2f2; --mute:#a3a7ad; --line:#33373d; --green:#3fa34d; --green-bg:#1c3a24; --done:#2a2d31; } }
   :root[data-theme="dark"] { --bg:#15171a; --card:#1f2226; --ink:#f2f2f2; --mute:#a3a7ad; --line:#33373d; --green:#3fa34d; --green-bg:#1c3a24; --done:#2a2d31; }
