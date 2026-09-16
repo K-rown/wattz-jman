@@ -33,6 +33,17 @@ start = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else today + dt.
 while start.weekday() >= 5 or start.isoformat() in HOLIDAYS:
     start += dt.timedelta(days=1)
 
+# ---- Vol 2's listed running times are wrong (the intro is 2:40 on the player, 4:35 in the list; six
+# articles share a neighbour's number). The 33 videos are right, so each chapter's videos are re-timed
+# in proportion to Mike Holt's printed chapter hours, and the card says "about". Re-measure to retire this.
+VOL2_PRINTED = {"intro": 160, 5: 5*3600+43*60+33, 6: 4*3600+45*60+56, 7: 3*3600+20*60+19, 8: 19*60+21}
+for ch, printed in VOL2_PRINTED.items():
+    grp = [u for u in units if u["book"] == "NEC Vol 2" and u["chapter"] == ch]
+    listed = sum(u["dur"] for u in grp)
+    for u in grp:
+        u["dur"] = round(u["dur"] * printed / listed) if listed else printed
+        u["est"] = True
+
 # ---- pack the units into days ----
 cursor = {"i": 0, "t": C["position"]["at"] if units[0]["id"] == C["position"]["id"] else 0}
 days = []
@@ -96,7 +107,7 @@ for n, day in enumerate(days, 1):
         key = (u["book"], u["chapter"])
         if not groups or groups[-1]["_key"] != key:
             groups.append({"_key": key, "book": u["book"], "chapter": u["chapter"], "chapter_title": u["chapter_title"], "page": u["page"], "parts": []})
-        groups[-1]["parts"].append({"unit": {k: u[k] for k in ("id", "book", "label", "dur", "kind")}, "t": p["t"], "end": p["end"], "complete": p["complete"]})
+        groups[-1]["parts"].append({"unit": {k: u[k] for k in ("id", "book", "label", "dur", "kind", "est") if k in u}, "t": p["t"], "end": p["end"], "complete": p["complete"]})
     for g in groups: del g["_key"]
     heads = []
     for p in day["parts"]:
@@ -125,6 +136,7 @@ for n, day in enumerate(days, 1):
 
 # ---- exams: the three Saturdays after the last video ----
 sat = last_video + dt.timedelta(days=(5 - last_video.weekday()) % 7 or 7)
+if (sat - last_video).days < 4: sat += dt.timedelta(days=7)   # a week to breathe before the first sitting
 exams = []
 for k, lines in enumerate([
     ["Timed. Permitted NEC only. No notes, no phones.", "Score together — every miss is a rewatch."],
@@ -146,11 +158,13 @@ for book in C["checklist"]:
         if book["key"] == "Exam":
             rows.append(dict(r, ours=None, days=[e["n"] for e in exams], done_before=False)); continue
         vids = [v for v in CAT.values() if v["book"] == CATBOOK[book["key"]] and ((v["unit"] if book["key"] == "Exam Prep" else v["chapter"]) in chs or ("intro" in chs and v["kind"] == "intro" and v["chapter"] is None))]
-        ours = sum(v["duration_s"] for v in vids)
+        est = {u["id"]: u["dur"] for u in units if u.get("est")}
+        ours = sum(est.get(v["video_id"], v["duration_s"]) for v in vids)
+        estimated = any(v["video_id"] in est for v in vids)
         ids = {v["video_id"] for v in vids}
         days_ = sorted({s["n"] for s in sessions for g in s["groups"] for p in g["parts"] if p["unit"]["id"] in ids})
         scheduled = {p["unit"]["id"] for s in sessions for g in s["groups"] for p in g["parts"]}
-        rows.append(dict(r, ours=ours, days=days_, done_before=bool(ids) and not (ids & scheduled)))
+        rows.append(dict(r, ours=ours, est=estimated, days=days_, done_before=bool(ids) and not (ids & scheduled)))
     checklist.append(dict(book, rows=rows))
 DATA = {
     "player": C["player"], "books": C["books"], "generated": today.isoformat(),
