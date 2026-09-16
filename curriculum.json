@@ -12,7 +12,7 @@
   "Theory Ch 5",
   "Theory Ch 6",
   "Theory Ch 7",
-  "Theory Ch 8 U21\u201323"
+  "Theory Ch 8 U21–23"
  ],
  "colors": {
   "Electrical Theory": "#3fa34d",
@@ -1823,6 +1823,296 @@
     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
     "page": 537
    }
+  }
+ ],
+ "checklist": [
+  {
+   "book": "Understanding Electrical Theory",
+   "key": "Theory",
+   "total": 83057,
+   "rows": [
+    {
+     "ch": 1,
+     "name": "Chapter 1—Electrical Fundamentals",
+     "s": 9478,
+     "page": 1
+    },
+    {
+     "ch": 2,
+     "name": "Chapter 2—Uses and Dangers of Electricity",
+     "s": 8319,
+     "page": 33
+    },
+    {
+     "ch": 3,
+     "name": "Chapter 3—Magnetism and Electromagnetism",
+     "s": 4940,
+     "page": 55
+    },
+    {
+     "ch": 4,
+     "name": "Chapter 4—Mathematics",
+     "s": 3597,
+     "page": 71
+    },
+    {
+     "ch": 5,
+     "name": "Chapter 5—Ohm’s Law and Watt’s Law",
+     "s": 3663,
+     "page": 91
+    },
+    {
+     "ch": 6,
+     "name": "Chapter 6—Electrical Circuit Types",
+     "s": 5857,
+     "page": 107
+    },
+    {
+     "ch": 7,
+     "name": "Chapter 7—Alternating Current",
+     "s": 12974,
+     "page": 137
+    },
+    {
+     "ch": 8,
+     "name": "Chapter 8—Motors, Generators, Relays & Transformers",
+     "s": 11408,
+     "page": 177
+    },
+    {
+     "ch": 9,
+     "name": "Chapter 9—Protective Devices",
+     "s": 15356,
+     "page": 215
+    },
+    {
+     "ch": 10,
+     "name": "Chapter 10—General Knowledge",
+     "s": 6308,
+     "page": 241
+    }
+   ]
+  },
+  {
+   "book": "Understanding the NEC, Vol. 1 (Articles 90–480)",
+   "key": "NEC Vol 1",
+   "total": 109833,
+   "rows": [
+    {
+     "ch": [
+      "intro",
+      0
+     ],
+     "name": "Introduction to the NEC",
+     "s": 5474,
+     "page": 7
+    },
+    {
+     "ch": 1,
+     "name": "Chapter 1—General Rules",
+     "s": 11937,
+     "page": 17
+    },
+    {
+     "ch": 2,
+     "name": "Chapter 2—Wiring and Protection",
+     "s": 29285,
+     "page": 101
+    },
+    {
+     "ch": 3,
+     "name": "Chapter 3—Wiring Methods and Materials",
+     "s": 39817,
+     "page": 335
+    },
+    {
+     "ch": 4,
+     "name": "Chapter 4—Equipment for General Use",
+     "s": 22892,
+     "page": 531
+    }
+   ]
+  },
+  {
+   "book": "Bonding and Grounding (Article 250 and related rules)",
+   "key": "B&G",
+   "total": 50577,
+   "rows": [
+    {
+     "ch": [
+      "intro"
+     ],
+     "name": "Understanding Bonding and Grounding",
+     "s": 2521,
+     "page": null
+    },
+    {
+     "ch": 2,
+     "name": "Chapter 2—Wiring and Protection",
+     "s": 28965,
+     "page": 123
+    },
+    {
+     "ch": 3,
+     "name": "Chapter 3—Wiring Methods and Materials",
+     "s": 1592,
+     "page": 221
+    },
+    {
+     "ch": 4,
+     "name": "Chapter 4—Equipment for General Use",
+     "s": 1778,
+     "page": 275
+    },
+    {
+     "ch": 5,
+     "name": "Chapter 5—Special Occupancies",
+     "s": 3045,
+     "page": 299
+    },
+    {
+     "ch": 6,
+     "name": "Chapter 6—Special Equipment",
+     "s": 5993,
+     "page": 323
+    },
+    {
+     "ch": 8,
+     "name": "Chapter 8—Communications Systems",
+     "s": 397,
+     "page": 357
+    },
+    {
+     "ch": "ADV",
+     "name": "Advanced 250 units (36–41) — on the stream, not on the printed checklist",
+     "s": null,
+     "page": null
+    }
+   ]
+  },
+  {
+   "book": "Understanding the NEC, Vol. 2 (Articles 500–810)",
+   "key": "NEC Vol 2",
+   "total": 50949,
+   "rows": [
+    {
+     "ch": 5,
+     "name": "Chapter 5—Special Occupancies",
+     "s": 20613,
+     "page": 125
+    },
+    {
+     "ch": 6,
+     "name": "Chapter 6—Special Equipment",
+     "s": 17156,
+     "page": 229
+    },
+    {
+     "ch": 7,
+     "name": "Chapter 7—Special Conditions",
+     "s": 12019,
+     "page": 385
+    },
+    {
+     "ch": 8,
+     "name": "Chapter 8—Communications Systems",
+     "s": 1161,
+     "page": 503
+    }
+   ]
+  },
+  {
+   "book": "Fundamental NEC Calculations",
+   "key": "Calcs",
+   "total": 18939,
+   "rows": [
+    {
+     "ch": 1,
+     "name": "Chapter 1—General Rules",
+     "s": 1042,
+     "page": 19
+    },
+    {
+     "ch": 2,
+     "name": "Chapter 2—Wiring and Protection",
+     "s": 6620,
+     "page": 45
+    },
+    {
+     "ch": 3,
+     "name": "Chapter 3—Wiring Methods and Materials",
+     "s": 5415,
+     "page": 97
+    },
+    {
+     "ch": 4,
+     "name": "Chapter 4—Equipment for General Use",
+     "s": 4941,
+     "page": 129
+    },
+    {
+     "ch": 6,
+     "name": "Chapter 6—Special Equipment",
+     "s": 901,
+     "page": 155
+    }
+   ]
+  },
+  {
+   "book": "Electrical Exam Preparation",
+   "key": "Exam Prep",
+   "total": 46009,
+   "rows": [
+    {
+     "ch": 1,
+     "name": "Unit 1—Raceway Calculations",
+     "s": 8615,
+     "page": 241
+    },
+    {
+     "ch": 2,
+     "name": "Unit 2—Box Calculations",
+     "s": 4831,
+     "page": 265
+    },
+    {
+     "ch": 3,
+     "name": "Unit 3—Conductor Sizing and Protection Calculations",
+     "s": 8862,
+     "page": 283
+    },
+    {
+     "ch": 4,
+     "name": "Unit 4—Motor, Air-Conditioning, and Transformer Calculations",
+     "s": 10214,
+     "page": 315
+    },
+    {
+     "ch": 5,
+     "name": "Unit 5—Voltage-Drop Calculations",
+     "s": 3773,
+     "page": 351
+    },
+    {
+     "ch": 6,
+     "name": "Unit 6—Dwelling Unit Calculations",
+     "s": 9217,
+     "page": 369
+    }
+   ]
+  },
+  {
+   "book": "Journeyman Electrician Simulated Exams",
+   "key": "Exam",
+   "total": null,
+   "rows": [
+    {
+     "ch": "exam",
+     "name": "Three simulated exams, real conditions",
+     "s": null,
+     "page": null
+    }
+   ]
   }
  ]
 }

@@ -134,11 +134,29 @@ for k, lines in enumerate([
     exams.append({"n": len(sessions) + k + 1, "date": (sat + dt.timedelta(days=7 * k)).isoformat(), "exam": f"Simulated Exam {k + 1}", "lines": lines})
 
 fmt = lambda d: d.strftime("%b %-d")
+
+# ---- the printed checklist, resolved: how many seconds the stream list holds per row, and which days carry it ----
+CAT = {u["video_id"]: u for u in json.load(open("videos.json"))["units"]}
+CATBOOK = {"Theory": "Electrical Theory", "NEC Vol 1": "NEC Vol 1", "B&G": "Bonding & Grounding", "NEC Vol 2": "NEC Vol 2", "Calcs": "Fundamental NEC Calculations", "Exam Prep": "Exam Prep"}
+checklist = []
+for book in C["checklist"]:
+    rows = []
+    for r in book["rows"]:
+        chs = r["ch"] if isinstance(r["ch"], list) else [r["ch"]]
+        if book["key"] == "Exam":
+            rows.append(dict(r, ours=None, days=[e["n"] for e in exams], done_before=False)); continue
+        vids = [v for v in CAT.values() if v["book"] == CATBOOK[book["key"]] and ((v["unit"] if book["key"] == "Exam Prep" else v["chapter"]) in chs or ("intro" in chs and v["kind"] == "intro" and v["chapter"] is None))]
+        ours = sum(v["duration_s"] for v in vids)
+        ids = {v["video_id"] for v in vids}
+        days_ = sorted({s["n"] for s in sessions for g in s["groups"] for p in g["parts"] if p["unit"]["id"] in ids})
+        scheduled = {p["unit"]["id"] for s in sessions for g in s["groups"] for p in g["parts"]}
+        rows.append(dict(r, ours=ours, days=days_, done_before=bool(ids) and not (ids & scheduled)))
+    checklist.append(dict(book, rows=rows))
 DATA = {
     "player": C["player"], "books": C["books"], "generated": today.isoformat(),
     "position": C["position"], "done": C["done"], "colors": C["colors"],
     "start": days[0]["date"], "holidays": HOLIDAYS,
-    "sessions": sessions, "exams": exams,
+    "sessions": sessions, "exams": exams, "checklist": checklist,
     "footer": {
         "how": [
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
