@@ -1,0 +1,376 @@
+{
+ "Theory_Unit_24": {
+  "book": "Theory",
+  "quiz": "Unit 24",
+  "page": 224,
+  "source": "Understanding Electrical Theory 1st printing pp. 210–213; answer key 3rd printing pp. 22–23. Q15–20 answers computed (the key is for a later printing).",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The transformer winding that is connected to the source is called the “_____” winding and the transformer winding that is connected to the load is called the “_____” winding.",
+    "choices": {
+     "a": "secondary, primary",
+     "b": "primary, secondary",
+     "c": "high-leg, low-leg",
+     "d": "none of these"
+    },
+    "answer": "b",
+    "ref": "24.3 Primary versus Secondary"
+   },
+   {
+    "n": 2,
+    "q": "Both the primary and secondary windings are wound on the same iron core, so the electromagnetic field from the primary winding cuts the secondary winding, which induces a voltage on the _____.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "motor",
+     "d": "generator"
+    },
+    "answer": "b",
+    "ref": "24.4 Transformer Mutual Induction"
+   },
+   {
+    "n": 3,
+    "q": "The _____ on the secondary winding is a function of the number of secondary wire loops cut by the primary electromagnetic field.",
+    "choices": {
+     "a": "resistance",
+     "b": "current",
+     "c": "voltage",
+     "d": "power"
+    },
+    "answer": "c",
+    "ref": "24.5 Secondary Induced Voltage"
+   },
+   {
+    "n": 4,
+    "q": "The relationship of the number of turns of wire on the _____ as compared to the number of turns on the _____ is called the transformer “winding turns ratio.”",
+    "choices": {
+     "a": "primary, secondary",
+     "b": "secondary, primary",
+     "c": "primary, primary",
+     "d": "secondary, secondary"
+    },
+    "answer": "a",
+    "ref": "24.6 Transformer Turns Ratios"
+   },
+   {
+    "n": 5,
+    "q": "A transformer has a primary winding of twenty turns and a secondary of ten turns. The winding turns ratio of this transformer is _____.",
+    "choices": {
+     "a": "2:1",
+     "b": "4:1",
+     "c": "5:1",
+     "d": "10:1"
+    },
+    "answer": "a",
+    "ref": "24.6 Transformer Turns Ratios"
+   },
+   {
+    "n": 6,
+    "q": "The relationship between primary voltage and secondary voltage is called the transformer “_____ turns ratio.”",
+    "choices": {
+     "a": "winding",
+     "b": "voltage",
+     "c": "power",
+     "d": "ampere"
+    },
+    "answer": "b",
+    "ref": "24.6 Transformer Turns Ratios"
+   },
+   {
+    "n": 7,
+    "q": "If the primary phase voltage is 480V and the secondary phase voltage is 240V, the voltage turns ratio is _____.",
+    "choices": {
+     "a": "1:2",
+     "b": "1:4",
+     "c": "2:1",
+     "d": "4:1"
+    },
+    "answer": "c",
+    "ref": "24.6 Transformer Turns Ratios"
+   },
+   {
+    "n": 8,
+    "q": "The secondary voltage of a 5:1 transformer is _____ if the primary is 240V.",
+    "choices": {
+     "a": "6V",
+     "b": "12V",
+     "c": "24V",
+     "d": "48V"
+    },
+    "answer": "d",
+    "ref": "24.6 Transformer Turns Ratios"
+   },
+   {
+    "n": 9,
+    "q": "The secondary voltage of a 4:1 turns ratio transformer is _____ if the primary is 240V.",
+    "choices": {
+     "a": "60V",
+     "b": "210V",
+     "c": "208V",
+     "d": "277V"
+    },
+    "answer": "a",
+    "ref": "24.6 Transformer Turns Ratios"
+   },
+   {
+    "n": 10,
+    "q": "If the primary and secondary windings of a transformer have the same number of wire loops (turns), the secondary output voltage will be the same as the primary input voltage. This type of transformer is called a(an) “_____ transformer.”",
+    "choices": {
+     "a": "insulation",
+     "b": "special",
+     "c": "auto",
+     "d": "isolation"
+    },
+    "answer": "d",
+    "ref": "24.7 Isolation Transformers (1:1)"
+   },
+   {
+    "n": 11,
+    "q": "Autotransformers use a _____ winding for both the primary and secondary and are often referred to as “buck-boost transformers.”",
+    "choices": {
+     "a": "different",
+     "b": "special",
+     "c": "separate",
+     "d": "single"
+    },
+    "answer": "d",
+    "ref": "24.8 Autotransformers"
+   },
+   {
+    "n": 12,
+    "q": "Transformers are rated in _____.",
+    "choices": {
+     "a": "Henrys",
+     "b": "kW",
+     "c": "W",
+     "d": "kVA"
+    },
+    "answer": "d",
+    "ref": "24.9 Transformer kVA Rating"
+   },
+   {
+    "n": 13,
+    "q": "The primary electromagnetic field induces a voltage in the secondary. As the secondary current flows, it produces an electromagnetic field that reduces the strength of the primary flux lines. This results in an increase in _____ current.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "tertiary",
+     "d": "none these"
+    },
+    "answer": "a",
+    "ref": "24.10 Transformer Current Flow"
+   },
+   {
+    "n": 14,
+    "q": "Current flow in a secondary transformer winding creates an electromagnetic field that opposes the primary electromagnetic field resulting in less primary CEMF. The primary current automatically increases in direct proportion to the _____ current.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "tertiary",
+     "d": "none these"
+    },
+    "answer": "b",
+    "ref": "24.10 Transformer Current Flow"
+   },
+   {
+    "n": 15,
+    "q": "What is the secondary current for a fully loaded single-phase, 25 kVA, 480V to 240V transformer?",
+    "choices": {
+     "a": "52A",
+     "b": "104A",
+     "c": "208A",
+     "d": "250A"
+    },
+    "answer": "b",
+    "ref": "24.11 Transformer Current Rating",
+    "computed": "25,000 VA ÷ 240V = 104A"
+   },
+   {
+    "n": 16,
+    "q": "What is the secondary current for a fully loaded three-phase, 75 kVA, 480V to 208Y/120V transformer?",
+    "choices": {
+     "a": "104A",
+     "b": "140A",
+     "c": "208A",
+     "d": "500A"
+    },
+    "answer": "c",
+    "ref": "24.11 Transformer Current Rating",
+    "computed": "75,000 VA ÷ (208V × 1.732) = 208A"
+   },
+   {
+    "n": 17,
+    "q": "The secondary current for a fully loaded single-phase, 37.50 kVA, 480V to 240V transformer is _____.",
+    "choices": {
+     "a": "145A",
+     "b": "156A",
+     "c": "162A",
+     "d": "169A"
+    },
+    "answer": "b",
+    "ref": "24.11 Transformer Current Rating",
+    "computed": "37,500 VA ÷ 240V = 156A"
+   },
+   {
+    "n": 18,
+    "q": "What is the primary current for a fully loaded single-phase, 25 kVA, 480V to 240V transformer?",
+    "choices": {
+     "a": "52A",
+     "b": "72A",
+     "c": "82A",
+     "d": "614A"
+    },
+    "answer": "a",
+    "ref": "24.11 Transformer Current Rating",
+    "computed": "25,000 VA ÷ 480V = 52A"
+   },
+   {
+    "n": 19,
+    "q": "What is the primary current for a fully loaded three-phase, 75 kVA, 480V to 208Y/120V transformer?",
+    "choices": {
+     "a": "10A",
+     "b": "70A",
+     "c": "80A",
+     "d": "90A"
+    },
+    "answer": "d",
+    "ref": "24.11 Transformer Current Rating",
+    "computed": "75,000 VA ÷ (480V × 1.732) = 90A"
+   },
+   {
+    "n": 20,
+    "q": "The primary current for a fully loaded three-phase, 37.50 kVA, 480V to 208Y/120V transformer is _____.",
+    "choices": {
+     "a": "45A",
+     "b": "55A",
+     "c": "65A",
+     "d": "75A"
+    },
+    "answer": "a",
+    "ref": "24.11 Transformer Current Rating",
+    "computed": "37,500 VA ÷ (480V × 1.732) = 45A"
+   },
+   {
+    "n": 21,
+    "q": "_____transformers contain a primary and a secondary mounted on a single laminated iron core.",
+    "choices": {
+     "a": "Single-phase",
+     "b": "Two-phase",
+     "c": "Three-phase",
+     "d": "none these"
+    },
+    "answer": "a",
+    "ref": "24.12 Transformer Configurations"
+   },
+   {
+    "n": 22,
+    "q": "_____transformers are constructed of three sets of single-phase windings that are connected together to create a three-phase system.",
+    "choices": {
+     "a": "Single-phase",
+     "b": "Two-phase",
+     "c": "Three-phase",
+     "d": "none these"
+    },
+    "answer": "c",
+    "ref": "24.12 Transformer Configurations"
+   },
+   {
+    "n": 23,
+    "q": "The _____ windings of a three-phase delta/wye-connected transformer are connected end-to-end with each other.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "low",
+     "d": "high"
+    },
+    "answer": "a",
+    "ref": "24.13 Delta/Wye Transformers"
+   },
+   {
+    "n": 24,
+    "q": "The _____ windings of a three-phase delta/wye-configured transformer have one end of each winding connected to a common point.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "middle",
+     "d": "center"
+    },
+    "answer": "b",
+    "ref": "24.13 Delta/Wye Transformers"
+   },
+   {
+    "n": 25,
+    "q": "The voltage between any two primary wires is called “primary _____ voltage,” while the voltage between any two secondary wires is called “secondary _____ voltage.”",
+    "choices": {
+     "a": "line-to-neutral, line-to-neutral",
+     "b": "line-to-line, line-to-line",
+     "c": "minimum, minimum",
+     "d": "maximum, maximum"
+    },
+    "answer": "b",
+    "ref": "24.13 Delta/Wye Transformers"
+   },
+   {
+    "n": 26,
+    "q": "_____ voltage is the voltage between a phase wire and a neutral wire.",
+    "choices": {
+     "a": "Line-to-neutral",
+     "b": "Line-to-line",
+     "c": "Neutral",
+     "d": "Line"
+    },
+    "answer": "a",
+    "ref": "24.13 Delta/Wye Transformers"
+   },
+   {
+    "n": 27,
+    "q": "The _____ circuit wires are connected to each point where the winding leads meet.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "low",
+     "d": "high"
+    },
+    "answer": "a",
+    "ref": "24.14 Delta/Delta (High-Leg) Transformers"
+   },
+   {
+    "n": 28,
+    "q": "The load wires are connected to each point where the _____ winding leads meet.",
+    "choices": {
+     "a": "primary",
+     "b": "secondary",
+     "c": "low",
+     "d": "high"
+    },
+    "answer": "b",
+    "ref": "24.14 Delta/Delta (High-Leg) Transformers"
+   },
+   {
+    "n": 29,
+    "q": "The voltage between any two primary wires is known as the “_____ line-to-line voltage,” while the voltage between any two secondary wires is referred to as the “_____ line-to-line voltage.”",
+    "choices": {
+     "a": "primary, primary",
+     "b": "secondary, secondary",
+     "c": "primary, secondary",
+     "d": "secondary, primary"
+    },
+    "answer": "c",
+    "ref": "24.14 Delta/Delta (High-Leg) Transformers"
+   },
+   {
+    "n": 30,
+    "q": "The line-to-neutral voltage is the voltage between a phase wire and the neutral wire. In a delta/delta high-leg 4-wire system, the Line1- and Line 3-to-neutral voltage is 120V, and the Line2-to-neutral will be _____.",
+    "choices": {
+     "a": "120V",
+     "b": "208V",
+     "c": "240V",
+     "d": "277V"
+    },
+    "answer": "b",
+    "ref": "24.14 Delta/Delta (High-Leg) Transformers"
+   }
+  ]
+ }
+}

@@ -114,7 +114,7 @@ for n, day in enumerate(days, 1):
         w = chapter_words(p["unit"])
         if w not in heads: heads.append(w)
     head = heads[0] if len(heads) == 1 else heads[0] + ", then " + heads[-1]
-    quizzes = [p["unit"]["quiz"] for p in day["parts"] if p["complete"] and "quiz" in p["unit"]]
+    quizzes = [dict(p["unit"]["quiz"], key=(p["unit"]["quiz"]["book"] + " " + p["unit"]["quiz"]["label"].replace(" quiz", "")).replace(" ", "_")) for p in day["parts"] if p["complete"] and "quiz" in p["unit"]]
     quiz = "Quiz: " + ", ".join(q["label"].replace(" quiz", "") for q in quizzes) if quizzes else "No quiz today — the chapter continues"
     banner = None
     for p in day["parts"]:
@@ -171,6 +171,7 @@ DATA = {
     "position": C["position"], "done": C["done"], "colors": C["colors"],
     "start": days[0]["date"], "holidays": HOLIDAYS,
     "sessions": sessions, "exams": exams, "checklist": checklist,
+    "quizzes": (json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}),
     "footer": {
         "how": [
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
@@ -220,7 +221,7 @@ body = re.sub(r'// Progress sync: the Supabase project.*?\nconst SYNC = \{[^\n]*
 s0 = body.index("  const KEY = 'ptj.v2', WHO = 'ptj.who';")
 s1 = body.index("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n") + len("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n")
 CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
-  let state = { done: {}, open: {}, notes: {}, qs: [] };
+  let state = { done: {}, open: {}, notes: {}, qs: [], scores: {} };
   try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
   let store = null, syncWord = 'Saved on this device only.';
   // open shows nothing across devices on purpose; done + here do
@@ -247,7 +248,7 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
     let first = true;
     store.onSnapshot(snap => {
       if (inFlight) return;   // a tick is on its way up; the store's copy is older than this screen
-      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; state.notes = s.notes || {}; state.qs = s.qs || []; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; state.notes = s.notes || {}; state.qs = s.qs || []; state.scores = s.scores || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
       else if (first && (Object.keys(state.done).length || Object.keys(state.notes).length)) push();   // this device had marks before sync: keep them
       first = false;
       syncWord = 'Synced to your Claude account'; render(); paintSync();
