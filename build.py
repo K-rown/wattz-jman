@@ -220,7 +220,7 @@ body = re.sub(r'// Progress sync: the Supabase project.*?\nconst SYNC = \{[^\n]*
 s0 = body.index("  const KEY = 'ptj.v2', WHO = 'ptj.who';")
 s1 = body.index("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n") + len("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n")
 CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
-  let state = { here: null, done: {}, open: {} };
+  let state = { done: {}, open: {}, notes: {}, qs: [] };
   try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
   let store = null, syncWord = 'Saved on this device only.';
   // open shows nothing across devices on purpose; done + here do
