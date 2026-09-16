@@ -167,7 +167,7 @@ for book in C["checklist"]:
         rows.append(dict(r, ours=ours, est=estimated, days=days_, done_before=bool(ids) and not (ids & scheduled)))
     checklist.append(dict(book, rows=rows))
 DATA = {
-    "player": C["player"], "books": C["books"], "generated": today.isoformat(),
+    "player": C["player"], "books": C["books"], "generated": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
     "position": C["position"], "done": C["done"], "colors": C["colors"],
     "start": days[0]["date"], "holidays": HOLIDAYS,
     "sessions": sessions, "exams": exams, "checklist": checklist,
