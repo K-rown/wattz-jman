@@ -37,8 +37,9 @@
   .brief { color: var(--mute); font-size:.85rem; margin-top: 2px; }
   .chev { color:#aaa; font-size: 1.4rem; transition: transform .15s; }
   .card.open .chev { transform: rotate(90deg); }
-  .done-wrap { flex:none; width:44px; height:44px; margin:-9px 0 -9px -6px; display:flex; align-items:center; justify-content:center; cursor:pointer; }
-  .done-box { width: 26px; height: 26px; accent-color: var(--green); margin: 0; flex: none; }
+  .done-box { flex:none; width:30px; height:30px; padding:0; border:2px solid #8a8f96; border-radius:6px; background:var(--card); color:#fff; font-size:20px; line-height:26px; font-weight:800; cursor:pointer; -webkit-appearance:none; appearance:none; }
+  .done-box.on { background:var(--green); border-color:var(--green); }
+  .done-box:focus-visible { outline: 3px solid var(--green-bg); }
   .body { display:none; padding: 0 12px 12px; border-top: 1px solid var(--line); }
   .card.open .body { display:block; }
   .group { margin: 10px 0 4px; }
@@ -232,10 +233,10 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       top.style.background = color || '#444'; c.appendChild(top);
 
       const sum = $('div', 'summary');
-      const wrap = $('label', 'done-wrap'); const cb = $('input', 'done-box'); cb.type = 'checkbox'; cb.checked = isDone; cb.title = 'Done'; cb.id = 'done' + s.n;
-      wrap.appendChild(cb); wrap.addEventListener('click', e => e.stopPropagation());
-      cb.addEventListener('change', () => { if (cb.checked) state.done[s.n] = true; else delete state.done[s.n]; save(); render(); const h = document.getElementById('hereText'); if (h) h.innerHTML += '<small>Day ' + s.n + (state.done[s.n] ? ' marked done' : ' unmarked') + ' at ' + new Date().toLocaleTimeString() + '</small>'; });
-      sum.appendChild(wrap);
+      const cb = $('button', 'done-box' + (isDone ? ' on' : ''), isDone ? '✓' : ''); cb.type = 'button'; cb.id = 'done' + s.n;
+      cb.setAttribute('role', 'checkbox'); cb.setAttribute('aria-checked', isDone ? 'true' : 'false'); cb.setAttribute('aria-label', 'Done');
+      cb.addEventListener('click', e => { e.stopPropagation(); e.preventDefault(); if (state.done[s.n]) delete state.done[s.n]; else state.done[s.n] = true; save(); render(); });
+      sum.appendChild(cb);
       const g = $('div', 'grow');
       const late = !isDone && D(s.date) < today;
       g.appendChild($('div', 'date', (s.exam ? 'Exam' : 'Day ' + s.n) + '<span class="was' + (late ? ' late' : '') + '">' + (late ? 'was due ' : 'by ') + dlab(s.date) + '</span>'));
