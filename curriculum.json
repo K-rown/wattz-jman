@@ -2059,7 +2059,7 @@
    ]
   },
   {
-   "book": "Electrical Exam Preparation",
+   "book": "Electrical Exam Preparation — your product is Calculations Module III (Units 1–6)",
    "key": "Exam Prep",
    "total": 46009,
    "rows": [
@@ -2099,7 +2099,9 @@
      "s": 9217,
      "page": 369
     }
-   ]
+   ],
+   "note": "The printed hours are for the full Exam Prep library. Your order (780123) holds Module III: one video per unit, all eight on the calendar. Nothing missing.",
+   "different_product": true
   },
   {
    "book": "Journeyman Electrician Simulated Exams",
