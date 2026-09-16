@@ -372,5 +372,981 @@
     "ref": "24.14 Delta/Delta (High-Leg) Transformers"
    }
   ]
+ },
+ "Theory_Unit_25": {
+  "book": "Theory",
+  "quiz": "Unit 25",
+  "page": 249,
+  "unit": "Unit 25—Overcurrent Protection",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Overcurrent is current in excess of the equipment ampere rating or ampacity of the wires. It may result from a(an) _____.",
+    "choices": {
+     "a": "overload",
+     "b": "short circuit",
+     "c": "ground fault",
+     "d": "any of these"
+    },
+    "ref": "25.2 Overcurrent Protection",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "A(An)_____ is the operation of equipment or wires in excess of their rated ampacity.",
+    "choices": {
+     "a": "overload",
+     "b": "short circuit",
+     "c": "ground fault",
+     "d": "all of these"
+    },
+    "ref": "25.2 Overcurrent Protection",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "A(An) _____ is an electrical connection between any two phase wires, or a phase wire and neutral wire.",
+    "choices": {
+     "a": "overload",
+     "b": "short circuit",
+     "c": "ground fault",
+     "d": "all of these"
+    },
+    "ref": "25.2 Overcurrent Protection",
+    "answer": "b"
+   },
+   {
+    "n": 4,
+    "q": "A(An) _____ occurs when an unintentional electrical connection occurs between a phase wire and metal parts of enclosures, raceways, and/or equipment.",
+    "choices": {
+     "a": "overload",
+     "b": "short circuit",
+     "c": "ground fault",
+     "d": "all of these"
+    },
+    "ref": "25.2 Overcurrent Protection",
+    "answer": "c"
+   },
+   {
+    "n": 5,
+    "q": "Overcurrent protection is typically provided by _____.",
+    "choices": {
+     "a": "fuses",
+     "b": "circuit breakers",
+     "c": "fuses or circuit breakers",
+     "d": "none of these"
+    },
+    "ref": "25.2 Overcurrent Protection",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Fuses consist of a _____ element connected to end blades or caps, surrounded by silica sand filler material enclosed in a tube.",
+    "choices": {
+     "a": "conductive",
+     "b": "foam",
+     "c": "light",
+     "d": "nonconductive"
+    },
+    "ref": "25.3 Fuses",
+    "answer": "a"
+   },
+   {
+    "n": 7,
+    "q": "When a sustained overload occurs through the element(s) of a fuse, the heat melts _____, stopping the flow of current.",
+    "choices": {
+     "a": "several elements",
+     "b": "all of the elements",
+     "c": "a portion of the element",
+     "d": "none of these"
+    },
+    "ref": "25.3 Fuses",
+    "keysays": "(c) a segment of the element",
+    "answer": "c",
+    "matched": "key says “a segment of the element” (later printing wording for choice c)"
+   },
+   {
+    "n": 8,
+    "q": "When a short circuit or ground fault occurs through the element of a fuse, the heat in the element rises to a point where _____ in the fuse melt to stop electrical current flow.",
+    "choices": {
+     "a": "multiple conductive segments",
+     "b": "a small portion of the segment",
+     "c": "all of the segments",
+     "d": "none of these"
+    },
+    "ref": "25.3 Fuses",
+    "keysays": "(a) multiple segments",
+    "answer": "a",
+    "matched": "key says “multiple segments” (later printing wording for choice a)"
+   },
+   {
+    "n": 9,
+    "q": "A _____ fuse is referred to as a nontime-delay fuse and is the least expensive type.",
+    "choices": {
+     "a": "single-element",
+     "b": "dual-element",
+     "c": "current-limiting",
+     "d": "all of these"
+    },
+    "ref": "25.3 Fuses",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "A _____ fuse is often called a “time-delay fuse.”",
+    "choices": {
+     "a": "single-element",
+     "b": "dual-element",
+     "c": "current-limiting",
+     "d": "all of these"
+    },
+    "ref": "25.3 Fuses",
+    "answer": "b"
+   },
+   {
+    "n": 11,
+    "q": "A _____ fuse is designed to clear a short circuit or ground fault in less than one-half a cycle.",
+    "choices": {
+     "a": "one-time fuses",
+     "b": "dual-element fuses",
+     "c": "special trip fuses",
+     "d": "current-limiting"
+    },
+    "ref": "25.3 Fuses",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "A _____ is capable of being opened and closed manually and automatically opens during an overcurrent condition.",
+    "choices": {
+     "a": "fuse",
+     "b": "circuit breaker",
+     "c": "motor starter",
+     "d": "disconnect"
+    },
+    "ref": "25.4 Circuit Breakers",
+    "answer": "b"
+   },
+   {
+    "n": 13,
+    "q": "_____circuit breakers operate on the principle that as the current increases, the time it takes for the device to open decreases.",
+    "choices": {
+     "a": "Inverse time",
+     "b": "Adjustable trip",
+     "c": "Instantaneous trip",
+     "d": "all of these"
+    },
+    "ref": "25.4 Circuit Breakers",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "The _____ trip element of a circuit breaker operates on the time-current principle of being inversely proportional to the magnitude of the current, which means that as the overload current increases, the time it takes for the trip element to open decreases.",
+    "choices": {
+     "a": "magnetic",
+     "b": "electronic",
+     "c": "thermal",
+     "d": "none of these"
+    },
+    "ref": "25.4 Circuit Breakers",
+    "answer": "c"
+   },
+   {
+    "n": 15,
+    "q": "Inverse time circuit breakers have a(an) _____ trip unit that responds to short-circuit and ground-fault currents.",
+    "choices": {
+     "a": "adjustable",
+     "b": "instantaneous",
+     "c": "electromagnetic",
+     "d": "none of these"
+    },
+    "ref": "25.4 Circuit Breakers",
+    "answer": "c"
+   },
+   {
+    "n": 16,
+    "q": "_____ circuit breakers operate on the principle of electromagnetism only and are commonly known as motor circuit protectors.",
+    "choices": {
+     "a": "Inverse time",
+     "b": "Adjustable trip",
+     "c": "Instantaneous trip",
+     "d": "all of these"
+    },
+    "ref": "25.4 Circuit Breakers",
+    "answer": "c"
+   },
+   {
+    "n": 17,
+    "q": "_____ circuit breakers permit the thermal and electromagnetic trip current and/or time settings to be adjusted to provide the user with flexibility for specific applications.",
+    "choices": {
+     "a": "Inverse time",
+     "b": "Adjustable trip",
+     "c": "Instantaneous trip",
+     "d": "all of these"
+    },
+    "ref": "25.4 Circuit Breakers",
+    "answer": "b"
+   },
+   {
+    "n": 18,
+    "q": "The time it takes for an overcurrent protective device to open is plotted on a _____ curve chart.",
+    "choices": {
+     "a": "time-current characteristics",
+     "b": "bar graph",
+     "c": "pie chart",
+     "d": "none of these"
+    },
+    "ref": "25.5 Overcurrent Protective Devices, Time-Current Curves",
+    "answer": "a"
+   },
+   {
+    "n": 19,
+    "q": "As the overload current _____, the time it takes for the thermal trip element to open decreases.",
+    "choices": {
+     "a": "increases",
+     "b": "decreases",
+     "c": "remains the same",
+     "d": "none of these"
+    },
+    "ref": "25.5 Overcurrent Protective Devices, Time-Current Curves",
+    "answer": "a"
+   },
+   {
+    "n": 20,
+    "q": "To quickly clear a short circuit, the short-circuit _____ must rise to a level that is between ten and twenty times the rating of the circuit overcurrent protective device.",
+    "choices": {
+     "a": "voltage",
+     "b": "current",
+     "c": "resistance",
+     "d": "power"
+    },
+    "ref": "25.5 Overcurrent Protective Devices, Time-Current Curves",
+    "answer": "b"
+   },
+   {
+    "n": 21,
+    "q": "To quickly clear a(an) _____, the ground-fault current needs to rise to a level between ten and twenty times the rating of the circuit overcurrent protective device.",
+    "choices": {
+     "a": "overload",
+     "b": "arcing fault",
+     "c": "ground fault",
+     "d": "none of these"
+    },
+    "ref": "25.5 Overcurrent Protective Devices, Time-Current Curves",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "To remove dangerous touch voltage on metal parts produced by a ground fault, the fault-current path must have _____ to allow the fault current to quickly rise to facilitate the opening of the protection device.",
+    "choices": {
+     "a": "high impedance",
+     "b": "low impedance",
+     "c": "high voltage",
+     "d": "low voltage"
+    },
+    "ref": "25.5 Overcurrent Protective Devices, Time-Current Curves",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "Available short-circuit current is the _____ current in amperes that is available at a given point in the electrical system.",
+    "choices": {
+     "a": "phase",
+     "b": "line",
+     "c": "largest",
+     "d": "smallest"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "The available short-circuit current is highest at the utility transformer and lowest at the _____ load because of the impedance of the circuit.",
+    "choices": {
+     "a": "branch-circuit",
+     "b": "feeder",
+     "c": "service",
+     "d": "utility transformer"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "The available short-circuit current is different at each point of the electrical system; it is highest at the _____.",
+    "choices": {
+     "a": "branch circuit",
+     "b": "feeder",
+     "c": "service",
+     "d": "utility transformer"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "answer": "d"
+   },
+   {
+    "n": 26,
+    "q": "The available short-circuit current at the _____ transformer is provided by the electric utility; no calculation is required.",
+    "choices": {
+     "a": "occupancy",
+     "b": "building",
+     "c": "premises",
+     "d": "utility"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "answer": "d"
+   },
+   {
+    "n": 27,
+    "q": "The factor(s) that impact the available short-circuit current on the load side of a transformer is(are) _____.",
+    "choices": {
+     "a": "system voltage",
+     "b": "kVA rating",
+     "c": "impedance",
+     "d": "all of these"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "answer": "d"
+   },
+   {
+    "n": 28,
+    "q": "What is the approximate available short-circuit current on the secondary of a 50 kVA, 480V to 240V transformer having an impedance rating of 1.20 percent?",
+    "choices": {
+     "a": "10,000A",
+     "b": "12,000A",
+     "c": "14,000A",
+     "d": "17,000A"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "keysays": "(d) 35,000A",
+    "answer": "d",
+    "computed": "50,000 VA ÷ 240V = 208A; 208A ÷ 0.012 = 17,361A"
+   },
+   {
+    "n": 29,
+    "q": "What is the approximate available short-circuit current on the secondary of a three-phase, 112.50 kVA, 480V to 208Y/120V transformer having an impedance rating of 2.40 percent?",
+    "choices": {
+     "a": "10,500A",
+     "b": "11,000A",
+     "c": "12,500A",
+     "d": "13,000A"
+    },
+    "ref": "25.6 Available Short-Circuit Current",
+    "keysays": "(d) 9,000A",
+    "answer": "d",
+    "computed": "112,500 VA ÷ (208V × 1.732) = 312A; 312A ÷ 0.024 = 13,011A"
+   },
+   {
+    "n": 30,
+    "q": "Circuit breakers and fuses are intended to interrupt the circuit, and they must have an ampere interrupting rating (AIR) _____ for the available short-circuit current.",
+    "choices": {
+     "a": "inadequate",
+     "b": "sufficient",
+     "c": "sustainable",
+     "d": "none of these"
+    },
+    "ref": "25.7 Overcurrent Protective Devices, Interrupting Rating",
+    "answer": "b"
+   },
+   {
+    "n": 31,
+    "q": "If the protective device is not rated to _____ the available fault current at its listed voltage rating, it can explode while attempting to clear the fault.",
+    "choices": {
+     "a": "interrupt",
+     "b": "withstand",
+     "c": "hold",
+     "d": "break"
+    },
+    "ref": "25.7 Overcurrent Protective Devices, Interrupting Rating",
+    "answer": "a"
+   },
+   {
+    "n": 32,
+    "q": "Equipment must have a(an) _____ current rating that permits the protection device to clear a short circuit or ground fault without extensive damage to the equipment components.",
+    "choices": {
+     "a": "overload",
+     "b": "short-circuit",
+     "c": "ground-fault",
+     "d": "none of these"
+    },
+    "ref": "25.8 Equipment Short-Circuit Current Rating (SCCR)",
+    "answer": "b"
+   },
+   {
+    "n": 33,
+    "q": "If the equipment is not rated to _____ the available short-circuit current, it can explode while waiting for the circuit protective device to clear the fault.",
+    "choices": {
+     "a": "interrupt",
+     "b": "withstand",
+     "c": "hold",
+     "d": "break"
+    },
+    "ref": "25.8 Equipment Short-Circuit Current Rating (SCCR)",
+    "answer": "b"
+   },
+   {
+    "n": 34,
+    "q": "“_____” of overcurrent protective devices is when the devices are designed to clear a short circuit or ground fault in a manner that localizes the short circuit or ground fault to that given circuit.",
+    "choices": {
+     "a": "Plotting",
+     "b": "Sequencing",
+     "c": "Selective coordination",
+     "d": "none of these"
+    },
+    "ref": "25.9 Coordination of Overcurrent Protective Devices",
+    "answer": "c"
+   },
+   {
+    "n": 35,
+    "q": "Selective coordination of overcurrent protective devices prevents _____ power losses to loads not part of the faulted circuit.",
+    "choices": {
+     "a": "intended",
+     "b": "unintended",
+     "c": "excessive",
+     "d": "none of these"
+    },
+    "ref": "25.9 Coordination of Overcurrent Protective Devices",
+    "answer": "b"
+   },
+   {
+    "n": 36,
+    "q": "Lack of selective coordination of overcurrent protective devices can result in unintended _____ to loads not part of the faulted circuit.",
+    "choices": {
+     "a": "surges",
+     "b": "power losses",
+     "c": "blackouts",
+     "d": "shutdowns"
+    },
+    "ref": "25.9 Coordination of Overcurrent Protective Devices",
+    "answer": "b"
+   }
+  ]
+ },
+ "Theory_Unit_26": {
+  "book": "Theory",
+  "quiz": "Unit 26",
+  "page": 253,
+  "unit": "Unit 26—GFCIs, GFPEs, AFCIs, and SPDs",
+  "questions": [
+   {
+    "n": 1,
+    "q": "GFCI protective devices detect the _____ current between circuit wires.",
+    "choices": {
+     "a": "grounded",
+     "b": "neutral",
+     "c": "imbalance of",
+     "d": "phase"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "If the difference between the current leaving and returning through the current transformer of the GFCI protective device exceeds _____ (± 1 mA), the solid-state circuitry de-energizes the circuit.",
+    "choices": {
+     "a": "1 mA",
+     "b": "3 mA",
+     "c": "5 mA",
+     "d": "10 mA"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "c"
+   },
+   {
+    "n": 3,
+    "q": "A(An) _____ wire is not necessary for the proper function of a GFCI device.",
+    "choices": {
+     "a": "phase",
+     "b": "grounded",
+     "c": "neutral",
+     "d": "equipment grounding"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "GFCIs detect connections between the neutral wire and the metal parts of the electrical system (case). If a neutral connection to metal parts occurs, the GFCI protective device will _____.",
+    "choices": {
+     "a": "open",
+     "b": "explode",
+     "c": "overload",
+     "d": "none of these"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "Severe electric shock or death can occur if a person touches the _____ and neutral wires at the same time, even if the circuit is GFCI protected.",
+    "choices": {
+     "a": "phase",
+     "b": "service",
+     "c": "equipment grounding",
+     "d": "none of these"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "A hazard can exist if the electronics within a GFCI fail because the circuit remains _____ without GFCI protection.",
+    "choices": {
+     "a": "de-energized",
+     "b": "energized",
+     "c": "off",
+     "d": "any of these"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "GFCIs can only be properly tested by pressing the GFCI _____ button.",
+    "choices": {
+     "a": "disconnect",
+     "b": "reset",
+     "c": "test",
+     "d": "any of these"
+    },
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "answer": "c"
+   },
+   {
+    "n": 8,
+    "q": "A special purpose GFCI device is used in circuits where the voltage-to-ground is greater than _____.",
+    "choices": {
+     "a": "30V",
+     "b": "50V",
+     "c": "120V",
+     "d": "150V"
+    },
+    "ref": "26.3 Special Purpose Ground-Fault Circuit Interrupters (SPGFCIs)",
+    "answer": "d"
+   },
+   {
+    "n": 9,
+    "q": "An arc-fault circuit interrupter is a device intended to de-energize a circuit when it detects the current waveform characteristics unique to a(an) _____ fault.",
+    "choices": {
+     "a": "ground",
+     "b": "neutral",
+     "c": "arcing",
+     "d": "any of these"
+    },
+    "ref": "26.5 Arc-Fault Circuit-Interrupters (AFCIs)",
+    "answer": "c"
+   },
+   {
+    "n": 10,
+    "q": "A _____ arcing fault can occur when the insulation between two wires degrades to a level where arcing can take place across the insulation between the two wires.",
+    "choices": {
+     "a": "series",
+     "b": "parallel",
+     "c": "ground",
+     "d": "neutral"
+    },
+    "ref": "26.6 Clearing Arcing Faults",
+    "answer": "b"
+   },
+   {
+    "n": 11,
+    "q": "The current in an arcing fault is limited by the system impedance and the impedance of the arcing fault itself. Typically, at a receptacle, fault current will be above 75A, but not likely above _____.",
+    "choices": {
+     "a": "100A",
+     "b": "220A",
+     "c": "330A",
+     "d": "450A"
+    },
+    "ref": "26.6 Clearing Arcing Faults",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "A _____ arcing fault occurs when the wire within a cord is unintentionally broken, causing the current to arc across the gap in the wire.",
+    "choices": {
+     "a": "series",
+     "b": "parallel",
+     "c": "ground",
+     "d": "neutral"
+    },
+    "ref": "26.6 Clearing Arcing Faults",
+    "answer": "a"
+   },
+   {
+    "n": 13,
+    "q": "_____ protective devices protect equipment by preventing damaging transient voltage from reaching the equipment.",
+    "choices": {
+     "a": "Short-circuit",
+     "b": "Overload",
+     "c": "Overcurrent",
+     "d": "Surge"
+    },
+    "ref": "26.7 Surge Protective Devices (SPDs)",
+    "answer": "d"
+   },
+   {
+    "n": 14,
+    "q": "_____ voltages inside a building can originate from high current loads that are switched on and off, such as those for copiers, laser printers, motors, and air-conditioning.",
+    "choices": {
+     "a": "Actual",
+     "b": "Sag",
+     "c": "Transient",
+     "d": "Nominal"
+    },
+    "ref": "26.7 Surge Protective Devices (SPDs)",
+    "answer": "c"
+   },
+   {
+    "n": 15,
+    "q": "_____ sources of transient voltage include the switching of utility power factor correction capacitors or lightning strikes.",
+    "choices": {
+     "a": "Special",
+     "b": "Interior",
+     "c": "Exterior",
+     "d": "any of these"
+    },
+    "ref": "26.7 Surge Protective Devices (SPDs)",
+    "answer": "c"
+   },
+   {
+    "n": 16,
+    "q": "Surge protective devices are connected in _____ with the load.",
+    "choices": {
+     "a": "parallel",
+     "b": "series",
+     "c": "series-parallel",
+     "d": "none of these"
+    },
+    "ref": "26.8 How Surge Protective Devices Function",
+    "answer": "a"
+   }
+  ]
+ },
+ "Theory_Unit_27": {
+  "book": "Theory",
+  "quiz": "Unit 27",
+  "page": 276,
+  "unit": "Unit 27—Wire Resistance and Voltage Drop",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The cross-sectional area of a wire is commonly expressed in _____.",
+    "choices": {
+     "a": "square inches",
+     "b": "mils",
+     "c": "circular mils",
+     "d": "none of these"
+    },
+    "ref": "27.2 Wire Sizes",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "In dc circuits, the only property that affects current flow is _____.",
+    "choices": {
+     "a": "impedance",
+     "b": "reactance",
+     "c": "resistance",
+     "d": "none of these"
+    },
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "answer": "c"
+   },
+   {
+    "n": 3,
+    "q": "Wire dc resistance is determined by the _____.",
+    "choices": {
+     "a": "material type",
+     "b": "cross-sectional area",
+     "c": "wire length and operating temperature",
+     "d": "all of these"
+    },
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "Aluminum has _____ resistance to the flow of electrons than does copper.",
+    "choices": {
+     "a": "higher",
+     "b": "lower",
+     "c": "equal",
+     "d": "none of these"
+    },
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "Smaller wires have _____ resistance and larger wires have lower resistance.",
+    "choices": {
+     "a": "lesser",
+     "b": "greater",
+     "c": "the same",
+     "d": "all of these"
+    },
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "answer": "b"
+   },
+   {
+    "n": 6,
+    "q": "The dc resistance of a wire is directly proportional to its _____.",
+    "choices": {
+     "a": "color",
+     "b": "length",
+     "c": "weight",
+     "d": "insulation"
+    },
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "The resistance of a wire is affected by temperature change. This is called the “_____.”",
+    "choices": {
+     "a": "temperature correction factor",
+     "b": "temperature coefficient",
+     "c": "ambient temperature factor",
+     "d": "none of these"
+    },
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "The _____ lists the resistance and area in circular mils for both direct-current and alternating-current circuit wires.",
+    "choices": {
+     "a": "NEC",
+     "b": "CEC",
+     "c": "IEC",
+     "d": "none of these"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "What is the direct-current resistance of a 6 AWG copper wire that is 400 ft long?",
+    "choices": {
+     "a": "0.20Ω",
+     "b": "0.30Ω",
+     "c": "0.40Ω",
+     "d": "0.50Ω"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "What is the direct-current resistance of a 1 AWG copper wire that is 200 ft long?",
+    "choices": {
+     "a": "0.0308Ω",
+     "b": "0.0311Ω",
+     "c": "0.0423Ω",
+     "d": "0.0564Ω"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(a) 0.628Ω† (key's question: 14 AWG stranded wire, 200 ft)",
+    "answer": "a",
+    "computed": "Ch 9 Table 8: 1 AWG Cu 0.154 Ω/kFT × 0.2 = 0.0308 Ω"
+   },
+   {
+    "n": 11,
+    "q": "What is the direct-current resistance of a 3 AWG aluminum wire that is 1,000 ft long?",
+    "choices": {
+     "a": "0.231Ω",
+     "b": "0.313Ω",
+     "c": "0.403Ω",
+     "d": "0.422Ω"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(c) 1.980Ω† (key's question: 12 AWG stranded wire, 1,000 ft)",
+    "answer": "c",
+    "computed": "Ch 9 Table 8: 3 AWG Al 0.403 Ω/kFT × 1.0 = 0.403 Ω"
+   },
+   {
+    "n": 12,
+    "q": "What is the direct-current resistance of a 1/0 AWG aluminum wire that is 800 ft long?",
+    "choices": {
+     "a": "0.08Ω",
+     "b": "0.16Ω",
+     "c": "0.23Ω",
+     "d": "0.56Ω"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(b) 0.992Ω† (key's question: 10 AWG, 800 ft)",
+    "answer": "b",
+    "computed": "Ch 9 Table 8: 1/0 AWG Al 0.201 Ω/kFT × 0.8 = 0.161 Ω"
+   },
+   {
+    "n": 13,
+    "q": "What is the direct-current resistance of a 1 AWG copper wire that is 100 ft long?",
+    "choices": {
+     "a": "0.0154Ω",
+     "b": "0.1620Ω",
+     "c": "0.2330Ω",
+     "d": "0.5610Ω"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(a) 0.0778Ω† (key's question: 8 AWG stranded wire, 100 ft)",
+    "answer": "a",
+    "computed": "Ch 9 Table 8: 1 AWG Cu 0.154 Ω/kFT × 0.1 = 0.0154 Ω"
+   },
+   {
+    "n": 14,
+    "q": "What is the direct-current resistance of a 3 AWG aluminum wire that is 500 ft long?",
+    "choices": {
+     "a": "0.0231Ω",
+     "b": "0.1614Ω",
+     "c": "0.2015Ω",
+     "d": "0.2330Ω"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(c) 0.2455Ω† (key's question: 6 AWG stranded wire, 500 ft)",
+    "answer": "c",
+    "computed": "Ch 9 Table 8: 3 AWG Al 0.403 Ω/kFT × 0.5 = 0.2015 Ω"
+   },
+   {
+    "n": 15,
+    "q": "According to Chapter 9, Table 8, what is the cross-sectional area in circular mils for a 4 AWG wire?",
+    "choices": {
+     "a": "41,740 cmil",
+     "b": "63,360 cmil",
+     "c": "70,380 cmil",
+     "d": "96,510 cmil"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(a) 4,110 cmil",
+    "answer": "a",
+    "computed": "Ch 9 Table 8: 4 AWG = 41,740 cmil"
+   },
+   {
+    "n": 16,
+    "q": "According to Chapter 9, Table 8, what is the cross-sectional area in circular mils for a 2 AWG wire?",
+    "choices": {
+     "a": "41,740 cmil",
+     "b": "66,360 cmil",
+     "c": "70,380 cmil",
+     "d": "83,690 cmil"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(b) 6,530 cmil",
+    "answer": "b",
+    "computed": "Ch 9 Table 8: 2 AWG = 66,360 cmil"
+   },
+   {
+    "n": 17,
+    "q": "According to Chapter 9, Table 8, what is the cross-sectional area in circular mils for a 1 AWG wire?",
+    "choices": {
+     "a": "41,740 cmil",
+     "b": "63,360 cmil",
+     "c": "70,380 cmil",
+     "d": "83,690 cmil"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(d) 10,380 cmil",
+    "answer": "d",
+    "computed": "Ch 9 Table 8: 1 AWG = 83,690 cmil"
+   },
+   {
+    "n": 18,
+    "q": "According to Chapter 9, Table 8, what is the cross-sectional area in circular mils for a 1/0 AWG wire?",
+    "choices": {
+     "a": "83,690 cmil",
+     "b": "105,600 cmil",
+     "c": "167,800 cmil",
+     "d": "211,600 cmil"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(b) 16,510 cmil",
+    "answer": "b",
+    "computed": "Ch 9 Table 8: 1/0 AWG = 105,600 cmil"
+   },
+   {
+    "n": 19,
+    "q": "According to Chapter 9, Table 8, what is the cross-sectional area in circular mils for a 3/0 AWG aluminum wire?",
+    "choices": {
+     "a": "83,690 cmil",
+     "b": "105,600 cmil",
+     "c": "167,800 cmil",
+     "d": "211,600 cmil"
+    },
+    "ref": "27.4 NEC Wire Direct-Current Resistance",
+    "keysays": "(c) 26,240 cmil",
+    "answer": "c",
+    "computed": "Ch 9 Table 8: 3/0 AWG = 167,800 cmil"
+   },
+   {
+    "n": 20,
+    "q": "For ac circuits, the ac _____ of a wire is greater than the dc resistance because of eddy currents and skin effect.",
+    "choices": {
+     "a": "voltage",
+     "b": "current",
+     "c": "resistance",
+     "d": "power"
+    },
+    "ref": "27.5 Alternating-Current Wire Resistance",
+    "answer": "c"
+   },
+   {
+    "n": 21,
+    "q": "_____currents are small independent currents that are produced as a result of the expanding and collapsing magnetic field. They flow erratically within the wire opposing current flow and consuming power.",
+    "choices": {
+     "a": "Lenz",
+     "b": "Ohm’s",
+     "c": "Eddy",
+     "d": "Kirchhoff’s"
+    },
+    "ref": "27.5 Alternating-Current Wire Resistance",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "Eddy currents are strongest in the center of the wires and repel the flowing electrons toward the wire surface. This is known as “_____ effect.”",
+    "choices": {
+     "a": "inductive",
+     "b": "skin",
+     "c": "surface",
+     "d": "watt"
+    },
+    "ref": "27.5 Alternating-Current Wire Resistance",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "The opposition to current flow is greater for alternating-current circuits than for direct-current circuits because of _____.",
+    "choices": {
+     "a": "eddy currents",
+     "b": "skin effect",
+     "c": "eddy currents and skin effect",
+     "d": "none of these"
+    },
+    "ref": "27.6 Alternating-Current Resistance versus Direct-Current Resistance",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "A _____ wire results in greater wire resistance and greater wire voltage drop.",
+    "choices": {
+     "a": "wider",
+     "b": "shorter",
+     "c": "longer",
+     "d": "none of these"
+    },
+    "ref": "27.7 Wire Voltage Drop—Ohm’s Law Method",
+    "answer": "c"
+   },
+   {
+    "n": 25,
+    "q": "Increased _____ flow will result in greater wire voltage drop.",
+    "choices": {
+     "a": "resistance",
+     "b": "voltage",
+     "c": "current",
+     "d": "none of these"
+    },
+    "ref": "27.7 Wire Voltage Drop—Ohm’s Law Method",
+    "answer": "c"
+   }
+  ]
  }
 }

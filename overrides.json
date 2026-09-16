@@ -1,0 +1,20 @@
+{
+ "Theory_Unit_25": {
+  "7": {"answer": "c", "matched": "key says “a segment of the element” (later printing wording for choice c)"},
+  "8": {"answer": "a", "matched": "key says “multiple segments” (later printing wording for choice a)"},
+  "28": {"answer": "d", "computed": "50,000 VA ÷ 240V = 208A; 208A ÷ 0.012 = 17,361A"},
+  "29": {"answer": "d", "computed": "112,500 VA ÷ (208V × 1.732) = 312A; 312A ÷ 0.024 = 13,011A"}
+ },
+ "Theory_Unit_27": {
+  "10": {"answer": "a", "computed": "Ch 9 Table 8: 1 AWG Cu 0.154 Ω/kFT × 0.2 = 0.0308 Ω"},
+  "11": {"answer": "c", "computed": "Ch 9 Table 8: 3 AWG Al 0.403 Ω/kFT × 1.0 = 0.403 Ω"},
+  "12": {"answer": "b", "computed": "Ch 9 Table 8: 1/0 AWG Al 0.201 Ω/kFT × 0.8 = 0.161 Ω"},
+  "13": {"answer": "a", "computed": "Ch 9 Table 8: 1 AWG Cu 0.154 Ω/kFT × 0.1 = 0.0154 Ω"},
+  "14": {"answer": "c", "computed": "Ch 9 Table 8: 3 AWG Al 0.403 Ω/kFT × 0.5 = 0.2015 Ω"},
+  "15": {"answer": "a", "computed": "Ch 9 Table 8: 4 AWG = 41,740 cmil"},
+  "16": {"answer": "b", "computed": "Ch 9 Table 8: 2 AWG = 66,360 cmil"},
+  "17": {"answer": "d", "computed": "Ch 9 Table 8: 1 AWG = 83,690 cmil"},
+  "18": {"answer": "b", "computed": "Ch 9 Table 8: 1/0 AWG = 105,600 cmil"},
+  "19": {"answer": "c", "computed": "Ch 9 Table 8: 3/0 AWG = 167,800 cmil"}
+ }
+}
