@@ -176,11 +176,13 @@ DATA = {
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
             ["0:05", "The day's block at 1.5x with captions, NEC open, tabbing as you go"],
             ["Chapter day", "The quiz, on your own, scored before you put the book down"],
+            ["Then 20 min", "Office hours: the questions you typed during the video, answered one at a time. Still fuzzy? It goes on the exam-week rewatch list"],
             ["Done", "Tick the day. The next one is ready whenever you are — tonight if you like"],
             ["Last minute", "Write the stop point on this wall"],
         ],
         "rules": [
-            "An hour or two a day, in order. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
+            "About two hours a day, in order: the video, the quiz, then office hours. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
+            "A question during the video goes in the box under the player, not in your head. Keep watching. Office hours is where it gets answered.",
             "Behind? The weekend is for catching up. Ahead? The weekend is yours.",
             "Never more than two days behind. Say so on Friday and the crew watches with you Saturday.",
             "Bring your NEC every day and tab it as you go. Tabs are the only thing you can take into the exam.",
@@ -245,7 +247,7 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
     let first = true;
     store.onSnapshot(snap => {
       if (inFlight) return;   // a tick is on its way up; the store's copy is older than this screen
-      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; state.notes = s.notes || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; state.notes = s.notes || {}; state.qs = s.qs || []; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
       else if (first && (Object.keys(state.done).length || Object.keys(state.notes).length)) push();   // this device had marks before sync: keep them
       first = false;
       syncWord = 'Synced to your Claude account'; render(); paintSync();
