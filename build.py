@@ -223,12 +223,13 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
   let store = null, syncWord = 'Saved on this device only.';
   // open shows nothing across devices on purpose; done + here do
   const shared = () => ({ done: state.done });
-  let writing = Promise.resolve();
+  let writing = Promise.resolve(), inFlight = 0;
   function push() {
     if (!store) return;
-    const body = shared();
-    writing = writing.then(() => store.set(body)).then(() => { syncWord = 'Synced to your Claude account'; paintSync(); },
-      e => { syncWord = e && e.code === 'quota_exceeded' ? 'Not saved: storage is full' : 'Not saved just now — kept on this device'; paintSync(); });
+    const body = shared(); inFlight++;
+    writing = writing.then(() => store.set(body)).then(() => { syncWord = 'Synced to your Claude account'; },
+      e => { syncWord = 'Not saved to your account (' + ((e && e.code) || 'unknown') + ') — kept on this device'; })
+      .then(() => { inFlight--; paintSync(); });
   }
   const save = () => { try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} push(); };
   function paintSync() {
@@ -243,11 +244,12 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
     store = db.doc('data/users/' + uid + '/progress');
     let first = true;
     store.onSnapshot(snap => {
+      if (inFlight) return;   // a tick is on its way up; the store's copy is older than this screen
       if (snap.exists) { const s = snap.data(); state.done = s.done || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
       else if (first && Object.keys(state.done).length) push();   // this device had marks before sync: keep them
       first = false;
       syncWord = 'Synced to your Claude account'; render(); paintSync();
-    }, () => { store = null; syncWord = 'Saved on this device only.'; paintSync(); });
+    }, e => { store = null; syncWord = 'Saved on this device only (' + ((e && e.code) || 'unknown') + ').'; paintSync(); });
   })();
 """
 body = body[:s0] + CLAUDE_SYNC + body[s1:]
