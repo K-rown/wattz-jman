@@ -1,0 +1,466 @@
+[
+ {
+  "key": "Theory_Unit_24",
+  "book": "Theory",
+  "quiz": "Unit 24",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+  "page": 224,
+  "unit_video": "Unit 24 Transformers"
+ },
+ {
+  "key": "Theory_Unit_25",
+  "book": "Theory",
+  "quiz": "Unit 25",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+  "page": 249,
+  "unit_video": "Unit 25 Overcurrent Protection"
+ },
+ {
+  "key": "Theory_Unit_26",
+  "book": "Theory",
+  "quiz": "Unit 26",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+  "page": 253,
+  "unit_video": "Unit 26 GFCIs, AFCIs, GFPEs, and SPDs"
+ },
+ {
+  "key": "Theory_Unit_27",
+  "book": "Theory",
+  "quiz": "Unit 27",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+  "page": 276,
+  "unit_video": "Unit 27 Wire Resistance and Voltage Drop"
+ },
+ {
+  "key": "Theory_Unit_28",
+  "book": "Theory",
+  "quiz": "Unit 28",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+  "page": 278,
+  "unit_video": "Unit 28 Multiwire Circuits"
+ },
+ {
+  "key": "Theory_Unit_29",
+  "book": "Theory",
+  "quiz": "Unit 29",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+  "page": 280,
+  "unit_video": "Unit 29 Formula Wheel"
+ },
+ {
+  "key": "NEC_Vol_1_Art_90",
+  "book": "NEC Vol 1",
+  "quiz": "Art 90",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+  "page": 35,
+  "unit_video": "Art 90 Introduction to the NEC"
+ },
+ {
+  "key": "NEC_Vol_1_Ch_1",
+  "book": "NEC Vol 1",
+  "quiz": "Ch 1",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+  "page": 117,
+  "unit_video": "Art 110 Requirements for Electrical Installations"
+ },
+ {
+  "key": "NEC_Vol_1_Ch_2",
+  "book": "NEC Vol 1",
+  "quiz": "Ch 2",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+  "page": 349,
+  "unit_video": "Art 250 Grounding and Bonding"
+ },
+ {
+  "key": "NEC_Vol_1_Ch_3",
+  "book": "NEC Vol 1",
+  "quiz": "Ch 3",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+  "page": 545,
+  "unit_video": "Art 392 Cable Trays"
+ },
+ {
+  "key": "NEC_Vol_1_Ch_4",
+  "book": "NEC Vol 1",
+  "quiz": "Ch 4",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+  "page": 663,
+  "unit_video": "Art 480 Stationary Standby Batteries"
+ },
+ {
+  "key": "Calcs_Calcs_Ch_1",
+  "book": "Calcs",
+  "quiz": "Calcs Ch 1",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+  "page": 51,
+  "unit_video": "Ch 1 General Rules"
+ },
+ {
+  "key": "Calcs_Calcs_Ch_2",
+  "book": "Calcs",
+  "quiz": "Calcs Ch 2",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+  "page": 103,
+  "unit_video": "Ch 2 Wiring and Protection"
+ },
+ {
+  "key": "Calcs_Calcs_Ch_3",
+  "book": "Calcs",
+  "quiz": "Calcs Ch 3",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+  "page": 137,
+  "unit_video": "Ch 3 Wiring Methods and Material"
+ },
+ {
+  "key": "Calcs_Calcs_Ch_4",
+  "book": "Calcs",
+  "quiz": "Calcs Ch 4",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+  "page": 164,
+  "unit_video": "Ch 4 Equipment for General Use"
+ },
+ {
+  "key": "Calcs_Calcs_Ch_6",
+  "book": "Calcs",
+  "quiz": "Calcs Ch 6",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+  "page": 173,
+  "unit_video": "Ch 6 Special Equipment"
+ },
+ {
+  "key": "Exam_Prep_Unit_1",
+  "book": "Exam Prep",
+  "quiz": "Unit 1",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+  "page": 279,
+  "unit_video": "Unit 1 Raceway Calculations"
+ },
+ {
+  "key": "Exam_Prep_Unit_2",
+  "book": "Exam Prep",
+  "quiz": "Unit 2",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+  "page": 299,
+  "unit_video": "Unit 2 Box Calculations"
+ },
+ {
+  "key": "Exam_Prep_Unit_3",
+  "book": "Exam Prep",
+  "quiz": "Unit 3",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+  "page": 327,
+  "unit_video": "Unit 3 Conductor Sizing and Protection Calculations"
+ },
+ {
+  "key": "Exam_Prep_Unit_5",
+  "book": "Exam Prep",
+  "quiz": "Unit 5",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+  "page": 385,
+  "unit_video": "Unit 5 Voltage-Drop Calculations"
+ },
+ {
+  "key": "Exam_Prep_Unit_4",
+  "book": "Exam Prep",
+  "quiz": "Unit 4",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+  "page": 365,
+  "unit_video": "Unit 4 Motor, AC, and Transformer Calculations"
+ },
+ {
+  "key": "Exam_Prep_Unit_6",
+  "book": "Exam Prep",
+  "quiz": "Unit 6",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+  "page": 407,
+  "unit_video": "Unit 6 Dwelling Unit Calculations"
+ },
+ {
+  "key": "B&G_Art_250",
+  "book": "B&G",
+  "quiz": "Art 250",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 216,
+  "unit_video": "Art 250 Grounding and Bonding Part B"
+ },
+ {
+  "key": "B&G_Art_300",
+  "book": "B&G",
+  "quiz": "Art 300",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 284,
+  "unit_video": "Art 300 General Requirements for Wiring Methods and Materials"
+ },
+ {
+  "key": "B&G_Art_314",
+  "book": "B&G",
+  "quiz": "Art 314",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 285,
+  "unit_video": "Art 314 Boxes, Conduit Bodies, and Handhole Enclosures"
+ },
+ {
+  "key": "B&G_Art_320",
+  "book": "B&G",
+  "quiz": "Art 320",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 286,
+  "unit_video": "Art 320 Armored Cable (Type AC)"
+ },
+ {
+  "key": "B&G_Art_330",
+  "book": "B&G",
+  "quiz": "Art 330",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 286,
+  "unit_video": "Art 330 Metal-Clad Cable (Type MC)"
+ },
+ {
+  "key": "B&G_Art_334",
+  "book": "B&G",
+  "quiz": "Art 334",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 286,
+  "unit_video": "Art 334 Nonmetallic-Sheathed Cable (Type NM)"
+ },
+ {
+  "key": "B&G_Art_342",
+  "book": "B&G",
+  "quiz": "Art 342",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 286,
+  "unit_video": "Art 342 Intermediate Metal Conduit (IMC)"
+ },
+ {
+  "key": "B&G_Art_344",
+  "book": "B&G",
+  "quiz": "Art 344",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 286,
+  "unit_video": "Art 344 Rigid Metal Conduit (RMC)"
+ },
+ {
+  "key": "B&G_Art_350",
+  "book": "B&G",
+  "quiz": "Art 350",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 287,
+  "unit_video": "Art 350 Liquidtight Flexible Metal Conduit (LFMC)"
+ },
+ {
+  "key": "B&G_Art_352",
+  "book": "B&G",
+  "quiz": "Art 352",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 287,
+  "unit_video": "Art 352 Rigid Polyvinyl Chloride Conduit (PVC)"
+ },
+ {
+  "key": "B&G_Art_356",
+  "book": "B&G",
+  "quiz": "Art 356",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 287,
+  "unit_video": "Art 356 Liquidtight Flexible Nonmetallic Conduit (LFNC)"
+ },
+ {
+  "key": "B&G_Art_358",
+  "book": "B&G",
+  "quiz": "Art 358",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 287,
+  "unit_video": "Art 358 Electrical Metallic Tubing (EMT)"
+ },
+ {
+  "key": "B&G_Art_362",
+  "book": "B&G",
+  "quiz": "Art 362",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 287,
+  "unit_video": "Art 362 Electrical Nonmetallic Tubing (ENT)"
+ },
+ {
+  "key": "B&G_Art_376",
+  "book": "B&G",
+  "quiz": "Art 376",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 288,
+  "unit_video": "Art 376 Metal Wireways"
+ },
+ {
+  "key": "B&G_Art_386",
+  "book": "B&G",
+  "quiz": "Art 386",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 288,
+  "unit_video": "Art 386 Surface Metal Raceways"
+ },
+ {
+  "key": "B&G_Art_392",
+  "book": "B&G",
+  "quiz": "Art 392",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 288,
+  "unit_video": "Art 392 Cable Trays"
+ },
+ {
+  "key": "B&G_Art_404",
+  "book": "B&G",
+  "quiz": "Art 404",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 309,
+  "unit_video": "Art 404 Switches"
+ },
+ {
+  "key": "B&G_Art_406",
+  "book": "B&G",
+  "quiz": "Art 406",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 310,
+  "unit_video": "Art 406 Receptacles, Attachment Plugs, and Flanged Inlets"
+ },
+ {
+  "key": "B&G_Art_408",
+  "book": "B&G",
+  "quiz": "Art 408",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 310,
+  "unit_video": "Art 408 Switchboards and Panelboards"
+ },
+ {
+  "key": "B&G_Art_410",
+  "book": "B&G",
+  "quiz": "Art 410",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 311,
+  "unit_video": "Art 410 Luminaires"
+ },
+ {
+  "key": "B&G_Art_440",
+  "book": "B&G",
+  "quiz": "Art 440",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 311,
+  "unit_video": "Art 440 Air-Conditioning Equipment"
+ },
+ {
+  "key": "B&G_Art_450",
+  "book": "B&G",
+  "quiz": "Art 450",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 311,
+  "unit_video": "Art 450 Transformers"
+ },
+ {
+  "key": "B&G_Art_501",
+  "book": "B&G",
+  "quiz": "Art 501",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 333,
+  "unit_video": "Art 501 Class I Hazardous (Classified) Locations"
+ },
+ {
+  "key": "B&G_Art_502",
+  "book": "B&G",
+  "quiz": "Art 502",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 333,
+  "unit_video": "Art 502 Class II Hazardous (Classified)"
+ },
+ {
+  "key": "B&G_Art_517",
+  "book": "B&G",
+  "quiz": "Art 517",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 334,
+  "unit_video": "Art 517 Health Care Facilities"
+ },
+ {
+  "key": "B&G_Art_547",
+  "book": "B&G",
+  "quiz": "Art 547",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 334,
+  "unit_video": "Art 547 Agricultural Buildings"
+ },
+ {
+  "key": "B&G_Art_555",
+  "book": "B&G",
+  "quiz": "Art 555",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 335,
+  "unit_video": "Art 555 Marinas, Boatyards, and Docking Facilities"
+ },
+ {
+  "key": "B&G_Art_600",
+  "book": "B&G",
+  "quiz": "Art 600",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 365,
+  "unit_video": "Art 600 Electric Signs"
+ },
+ {
+  "key": "B&G_Art_645",
+  "book": "B&G",
+  "quiz": "Art 645",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 365,
+  "unit_video": "Art 645 Information Technology Equipment (ITE)"
+ },
+ {
+  "key": "B&G_Art_680",
+  "book": "B&G",
+  "quiz": "Art 680",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 366,
+  "unit_video": "Art 680 Swimming Pools, Spas, Hot Tubs, Fountains, and Similar Installations"
+ },
+ {
+  "key": "B&G_Art_690",
+  "book": "B&G",
+  "quiz": "Art 690",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 369,
+  "unit_video": "Art 690 Solar Photovoltaic (PV) Systems"
+ },
+ {
+  "key": "B&G_Art_810",
+  "book": "B&G",
+  "quiz": "Art 810",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+  "page": 377,
+  "unit_video": "Art 810 Antenna Systems"
+ },
+ {
+  "key": "NEC_Vol_2_Ch_5",
+  "book": "NEC Vol 2",
+  "quiz": "Ch 5",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+  "page": 227,
+  "unit_video": "Art 590 Temporary Installations"
+ },
+ {
+  "key": "NEC_Vol_2_Ch_6",
+  "book": "NEC Vol 2",
+  "quiz": "Ch 6",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+  "page": 375,
+  "unit_video": "Art 695 Fire Pumps"
+ },
+ {
+  "key": "NEC_Vol_2_Ch_7",
+  "book": "NEC Vol 2",
+  "quiz": "Ch 7",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+  "page": 503,
+  "unit_video": "Art 770 Optical Fiber Cables"
+ },
+ {
+  "key": "NEC_Vol_2_Ch_8",
+  "book": "NEC Vol 2",
+  "quiz": "Ch 8",
+  "viewer_url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+  "page": 537,
+  "unit_video": "Art 810 Radio and Television Antenna Equipment"
+ }
+]
