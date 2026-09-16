@@ -1,0 +1,1828 @@
+{
+ "position": {
+  "label": "Theory: Unit 24 Transformers",
+  "at": 594,
+  "id": "ETC8U24"
+ },
+ "done": [
+  "Theory Ch 1",
+  "Theory Ch 2",
+  "Theory Ch 3",
+  "Theory Ch 4",
+  "Theory Ch 5",
+  "Theory Ch 6",
+  "Theory Ch 7",
+  "Theory Ch 8 U21\u201323"
+ ],
+ "colors": {
+  "Electrical Theory": "#3fa34d",
+  "NEC Vol 1": "#2f6fd6",
+  "Fundamental NEC Calculations": "#f0913a",
+  "Exam Prep": "#3a3f47",
+  "Bonding & Grounding": "#e0357a",
+  "NEC Vol 2": "#7b5ce6",
+  "Exam": "#c0392b"
+ },
+ "books": "https://www.mikeholt.com/checkout/#/account/digital-books",
+ "player": "https://k-rown.github.io/wattz-jman/player.html",
+ "units": [
+  {
+   "id": "ETC8U24",
+   "book": "Theory",
+   "chapter": 8,
+   "chapter_title": "Motors, Generators, Relays, and Transformers",
+   "page": 192,
+   "label": "Unit 24 Transformers",
+   "dur": 5122,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 24 quiz",
+    "book": "Theory",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+    "page": 224
+   }
+  },
+  {
+   "id": "ETC9U25",
+   "book": "Theory",
+   "chapter": 9,
+   "chapter_title": "Protective Devices",
+   "page": 215,
+   "label": "Unit 25 Overcurrent Protection",
+   "dur": 10455,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 25 quiz",
+    "book": "Theory",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+    "page": 249
+   }
+  },
+  {
+   "id": "ETC9U26",
+   "book": "Theory",
+   "chapter": 9,
+   "chapter_title": "Protective Devices",
+   "page": 215,
+   "label": "Unit 26 GFCIs, AFCIs, GFPEs, and SPDs",
+   "dur": 4988,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 26 quiz",
+    "book": "Theory",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+    "page": 253
+   }
+  },
+  {
+   "id": "ETC10U27",
+   "book": "Theory",
+   "chapter": 10,
+   "chapter_title": "General Knowledge",
+   "page": 241,
+   "label": "Unit 27 Wire Resistance and Voltage Drop",
+   "dur": 2483,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 27 quiz",
+    "book": "Theory",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+    "page": 276
+   }
+  },
+  {
+   "id": "ETC10U28",
+   "book": "Theory",
+   "chapter": 10,
+   "chapter_title": "General Knowledge",
+   "page": 241,
+   "label": "Unit 28 Multiwire Circuits",
+   "dur": 2839,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 28 quiz",
+    "book": "Theory",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+    "page": 278
+   }
+  },
+  {
+   "id": "ETC10U29",
+   "book": "Theory",
+   "chapter": 10,
+   "chapter_title": "General Knowledge",
+   "page": 241,
+   "label": "Unit 29 Formula Wheel",
+   "dur": 985,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 29 quiz",
+    "book": "Theory",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+    "page": 280
+   }
+  },
+  {
+   "id": "23UnderstandingtheNEC1",
+   "book": "NEC Vol 1",
+   "chapter": "intro",
+   "chapter_title": "",
+   "page": 7,
+   "label": "Introduction to Understanding the NEC Vol 1",
+   "dur": 428,
+   "kind": "intro"
+  },
+  {
+   "id": "23UNEC1TeamIntroductions",
+   "book": "NEC Vol 1",
+   "chapter": "intro",
+   "chapter_title": "",
+   "page": 7,
+   "label": "Team Introduction",
+   "dur": 851,
+   "kind": "intro"
+  },
+  {
+   "id": "23UNEC1Article90",
+   "book": "NEC Vol 1",
+   "chapter": 0,
+   "chapter_title": "Article 90 - Introduction to the NEC",
+   "page": null,
+   "label": "Art 90 Introduction to the NEC",
+   "dur": 5384,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 90 quiz",
+    "book": "NEC Vol 1",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+    "page": 35
+   }
+  },
+  {
+   "id": "23UNEC1Chapter1",
+   "book": "NEC Vol 1",
+   "chapter": 1,
+   "chapter_title": "General Rules",
+   "page": 17,
+   "label": "Chapter 1 - General Rules",
+   "dur": 34,
+   "kind": "chapter-intro"
+  },
+  {
+   "id": "23UNEC1Article100",
+   "book": "NEC Vol 1",
+   "chapter": 1,
+   "chapter_title": "General Rules",
+   "page": 17,
+   "label": "Art 100 Definitions",
+   "dur": 414,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article110",
+   "book": "NEC Vol 1",
+   "chapter": 1,
+   "chapter_title": "General Rules",
+   "page": 17,
+   "label": "Art 110 Requirements for Electrical Installations",
+   "dur": 11488,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 1 quiz",
+    "book": "NEC Vol 1",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+    "page": 117
+   }
+  },
+  {
+   "id": "23UNEC1Chapter2",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Chapter 2 - Wiring and Protection",
+   "dur": 204,
+   "kind": "chapter-intro"
+  },
+  {
+   "id": "23UNEC1Article200",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 200 Use and Identification of Grounded Conductors",
+   "dur": 2754,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article210",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 210 Branch Circuits",
+   "dur": 9406,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article215",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 215 Feeders",
+   "dur": 1234,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article220",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 220 Branch-Circuit, Feeder, and Service Load Calculations",
+   "dur": 146,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article225",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 225 Outside Branch Circuits and Feeders",
+   "dur": 2343,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article230",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 230 Services",
+   "dur": 8697,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article240",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 240 Overcurrent Protection",
+   "dur": 2657,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article242",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 242 Overvoltage Protection",
+   "dur": 1564,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article250",
+   "book": "NEC Vol 1",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 101,
+   "label": "Art 250 Grounding and Bonding",
+   "dur": 280,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 2 quiz",
+    "book": "NEC Vol 1",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+    "page": 349
+   }
+  },
+  {
+   "id": "23UNEC1Article300",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 300 General Requirements for Wiring Methods and Materials",
+   "dur": 8989,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article310",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 310 Conductors for General Wiring",
+   "dur": 2974,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article312",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 312 Cabinets, Cutout Boxes, and Meter Enclosure",
+   "dur": 4205,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article314",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 314 Boxes, Conduit Bodies, and Handhole Enclosures",
+   "dur": 5067,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article320",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 320 Armored Cable (Type AC)",
+   "dur": 1130,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article330",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 330 Metal-Clad Cable (Type MC)",
+   "dur": 1333,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article334",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 334 Nonmetallic-Sheathed Cable (Type NM)",
+   "dur": 2257,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article336",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 336 Power and Control Tray Cable (Type TC)",
+   "dur": 483,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article338",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 338 Service-Entrance Cable (Types SE and USE)",
+   "dur": 414,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article340",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 340 Underground Feeder and Branch-Circuit Cable (Type UF)",
+   "dur": 324,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article342",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 342 Intermediate Metal Conduit (IMC)",
+   "dur": 1418,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article344",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 344 Rigid Metal Conduit (RMC)",
+   "dur": 136,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article348",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 348 Flexible Metal Conduit (FMC)",
+   "dur": 948,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article350",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 350 Liquidtight Flexible Metal Conduit (LFMC)",
+   "dur": 785,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article352",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 352 Rigid Polyvinyl Chloride Conduit (PVC)",
+   "dur": 1512,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article356",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 356 Liquidtight Flexible Nonmetallic Conduit (LFNC)",
+   "dur": 1321,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article358",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 358 Electrical Metallic Tubing (EMT)",
+   "dur": 2415,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article362",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 362 Electrical Nonmetallic Tubing (ENT)",
+   "dur": 903,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article376",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 376 Metal Wireways",
+   "dur": 1263,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article380",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 380 Multioutlet Assemblies",
+   "dur": 329,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article386",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 386 Surface Metal Raceways",
+   "dur": 528,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article392",
+   "book": "NEC Vol 1",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 335,
+   "label": "Art 392 Cable Trays",
+   "dur": 1086,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 3 quiz",
+    "book": "NEC Vol 1",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+    "page": 545
+   }
+  },
+  {
+   "id": "23UNEC1Article400",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 400 Flexible Cords",
+   "dur": 2591,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article402",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 402 Fixture Wires",
+   "dur": 540,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article404",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 404 Switches",
+   "dur": 3328,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article406",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 406 Receptacles, Attachment Plugs, and Flanged Inlets",
+   "dur": 3458,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article408",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 408 Switchboards and Panelboards",
+   "dur": 1094,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article410",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 410 Luminaires and Lampholders",
+   "dur": 4854,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article411",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 411 Low-Voltage Lighting",
+   "dur": 817,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article422",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 422 Appliances",
+   "dur": 1212,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article424",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 424 Fixed Electric Space-Heating Equipment",
+   "dur": 545,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article430",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 430 Motor Circuits, Controllers, and Adjustable-Speed Drives",
+   "dur": 2030,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article440",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 440 Air-Conditioning Equipment",
+   "dur": 711,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article445",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 445 Generators",
+   "dur": 137,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article450",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 450 Transformers",
+   "dur": 386,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC1Article480",
+   "book": "NEC Vol 1",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 531,
+   "label": "Art 480 Stationary Standby Batteries",
+   "dur": 333,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 4 quiz",
+    "book": "NEC Vol 1",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+    "page": 663
+   }
+  },
+  {
+   "id": "23FundCalcChapter1",
+   "book": "Calcs",
+   "chapter": 1,
+   "chapter_title": "",
+   "page": 19,
+   "label": "Ch 1 General Rules",
+   "dur": 1085,
+   "kind": "unit",
+   "quiz": {
+    "label": "Calcs Ch 1 quiz",
+    "book": "Calcs",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+    "page": 51
+   }
+  },
+  {
+   "id": "23FundCalcChapter2",
+   "book": "Calcs",
+   "chapter": 2,
+   "chapter_title": "",
+   "page": 45,
+   "label": "Ch 2 Wiring and Protection",
+   "dur": 6626,
+   "kind": "unit",
+   "quiz": {
+    "label": "Calcs Ch 2 quiz",
+    "book": "Calcs",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+    "page": 103
+   }
+  },
+  {
+   "id": "23FundCalcChapter3",
+   "book": "Calcs",
+   "chapter": 3,
+   "chapter_title": "",
+   "page": 97,
+   "label": "Ch 3 Wiring Methods and Material",
+   "dur": 5420,
+   "kind": "unit",
+   "quiz": {
+    "label": "Calcs Ch 3 quiz",
+    "book": "Calcs",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+    "page": 137
+   }
+  },
+  {
+   "id": "23FundCalcChapter4",
+   "book": "Calcs",
+   "chapter": 4,
+   "chapter_title": "",
+   "page": 129,
+   "label": "Ch 4 Equipment for General Use",
+   "dur": 4946,
+   "kind": "unit",
+   "quiz": {
+    "label": "Calcs Ch 4 quiz",
+    "book": "Calcs",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+    "page": 164
+   }
+  },
+  {
+   "id": "23FundCalcChapter6",
+   "book": "Calcs",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 155,
+   "label": "Ch 6 Special Equipment",
+   "dur": 900,
+   "kind": "unit",
+   "quiz": {
+    "label": "Calcs Ch 6 quiz",
+    "book": "Calcs",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+    "page": 173
+   }
+  },
+  {
+   "id": "23EPChapter3Intro",
+   "book": "Exam Prep",
+   "chapter": "intro",
+   "chapter_title": "",
+   "page": null,
+   "label": "Module 3 Introduction",
+   "dur": 497,
+   "kind": "intro"
+  },
+  {
+   "id": "23EPUnit1",
+   "book": "Exam Prep",
+   "chapter": 1,
+   "chapter_title": "",
+   "page": 241,
+   "label": "Unit 1 Raceway Calculations",
+   "dur": 8636,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 1 quiz",
+    "book": "Exam Prep",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+    "page": 279
+   }
+  },
+  {
+   "id": "23EPUnit2",
+   "book": "Exam Prep",
+   "chapter": 2,
+   "chapter_title": "",
+   "page": 265,
+   "label": "Unit 2 Box Calculations",
+   "dur": 4831,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 2 quiz",
+    "book": "Exam Prep",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+    "page": 299
+   }
+  },
+  {
+   "id": "23EPUnit3edit",
+   "book": "Exam Prep",
+   "chapter": 3,
+   "chapter_title": "",
+   "page": 283,
+   "label": "Unit 3 Conductor Sizing and Protection Calculations",
+   "dur": 8862,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 3 quiz",
+    "book": "Exam Prep",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+    "page": 327
+   }
+  },
+  {
+   "id": "23EPUnit5",
+   "book": "Exam Prep",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 351,
+   "label": "Unit 5 Voltage-Drop Calculations",
+   "dur": 3818,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 5 quiz",
+    "book": "Exam Prep",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+    "page": 385
+   }
+  },
+  {
+   "id": "23EPUnit4",
+   "book": "Exam Prep",
+   "chapter": 4,
+   "chapter_title": "",
+   "page": 315,
+   "label": "Unit 4 Motor, AC, and Transformer Calculations",
+   "dur": 5108,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 4 quiz",
+    "book": "Exam Prep",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+    "page": 365
+   }
+  },
+  {
+   "id": "23EPUnit6",
+   "book": "Exam Prep",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 369,
+   "label": "Unit 6 Dwelling Unit Calculations",
+   "dur": 4640,
+   "kind": "unit",
+   "quiz": {
+    "label": "Unit 6 quiz",
+    "book": "Exam Prep",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+    "page": 407
+   }
+  },
+  {
+   "id": "23EPOutro",
+   "book": "Exam Prep",
+   "chapter": "summary",
+   "chapter_title": "",
+   "page": null,
+   "label": "Summary",
+   "dur": 292,
+   "kind": "summary"
+  },
+  {
+   "id": "2023UnderstandingBondingandGrounding",
+   "book": "B&G",
+   "chapter": "intro",
+   "chapter_title": "",
+   "page": null,
+   "label": "Introduction to 2023 Bonding and Grounding",
+   "dur": 2522,
+   "kind": "intro"
+  },
+  {
+   "id": "23UNECBGTeamIntro",
+   "book": "B&G",
+   "chapter": "intro",
+   "chapter_title": "",
+   "page": null,
+   "label": "2023 Bonding and Grounding Team Introductions",
+   "dur": 664,
+   "kind": "intro"
+  },
+  {
+   "id": "23UNECBGArticle250PartA",
+   "book": "B&G",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 123,
+   "label": "Art 250 Grounding and Bonding Part A",
+   "dur": 14074,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNECBGArticle250PartB",
+   "book": "B&G",
+   "chapter": 2,
+   "chapter_title": "Wiring and Protection",
+   "page": 123,
+   "label": "Art 250 Grounding and Bonding Part B",
+   "dur": 14074,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 250 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 216
+   }
+  },
+  {
+   "id": "23UNECBGArticle300",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 300 General Requirements for Wiring Methods and Materials",
+   "dur": 649,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 300 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 284
+   }
+  },
+  {
+   "id": "23UNECBGArticle314",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 314 Boxes, Conduit Bodies, and Handhole Enclosures",
+   "dur": 122,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 314 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 285
+   }
+  },
+  {
+   "id": "23UNECBGArticle320",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 320 Armored Cable (Type AC)",
+   "dur": 27,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 320 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 286
+   }
+  },
+  {
+   "id": "23UNECBGArticle330",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 330 Metal-Clad Cable (Type MC)",
+   "dur": 42,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 330 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 286
+   }
+  },
+  {
+   "id": "23UNECBGArticle334",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 334 Nonmetallic-Sheathed Cable (Type NM)",
+   "dur": 83,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 334 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 286
+   }
+  },
+  {
+   "id": "23UNECBGArticle342",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 342 Intermediate Metal Conduit (IMC)",
+   "dur": 19,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 342 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 286
+   }
+  },
+  {
+   "id": "23UNECBGArticle344",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 344 Rigid Metal Conduit (RMC)",
+   "dur": 4,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 344 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 286
+   }
+  },
+  {
+   "id": "23UNECBGArticle350",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 350 Liquidtight Flexible Metal Conduit (LFMC)",
+   "dur": 51,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 350 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 287
+   }
+  },
+  {
+   "id": "23UNECBGArticle352",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 352 Rigid Polyvinyl Chloride Conduit (PVC)",
+   "dur": 133,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 352 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 287
+   }
+  },
+  {
+   "id": "23UNECBGArticle356",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 356 Liquidtight Flexible Nonmetallic Conduit (LFNC)",
+   "dur": 290,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 356 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 287
+   }
+  },
+  {
+   "id": "23UNECBGArticle358",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 358 Electrical Metallic Tubing (EMT)",
+   "dur": 7,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 358 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 287
+   }
+  },
+  {
+   "id": "23UNECBGArticle362",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 362 Electrical Nonmetallic Tubing (ENT)",
+   "dur": 22,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 362 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 287
+   }
+  },
+  {
+   "id": "23UNECBGArticle376",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 376 Metal Wireways",
+   "dur": 12,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 376 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 288
+   }
+  },
+  {
+   "id": "23UNECBGArticle386",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 386 Surface Metal Raceways",
+   "dur": 40,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 386 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 288
+   }
+  },
+  {
+   "id": "23UNECBGArticle392",
+   "book": "B&G",
+   "chapter": 3,
+   "chapter_title": "Wiring Methods and Material",
+   "page": 221,
+   "label": "Art 392 Cable Trays",
+   "dur": 95,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 392 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 288
+   }
+  },
+  {
+   "id": "23UNECBGArticle404",
+   "book": "B&G",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 275,
+   "label": "Art 404 Switches",
+   "dur": 310,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 404 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 309
+   }
+  },
+  {
+   "id": "23UNECBGArticle406",
+   "book": "B&G",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 275,
+   "label": "Art 406 Receptacles, Attachment Plugs, and Flanged Inlets",
+   "dur": 799,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 406 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 310
+   }
+  },
+  {
+   "id": "23UNECBGArticle408",
+   "book": "B&G",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 275,
+   "label": "Art 408 Switchboards and Panelboards",
+   "dur": 146,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 408 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 310
+   }
+  },
+  {
+   "id": "23UNECBGArticle410",
+   "book": "B&G",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 275,
+   "label": "Art 410 Luminaires",
+   "dur": 352,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 410 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 311
+   }
+  },
+  {
+   "id": "23UNECBGArticle440",
+   "book": "B&G",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 275,
+   "label": "Art 440 Air-Conditioning Equipment",
+   "dur": 39,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 440 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 311
+   }
+  },
+  {
+   "id": "23UNECBGArticle450",
+   "book": "B&G",
+   "chapter": 4,
+   "chapter_title": "Equipment for General Use",
+   "page": 275,
+   "label": "Art 450 Transformers",
+   "dur": 212,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 450 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 311
+   }
+  },
+  {
+   "id": "23UNECBGArticle501",
+   "book": "B&G",
+   "chapter": 5,
+   "chapter_title": "Special Occupancies",
+   "page": 299,
+   "label": "Art 501 Class I Hazardous (Classified) Locations",
+   "dur": 622,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 501 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 333
+   }
+  },
+  {
+   "id": "23UNECBGArticle502",
+   "book": "B&G",
+   "chapter": 5,
+   "chapter_title": "Special Occupancies",
+   "page": 299,
+   "label": "Art 502 Class II Hazardous (Classified)",
+   "dur": 284,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 502 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 333
+   }
+  },
+  {
+   "id": "23UNECBGArticle517",
+   "book": "B&G",
+   "chapter": 5,
+   "chapter_title": "Special Occupancies",
+   "page": 299,
+   "label": "Art 517 Health Care Facilities",
+   "dur": 1149,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 517 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 334
+   }
+  },
+  {
+   "id": "23UNECBGArticle547",
+   "book": "B&G",
+   "chapter": 5,
+   "chapter_title": "Special Occupancies",
+   "page": 299,
+   "label": "Art 547 Agricultural Buildings",
+   "dur": 611,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 547 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 334
+   }
+  },
+  {
+   "id": "23UNECBGArticle555",
+   "book": "B&G",
+   "chapter": 5,
+   "chapter_title": "Special Occupancies",
+   "page": 299,
+   "label": "Art 555 Marinas, Boatyards, and Docking Facilities",
+   "dur": 350,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 555 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 335
+   }
+  },
+  {
+   "id": "23UNECBGArticle600",
+   "book": "B&G",
+   "chapter": 6,
+   "chapter_title": "Special Equipment",
+   "page": 323,
+   "label": "Art 600 Electric Signs",
+   "dur": 198,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 600 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 365
+   }
+  },
+  {
+   "id": "23UNECBGArticle645",
+   "book": "B&G",
+   "chapter": 6,
+   "chapter_title": "Special Equipment",
+   "page": 323,
+   "label": "Art 645 Information Technology Equipment (ITE)",
+   "dur": 530,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 645 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 365
+   }
+  },
+  {
+   "id": "23UNECBGArticle680",
+   "book": "B&G",
+   "chapter": 6,
+   "chapter_title": "Special Equipment",
+   "page": 323,
+   "label": "Art 680 Swimming Pools, Spas, Hot Tubs, Fountains, and Similar Installations",
+   "dur": 3822,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 680 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 366
+   }
+  },
+  {
+   "id": "23UNECBGArticle690",
+   "book": "B&G",
+   "chapter": 6,
+   "chapter_title": "Special Equipment",
+   "page": 323,
+   "label": "Art 690 Solar Photovoltaic (PV) Systems",
+   "dur": 1449,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 690 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 369
+   }
+  },
+  {
+   "id": "23UNECBGArticle810",
+   "book": "B&G",
+   "chapter": 8,
+   "chapter_title": "Communications Systems",
+   "page": 357,
+   "label": "Art 810 Antenna Systems",
+   "dur": 396,
+   "kind": "unit",
+   "quiz": {
+    "label": "Art 810 quiz",
+    "book": "B&G",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+    "page": 377
+   }
+  },
+  {
+   "id": "ObjectionableCurrentPrevention2506",
+   "book": "B&G",
+   "chapter": "ADV",
+   "chapter_title": "",
+   "page": null,
+   "label": "Unit 36 Objectionable Current Prevention [250.6]",
+   "dur": 371,
+   "kind": "unit"
+  },
+  {
+   "id": "GroundingandBondingServiceEquipment25024",
+   "book": "B&G",
+   "chapter": "ADV",
+   "chapter_title": "",
+   "page": null,
+   "label": "Unit 37 Grounding and Bonding Service Equipment [250.24]",
+   "dur": 2183,
+   "kind": "unit"
+  },
+  {
+   "id": "TransformerSeparatelyDerivedSystems25030",
+   "book": "B&G",
+   "chapter": "ADV",
+   "chapter_title": "",
+   "page": null,
+   "label": "Unit 38 Transformer Separately Derived Systems [250.30]",
+   "dur": 2317,
+   "kind": "unit"
+  },
+  {
+   "id": "GeneratorSeparatelyDerivedSystems25030",
+   "book": "B&G",
+   "chapter": "ADV",
+   "chapter_title": "",
+   "page": null,
+   "label": "Unit 39 Generator Separately Derived Systems [250.30]",
+   "dur": 1164,
+   "kind": "unit"
+  },
+  {
+   "id": "BuildingsSuppliedbyaFeeder25032",
+   "book": "B&G",
+   "chapter": "ADV",
+   "chapter_title": "",
+   "page": null,
+   "label": "Unit 40 Buildings Supplied by a Feeder [250.32]",
+   "dur": 577,
+   "kind": "unit"
+  },
+  {
+   "id": "ImpedanceGroundedSystems25036",
+   "book": "B&G",
+   "chapter": "ADV",
+   "chapter_title": "",
+   "page": null,
+   "label": "Unit 41 Impedance Grounded Systems [250.36]",
+   "dur": 1804,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Intro",
+   "book": "NEC Vol 2",
+   "chapter": "intro",
+   "chapter_title": "",
+   "page": null,
+   "label": "Team Introduction",
+   "dur": 275,
+   "kind": "intro"
+  },
+  {
+   "id": "23UNEC2Article500",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 500 Hazardous (Classified) Locations",
+   "dur": 3149,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article501",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 501 Class I Hazardous (Classified) Locations",
+   "dur": 4858,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article502",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 502 Class II Hazardous (Classified) Locations",
+   "dur": 83,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article511",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 511 Commercial Garages, Repair and Storage",
+   "dur": 83,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article517",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 517 Health Care Facilities",
+   "dur": 1621,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article518",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 518 Assembly Occupancies",
+   "dur": 355,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article547",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 547 Agricultural Buildings",
+   "dur": 356,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article555",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 555 Marinas, Boatyards, Docking Facilities",
+   "dur": 1368,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article590",
+   "book": "NEC Vol 2",
+   "chapter": 5,
+   "chapter_title": "",
+   "page": 125,
+   "label": "Art 590 Temporary Installations",
+   "dur": 1881,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 5 quiz",
+    "book": "NEC Vol 2",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+    "page": 227
+   }
+  },
+  {
+   "id": "23UNEC2Chapter6Intro",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Chapter 6 Introduction",
+   "dur": 80,
+   "kind": "chapter-intro"
+  },
+  {
+   "id": "23UNEC2Article600",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Art 600 Electric Signs",
+   "dur": 778,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article604",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Art 604 Manufactured Wiring Systems",
+   "dur": 299,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article625",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Art 625 Electric Vehicle Power Transfer System",
+   "dur": 299,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article680",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Art 680 Swimming Pools, Spas, Hot Tubs, Fountains",
+   "dur": 10837,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article690",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Art 690 Solar Photovoltaic (PV) Systems",
+   "dur": 98,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article695",
+   "book": "NEC Vol 2",
+   "chapter": 6,
+   "chapter_title": "",
+   "page": 229,
+   "label": "Art 695 Fire Pumps",
+   "dur": 99,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 6 quiz",
+    "book": "NEC Vol 2",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+    "page": 375
+   }
+  },
+  {
+   "id": "23UNEC2Chapter7Intro",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Chapter 7 Introduction",
+   "dur": 80,
+   "kind": "chapter-intro"
+  },
+  {
+   "id": "23UNEC2Article700",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 700 Emergency Systems",
+   "dur": 1935,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article701",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 701 Legally Required Standby Systems",
+   "dur": 310,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article702",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 702 Optional Standby Systems",
+   "dur": 50,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article705",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 705 Interconnected Electric Power Production Sources",
+   "dur": 51,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article706",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 706 Energy Storage Systems",
+   "dur": 25,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article722",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 722 Cables for Power-Limited Circuits",
+   "dur": 19,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article724",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 724 Class 1 Power-Limited Circuits",
+   "dur": 883,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article725",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 725 Remote-Control, Signaling, Power-Limited Circuits",
+   "dur": 883,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article726",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 726 Class 4 Fault-Managed Power Systems",
+   "dur": 469,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article750",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 750 Energy Management Systems",
+   "dur": 205,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article760",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 760 Fire Alarm Systems",
+   "dur": 205,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article770",
+   "book": "NEC Vol 2",
+   "chapter": 7,
+   "chapter_title": "",
+   "page": 385,
+   "label": "Art 770 Optical Fiber Cables",
+   "dur": 159,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 7 quiz",
+    "book": "NEC Vol 2",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+    "page": 503
+   }
+  },
+  {
+   "id": "23UNEC2Chapter8Intro",
+   "book": "NEC Vol 2",
+   "chapter": 8,
+   "chapter_title": "",
+   "page": 503,
+   "label": "Chapter 8 Introduction",
+   "dur": 99,
+   "kind": "chapter-intro"
+  },
+  {
+   "id": "23UNEC2Article800",
+   "book": "NEC Vol 2",
+   "chapter": 8,
+   "chapter_title": "",
+   "page": 503,
+   "label": "Art 800 General Requirements for Communications Systems",
+   "dur": 160,
+   "kind": "unit"
+  },
+  {
+   "id": "23UNEC2Article810",
+   "book": "NEC Vol 2",
+   "chapter": 8,
+   "chapter_title": "",
+   "page": 503,
+   "label": "Art 810 Radio and Television Antenna Equipment",
+   "dur": 230,
+   "kind": "unit",
+   "quiz": {
+    "label": "Ch 8 quiz",
+    "book": "NEC Vol 2",
+    "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+    "page": 537
+   }
+  }
+ ]
+}
