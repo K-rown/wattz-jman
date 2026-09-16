@@ -64,10 +64,34 @@
   footer h3 { font-size: .8rem; text-transform: uppercase; letter-spacing:.05em; margin: 14px 0 6px; }
   footer ul { margin: 0; padding-left: 18px; }
   .sm { font-size:.8rem; color: var(--mute); }
+  .who[hidden] { display:none; }
   .who { display:flex; gap:8px; align-items:center; background:#fff7d6; border:1px solid #f0d78a; border-radius:10px; padding:10px 12px; margin:0 0 12px; }
   .who input { flex:1; min-width:0; font:inherit; padding:8px; border:1px solid var(--line); border-radius:8px; }
   .who button { background:var(--green); color:#fff; border:0; border-radius:8px; padding:8px 12px; font-weight:700; }
   .synced { color: var(--green); }
+  .stage { background:#000; border-radius:12px; overflow:hidden; margin:0 0 12px; color:#eee; }
+  .stage .wrap { position:relative; width:100%; aspect-ratio:16/9; background:#000; }
+  .stage video { position:absolute; inset:0; width:100%; height:100%; }
+  .stagebar { display:flex; gap:8px; align-items:center; padding:8px 10px; background:#1b1d20; }
+  .stagebar .grow { flex:1; min-width:0; }
+  .stagebar .vt { font-weight:700; font-size:.95rem; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; }
+  .stagebar .vs { font-size:.75rem; color:#aaa; }
+  .stagebar button { flex:none; background:#333; color:#fff; border:0; border-radius:8px; padding:8px 10px; font-weight:700; font-size:.85rem; }
+  .stagebar #stophere { background:var(--green); }
+  .stage .err { background:#7f1d1d; color:#fee2e2; padding:10px 12px; font-size:.85rem; }
+  /* watching: the app is built around the view */
+  main.watching .stage { position: sticky; top: 0; z-index: 6; border-radius: 0 0 12px 12px; margin: 0 -12px 12px; }
+  main.watching h1, main.watching .sub { display: none; }
+  main.watching .here-bar { position: static; }
+  @media (min-width: 900px) {
+    main.watching { max-width: none; display: grid; grid-template-columns: minmax(0, 1fr) 440px; gap: 16px; align-items: start; padding: 12px 16px 60px; }
+    main.watching > * { grid-column: 2; }
+    main.watching .stage { grid-column: 1; grid-row: 1 / span 400; position: sticky; top: 12px; margin: 0; border-radius: 12px; }
+    main.watching .stage .wrap { aspect-ratio: auto; height: calc(100vh - 90px); }
+    main.watching .stage video { object-fit: contain; }
+    main.watching h1, main.watching .sub { display: block; }
+    main.watching .here-bar { position: sticky; top: 0; }
+  }
   .stopnote { display:flex; flex-direction:column; gap:4px; margin: 10px 0 0; }
   .stopnote label { font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; color:var(--mute); font-weight:700; }
   .stopnote input { font:inherit; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); width:100%; }
@@ -89,15 +113,25 @@
 <body>
 <main>
   <h1><span class="brand">WATTZ L<b>E</b>D</span> · PATH TO JOURNEYMAN</h1>
-  <p class="sub">An hour or two a day, in order, at your own pace. The dates are a suggested pace, not a lock: run ahead when you can, catch up on weekends when you must. Tap a day to open it. <a id="booksLink" href="#" target="_blank" rel="noopener">Digital books</a></p>
+  <p class="sub">An hour or two a day, in order, at your own pace. The dates are a suggested pace, not a lock: run ahead when you can, catch up on weekends when you must. Tap a day, tap a video, it plays right here. <a id="booksLink" href="#" target="_blank" rel="noopener">Digital books</a></p>
   <div id="whoSlot"></div>
   <div class="here-bar" id="here"><div id="hereText"></div><button id="jump">Go</button></div>
+  <div class="stage" id="stage" hidden>
+    <div class="wrap"><video id="v" controls playsinline preload="metadata"></video></div>
+    <div class="stagebar">
+      <div class="grow"><div class="vt" id="vt"></div><div class="vs" id="vs"></div></div>
+      <button id="speed" type="button">1.5×</button>
+      <button id="stophere" type="button">Stop here</button>
+    </div>
+    <div class="err" id="verr" hidden></div>
+  </div>
   <div class="strip" id="done"></div>
   <div class="card" id="check"></div>
   <div id="cards"></div>
   <footer id="foot"></footer>
 </main>
 <div class="who" id="who" hidden><div class="grow"><b>Who is this?</b><div class="sm">Your done marks follow your name to every device.</div></div><input id="whoName" placeholder="First name" autocomplete="off"><button id="whoSave">Save</button></div>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.15/hls.min.js"></script>
 <script>
 // Progress sync: the Supabase project and its anon (public) key. Table: progress.sql.
 const SYNC = { url: "https://buyasasesqnopwerusfd.supabase.co", key: "" };
@@ -177,6 +211,42 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   const paceWords = d => d > 0 ? d + ' day' + (d > 1 ? 's' : '') + ' ahead' : d < 0 ? (-d) + ' day' + (d < -1 ? 's' : '') + ' behind' : 'on pace';
   const bookFull = short => Object.keys(DATA.colors).find(k => k === short || k.endsWith(short)
     || (short === 'Theory' && k === 'Electrical Theory') || (short === 'Calcs' && k.startsWith('Fundamental')) || (short === 'B&G' && k.startsWith('Bonding')));
+
+  // ---- the stage: the video plays here, never in another tab ----
+  const video = document.getElementById('v'); let hls = null, playing = null, saveTimer = null;
+  const POS = 'ptj.pos.';
+  const posOf = id => { try { return parseFloat(localStorage.getItem(POS + id)) || 0; } catch (e) { return 0; } };
+  const speeds = [1.5, 1.25, 1]; let si = 0;
+  const applySpeed = () => { video.playbackRate = speeds[si]; document.getElementById('speed').textContent = speeds[si] + '×'; };
+  document.getElementById('speed').addEventListener('click', () => { si = (si + 1) % speeds.length; applySpeed(); });
+  const verr = m => { const e = document.getElementById('verr'); e.textContent = m; e.hidden = !m; };
+  function play(unit, t, dayN) {
+    const st = document.getElementById('stage'); st.hidden = false; document.querySelector('main').classList.add('watching');
+    playing = { unit, dayN };
+    const start = t || posOf(unit.id);
+    document.getElementById('vt').textContent = unit.label;
+    document.getElementById('vs').textContent = unit.book + ' · ' + hms(unit.dur) + (start ? ' · from ' + hms(start) : '');
+    verr('');
+    const src = 'https://vod.mikeholt.com/' + unit.id + '/HLS/' + unit.id + '.m3u8';
+    if (hls) { hls.destroy(); hls = null; }
+    if (window.Hls && Hls.isSupported()) {
+      hls = new Hls({ startPosition: start > 0 ? start : -1 });
+      hls.loadSource(src); hls.attachMedia(video);
+      hls.on(Hls.Events.MANIFEST_PARSED, () => { applySpeed(); video.play().catch(() => {}); });
+      hls.on(Hls.Events.ERROR, (_, d) => { if (d.fatal) verr('Could not load the stream (' + d.type + '). Check signal, then tap Watch again.'); });
+    } else if (video.canPlayType('application/vnd.apple.mpegurl')) {
+      video.src = src; video.addEventListener('loadedmetadata', () => { if (start > 0) video.currentTime = start; applySpeed(); video.play().catch(() => {}); }, { once: true });
+    } else verr('This browser cannot play the stream. Use Chrome or Safari.');
+    st.scrollIntoView({ behavior: 'smooth', block: 'start' });
+  }
+  video.addEventListener('timeupdate', () => { if (!playing || saveTimer) return; saveTimer = setTimeout(() => { saveTimer = null; try { localStorage.setItem(POS + playing.unit.id, String(video.currentTime)); } catch (e) {} }, 5000); });
+  document.getElementById('stophere').addEventListener('click', () => {
+    if (!playing) return;
+    const words = playing.unit.label + ' @ ' + hms(video.currentTime);
+    state.notes[playing.dayN] = words; try { localStorage.setItem(POS + playing.unit.id, String(video.currentTime)); } catch (e) {}
+    save(); render();
+    const b = document.getElementById('stophere'); b.textContent = 'Written to Day ' + playing.dayN; setTimeout(() => { b.textContent = 'Stop here'; }, 2000);
+  });
 
   function render() {
     const cur = currentN();
@@ -262,12 +332,13 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
           gd.appendChild($('div', 'gh', esc(gr.book + (gr.chapter === 'intro' ? ' · Intro' : gr.chapter === 'summary' ? ' · Summary' : gr.book === 'Exam Prep' ? '' : ' · Ch ' + gr.chapter) + (gr.chapter_title ? ' ' + gr.chapter_title : '') + (gr.page ? ' (pg ' + gr.page + ')' : ''))));
           gr.parts.forEach(p => {
             const row = $('div', 'part');
-            const a = $('a', 'u', esc(p.unit.label)); a.href = link(p.unit.id, p.t); a.target = '_blank'; a.rel = 'noopener';
+            const a = $('a', 'u', esc(p.unit.label)); a.href = link(p.unit.id, p.t);
+            a.addEventListener('click', e => { e.preventDefault(); play(p.unit, p.t, s.n); });
             row.appendChild(a);
             row.appendChild($('span', 'dur', (p.unit.est ? 'about ' : '') + hms(p.unit.dur)));
             if (p.t) row.appendChild($('span', 'pick', 'pick up at ' + hms(p.t)));
             if (!p.complete) row.appendChild($('span', 'pick', 'stop at ' + hms(p.end)));
-            const w = $('a', 'watch', 'Watch'); w.href = a.href; w.target = '_blank'; w.rel = 'noopener'; row.appendChild(w);
+            const w = $('a', 'watch', 'Watch'); w.href = a.href; w.addEventListener('click', e => { e.preventDefault(); play(p.unit, p.t, s.n); }); row.appendChild(w);
             gd.appendChild(row);
           });
           b.appendChild(gd);
