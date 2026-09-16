@@ -68,6 +68,11 @@
   .who input { flex:1; min-width:0; font:inherit; padding:8px; border:1px solid var(--line); border-radius:8px; }
   .who button { background:var(--green); color:#fff; border:0; border-radius:8px; padding:8px 12px; font-weight:700; }
   .synced { color: var(--green); }
+  .stopnote { display:flex; flex-direction:column; gap:4px; margin: 10px 0 0; }
+  .stopnote label { font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; color:var(--mute); font-weight:700; }
+  .stopnote input { font:inherit; padding:10px; border:1px solid var(--line); border-radius:8px; background:var(--card); color:var(--ink); width:100%; }
+  .stopnote .saved { font-size:.75rem; color:var(--mute); min-height:1em; }
+  .brief .mynote { display:block; color:var(--ink); font-weight:600; margin-top:2px; }
   #check .summary .head { font-size:1rem; }
   .ck { padding: 4px 12px 10px; }
   .ck h4 { margin: 10px 0 4px; font-size:.75rem; text-transform:uppercase; letter-spacing:.05em; color:var(--mute); }
@@ -116,14 +121,14 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
 
   // ---- per-phone state ----
   const KEY = 'ptj.v2', WHO = 'ptj.who';
-  let state = { done: {}, open: {} };
+  let state = { done: {}, open: {}, notes: {} };
   try { Object.assign(state, JSON.parse(localStorage.getItem(KEY) || '{}')); } catch (e) {}
   let who = null; try { who = localStorage.getItem(WHO); } catch (e) {}
   const canSync = () => !!(SYNC.url && SYNC.key && who);
   const hdr = () => ({ apikey: SYNC.key, Authorization: 'Bearer ' + SYNC.key, 'Content-Type': 'application/json' });
   let syncWord = '';
   // open shows nothing across devices on purpose; done + here do
-  const shared = () => ({ done: state.done });
+  const shared = () => ({ done: state.done, notes: state.notes });
   async function push() {
     if (!canSync()) return;
     try {
@@ -139,7 +144,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     try {
       const r = await fetch(SYNC.url + '/rest/v1/ptj_progress?person=eq.' + encodeURIComponent(who) + '&select=state', { headers: hdr() });
       const rows = r.ok ? await r.json() : [];
-      if (rows[0] && rows[0].state) { state.done = rows[0].state.done || {}; }
+      if (rows[0] && rows[0].state) { state.done = rows[0].state.done || {}; state.notes = rows[0].state.notes || {}; }
       else await push();
       syncWord = 'Synced as ' + who;
     } catch (e) { syncWord = 'Offline — showing this phone\'s copy'; }
@@ -241,7 +246,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       const late = !isDone && D(s.date) < today;
       g.appendChild($('div', 'date', (s.exam ? 'Exam' : 'Day ' + s.n) + '<span class="was' + (late ? ' late' : '') + '">' + (late ? 'was due ' : 'by ') + dlab(s.date) + '</span>'));
       g.appendChild($('div', 'head', esc(s.exam || s.head)));
-      if (!s.exam) g.appendChild($('div', 'brief', esc(s.quiz)));
+      const myNote = (state.notes && state.notes[s.n] || '').trim();
+      g.appendChild($('div', 'brief', (s.exam ? '' : esc(s.quiz)) + (myNote ? '<span class="mynote">✎ ' + esc(myNote) + '</span>' : '')));
       sum.appendChild(g);
       sum.appendChild($('div', 'chev', '›'));
       sum.addEventListener('click', () => { state.open[s.n] = !isOpen; save(); render(); });
@@ -279,6 +285,14 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
         }
         if (s.stop) b.appendChild($('div', 'stop', 'The next day starts at ' + esc(s.stop.unit.book + ': ' + s.stop.unit.label) + (s.stop.at ? ' @ ' + hms(s.stop.at) : '')));
       }
+      const sn = $('div', 'stopnote');
+      const lab = $('label', null, 'Where I stopped / notes'); lab.htmlFor = 'note' + s.n; sn.appendChild(lab);
+      const inp = $('input'); inp.id = 'note' + s.n; inp.type = 'text'; inp.autocomplete = 'off'; inp.placeholder = s.exam ? 'Score, what to rewatch' : 'e.g. Unit 25 @ 41:10, redo the quiz'; inp.value = myNote;
+      const savedWord = $('div', 'saved', '');
+      let noteTimer = null;
+      inp.addEventListener('input', () => { state.notes[s.n] = inp.value; clearTimeout(noteTimer); noteTimer = setTimeout(() => { save(); savedWord.textContent = 'Saved'; const b = c.querySelector('.brief'); if (b) b.innerHTML = (s.exam ? '' : esc(s.quiz)) + (inp.value.trim() ? '<span class="mynote">✎ ' + esc(inp.value.trim()) + '</span>' : ''); }, 400); });
+      inp.addEventListener('click', e => e.stopPropagation());
+      sn.appendChild(inp); sn.appendChild(savedWord); b.appendChild(sn);
       const act = $('div', 'actions');
       const bd = $('button', 'b-here', isDone ? 'Mark not done' : 'Mark done');
       bd.addEventListener('click', e => { e.stopPropagation(); if (isDone) delete state.done[s.n]; else state.done[s.n] = true; save(); render(); });

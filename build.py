@@ -245,8 +245,8 @@ CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
     let first = true;
     store.onSnapshot(snap => {
       if (inFlight) return;   // a tick is on its way up; the store's copy is older than this screen
-      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
-      else if (first && Object.keys(state.done).length) push();   // this device had marks before sync: keep them
+      if (snap.exists) { const s = snap.data(); state.done = s.done || {}; state.notes = s.notes || {}; try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {} }
+      else if (first && (Object.keys(state.done).length || Object.keys(state.notes).length)) push();   // this device had marks before sync: keep them
       first = false;
       syncWord = 'Synced to your Claude account'; render(); paintSync();
     }, e => { store = null; syncWord = 'Saved on this device only (' + ((e && e.code) || 'unknown') + ').'; paintSync(); });
