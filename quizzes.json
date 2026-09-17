@@ -12220,5 +12220,163 @@
     "answer": "a"
    }
   ]
+ },
+ "B&G_Art_344": {
+  "book": "B&G",
+  "quiz": "Art 344",
+  "page": 286,
+  "unit": "Article 344—Rigid Metal Conduit (RMC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 344 covers the use, installation, and construction specifications for _____ conduit and associated fittings.",
+    "choices": {
+     "a": "intermediate metal",
+     "b": "rigid metal",
+     "c": "electrical metallic",
+     "d": "aluminum metal"
+    },
+    "ref": "344.1",
+    "answer": "b"
+   }
+  ]
+ },
+ "B&G_Art_350": {
+  "book": "B&G",
+  "quiz": "Art 350",
+  "page": 287,
+  "unit": "Article 350—Liquidtight Flexible Metal Conduit (LFMC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The use, installation, and construction specifications for liquidtight flexible metal conduit (LFMC) and associated fittings are covered within Article _____.",
+    "choices": {
+     "a": "300",
+     "b": "334",
+     "c": "350",
+     "d": "410"
+    },
+    "ref": "350.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Where flexibility is not required after installation, liquidtight flexible metal conduit shall be permitted to be used as an equipment grounding conductor when installed in accordance with _____.",
+    "choices": {
+     "a": "250.102",
+     "b": "250.118(A)(5)",
+     "c": "250.118(A)(6)",
+     "d": "348.6"
+    },
+    "ref": "350.60(A)",
+    "answer": "c"
+   },
+   {
+    "n": 3,
+    "q": "When LFMC is used to connect equipment where flexibility is necessary to minimize the transmission of vibration from equipment or for equipment requiring movement after installation, a(an) _____ conductor shall be installed.",
+    "choices": {
+     "a": "main bonding",
+     "b": "grounded",
+     "c": "equipment grounding",
+     "d": "grounding electrode"
+    },
+    "ref": "350.60(B)",
+    "answer": "c"
+   }
+  ]
+ },
+ "B&G_Art_352": {
+  "book": "B&G",
+  "quiz": "Art 352",
+  "page": 287,
+  "unit": "Article 352—Rigid Polyvinyl Chloride Conduit (PVC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 352 covers the use, installation, and construction specifications for _____ and associated fittings.",
+    "choices": {
+     "a": "ENT",
+     "b": "RMC",
+     "c": "IMC",
+     "d": "PVC"
+    },
+    "ref": "352.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Where equipment grounding is required, a separate grounding conductor shall be installed in Type PVC conduit except where the _____ is used to ground equipment as permitted in 250.142.",
+    "choices": {
+     "a": "grounding jumper",
+     "b": "grounded conductor",
+     "c": "bonding jumper",
+     "d": "bonded conductor"
+    },
+    "ref": "352.60 Ex 2",
+    "answer": "b"
+   }
+  ]
+ },
+ "B&G_Art_356": {
+  "book": "B&G",
+  "quiz": "Art 356",
+  "page": 287,
+  "unit": "Article 356—Liquidtight Flexible Nonmetallic Conduit (LFNC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the use, installation, and construction specifications for liquidtight flexible nonmetallic conduit (LFNC) and associated fittings.",
+    "choices": {
+     "a": "300",
+     "b": "334",
+     "c": "350",
+     "d": "356"
+    },
+    "ref": "356.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "When LFNC is used, and equipment grounding is required, a separate _____ shall be installed in the conduit.",
+    "choices": {
+     "a": "grounding conductor",
+     "b": "expansion fitting",
+     "c": "flexible nonmetallic connector",
+     "d": "grounded conductor"
+    },
+    "ref": "356.6",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_358": {
+  "book": "B&G",
+  "quiz": "Art 358",
+  "page": 287,
+  "unit": "Article 358—Electrical Metallic Tubing (EMT)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the use, installation, and construction specifications for electrical metallic tubing (EMT) and associated fittings.",
+    "choices": {
+     "a": "334",
+     "b": "350",
+     "c": "356",
+     "d": "358"
+    },
+    "ref": "358.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "EMT shall not be permitted as an equipment grounding conductor.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "358.60",
+    "answer": "b"
+   }
+  ]
  }
 }
