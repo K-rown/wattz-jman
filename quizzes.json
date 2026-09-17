@@ -2826,5 +2826,2739 @@
     "answer": "a"
    }
   ]
+ },
+ "NEC_Vol_1_Ch_3": {
+  "book": "NEC Vol 1",
+  "quiz": "Ch 3",
+  "page": 545,
+  "unit": "Ch 3",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The requirements of Article 300 are not intended to apply to the conductors that form an _____ part of equipment or listed utilization equipment.",
+    "choices": {
+     "a": "exterior",
+     "b": "integral",
+     "c": "interior",
+     "d": "none of these"
+    },
+    "ref": "300.1(B)",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "Where Type NM cables pass through cut or drilled slots or holes in metal members, the cable shall be protected by _____ which are installed in the opening prior to the installation of the cable and which securely cover all metal edges.",
+    "choices": {
+     "a": "anti-short devices",
+     "b": "sleeves",
+     "c": "plates",
+     "d": "listed bushings or grommets"
+    },
+    "ref": "300.4(B)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "Where raceways contain 4 AWG or larger insulated circuit conductors and these conductors enter a cabinet, a box, an enclosure, or a raceway the conductors shall be protected from abrasion during and after installation by an identified fitting providing a smoothly rounded _____ surface.",
+    "choices": {
+     "a": "fiberglass",
+     "b": "plastic",
+     "c": "insulating",
+     "d": "gray"
+    },
+    "ref": "300.4(G)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "The minimum cover requirement for Type UF cable that supplies a 120V, 15A GFCI-protected circuit under a driveway of a one-family dwelling is _____.",
+    "choices": {
+     "a": "6 in.",
+     "b": "12 in.",
+     "c": "16 in.",
+     "d": "24 in."
+    },
+    "ref": "300.5(A) Table Column 4",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "Direct-buried service conductors that are not encased in concrete and that are buried 18 in. or more below grade shall have their location identified by a warning ribbon placed in the trench at least _____ above the underground installation.",
+    "choices": {
+     "a": "6 in.",
+     "b": "10 in.",
+     "c": "12 in.",
+     "d": "18 in."
+    },
+    "ref": "300.5(D)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Where corrosion protection is necessary and the conduit is threaded anywhere other than at the factory where the product is listed, the threads shall be coated with a(an) _____ electrically conductive, corrosion-resistant compound.",
+    "choices": {
+     "a": "marked",
+     "b": "listed",
+     "c": "labeled",
+     "d": "approved"
+    },
+    "ref": "300.6(A)",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "Raceways may be used as a means of support where the raceway contains power-supply conductors for electrically controlled equipment and is used to _____ Class 2 or Class 3 circuit conductors or cables that are solely for the purpose of connection to the equipment control circuits.",
+    "choices": {
+     "a": "support",
+     "b": "secure",
+     "c": "strap",
+     "d": "none of these"
+    },
+    "ref": "300.11(C)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 8,
+    "q": "A box or conduit body shall not be required for splices and taps in _____ conductors and cables as long as the splice is made with a splicing device that is identified for the purpose.",
+    "choices": {
+     "a": "direct-buried",
+     "b": "exposed",
+     "c": "concealed",
+     "d": "none of these"
+    },
+    "ref": "300.15(G)",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "Electrical installations in hollow spaces, vertical shafts, and ventilation or air-handling ducts shall be made so that the possible spread of fire or products of combustion will not be _____.",
+    "choices": {
+     "a": "substantially increased",
+     "b": "allowed",
+     "c": "inherent",
+     "d": "possible"
+    },
+    "ref": "300.21",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "Cables, raceways, and _____ installed behind suspended-ceiling panels shall be arranged and secured to allow access to the electrical equipment.",
+    "choices": {
+     "a": "equipment",
+     "b": "appliances",
+     "c": "cords",
+     "d": "conductors"
+    },
+    "ref": "300.23",
+    "answer": "a"
+   },
+   {
+    "n": 11,
+    "q": "Where installed in raceways, conductors _____ and larger shall be stranded, unless specifically permitted or required elsewhere in the NEC.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "310.3(C)",
+    "answer": "b"
+   },
+   {
+    "n": 12,
+    "q": "Insulated conductors and cables used in _____ shall be any of the types identified in this Code.",
+    "choices": {
+     "a": "dry and damp locations",
+     "b": "dry locations",
+     "c": "damp locations",
+     "d": "wet and damp locations"
+    },
+    "ref": "310.10(A)",
+    "answer": "b"
+   },
+   {
+    "n": 13,
+    "q": "No conductor shall be used where its _____ temperature exceeds that designated for the type of insulated conductor involved.",
+    "choices": {
+     "a": "operating",
+     "b": "ambient",
+     "c": "highest",
+     "d": "lowest"
+    },
+    "ref": "310.14(A)(3)",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "Conductor adjustment factors shall not apply to conductors in raceways having a length not exceeding _____.",
+    "choices": {
+     "a": "12 in.",
+     "b": "24 in.",
+     "c": "36 in.",
+     "d": "48 in."
+    },
+    "ref": "310.15(C)(1)(b)",
+    "answer": "b"
+   },
+   {
+    "n": 15,
+    "q": "The minimum size THW service-entrance conductors for a 200A commercial service is _____.",
+    "choices": {
+     "a": "2/0 AWG",
+     "b": "3/0 AWG",
+     "c": "4/0 AWG",
+     "d": "250 KCMIL"
+    },
+    "ref": "310.16 Table",
+    "answer": "b"
+   },
+   {
+    "n": 16,
+    "q": "The minimum wire-bending space and gutter width at terminals for 4/0 AWG entering an enclosure is _____.",
+    "choices": {
+     "a": "4 in.",
+     "b": "6 in.",
+     "c": "7 in.",
+     "d": "8 in."
+    },
+    "ref": "312.6(A) Table",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "Nonmetallic boxes can be used with _____.",
+    "choices": {
+     "a": "nonmetallic sheaths",
+     "b": "nonmetallic raceways",
+     "c": "flexible cords",
+     "d": "all of these"
+    },
+    "ref": "314.3",
+    "answer": "d"
+   },
+   {
+    "n": 18,
+    "q": "Boxes, conduit bodies, and fittings installed in wet locations shall be listed for use in _____ locations.",
+    "choices": {
+     "a": "wet",
+     "b": "damp",
+     "c": "dry",
+     "d": "corrosive"
+    },
+    "ref": "314.15",
+    "answer": "a"
+   },
+   {
+    "n": 19,
+    "q": "Where one or more internal cable clamps are present in the box, a single volume allowance shall be made based on the _____ present in the box.",
+    "choices": {
+     "a": "largest conductor",
+     "b": "smallest conductor",
+     "c": "average conductor size",
+     "d": "number of devices"
+    },
+    "ref": "314.16(B)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 20,
+    "q": "In installations within noncombustible walls or ceilings, the front edge of a box, plaster ring, extension ring, or listed extender employing a flush-type cover, shall be set back not more than _____ from the finished surface.",
+    "choices": {
+     "a": "1⁄8 in.",
+     "b": "¼ in.",
+     "c": "⅜ in.",
+     "d": "½ in."
+    },
+    "ref": "314.20",
+    "answer": "b"
+   },
+   {
+    "n": 21,
+    "q": "Outlet boxes can be secured to suspended-ceiling framing members by mechanical means such as _____, or by other means identified for use with the suspended-ceiling framing member(s).",
+    "choices": {
+     "a": "bolts",
+     "b": "screws",
+     "c": "rivets",
+     "d": "any of these"
+    },
+    "ref": "314.23(D)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 22,
+    "q": "A vertically mounted luminaire weighing not more than _____ can be supported to a device box or plaster ring with no fewer than two No. 6 or larger screws.",
+    "choices": {
+     "a": "4 lb",
+     "b": "6 lb",
+     "c": "8 lb",
+     "d": "10 lb"
+    },
+    "ref": "314.27(A)(1) Ex",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "The minimum distance from the raceway entry to the opposite wall of a pull or junction box for a U pull with two 3-in. raceways is _____.",
+    "choices": {
+     "a": "16 in.",
+     "b": "15 in.",
+     "c": "18 in.",
+     "d": "21 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 24,
+    "q": "Type AC cable is permitted in _____.",
+    "choices": {
+     "a": "wet locations",
+     "b": "corrosive conditions",
+     "c": "damp locations",
+     "d": "cable trays"
+    },
+    "ref": "320.10(2)",
+    "answer": "d"
+   },
+   {
+    "n": 25,
+    "q": "Type AC cable shall be secured at intervals not exceeding 4½ ft and within _____ of every outlet box, cabinet, conduit body, or fitting.",
+    "choices": {
+     "a": "6 in.",
+     "b": "8 in.",
+     "c": "10 in.",
+     "d": "12 in."
+    },
+    "ref": "320.30(B)",
+    "answer": "d"
+   },
+   {
+    "n": 26,
+    "q": "Type MC cable shall be permitted for _____.",
+    "choices": {
+     "a": "branch circuits",
+     "b": "feeders",
+     "c": "services",
+     "d": "any of these"
+    },
+    "ref": "330.10(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 27,
+    "q": "Unless otherwise permitted in the Code, Type MC cable shall be secured at intervals not exceeding _____.",
+    "choices": {
+     "a": "3 ft",
+     "b": "4 ft",
+     "c": "6 ft",
+     "d": "8 ft"
+    },
+    "ref": "330.30(B)",
+    "answer": "c"
+   },
+   {
+    "n": 28,
+    "q": "Type NM cable shall not be used _____.",
+    "choices": {
+     "a": "in other than dwelling units",
+     "b": "in the air void of masonry block not subject to excessive moisture",
+     "c": "for exposed work",
+     "d": "embedded in poured cement, concrete, or aggregate"
+    },
+    "ref": "334.12(A)(9)",
+    "answer": "d"
+   },
+   {
+    "n": 29,
+    "q": "The sheath on nonmetallic-sheathed cable shall extend not less than _____ beyond any cable clamp or cable entry.",
+    "choices": {
+     "a": "1⁄8 in.",
+     "b": "¼ in.",
+     "c": "⅜ in.",
+     "d": "½ in."
+    },
+    "ref": "334.19",
+    "answer": "b"
+   },
+   {
+    "n": 30,
+    "q": "Where more than two NM cables are installed through the same bored hole in wood framing that is to be sealed with _____, the ampacity of each conductor shall be adjusted.",
+    "choices": {
+     "a": "thermal insulation",
+     "b": "caulk",
+     "c": "sealing foam",
+     "d": "any of these"
+    },
+    "ref": "334.80",
+    "answer": "d"
+   },
+   {
+    "n": 31,
+    "q": "Type TC cable shall be permitted to be direct buried, where _____ for such use.",
+    "choices": {
+     "a": "identified",
+     "b": "approved",
+     "c": "listed",
+     "d": "labeled"
+    },
+    "ref": "336.10(10)",
+    "answer": "a"
+   },
+   {
+    "n": 32,
+    "q": "For interior installations of Type SE cable with ungrounded conductor sizes _____ and smaller, where installed in thermal insulation, the ampacity shall be in accordance with 60°C (140°F) conductor temperature rating.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "338.10(B)(4)(a)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 33,
+    "q": "Type UF cable can be used in commercial garages.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "340.12(2)",
+    "answer": "b"
+   },
+   {
+    "n": 34,
+    "q": "Where practicable, contact of dissimilar metals shall be avoided in an IMC raceway installation to prevent the possibility of _____.",
+    "choices": {
+     "a": "corrosion",
+     "b": "galvanic action",
+     "c": "short circuits",
+     "d": "ground faults"
+    },
+    "ref": "342.14",
+    "answer": "b"
+   },
+   {
+    "n": 35,
+    "q": "Where IMC enters a box, fitting, or other enclosure, _____ shall be provided to protect the wire from abrasion unless the design of the box, fitting, or enclosure affords equivalent protection.",
+    "choices": {
+     "a": "a bushing",
+     "b": "duct seal",
+     "c": "electrical tape",
+     "d": "seal fittings"
+    },
+    "ref": "342.46",
+    "answer": "a"
+   },
+   {
+    "n": 36,
+    "q": "Cut ends of RMC shall be _____ or otherwise finished to remove rough edges.",
+    "choices": {
+     "a": "threaded",
+     "b": "reamed",
+     "c": "painted",
+     "d": "galvanized"
+    },
+    "ref": "344.28",
+    "answer": "b"
+   },
+   {
+    "n": 37,
+    "q": "Threadless couplings and connectors used with RMC buried in masonry or concrete shall be the _____ type.",
+    "choices": {
+     "a": "raintight",
+     "b": "wet and damp location",
+     "c": "nonabsorbent",
+     "d": "concrete tight"
+    },
+    "ref": "344.42(A)",
+    "answer": "d"
+   },
+   {
+    "n": 38,
+    "q": "The total degrees of bends in a run of FMC _____ between pull points.",
+    "choices": {
+     "a": "shall not be made",
+     "b": "need not be limited (in degrees)",
+     "c": "shall not exceed 360 degrees",
+     "d": "shall not exceed 180 degrees"
+    },
+    "ref": "348.24(B)",
+    "answer": "c"
+   },
+   {
+    "n": 39,
+    "q": "For FMC, _____ shall be installed where flexibility is necessary to minimize the transmission of vibration from equipment or to provide flexibility for equipment that requires movement after installation.",
+    "choices": {
+     "a": "an equipment grounding conductor",
+     "b": "an expansion fitting",
+     "c": "flexible nonmetallic connectors",
+     "d": "adjustable supports"
+    },
+    "ref": "348.60(B)",
+    "answer": "a"
+   },
+   {
+    "n": 40,
+    "q": "For liquidtight flexible metal conduit, if flexibility is necessary after installation, unsecured lengths from the last point the raceway is securely fastened shall not exceed _____.",
+    "choices": {
+     "a": "3 ft for trade sizes ½ through 1¼",
+     "b": "4 ft for trade sizes 1½ through 2",
+     "c": "5 ft for trade sizes 2½ and larger",
+     "d": "all of these"
+    },
+    "ref": "350.30(A) Ex 2(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 41,
+    "q": "Schedule _____ shall be permitted for exposed work where subject to physical damage.",
+    "choices": {
+     "a": "20 PVC conduit",
+     "b": "30 PVC conduit",
+     "c": "40 PVC conduit",
+     "d": "80 PVC conduit"
+    },
+    "ref": "352.10(K)",
+    "answer": "d"
+   },
+   {
+    "n": 42,
+    "q": "PVC conduit shall be securely fastened within _____ of each box.",
+    "choices": {
+     "a": "½ ft",
+     "b": "1 ft",
+     "c": "2 ft",
+     "d": "3 ft"
+    },
+    "ref": "352.30(A)",
+    "answer": "d"
+   },
+   {
+    "n": 43,
+    "q": "LFNC shall be permitted for _____.",
+    "choices": {
+     "a": "direct burial where listed and marked for the purpose",
+     "b": "where flexibility is required for installation, operation, or maintenance",
+     "c": "outdoors where listed and marked for this purpose",
+     "d": "all of these"
+    },
+    "ref": "356.10(1), (3) and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 44,
+    "q": "Where Type LFNC conduit is installed in lengths exceeding _____, the conduit shall be securely fastened at intervals not exceeding 3 ft and within 12 in. on each side of every outlet box, junction box, cabinet, or fitting.",
+    "choices": {
+     "a": "2 ft",
+     "b": "3 ft",
+     "c": "6 ft",
+     "d": "10 ft"
+    },
+    "ref": "356.30(1)",
+    "answer": "c"
+   },
+   {
+    "n": 45,
+    "q": "EMT smaller than trade size _____ or larger than trade size _____ shall not be used.",
+    "choices": {
+     "a": "¾, 4",
+     "b": "½, 4",
+     "c": "½, 6",
+     "d": "¾, 6"
+    },
+    "ref": "358.20(A) and (B)",
+    "answer": "c"
+   },
+   {
+    "n": 46,
+    "q": "Article _____ covers the use, installation, and construction specifications for electrical nonmetallic tubing (ENT) and associated fittings.",
+    "choices": {
+     "a": "358",
+     "b": "362",
+     "c": "366",
+     "d": "392"
+    },
+    "ref": "362.1",
+    "answer": "b"
+   },
+   {
+    "n": 47,
+    "q": "Cut ends of ENT shall be trimmed inside and _____ to remove rough edges.",
+    "choices": {
+     "a": "outside",
+     "b": "tapered",
+     "c": "filed",
+     "d": "beveled"
+    },
+    "ref": "362.28",
+    "answer": "a"
+   },
+   {
+    "n": 48,
+    "q": "Where ENT is the wiring method and equipment grounding is required, the equipment grounding conductor shall not be required where the _____ conductor is used as part of the effective ground-fault path as permitted.",
+    "choices": {
+     "a": "grounded",
+     "b": "equipment grounding",
+     "c": "ungrounded",
+     "d": "none of these"
+    },
+    "ref": "362.60. Ex 2",
+    "answer": "a"
+   },
+   {
+    "n": 49,
+    "q": "The distance between horizontal supports of metal wireways shall not exceed _____.",
+    "choices": {
+     "a": "6 ft",
+     "b": "8 ft",
+     "c": "10 ft",
+     "d": "15 ft"
+    },
+    "ref": "376.30(A)",
+    "answer": "c"
+   },
+   {
+    "n": 50,
+    "q": "A multioutlet assembly can be installed in _____ locations.",
+    "choices": {
+     "a": "dry",
+     "b": "damp",
+     "c": "damp and wet",
+     "d": "dry and damp"
+    },
+    "ref": "380.10",
+    "answer": "a"
+   }
+  ]
+ },
+ "NEC_Vol_1_Ch_4": {
+  "book": "NEC Vol 1",
+  "quiz": "Ch 4",
+  "page": 663,
+  "unit": "Ch 4",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers general requirements, applications, and construction specifications for flexible cords and flexible cables.",
+    "choices": {
+     "a": "300",
+     "b": "310",
+     "c": "400",
+     "d": "402"
+    },
+    "ref": "400.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Flexible cords, flexible cables, cord sets (extension cords), and power-supply cords are not permitted to be concealed by walls, floors, or ceilings, or above suspended or dropped ceilings.",
+    "choices": {
+     "a": "ceilings",
+     "b": "suspended or dropped ceilings",
+     "c": "floors or walls",
+     "d": "all of these"
+    },
+    "ref": "400.12(5)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "The ampacity of 18 AWG fixture wire is _____.",
+    "choices": {
+     "a": "6A",
+     "b": "8A",
+     "c": "10A",
+     "d": "14A"
+    },
+    "ref": "402.5 Table",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "Article 404 covers all _____ used as switches operating at 1,000V and below, unless specifically referenced elsewhere in this Code for higher voltages.",
+    "choices": {
+     "a": "switches",
+     "b": "switching devices",
+     "c": "circuit breakers",
+     "d": "all of these"
+    },
+    "ref": "404.1",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "Surface-mounted switches or circuit breakers in a damp or wet location shall be enclosed in a _____ enclosure or cabinet that complies with 312.2.",
+    "choices": {
+     "a": "weatherproof",
+     "b": "rainproof",
+     "c": "watertight",
+     "d": "raintight"
+    },
+    "ref": "404.4(A)",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "Switches and circuit breakers installed adjacent to motors, appliances, or other equipment that they supply shall be permitted to be located _____ than 6 ft 7 in. and to be accessible by portable means.",
+    "choices": {
+     "a": "lower",
+     "b": "higher",
+     "c": "no further",
+     "d": "none of these"
+    },
+    "ref": "404.8(A)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "A snap switch with an integral nonmetallic enclosure complying with 300.15(E) shall be permitted without a _____ connection to an equipment grounding conductor.",
+    "choices": {
+     "a": "grounding",
+     "b": "bonding",
+     "c": "earth",
+     "d": "none of these"
+    },
+    "ref": "404.9(B) Ex 3",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "Terminals of 15A and 20A snap switches not marked CO/ALR shall be used with_____.",
+    "choices": {
+     "a": "copper and copper-clad aluminum conductors only",
+     "b": "copper conductors only",
+     "c": "aluminum conductors only",
+     "d": "copper-clad aluminum conductors only"
+    },
+    "ref": "404.14(D)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "Article _____ covers the rating, type, and installation of receptacles, cord connectors, and attachment plugs (cord caps).",
+    "choices": {
+     "a": "400",
+     "b": "404",
+     "c": "406",
+     "d": "408"
+    },
+    "ref": "406.1",
+    "answer": "c"
+   },
+   {
+    "n": 10,
+    "q": "Receptacles and cord connectors that have equipment grounding conductor contacts shall have those contacts connected to _____.",
+    "choices": {
+     "a": "the enclosure",
+     "b": "a bonding bushing",
+     "c": "an equipment grounding conductor",
+     "d": "any of these"
+    },
+    "ref": "406.4(C)",
+    "answer": "c"
+   },
+   {
+    "n": 11,
+    "q": "Where attachment to an equipment grounding conductor does not exist in the receptacle enclosure, a nongrounding-type receptacle shall be permitted to be replaced with a grounding-type receptacle; however, some equipment or appliance manufacturers require that the _____ to the equipment or appliance includes an equipment grounding conductor.",
+    "choices": {
+     "a": "feeder",
+     "b": "branch circuit",
+     "c": "small-appliance circuit",
+     "d": "power cord"
+    },
+    "ref": "406.4(D)(2)(c) Informational Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 12,
+    "q": "Automatically controlled receptacles shall be replaced with _____ controlled receptacles.",
+    "choices": {
+     "a": "listed",
+     "b": "suitably",
+     "c": "equivalently",
+     "d": "identified"
+    },
+    "ref": "406.4(D)(7)",
+    "answer": "c"
+   },
+   {
+    "n": 13,
+    "q": "After installation, receptacle faces shall be flush with or project from faceplates of insulating material and shall project a minimum of _____ from metal faceplates.",
+    "choices": {
+     "a": "0.015 in.",
+     "b": "0.020 in.",
+     "c": "0.125 in.",
+     "d": "0.250 in."
+    },
+    "ref": "406.5(D)",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "Listed receptacle faceplates with an integral night light, USB charger, or both, that rely solely on spring-tensioned contacts shall be connected to only brass or copper alloy receptacle terminal screws and shall be rated _____ or less.",
+    "choices": {
+     "a": "1W",
+     "b": "2W",
+     "c": "3W",
+     "d": "5W"
+    },
+    "ref": "406.6(D)",
+    "answer": "a"
+   },
+   {
+    "n": 15,
+    "q": "Receptacles of _____, 125V and 250V installed in a wet location shall have an enclosure that is weatherproof whether or not the attachment plug cap is inserted.",
+    "choices": {
+     "a": "15A and 20A",
+     "b": "30A and less",
+     "c": "up to 50A",
+     "d": "up to 100A"
+    },
+    "ref": "406.9(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 16,
+    "q": "Receptacles shall not be installed within a zone measured _____ horizontally from any outside edge of the bathtub or shower stall, including the space outside the bathtub or shower stall space below the zone, and 8 ft vertically above the top of the bathtub rim or shower stall threshold.",
+    "choices": {
+     "a": "3 ft",
+     "b": "4 ft",
+     "c": "5 ft",
+     "d": "6 ft"
+    },
+    "ref": "406.9(C)",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "All 15A and 20A, 125V and 250V nonlocking-type receptacles within clinics, medical and dental offices, and outpatient facilities in _____ shall be listed as tamper resistant.",
+    "choices": {
+     "a": "business offices accessible to the general public spaces",
+     "b": "lobbies, and waiting spaces",
+     "c": "spaces of nursing homes and limited care facilities covered in 517.10(B)(2)",
+     "d": "all of these"
+    },
+    "ref": "406.12(5) a, b, and c",
+    "answer": "d"
+   },
+   {
+    "n": 18,
+    "q": "Nonlocking-type 125V and 250V, 15A and 20A receptacles installed in areas of agricultural buildings converted to hospitality areas shall be listed as tamper resistant. These areas can include _____.",
+    "choices": {
+     "a": "petting zoos",
+     "b": "stables",
+     "c": "buildings used for recreation or educational purposes",
+     "d": "any of these"
+    },
+    "ref": "406.12(10) Informational Note 3",
+    "answer": "d"
+   },
+   {
+    "n": 19,
+    "q": "Panelboards supplied by a three-phase, 4-wire, delta-connected system shall have the phase with the higher voltage-to-ground connected to the _____ phase.",
+    "choices": {
+     "a": "A",
+     "b": "B",
+     "c": "C",
+     "d": "any of these"
+    },
+    "ref": "408.3(E)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 20,
+    "q": "Every panelboard circuit and circuit modification shall be provided with a legible and permanent description that is described with a degree of detail and clarity that is unlikely to result in confusion between circuits and is clear in explaining _____.",
+    "choices": {
+     "a": "abbreviations and symbols",
+     "b": "trademarks",
+     "c": "listings",
+     "d": "installer information and dates"
+    },
+    "ref": "408.4(A)(6)",
+    "answer": "a"
+   },
+   {
+    "n": 21,
+    "q": "Panelboards for other than one- and two-family dwellings shall have a short-circuit current rating not less than the _____.",
+    "choices": {
+     "a": "equipment rated current",
+     "b": "available fault current",
+     "c": "overcurrent protection rated current",
+     "d": "ground-fault protection current"
+    },
+    "ref": "408.6",
+    "answer": "b"
+   },
+   {
+    "n": 22,
+    "q": "A panelboard shall be protected by an overcurrent device within the panelboard, or at any point on the _____ side of the panelboard.",
+    "choices": {
+     "a": "load",
+     "b": "supply",
+     "c": "branch circuit",
+     "d": "any of these"
+    },
+    "ref": "408.36",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "When separate equipment grounding conductors are provided in panelboards, a _____ shall be secured inside the cabinet.",
+    "choices": {
+     "a": "grounded conductor",
+     "b": "terminal lug",
+     "c": "terminal bar",
+     "d": "bonding jumper"
+    },
+    "ref": "408.40",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "Luminaires _____ “suitable for wet locations” shall be permitted to be used in a damp location.",
+    "choices": {
+     "a": "marked",
+     "b": "listed",
+     "c": "identified",
+     "d": "approved as"
+    },
+    "ref": "410.10(A)",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "Where luminaires are installed under metal-corrugated sheet roof decking, the 1½ in. spacing is not required where metal-corrugated sheet roof decking is covered with a minimum thickness _____ concrete slab, measured from the top of the corrugated roofing.",
+    "choices": {
+     "a": "½ in.",
+     "b": "1 in.",
+     "c": "1½ in.",
+     "d": "2 in."
+    },
+    "ref": "410.10(F) Ex",
+    "answer": "d"
+   },
+   {
+    "n": 26,
+    "q": "In clothes closet storage spaces, recessed incandescent or LED luminaires with a completely enclosed light source can be installed in the wall or the ceiling, provided there is a minimum clearance of _____ from the storage space.",
+    "choices": {
+     "a": "3 in.",
+     "b": "6 in.",
+     "c": "8 in.",
+     "d": "12 in."
+    },
+    "ref": "410.16(D)(3)",
+    "answer": "b"
+   },
+   {
+    "n": 27,
+    "q": "Metal raceways shall be bonded to the metal pole supporting luminaires with a(an) _____.",
+    "choices": {
+     "a": "grounding electrode",
+     "b": "grounded conductor",
+     "c": "equipment grounding conductor",
+     "d": "any of these"
+    },
+    "ref": "410.30(B)(5)",
+    "answer": "c"
+   },
+   {
+    "n": 28,
+    "q": "Luminaires with exposed conductive surfaces shall be connected to an equipment grounding conductor except small, isolated parts, such as mounting screws, clips, and decorative bands on glass spaced at least _____ from lamp terminals and portable luminares with polarized attachment plugs.",
+    "choices": {
+     "a": "1 in.",
+     "b": "1½ in.",
+     "c": "2 in.",
+     "d": "3 in."
+    },
+    "ref": "410.42 Ex (2) and (3)",
+    "answer": "b"
+   },
+   {
+    "n": 29,
+    "q": "In indoor locations other than dwellings and associated accessory structures, fluorescent or LED luminaires that utilize double-ended lamps and contain ballast(s) or LED driver(s) that can be serviced in place shall not require a disconnecting means where luminaires _____.",
+    "choices": {
+     "a": "are installed in hazardous (classified) location(s)",
+     "b": "provide emergency illumination required in 700.16",
+     "c": "are cord-and-plug-connected",
+     "d": "all of these"
+    },
+    "ref": "410.71(1) Ex 1, 2, and 3",
+    "answer": "d"
+   },
+   {
+    "n": 30,
+    "q": "A recessed luminaire that is not identified for contact with insulation shall have all recessed parts spaced not less than _____ from combustible materials.",
+    "choices": {
+     "a": "½ in.",
+     "b": "5⁄8 in.",
+     "c": "¾ in.",
+     "d": "1 in."
+    },
+    "ref": "410.116(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 31,
+    "q": "Track lighting shall not be installed _____.",
+    "choices": {
+     "a": "where likely to be subjected to physical damage",
+     "b": "in wet or damp locations",
+     "c": "where concealed",
+     "d": "all of these"
+    },
+    "ref": "410.150(C)(1), (2), and (6)",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "Lighting equipment _____ for horticultural use shall be installed and used in accordance with the manufacturer’s installation instructions and installation markings on the equipment as required by that listing.",
+    "choices": {
+     "a": "labeled",
+     "b": "designed",
+     "c": "identified",
+     "d": "suitable"
+    },
+    "ref": "410.174",
+    "answer": "c"
+   },
+   {
+    "n": 33,
+    "q": "Low-voltage lighting systems shall be listed for use as part of the same identified lighting system or assembled from _____ parts.",
+    "choices": {
+     "a": "listed",
+     "b": "identified",
+     "c": "labeled",
+     "d": "marked"
+    },
+    "ref": "411.2(A) and (B)",
+    "answer": "a"
+   },
+   {
+    "n": 34,
+    "q": "Low-voltage lighting system transformers shall be supplied from a maximum _____ branch circuit.",
+    "choices": {
+     "a": "15A",
+     "b": "20A",
+     "c": "25A",
+     "d": "30A"
+    },
+    "ref": "411.8",
+    "answer": "b"
+   },
+   {
+    "n": 35,
+    "q": "Where the GFCI protection required for appliances is an integral part of the appliance cord, it shall be installed not more than _____ from the attachment plug.",
+    "choices": {
+     "a": "12 in.",
+     "b": "18 in.",
+     "c": "20 in.",
+     "d": "24 in."
+    },
+    "ref": "422.5(B)(4)",
+    "answer": "a"
+   },
+   {
+    "n": 36,
+    "q": "The branch-circuit overcurrent device and conductors for a fixed storage-type water heater appliance that has a capacity of 120 gallons or less shall have an ampere rating not less than _____ of the ampere rating of the water heater.",
+    "choices": {
+     "a": "80 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "422.13",
+    "answer": "c"
+   },
+   {
+    "n": 37,
+    "q": "The length of the flexible cord for a trash compactor shall not be less than 3 ft or exceed _____ in length, measured from the face of the attachment plug to the plane of the rear of the appliance.",
+    "choices": {
+     "a": "2 ft",
+     "b": "4 ft",
+     "c": "6 ft",
+     "d": "8 ft"
+    },
+    "ref": "422.16(B)(2)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 38,
+    "q": "Wall-mounted ovens and counter-mounted cooking units shall be permitted to be connected with a flexible cord identified as_____ for the purpose.",
+    "choices": {
+     "a": "listed",
+     "b": "manufactured",
+     "c": "suitable",
+     "d": "sufficient"
+    },
+    "ref": "422.16(B)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 39,
+    "q": "For permanently connected appliances rated over _____, the branch-circuit switch or circuit breaker can serve as the disconnecting means where the switch or circuit breaker is within sight from the appliance or is capable of being locked in the open position.",
+    "choices": {
+     "a": "200 VA",
+     "b": "300 VA",
+     "c": "400 VA",
+     "d": "500 VA"
+    },
+    "ref": "422.31(B)",
+    "answer": "b"
+   },
+   {
+    "n": 40,
+    "q": "The branch-circuit conductor(s) ampacity shall not be less than _____ of the load of the fixed electric space-heating equipment and any associated motor(s).",
+    "choices": {
+     "a": "80 percent",
+     "b": "110 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "424.4(B)",
+    "answer": "c"
+   },
+   {
+    "n": 41,
+    "q": "For general motor applications, the NEC table values for full load current values shall be used instead of the actual current rating marked on the motor nameplate when determining overload protection.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "430.6(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 42,
+    "q": "Conductors supplying several motors shall have an ampacity not less than _____ of the full-load current rating of the highest rated motor, plus the sum of the full-load current ratings of all other motors in the group.",
+    "choices": {
+     "a": "80 percent",
+     "b": "100 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "430.24(1) and (2)",
+    "answer": "c"
+   },
+   {
+    "n": 43,
+    "q": "Short-circuit and ground-fault protection for a branch-circuit to which a motor or motor-operated appliance is connected shall be capable of carrying the ______ current of the motor.",
+    "choices": {
+     "a": "ampacity",
+     "b": "time delay",
+     "c": "thermal protection",
+     "d": "starting"
+    },
+    "ref": "430.52(B)",
+    "answer": "d"
+   },
+   {
+    "n": 44,
+    "q": "A feeder supplying a fixed motor load(s) shall have a protective device with a rating or setting _____ branch-circuit short-circuit and ground-fault protective device for any motor in the group, plus the sum of the full-load currents of the other motors of the group.",
+    "choices": {
+     "a": "not greater than the largest rating or setting of the",
+     "b": "125 percent of the largest rating of any",
+     "c": "equal to the largest rating of any",
+     "d": "at least 80 percent of the"
+    },
+    "ref": "430.62(A)",
+    "answer": "a"
+   },
+   {
+    "n": 45,
+    "q": "Motor controllers shall have horsepower ratings at the application voltage _____ the horsepower rating of the motor.",
+    "choices": {
+     "a": "not lower than",
+     "b": "not higher than",
+     "c": "equal to",
+     "d": "six times"
+    },
+    "ref": "430.83(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 46,
+    "q": "A _____ shall be located in sight from the motor location and the driven machinery location.",
+    "choices": {
+     "a": "controller",
+     "b": "protective device",
+     "c": "disconnecting means",
+     "d": "all of these"
+    },
+    "ref": "430.102(B)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 47,
+    "q": "A horsepower-rated _____ having a horsepower rating not less than the motor rating is permitted to serve as the disconnecting means.",
+    "choices": {
+     "a": "attachment plug and receptacle",
+     "b": "flanged surface inlet and cord connector",
+     "c": "attachment plug and cord connector",
+     "d": "any of these"
+    },
+    "ref": "430.109(F)",
+    "answer": "d"
+   },
+   {
+    "n": 48,
+    "q": "The full-load current of a three-phase 230V, 10 hp motor is _____.",
+    "choices": {
+     "a": "19A",
+     "b": "22A",
+     "c": "28A",
+     "d": "38A"
+    },
+    "ref": "430.250 Table",
+    "answer": "c"
+   },
+   {
+    "n": 49,
+    "q": "Air-conditioning and refrigeration equipment shall not be installed within a zone measured _____ horizontally from any outside edge of the bathtub or shower stall.",
+    "choices": {
+     "a": "2 ft",
+     "b": "3 ft",
+     "c": "4 ft",
+     "d": "6 ft"
+    },
+    "ref": "440.8",
+    "answer": "b"
+   },
+   {
+    "n": 50,
+    "q": "Article _____ contains installation and other requirements for generators.",
+    "choices": {
+     "a": "430",
+     "b": "445",
+     "c": "450",
+     "d": "455"
+    },
+    "ref": "445.1",
+    "answer": "b"
+   }
+  ]
+ },
+ "Calcs_Calcs_Ch_1": {
+  "book": "Calcs",
+  "quiz": "Calcs Ch 1",
+  "page": 51,
+  "unit": "Calcs Ch 1",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The maximum current, in amperes, that a conductor can carry continuously under the conditions of use without exceeding its temperature rating is known as its “_____.”",
+    "choices": {
+     "a": "short-circuit rating",
+     "b": "ground-fault rating",
+     "c": "ampacity",
+     "d": "all of these"
+    },
+    "ref": "100 Ampacity",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "An appliance is utilization equipment, generally other than _____, that is fastened in place, stationary, or portable, and normally built in a standardized size or type. Examples of appliances are ranges, ovens, cooktops, refrigerators, drinking water coolers, and beverage dispensers.",
+    "choices": {
+     "a": "industrial",
+     "b": "commercial",
+     "c": "residential",
+     "d": "institutional"
+    },
+    "ref": "100 Appliance",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "“_____” means acceptable to the authority having jurisdiction.",
+    "choices": {
+     "a": "Identified",
+     "b": "Listed",
+     "c": "Approved",
+     "d": "Labeled"
+    },
+    "ref": "100 Approved",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "In many circumstances, the _____ or his or her designated agent assumes the role of the authority having jurisdiction.",
+    "choices": {
+     "a": "property owner",
+     "b": "developer",
+     "c": "general contractor",
+     "d": "insurance underwriter"
+    },
+    "ref": "100 Authority Having Jurisdiction, Informational Note",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "The circuit conductors between the final overcurrent device protecting the circuit and the outlet(s) are known as “_____ conductors.”",
+    "choices": {
+     "a": "feeder",
+     "b": "branch-circuit",
+     "c": "home run",
+     "d": "main circuit"
+    },
+    "ref": "100 Branch Circuit (Branch-Circuit)",
+    "answer": "b"
+   },
+   {
+    "n": 6,
+    "q": "A “_____” consists of two or more ungrounded conductors that have a voltage between them, and a neutral conductor that has equal voltage between it and each ungrounded conductor of the circuit and that is connected to the neutral conductor of the system.",
+    "choices": {
+     "a": "multi-phase branch circuit",
+     "b": "three-phase lighting supply circuit",
+     "c": "poly-phase branch circuit",
+     "d": "multiwire branch circuit"
+    },
+    "ref": "100 Branch Circuit, Multiwire (Multiwire Branch Circuit)",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "Type _____ cable is a cable with insulated conductors within an overall nonmetallic jacket.",
+    "choices": {
+     "a": "AC",
+     "b": "MC",
+     "c": "NM",
+     "d": "TC"
+    },
+    "ref": "100 Cable, Nonmetallic-Sheathed (Type NM)",
+    "answer": "c"
+   },
+   {
+    "n": 8,
+    "q": "A(An) _____ circuit breaker is a qualifying term indicating that there is a delay purposely introduced in the tripping action of the circuit breaker, and the delay decreases as the magnitude of the current increases.",
+    "choices": {
+     "a": "adverse time",
+     "b": "inverse time",
+     "c": "time delay",
+     "d": "timed unit"
+    },
+    "ref": "100 Circuit Breaker, Inverse Time (Inverse Time Circuit Breaker)",
+    "answer": "b"
+   },
+   {
+    "n": 9,
+    "q": "A “continuous load” is a load where the maximum current is expected to continue for _____ hour(s) or more.",
+    "choices": {
+     "a": "½",
+     "b": "1",
+     "c": "2",
+     "d": "3"
+    },
+    "ref": "100 Continuous Load",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "A _____ is a single unit that provides complete and independent living facilities for one or more persons, including permanent provisions for living, sleeping, cooking, and sanitation.",
+    "choices": {
+     "a": "one-family dwelling",
+     "b": "two-family dwelling",
+     "c": "dwelling unit",
+     "d": "multifamily dwelling"
+    },
+    "ref": "100 Dwelling Unit",
+    "answer": "c"
+   },
+   {
+    "n": 11,
+    "q": "A building that contains three or more dwelling units is called a “_____.”",
+    "choices": {
+     "a": "one-family dwelling",
+     "b": "two-family dwelling",
+     "c": "dwelling unit",
+     "d": "multifamily dwelling"
+    },
+    "ref": "100 Dwelling, Multifamily (Multifamily Dwelling)",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "An automotive-type vehicle for on-road use, such as _____, primarily powered by an electric motor that draws current from a rechargeable storage battery, fuel cell, photovoltaic array, or other source of electric current defines an electric vehicle.",
+    "choices": {
+     "a": "passenger automobiles",
+     "b": "buses, trucks, and vans",
+     "c": "neighborhood electric vehicles and electric motorcycles",
+     "d": "all of these"
+    },
+    "ref": "100 Electric Vehicle",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "Off-road, self-propelled electric vehicles, such as _____ are not considered electric vehicles.",
+    "choices": {
+     "a": "industrial trucks, hoists, and lifts",
+     "b": "golf carts and airline ground support equipment",
+     "c": "tractors and boats",
+     "d": "all of these"
+    },
+    "ref": "100 Electric Vehicle Informational Note",
+    "answer": "d"
+   },
+   {
+    "n": 14,
+    "q": "Electric vehicle supply equipment includes the conductors and electric vehicle connectors, _____ installed specifically for the purpose of transferring energy between the premises wiring and the electric vehicle.",
+    "choices": {
+     "a": "attachment plugs",
+     "b": "fittings",
+     "c": "power outlets",
+     "d": "all of these"
+    },
+    "ref": "100 Electric Vehicle Supply Equipment (EVSE)",
+    "answer": "d"
+   },
+   {
+    "n": 15,
+    "q": "Electric vehicle power export equipment and electric vehicle supply equipment are sometimes contained in one piece of equipment, sometimes referred to as a(an) _____ EVSE or WPTE.",
+    "choices": {
+     "a": "directional",
+     "b": "supplemental",
+     "c": "bidirectional",
+     "d": "integrated"
+    },
+    "ref": "100 Electric Vehicle Supply Equipment (EVSE), Informational Note",
+    "answer": "c"
+   },
+   {
+    "n": 16,
+    "q": "A(An) _____ is a system consisting of a monitor(s), communications equipment, a controller(s), a timer(s), or other device(s) that monitors and/or controls an electrical load or a power production or storage source.",
+    "choices": {
+     "a": "energy management system",
+     "b": "power distribution system",
+     "c": "energy storage system",
+     "d": "interconnected power production system"
+    },
+    "ref": "100 Energy Management System (EMS)",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "The NEC defines a “_____” as all circuit conductors between the service equipment, the source of a separately derived system, or other power supply source, and the final branch-circuit overcurrent device.",
+    "choices": {
+     "a": "service",
+     "b": "feeder",
+     "c": "branch circuit",
+     "d": "all of these"
+    },
+    "ref": "100 Feeder",
+    "answer": "b"
+   },
+   {
+    "n": 18,
+    "q": "A generator is a machine that converts mechanical energy into electrical energy by means of a _____ and alternator and/or inverter.",
+    "choices": {
+     "a": "converter",
+     "b": "rectifier",
+     "c": "prime mover",
+     "d": "turbine"
+    },
+    "ref": "100 Generator (Generator Set)",
+    "answer": "c"
+   },
+   {
+    "n": 19,
+    "q": "Earth, as used in the NEC best describes the term _____.",
+    "choices": {
+     "a": "bonded",
+     "b": "ground",
+     "c": "effective ground-fault current path",
+     "d": "guarded"
+    },
+    "ref": "100 Ground",
+    "answer": "b"
+   },
+   {
+    "n": 20,
+    "q": "A(An) _____ is an unintentional, electrically conductive connection between an ungrounded conductor of an electrical circuit, and the normally noncurrent-carrying conductors, metal enclosures, metal raceways, metal equipment, or earth.",
+    "choices": {
+     "a": "grounded conductor",
+     "b": "ground fault",
+     "c": "equipment ground",
+     "d": "bonding jumper"
+    },
+    "ref": "100 Ground Fault",
+    "answer": "b"
+   },
+   {
+    "n": 21,
+    "q": "Recognized as suitable for the specific purpose, function, use, environment, and application is the definition of “_____.”",
+    "choices": {
+     "a": "labeled",
+     "b": "identified (as applied to equipment)",
+     "c": "listed",
+     "d": "approved"
+    },
+    "ref": "100 Identified (as applied to equipment)",
+    "answer": "b"
+   },
+   {
+    "n": 22,
+    "q": "Equipment or materials to which a label, symbol, or other identifying mark of a product evaluation organization that is acceptable to the authority having jurisdiction has been attached is known as “_____.”",
+    "choices": {
+     "a": "listed",
+     "b": "labeled",
+     "c": "approved",
+     "d": "identified"
+    },
+    "ref": "100 Labeled",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "Any current in excess of the rated current of equipment or the ampacity of a conductor is called “_____.”",
+    "choices": {
+     "a": "trip current",
+     "b": "fault current",
+     "c": "overcurrent",
+     "d": "a short circuit"
+    },
+    "ref": "100 Overcurrent",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "An “overload” is defined as the operation of equipment in excess of normal, full load rating, or of a conductor in excess of its ampacity that, when it persists for a_____, would cause damage or dangerous overheating.",
+    "choices": {
+     "a": "sufficient length of time",
+     "b": "short time",
+     "c": "long time",
+     "d": "none of these"
+    },
+    "ref": "100 Overload",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "A “_____” is the machine that supplies the mechanical horsepower to a generator.",
+    "choices": {
+     "a": "prime mover",
+     "b": "motor",
+     "c": "capacitor",
+     "d": "starter"
+    },
+    "ref": "100 Prime Mover",
+    "answer": "a"
+   },
+   {
+    "n": 26,
+    "q": "Article 100 contains only those definitions essential to the application of this Code. An article number in parentheses following the definition indicates that the definition only applies to that article.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "100 Scope",
+    "answer": "a"
+   },
+   {
+    "n": 27,
+    "q": "The conductors and equipment connecting the serving utility to the wiring system of the premises served is called a “_____.”",
+    "choices": {
+     "a": "branch circuit",
+     "b": "feeder",
+     "c": "service",
+     "d": "service attachment"
+    },
+    "ref": "100 Service",
+    "answer": "c"
+   },
+   {
+    "n": 28,
+    "q": "“Service conductors” are the conductors from the service point to the _____.",
+    "choices": {
+     "a": "service disconnecting means",
+     "b": "panelboard",
+     "c": "switchgear",
+     "d": "fire switch"
+    },
+    "ref": "100 Service Conductors",
+    "answer": "a"
+   },
+   {
+    "n": 29,
+    "q": "“Service-entrance conductors” are the service conductors between the terminals of the _____ and the service drop, overhead service conductors, service lateral, or underground service conductors.",
+    "choices": {
+     "a": "service equipment",
+     "b": "service point",
+     "c": "grounding electrode conductor",
+     "d": "equipment grounding conductor"
+    },
+    "ref": "100 Service-Entrance Conductors",
+    "answer": "a"
+   },
+   {
+    "n": 30,
+    "q": "A(An) _____ is an abnormal connection (including an arc) of relatively low impedance, whether made accidentally or intentionally, between two or more points of different potential.",
+    "choices": {
+     "a": "ground fault",
+     "b": "arc fault",
+     "c": "system fault",
+     "d": "short circuit"
+    },
+    "ref": "100 Short Circuit",
+    "answer": "d"
+   },
+   {
+    "n": 31,
+    "q": "A conductor, other than a service conductor, which has overcurrent protection ahead of its point of supply that exceeds the value permitted for similar conductors is known as a “_____.”",
+    "choices": {
+     "a": "feeder conductor",
+     "b": "service conductor",
+     "c": "tap conductor",
+     "d": "conductor extension"
+    },
+    "ref": "100 Tap Conductor",
+    "answer": "c"
+   },
+   {
+    "n": 32,
+    "q": "A nominal value assigned to a circuit or system for the purpose of conveniently designating its voltage class, such as 120/240V, is called “_____ voltage.”",
+    "choices": {
+     "a": "root-mean-square",
+     "b": "circuit",
+     "c": "nominal",
+     "d": "source"
+    },
+    "ref": "100 Voltage, Nominal (Nominal Voltage)",
+    "answer": "c"
+   },
+   {
+    "n": 33,
+    "q": "General requirements for the examination and approval, installation and use, access to and spaces about electrical conductors and equipment; enclosures intended for personnel entry; and tunnel installations are within the scope of _____.",
+    "choices": {
+     "a": "Article 800",
+     "b": "Article 300",
+     "c": "Article 110",
+     "d": "Annex J"
+    },
+    "ref": "110.1",
+    "answer": "c"
+   },
+   {
+    "n": 34,
+    "q": "The conductors and equipment required or permitted by this Code shall be acceptable only if _____.",
+    "choices": {
+     "a": "labeled",
+     "b": "listed",
+     "c": "approved",
+     "d": "identified"
+    },
+    "ref": "110.2",
+    "answer": "c"
+   },
+   {
+    "n": 35,
+    "q": "In judging equipment, considerations such as _____ shall be evaluated.",
+    "choices": {
+     "a": "mechanical strength",
+     "b": "wire-bending and connection space",
+     "c": "arcing effects",
+     "d": "all of these"
+    },
+    "ref": "110.3(A)(2), (3), and (6)",
+    "answer": "d"
+   },
+   {
+    "n": 36,
+    "q": "In judging equipment, considerations such as cybersecurity for network-connected ____ to address its ability to withstand unauthorized updates and malicious attacks while continuing to perform its intended safety functionality shall be evaluated.",
+    "choices": {
+     "a": "normal equipment",
+     "b": "emergency equipment",
+     "c": "standby power equipment",
+     "d": "life safety equipment"
+    },
+    "ref": "110.3(A)(8)",
+    "answer": "d"
+   },
+   {
+    "n": 37,
+    "q": "Equipment that is _____ or identified for a use shall be installed and used in accordance with any instructions included in the listing, labeling, or identification.",
+    "choices": {
+     "a": "listed, labeled, or both",
+     "b": "listed",
+     "c": "marked",
+     "d": "suitable"
+    },
+    "ref": "110.3(B)",
+    "answer": "a"
+   },
+   {
+    "n": 38,
+    "q": "The installation and use instructions for listed, labeled, or identified electrical equipment may be provided in the form of _____.",
+    "choices": {
+     "a": "printed material",
+     "b": "a quick response (QR) code",
+     "c": "an internet address to download instructions",
+     "d": "any of these"
+    },
+    "ref": "110.3(B) Informational Note",
+    "answer": "d"
+   },
+   {
+    "n": 39,
+    "q": "Product testing, evaluation, and listing (product certification) shall be performed by _____.",
+    "choices": {
+     "a": "recognized qualified electrical testing laboratories",
+     "b": "the manufacturer",
+     "c": "a qualified person",
+     "d": "an electrical engineer"
+    },
+    "ref": "110.3(C)",
+    "answer": "a"
+   },
+   {
+    "n": 40,
+    "q": "If the conductor material is not specified, the sizes given in the Code shall apply to _____ conductors.",
+    "choices": {
+     "a": "aluminum",
+     "b": "copper-clad aluminum",
+     "c": "copper",
+     "d": "all of these"
+    },
+    "ref": "110.5",
+    "answer": "c"
+   },
+   {
+    "n": 41,
+    "q": "Conductor sizes are expressed in American Wire Gauge (AWG) or in _____.",
+    "choices": {
+     "a": "inches",
+     "b": "circular mils",
+     "c": "square inches",
+     "d": "cubic inches"
+    },
+    "ref": "110.6",
+    "answer": "b"
+   },
+   {
+    "n": 42,
+    "q": "Completed wiring installations shall be free from _____ other than as required or permitted elsewhere in this Code.",
+    "choices": {
+     "a": "short circuits",
+     "b": "ground faults",
+     "c": "any connections to ground",
+     "d": "all of these"
+    },
+    "ref": "110.7",
+    "answer": "d"
+   },
+   {
+    "n": 43,
+    "q": "Only wiring methods recognized as _____ are included in this Code.",
+    "choices": {
+     "a": "expensive",
+     "b": "efficient",
+     "c": "suitable",
+     "d": "cost effective"
+    },
+    "ref": "110.8",
+    "answer": "c"
+   },
+   {
+    "n": 44,
+    "q": "Electrical equipment shall be installed _____.",
+    "choices": {
+     "a": "in a professional and skillful manner",
+     "b": "under the supervision of a licensed person",
+     "c": "completely before being inspected",
+     "d": "all of these"
+    },
+    "ref": "110.12",
+    "answer": "a"
+   },
+   {
+    "n": 45,
+    "q": "Separately installed pressure connectors shall be used with conductors at the _____ not exceeding the ampacity at the listed and identified temperature rating of the connector.",
+    "choices": {
+     "a": "voltages",
+     "b": "temperatures",
+     "c": "listings",
+     "d": "ampacities"
+    },
+    "ref": "110.14(C)(2)",
+    "answer": "d"
+   }
+  ]
+ },
+ "Calcs_Calcs_Ch_2": {
+  "book": "Calcs",
+  "quiz": "Calcs Ch 2",
+  "page": 103,
+  "unit": "Calcs Ch 2",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 210 provides the general requirements for _____ not over 1000V ac, 1500V dc, nominal.",
+    "choices": {
+     "a": "outside branch circuits",
+     "b": "branch circuits",
+     "c": "ungrounded conductors",
+     "d": "feeder calculations"
+    },
+    "ref": "210.1",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "Conductors for branch circuits [Article 210] are sized to prevent a voltage drop exceeding _____ at the farthest outlet of power, heating, and lighting loads, or combinations of such loads.",
+    "choices": {
+     "a": "2 percent",
+     "b": "3 percent",
+     "c": "4 percent",
+     "d": "6 percent"
+    },
+    "ref": "210.19 Note",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "Where a branch circuit supplies continuous loads and/or noncontinuous loads, the rating of the overcurrent device shall not be less than the noncontinuous load plus ____ of the continuous load.",
+    "choices": {
+     "a": "80 percent",
+     "b": "115 percent",
+     "c": "120 percent",
+     "d": "125 percent"
+    },
+    "ref": "210.20(A)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "Article 215 provides the installation, overcurrent protection, and conductor sizing requirements for _____ not over 1,000V ac, 1,500V dc, nominal.",
+    "choices": {
+     "a": "outside branch circuits",
+     "b": "branch circuits",
+     "c": "ungrounded conductors",
+     "d": "feeders"
+    },
+    "ref": "215.1",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "Where a feeder supplies continuous loads or any combination of continuous and noncontinuous loads, the conductor ampacity shall be no less than the noncontinuous load plus _____ of the continuous load.",
+    "choices": {
+     "a": "80 percent",
+     "b": "100 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Where a portion of a feeder is connected at both its supply and load ends to separately installed pressure connections in accordance with 110.14(C)(2), it shall be permitted to have an allowable ampacity _____ the sum of the continuous load plus the noncontinuous load.",
+    "choices": {
+     "a": "not less than",
+     "b": "equal to",
+     "c": "not greater than",
+     "d": "of 80 percent of"
+    },
+    "ref": "215.2(A)(1) Ex 2",
+    "answer": "a"
+   },
+   {
+    "n": 7,
+    "q": "Feeder grounded conductors not connected to an overcurrent device can be sized at _____ of the continuous and noncontinuous load.",
+    "choices": {
+     "a": "80 percent",
+     "b": "100 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "215.2(A)(1) Ex 3",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "Article _____ provides requirements for calculating branch-circuit, feeder, and service loads.",
+    "choices": {
+     "a": "200",
+     "b": "210",
+     "c": "220",
+     "d": "230"
+    },
+    "ref": "220.1",
+    "answer": "c"
+   },
+   {
+    "n": 9,
+    "q": "Unless otherwise specified, for purposes of calculating branch-circuit and feeder loads, _____ system voltages of 120V, 120/240V, 208Y/120V, 240V, 347V, 480Y/277V, 480V, 600Y/347V, and 600V shall be used.",
+    "choices": {
+     "a": "nominal",
+     "b": "separately derived",
+     "c": "utility",
+     "d": "secondary"
+    },
+    "ref": "220.5(A)",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "When calculations in Article 220 result in a fraction of an ampere that is less than _____, such fractions can be dropped.",
+    "choices": {
+     "a": "0.49",
+     "b": "0.5",
+     "c": "0.51",
+     "d": "0.8"
+    },
+    "ref": "220.5(B)",
+    "answer": "b"
+   },
+   {
+    "n": 11,
+    "q": "For dwelling units, the calculated floor area for the general lighting load shall not include _____.",
+    "choices": {
+     "a": "finished basements",
+     "b": "finished attics",
+     "c": "open porches",
+     "d": "utility rooms"
+    },
+    "ref": "220.5(C)",
+    "answer": "c"
+   },
+   {
+    "n": 12,
+    "q": "Outlets supplying luminaires shall be calculated based on the maximum _____ rating of the equipment.",
+    "choices": {
+     "a": "power",
+     "b": "true power",
+     "c": "voltage",
+     "d": "volt-ampere"
+    },
+    "ref": "220.14(D)",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "Sign and outline lighting outlets are to be calculated at a minimum of _____ for each required branch circuit specified in 600.5(A).",
+    "choices": {
+     "a": "1000 VA",
+     "b": "1200 VA",
+     "c": "1500 VA",
+     "d": "2000 VA"
+    },
+    "ref": "220.14(F)",
+    "answer": "b"
+   },
+   {
+    "n": 14,
+    "q": "Show window loads shall be calculated at _____ per linear ft of show window.",
+    "choices": {
+     "a": "90 VA",
+     "b": "120 VA",
+     "c": "200 VA",
+     "d": "240 VA"
+    },
+    "ref": "220.14(G)(2)",
+    "answer": "c"
+   },
+   {
+    "n": 15,
+    "q": "If a motor or air-conditioning load is part of the noncoincident load and is not the largest of the noncoincident loads, 125 percent of either the motor load or air-conditioning load, whichever is _____, shall be used in the calculation.",
+    "choices": {
+     "a": "less",
+     "b": "smaller",
+     "c": "larger",
+     "d": "less or smaller"
+    },
+    "ref": "220.60",
+    "answer": "c"
+   },
+   {
+    "n": 16,
+    "q": "There shall be no reduction in the size of the neutral or grounded conductor on _____ loads supplied from a 4-wire, wye-connected, three-phase system.",
+    "choices": {
+     "a": "dwelling unit",
+     "b": "hospital",
+     "c": "nonlinear",
+     "d": "motel"
+    },
+    "ref": "220.61(C)(2)",
+    "answer": "c"
+   },
+   {
+    "n": 17,
+    "q": "If an energy management system (EMS) is used to limit the current to a feeder or service, the set point value of the EMS shall be considered _____.",
+    "choices": {
+     "a": "at 80 percent",
+     "b": "at 90 percent",
+     "c": "at 100 percent",
+     "d": "a continuous load"
+    },
+    "ref": "220.70",
+    "answer": "d"
+   },
+   {
+    "n": 18,
+    "q": "Service conductors and equipment for control and protection of services not over 1000V ac or 1500V dc nominal, and their installation requirements are covered in Article _____.",
+    "choices": {
+     "a": "210",
+     "b": "220",
+     "c": "230",
+     "d": "240"
+    },
+    "ref": "230.1",
+    "answer": "c"
+   },
+   {
+    "n": 19,
+    "q": "The minimum service-entrance conductor size shall have an ampacity not less than the maximum load to be served after the application of any _____ factors.",
+    "choices": {
+     "a": "adjustment",
+     "b": "correction",
+     "c": "demand",
+     "d": "adjustment or correction"
+    },
+    "ref": "230.42(A)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 20,
+    "q": "Each _____ service conductor shall have overload protection.",
+    "choices": {
+     "a": "overhead",
+     "b": "underground",
+     "c": "ungrounded",
+     "d": "individual"
+    },
+    "ref": "230.90",
+    "answer": "c"
+   },
+   {
+    "n": 21,
+    "q": "The general requirements for overcurrent protection and overcurrent protective devices not more than 1000V, nominal are provided in Article _____.",
+    "choices": {
+     "a": "230",
+     "b": "240",
+     "c": "242",
+     "d": "250"
+    },
+    "ref": "240.1",
+    "answer": "b"
+   },
+   {
+    "n": 22,
+    "q": "Overcurrent protection for conductors and equipment is provided to _____ the circuit if the current reaches a value that will cause an excessive or dangerous temperature in conductors or conductor insulation.",
+    "choices": {
+     "a": "open",
+     "b": "close",
+     "c": "monitor",
+     "d": "record"
+    },
+    "ref": "240.1 Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "Conductor overload protection shall not be required where the interruption of the _____ would create a hazard, such as in a material-handling magnet circuit or fire pump circuit. However, short-circuit protection is required.",
+    "choices": {
+     "a": "circuit",
+     "b": "line",
+     "c": "phase",
+     "d": "system"
+    },
+    "ref": "240.4(A)",
+    "answer": "a"
+   },
+   {
+    "n": 24,
+    "q": "If an _____ or less overcurrent protective device is an adjustable trip device installed in accordance with 240.4(B)(1), (B)(2), and (B)(3), it shall be permitted to be set to a value that does not exceed the next higher standard value above the ampacity of the conductors being protected as shown in Table 240.6(A) where restricted access in accordance with 240.6(C) is provided.",
+    "choices": {
+     "a": "600A",
+     "b": "800A",
+     "c": "1000A",
+     "d": "1200A"
+    },
+    "ref": "240.4(B)",
+    "answer": "b"
+   },
+   {
+    "n": 25,
+    "q": "The next higher standard rating overcurrent device above the ampacity of the ungrounded conductors being protected is permitted to be used, provided the _____.",
+    "choices": {
+     "a": "conductors being protected are not part of a branch circuit supplying more than one receptacle for cord-and-plug-connected portable loads",
+     "b": "ampacity of the conductors does not correspond with the standard ampere rating of a fuse or circuit breaker",
+     "c": "next higher standard rating selected does not exceed 800A",
+     "d": "all of these"
+    },
+    "ref": "240.4(B)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 26,
+    "q": "If the circuit’s overcurrent device exceeds _____, the conductor ampacity shall have a rating not less than the rating of the overcurrent device.",
+    "choices": {
+     "a": "800A",
+     "b": "1000A",
+     "c": "1200A",
+     "d": "2000A"
+    },
+    "ref": "240.4(C)",
+    "answer": "a"
+   },
+   {
+    "n": 27,
+    "q": "Overcurrent protection shall not exceed _____.",
+    "choices": {
+     "a": "15A for 14 AWG copper",
+     "b": "20A for 12 AWG copper",
+     "c": "30A for 10 AWG copper",
+     "d": "all of these"
+    },
+    "ref": "240.4(D)(4), (6), and (8)",
+    "answer": "d"
+   },
+   {
+    "n": 28,
+    "q": "Fixture wire is permitted to be tapped to the branch-circuit conductor in accordance with which of the following?",
+    "choices": {
+     "a": "15A or 20A circuits—18 AWG, up to 50 ft of run length",
+     "b": "15A or 20A circuits—16 AWG, up to 100 ft of run length",
+     "c": "20A circuits—14 AWG and larger",
+     "d": "all of these"
+    },
+    "ref": "240.5(B)(2)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 29,
+    "q": "The standard ampere rating(s) for fuses is(are) _____.",
+    "choices": {
+     "a": "1A",
+     "b": "6A",
+     "c": "601A",
+     "d": "all of these"
+    },
+    "ref": "240.6(A)",
+    "answer": "d"
+   },
+   {
+    "n": 30,
+    "q": "Standard ampere ratings for circuit breakers and fuses do not include _____.",
+    "choices": {
+     "a": "10A",
+     "b": "35A",
+     "c": "75A",
+     "d": "225A"
+    },
+    "ref": "240.6(A) Table",
+    "answer": "c"
+   },
+   {
+    "n": 31,
+    "q": "For adjustable trip circuit breakers, restricted access is defined as _____.",
+    "choices": {
+     "a": "located behind bolted equipment enclosure doors",
+     "b": "located behind locked doors accessible only to qualified personnel",
+     "c": "password protected, with password accessible only to qualified personnel",
+     "d": "any of these"
+    },
+    "ref": "240.6(C)(2), (3), and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "_____ is a specialized field requiring constant, vigilant attention to security vulnerabilities that could arise due to software defects, system configuration changes, or user interactions.",
+    "choices": {
+     "a": "Special security",
+     "b": "Cybersecurity",
+     "c": "Physical security",
+     "d": "none of these"
+    },
+    "ref": "240.6(D) Note 3",
+    "answer": "b"
+   },
+   {
+    "n": 33,
+    "q": "Remote access for an adjustable trip circuit breaker is permitted to be achieved by being connected directly through a _____.",
+    "choices": {
+     "a": "secure network",
+     "b": "local non-networked interface",
+     "c": "hardwired ethernet cable",
+     "d": "secure VPN"
+    },
+    "ref": "240.6(D)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 34,
+    "q": "Remote access for an adjustable trip circuit breaker is permitted to be achieved by being connected through a networked interface where the circuit breaker and associated software for adjusting the settings are identified as being evaluated for _____.",
+    "choices": {
+     "a": "cybersecurity",
+     "b": "tamper resistance",
+     "c": "observable consequence of the adjustment",
+     "d": "overload prevention"
+    },
+    "ref": "240.6(D)(2)(a)",
+    "answer": "a"
+   },
+   {
+    "n": 35,
+    "q": "Documentation of the cybersecurity assessment for remote access for an adjustable trip circuit breaker connected through a networked interface shall be made available to those authorized to _____ the system.",
+    "choices": {
+     "a": "inspect",
+     "b": "operate",
+     "c": "maintain",
+     "d": "all of these"
+    },
+    "ref": "240.6(D)(2)(b)",
+    "answer": "d"
+   },
+   {
+    "n": 36,
+    "q": "Overcurrent protection shall be provided in each ungrounded circuit conductor and shall be located at the point where the conductors receive their _____ except as specified in 240.21(A) through (H).",
+    "choices": {
+     "a": "power",
+     "b": "supply",
+     "c": "source",
+     "d": "energy"
+    },
+    "ref": "240.21",
+    "answer": "b"
+   },
+   {
+    "n": 37,
+    "q": "Feeder taps are permitted to be located at any point on the _____ side of the feeder overcurrent protective device.",
+    "choices": {
+     "a": "load",
+     "b": "line",
+     "c": "supply",
+     "d": "end"
+    },
+    "ref": "240.21(B)",
+    "answer": "a"
+   },
+   {
+    "n": 38,
+    "q": "When feeder taps not over 10 ft long leave the enclosure in which the tap is made, the ampacity of the tap conductors cannot be less than _____ of the rating of the device protecting the feeder.",
+    "choices": {
+     "a": "one-tenth",
+     "b": "one-fifth",
+     "c": "one-half",
+     "d": "two-thirds"
+    },
+    "ref": "240.21(B)(1)(4)",
+    "answer": "a"
+   },
+   {
+    "n": 39,
+    "q": "Tap conductors not over 25 ft in length are permitted, providing the _____.",
+    "choices": {
+     "a": "ampacity of the tap conductors is not less than one-third the rating of the overcurrent device protecting the feeder conductors being tapped",
+     "b": "tap conductors terminate in a single circuit breaker or set of fuses that limits the load to the ampacity of the tap conductors",
+     "c": "tap conductors are suitably protected from physical damage",
+     "d": "all of these"
+    },
+    "ref": "240.21(B)(2)(1), (2), (3)",
+    "answer": "d"
+   },
+   {
+    "n": 40,
+    "q": "Outside feeder tap conductors can be of unlimited length without overcurrent protection at the point they receive their supply if the tap conductors _____.",
+    "choices": {
+     "a": "are protected from physical damage",
+     "b": "terminate at a single circuit breaker or a single set of fuses that limits the load to the ampacity of the tap conductors",
+     "c": "the overcurrent device is an integral part of a disconnecting means",
+     "d": "all of these"
+    },
+    "ref": "240.21(B)(5)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 41,
+    "q": "The next size up rule in 240.4(B) is not permitted for _____ secondary conductors.",
+    "choices": {
+     "a": "transformer",
+     "b": "generator",
+     "c": "motor",
+     "d": "relay"
+    },
+    "ref": "240.21(C)",
+    "answer": "a"
+   },
+   {
+    "n": 42,
+    "q": "Secondary conductors not over 10 ft long shall be enclosed in a(an) _____.",
+    "choices": {
+     "a": "cable",
+     "b": "enclosure",
+     "c": "raceway",
+     "d": "all of these"
+    },
+    "ref": "240.21(C)(2)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 43,
+    "q": "Outside secondary conductors can be of unlimited length without overcurrent protection at the point they receive their supply if the _____.",
+    "choices": {
+     "a": "conductors are protected from physical damage",
+     "b": "conductors terminate at a single overcurrent device equal to or less than their ampacity",
+     "c": "overcurrent device is part of the building disconnect",
+     "d": "all of these"
+    },
+    "ref": "240.21(C)(4)(1), (2), and (3)",
+    "answer": "d"
+   }
+  ]
+ },
+ "Calcs_Calcs_Ch_3": {
+  "book": "Calcs",
+  "quiz": "Calcs Ch 3",
+  "page": 137,
+  "unit": "Calcs Ch 3",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The minimum size copper conductor permitted for voltage ratings up to 2000V is _____.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "310.3(A)",
+    "answer": "a"
+   },
+   {
+    "n": 2,
+    "q": "Solid aluminum conductors of 8 AWG, 10 AWG, and 12 AWG shall be made of an AA-_____ series electrical grade aluminum alloy conductor material.",
+    "choices": {
+     "a": "1350",
+     "b": "2000",
+     "c": "6000",
+     "d": "8000"
+    },
+    "ref": "310.3(B)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "Stranded aluminum conductors 8 AWG through 1000 kcmil marked as _____ shall be made of an AA-8000 series electrical grade aluminum alloy conductor material.",
+    "choices": {
+     "a": "Type UF",
+     "b": "Type NM",
+     "c": "Type NMC",
+     "d": "Type SE"
+    },
+    "ref": "310.3(B)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "The _____ core of a copper-clad aluminum conductor shall be made of an AA-8000 series electrical grade aluminum alloy conductor material.",
+    "choices": {
+     "a": "aluminum",
+     "b": "copper",
+     "c": "steel",
+     "d": "iron"
+    },
+    "ref": "310.3(B)(3)",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "Conductors in Article 300 shall be of copper, aluminum, or copper-clad aluminum, unless otherwise specified. Copper-clad aluminum conductor material shall be _____.",
+    "choices": {
+     "a": "identified for the use",
+     "b": "listed",
+     "c": "indicated as suitable",
+     "d": "approved"
+    },
+    "ref": "310.3(B)(4)",
+    "answer": "b"
+   },
+   {
+    "n": 6,
+    "q": "Where installed in raceways, conductors _____ and larger shall be stranded, unless specifically permitted or required elsewhere in the NEC.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "310.3(C)",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "Conductors for general wiring not specifically permitted elsewhere in this Code to be covered or bare shall _____.",
+    "choices": {
+     "a": "not be permitted",
+     "b": "be insulated",
+     "c": "be rated",
+     "d": "be listed"
+    },
+    "ref": "310.3(D)",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "Insulated conductors with the letters “HH” in their designation have a _____ insulation rating in a dry location.",
+    "choices": {
+     "a": "60°C",
+     "b": "75°C",
+     "c": "90°C",
+     "d": "110°C"
+    },
+    "ref": "310.4(1) Table",
+    "answer": "c"
+   },
+   {
+    "n": 9,
+    "q": "Insulated conductors with letter designation of _____, are permitted in a wet location with a maximum operating temperature of 90°C.",
+    "choices": {
+     "a": "USE",
+     "b": "RHW",
+     "c": "XHWN",
+     "d": "THWN-2"
+    },
+    "ref": "310.4(1) Table",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "Conductors with Type TW insulation have a temperature rating of _____.",
+    "choices": {
+     "a": "60°C",
+     "b": "75°C",
+     "c": "90°C",
+     "d": "110°C"
+    },
+    "ref": "310.4(1) Table",
+    "answer": "a"
+   },
+   {
+    "n": 11,
+    "q": "The insulation of USE-2 cable is _____ resistant.",
+    "choices": {
+     "a": "heat",
+     "b": "moisture",
+     "c": "sunlight",
+     "d": "heat and moisture"
+    },
+    "ref": "310.4(1) Table",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "Where there are no adjustment or correction factors required, the service conductors for a rated service of _____ supplying the entire load associated with an individual dwelling unit, Table 310.12(A) shall be permitted to be applied.",
+    "choices": {
+     "a": "100A",
+     "b": "200A",
+     "c": "400A",
+     "d": "all of these"
+    },
+    "ref": "310.12(A)",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "Where there are no adjustment or correction factors required, the feeder conductors rated between 100A and _____ supplying the entire load associated with an individual dwelling unit, Table 310.12(A) shall be permitted to be applied.",
+    "choices": {
+     "a": "150A",
+     "b": "200A",
+     "c": "300A",
+     "d": "400A"
+    },
+    "ref": "310.12(B)",
+    "answer": "d"
+   },
+   {
+    "n": 14,
+    "q": "No conductor shall be used where its _____ temperature exceeds that designated for the type of insulated conductor involved.",
+    "choices": {
+     "a": "operating",
+     "b": "ambient",
+     "c": "highest",
+     "d": "lowest"
+    },
+    "ref": "310.14(A)(3)",
+    "answer": "a"
+   },
+   {
+    "n": 15,
+    "q": "The _____ rating of a conductor is the maximum temperature, at any location along its length, which the conductor can withstand over a prolonged period of time without serious degradation.",
+    "choices": {
+     "a": "ampacity",
+     "b": "temperature",
+     "c": "conductivity",
+     "d": "short-circuit"
+    },
+    "ref": "310.14(A)(3) Informational Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 16,
+    "q": "There are four principal determinants of conductor operating temperature, one of which is _____ generated internally in the conductor as the result of load current flow, including fundamental and harmonic currents.",
+    "choices": {
+     "a": "friction",
+     "b": "magnetism",
+     "c": "heat",
+     "d": "compatibility"
+    },
+    "ref": "310.14(A)(3) Informational Note 1(2)",
+    "answer": "c"
+   },
+   {
+    "n": 17,
+    "q": "In accordance with Article 310, temperature correction and adjustment factors are permitted to be applied to the ampacity for the temperature rating of the _____, if the corrected and adjusted ampacity does not exceed the ampacity for the temperature rating of the termination in accordance with 110.14(C).",
+    "choices": {
+     "a": "conductor",
+     "b": "feeder",
+     "c": "service",
+     "d": "termination"
+    },
+    "ref": "310.15(A)",
+    "answer": "a"
+   },
+   {
+    "n": 18,
+    "q": "For raceways exposed to direct sunlight on or above rooftops where the distance above the roof to the bottom of the raceway or cable is less than _____, a temperature adder of 60°F shall be added to the outdoor temperature to determine the ambient temperature correction factor.",
+    "choices": {
+     "a": "¼ in.",
+     "b": "1⁄3 in.",
+     "c": "½ in.",
+     "d": "¾ in."
+    },
+    "ref": "310.15(B)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 19,
+    "q": "Type _____ insulated conductors shall not be subject to ampacity adjustment where installed exposed to direct sunlight on a rooftop.",
+    "choices": {
+     "a": "THW-2",
+     "b": "XHHW-2",
+     "c": "THWN-2",
+     "d": "RHW-2"
+    },
+    "ref": "310.15(B)(2) Ex",
+    "answer": "b"
+   },
+   {
+    "n": 20,
+    "q": "Conductor adjustment factors shall not apply to conductors in raceways having a length not exceeding _____.",
+    "choices": {
+     "a": "12 in.",
+     "b": "24 in.",
+     "c": "36 in.",
+     "d": "48 in."
+    },
+    "ref": "310.15(C)(1)(b)",
+    "answer": "b"
+   },
+   {
+    "n": 21,
+    "q": "Where six current-carrying conductors are run in the same conduit, the ampacity of each conductor shall be adjusted to _____ of its ampacity.",
+    "choices": {
+     "a": "40 percent",
+     "b": "60 percent",
+     "c": "80 percent",
+     "d": "90 percent"
+    },
+    "ref": "310.15(C)(1) Table",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "A raceway contains two three-phase, 4-wire circuits where the neutrals carry only the unbalanced current from the other conductors. The ampacity adjustment factor for these conductors is _____.",
+    "choices": {
+     "a": "70 percent",
+     "b": "80 percent",
+     "c": "90 percent",
+     "d": "100 percent"
+    },
+    "ref": "310.15(C)(1) Table",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "A(An) _____ conductor that carries only the unbalanced current from other conductors of the same circuit shall not be required to be counted when applying the provisions of 310.15(C)(1).",
+    "choices": {
+     "a": "neutral",
+     "b": "ungrounded",
+     "c": "grounding",
+     "d": "bonded"
+    },
+    "ref": "310.15(E)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 24,
+    "q": "In a 3-wire circuit consisting of two phase conductors and the neutral conductor of a 4-wire, three-phase, wye-connected system, the neutral conductor shall _____ when applying the provisions of 310.15(C)(1).",
+    "choices": {
+     "a": "be counted",
+     "b": "not be counted",
+     "c": "be reduced",
+     "d": "be ignored"
+    },
+    "ref": "310.15(E)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "On a 4-wire, three-phase wye circuit where the major portion of the neutral load consists of _____ loads, the neutral conductor shall be considered a current-carrying conductor.",
+    "choices": {
+     "a": "240V",
+     "b": "277V",
+     "c": "nonlinear",
+     "d": "linear"
+    },
+    "ref": "310.15(E)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 26,
+    "q": "For the purposes of ampacity adjustment, when determining the number of current-carrying conductors, a grounding or bonding conductor _____ be counted when applying the provisions of 310.15(C)(1).",
+    "choices": {
+     "a": "shall not",
+     "b": "shall",
+     "c": "is permitted to",
+     "d": "can"
+    },
+    "ref": "310.15(F)",
+    "answer": "a"
+   },
+   {
+    "n": 27,
+    "q": "The minimum size THHN conductor for a 150A noncontinuous load is _____.",
+    "choices": {
+     "a": "1 AWG",
+     "b": "1/0 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "310.16 Table",
+    "answer": "b"
+   },
+   {
+    "n": 28,
+    "q": "The minimum conductor size required for a 60A load if the terminals are rated 75°C is _____ THW copper.",
+    "choices": {
+     "a": "2 AWG",
+     "b": "4 AWG",
+     "c": "6 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "310.16 Table",
+    "answer": "c"
+   },
+   {
+    "n": 29,
+    "q": "The minimum size THW service-entrance conductors for a 200A commercial service is _____.",
+    "choices": {
+     "a": "2/0 AWG",
+     "b": "3/0 AWG",
+     "c": "4/0 AWG",
+     "d": "250 KCMIL"
+    },
+    "ref": "310.16 Table",
+    "answer": "b"
+   },
+   {
+    "n": 30,
+    "q": "The conductor ampacity for 6 AWG THW is _____. Denotes change since first printing.",
+    "choices": {
+     "a": "55A",
+     "b": "65A",
+     "c": "70A",
+     "d": "80A"
+    },
+    "ref": "310.16 Table",
+    "answer": "b"
+   },
+   {
+    "n": 31,
+    "q": "The ampacities specified in Table 310.16 apply to _____.",
+    "choices": {
+     "a": "conductors rated 60°C, 75°C, or 90°C",
+     "b": "wiring installed in an ambient temperature of 86°F",
+     "c": "where there is not more than three current-carrying conductors",
+     "d": "all of these"
+    },
+    "ref": "310.16(2), (3), and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "The 90°C rating shall be permitted to be used for ampacity adjustment and correction calculations for Type NM cable, provided the final calculated ampacity does not exceed that of a _____ rated conductor.",
+    "choices": {
+     "a": "60°C",
+     "b": "75°C",
+     "c": "90°C",
+     "d": "104°C"
+    },
+    "ref": "334.80",
+    "answer": "a"
+   },
+   {
+    "n": 33,
+    "q": "Where more than two NM cables are installed through the same bored hole in wood framing that is to be sealed with _____, the ampacity of each conductor shall be adjusted.",
+    "choices": {
+     "a": "thermal insulation",
+     "b": "caulk",
+     "c": "sealing foam",
+     "d": "any of these"
+    },
+    "ref": "334.80",
+    "answer": "d"
+   },
+   {
+    "n": 34,
+    "q": "For Types NM and NMC cable, the _____ rating shall be permitted to be used for ampacity adjustment and correction calculations, provided the final calculated ampacity does not exceed that of a 60°C rated conductor.",
+    "choices": {
+     "a": "60°C",
+     "b": "75°C",
+     "c": "90°C",
+     "d": "104°C"
+    },
+    "ref": "334.80",
+    "answer": "c"
+   },
+   {
+    "n": 35,
+    "q": "The sum of the cross-sectional areas of all conductors at any cross section of a metal wireway shall not exceed _____ of the interior cross-sectional area of the wireway.",
+    "choices": {
+     "a": "50 percent",
+     "b": "20 percent",
+     "c": "25 percent",
+     "d": "80 percent"
+    },
+    "ref": "376.22(A)",
+    "answer": "b"
+   },
+   {
+    "n": 36,
+    "q": "The ampacity adjustment factors in 310.15(C)(1) shall be applied to a metal wireway only where the number of current-carrying conductors in any cross section of the wireway exceeds _____.",
+    "choices": {
+     "a": "30",
+     "b": "40",
+     "c": "50",
+     "d": "60"
+    },
+    "ref": "376.22(B)",
+    "answer": "a"
+   },
+   {
+    "n": 37,
+    "q": "Where insulated conductors are deflected within a metal wireway, the wireway shall be sized to meet the bending requirements corresponding to _____ per terminal in Table 312.6(A).",
+    "choices": {
+     "a": "one wire",
+     "b": "two wires",
+     "c": "three wires",
+     "d": "four wires"
+    },
+    "ref": "376.23(A)",
+    "answer": "a"
+   }
+  ]
  }
 }
