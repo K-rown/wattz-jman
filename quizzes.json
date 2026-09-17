@@ -1348,5 +1348,1483 @@
     "answer": "c"
    }
   ]
+ },
+ "Theory_Unit_28": {
+  "book": "Theory",
+  "quiz": "Unit 28",
+  "page": 278,
+  "unit": "Unit 28—Multiwire Circuits",
+  "questions": [
+   {
+    "n": 1,
+    "q": "A _____ circuit is a circuit consisting of two or more phase wires that have a voltage between them, and an equal voltage between each phase wire and the neutral wire.",
+    "choices": {
+     "a": "series",
+     "b": "parallel",
+     "c": "multiwire",
+     "d": "series-parallel"
+    },
+    "ref": "28.1 Introduction",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "The _____ wire is connected to the neutral point of a system and is intended to carry current under normal conditions.",
+    "choices": {
+     "a": "neutral",
+     "b": "phase",
+     "c": "copper",
+     "d": "none of these"
+    },
+    "ref": "28.2 Neutral Wire",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "The common point of a 4-wire, three-phase, wye-connected system; the midpoint of a 3-wire, single-phase system; or the midpoint of the single-phase portion of a three-phase, delta-connected system is referred to as the “_____ point.”",
+    "choices": {
+     "a": "neutral",
+     "b": "phase",
+     "c": "copper",
+     "d": "none of these"
+    },
+    "ref": "28.2 Neutral Wire",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "The grounded wire is a wire that is intentionally _____ to the Earth.",
+    "choices": {
+     "a": "grounded",
+     "b": "bolted",
+     "c": "earthed",
+     "d": "bonded"
+    },
+    "ref": "28.3 Grounded Wire",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "The current on the neutral wire of a 2-wire circuit is the _____ the current on the phase wire.",
+    "choices": {
+     "a": "same as",
+     "b": "different than",
+     "c": "opposite that of",
+     "d": "all of these"
+    },
+    "ref": "28.4 Current Flow on the Neutral Wire",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "The current flowing in the neutral wire of a 3-wire, 120/240V, single-phase circuit equals the _____ current flowing in the phase wires.",
+    "choices": {
+     "a": "minimum",
+     "b": "difference in",
+     "c": "opposition to",
+     "d": "maximum"
+    },
+    "ref": "28.4 Current Flow on the Neutral Wire",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "The current on the neutral wire is equal to the difference in phase wire current because at any instant the currents on the two phase wires _____ each other.",
+    "choices": {
+     "a": "attract",
+     "b": "oppose",
+     "c": "equal",
+     "d": "rely"
+    },
+    "ref": "28.4 Current Flow on the Neutral Wire",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "Multiwire branch circuits are more _____ than 2-wire circuits in that they have fewer wires for a given number of circuits, which enables the use of a smaller raceway, and result in lower circuit voltage drop.",
+    "choices": {
+     "a": "cost effective",
+     "b": "conductive",
+     "c": "nicer",
+     "d": "easier"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "Multiwire branch circuits have _____ wires for a given number of circuits, which requires the use of a smaller raceway.",
+    "choices": {
+     "a": "fewer",
+     "b": "more",
+     "c": "bigger",
+     "d": "smaller"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "If the number of wires is reduced for a multiwire circuit, the size of the raceway can often be _____.",
+    "choices": {
+     "a": "reduced",
+     "b": "copper",
+     "c": "increased",
+     "d": "aluminum"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "a"
+   },
+   {
+    "n": 11,
+    "q": "A typical 2-wire circuit has current flow over both the phase and neutral wires and the circuit voltage drop includes the voltage drop of _____ wire(s).",
+    "choices": {
+     "a": "zero",
+     "b": "one",
+     "c": "both",
+     "d": "three"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "c"
+   },
+   {
+    "n": 12,
+    "q": "What is the voltage drop of two 12 AWG wires, each 150 ft long, supplying a 2-wire, 20A load?",
+    "choices": {
+     "a": "6V",
+     "b": "10V",
+     "c": "12V",
+     "d": "16V"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "c"
+   },
+   {
+    "n": 13,
+    "q": "A balanced 3-wire, single-phase or 4-wire, three-phase multiwire branch circuit has current flowing only on the phase circuit wires and the circuit voltage drop includes the voltage drop of _____ wire(s).",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "What is the circuit voltage drop over each line wire of a balanced 3-wire multiwire circuit? Each wire is 12 AWG, 150 ft long, supplying a 20A load.",
+    "choices": {
+     "a": "2V",
+     "b": "3V",
+     "c": "4V",
+     "d": "6V"
+    },
+    "ref": "28.5 Multiwire Branch Circuits",
+    "answer": "d"
+   },
+   {
+    "n": 15,
+    "q": "Improper wiring or mishandling of multiwire circuits can cause _____.",
+    "choices": {
+     "a": "better power quality",
+     "b": "a fire hazard",
+     "c": "equipment failure",
+     "d": "a fire hazard and/or equipment failure"
+    },
+    "ref": "28.6 Dangers of Multiwire Circuits",
+    "answer": "d"
+   },
+   {
+    "n": 16,
+    "q": "Failure to terminate the phase wires to separate phases may cause the neutral wire to become _____ from excessive neutral current, and the insulation may be damaged or destroyed.",
+    "choices": {
+     "a": "short circuit",
+     "b": "grounded",
+     "c": "overloaded",
+     "d": "all of these"
+    },
+    "ref": "28.6 Dangers of Multiwire Circuits",
+    "answer": "c"
+   },
+   {
+    "n": 17,
+    "q": "If the continuity of the _____ wire of a multiwire circuit is interrupted (opened), there could be a fire and/or destruction of electrical equipment resulting from overvoltage or undervoltage.",
+    "choices": {
+     "a": "grounding",
+     "b": "neutral",
+     "c": "phase",
+     "d": "all of these"
+    },
+    "ref": "28.6 Dangers of Multiwire Circuits",
+    "answer": "b"
+   },
+   {
+    "n": 18,
+    "q": "Because of the dangers associated with an _____ neutral wire, the continuity of the neutral wire(s) in a multiwire branch circuit cannot depend upon the receptacle.",
+    "choices": {
+     "a": "closed",
+     "b": "open",
+     "c": "ungrounded",
+     "d": "grounded"
+    },
+    "ref": "28.7 NEC Requirements",
+    "answer": "b"
+   }
+  ]
+ },
+ "Theory_Unit_29": {
+  "book": "Theory",
+  "quiz": "Unit 29",
+  "page": 280,
+  "unit": "Unit 29—The Formula Wheel",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The Formula Wheel is divided into _____ sections with three formulas in each section.",
+    "choices": {
+     "a": "two",
+     "b": "three",
+     "c": "four",
+     "d": "five"
+    },
+    "ref": "29.2 Formula Wheel Quadrants",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "What is the resistance of the circuit wires when the wire voltage drop is 7.20V and the current flow is 50A?",
+    "choices": {
+     "a": "0.14Ω",
+     "b": "0.30Ω",
+     "c": "3Ω",
+     "d": "14Ω"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "What is the resistance of the circuit wires when the wire voltage drop is 3.60V and the current flow is 20A?",
+    "choices": {
+     "a": "0.15Ω",
+     "b": "0.18Ω",
+     "c": "3.0Ω",
+     "d": "5.55Ω"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "b"
+   },
+   {
+    "n": 4,
+    "q": "What is the resistance of the circuit wires when the wire voltage drop is 6.24V and the current flow is 40A?",
+    "choices": {
+     "a": "0.145Ω",
+     "b": "0.156Ω",
+     "c": "0.60Ω",
+     "d": "6.41Ω"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "What is the resistance of the circuit wires when the wire voltage drop is 14.40V and the current flow is 60A?",
+    "choices": {
+     "a": "0.24Ω",
+     "b": "0.30Ω",
+     "c": "3.14Ω",
+     "d": "4.20Ω"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "What is the current flow in amperes through a 9.50 kW heat strip rated 230V when connected to a 230V power source?",
+    "choices": {
+     "a": "25A",
+     "b": "39A",
+     "c": "41A",
+     "d": "230A"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "c"
+   },
+   {
+    "n": 7,
+    "q": "What is the current flow in amperes through a 9.50 kW heat strip rated 208V when connected to a 208V power source?",
+    "choices": {
+     "a": "35A",
+     "b": "39A",
+     "c": "46A",
+     "d": "55A"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "c"
+   },
+   {
+    "n": 8,
+    "q": "What is the current flow in amperes through a 6.50 kW heat strip rated 460V when connected to a 460V power source?",
+    "choices": {
+     "a": "14A",
+     "b": "21A",
+     "c": "27A",
+     "d": "30A"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "What is the current flow in amperes through a 6.50 kW heat strip rated 480V when connected to a 480V power source?",
+    "choices": {
+     "a": "13.50A",
+     "b": "19.40A",
+     "c": "21.30A",
+     "d": "23.20A"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "What is the voltage of a circuit carrying 4.80A supplying a 100Ω resistor?",
+    "choices": {
+     "a": "110V",
+     "b": "220V",
+     "c": "360V",
+     "d": "480V"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "What is the voltage of a circuit carrying 20.80A supplying a 10Ω resistor?",
+    "choices": {
+     "a": "110V",
+     "b": "208V",
+     "c": "460V",
+     "d": "500V"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "b"
+   },
+   {
+    "n": 12,
+    "q": "What is the voltage of a circuit carrying 7.50A supplying a 37Ω resistor?",
+    "choices": {
+     "a": "120V",
+     "b": "277V",
+     "c": "360V",
+     "d": "520V"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "b"
+   },
+   {
+    "n": 13,
+    "q": "What is the voltage of a circuit carrying 4.60A supplying a 52Ω resistor?",
+    "choices": {
+     "a": "110V",
+     "b": "120V",
+     "c": "230V",
+     "d": "240V"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "d"
+   },
+   {
+    "n": 14,
+    "q": "What is the power loss at a terminal having a resistance of 0.20Ω when carrying 40A?",
+    "choices": {
+     "a": "100W",
+     "b": "210W",
+     "c": "320W",
+     "d": "430W"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "c"
+   },
+   {
+    "n": 15,
+    "q": "What is the power loss at a terminal having a resistance of 0.40Ω when carrying 20A?",
+    "choices": {
+     "a": "100W",
+     "b": "160W",
+     "c": "250W",
+     "d": "300W"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "b"
+   },
+   {
+    "n": 16,
+    "q": "What is the power loss at a terminal having a resistance of 0.50Ω when carrying 15A?",
+    "choices": {
+     "a": "112.50W",
+     "b": "200.40W",
+     "c": "230.20W",
+     "d": "340.30W"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "What is the power loss at a terminal having a resistance of 0.70Ω when carrying 10A?",
+    "choices": {
+     "a": "10W",
+     "b": "40W",
+     "c": "70W",
+     "d": "100W"
+    },
+    "ref": "29.3 Using the Formula Wheel",
+    "answer": "c"
+   }
+  ]
+ },
+ "NEC_Vol_1_Art_90": {
+  "book": "NEC Vol 1",
+  "quiz": "Art 90",
+  "page": 35,
+  "unit": "Art 90",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The purpose of the NEC is for ______.",
+    "choices": {
+     "a": "it to be used as a design manual",
+     "b": "use as an instruction guide for untrained persons",
+     "c": "the practical safeguarding of persons and property",
+     "d": "interacting with inspectors"
+    },
+    "ref": "90.2(A)",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Electrical hazards often occur because the initial ______ did not provide for increases in the use of electricity.",
+    "choices": {
+     "a": "inspection",
+     "b": "owner",
+     "c": "wiring",
+     "d": "builder"
+    },
+    "ref": "90.2(B) Note",
+    "answer": "c"
+   },
+   {
+    "n": 3,
+    "q": "Compliance with the Code and proper maintenance result in an installation that is ______.",
+    "choices": {
+     "a": "essentially free from hazard",
+     "b": "not necessarily efficient or convenient",
+     "c": "not necessarily adequate for good service or future expansion",
+     "d": "all of these"
+    },
+    "ref": "90.2(B)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "Chapters 1, 2, 3, and 4 of the NEC apply ______.",
+    "choices": {
+     "a": "generally to all electrical installations",
+     "b": "only to special occupancies and conditions",
+     "c": "only to special equipment and material",
+     "d": "all of these"
+    },
+    "ref": "90.3",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "Chapters 5, 6, and 7 of the NEC apply to ______ and may supplement or modify the requirements contained in Chapters 1 through 7.",
+    "choices": {
+     "a": "special occupancies",
+     "b": "special equipment",
+     "c": "special conditions",
+     "d": "all of these"
+    },
+    "ref": "90.3",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "The enforcement of the NEC is the responsibility of the authority having jurisdiction, who is responsible for ______.",
+    "choices": {
+     "a": "making interpretations of rules",
+     "b": "approval of equipment and materials",
+     "c": "granting special permission",
+     "d": "all of these"
+    },
+    "ref": "90.4(B)",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "By special permission, the authority having jurisdiction may waive specific NEC requirements or permit alternative methods where equivalent objectives can be achieved by establishing and maintaining effective _____.",
+    "choices": {
+     "a": "safety",
+     "b": "workmanship",
+     "c": "installations",
+     "d": "job progress"
+    },
+    "ref": "90.4(C)",
+    "answer": "a"
+   },
+   {
+    "n": 8,
+    "q": "If the Code requires new products that may not yet be available at the time the NEC is adopted, the ______ can allow products that comply with the most recent previous edition of the Code adopted by the jurisdiction.",
+    "choices": {
+     "a": "electrical engineer",
+     "b": "master electrician",
+     "c": "authority having jurisdiction",
+     "d": "none of these"
+    },
+    "ref": "90.4(D)",
+    "answer": "c"
+   },
+   {
+    "n": 9,
+    "q": "In the NEC, the word(s) “______” indicate a mandatory requirement.",
+    "choices": {
+     "a": "shall",
+     "b": "shall not",
+     "c": "shall be permitted",
+     "d": "shall or shall not"
+    },
+    "ref": "90.5(A)",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "When the Code uses “______,” it indicates the actions are allowed but not required.",
+    "choices": {
+     "a": "shall or shall not",
+     "b": "shall not be permitted",
+     "c": "shall be permitted",
+     "d": "none of these"
+    },
+    "ref": "90.5(B)",
+    "answer": "c"
+   }
+  ]
+ },
+ "NEC_Vol_1_Ch_1": {
+  "book": "NEC Vol 1",
+  "quiz": "Ch 1",
+  "page": 117,
+  "unit": "Ch 1",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 100 contains only those definitions essential to the application of this Code. An article number in parentheses following the definition indicates that the definition only applies to that article.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "100 Scope",
+    "answer": "a"
+   },
+   {
+    "n": 2,
+    "q": "Capable of being reached quickly for operation, renewal, or inspections without climbing over or under obstructions, removing obstacles, resorting to portable ladders, or the use of tools (other than keys) is known as “______.”",
+    "choices": {
+     "a": "accessible (as applied to equipment)",
+     "b": "accessible (as applied to wiring methods)",
+     "c": "accessible, readily (readily accessible)",
+     "d": "all of these"
+    },
+    "ref": "100 Accessible, Readily (Readily Accessible)",
+    "answer": "c"
+   },
+   {
+    "n": 3,
+    "q": "“______” means acceptable to the authority having jurisdiction.",
+    "choices": {
+     "a": "Identified",
+     "b": "Listed",
+     "c": "Approved",
+     "d": "Labeled"
+    },
+    "ref": "100 Approved",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "In many circumstances, the ______ or his or her designated agent assumes the role of the authority having jurisdiction.",
+    "choices": {
+     "a": "property owner",
+     "b": "developer",
+     "c": "general contractor",
+     "d": "insurance underwriter"
+    },
+    "ref": "100 Authority Having Jurisdiction, Informational Note",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "A(An) ______ is a device, or group of devices, by which the conductors of a circuit can be disconnected from their source of supply.",
+    "choices": {
+     "a": "feeder",
+     "b": "enclosure",
+     "c": "disconnecting means",
+     "d": "conductor interrupter"
+    },
+    "ref": "100 Disconnecting Means",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "The NEC defines a “______” as all circuit conductors between the service equipment, the source of a separately derived system, or other power supply source, and the final branch-circuit overcurrent device.",
+    "choices": {
+     "a": "service",
+     "b": "feeder",
+     "c": "branch circuit",
+     "d": "all of these"
+    },
+    "ref": "100 Feeder",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "“In sight from” or “within sight from” is defined as equipment that is visible and not more than ______ distant from other equipment is in sight from that other equipment.",
+    "choices": {
+     "a": "10 feet",
+     "b": "20 feet",
+     "c": "25 feet",
+     "d": "50 feet"
+    },
+    "ref": "100 In Sight from (Within Sight From, Within Sight)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "A location not normally subject to dampness or wetness but may be temporarily subject to dampness and wetness as in the case of a building under construction defines a ______ location.",
+    "choices": {
+     "a": "dry",
+     "b": "damp",
+     "c": "moist",
+     "d": "wet"
+    },
+    "ref": "100 Location, Dry (Dry Location)",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "A location unprotected and exposed to weather, subject to saturation, underground, or in concrete slabs in direct contact with the earth defines a ______ location.",
+    "choices": {
+     "a": "dry",
+     "b": "damp",
+     "c": "wet",
+     "d": "moist"
+    },
+    "ref": "100 Location, Wet (Wet Location)",
+    "answer": "c"
+   },
+   {
+    "n": 10,
+    "q": "For pools, fountains, and similar installations, the “low-voltage contact limit” is a voltage not exceeding ______.",
+    "choices": {
+     "a": "15V (RMS) for sinusoidal ac or 21.20V peak for nonsinusoidal ac",
+     "b": "30V for continuous dc",
+     "c": "12.40V peak for dc that is interrupted at a rate of 10 to 200 Hz",
+     "d": "all of these"
+    },
+    "ref": "100 Low-Voltage Contact Limit",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "A “luminaire” is a complete lighting unit consisting of a light source such as a lamp or lamps, together with the parts designed to position the ______ and connect it to the power supply.",
+    "choices": {
+     "a": "lampholder",
+     "b": "light source",
+     "c": "fixture",
+     "d": "bulb"
+    },
+    "ref": "100 Luminaire",
+    "answer": "b"
+   },
+   {
+    "n": 12,
+    "q": "The NEC defines a(an) “______” as one who has skills and knowledge related to the construction and operation of the electrical equipment and installations and has received safety training to recognize and avoid the hazards involved.",
+    "choices": {
+     "a": "inspector",
+     "b": "master electrician",
+     "c": "journeyman electrician",
+     "d": "qualified person"
+    },
+    "ref": "100 Qualified Person",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "The conductors and equipment required or permitted by this Code shall be acceptable only if ______.",
+    "choices": {
+     "a": "labeled",
+     "b": "listed",
+     "c": "approved",
+     "d": "identified"
+    },
+    "ref": "110.2",
+    "answer": "c"
+   },
+   {
+    "n": 14,
+    "q": "Equipment that is ______ or identified for a use shall be installed and used in accordance with any instructions included in the listing, labeling, or identification.",
+    "choices": {
+     "a": "listed, labeled, or both",
+     "b": "listed",
+     "c": "marked",
+     "d": "suitable"
+    },
+    "ref": "110.3(B)",
+    "answer": "a"
+   },
+   {
+    "n": 15,
+    "q": "The installation and use instructions for listed, labeled, or identified electrical equipment may be provided in the form of ______.",
+    "choices": {
+     "a": "printed material",
+     "b": "a quick response (QR) code",
+     "c": "an internet address to download instructions",
+     "d": "any of these"
+    },
+    "ref": "110.3(B) Informational Note",
+    "answer": "d"
+   },
+   {
+    "n": 16,
+    "q": "Unless identified for use in the operating environment, no conductors or equipment shall be ______ having a deteriorating effect on the conductors or equipment.",
+    "choices": {
+     "a": "located in damp or wet locations",
+     "b": "exposed to fumes, vapors, liquids, or gases",
+     "c": "exposed to excessive temperatures",
+     "d": "all of these"
+    },
+    "ref": "110.11",
+    "answer": "d"
+   },
+   {
+    "n": 17,
+    "q": "Unused openings, other than those intended for the operation of equipment, those intended for mounting purposes, or permitted as part of the design for listed equipment shall be ______.",
+    "choices": {
+     "a": "filled with cable clamps or connectors only",
+     "b": "taped over with electrical tape",
+     "c": "repaired only by welding or brazing in a metal slug",
+     "d": "closed to afford protection substantially equivalent to the wall of the equipment"
+    },
+    "ref": "110.12(A)",
+    "answer": "d"
+   },
+   {
+    "n": 18,
+    "q": "Internal parts of electrical equipment, including busbars, wiring terminals, insulators, and other surfaces, shall not be damaged or contaminated by foreign materials such as ______, or corrosive residues.",
+    "choices": {
+     "a": "paint, plaster",
+     "b": "cleaners",
+     "c": "abrasives",
+     "d": "any of these"
+    },
+    "ref": "110.12(B)",
+    "answer": "d"
+   },
+   {
+    "n": 19,
+    "q": "Tightening torque values for terminal connections shall be as indicated on equipment or in installation instructions provided by the manufacturer. An approved means shall be used to achieve the______ torque value.",
+    "choices": {
+     "a": "indicated",
+     "b": "identified",
+     "c": "maximum",
+     "d": "minimum"
+    },
+    "ref": "110.14(D)",
+    "answer": "a"
+   },
+   {
+    "n": 20,
+    "q": "Electrical equipment servicing and electrical preventive maintenance shall be performed by ______ trained in servicing and maintenance of equipment.",
+    "choices": {
+     "a": "qualified persons",
+     "b": "manufacturer’s representatives",
+     "c": "service specialists",
+     "d": "licensed individuals"
+    },
+    "ref": "110.17",
+    "answer": "a"
+   },
+   {
+    "n": 21,
+    "q": "Each disconnecting means shall be legibly marked to indicate its purpose unless located and arranged so ______.",
+    "choices": {
+     "a": "that it can be locked out and tagged",
+     "b": "it is not readily accessible",
+     "c": "the purpose is evident",
+     "d": "that it operates at less than 300 volts-to-ground"
+    },
+    "ref": "110.22(A)",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "Working space distances for enclosed live parts shall be measured from the ______ of equipment if the live parts are enclosed.",
+    "choices": {
+     "a": "enclosure or opening",
+     "b": "front or back",
+     "c": "mounting pad",
+     "d": "footprint"
+    },
+    "ref": "110.26(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "The minimum working space on a circuit for equipment operating at 120V to ground, with exposed live parts on one side and no live or grounded parts on the other side of the working space, is ______.",
+    "choices": {
+     "a": "1 ft",
+     "b": "3 ft",
+     "c": "4 ft",
+     "d": "6 ft"
+    },
+    "ref": "110.26(A)(1) and Table 110.26(A)(1) Condition 1",
+    "answer": "b"
+   },
+   {
+    "n": 24,
+    "q": "The minimum height of working spaces shall be clear and extend from the grade, floor, or platform to a height of ______ ft or the height of the equipment, whichever is greater.",
+    "choices": {
+     "a": "3 ft",
+     "b": "6 ft",
+     "c": "6½ ft",
+     "d": "7 ft"
+    },
+    "ref": "110.26(A)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 25,
+    "q": "The grade, floor, or platform in the required working space about electrical equipment shall be as level and flat as ______ for the entire required depth and width of the working space.",
+    "choices": {
+     "a": "practical",
+     "b": "possible",
+     "c": "required",
+     "d": "none of these"
+    },
+    "ref": "110.26(A)(6)",
+    "answer": "a"
+   }
+  ]
+ },
+ "NEC_Vol_1_Ch_2": {
+  "book": "NEC Vol 1",
+  "quiz": "Ch 2",
+  "page": 349,
+  "unit": "Ch 2",
+  "questions": [
+   {
+    "n": 1,
+    "q": "An insulated grounded conductor ______ or smaller shall be identified by a continuous white or gray outer finish, or by three continuous white or gray stripes along its entire length on other than green insulation.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "3 AWG"
+    },
+    "ref": "200.6(A)(1), (2), and (3)",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "At the time of installation, grounded conductors ______ or larger can be identified by a distinctive white or gray marking at their terminations.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "200.6(B)(4)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "Each multiwire branch circuit shall be provided with a means that will simultaneously disconnect all ______ conductors at the point where the branch circuit originates.",
+    "choices": {
+     "a": "circuit",
+     "b": "grounded",
+     "c": "grounding",
+     "d": "ungrounded"
+    },
+    "ref": "210.4(B)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "In dwelling unit kitchens, GFCI protection shall be provided for 125V through 250V receptacles ______.",
+    "choices": {
+     "a": "installed to serve the countertop surfaces",
+     "b": "installed to serve island or peninsula countertops",
+     "c": "installed to serve above or below the countertop surfaces",
+     "d": "serving the kitchen"
+    },
+    "ref": "210.8(A)(6)",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "In other than dwelling units, all 125V through 250V receptacles supplied by single-phase branch circuits rated 150 volts-to-ground or less, 50A or less, and three-phase branch circuits rated 100A or less, installed in(on) ______ shall have GFCI protection for personnel.",
+    "choices": {
+     "a": "rooftops",
+     "b": "kitchens",
+     "c": "bathrooms",
+     "d": "all of these"
+    },
+    "ref": "210.8(B)(1), (2), and (5)",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "In other than dwelling units, GFCI protection is required for receptacles installed in ______.",
+    "choices": {
+     "a": "kitchens",
+     "b": "unfinished areas of basements",
+     "c": "laundry areas",
+     "d": "all of these"
+    },
+    "ref": "210.8(B)(2), (12), and (14)",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "In other than dwelling units, GFCI protection shall be provided for receptacles and cord-and-plug connected appliances installed within ______ from the top inside edge of the bowl of a sink.",
+    "choices": {
+     "a": "3 ft",
+     "b": "4 ft",
+     "c": "5 ft",
+     "d": "6 ft Denotes change since first printing."
+    },
+    "ref": "210.8(B)(7)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "GFCI protection shall be provided for crawl space lighting outlets not exceeding ______.",
+    "choices": {
+     "a": "120V",
+     "b": "125V",
+     "c": "240V",
+     "d": "250V"
+    },
+    "ref": "210.8(C)",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "According to Article 210, GFCI protection shall be provided for the branch circuit or outlet supplying ______ rated 150V or less to ground and 60A or less, single- or three-phase.",
+    "choices": {
+     "a": "sump pumps",
+     "b": "wall-mounted ovens",
+     "c": "clothes dryers",
+     "d": "all of these"
+    },
+    "ref": "210.8(D)(6), (9), and (11)",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "For equipment requiring servicing, GFCI protection shall be provided for the receptacles within 25 ft of HVAC equipment required by ______.",
+    "choices": {
+     "a": "210.1",
+     "b": "210.25(B)",
+     "c": "210.62",
+     "d": "210.63(A)"
+    },
+    "ref": "210.8(E)",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "For dwellings, all outdoor outlets, other than those covered in 210.8(A) Ex 1, and supplied by single-phase branch circuits rated 150V or less to ground, ______, shall be provided with GFCI protection.",
+    "choices": {
+     "a": "15A or more",
+     "b": "20A or less",
+     "c": "30A or less",
+     "d": "50A or less"
+    },
+    "ref": "210.8(F)",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "All 120V, single-phase, 10A, 15A, and 20A branch circuits supplying outlets or devices installed in dwelling unit ______ shall be AFCI protected.",
+    "choices": {
+     "a": "kitchens",
+     "b": "garages",
+     "c": "bathrooms",
+     "d": "outdoor areas"
+    },
+    "ref": "210.12(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 13,
+    "q": "If a 20A branch circuit supplies multiple receptacles, the receptacles shall have an ampere rating of no less than _____.",
+    "choices": {
+     "a": "10A",
+     "b": "15A",
+     "c": "20A",
+     "d": "30A"
+    },
+    "ref": "210.21(B)(3) Table",
+    "answer": "b"
+   },
+   {
+    "n": 14,
+    "q": "The required heating, air-conditioning, and refrigeration equipment receptacle outlet shall be located _____ the equipment.",
+    "choices": {
+     "a": "6 ft above",
+     "b": "not over 8 ft from",
+     "c": "on",
+     "d": "on the same level as"
+    },
+    "ref": "210.63(A)",
+    "answer": "d"
+   },
+   {
+    "n": 15,
+    "q": "Barriers shall be placed such that no uninsulated, ungrounded busbar or terminal is exposed to inadvertent contact by persons or maintenance equipment while servicing load terminations in _____ supplied by feeder taps.",
+    "choices": {
+     "a": "panelboards",
+     "b": "switchboards and switchgear",
+     "c": "motor control centers",
+     "d": "any of these"
+    },
+    "ref": "215.15",
+    "answer": "d"
+   },
+   {
+    "n": 16,
+    "q": "Surge-protective devices shall be installed in or adjacent to distribution equipment, connected to the _____ side of the feeder that contains branch circuit overcurrent protective device(s) that supply dwelling units, dormitory units, and guest rooms and suites.",
+    "choices": {
+     "a": "line",
+     "b": "load",
+     "c": "supply",
+     "d": "line or supply"
+    },
+    "ref": "215.18(B)",
+    "answer": "b"
+   },
+   {
+    "n": 17,
+    "q": "Where a raceway enters a(an) _____ from outside, it shall be sealed in accordance with 300.5(G) and 300.7(A).",
+    "choices": {
+     "a": "building or structure",
+     "b": "crawlspace",
+     "c": "highway right-of-way",
+     "d": "easement"
+    },
+    "ref": "225.27",
+    "answer": "a"
+   },
+   {
+    "n": 18,
+    "q": "In accordance with Article 225—Outside Branch Circuits and Feeders, a building or structure shall be supplied by a maximum of _____ feeder(s) or branch circuit(s), unless specifically permitted otherwise.",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "225.3",
+    "answer": "a"
+   },
+   {
+    "n": 19,
+    "q": "In accordance with Article 225—Outside Branch Circuits and Feeders, the disconnecting means for a building supplied by a feeder shall be installed at a(an) _____ location.",
+    "choices": {
+     "a": "accessible",
+     "b": "readily accessible",
+     "c": "outdoor",
+     "d": "indoor"
+    },
+    "ref": "225.31(B)",
+    "answer": "b"
+   },
+   {
+    "n": 20,
+    "q": "Service conductors shall be considered outside of a building or other structure where installed under not less than _____ of concrete beneath a building or other structure.",
+    "choices": {
+     "a": "2 in.",
+     "b": "4 in.",
+     "c": "5 in.",
+     "d": "6 in."
+    },
+    "ref": "230.6(1)",
+    "answer": "a"
+   },
+   {
+    "n": 21,
+    "q": "Circuit conductors other than service conductors, shall not be installed in the same _____ as the service conductors.",
+    "choices": {
+     "a": "raceway or cable",
+     "b": "handhole enclosure",
+     "c": "underground box",
+     "d": "all of these"
+    },
+    "ref": "230.7",
+    "answer": "d"
+   },
+   {
+    "n": 22,
+    "q": "Where a service _____ enters a building or structure, it shall be sealed in accordance with 300.5(G) and 300.7(A).",
+    "choices": {
+     "a": "raceway",
+     "b": "cable assembly",
+     "c": "cable tray",
+     "d": "any of these"
+    },
+    "ref": "230.8",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "The minimum point of attachment of overhead service conductors to a building shall not be less than _____ above finished grade.",
+    "choices": {
+     "a": "8 ft",
+     "b": "10 ft",
+     "c": "12 ft",
+     "d": "15 ft"
+    },
+    "ref": "230.26",
+    "answer": "b"
+   },
+   {
+    "n": 24,
+    "q": "Barriers shall be placed in service equipment such that no uninsulated, ungrounded service busbar or service _____ is exposed to inadvertent contact by persons or maintenance equipment while servicing load terminations with the service disconnect in the open position.",
+    "choices": {
+     "a": "phase conductor",
+     "b": "neutral conductor",
+     "c": "terminal",
+     "d": "disconnect"
+    },
+    "ref": "230.62(C)",
+    "answer": "c"
+   },
+   {
+    "n": 25,
+    "q": "The service disconnecting means shall be marked to identify it as being suitable for use as service equipment and shall be _____.",
+    "choices": {
+     "a": "weatherproof",
+     "b": "listed or field evaluated",
+     "c": "approved",
+     "d": "moisture resistant"
+    },
+    "ref": "230.66(A)",
+    "answer": "b"
+   },
+   {
+    "n": 26,
+    "q": "All services supplying _____ shall be provided with a surge-protective device (SPD).",
+    "choices": {
+     "a": "dwelling units and dormitory units",
+     "b": "guest rooms and suites of hotels and motels",
+     "c": "patient sleeping rooms in nursing homes and limited care facilities",
+     "d": "all of these"
+    },
+    "ref": "230.67(A)(1) to (4)",
+    "answer": "d"
+   },
+   {
+    "n": 27,
+    "q": "There shall be no more than _____ service disconnects installed for each service or for each set of service-entrance conductors as permitted in 230.2 and 230.40.",
+    "choices": {
+     "a": "two",
+     "b": "four",
+     "c": "six",
+     "d": "eight"
+    },
+    "ref": "230.71(B)",
+    "answer": "c"
+   },
+   {
+    "n": 28,
+    "q": "For one- and two-family dwelling unit service conductors, an emergency disconnecting means shall be installed in a readily accessible _____ location.",
+    "choices": {
+     "a": "indoor",
+     "b": "outdoor",
+     "c": "indoor or outdoor",
+     "d": "enclosed"
+    },
+    "ref": "230.85(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 29,
+    "q": "The next higher standard rating overcurrent device above the ampacity of the ungrounded conductors being protected is permitted to be used, provided the _____.",
+    "choices": {
+     "a": "conductors being protected are not part of a branch circuit supplying more than one receptacle for cord-and-plug-connected portable loads",
+     "b": "ampacity of the conductors does not correspond with the standard ampere rating of a fuse or circuit breaker",
+     "c": "next higher standard rating selected does not exceed 800A",
+     "d": "all of these"
+    },
+    "ref": "240.4(B)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 30,
+    "q": "If the circuit’s overcurrent device exceeds _____, the conductor ampacity shall have a rating not less than the rating of the overcurrent device.",
+    "choices": {
+     "a": "800A",
+     "b": "1,000A",
+     "c": "1,200A",
+     "d": "2,000A"
+    },
+    "ref": "240.4(C)",
+    "answer": "a"
+   },
+   {
+    "n": 31,
+    "q": "Unless specifically permitted in 240.4(E) or (G), the overcurrent protection for 14 AWG copper-clad aluminum conductors shall not exceed 10A provided that _____.",
+    "choices": {
+     "a": "continuous loads do not exceed 8A",
+     "b": "circuit breakers are listed and marked for use with 14 AWG copper-clad aluminum conductors",
+     "c": "fuses are listed and marked for use with 14 AWG copper-clad aluminum conductors",
+     "d": "all of these"
+    },
+    "ref": "240.4(D)(3)(1) and (2)",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "Where the circuit breaker handles are operated vertically, the “up” position of the handle shall be the “______” position.",
+    "choices": {
+     "a": "on",
+     "b": "off",
+     "c": "tripped",
+     "d": "any of these"
+    },
+    "ref": "240.81",
+    "answer": "a"
+   },
+   {
+    "n": 33,
+    "q": "An SPD shall provide ______ that it is functioning properly.",
+    "choices": {
+     "a": "indication",
+     "b": "notification",
+     "c": "a sign",
+     "d": "a label"
+    },
+    "ref": "242.9",
+    "answer": "a"
+   },
+   {
+    "n": 34,
+    "q": "A ______ surge-protective device is permitted to be connected on either the line or load side of a service disconnect overcurrent device.",
+    "choices": {
+     "a": "Type 1",
+     "b": "Type 2",
+     "c": "Type 3",
+     "d": "Type 4"
+    },
+    "ref": "242.13(A)",
+    "answer": "a"
+   },
+   {
+    "n": 35,
+    "q": "The conductors used to connect the surge-protective device to the line or bus and to ground shall not be any longer than _____ and shall avoid unnecessary bends.",
+    "choices": {
+     "a": "6 in.",
+     "b": "12 in.",
+     "c": "18 in.",
+     "d": "necessary"
+    },
+    "ref": "242.24",
+    "answer": "d"
+   },
+   {
+    "n": 36,
+    "q": "For grounded systems, normally noncurrent-carrying conductive materials enclosing electrical conductors shall be connected together and to the _____ to establish an effective ground-fault current path.",
+    "choices": {
+     "a": "ground",
+     "b": "earth",
+     "c": "electrical supply source",
+     "d": "enclosure"
+    },
+    "ref": "250.4(A)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 37,
+    "q": "For grounded systems, the earth _____ considered an effective ground-fault current path.",
+    "choices": {
+     "a": "shall be",
+     "b": "shall not be",
+     "c": "is",
+     "d": "is not"
+    },
+    "ref": "250.4(A)(5)",
+    "answer": "b"
+   },
+   {
+    "n": 38,
+    "q": "The grounding electrode conductor connection shall be made at any accessible point from the load end of the overhead service conductors, _____ to the terminal or bus to which the grounded service conductor is connected at the service disconnecting means.",
+    "choices": {
+     "a": "service drop",
+     "b": "underground service conductors",
+     "c": "service lateral",
+     "d": "any of these"
+    },
+    "ref": "250.24(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 39,
+    "q": "A grounded conductor shall not be connected to normally noncurrent-carrying metal parts of equipment, to equipment grounding conductor(s), or be reconnected to ground on the load side of the _____ except as otherwise permitted.",
+    "choices": {
+     "a": "service disconnecting means",
+     "b": "distribution panel",
+     "c": "switchgear",
+     "d": "switchboard"
+    },
+    "ref": "250.24(B)",
+    "answer": "a"
+   },
+   {
+    "n": 40,
+    "q": "If an ac system operating at 1,000V or less is grounded at any point, the _____ shall be routed with the ungrounded conductors to each service disconnecting means and shall be connected to each disconnecting means grounded conductor(s) terminal or bus.",
+    "choices": {
+     "a": "system bonding jumper",
+     "b": "supply-side bonding jumper",
+     "c": "grounded conductor",
+     "d": "equipment grounding conductor"
+    },
+    "ref": "250.24(D)",
+    "answer": "c"
+   },
+   {
+    "n": 41,
+    "q": "A grounding electrode system and grounding electrode conductor at a building or structure shall not be required if only a _____ supplies the building or structure.",
+    "choices": {
+     "a": "4-wire service",
+     "b": "single or multiwire branch circuit",
+     "c": "3-wire service",
+     "d": "any of these"
+    },
+    "ref": "250.32(A) Ex",
+    "answer": "b"
+   },
+   {
+    "n": 42,
+    "q": "An equipment grounding conductor shall be run with the supply conductors and be connected to the building or structure _____ and to the grounding electrode.",
+    "choices": {
+     "a": "rebar",
+     "b": "disconnecting means",
+     "c": "structural steel",
+     "d": "ground rod"
+    },
+    "ref": "250.32(B)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 43,
+    "q": "Rod and pipe grounding electrodes shall not be less than _____ in length.",
+    "choices": {
+     "a": "6 ft",
+     "b": "8 ft",
+     "c": "10 ft",
+     "d": "20 ft"
+    },
+    "ref": "250.52(A)(5)",
+    "answer": "b"
+   },
+   {
+    "n": 44,
+    "q": "A buried iron or steel plate used as a grounding electrode shall expose not less than _____ of surface area to exterior soil.",
+    "choices": {
+     "a": "2 sq ft",
+     "b": "4 sq ft",
+     "c": "9 sq ft",
+     "d": "10 sq ft"
+    },
+    "ref": "250.52(A)(7)",
+    "answer": "a"
+   },
+   {
+    "n": 45,
+    "q": "The largest sized grounding electrode conductor to a rod, pipe, or plate electrode required for a 400A service with 500 kcmil conductors is _____.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "1/0 AWG",
+     "d": "4/0 AWG aluminum"
+    },
+    "ref": "250.66(A)",
+    "answer": "b"
+   },
+   {
+    "n": 46,
+    "q": "If the grounding electrode conductor to a concrete-encased electrode does not extend on to other types of electrodes, the grounding electrode conductor shall not be required to be larger than _____ copper wire.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.66(B)",
+    "answer": "d"
+   },
+   {
+    "n": 47,
+    "q": "A means external to enclosures for connecting intersystem _____ conductors shall be provided at the service equipment or metering equipment enclosure and disconnecting means of buildings or structures supplied by a feeder or branch circuit.",
+    "choices": {
+     "a": "bonding",
+     "b": "ungrounded",
+     "c": "secondary",
+     "d": "bonding and ungrounded"
+    },
+    "ref": "250.94(A)",
+    "answer": "a"
+   },
+   {
+    "n": 48,
+    "q": "Exposed structural metal that is interconnected to form a metal building frame, not intentionally grounded or bonded, and is likely to become energized shall be bonded to the_____.",
+    "choices": {
+     "a": "service equipment enclosure",
+     "b": "grounded conductor at the service",
+     "c": "disconnecting means for buildings or structures supplied by a feeder or branch circuit",
+     "d": "any of these"
+    },
+    "ref": "250.104(C)(1)(2)(3)",
+    "answer": "d"
+   },
+   {
+    "n": 49,
+    "q": "When a single equipment grounding conductor is used for multiple circuits in the same raceway, cable, or cable tray, the single equipment grounding conductor shall be sized according to the _____.",
+    "choices": {
+     "a": "combined rating of all the overcurrent devices",
+     "b": "largest overcurrent device protecting the circuit conductors",
+     "c": "combined rating of all the loads",
+     "d": "any of these"
+    },
+    "ref": "250.122(C)",
+    "answer": "b"
+   },
+   {
+    "n": 50,
+    "q": "A(An) _____ shall be used to connect the grounding terminal of a grounding-type receptacle to a metal box that is connected to an equipment grounding conductor.",
+    "choices": {
+     "a": "equipment bonding jumper",
+     "b": "grounded conductor jumper",
+     "c": "equipment bonding jumper or grounded conductor jumper",
+     "d": "equipment bonding jumper and grounded conductor jumper"
+    },
+    "ref": "250.146",
+    "answer": "a"
+   }
+  ]
  }
 }
