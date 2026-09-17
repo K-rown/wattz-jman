@@ -12048,5 +12048,177 @@
     "answer": "c"
    }
   ]
+ },
+ "B&G_Art_314": {
+  "book": "B&G",
+  "quiz": "Art 314",
+  "page": 285,
+  "unit": "Article 314—Boxes, Conduit Bodies, And Handhole Enclosures",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The installation and use of all boxes and conduit bodies used as outlet, device, junction, or pull boxes, depending on their use, and handhole enclosures, are covered within _____.",
+    "choices": {
+     "a": "Article 110",
+     "b": "Article 200",
+     "c": "Article 300",
+     "d": "Article 314"
+    },
+    "ref": "314.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Nonmetallic boxes can be used with _____.",
+    "choices": {
+     "a": "nonmetallic sheaths",
+     "b": "nonmetallic raceways",
+     "c": "flexible cords",
+     "d": "all of these"
+    },
+    "ref": "314.3",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "Where internal _____ means are provided between all entries, nonmetallic boxes shall be permitted to be used with metal raceways or metal-armored cables.",
+    "choices": {
+     "a": "grounding",
+     "b": "bonding",
+     "c": "connecting",
+     "d": "splicing"
+    },
+    "ref": "314.3 Ex 1",
+    "answer": "b"
+   },
+   {
+    "n": 4,
+    "q": "Metal boxes shall be _____ in accordance with Article 250.",
+    "choices": {
+     "a": "grounded",
+     "b": "bonded",
+     "c": "secured",
+     "d": "grounded and bonded"
+    },
+    "ref": "314.4",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "Handhole enclosure covers shall have an identifying mark or logo that prominently identifies the function of the enclosure, such as “_____.”",
+    "choices": {
+     "a": "danger",
+     "b": "utility",
+     "c": "high voltage",
+     "d": "electric"
+    },
+    "ref": "314.30(D)",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "Handhole enclosure covers shall require the use of tools to open, or they shall weigh over _____.",
+    "choices": {
+     "a": "45 lb",
+     "b": "70 lb",
+     "c": "100 lb",
+     "d": "200 lb"
+    },
+    "ref": "314.30(D)",
+    "answer": "c"
+   }
+  ]
+ },
+ "B&G_Art_320": {
+  "book": "B&G",
+  "quiz": "Art 320",
+  "page": 286,
+  "unit": "Article 320—Armored Cable (Type AC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the use, installation, and construction specifications for armored cable, Type AC.",
+    "choices": {
+     "a": "300",
+     "b": "310",
+     "c": "320",
+     "d": "334"
+    },
+    "ref": "320.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Type AC cable shall provide an adequate path for _____ to act as an equipment grounding conductor.",
+    "choices": {
+     "a": "fault current",
+     "b": "short-circuit current",
+     "c": "overcurrent",
+     "d": "arcing current"
+    },
+    "ref": "320.108",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_330": {
+  "book": "B&G",
+  "quiz": "Art 330",
+  "page": 286,
+  "unit": "Article 330—Metal-Clad Cable (Type MC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the use, installation, and construction specifications of metal-clad cable, Type MC.",
+    "choices": {
+     "a": "300",
+     "b": "310",
+     "c": "320",
+     "d": "330"
+    },
+    "ref": "330.1",
+    "answer": "d"
+   }
+  ]
+ },
+ "B&G_Art_334": {
+  "book": "B&G",
+  "quiz": "Art 334",
+  "page": 286,
+  "unit": "Article 334—Nonmetallic-Sheathed Cable (Type NM)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "In addition to the insulated conductors, Type NM cable shall have a(an) _____ equipment grounding conductor.",
+    "choices": {
+     "a": "insulated",
+     "b": "bare",
+     "c": "covered",
+     "d": "any of these"
+    },
+    "ref": "334.108",
+    "answer": "d"
+   }
+  ]
+ },
+ "B&G_Art_342": {
+  "book": "B&G",
+  "quiz": "Art 342",
+  "page": 286,
+  "unit": "Article 342—Intermediate Metal Conduit (IMC)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the use, installation, and construction specifications for intermediate metal conduit (IMC) and associated fittings.",
+    "choices": {
+     "a": "342",
+     "b": "348",
+     "c": "352",
+     "d": "356"
+    },
+    "ref": "342.1",
+    "answer": "a"
+   }
+  ]
  }
 }
