@@ -12586,5 +12586,297 @@
     "answer": "c"
    }
   ]
+ },
+ "B&G_Art_406": {
+  "book": "B&G",
+  "quiz": "Art 406",
+  "page": 310,
+  "unit": "Article 406—Receptacles, Attachment Plugs, and Flanged Inlets",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the rating, type, and installation of receptacles, cord connectors, and attachment plugs (cord caps).",
+    "choices": {
+     "a": "400",
+     "b": "404",
+     "c": "406",
+     "d": "408"
+    },
+    "ref": "406.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Receptacles incorporating an isolated grounding conductor connection intended for the reduction of electromagnetic interference shall be identified by _____ located on the face of the receptacle.",
+    "choices": {
+     "a": "the letters “IG”",
+     "b": "a green circle",
+     "c": "a green square",
+     "d": "an orange triangle"
+    },
+    "ref": "406.3(E)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "Except as permitted for two-wire replacements as provided in 406.4(D), receptacles installed on _____ branch circuits shall be of the grounding type.",
+    "choices": {
+     "a": "15A and 20A",
+     "b": "up to 30A",
+     "c": "125V",
+     "d": "250V"
+    },
+    "ref": "406.4(A)",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "Receptacles and cord connectors that have equipment grounding conductor contacts shall have those contacts connected to _____.",
+    "choices": {
+     "a": "the enclosure",
+     "b": "a bonding bushing",
+     "c": "an equipment grounding conductor",
+     "d": "any of these"
+    },
+    "ref": "406.4(C)",
+    "answer": "c"
+   },
+   {
+    "n": 5,
+    "q": "Where a grounding means exists in the receptacle enclosure a(an) _____ receptacle shall be used.",
+    "choices": {
+     "a": "isolated ground-type",
+     "b": "grounding-type",
+     "c": "GFCI-type",
+     "d": "dedicated-type"
+    },
+    "ref": "406.4(D)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 6,
+    "q": "When replacing a nongrounding-type receptacle where attachment to an equipment grounding conductor does not exist in the receptacle enclosure, a _____ can be used as the replacement.",
+    "choices": {
+     "a": "nongrounding-type receptacle",
+     "b": "grounding receptacle",
+     "c": "AFCI-type receptacle",
+     "d": "Tamper-resistant receptacle"
+    },
+    "ref": "406.4(D)(2)(a)",
+    "answer": "a"
+   },
+   {
+    "n": 7,
+    "q": "When nongrounding-type receptacles are replaced by GFCI-type receptacles where attachment to an equipment grounding conductor does not exist in the receptacle enclosure, _____ shall be marked “No Equipment Ground.”",
+    "choices": {
+     "a": "the receptacle",
+     "b": "the protective device",
+     "c": "the branch circuit",
+     "d": "these receptacles or their cover plates"
+    },
+    "ref": "406.4(D)(2)(b)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "Where attachment to an equipment grounding conductor does not exist in the receptacle enclosure, a nongrounding-type receptacle(s) shall be permitted to be replaced with a grounding-type receptacle(s) where supplied through a ground-fault circuit interrupter and _____ shall be marked “GFCI Protected” and “No Equipment Ground,” visible after installation.",
+    "choices": {
+     "a": "the receptacle(s)",
+     "b": "their cover plates",
+     "c": "the branch circuit",
+     "d": "the receptacle(s) or their cover plates"
+    },
+    "ref": "406.4(D)(2)(c)",
+    "answer": "d"
+   },
+   {
+    "n": 9,
+    "q": "Where attachment to an equipment grounding conductor does not exist in the receptacle enclosure, a nongrounding-type receptacle shall be permitted to be replaced with a grounding-type receptacle; however, some equipment or appliance manufacturers require that the _____ to the equipment or appliance includes an equipment grounding conductor.",
+    "choices": {
+     "a": "feeder",
+     "b": "branch circuit",
+     "c": "small-appliance circuit",
+     "d": "power cord"
+    },
+    "ref": "406.4(D)(2)(c) Informational Note 1",
+    "answer": "b"
+   }
+  ]
+ },
+ "B&G_Art_408": {
+  "book": "B&G",
+  "quiz": "Art 408",
+  "page": 310,
+  "unit": "Article 408—Switchboards and Panelboards",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 408 covers _____.",
+    "choices": {
+     "a": "switchboards",
+     "b": "switchgear",
+     "c": "panelboards",
+     "d": "all of these"
+    },
+    "ref": "408.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Panelboard cabinets and panelboard frames, if of metal, shall be in physical contact with each other and shall be connected to a(an) _____.",
+    "choices": {
+     "a": "equipment grounding conductor",
+     "b": "grounding electrode conductor",
+     "c": "steel building structure",
+     "d": "separate ground rod"
+    },
+    "ref": "408.40",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "When separate equipment grounding conductors are provided in panelboards, a _____ shall be secured inside the cabinet.",
+    "choices": {
+     "a": "grounded conductor",
+     "b": "terminal lug",
+     "c": "terminal bar",
+     "d": "bonding jumper"
+    },
+    "ref": "408.40",
+    "answer": "c"
+   }
+  ]
+ },
+ "B&G_Art_410": {
+  "book": "B&G",
+  "quiz": "Art 410",
+  "page": 311,
+  "unit": "Article 410—Luminaires",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 410 covers luminaires, portable luminaires, lampholders, pendants, incandescent filament lamps, arc lamps, electric-discharge lamps, and _____, and the wiring and equipment forming part of such products and lighting installations.",
+    "choices": {
+     "a": "decorative lighting products",
+     "b": "lighting accessories for temporary seasonal and holiday use",
+     "c": "portable flexible lighting products",
+     "d": "all of these"
+    },
+    "ref": "410.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "A pole supporting luminaires shall have a handhole not less than _____ with a cover suitable for use in wet locations to provide access to the supply terminations within the pole or pole base.",
+    "choices": {
+     "a": "2 in. × 2 in.",
+     "b": "2 in. × 4 in.",
+     "c": "4 in. × 4 in.",
+     "d": "4 in. × 6 in."
+    },
+    "ref": "410.30(B)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "Metal raceways shall be bonded to the metal pole supporting luminaires with a(an) _____.",
+    "choices": {
+     "a": "grounding electrode",
+     "b": "grounded conductor",
+     "c": "equipment grounding conductor",
+     "d": "any of these"
+    },
+    "ref": "410.30(B)(5)",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "Luminaires and equipment that require connection to an equipment grounding conductor shall be _____ to an equipment grounding conductor.",
+    "choices": {
+     "a": "securely connected",
+     "b": "clamped",
+     "c": "mechanically connected",
+     "d": "joined"
+    },
+    "ref": "410.44",
+    "answer": "c"
+   },
+   {
+    "n": 5,
+    "q": "Replacement luminaires are not required to be connected to an equipment grounding conductor if no equipment grounding conductor exists at the outlet box and the luminaire is _____.",
+    "choices": {
+     "a": "more than 20 years old",
+     "b": "mounted to the box using nonmetallic fittings and screws",
+     "c": "mounted more than 6 ft above the floor",
+     "d": "GFCI protected"
+    },
+    "ref": "410.44 Ex 2",
+    "answer": "d"
+   }
+  ]
+ },
+ "B&G_Art_440": {
+  "book": "B&G",
+  "quiz": "Art 440",
+  "page": 311,
+  "unit": "Article 440—Air-Conditioning Equipment",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ applies to electric motor-driven air-conditioning and refrigerating equipment that has a hermetic refrigerant motor-compressor.",
+    "choices": {
+     "a": "440",
+     "b": "442",
+     "c": "450",
+     "d": "460"
+    },
+    "ref": "440.1",
+    "answer": "a"
+   },
+   {
+    "n": 2,
+    "q": "Where air-conditioning and refrigeration equipment is installed outdoors on a roof, a(an) _____ conductor of the wire type shall be installed in outdoor portions of metallic raceway systems that use compression-type fittings.",
+    "choices": {
+     "a": "equipment grounding",
+     "b": "grounding",
+     "c": "equipment bonding",
+     "d": "bonding"
+    },
+    "ref": "440.9",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_450": {
+  "book": "B&G",
+  "quiz": "Art 450",
+  "page": 311,
+  "unit": "Article 450—Transformers",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 450 covers the installation of all _____.",
+    "choices": {
+     "a": "motors and motor control centers",
+     "b": "refrigeration and air-conditioning equipment",
+     "c": "transformers",
+     "d": "generators"
+    },
+    "ref": "450.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "The equipment grounding conductor terminal bar of a dry-type transformer shall be bonded to the enclosure in accordance with 250.12 and shall not be installed on or over any _____.",
+    "choices": {
+     "a": "ungrounded conductor terminations",
+     "b": "transformer coils or windings",
+     "c": "vented portion of the enclosure",
+     "d": "all of these"
+    },
+    "ref": "450.10(A)",
+    "answer": "c"
+   }
+  ]
  }
 }
