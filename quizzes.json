@@ -5560,5 +5560,2347 @@
     "answer": "a"
    }
   ]
+ },
+ "Calcs_Calcs_Ch_4": {
+  "book": "Calcs",
+  "quiz": "Calcs Ch 4",
+  "page": 164,
+  "unit": "Calcs Ch 4",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The ampacities of individual branch-circuit conductors for appliances shall not be less than the marked rating of the _____.",
+    "choices": {
+     "a": "receptacle outlet",
+     "b": "appliance",
+     "c": "overcurrent protective device",
+     "d": "power cord"
+    },
+    "ref": "422.10(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "If a branch circuit supplies a single nonmotor-operated appliance, the rating of overcurrent protection shall not exceed _____ if the overcurrent protection rating is not marked and the appliance is rated 13.30A or less.",
+    "choices": {
+     "a": "15A",
+     "b": "20A",
+     "c": "25A",
+     "d": "30A"
+    },
+    "ref": "422.11(E)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "If a branch circuit supplies a single nonmotor-operated appliance, the rating of overcurrent protection shall not exceed _____ of the appliance rated current if the overcurrent protection rating is not marked and the appliance is rated over 13.30A.",
+    "choices": {
+     "a": "100 percent",
+     "b": "125 percent",
+     "c": "150 percent",
+     "d": "160 percent"
+    },
+    "ref": "422.11(E)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "Article _____ covers fixed electric equipment used for space heating including heating cables, unit heaters, boilers, central heating systems, or other fixed electric space-heating equipment.",
+    "choices": {
+     "a": "410",
+     "b": "422",
+     "c": "424",
+     "d": "440"
+    },
+    "ref": "424.1",
+    "answer": "c"
+   },
+   {
+    "n": 5,
+    "q": "The branch-circuit conductor(s) ampacity shall not be less than _____ of the load of the fixed electric space-heating equipment and any associated motor(s).",
+    "choices": {
+     "a": "80 percent",
+     "b": "110 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "424.4(B)",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Article _____ covers motors, motor branch-circuit and feeder conductors and their protection, motor overload protection, motor control circuits, motor controllers, and motor control centers.",
+    "choices": {
+     "a": "410",
+     "b": "430",
+     "c": "440",
+     "d": "450"
+    },
+    "ref": "430.1",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "For general motor applications, the NEC table values for full load current values shall be used instead of the actual current rating marked on the motor nameplate when determining overload protection.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "430.6(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "The motor full-load currents listed in Tables 430.247 through 430.250 shall be used to determine the ______.",
+    "choices": {
+     "a": "ampacity of motor circuit conductors",
+     "b": "current ratings of switches",
+     "c": "current rating for short-circuit and ground-fault protective devices",
+     "d": "all of these"
+    },
+    "ref": "430.6(A)(1)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 9,
+    "q": "For general motor applications, separate motor overload protection shall be based on _____.",
+    "choices": {
+     "a": "NEC Tables 430.248 and 430.250",
+     "b": "the manufacturer’s instructions",
+     "c": "the motor disconnect current rating",
+     "d": "the motor nameplate current rating"
+    },
+    "ref": "430.6(A)(2)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "Branch-circuit conductors supplying a single continuous-duty motor shall have an ampacity not less than _____ rating.",
+    "choices": {
+     "a": "125 percent of the motor’s nameplate current",
+     "b": "125 percent of the motor’s full-load current",
+     "c": "125 percent of the motor’s full locked-rotor",
+     "d": "80 percent of the motor’s full-load current"
+    },
+    "ref": "430.22",
+    "answer": "b"
+   },
+   {
+    "n": 11,
+    "q": "Part IV of Article 430 specifies devices intended to protect _____ against overcurrent due to short circuits or ground faults.",
+    "choices": {
+     "a": "motor branch-circuit conductors",
+     "b": "motor control apparatus",
+     "c": "motors",
+     "d": "all of these"
+    },
+    "ref": "430.51",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "Short-circuit and ground-fault protection for a branch-circuit to which a motor or motor-operated appliance is connected shall be capable of carrying the ______ current of the motor.",
+    "choices": {
+     "a": "ampacity",
+     "b": "time delay",
+     "c": "thermal protection",
+     "d": "starting"
+    },
+    "ref": "430.52(B)",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "Where the motor short-circuit and ground-fault protection devices determined by Table 430.52(C)(1) do not correspond to the standard sizes or ratings, a _____ rating that does not exceed the next _____ standard ampere rating is permitted.",
+    "choices": {
+     "a": "higher",
+     "b": "lower",
+     "c": "smaller",
+     "d": "larger"
+    },
+    "ref": "430.52(C)(1)(a)",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "The maximum dual-element time-delay fuse branch-circuit protection for a single-phase motor is _____ of the appropriate full-load current rating found in Table 430.248.",
+    "choices": {
+     "a": "100 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "175 percent"
+    },
+    "ref": "430.52(C)(1) and Table 430.52(C)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 15,
+    "q": "The maximum rating or setting of an inverse time breaker used as the motor branch-circuit short-circuit and ground-fault protective device for a single-phase motor is _____ of the full-load current given in Table 430.248.",
+    "choices": {
+     "a": "100 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "250 percent"
+    },
+    "ref": "430.52(C)(1) and Table 430.52(C)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 16,
+    "q": "The full-load current of a 115V, 1 hp single-phase ac motor is _____.",
+    "choices": {
+     "a": "12A",
+     "b": "14A",
+     "c": "16A",
+     "d": "20A"
+    },
+    "ref": "430.248 Table",
+    "answer": "c"
+   },
+   {
+    "n": 17,
+    "q": "The full-load current of a 230V, 1.50 hp single-phase ac motor is _____.",
+    "choices": {
+     "a": "10A",
+     "b": "12A",
+     "c": "14A",
+     "d": "16A"
+    },
+    "ref": "430.248 Table",
+    "answer": "a"
+   },
+   {
+    "n": 18,
+    "q": "The full-load current of a three-phase 208V, 2 hp motor is _____.",
+    "choices": {
+     "a": "7.50A",
+     "b": "12A",
+     "c": "14A",
+     "d": "16A"
+    },
+    "ref": "430.250 Table",
+    "answer": "a"
+   },
+   {
+    "n": 19,
+    "q": "The full-load current of a three-phase 208V, 7.50 hp motor is _____.",
+    "choices": {
+     "a": "19A",
+     "b": "22A",
+     "c": "24.20A",
+     "d": "38A"
+    },
+    "ref": "430.250 Table",
+    "answer": "c"
+   },
+   {
+    "n": 20,
+    "q": "The full-load current of a three-phase 230V, 10 hp motor is _____.",
+    "choices": {
+     "a": "19A",
+     "b": "22A",
+     "c": "28A",
+     "d": "38A"
+    },
+    "ref": "430.250 Table",
+    "answer": "c"
+   },
+   {
+    "n": 21,
+    "q": "The full-load current of a three-phase 460V, 15 hp motor is _____.",
+    "choices": {
+     "a": "19A",
+     "b": "21A",
+     "c": "29A",
+     "d": "42A"
+    },
+    "ref": "430.250 Table",
+    "answer": "b"
+   },
+   {
+    "n": 22,
+    "q": "Article _____ applies to electric motor-driven air-conditioning and refrigerating equipment that has a hermetic refrigerant motor-compressor.",
+    "choices": {
+     "a": "440",
+     "b": "442",
+     "c": "450",
+     "d": "460"
+    },
+    "ref": "440.1",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "An air-conditioning multi-motor equipment has a nameplate that indicates a minimum circuit ampacity of 30A and a maximum overcurrent protective device of 60A. The smallest THWN-2 conductors permitted are _____.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "440.4(B) and 310.16 Table",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "An air-conditioning multi-motor equipment nameplate shows that the minimum supply circuit ampacity as 24A and the maximum circuit breaker size as 40A. The smallest conductor contained in Type NM cable permitted for this circuit is _____.",
+    "choices": {
+     "a": "10 AWG Type NM cable",
+     "b": "12 AWG Type NM cable",
+     "c": "14 AWG Type NM cable",
+     "d": "8 AWG Type NM cable"
+    },
+    "ref": "440.4(B) and 334.80",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "Article _____ contains installation and other requirements for generators.",
+    "choices": {
+     "a": "430",
+     "b": "445",
+     "c": "450",
+     "d": "455"
+    },
+    "ref": "445.1",
+    "answer": "b"
+   },
+   {
+    "n": 26,
+    "q": "The ampacity of the conductors from the generator output terminals to the overcurrent protection shall not be less than _____ of the nameplate current rating of the generator.",
+    "choices": {
+     "a": "75 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "140 percent"
+    },
+    "ref": "445.13(A)",
+    "answer": "b"
+   },
+   {
+    "n": 27,
+    "q": "Article 450 covers the installation of all _____.",
+    "choices": {
+     "a": "motors and motor control centers",
+     "b": "refrigeration and air-conditioning equipment",
+     "c": "transformers",
+     "d": "generators"
+    },
+    "ref": "450.1",
+    "answer": "c"
+   }
+  ]
+ },
+ "Calcs_Calcs_Ch_6": {
+  "book": "Calcs",
+  "quiz": "Calcs Ch 6",
+  "page": 173,
+  "unit": "Calcs Ch 6",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 625 covers the electrical conductors and equipment connecting an electric vehicle to premises wiring for the purposes of ____.",
+    "choices": {
+     "a": "charging",
+     "b": "power export",
+     "c": "bidirectional current flow",
+     "d": "any of these"
+    },
+    "ref": "625.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Each outlet installed for the purpose of supplying EVSE (electric vehicle supply equipment) greater than _____ or 120V charging electric vehicles shall be supplied by an individual branch circuit.",
+    "choices": {
+     "a": "12A",
+     "b": "16A",
+     "c": "18A",
+     "d": "20A"
+    },
+    "ref": "625.40",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "Electric vehicle branch circuits shall be permitted to feed _____ EVSE(s) as permitted by 625.42(A) or (B).",
+    "choices": {
+     "a": "only one",
+     "b": "no more than two",
+     "c": "no more than three",
+     "d": "multiple"
+    },
+    "ref": "625.40 Ex",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "Overcurrent protection for circuits supplying electric vehicle supply (EVSE) and wireless power transfer (WPTE) equipment shall have a current rating of not less than _____ of the maximum load of the electric vehicle supply equipment.",
+    "choices": {
+     "a": "100 percent",
+     "b": "110 percent",
+     "c": "125 percent",
+     "d": "150 percent"
+    },
+    "ref": "625.41",
+    "answer": "c"
+   },
+   {
+    "n": 5,
+    "q": "Electric vehicle charging loads shall be considered to be a(an) _____ load.",
+    "choices": {
+     "a": "noncontinuous",
+     "b": "hard",
+     "c": "extended",
+     "d": "continuous"
+    },
+    "ref": "625.42",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "Services and feeders for EVSE shall be sized in accordance with the product ratings unless the overall rating of the installation can be limited through _____.",
+    "choices": {
+     "a": "an energy management system (EMS) that provides load management of the EVSE",
+     "b": "EVSE that has an ampere adjustment means with restricted access",
+     "c": "ampere adjustments that are in accordance with the manufacturer’s instructions",
+     "d": "all of these"
+    },
+    "ref": "625.42(A) and (B)",
+    "answer": "d"
+   }
+  ]
+ },
+ "Exam_Prep_Unit_1": {
+  "book": "Exam Prep",
+  "quiz": "Unit 1",
+  "page": 279,
+  "unit": "Unit 1",
+  "questions": [
+   {
+    "n": 1,
+    "q": "What is the cross-sectional area in square inches for 14 RHW (without an outer cover)?",
+    "choices": {
+     "a": "0.0172 sq in.",
+     "b": "0.0209 sq in.",
+     "c": "0.0252 sq in.",
+     "d": "0.0278 sq in."
+    },
+    "ref": "Chapter 9, Table 5, see the asterisk (*) Table Note",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "What is the cross-sectional area in square inches for 12 RHH (with an outer cover)?",
+    "choices": {
+     "a": "0.0117 sq in.",
+     "b": "0.0252 sq in.",
+     "c": "0.0327 sq in.",
+     "d": "0.0353 sq in."
+    },
+    "ref": "Chapter 9, Table 5, see the asterisk (*) Table Note",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "What is the cross-sectional area in square inches for 12 THHN?",
+    "choices": {
+     "a": "0.0133 sq in.",
+     "b": "0.0147 sq in.",
+     "c": "0.0233 sq in.",
+     "d": "0.0321 sq in."
+    },
+    "ref": "Chapter 9, Table 5",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "What is the cross-sectional area in square inches for 10 THW?",
+    "choices": {
+     "a": "0.0172 sq in.",
+     "b": "0.0243 sq in.",
+     "c": "0.0252 sq in.",
+     "d": "0.0278 sq in."
+    },
+    "ref": "Chapter 9, Table 5",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "What is the cross-sectional area in square inches for 10 THHN conductor?",
+    "choices": {
+     "a": "0.0117 sq in.",
+     "b": "0.0172 sq in.",
+     "c": "0.0211 sq in.",
+     "d": "0.0252 sq in."
+    },
+    "ref": "Chapter 9, Table 5",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "What is the cross-sectional area in square inches for a 8 RHH compact conductor without an outer cover?",
+    "choices": {
+     "a": "0.0531 sq in.",
+     "b": "0.0683 sq in.",
+     "c": "0.0881 sq in.",
+     "d": "0.1194 sq in."
+    },
+    "ref": "Chapter 9, Table 5A, see the asterisk (*) Table Note",
+    "answer": "a"
+   },
+   {
+    "n": 7,
+    "q": "What is the cross-sectional area in square inches for a 6 RHH compact conductor without an outer cover?",
+    "choices": {
+     "a": "0.0531 sq in.",
+     "b": "0.0683 sq in.",
+     "c": "0.0881 sq in.",
+     "d": "0.1194 sq in."
+    },
+    "ref": "Chapter 9, Table 5A, see the asterisk (*) Table Note",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "What is the cross-sectional area in square inches for a 1 THHW aluminum compact conductor?",
+    "choices": {
+     "a": "0.1698 sq in.",
+     "b": "0.1963 sq in.",
+     "c": "0.2332 sq in.",
+     "d": "0.2733 sq in."
+    },
+    "ref": "Chapter 9, Table 5A",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "What is the cross-sectional area in square inches for a 1/0 THHN aluminum compact conductor?",
+    "choices": {
+     "a": "0.1352 sq in.",
+     "b": "0.1590 sq in.",
+     "c": "0.1924 sq in.",
+     "d": "0.2290 sq in."
+    },
+    "ref": "Chapter 9, Table 5A",
+    "answer": "b"
+   },
+   {
+    "n": 10,
+    "q": "What is the cross-sectional area in square inches for a 2/0 XHHW aluminum compact conductor?",
+    "choices": {
+     "a": "0.1352 sq in.",
+     "b": "0.1590 sq in.",
+     "c": "0.1885 sq in.",
+     "d": "0.2290 sq in."
+    },
+    "ref": "Chapter 9, Table 5A",
+    "answer": "c"
+   },
+   {
+    "n": 11,
+    "q": "What is the cross-sectional area in square inches for a 10 AWG stranded?",
+    "choices": {
+     "a": "0.007 sq in.",
+     "b": "0.011 sq in.",
+     "c": "0.012 sq in.",
+     "d": "0.106 sq in."
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 12,
+    "q": "What is the cross-sectional area in square inches for a 10 AWG having a single strand?",
+    "choices": {
+     "a": "0.008 sq in.",
+     "b": "0.012 sq in.",
+     "c": "0.101 sq in.",
+     "d": "0.106 sq in."
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "a"
+   },
+   {
+    "n": 13,
+    "q": "What is the cross-sectional area in square inches for a 8 AWG solid conductor?",
+    "choices": {
+     "a": "0.013 sq in.",
+     "b": "0.027 sq in.",
+     "c": "0.038 sq in.",
+     "d": "0.045 sq in."
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "What is the cross-sectional area in square inches for a 1/0 AWG aluminum?",
+    "choices": {
+     "a": "0.087 sq in.",
+     "b": "0.109 sq in.",
+     "c": "0.137 sq in.",
+     "d": "0.173 sq in."
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 15,
+    "q": "What is the cross-sectional area in square inches for a 4/0 AWG aluminum?",
+    "choices": {
+     "a": "0.187 sq in.",
+     "b": "0.219 sq in.",
+     "c": "0.337 sq in.",
+     "d": "0.473 sq in."
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 16,
+    "q": "The permitted raceway fill for two conductors is ___.",
+    "choices": {
+     "a": "30 percent",
+     "b": "31 percent",
+     "c": "40 percent",
+     "d": "53 percent"
+    },
+    "ref": "Chapter 9, Table 1",
+    "answer": "b"
+   },
+   {
+    "n": 17,
+    "q": "The permitted raceway fill for five conductors is ___.",
+    "choices": {
+     "a": "35 percent",
+     "b": "40 percent",
+     "c": "55 percent",
+     "d": "60 percent"
+    },
+    "ref": "Chapter 9, Table 1",
+    "answer": "b"
+   },
+   {
+    "n": 18,
+    "q": "When calculating raceway conductor fill, equipment grounding conductors shall ___.",
+    "choices": {
+     "a": "not be required to be counted",
+     "b": "have the actual dimensions used",
+     "c": "not be counted if in a nipple",
+     "d": "not be counted if for a wye three-phase balanced load"
+    },
+    "ref": "Chapter 9, Notes to Tables, Note 3",
+    "answer": "b"
+   },
+   {
+    "n": 19,
+    "q": "What is the maximum length of a raceway nipple?",
+    "choices": {
+     "a": "1 ft",
+     "b": "2 ft",
+     "c": "3 ft",
+     "d": "4 ft"
+    },
+    "ref": "Chapter 9, Notes to Tables, Note 4.",
+    "answer": "b"
+   },
+   {
+    "n": 20,
+    "q": "Where raceway nipples having a maximum length not to exceed 24 in. are installed between boxes, cabinets, and similar enclosures, the nipples is permitted to be filled to _____ of their total cross-sectional area.",
+    "choices": {
+     "a": "30 percent",
+     "b": "40 percent",
+     "c": "60 percent",
+     "d": "70 percent"
+    },
+    "ref": "Chapter 9, Notes to Tables, Note 4.",
+    "answer": "c"
+   },
+   {
+    "n": 21,
+    "q": "When the calculated number of conductors or cables, all the same size, installed in a conduit or in tubing includes a decimal, the next higher whole number shall be used when this decimal is _____ or larger.",
+    "choices": {
+     "a": "0.40",
+     "b": "0.60",
+     "c": "0.70",
+     "d": "0.80"
+    },
+    "ref": "Chapter 9, Notes to Tables, Note 7.",
+    "answer": "d"
+   },
+   {
+    "n": 22,
+    "q": "For the purposes of conduit fill, a multiconductor cable is considered _____ conductor(s) for calculating percentage conduit or tubing fill area.",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "Chapter 9, Notes to Tables, Note 9.",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "The cross-sectional area of trade size 1 IMC is approximately ___.",
+    "choices": {
+     "a": "0.62 sq in.",
+     "b": "0.96 sq in.",
+     "c": "1.22 sq in.",
+     "d": "2.13 sq in."
+    },
+    "ref": "Chapter 9, Table 4, Total Area 100% column",
+    "answer": "b"
+   },
+   {
+    "n": 24,
+    "q": "What is the cross-sectional area of permitted conductor fill for trade size 1 EMT containing four conductors?",
+    "choices": {
+     "a": "0.346 sq in.",
+     "b": "1.013 sq in.",
+     "c": "2.067 sq in.",
+     "d": "3.356 sq in."
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 40% column",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "What is the cross-sectional area of permitted conductor fill for trade size 2 EMT containing four conductors?",
+    "choices": {
+     "a": "1.342 sq in.",
+     "b": "2.013 sq in.",
+     "c": "2.067 sq in.",
+     "d": "3.356 sq in."
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 40% column",
+    "answer": "a"
+   },
+   {
+    "n": 26,
+    "q": "What is the cross-sectional area of permitted conductor fill for a 2 in. EMT nipple?",
+    "choices": {
+     "a": "1.342 sq in.",
+     "b": "2.013 sq in.",
+     "c": "2.067 sq in.",
+     "d": "3.356 sq in."
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 60% column",
+    "answer": "b"
+   },
+   {
+    "n": 27,
+    "q": "What is the cross-sectional area of permitted conductor fill for a 1½ RMC nipple?",
+    "choices": {
+     "a": "0.882 sq in.",
+     "b": "1.072 sq in.",
+     "c": "1.243 sq in.",
+     "d": "1.343 sq in."
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 60% column",
+    "answer": "c"
+   },
+   {
+    "n": 28,
+    "q": "What is the minimum size EMT required for three conductors having a total area of 1.25 sq in.?",
+    "choices": {
+     "a": "Trade size ½",
+     "b": "Trade size 1½",
+     "c": "Trade size 1¼",
+     "d": "Trade size 2"
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 40% column",
+    "answer": "d"
+   },
+   {
+    "n": 29,
+    "q": "What is the minimum size for PVC Schedule 80 for three conductors having a total area of 0.35 sq in.?",
+    "choices": {
+     "a": "Trade size ½",
+     "b": "Trade size 1",
+     "c": "Trade size 1¼",
+     "d": "Trade size 1½"
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 40% column",
+    "answer": "c"
+   },
+   {
+    "n": 30,
+    "q": "What is the minimum size for PVC Schedule 80 nipple for a conductor area of.836 sq in.?",
+    "choices": {
+     "a": "Trade size 1",
+     "b": "Trade size 1¼",
+     "c": "Trade size 1½",
+     "d": "Trade size 1¾"
+    },
+    "ref": "Chapter 9, Table 1, and Table 4, 60% column",
+    "answer": "c"
+   },
+   {
+    "n": 31,
+    "q": "How many 18 TFFN conductors can be installed in trade size ¾ EMT?",
+    "choices": {
+     "a": "24 conductors",
+     "b": "29 conductors",
+     "c": "30 conductors",
+     "d": "38 conductors"
+    },
+    "ref": "Annex C, Table C.1",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "How many 16 TFFN conductors can be installed in trade size ¾ EMT?",
+    "choices": {
+     "a": "26 conductors",
+     "b": "29 conductors",
+     "c": "30 conductors",
+     "d": "40 conductors"
+    },
+    "ref": "Annex C, Table C.1",
+    "answer": "b"
+   },
+   {
+    "n": 33,
+    "q": "How many 12 THWN-2 conductors can be installed in trade size 1 EMT?",
+    "choices": {
+     "a": "13 conductors",
+     "b": "16 conductors",
+     "c": "26 conductors",
+     "d": "35 conductors"
+    },
+    "ref": "Annex C, Table C.1",
+    "answer": "c"
+   },
+   {
+    "n": 34,
+    "q": "How many 10 THWN-2 conductors can be installed in trade size ¾ EMT?",
+    "choices": {
+     "a": "10 conductors",
+     "b": "11 conductors",
+     "c": "15 conductors",
+     "d": "16 conductors"
+    },
+    "ref": "Annex C, Table C.1",
+    "answer": "a"
+   },
+   {
+    "n": 35,
+    "q": "How many 6 RHH conductors (without outer cover) are permitted in trade size 1¼ ENT?",
+    "choices": {
+     "a": "7 conductors",
+     "b": "8 conductors",
+     "c": "9 conductors",
+     "d": "10 conductors"
+    },
+    "ref": "Annex C, Table C.2, see the asterisk (*) Table Note",
+    "answer": "b"
+   },
+   {
+    "n": 36,
+    "q": "How many 8 THW conductors are permitted in trade size ¾ FMC?",
+    "choices": {
+     "a": "4 conductors",
+     "b": "5 conductors",
+     "c": "6 conductors",
+     "d": "7 conductors"
+    },
+    "ref": "Annex C, Table C.3",
+    "answer": "b"
+   },
+   {
+    "n": 37,
+    "q": "How many 1/0 XHHW conductors are permitted in trade size 2 FMC?",
+    "choices": {
+     "a": "6 conductors",
+     "b": "7 conductors",
+     "c": "13 conductors",
+     "d": "16 conductors"
+    },
+    "ref": "Annex C, Table C.3",
+    "answer": "b"
+   },
+   {
+    "n": 38,
+    "q": "How many 8 AWG THW compact conductors are permitted in trade size ¾ FMC?",
+    "choices": {
+     "a": "4 conductors",
+     "b": "5 conductors",
+     "c": "7 conductors",
+     "d": "11 conductors"
+    },
+    "ref": "Annex C, Table C.3A",
+    "answer": "a"
+   },
+   {
+    "n": 39,
+    "q": "How many 12 RHH conductors (with outer cover) can be installed in a trade size 1 IMC?",
+    "choices": {
+     "a": "5 conductors",
+     "b": "7 conductors",
+     "c": "9 conductors",
+     "d": "11 conductors"
+    },
+    "ref": "Annex C, Table C.4",
+    "answer": "d"
+   },
+   {
+    "n": 40,
+    "q": "How many 8 RHH with outer cover conductors are permitted in trade size 1½ RMC?",
+    "choices": {
+     "a": "10 conductors",
+     "b": "14 conductors",
+     "c": "16 conductors",
+     "d": "20 conductors"
+    },
+    "ref": "Annex C, Table C.9",
+    "answer": "a"
+   },
+   {
+    "n": 41,
+    "q": "How many 8 RHH without outer cover conductors are permitted in trade size 1½ RMC?",
+    "choices": {
+     "a": "10 conductors",
+     "b": "14 conductors",
+     "c": "15 conductors",
+     "d": "20 conductors"
+    },
+    "ref": "Annex C, Table C.9, see the asterisk (*) Table Note",
+    "answer": "c"
+   },
+   {
+    "n": 42,
+    "q": "How many 6 THW-2 compact conductors can be installed in trade size 1 EMT?",
+    "choices": {
+     "a": "3 conductors",
+     "b": "5 conductors",
+     "c": "6 conductors",
+     "d": "9 conductors"
+    },
+    "ref": "Annex C, Table C.1(A)",
+    "answer": "b"
+   },
+   {
+    "n": 43,
+    "q": "How many 8 THW compact conductors are permitted in trade size 1½ RMC?",
+    "choices": {
+     "a": "12 conductors",
+     "b": "14 conductors",
+     "c": "16 conductors",
+     "d": "20 conductors"
+    },
+    "ref": "Annex C, Table C.9(A)",
+    "answer": "c"
+   },
+   {
+    "n": 44,
+    "q": "How many 1/0 THW-2 compact conductors can be installed in trade size 2 RMC?",
+    "choices": {
+     "a": "6 conductors",
+     "b": "7 conductors",
+     "c": "8 conductors",
+     "d": "9 conductors"
+    },
+    "ref": "Annex C, Table C.9(A)",
+    "answer": "b"
+   },
+   {
+    "n": 45,
+    "q": "How many 4/0 THW-2 compact conductors can be installed in trade size 3 PVC?",
+    "choices": {
+     "a": "6 conductors",
+     "b": "7 conductors",
+     "c": "8 conductors",
+     "d": "9 conductors"
+    },
+    "ref": "Annex C, Table C.11(A)",
+    "answer": "d"
+   },
+   {
+    "n": 46,
+    "q": "What’s the minimum size PVC required for three 500 kcmil THWN-2 conductors, one 250 kcmil THWN-2 conductor, and one 3 AWG THWN-2 conductor?",
+    "choices": {
+     "a": "Trade size 2",
+     "b": "Trade size 2½",
+     "c": "Trade size 3",
+     "d": "Trade size 3½"
+    },
+    "ref": "2.1219 sq in.",
+    "answer": "c"
+   },
+   {
+    "n": 47,
+    "q": "What’s the minimum size EMT required for three 3/0 AWG THWN-2 conductors, one 1 AWG THWN-2 conductor, and one 6 AWG THWN-2 conductor?",
+    "choices": {
+     "a": "Trade size 2",
+     "b": "Trade size 2½",
+     "c": "Trade size 3",
+     "d": "Trade size 3½"
+    },
+    "ref": "1.4 Raceways Sizing with Different Size Conductors",
+    "answer": "a"
+   },
+   {
+    "n": 48,
+    "q": "What’s the minimum size PVC nipple required for three 500 kcmil THWN-2 conductors, one 250 kcmil THWN-2 conductor, and one 3 AWG THWN-2 conductor?",
+    "choices": {
+     "a": "Trade size 2",
+     "b": "Trade size 2½",
+     "c": "Trade size 3",
+     "d": "Trade size 3½"
+    },
+    "ref": "1.4 Raceways Sizing with Different Size Conductors",
+    "answer": "b"
+   },
+   {
+    "n": 49,
+    "q": "What’s the minimum RMC nipple required for three 3/0 AWG THWN-2 conductors, one 1 AWG THWN-2 conductor, and one 6 AWG THWN-2 conductor?",
+    "choices": {
+     "a": "Trade size 1½",
+     "b": "Trade size 3½",
+     "c": "Trade size 2½",
+     "d": "Trade size 4½"
+    },
+    "ref": "1.4 Raceways Sizing with Different Size Conductors",
+    "answer": "a"
+   },
+   {
+    "n": 50,
+    "q": "What trade size ENT raceway is required for four Cat 6 cables, where each cable has a diameter of 0.22 inches?",
+    "choices": {
+     "a": "Trade size ½",
+     "b": "Trade size ¾",
+     "c": "Trade size 1",
+     "d": "Trade size 11/4"
+    },
+    "ref": "2.1219 sq in.",
+    "answer": "b"
+   },
+   {
+    "n": 51,
+    "q": "What trade size ENT is required for three fiber optic cables, where each cable has a diameter of 0.20 inches?",
+    "choices": {
+     "a": "Trade size ½",
+     "b": "Trade size ¾",
+     "c": "Trade size 1",
+     "d": "Trade size 11/4"
+    },
+    "ref": "1.5 Multiconductor and Optical Fiber Cables—Chapter 9, Note (5) and Note (9)",
+    "answer": "a"
+   },
+   {
+    "n": 52,
+    "q": "What trade size ENT is required for four fiber optic cables, where each cable has a diameter of 0.30 inches?",
+    "choices": {
+     "a": "Trade size ½",
+     "b": "Trade size ¾",
+     "c": "Trade size 1",
+     "d": "Trade size 11/4"
+    },
+    "ref": "1.5 Multiconductor and Optical Fiber Cables—Chapter 9, Note (5) and Note (9)",
+    "answer": "c"
+   },
+   {
+    "n": 53,
+    "q": "What is the cross-sectional area of a 4 in. × 4 in. wireway?",
+    "choices": {
+     "a": "10 sq in.",
+     "b": "16 sq in.",
+     "c": "36 sq in.",
+     "d": "66 sq in."
+    },
+    "ref": "Wireway Sizing",
+    "answer": "b"
+   },
+   {
+    "n": 54,
+    "q": "What is the maximum allowable sq in. of conductor fill for a 4 in. × 4 in. wireway?",
+    "choices": {
+     "a": "2.4 sq in.",
+     "b": "3.2 sq in.",
+     "c": "5.3 sq in.",
+     "d": "12.4 sq in."
+    },
+    "ref": "376.22(A)",
+    "answer": "b"
+   },
+   {
+    "n": 55,
+    "q": "What is the maximum number of 400 kcmil THHN conductors that can be installed in a 4 in. × 4 in. wireway?",
+    "choices": {
+     "a": "4 conductors",
+     "b": "5 conductors",
+     "c": "6 conductors",
+     "d": "7 conductors"
+    },
+    "ref": "Wireway Sizing",
+    "answer": "b"
+   },
+   {
+    "n": 56,
+    "q": "What is the minimum width cable tray size needed to accommodate fifteen 1/0 THHN conductors?",
+    "choices": {
+     "a": "2 in.",
+     "b": "4 in.",
+     "c": "6 in.",
+     "d": "8 in."
+    },
+    "ref": "392.22(B)(1)(d)",
+    "answer": "d"
+   },
+   {
+    "n": 57,
+    "q": "What is the minimum width cable tray size needed to accommodate twenty 2/0 THHN conductors?",
+    "choices": {
+     "a": "10 in.",
+     "b": "12 in.",
+     "c": "14 in.",
+     "d": "16 in."
+    },
+    "ref": "392.22(B)(1)(d)",
+    "answer": "b"
+   },
+   {
+    "n": 58,
+    "q": "What is the maximum number of 1/0 XHHW conductors permitted in a 16 in. wide cable tray?",
+    "choices": {
+     "a": "22 conductors",
+     "b": "24 conductors",
+     "c": "26 conductors",
+     "d": "32 conductors"
+    },
+    "ref": "Annex C: Table C.19",
+    "answer": "d"
+   },
+   {
+    "n": 59,
+    "q": "What is the maximum number of 2/0 XHHW conductors permitted in an 18 in. wide cable tray?",
+    "choices": {
+     "a": "22 conductors",
+     "b": "24 conductors",
+     "c": "26 conductors",
+     "d": "33 conductors"
+    },
+    "ref": "Annex C: Table C.19",
+    "answer": "d"
+   }
+  ]
+ },
+ "Exam_Prep_Unit_2": {
+  "book": "Exam Prep",
+  "quiz": "Unit 2",
+  "page": 299,
+  "unit": "Unit 2",
+  "questions": [
+   {
+    "n": 1,
+    "q": "What size outlet box is the minimum required for six 14 TW conductors and three 14 THW conductors?",
+    "choices": {
+     "a": "4 in. × 1¼ in. square box",
+     "b": "4 in. × 1½ in. round box",
+     "c": "4 in. × 1¼ in. round box",
+     "d": "4 in. × 2⅛ in. square box"
+    },
+    "ref": "Table 314.16(A) permits nine 14 AWG conductors; the insulation type isn’t a factor when calculating box fill.",
+    "answer": "a"
+   },
+   {
+    "n": 2,
+    "q": "How many 10 TW conductors are permitted in a 4 in. × 1½ in. square deep box?",
+    "choices": {
+     "a": "8 conductors",
+     "b": "9 conductors",
+     "c": "10 conductors",
+     "d": "11 conductors"
+    },
+    "ref": "Table 314.16(A) permits eight 10 AWG conductors; the insulation type isn’t a factor when calculating box fill.",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "How many 14 AWG conductors are permitted to be installed in a 4 in. × 1½ in. round box?",
+    "choices": {
+     "a": "7 conductors",
+     "b": "9 conductors",
+     "c": "10 conductors",
+     "d": "11 conductors"
+    },
+    "ref": "Table 314.16(A) permits seven 14 AWG conductors; the insulation type isn’t a factor when calculating box fill.",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "What size outlet box is the minimum required for three 12 AWG and six 12 AWG conductors?",
+    "choices": {
+     "a": "4 × 1¼ in. square",
+     "b": "4 × 1½ in. square",
+     "c": "4 × 21⁄8 in. square",
+     "d": "any of these"
+    },
+    "ref": "Table 314.16(A) permits nine 12 AWG conductors; the insulation type isn’t a factor when calculating box fill.",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "Each luminaire stud or luminaire hickey counts as a _____ volume in accordance with Table 314.16(B), based on the largest conductor that enters the box.",
+    "choices": {
+     "a": "zero conductor",
+     "b": "single conductor",
+     "c": "double conductor",
+     "d": "triple conductor"
+    },
+    "ref": "314.16(B)(3)",
+    "answer": "b"
+   },
+   {
+    "n": 6,
+    "q": "What is the 14 AWG conductor count for outlet box sizing containing three current carrying conductors, three grounded conductors, and three equipment grounding conductors?",
+    "choices": {
+     "a": "7 conductors",
+     "b": "8 conductors",
+     "c": "9 conductors",
+     "d": "10 conductors"
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "a"
+   },
+   {
+    "n": 7,
+    "q": "What is the cubic inch volume required for four 14/2 NM cables entering an outlet box?",
+    "choices": {
+     "a": "12 cu. in.",
+     "b": "14 cu. in.",
+     "c": "16 cu. in.",
+     "d": "18 cu. in."
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "What is the cubic inch volume required for six 14 AWG conductors and a single-pole switch at an outlet box?",
+    "choices": {
+     "a": "10 cu. in.",
+     "b": "12 cu. in.",
+     "c": "14 cu. in.",
+     "d": "16 cu. in."
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "d"
+   },
+   {
+    "n": 9,
+    "q": "What size outlet box is required for eight 12 AWG conductors terminating to one switch and one receptacle?",
+    "choices": {
+     "a": "4 in. × 1¼ in. square box",
+     "b": "4 in. × 1½ in. square box",
+     "c": "4 in. × 2⅛ in. square box",
+     "d": "3 in. × 2 in. × 3½ in. device box"
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "c"
+   },
+   {
+    "n": 10,
+    "q": "What size outlet box is required for two 12 AWG conductors terminated to a dimmer and two 12 AWG conductors terminated to a receptacle?",
+    "choices": {
+     "a": "4 in. × 1¼ in. square",
+     "b": "4 in. × 1½ in. square",
+     "c": "4 in. × 2⅛ in. square",
+     "d": "3 in. × 2 in. × 3½ in. device"
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "a"
+   },
+   {
+    "n": 11,
+    "q": "What size outlet box is required for two 14/2 NM Cables terminating to one switch? The box has two internal cable clamps.",
+    "choices": {
+     "a": "4 in. × 1¼ in. square box",
+     "b": "4 in. × 1½ in. square box",
+     "c": "4 in. × 2⅛ in. square box",
+     "d": "3 in. × 2 in. × 2½ in. device box"
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "a"
+   },
+   {
+    "n": 12,
+    "q": "What size outlet box is required for one 12/2 NM cable that terminates on a switch and one 12/3 NM cable that terminates on a receptacle? The box has two internal cable clamps.",
+    "choices": {
+     "a": "4 in. × 1¼ in. square box",
+     "b": "4 in. × 1½ in. square box",
+     "c": "4 in. × 2⅛ in. square box",
+     "d": "3 in. × 2 in. × 2½ in. device box"
+    },
+    "ref": "2.3 Outlet Box Sizing Examples [314.16(B)]",
+    "answer": "c"
+   },
+   {
+    "n": 13,
+    "q": "The following information applies to the next three questions. A junction box contains two trade size 2½ raceways on the left side and one trade size 2½ raceway on the right side. The conductors from one trade size 2½ raceway (on the left wall) are pulled through the raceway on the right wall. The other trade size 2½ raceway conductors (on the left wall) are pulled through a trade size 2½ raceway at the bottom of the pull box. What is the minimum distance from the left wall to the right wall (the A measurement)?",
+    "choices": {
+     "a": "18 in.",
+     "b": "20 in.",
+     "c": "21 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 14,
+    "q": "The following information applies to the next three questions. A junction box contains two trade size 2½ raceways on the left side and one trade size 2½ raceway on the right side. The conductors from one trade size 2½ raceway (on the left wall) are pulled through the raceway on the right wall. The other trade size 2½ raceway conductors (on the left wall) are pulled through a trade size 2½ raceway at the bottom of the pull box. What is the minimum distance from the bottom wall to the top wall (the B measurement)?",
+    "choices": {
+     "a": "15 in.",
+     "b": "18 in.",
+     "c": "21 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 15,
+    "q": "The following information applies to the next three questions. A junction box contains two trade size 2½ raceways on the left side and one trade size 2½ raceway on the right side. The conductors from one trade size 2½ raceway (on the left wall) are pulled through the raceway on the right wall. The other trade size 2½ raceway conductors (on the left wall) are pulled through a trade size 2½ raceway at the bottom of the pull box. What is the minimum distance between the raceways of the angle pull?",
+    "choices": {
+     "a": "15 in.",
+     "b": "18 in.",
+     "c": "21 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 16,
+    "q": "The following information applies to the next three questions. A junction box contains two trade size 2 raceways on the left side, and two trade size 2 raceways on the top. What is the minimum distance from the left wall to the right wall?",
+    "choices": {
+     "a": "14 in.",
+     "b": "21 in.",
+     "c": "24 in.",
+     "d": "28 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "The following information applies to the next three questions. A junction box contains two trade size 2 raceways on the left side, and two trade size 2 raceways on the top. What is the minimum distance from the bottom wall to the top wall?",
+    "choices": {
+     "a": "14 in.",
+     "b": "18 in.",
+     "c": "21 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 18,
+    "q": "The following information applies to the next three questions. A junction box contains two trade size 2 raceways on the left side, and two trade size 2 raceways on the top. What is the minimum distance between the trade size 2 raceways that contain the same conductors?",
+    "choices": {
+     "a": "12 in.",
+     "b": "18 in.",
+     "c": "21 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 19,
+    "q": "The minimum horizontal dimension for the junction box shown in the diagram in }Figure 2–37 is ___.",
+    "choices": {
+     "a": "18 in.",
+     "b": "20 in.",
+     "c": "21 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 20,
+    "q": "The minimum vertical dimension for the junction box shown in }Figure 2–37 is ___.",
+    "choices": {
+     "a": "16 in.",
+     "b": "18 in.",
+     "c": "20 in.",
+     "d": "24 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 21,
+    "q": "The minimum distance between the two trade size 2 raceways that contain the same Conductor C as illustrated in }Figure 2–37 is ___.",
+    "choices": {
+     "a": "12 in.",
+     "b": "18 in.",
+     "c": "24 in.",
+     "d": "30 in."
+    },
+    "ref": "314.28(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 22,
+    "q": "If a trade size 3 raceway entry (250 kcmil) is in the wall opposite a removable cover, the distance from that wall to the cover must not be less than ___.",
+    "choices": {
+     "a": "4 in.",
+     "b": "4½ in.",
+     "c": "5 in.",
+     "d": "6 in."
+    },
+    "ref": "314.28(A)(2) Ex and Table 312.6(A) make sure to use 1 wire per terminal.",
+    "answer": "b"
+   }
+  ]
+ },
+ "Exam_Prep_Unit_3": {
+  "book": "Exam Prep",
+  "quiz": "Unit 3",
+  "page": 327,
+  "unit": "Unit 3",
+  "questions": [
+   {
+    "n": 1,
+    "q": "What is the minimum size conductor permitted to terminate on a 70A circuit breaker or fuse?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "110.14(C)(1)(a)(2), 4 AWG rated 70A at 60°C, Table 310.16",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "What’s the minimum size conductor permitted to terminate on a 50A circuit breaker or fuse?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "110.14(C)(1)(a)(2), 6 AWG rated 55A at 60°C, Table 310.16",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "What is the minimum size THW conductor permitted to terminate on a 50A circuit breaker if the circuit breaker terminals are listed for 75°C conductor sizing?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "110.14(C)(1)(a)(3), 8 AWG rated 50A at 75°C, Table 310.16",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "What size THW conductor is required for an air-conditioning-unit if the nameplate requires a minimum conductor ampacity of 34A and the terminals of all the equipment are rated for 75°C conductor sizing?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "110.14(C)(1)(a)(3), 10 AWG rated 35A at 75°C, Table 310.16",
+    "answer": "c"
+   },
+   {
+    "n": 5,
+    "q": "What is the minimum size THW conductor required for a 150A circuit breaker?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "110.14(C)(1)(b)(2), 1/0 AWG rated 150A at 75°C, Table 310.16",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "What is the minimum size THW conductor required for a 200A circuit breaker?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "110.14(C)(1)(b)(2), 3/0 AWG rated 200A at 75°C, Table 310.16",
+    "answer": "c"
+   },
+   {
+    "n": 7,
+    "q": "What is the minimum size THW aluminum conductor required for a 250A feeder supplying a panelboard?",
+    "choices": {
+     "a": "250 kcmil",
+     "b": "300 kcmil",
+     "c": "350 kcmil",
+     "d": "400 kcmil"
+    },
+    "ref": "110.14(C)(1)(b)(2), 350 kcmil aluminum rated 250A at 75°C, Table 310.16",
+    "answer": "c"
+   },
+   {
+    "n": 8,
+    "q": "What is the minimum size THW aluminum conductor required for a 350A feeder supplying a panelboard?",
+    "choices": {
+     "a": "500 kcmil",
+     "b": "600 kcmil",
+     "c": "700 kcmil",
+     "d": "750 kcmil"
+    },
+    "ref": "110.14(C)(1)(b)(2), 700 kcmil aluminum rated 375A at 75°C, Table 310.16",
+    "answer": "c"
+   },
+   {
+    "n": 9,
+    "q": "What is the maximum size overcurrent protective device that can be used to protect 4/0 AWG conductors where each conductor has an ampacity of 230A at 75°C?",
+    "choices": {
+     "a": "250A",
+     "b": "300A",
+     "c": "350A",
+     "d": "400A"
+    },
+    "ref": "240.4(B) permits the next standard size OCPD from 240.6(A) if not over 800A",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "What is the maximum size overcurrent protective device that can be used to protect 250 kcmil aluminum conductors where each conductor has an ampacity of 205A at 75°C?",
+    "choices": {
+     "a": "200A",
+     "b": "225A",
+     "c": "250A",
+     "d": "275A"
+    },
+    "ref": "240.4(B) permits the next standard size OCPD from 240.6(A) if not over 800A",
+    "answer": "b"
+   },
+   {
+    "n": 11,
+    "q": "What is the minimum size of conductors (paralleled in four sets of conductors per phase) allowed to be protected by a 1,600A overcurrent protective device?",
+    "choices": {
+     "a": "500 kcmil",
+     "b": "600 kcmil",
+     "c": "700 kcmil",
+     "d": "750 kcmil"
+    },
+    "ref": "240.4(C)",
+    "answer": "b"
+   },
+   {
+    "n": 12,
+    "q": "What is the minimum size of aluminum conductors (paralleled in six sets of conductors per phase) allowed to be protected by a 2,000A overcurrent protective device?",
+    "choices": {
+     "a": "500 kcmil",
+     "b": "600 kcmil",
+     "c": "700 kcmil",
+     "d": "750 kcmil"
+    },
+    "ref": "240.4(C)",
+    "answer": "b"
+   },
+   {
+    "n": 13,
+    "q": "What is the corrected ampacity of three 10 TW conductors in an ambient temperature of 120°F?",
+    "choices": {
+     "a": "13.5A",
+     "b": "17.4A",
+     "c": "18.4A",
+     "d": "32.8A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 14,
+    "q": "What is the corrected ampacity of three 8 THW aluminum in an ambient temperature of 105°F?",
+    "choices": {
+     "a": "13.5A",
+     "b": "17.4A",
+     "c": "18.4A",
+     "d": "32.8A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "d"
+   },
+   {
+    "n": 15,
+    "q": "What is the corrected ampacity of three 4 THW in an ambient temperature of 50°C?",
+    "choices": {
+     "a": "53A",
+     "b": "57A",
+     "c": "61A",
+     "d": "64A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "d"
+   },
+   {
+    "n": 16,
+    "q": "What is the corrected ampacity of three 4 XHHW-2 compact aluminum in an ambient temperature of 108°F?",
+    "choices": {
+     "a": "63A",
+     "b": "65A",
+     "c": "67A",
+     "d": "69A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 17,
+    "q": "What is the corrected ampacity of three 1 THW conductors in an ambient temperature of 85°F?",
+    "choices": {
+     "a": "122A",
+     "b": "130A",
+     "c": "139A",
+     "d": "142A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 18,
+    "q": "What is the corrected ampacity of three 1/0 XHHW-2 conductors in an ambient temperature of 154°F?",
+    "choices": {
+     "a": "88A",
+     "b": "99A",
+     "c": "109A",
+     "d": "119A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 19,
+    "q": "What is the corrected ampacity of three 1/0 XHHW-2 aluminum conductors in an ambient temperature of 154°F?",
+    "choices": {
+     "a": "78A",
+     "b": "94A",
+     "c": "115A",
+     "d": "126A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "a"
+   },
+   {
+    "n": 20,
+    "q": "What is the corrected ampacity of three 250 kcmil THW in an ambient temperature of 40°C?",
+    "choices": {
+     "a": "204A",
+     "b": "214A",
+     "c": "224A",
+     "d": "234A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "c"
+   },
+   {
+    "n": 21,
+    "q": "What is the corrected ampacity of Type NM 12/3 cable in an ambient temperature of 110°F?",
+    "choices": {
+     "a": "22A",
+     "b": "24A",
+     "c": "26A",
+     "d": "28A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "What is the corrected ampacity of Type UF 10/3 cable in an ambient temperature of 120°F?",
+    "choices": {
+     "a": "17A",
+     "b": "19A",
+     "c": "21A",
+     "d": "23A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "What is the corrected ampacity of a 12 THWN-2 in a raceway ½ in. above the roof, where the ambient temperature is 110°F?",
+    "choices": {
+     "a": "12A",
+     "b": "15A",
+     "c": "16A",
+     "d": "17A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "a"
+   },
+   {
+    "n": 24,
+    "q": "What is the corrected ampacity of a 10 THWN-2 in a raceway less than ¾ in. above the roof, where the ambient temperature is 120°F?",
+    "choices": {
+     "a": "10.6A",
+     "b": "11.6A",
+     "c": "12.6A",
+     "d": "13.6A"
+    },
+    "ref": "3.6 Conductor Ampacity Correction [310.15(B)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 25,
+    "q": "What is the adjusted ampacity of four 10 THHN conductors in a raceway?",
+    "choices": {
+     "a": "20A",
+     "b": "28A",
+     "c": "29A",
+     "d": "32A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "d"
+   },
+   {
+    "n": 26,
+    "q": "What is the adjusted ampacity of nine 10 THHN conductors in a raceway?",
+    "choices": {
+     "a": "20A",
+     "b": "28A",
+     "c": "29A",
+     "d": "32A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 27,
+    "q": "What is the adjusted ampacity of seven 8 THW conductors in a raceway?",
+    "choices": {
+     "a": "32A",
+     "b": "35A",
+     "c": "42A",
+     "d": "45A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 28,
+    "q": "What is the adjusted ampacity of nine 8 XHHW-2 compact aluminum conductors in a raceway?",
+    "choices": {
+     "a": "32A",
+     "b": "36A",
+     "c": "40A",
+     "d": "45A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "a"
+   },
+   {
+    "n": 29,
+    "q": "What is the adjusted ampacity of four 1/0 THWN-2 conductors in a raceway?",
+    "choices": {
+     "a": "116A",
+     "b": "120A",
+     "c": "136A",
+     "d": "150A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "c"
+   },
+   {
+    "n": 30,
+    "q": "What is the adjusted ampacity of eight 250 kcmil XHHW-2 aluminum conductors in a raceway?",
+    "choices": {
+     "a": "160A",
+     "b": "180A",
+     "c": "200A",
+     "d": "205A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "a"
+   },
+   {
+    "n": 31,
+    "q": "What is the adjusted ampacity of six 3/0 THWN-2 conductors in a raceway?",
+    "choices": {
+     "a": "160A",
+     "b": "180A",
+     "c": "200A",
+     "d": "205A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "b"
+   },
+   {
+    "n": 32,
+    "q": "What is the adjusted ampacity of ten 12 THWN-2 conductors in a raceway?",
+    "choices": {
+     "a": "15A",
+     "b": "20A",
+     "c": "25A",
+     "d": "30A"
+    },
+    "ref": "3.7 Conductor Ampacity Adjustment [310.15(C)(1)]",
+    "answer": "a"
+   },
+   {
+    "n": 33,
+    "q": "What is the ampacity of eight 12 THW conductors in a raceway at an ambient temperature of 85°F?",
+    "choices": {
+     "a": "17.5A",
+     "b": "19.5A",
+     "c": "21.5A",
+     "d": "22.5A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "a"
+   },
+   {
+    "n": 34,
+    "q": "What is the ampacity of nine 10 THW conductors in a raceway at an ambient temperature of 46°C?",
+    "choices": {
+     "a": "13.5A",
+     "b": "17.4A",
+     "c": "18.4A",
+     "d": "27.4A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "c"
+   },
+   {
+    "n": 35,
+    "q": "What is the ampacity of four 8 THHN conductors in a raceway at an ambient temperature of 90°F?",
+    "choices": {
+     "a": "40A",
+     "b": "42A",
+     "c": "44A",
+     "d": "46A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "b"
+   },
+   {
+    "n": 36,
+    "q": "What is the ampacity of eight 8 THHN conductors in a raceway at an ambient temperature of 100°F?",
+    "choices": {
+     "a": "31A",
+     "b": "35A",
+     "c": "41A",
+     "d": "44A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "b"
+   },
+   {
+    "n": 37,
+    "q": "What is the ampacity of eleven RHW 10 aluminum conductors in a raceway at an ambient temperature of 75°F?",
+    "choices": {
+     "a": "14A",
+     "b": "16A",
+     "c": "18A",
+     "d": "20A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "b"
+   },
+   {
+    "n": 38,
+    "q": "What is the ampacity of eleven 1/0 THWN conductors in a raceway at an ambient temperature of 90°F?",
+    "choices": {
+     "a": "67A",
+     "b": "69A",
+     "c": "71A",
+     "d": "73A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "c"
+   },
+   {
+    "n": 39,
+    "q": "What is the ampacity of fifteen 350 kcmil THWN aluminum conductors in a raceway at an ambient temperature 125°F?",
+    "choices": {
+     "a": "84A",
+     "b": "86A",
+     "c": "88A",
+     "d": "91A"
+    },
+    "ref": "3.8 Ampacity Correction and Adjustment [310.15]",
+    "answer": "a"
+   },
+   {
+    "n": 40,
+    "q": "What is the neutral current for 120V/240V, where line 1 has 25A and Line 2 has 15A?",
+    "choices": {
+     "a": "5A",
+     "b": "10A",
+     "c": "15A",
+     "d": "20A"
+    },
+    "ref": "310.15(E)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 41,
+    "q": "What is the neutral current for a 208Y/120V, three-phase 4-wire system, where line 1 has 150A, line 2 has 150A, line 3 has 50A?",
+    "choices": {
+     "a": "50A",
+     "b": "100A",
+     "c": "150A",
+     "d": "200A"
+    },
+    "ref": "310.15(E)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 42,
+    "q": "What is the neutral current for a 208Y/120V, three-phase 4-wire system, where line 1 has 75A, line 2 has 85A, line 3 has 100A?",
+    "choices": {
+     "a": "21.80A",
+     "b": "31.80A",
+     "c": "41.80A",
+     "d": "51.80A"
+    },
+    "ref": "310.15(E)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 43,
+    "q": "What is the neutral current for two 18A, 120V circuits connected to a 208Y/120V, three-phase 4-wire system.",
+    "choices": {
+     "a": "16A",
+     "b": "18A",
+     "c": "32A",
+     "d": "40A"
+    },
+    "ref": "310.15(E)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 44,
+    "q": "What size conductor is required to supply a 22A continuous load?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "210.19(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 45,
+    "q": "What size conductor is required to supply a 32A continuous load?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "210.19(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 46,
+    "q": "What size conductor is required to supply a 55A continuous load?",
+    "choices": {
+     "a": "4 AWG",
+     "b": "3 AWG",
+     "c": "2 AWG",
+     "d": "1 AWG"
+    },
+    "ref": "210.19(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 47,
+    "q": "What size THW conductor is required to supply a 30 kVA/240V noncontinuous load?",
+    "choices": {
+     "a": "4 AWG",
+     "b": "3 AWG",
+     "c": "2 AWG",
+     "d": "1 AWG"
+    },
+    "ref": "210.19(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 48,
+    "q": "What size THW conductor is required to supply a 50 kVA/240V noncontinuous load?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "210.19(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 49,
+    "q": "What size conductor is required to supply a storage type water heater rated 2.5 kW/240V?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "422.13",
+    "answer": "a"
+   },
+   {
+    "n": 50,
+    "q": "What size conductor is required to supply a storage type water heater rated 5.5 kW/240V?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "422.13",
+    "answer": "a"
+   },
+   {
+    "n": 51,
+    "q": "What size SE cable is required to supply a 9 kW electric furnace with a fan motor rated 1 kVA, each rated 240V with 75°C terminals.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "338.10(B)(4)(a)(1) and 424.4(B)",
+    "answer": "c"
+   },
+   {
+    "n": 52,
+    "q": "What size circuit breaker is required for a 65A noncontinuous load?",
+    "choices": {
+     "a": "60A",
+     "b": "65A",
+     "c": "70A",
+     "d": "75A"
+    },
+    "ref": "210.20(A)",
+    "answer": "c"
+   },
+   {
+    "n": 53,
+    "q": "What size circuit breaker is required for an 85A noncontinuous load?",
+    "choices": {
+     "a": "80A",
+     "b": "85A",
+     "c": "90A",
+     "d": "95A"
+    },
+    "ref": "210.20(A)",
+    "answer": "c"
+   },
+   {
+    "n": 54,
+    "q": "What size circuit breaker is required for a 55A continuous load?",
+    "choices": {
+     "a": "60A",
+     "b": "65A",
+     "c": "70A",
+     "d": "75A"
+    },
+    "ref": "210.20(A)",
+    "answer": "c"
+   },
+   {
+    "n": 55,
+    "q": "What size circuit breaker is required for a 34A continuous load?",
+    "choices": {
+     "a": "30A",
+     "b": "35A",
+     "c": "40A",
+     "d": "45A"
+    },
+    "ref": "210.20(A)",
+    "answer": "d"
+   },
+   {
+    "n": 56,
+    "q": "What size circuit breaker is required for a 25A continuous load and a 25A noncontinuous load?",
+    "choices": {
+     "a": "45A",
+     "b": "50A",
+     "c": "60A",
+     "d": "65A"
+    },
+    "ref": "210.20(A)",
+    "answer": "c"
+   },
+   {
+    "n": 57,
+    "q": "What size THW feeder is required to supply a 150A load?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 58,
+    "q": "What size THW feeder is required to supply a 150A continuous load?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 59,
+    "q": "What size THW feeder is required to supply a 200A load?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 60,
+    "q": "What size THW feeder is required to supply a 200A continuous loads?",
+    "choices": {
+     "a": "150 kcmil",
+     "b": "200 kcmil",
+     "c": "250 kcmil",
+     "d": "300 kcmil"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 61,
+    "q": "What size THW feeder is required to supply a 225A continuous loads?",
+    "choices": {
+     "a": "150 kcmil",
+     "b": "200 kcmil",
+     "c": "250 kcmil",
+     "d": "300 kcmil"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 62,
+    "q": "What size THW feeder is required to supply 20 kVA/240V continuous loads?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "2 AWG",
+     "c": "3 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 63,
+    "q": "What size THW feeder is required to supply a 40 kVA/240V noncontinuous load?",
+    "choices": {
+     "a": "2/0 AWG",
+     "b": "3/0 AWG",
+     "c": "4/0 AWG",
+     "d": "300 kcmil"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 64,
+    "q": "What size THW aluminum feeder is required to supply a 100A continuous and a 100A noncontinuous load?",
+    "choices": {
+     "a": "2/0 AWG",
+     "b": "3/0 AWG",
+     "c": "4/0 AWG",
+     "d": "300 kcmil"
+    },
+    "ref": "215.2(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 65,
+    "q": "What size feeder neutral is required to supply a 100A line-to-neutral continuous loads, terminals rated 75°C?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "2 AWG",
+     "c": "3 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "215.2(A)(1) Ex 3",
+    "answer": "c"
+   },
+   {
+    "n": 66,
+    "q": "What size feeder neutral is required to supply a 150A line-to-neutral continuous loads?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "215.2(A)(1) Ex 3",
+    "answer": "a"
+   },
+   {
+    "n": 67,
+    "q": "What size feeder neutral is required to supply a 200A line-to-neutral continuous loads?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "215.2(A)(1) Ex 3",
+    "answer": "c"
+   },
+   {
+    "n": 68,
+    "q": "What size feeder neutral is required to supply a dwelling unit with a demand load of 175A, of which 100A are line-to-line, terminals rated 75°C?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "2 AWG",
+     "c": "3 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "215.2(A)(1) Ex 3",
+    "answer": "d"
+   },
+   {
+    "n": 69,
+    "q": "What size feeder overcurrent protective device is required for a 125A continuous load?",
+    "choices": {
+     "a": "150A",
+     "b": "175A",
+     "c": "200A",
+     "d": "225A"
+    },
+    "ref": "215.3",
+    "answer": "b"
+   },
+   {
+    "n": 70,
+    "q": "What size feeder overcurrent protective device is required for a 150A continuous load?",
+    "choices": {
+     "a": "150A",
+     "b": "175A",
+     "c": "200A",
+     "d": "225A"
+    },
+    "ref": "215.3",
+    "answer": "c"
+   },
+   {
+    "n": 71,
+    "q": "What size feeder overcurrent protective device is required for a 200A continuous load?",
+    "choices": {
+     "a": "150A",
+     "b": "200A",
+     "c": "225A",
+     "d": "250A"
+    },
+    "ref": "215.3",
+    "answer": "d"
+   },
+   {
+    "n": 72,
+    "q": "What size feeder overcurrent protective device is required for a 100A of continuous loads and 50A of noncontinuous loads?",
+    "choices": {
+     "a": "150A",
+     "b": "175A",
+     "c": "200A",
+     "d": "225A"
+    },
+    "ref": "215.3",
+    "answer": "b"
+   },
+   {
+    "n": 73,
+    "q": "What size 10 ft feeder tap conductor is required where the feeder overcurrent protective device is rated 150A with 1/0 THW conductors, the 10 ft feeder tap conductor will be terminating in a 30A breaker?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "240.21(B)(1)(4)",
+    "answer": "b"
+   },
+   {
+    "n": 74,
+    "q": "What size 10 ft feeder tap conductor is required where the feeder overcurrent protective device is rated 225A with 3/0 THW conductors, the 10 ft feeder tap conductor will be terminating in a 30A breaker?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "240.21(B)(1)(4)",
+    "answer": "b"
+   },
+   {
+    "n": 75,
+    "q": "What size 10 ft feeder tap conductor is required where the feeder overcurrent protective device is rated 400A with 500 kcmil THW feeder conductors, the 10 ft feeder tap conductor will be terminating in a 60A breaker?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "240.21(B)(1)(4)",
+    "answer": "d"
+   },
+   {
+    "n": 76,
+    "q": "What 10 ft size feeder tap THW conductor is required where the feeder overcurrent protective device is rated 800A with two sets of 500 kcmil THW feeder conductors per phase, the 10 ft feeder tap conductor will be terminating in a 100A breaker?",
+    "choices": {
+     "a": "6 AWG",
+     "b": "4 AWG",
+     "c": "3 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "240.21(B)(1)(4)",
+    "answer": "c"
+   },
+   {
+    "n": 77,
+    "q": "What size THW 25 ft tap THW conductor is required where the feeder overcurrent protective device is rated 400A with 500 kcmil THW feeder conductors, the 25 ft feeder tap conductor will be terminating in a 200A breaker?",
+    "choices": {
+     "a": "2 AWG",
+     "b": "1 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "240.21(B)(2)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 78,
+    "q": "What size THW 25 ft tap THW conductor is required where the feeder overcurrent protective device is rated 800A with two sets of 500 kcmil THW feeder conductors per phase, the 25 ft feeder tap conductor will be terminating in a 200A breaker?",
+    "choices": {
+     "a": "300 kcmil",
+     "b": "350 kcmil",
+     "c": "400 kcmil",
+     "d": "500 kcmil"
+    },
+    "ref": "240.21(B)(2)(1)",
+    "answer": "a"
+   }
+  ]
  }
 }
