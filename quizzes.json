@@ -12878,5 +12878,283 @@
     "answer": "c"
    }
   ]
+ },
+ "B&G_Art_501": {
+  "book": "B&G",
+  "quiz": "Art 501",
+  "page": 333,
+  "unit": "Article 501—Class I Hazardous (Classified) Locations",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 501 covers the requirements for electrical and electronic equipment and wiring for all voltages in Class I, Division 1 and 2 locations, where _____ are or might be present in the air in quantities sufficient to produce explosive or ignitible mixtures.",
+    "choices": {
+     "a": "flammable gases",
+     "b": "flammable liquid-produced vapors",
+     "c": "combustible liquid-produced vapors",
+     "d": "any of these"
+    },
+    "ref": "501.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "In Class I locations, the locknut-bushing and double-locknut types of contacts shall not be depended on for _____ purposes.",
+    "choices": {
+     "a": "bonding",
+     "b": "grounding",
+     "c": "securing",
+     "d": "supporting"
+    },
+    "ref": "501.30(B)(1)(a)",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "When FMC or LFMC is used as permitted in Class I, Division 2 locations, it shall include an equipment bonding jumper of the _____ type in compliance with 250.102.",
+    "choices": {
+     "a": "wire",
+     "b": "raceway",
+     "c": "steel",
+     "d": "none of these"
+    },
+    "ref": "501.30(B)(2)(a)",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_502": {
+  "book": "B&G",
+  "quiz": "Art 502",
+  "page": 333,
+  "unit": "Article 502—Class II Hazardous (Classified) Locations",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 502 covers the requirements for electrical and electronic equipment and wiring in Class II, Division 1 and 2 locations where fire or explosion hazards may exist due to _____.",
+    "choices": {
+     "a": "ignitible gases or vapors",
+     "b": "ignitible fibers/flyings",
+     "c": "combustible dust",
+     "d": "all of these"
+    },
+    "ref": "502.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "In Class II Locations the locknut-bushing and double-locknut types of contacts shall not be depended on for _____ purposes, but bonding jumpers with identified fittings or other approved means of bonding shall be used.",
+    "choices": {
+     "a": "bonding",
+     "b": "grounding",
+     "c": "continuity",
+     "d": "any of these"
+    },
+    "ref": "502.30(B)(1)(a)",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "Where LFMC is used in a Class II, Division 1 location as permitted in 502.10, it shall _____.",
+    "choices": {
+     "a": "not be unsupported",
+     "b": "not exceed 6 ft in length",
+     "c": "include an equipment bonding jumper of the wire type",
+     "d": "be listed for use in Class I locations"
+    },
+    "ref": "502.30(B)(2)(a)",
+    "answer": "c"
+   }
+  ]
+ },
+ "B&G_Art_517": {
+  "book": "B&G",
+  "quiz": "Art 517",
+  "page": 334,
+  "unit": "Article 517—Health Care Facilities",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 517 applies to electrical construction and installation criteria in health care facilities that provide services to _____.",
+    "choices": {
+     "a": "human beings",
+     "b": "animals",
+     "c": "children only",
+     "d": "intellectually challenged persons"
+    },
+    "ref": "517.1",
+    "answer": "a"
+   },
+   {
+    "n": 2,
+    "q": "Branch circuits serving fixed electrical equipment in patient care spaces shall be provided with a(an) _____ by installation in a metal raceway system or a cable having a metallic armor or sheath assembly.",
+    "choices": {
+     "a": "effective ground-fault current path",
+     "b": "ground-fault current path",
+     "c": "effective current path",
+     "d": "none of these"
+    },
+    "ref": "517.13(A)",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "In patient care spaces, metal faceplates shall be connected to an effective ground-fault current path by means of _____ securing the faceplate to a metal yoke or strap of a receptacle or to a metal outlet box.",
+    "choices": {
+     "a": "ground clips",
+     "b": "rivets",
+     "c": "metal mounting screws",
+     "d": "spot welds"
+    },
+    "ref": "517.13(B)(1) Ex 2",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "In health care facilities, isolated ground receptacles shall be installed in a patient care vicinity.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "517.16(A)",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "In health care facilities, _____ ground receptacle(s) installed in patient care spaces outside of a patient care vicinity(s) shall comply with 517.16(B)(1) and (2).",
+    "choices": {
+     "a": "AFCI-protected",
+     "b": "GFCI-protected",
+     "c": "isolated",
+     "d": "all of these"
+    },
+    "ref": "517.16(B)",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Outside of patient care vicinities, the equipment grounding terminals of isolated ground receptacles installed in branch circuits for patient care _____ shall be connected to an insulated equipment grounding conductor in accordance with 250.146(D) installed in a wiring method described in 517.13(A).",
+    "choices": {
+     "a": "vicinities",
+     "b": "spaces",
+     "c": "bathrooms",
+     "d": "vicinities or spaces"
+    },
+    "ref": "517.16(B)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "Outside of patient care vicinities, the insulated equipment grounding conductor required in 517.13(B)(1) for health care facilities shall be clearly _____ along its entire length by green insulation, with no yellow stripes, and shall not be connected to the grounding terminals of isolated ground receptacles but shall be connected to the box or enclosure indicated in 517.13(B)(1)(2) and to noncurrent-carrying conductive surfaces of fixed electrical equipment indicated in 517.13(B)(1)(3).",
+    "choices": {
+     "a": "listed",
+     "b": "labeled",
+     "c": "identified",
+     "d": "approved"
+    },
+    "ref": "517.16(B)(2)",
+    "answer": "c"
+   },
+   {
+    "n": 8,
+    "q": "Outside of patient care vicinities, care should be taken in specifying a system containing isolated ground receptacles in health care facilities because the _____ of the effective ground-fault current path is dependent upon the equipment grounding conductor(s) and does not benefit from any conduit or building structure in parallel with the equipment grounding conductor.",
+    "choices": {
+     "a": "ampacity",
+     "b": "resistance",
+     "c": "effectiveness",
+     "d": "impedance"
+    },
+    "ref": "517.16(B)(2) Informational Note 2",
+    "answer": "d"
+   }
+  ]
+ },
+ "B&G_Art_547": {
+  "book": "B&G",
+  "quiz": "Art 547",
+  "page": 334,
+  "unit": "Article 547—Agricultural Buildings",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Agricultural buildings where excessive dust and dust with water may accumulate, including all areas of _____ confinement systems where litter dust or feed dust may accumulate shall comply with Article 547.",
+    "choices": {
+     "a": "poultry",
+     "b": "livestock",
+     "c": "fish",
+     "d": "all of these"
+    },
+    "ref": "547.1(A)",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Agricultural buildings where corrosive atmospheres exist include areas where the following condition(s) exist(s) _____.",
+    "choices": {
+     "a": "poultry and animal excrement",
+     "b": "corrosive particles which may combine with water",
+     "c": "areas of periodic washing with water and cleansing agents",
+     "d": "all of these"
+    },
+    "ref": "547.1(B)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "A(An) _____ plane shall be installed in all concrete floor confinement areas of livestock buildings, and all outdoor confinement areas with a concrete slab that contains metallic equipment accessible to livestock and that may become energized.",
+    "choices": {
+     "a": "equipotential",
+     "b": "electrical datum",
+     "c": "neutral-to-earth voltage",
+     "d": "elevated"
+    },
+    "ref": "547.44(A)(1) and (2)",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_555": {
+  "book": "B&G",
+  "quiz": "Art 555",
+  "page": 335,
+  "unit": "Article 555—Marinas, Boatyards, and Docking Facilities",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 555 covers the installation of wiring and equipment in the areas comprising of _____ and other areas in marinas and boatyards.",
+    "choices": {
+     "a": "fixed or floating piers",
+     "b": "floating buildings",
+     "c": "wharves and docks",
+     "d": "all of these"
+    },
+    "ref": "555.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Marina equipment grounding conductors shall be of the wire-type, insulated, and sized in accordance with 250.122 but not smaller than _____.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "555.37(B)",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "Where a marina shore power feeder supplies a remote panelboard, an insulated _____ shall extend from a grounding terminal in the service equipment to a grounding terminal in the remote panelboard.",
+    "choices": {
+     "a": "bonding jumper",
+     "b": "equipment grounding conductor",
+     "c": "grounding electrode conductor",
+     "d": "copper conductor"
+    },
+    "ref": "555.37(C)",
+    "answer": "b"
+   }
+  ]
  }
 }
