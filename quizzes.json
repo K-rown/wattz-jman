@@ -13156,5 +13156,725 @@
     "answer": "b"
    }
   ]
+ },
+ "B&G_Art_600": {
+  "book": "B&G",
+  "quiz": "Art 600",
+  "page": 365,
+  "unit": "Article 600—Electric Signs",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 600 covers the installation of conductors, equipment, and field wiring for _____, and outline lighting, regardless of voltage.",
+    "choices": {
+     "a": "electric signs",
+     "b": "retrofit kits",
+     "c": "neon tubing",
+     "d": "all of these"
+    },
+    "ref": "600.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Metal equipment of signs, outline lighting, and skeleton tubing systems shall be grounded by connection to the _____ of the supply branch circuit(s) or feeder using the types of equipment grounding conductors specified in 250.118.",
+    "choices": {
+     "a": "grounding electrode conductor",
+     "b": "equipment grounding conductor",
+     "c": "neutral conductor",
+     "d": "ground rod"
+    },
+    "ref": "600.7(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "Listed flexible metal conduit or listed liquidtight flexible metal conduit that encloses the secondary sign circuit conductor from a transformer or power supply for use with neon tubing is permitted as a bonding means if the total accumulative length of the conduit in the secondary sign circuit does not exceed _____.",
+    "choices": {
+     "a": "10 ft",
+     "b": "25 ft",
+     "c": "50 ft",
+     "d": "100 ft"
+    },
+    "ref": "600.7(B)(4)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "Bonding conductors installed outside of a sign or raceway used for the bonding connections of the noncurrent-carrying metal parts of signs shall be protected from physical damage and shall be copper not smaller than _____.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "600.7(B)(7)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "Bonding conductors installed outside of a sign or raceway used for the bonding connections of the noncurrent-carrying metal parts of signs, shall be protected from physical damage and are permitted to be copper-clad aluminum not smaller than _____.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "600.7(B)(7)(2)",
+    "answer": "b"
+   }
+  ]
+ },
+ "B&G_Art_645": {
+  "book": "B&G",
+  "quiz": "Art 645",
+  "page": 365,
+  "unit": "Article 645—Information Technology Equipment (ITE)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 645 covers _____ and grounding of information technology equipment and systems in an information technology equipment room.",
+    "choices": {
+     "a": "equipment",
+     "b": "power-supply wiring",
+     "c": "interconnecting wiring",
+     "d": "all of these"
+    },
+    "ref": "645.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Exposed noncurrent-carrying metal parts of an information technology system shall be _____.",
+    "choices": {
+     "a": "GFPE protected",
+     "b": "inaccessible to unqualified personnel",
+     "c": "GFCI protected",
+     "d": "bonded to an equipment grounding conductor or double insulated"
+    },
+    "ref": "645.15",
+    "answer": "d"
+   }
+  ]
+ },
+ "B&G_Art_680": {
+  "book": "B&G",
+  "quiz": "Art 680",
+  "page": 366,
+  "unit": "Article 680—Swimming Pools, Spas, Hot Tubs, Fountains, and Similar Installations",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The construction and installation requirements of electrical wiring for, and equipment in or adjacent to, all swimming, wading, therapeutic, and decorative pools are covered in Article _____.",
+    "choices": {
+     "a": "555",
+     "b": "600",
+     "c": "680",
+     "d": "690"
+    },
+    "ref": "680.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Feeders and branch circuits installed in a corrosive environment or wet location near swimming pools shall contain an insulated copper EGC sized in accordance with Table 250.122, but not smaller than _____.",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "680.7(A)",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "Field-installed terminals for swimming pools in damp or wet locations or corrosive environments shall be composed of copper, copper alloy, or stainless steel and shall be _____ for direct burial use.",
+    "choices": {
+     "a": "identified",
+     "b": "labeled",
+     "c": "listed",
+     "d": "approved"
+    },
+    "ref": "680.7(C)",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "Transformers and power supplies used for the supply of underwater luminaires for swimming pools, together with the transformer or power-supply enclosure, shall be listed, labeled, and identified for _____ use.",
+    "choices": {
+     "a": "damp location",
+     "b": "wet location",
+     "c": "outdoor location",
+     "d": "swimming pool and spa"
+    },
+    "ref": "680.23(A)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "For permanently installed pools, a GFCI shall be installed in the branch circuit supplying luminaires operating at more than the low-voltage _____.",
+    "choices": {
+     "a": "setting",
+     "b": "listing",
+     "c": "contact limit",
+     "d": "trip limit"
+    },
+    "ref": "680.23(A)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Wet-niche luminaires shall be installed with the top of the luminaire lens not less than _____ below the normal water level of the pool.",
+    "choices": {
+     "a": "6 in.",
+     "b": "12 in.",
+     "c": "18 in.",
+     "d": "24 in."
+    },
+    "ref": "680.23(A)(5)",
+    "answer": "c"
+   },
+   {
+    "n": 7,
+    "q": "When PVC is run from a pool light forming shell to a pool junction box, an 8 AWG _____ bonding jumper shall be installed in the raceway.",
+    "choices": {
+     "a": "solid bare",
+     "b": "solid insulated copper",
+     "c": "stranded insulated copper",
+     "d": "solid or stranded insulated copper"
+    },
+    "ref": "680.23(B)(2)(b)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "Wet-niche luminaires installed in swimming pools shall be removable from the water for inspection, relamping, or other maintenance. The luminaire maintenance location shall be accessible _____.",
+    "choices": {
+     "a": "while the pool is drained",
+     "b": "without entering the pool water",
+     "c": "during construction",
+     "d": "all of these"
+    },
+    "ref": "680.23(B)(6)",
+    "answer": "b"
+   },
+   {
+    "n": 9,
+    "q": "Where branch-circuit wiring on the supply side of enclosures and junction boxes connected to conduits run to underwater luminaires are installed in _____ environments, the wiring method of that portion of the branch circuit shall be in accordance with 680.14.",
+    "choices": {
+     "a": "dry",
+     "b": "damp",
+     "c": "wet",
+     "d": "corrosive"
+    },
+    "ref": "680.23(F)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "A pool light junction box connected to a conduit that extends directly to a forming shell shall be _____ for this use.",
+    "choices": {
+     "a": "listed",
+     "b": "identified",
+     "c": "labeled",
+     "d": "all of these"
+    },
+    "ref": "680.24(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "The pool light junction box shall be located not less than _____, measured from the inside of the bottom of the box, above the ground level or pool deck, or not less than 8 in. above the maximum pool water level, whichever provides the greater elevation.",
+    "choices": {
+     "a": "4 in.",
+     "b": "6 in.",
+     "c": "8 in.",
+     "d": "12 in."
+    },
+    "ref": "680.24(A)(2)(a)",
+    "answer": "a"
+   },
+   {
+    "n": 12,
+    "q": "The pool light junction box shall be located not less than _____ from the inside wall of the pool, unless separated from the pool by a solid fence, wall, or other permanent barrier",
+    "choices": {
+     "a": "2 ft",
+     "b": "3 ft",
+     "c": "4 ft",
+     "d": "6 ft"
+    },
+    "ref": "680.24(A)(2)(b)",
+    "answer": "c"
+   },
+   {
+    "n": 13,
+    "q": "The _____ of a pool light junction box, transformer enclosure, or other enclosure in the supply circuit to a wet-niche or no-niche luminaire and the field-wiring chamber of a dry-niche luminaire shall be connected to the equipment grounding terminal of the panelboard.",
+    "choices": {
+     "a": "equipment grounding jumper",
+     "b": "grounded conductors",
+     "c": "grounding terminals",
+     "d": "ungrounded conductors"
+    },
+    "ref": "680.24(F)",
+    "answer": "c"
+   },
+   {
+    "n": 14,
+    "q": "The equipotential bonding required by 680.26(B)and (C) to reduce _____ gradients in the pool area shall be installed only for pools with associated electrical equipment related to the pool.",
+    "choices": {
+     "a": "current",
+     "b": "voltage",
+     "c": "resistance",
+     "d": "power"
+    },
+    "ref": "680.26(A)",
+    "answer": "b"
+   },
+   {
+    "n": 15,
+    "q": "The parts specified in 680.26(B)(1) through (B)(7) shall be bonded together using solid copper conductors, insulated, covered, or bare, not smaller than _____.",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "680.26(B)",
+    "answer": "c"
+   },
+   {
+    "n": 16,
+    "q": "Reconstructed pool shells shall meet the equipotential bonding requirements of section 680.26.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "680.26(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "For equipotential bonding of permanently installed pools, the perimeter surface to be bonded shall be considered to extend for _____ horizontally beyond the inside walls of the pool and shall include unpaved surfaces and other types of paving.",
+    "choices": {
+     "a": "3 ft",
+     "b": "5 ft",
+     "c": "10 ft",
+     "d": "12 ft"
+    },
+    "ref": "680.26(B)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 18,
+    "q": "Where a copper grid is used for the purposes of equipotential bonding around pool perimeter surfaces, the copper grid shall be secured within or below a paved surface, but no more than _____ below finished grade.",
+    "choices": {
+     "a": "2 in.",
+     "b": "4 in.",
+     "c": "6 in.",
+     "d": "8 in."
+    },
+    "ref": "680.26(B)(2)(c)(4)",
+    "answer": "c"
+   },
+   {
+    "n": 19,
+    "q": "For perimeter equipotential bonding of permanently installed pools, where conductive pool shell structural reinforcing steel is not available or is encapsulated in a nonconductive compound, a copper ring shall be utilized where _____.",
+    "choices": {
+     "a": "a minimum 8 AWG bare solid copper conductor is provided and follows the contour of the perimeter surface",
+     "b": "only listed splicing devices or exothermic welding are used",
+     "c": "the conductor is 18 in. to 24 in from the inside wall of the pool and 4 to 6 in. below the finished grade",
+     "d": "all of these"
+    },
+    "ref": "680.26(B)(2)(b)(1), (2), (3), (4), and (5)",
+    "answer": "d"
+   },
+   {
+    "n": 20,
+    "q": "All fixed metal parts where located no greater than _____ horizontally of the inside walls of the pool shall be bonded unless separated by a permanent barrier.",
+    "choices": {
+     "a": "4 ft",
+     "b": "5 ft",
+     "c": "8 ft",
+     "d": "10 ft"
+    },
+    "ref": "680.26(B)(7)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 21,
+    "q": "All fixed metal parts where located no greater than _____ vertically above the maximum water level of the pool, observation stands, towers, or platforms, or any diving structures, shall be bonded.",
+    "choices": {
+     "a": "6 ft",
+     "b": "8 ft",
+     "c": "10 ft",
+     "d": "12 ft"
+    },
+    "ref": "680.26(B)(7)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 22,
+    "q": "Permanently installed fountains shall comply with Part(s) I and V of Article 680. Fountains that have water common to a pool shall also comply with Part(s) _____ of Article 680.",
+    "choices": {
+     "a": "II",
+     "b": "III",
+     "c": "IV",
+     "d": "all of these"
+    },
+    "ref": "680.50(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "Permanently installed fountains intended for recreational use by pedestrians, including _____, shall also comply with the requirements in 680.26.",
+    "choices": {
+     "a": "splash pads",
+     "b": "hot tubs",
+     "c": "spas",
+     "d": "all of these"
+    },
+    "ref": "680.50(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 24,
+    "q": "Permanently installed fountain equipment with ratings exceeding the low-voltage contact limit shall be located at least _____ horizontally from the inside walls of a spa or hot tub, unless separated from the spa or hot tub by a solid fence, wall, or other permanent barrier.",
+    "choices": {
+     "a": "3 ft",
+     "b": "5 ft",
+     "c": "6 ft",
+     "d": "10 ft"
+    },
+    "ref": "680.50(B)",
+    "answer": "b"
+   },
+   {
+    "n": 25,
+    "q": "Metal piping systems associated with a fountain shall be bonded to the equipment grounding conductor of the _____.",
+    "choices": {
+     "a": "branch circuit supplying the fountain",
+     "b": "bonding grid",
+     "c": "fountain’s equipotential plane",
+     "d": "grounding electrode system"
+    },
+    "ref": "680.54(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 26,
+    "q": "For the purpose of _____, the shell of a splash pad is bounded by the extent of the footing of the splash pad and rising to its exposed surface(s) and its collection basin area. The boundary of this area shall be considered to be the inside wall for the purpose of perimeter bonding.",
+    "choices": {
+     "a": "lightning protection",
+     "b": "equipotential bonding",
+     "c": "ground-fault protection",
+     "d": "current leakage prevention"
+    },
+    "ref": "680.54(C)",
+    "answer": "b"
+   },
+   {
+    "n": 27,
+    "q": "Electrical equipment for fountains that is supplied by a flexible cord shall have all exposed noncurrent-carrying metal parts grounded by an insulated copper equipment grounding conductor that is an integral part of the _____.",
+    "choices": {
+     "a": "cord",
+     "b": "feeder circuit",
+     "c": "branch circuit",
+     "d": "fountain"
+    },
+    "ref": "680.55(B)",
+    "answer": "a"
+   },
+   {
+    "n": 28,
+    "q": "All electrical equipment for fountains, including power-supply cords, shall be _____ protected.",
+    "choices": {
+     "a": "AFCI",
+     "b": "GFCI",
+     "c": "current-limiting",
+     "d": "GFPE"
+    },
+    "ref": "680.56(A)",
+    "answer": "b"
+   },
+   {
+    "n": 29,
+    "q": "For hydromassage bathtubs, small conductive surfaces not likely to become energized, such as air and water jets, supply valve assemblies, and drain fittings not connected to metallic piping, and towel bars, mirror frames, and similar nonelectrical equipment not connected to _____ shall not be required to be bonded.",
+    "choices": {
+     "a": "metal framing",
+     "b": "nonmetallic framing",
+     "c": "metal gas piping",
+     "d": "any of these"
+    },
+    "ref": "680.74(A) Ex 1",
+    "answer": "a"
+   },
+   {
+    "n": 30,
+    "q": "Where installed for hydromassage bathtubs, double-insulated _____ shall not be bonded.",
+    "choices": {
+     "a": "motors and blowers",
+     "b": "cords",
+     "c": "cables",
+     "d": "fittings"
+    },
+    "ref": "680.74(A) Ex 2",
+    "answer": "a"
+   },
+   {
+    "n": 31,
+    "q": "Where installed for hydromassage bathtubs, small conductive surfaces of electrical equipment not likely to become energized, such as the mounting strap or yoke of a listed light switch or receptacle that is grounded, shall not be required to be bonded.",
+    "choices": {
+     "a": "True",
+     "b": "False"
+    },
+    "ref": "680.74(A) Ex 3",
+    "answer": "a"
+   },
+   {
+    "n": 32,
+    "q": "Where installed for hydromassage bathtubs, _____ shall be bonded together.",
+    "choices": {
+     "a": "all exposed metal surfaces that are within 5 ft of the inside walls of the tub and not separated from the tub area by a permanent barrier",
+     "b": "small conductive surfaces such as towel bars and mirror frames",
+     "c": "double-insulated motors",
+     "d": "mounting straps or yokes of listed light switches or receptacles"
+    },
+    "ref": "680.74(A)(4)",
+    "answer": "a"
+   },
+   {
+    "n": 33,
+    "q": "The 8 AWG solid bonding jumper required for equipotential bonding in the area of hydromassage bathtubs shall not be required to be extended to any _____.",
+    "choices": {
+     "a": "remote panelboard",
+     "b": "service equipment",
+     "c": "electrode",
+     "d": "any of these"
+    },
+    "ref": "680.74(B)",
+    "answer": "d"
+   }
+  ]
+ },
+ "B&G_Art_690": {
+  "book": "B&G",
+  "quiz": "Art 690",
+  "page": 369,
+  "unit": "Article 690—Solar Photovoltaic (PV) Systems",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 690 applies to solar _____ systems, including the array circuit(s), inverter(s), and controller(s) for such systems.",
+    "choices": {
+     "a": "photoconductive",
+     "b": "PV",
+     "c": "photogenic",
+     "d": "photosynthesis"
+    },
+    "ref": "690.1",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "Exposed noncurrent-carrying metal parts of PV module frames, electrical equipment, and conductor enclosures of PV systems shall be connected to a(an) _____.",
+    "choices": {
+     "a": "grounding jumper",
+     "b": "bonding jumper",
+     "c": "equipment grounding conductor",
+     "d": "grounding jumper or bonding jumper"
+    },
+    "ref": "690.43",
+    "answer": "c"
+   },
+   {
+    "n": 3,
+    "q": "Devices and systems used for mounting PV modules that are also used for bonding module frames shall be _____ for bonding PV modules.",
+    "choices": {
+     "a": "listed",
+     "b": "labeled",
+     "c": "identified",
+     "d": "all of these"
+    },
+    "ref": "690.43(A)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "_____ conductors shall be permitted to be run separately from the PV system conductors within the PV array.",
+    "choices": {
+     "a": "Bonding",
+     "b": "Alternating-current",
+     "c": "Surge protective",
+     "d": "Equipment grounding"
+    },
+    "ref": "690.43(C)",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "The bonding requirements contained in 250.97 shall apply only to solidly grounded PV system circuits operating over _____ to ground.",
+    "choices": {
+     "a": "30V",
+     "b": "60V",
+     "c": "120V",
+     "d": "250V"
+    },
+    "ref": "690.43(D)",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "Equipment grounding conductors for PV system circuits shall be sized in accordance with _____.",
+    "choices": {
+     "a": "250.4",
+     "b": "250.66",
+     "c": "250.102",
+     "d": "250.122"
+    },
+    "ref": "690.45",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "For PV systems that are not solidly grounded, the _____ for the output of the PV system, where connected to associated distribution equipment connected to a grounding electrode system, shall be permitted to be the only connection to ground for the system.",
+    "choices": {
+     "a": "equipment grounding conductor",
+     "b": "grounding conductor",
+     "c": "grounded conductor",
+     "d": "any of these"
+    },
+    "ref": "690.47(A)(1)",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_810": {
+  "book": "B&G",
+  "quiz": "Art 810",
+  "page": 377,
+  "unit": "Article 810—Antenna Systems",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers antenna systems for radio and television receiving equipment, amateur and citizen band radio transmitting and receiving equipment, and certain features of transmitter safety.",
+    "choices": {
+     "a": "680",
+     "b": "700",
+     "c": "810",
+     "d": "840"
+    },
+    "ref": "810.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Masts and metal structures supporting antennas shall be grounded or bonded in accordance with 810.21, unless the antenna and its related supporting mast or structure are within a zone of protection defined by a _____ radius rolling sphere.",
+    "choices": {
+     "a": "75-ft",
+     "b": "100-ft",
+     "c": "125-ft",
+     "d": "150-ft"
+    },
+    "ref": "810.15",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "NFPA 780, Standard for the Installation of Lightning Protection Systems, provides information for the application of the term “_____” as used in 810.15.",
+    "choices": {
+     "a": "air terminals",
+     "b": "zone protection",
+     "c": "rolling sphere",
+     "d": "copper rod"
+    },
+    "ref": "810.15 Informational Note",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "Receiving station antenna discharge units shall be located outside the building or inside the building between the point of entrance of the lead-in and the radio set or transformers and as near as practicable to the _____.",
+    "choices": {
+     "a": "entrance of the conductors to the building",
+     "b": "intersystem bonding termination",
+     "c": "grounding electrode system",
+     "d": "any of these"
+    },
+    "ref": "810.20(B)",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "The bonding conductor or grounding electrode conductor for a radio/television receiving station antenna system shall be protected where subject to physical damage, and where installed in a metal raceway, both ends of the raceway shall be bonded to the _____ conductor.",
+    "choices": {
+     "a": "contained",
+     "b": "grounded",
+     "c": "ungrounded",
+     "d": "largest"
+    },
+    "ref": "810.21(D)",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "The bonding conductor or grounding electrode conductor for an antenna mast or antenna discharge unit for radio and television equipment shall be run to the _____ in as straight a line as practicable.",
+    "choices": {
+     "a": "lightning arrester",
+     "b": "surge-protective device",
+     "c": "grounding electrode",
+     "d": "main electrical disconnect enclosure"
+    },
+    "ref": "810.21(F)(2)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 7,
+    "q": "If the building or structure served has an intersystem bonding termination, the bonding conductor for the radio and television equipment antenna mast or antenna discharge unit, shall be connected to the _____.",
+    "choices": {
+     "a": "main electrical disconnect enclosure",
+     "b": "grounding electrode",
+     "c": "surge protective device",
+     "d": "intersystem bonding termination"
+    },
+    "ref": "810.21(F)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "For antenna systems, an intersystem bonding termination device shall not be mounted on a door or cover even if the door or cover is _____.",
+    "choices": {
+     "a": "plastic",
+     "b": "removable",
+     "c": "nonremovable",
+     "d": "fiberglass"
+    },
+    "ref": "810.21(F)(2)",
+    "answer": "c"
+   },
+   {
+    "n": 9,
+    "q": "The bonding conductor or grounding electrode conductor for radio and television receiving station antenna discharge units shall not be smaller than _____.",
+    "choices": {
+     "a": "10 AWG copper",
+     "b": "8 AWG aluminum",
+     "c": "17 AWG copper-clad steel or bronze",
+     "d": "any of these"
+    },
+    "ref": "810.21(H)",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "If a separate grounding electrode is installed for the radio and television receiving station equipment, it shall be bonded to the building’s electrical power grounding electrode system with a bonding jumper not smaller than _____.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "1/0 AWG"
+    },
+    "ref": "810.21(J)",
+    "answer": "c"
+   }
+  ]
  }
 }
