@@ -12378,5 +12378,213 @@
     "answer": "b"
    }
   ]
+ },
+ "B&G_Art_362": {
+  "book": "B&G",
+  "quiz": "Art 362",
+  "page": 287,
+  "unit": "Article 362—Electrical Nonmetallic Tubing (ENT)",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article _____ covers the use, installation, and construction specifications for electrical nonmetallic tubing (ENT) and associated fittings.",
+    "choices": {
+     "a": "358",
+     "b": "362",
+     "c": "366",
+     "d": "392"
+    },
+    "ref": "362.1",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "Where ENT is the wiring method and equipment grounding is required, a _____ equipment grounding conductor shall be installed in the raceway.",
+    "choices": {
+     "a": "separate",
+     "b": "additional",
+     "c": "supplemental",
+     "d": "none of these"
+    },
+    "ref": "362.60",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "Where ENT is the wiring method and equipment grounding is required, the equipment grounding conductor shall not be required where the _____ conductor is used as part of the effective ground-fault path as permitted.",
+    "choices": {
+     "a": "grounded",
+     "b": "equipment grounding",
+     "c": "ungrounded",
+     "d": "none of these"
+    },
+    "ref": "362.60. Ex 2",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_376": {
+  "book": "B&G",
+  "quiz": "Art 376",
+  "page": 288,
+  "unit": "Article 376—Metal Wireways",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Listed metal wireway shall be permitted _____ in accordance with 250.118(A)(13).",
+    "choices": {
+     "a": "as an equipment grounding conductor",
+     "b": "where subject to physical damage",
+     "c": "for use in corrosive environments",
+     "d": "to be installed through walls"
+    },
+    "ref": "376.60",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_386": {
+  "book": "B&G",
+  "quiz": "Art 386",
+  "page": 288,
+  "unit": "Article 386—Surface Metal Raceways",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 386 covers the use, installation, and construction specifications for surface _____ and associated fittings.",
+    "choices": {
+     "a": "nonmetallic raceways",
+     "b": "metal raceways",
+     "c": "metal wireways",
+     "d": "enclosures"
+    },
+    "ref": "386.1",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "Surface metal raceway enclosures providing a transition from other wiring methods shall have a means for connecting a(an) _____ conductor.",
+    "choices": {
+     "a": "grounded",
+     "b": "ungrounded",
+     "c": "equipment grounding",
+     "d": "all of these"
+    },
+    "ref": "386.60",
+    "answer": "c"
+   }
+  ]
+ },
+ "B&G_Art_392": {
+  "book": "B&G",
+  "quiz": "Art 392",
+  "page": 288,
+  "unit": "Article 392—Cable Trays",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Cable tray systems, including ladder, ventilated trough, ventilated channel, solid bottom, and other similar structures are covered within Article _____.",
+    "choices": {
+     "a": "358",
+     "b": "362",
+     "c": "366",
+     "d": "392"
+    },
+    "ref": "392.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Steel or aluminum cable tray systems are permitted to be used as an equipment grounding conductor, provided the cable tray sections and fittings are identified as _____, among other requirements.",
+    "choices": {
+     "a": "an equipment grounding conductor",
+     "b": "special equipment",
+     "c": "industrial grade",
+     "d": "all of these"
+    },
+    "ref": "392.60(B)(1)",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_404": {
+  "book": "B&G",
+  "quiz": "Art 404",
+  "page": 309,
+  "unit": "Article 404—Switches",
+  "questions": [
+   {
+    "n": 1,
+    "q": "Article 404 covers all _____ used as switches operating at 1,000V and below, unless specifically referenced elsewhere in this Code for higher voltages.",
+    "choices": {
+     "a": "switches",
+     "b": "switching devices",
+     "c": "circuit breakers",
+     "d": "all of these"
+    },
+    "ref": "404.1",
+    "answer": "d"
+   },
+   {
+    "n": 2,
+    "q": "Metal faceplates for snap switches, including dimmer and similar control switches, shall be connected _____ whether or not a metal faceplate is installed.",
+    "choices": {
+     "a": "to the grounded electrode",
+     "b": "to the equipment grounding conductor",
+     "c": "to the grounded conductor",
+     "d": "to the ungrounded conductor"
+    },
+    "ref": "404.9(B)",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "A snap switch wired under the provisions of 404.9(B) Ex 1 and located within 8 ft vertically, or _____ horizontally, of ground or exposed grounded metal objects shall be provided with a faceplate of nonconducting noncombustible material with nonmetallic attachment screws, unless the switch mounting strap or yoke is nonmetallic or the circuit is protected by a ground-fault circuit interrupter.",
+    "choices": {
+     "a": "3 ft",
+     "b": "5 ft",
+     "c": "7 ft",
+     "d": "9 ft"
+    },
+    "ref": "404.9(B) Ex 1",
+    "answer": "b"
+   },
+   {
+    "n": 4,
+    "q": "Snap switches in listed assemblies are not required to be connected to an equipment grounding conductor if _____.",
+    "choices": {
+     "a": "the device is provided with a nonmetallic faceplate and the device is designed such that no metallic faceplate replaces the one provided",
+     "b": "the device is equipped with a nonmetallic yoke",
+     "c": "all parts of the device that are accessible after installation of the faceplate are manufactured of nonmetallic material",
+     "d": "all of these"
+    },
+    "ref": "404.9(B) Ex 2(1), (3), and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "A snap switch with an integral nonmetallic enclosure complying with 300.15(E) shall be permitted without a _____ connection to an equipment grounding conductor.",
+    "choices": {
+     "a": "grounding",
+     "b": "bonding",
+     "c": "earth",
+     "d": "none of these"
+    },
+    "ref": "404.9(B) Ex 3",
+    "answer": "b"
+   },
+   {
+    "n": 6,
+    "q": "Metal enclosures for switches or circuit breakers shall be connected to a(an) _____ conductor.",
+    "choices": {
+     "a": "grounded",
+     "b": "grounding",
+     "c": "equipment grounding",
+     "d": "any of these"
+    },
+    "ref": "404.12",
+    "answer": "c"
+   }
+  ]
  }
 }
