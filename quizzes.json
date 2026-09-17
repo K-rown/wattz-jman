@@ -7902,5 +7902,4151 @@
     "answer": "a"
    }
   ]
+ },
+ "Exam_Prep_Unit_5": {
+  "book": "Exam Prep",
+  "quiz": "Unit 5",
+  "page": 385,
+  "unit": "Unit 5",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The circular mil area of a 12 AWG conductor is ___.",
+    "choices": {
+     "a": "6,530 cmils",
+     "b": "10,380 cmils",
+     "c": "16,510 cmils",
+     "d": "26,240 cmils"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "a"
+   },
+   {
+    "n": 2,
+    "q": "The circular mil area of a 10 AWG conductor is ___.",
+    "choices": {
+     "a": "6,530 cmils",
+     "b": "10,380 cmils",
+     "c": "16,510 cmils",
+     "d": "26,240 cmils"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 3,
+    "q": "The circular mil area of an 8 AWG conductor is ___.",
+    "choices": {
+     "a": "6,530 cmils",
+     "b": "10,380 cmils",
+     "c": "16,510 cmils",
+     "d": "26,240 cmils"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "c"
+   },
+   {
+    "n": 4,
+    "q": "The circular mil area of a 6 AWG conductor is ___.",
+    "choices": {
+     "a": "6,530 cmils",
+     "b": "10,380 cmils",
+     "c": "16,510 cmils",
+     "d": "26,240 cmils"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "What’s the cross-sectional area in circular mils for a 4 AWG conductor?",
+    "choices": {
+     "a": "41,740 cmil",
+     "b": "43,360 cmil",
+     "c": "45,380 cmil",
+     "d": "47,510 cmil"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "a"
+   },
+   {
+    "n": 6,
+    "q": "What’s the cross-sectional area in circular mils for a 2 AWG conductor?",
+    "choices": {
+     "a": "64,740 cmil",
+     "b": "66,360 cmil",
+     "c": "68,380 cmil",
+     "d": "70,690 cmil"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "What is the cross-sectional area in circular mils for a 1 AWG conductor?",
+    "choices": {
+     "a": "77,740 cmil",
+     "b": "79,360 cmil",
+     "c": "81,380 cmil",
+     "d": "83,690 cmil"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "What is the cross-sectional area in circular mils for a 1/0 AWG conductor?",
+    "choices": {
+     "a": "103,690 cmil",
+     "b": "105,600 cmil",
+     "c": "107,800 cmil",
+     "d": "111,600 cmil"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 9,
+    "q": "What is the cross-sectional area in circular mils for a 3/0 AWG aluminum conductor?",
+    "choices": {
+     "a": "163,690 cmil",
+     "b": "165,600 cmil",
+     "c": "167,800 cmil",
+     "d": "169,600 cmil"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "c"
+   },
+   {
+    "n": 10,
+    "q": "The resistance per 1,000 ft of 10 AWG solid conductor is approximately ___.",
+    "choices": {
+     "a": "0.2Ω",
+     "b": "0.5Ω",
+     "c": "0.8Ω",
+     "d": "1.2Ω"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "The resistance per 1,000 ft of 8 AWG conductor is approximately ___.",
+    "choices": {
+     "a": "0.2Ω",
+     "b": "0.5Ω",
+     "c": "0.8Ω",
+     "d": "1.2Ω"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "c"
+   },
+   {
+    "n": 12,
+    "q": "The resistance per 1,000 ft of 6 AWG conductor is approximately ___.",
+    "choices": {
+     "a": "0.2Ω",
+     "b": "0.5Ω",
+     "c": "0.8Ω",
+     "d": "1.2Ω"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "b"
+   },
+   {
+    "n": 13,
+    "q": "The resistance per 1,000 ft of 2 AWG conductor is approximately ___.",
+    "choices": {
+     "a": "0.2Ω",
+     "b": "0.5Ω",
+     "c": "0.8Ω",
+     "d": "1.2Ω"
+    },
+    "ref": "Chapter 9, Table 8",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "What is the resistance of 200 ft of 10 AWG solid?",
+    "choices": {
+     "a": "0.242Ω",
+     "b": "0.362Ω",
+     "c": "0.472Ω",
+     "d": "0.522Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 15,
+    "q": "What is the resistance of 400 ft of 6 AWG?",
+    "choices": {
+     "a": "0.1964Ω",
+     "b": "0.2163Ω",
+     "c": "0.2341Ω",
+     "d": "0.2531Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 16,
+    "q": "What is the resistance of 600 ft of 4 AWG?",
+    "choices": {
+     "a": "0.1848Ω",
+     "b": "0.1937Ω",
+     "c": "0.2126Ω",
+     "d": "0.2536Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 17,
+    "q": "What’s the resistance of 500 ft of 3 AWG aluminum?",
+    "choices": {
+     "a": "0.0231Ω",
+     "b": "0.1614Ω",
+     "c": "0.2015Ω",
+     "d": "0.2330Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "c"
+   },
+   {
+    "n": 18,
+    "q": "What is the resistance of 100 ft of 1 AWG?",
+    "choices": {
+     "a": "0.0154Ω",
+     "b": "0.1620Ω",
+     "c": "0.2330Ω",
+     "d": "0.5610Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 19,
+    "q": "What is the resistance of 400 ft of 1 AWG aluminum?",
+    "choices": {
+     "a": "0.0908Ω",
+     "b": "0.1012Ω",
+     "c": "0.1423Ω",
+     "d": "0.1564Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "b"
+   },
+   {
+    "n": 20,
+    "q": "What is the resistance of 400 ft of 1/0 AWG?",
+    "choices": {
+     "a": "0.0488Ω",
+     "b": "0.0513Ω",
+     "c": "0.0612Ω",
+     "d": "0.0738Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "a"
+   },
+   {
+    "n": 21,
+    "q": "What is the resistance of 800 ft of 1/0 AWG aluminum?",
+    "choices": {
+     "a": "0.1588Ω",
+     "b": "0.1608Ω",
+     "c": "0.1723Ω",
+     "d": "0.1856Ω"
+    },
+    "ref": "5.2 Conductor Resistance",
+    "answer": "b"
+   },
+   {
+    "n": 22,
+    "q": "What is the conductor voltage drop for a 10A continuous load using 12 AWG stranded wire located 100 ft from the power supply?",
+    "choices": {
+     "a": "3V",
+     "b": "4V",
+     "c": "5V",
+     "d": "6V"
+    },
+    "ref": "5.4 Circuit Conductors’ Voltage Drop—Ohm’s Law Method",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "What’s the conductor voltage drop for a 12A continuous load using 12 AWG stranded wire located 100 ft from the power supply?",
+    "choices": {
+     "a": "4.20V",
+     "b": "4.40V",
+     "c": "4.75V",
+     "d": "4.85V"
+    },
+    "ref": "5.4 Circuit Conductors’ Voltage Drop—Ohm’s Law Method",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "What’s the conductor voltage drop for a 20A load using 10 AWG stranded wire located 100 ft from the panelboard.",
+    "choices": {
+     "a": "4V",
+     "b": "5V",
+     "c": "6V",
+     "d": "7V"
+    },
+    "ref": "5.4 Circuit Conductors’ Voltage Drop—Ohm’s Law Method",
+    "answer": "b"
+   },
+   {
+    "n": 25,
+    "q": "What is the voltage drop of 14 AWG supplying a 6A load located 100 ft from the panel?",
+    "choices": {
+     "a": "3.77V",
+     "b": "5.59V",
+     "c": "5.63V",
+     "d": "5.66V"
+    },
+    "ref": "5.5 Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "a"
+   },
+   {
+    "n": 26,
+    "q": "What is the voltage drop of 10 AWG aluminum supplying a 16A load located 100 ft from the panel?",
+    "choices": {
+     "a": "6.54V",
+     "b": "6.59V",
+     "c": "6.63V",
+     "d": "6.66V"
+    },
+    "ref": "5.5 Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "a"
+   },
+   {
+    "n": 27,
+    "q": "What is the voltage drop of 10 AWG supplying a 24A load located 100 ft from the panel?",
+    "choices": {
+     "a": "5.58V",
+     "b": "5.69V",
+     "c": "5763V",
+     "d": "5.97V"
+    },
+    "ref": "5.5 Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "d"
+   },
+   {
+    "n": 28,
+    "q": "What is the voltage drop of 8 AWG supplying a 24A load located 150 ft from the panel?",
+    "choices": {
+     "a": "5.55V",
+     "b": "5.59V",
+     "c": "5.63V",
+     "d": "5.66V"
+    },
+    "ref": "5.5 Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "c"
+   },
+   {
+    "n": 29,
+    "q": "What is the voltage drop of 6 AWG aluminum supplying a 35A load located 100 ft from the panel?",
+    "choices": {
+     "a": "5.55V",
+     "b": "5.59V",
+     "c": "5.61V",
+     "d": "5.66V"
+    },
+    "ref": "5.5 Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "d"
+   },
+   {
+    "n": 30,
+    "q": "What’s the voltage drop of 10 AWG supplying an 18A motor load located 125 ft from the panel?",
+    "choices": {
+     "a": "5.41V",
+     "b": "5.59V",
+     "c": "5.63V",
+     "d": "5.66V"
+    },
+    "ref": "5.5 Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "b"
+   },
+   {
+    "n": 31,
+    "q": "What is the voltage drop of a 16A, 208V, three-phase load located 252 ft from the service using 10 AWG conductors?",
+    "choices": {
+     "a": "7.20V",
+     "b": "7.25V",
+     "c": "7.90V",
+     "d": "8.70V"
+    },
+    "ref": "5.6 Three-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "What is the voltage drop of a 26A, 208V, three-phase load located 200 ft from the panel, if wired with 8 AWG?",
+    "choices": {
+     "a": "5V",
+     "b": "6V",
+     "c": "7V",
+     "d": "8V"
+    },
+    "ref": "5.6 Three-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "c"
+   },
+   {
+    "n": 33,
+    "q": "What is the voltage drop of a 30A, 208V three-phase load located 125 ft from the panel, if wired with 6 AWG aluminum?",
+    "choices": {
+     "a": "5.05V",
+     "b": "5.15V",
+     "c": "5.25V",
+     "d": "5.70V"
+    },
+    "ref": "5.6 Three-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "c"
+   },
+   {
+    "n": 34,
+    "q": "What is the voltage drop of a 100A, 208V, three-phase load located 100 ft from the service using 2 AWG conductors?",
+    "choices": {
+     "a": "3.37V",
+     "b": "3.45V",
+     "c": "3.54V",
+     "d": "3.60V"
+    },
+    "ref": "5.6 Three-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "a"
+   },
+   {
+    "n": 35,
+    "q": "What is the voltage drop of a 150A, 208V, three-phase load located 150 ft from the service using 250 kcmil compact aluminum conductors?",
+    "choices": {
+     "a": "3.30V",
+     "b": "3.55V",
+     "c": "3.64V",
+     "d": "3.70V"
+    },
+    "ref": "5.6 Three-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "a"
+   },
+   {
+    "n": 36,
+    "q": "What size wire is required for a 16A, 120V load located 100 ft from the panel?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "5.7 Sizing Conductor Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "b"
+   },
+   {
+    "n": 37,
+    "q": "What size aluminum wire is required for a 50A/240V load located 200 ft from the panel?",
+    "choices": {
+     "a": "6 AWG",
+     "b": "4 AWG",
+     "c": "3 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "5.7 Sizing Conductor Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "d"
+   },
+   {
+    "n": 38,
+    "q": "What size wire is required for a 5 hp, 240V motor located 125 ft from a panelboard?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "5.7 Sizing Conductor Single-Phase Circuit Voltage Drop—Formula Method",
+    "answer": "b"
+   },
+   {
+    "n": 39,
+    "q": "What size wire is required for a 18A, 480V three-phase continuous located 300 ft from a panelboard?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "5.8 Sizing Conductor Three-Phase Circuit Voltage Drop— Formula Method",
+    "answer": "b"
+   },
+   {
+    "n": 40,
+    "q": "What size wire is required for a 28A, 480V, three-phase continuous located 300 ft from a panelboard?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "5.8 Sizing Conductor Three-Phase Circuit Voltage Drop— Formula Method",
+    "answer": "b"
+   }
+  ]
+ },
+ "Exam_Prep_Unit_4": {
+  "book": "Exam Prep",
+  "quiz": "Unit 4",
+  "page": 365,
+  "unit": "Unit 4",
+  "questions": [
+   {
+    "n": 1,
+    "q": "What is the FLC for a 5 hp, 115V, direct-current motor?",
+    "choices": {
+     "a": "28A",
+     "b": "32A",
+     "c": "40A",
+     "d": "56A"
+    },
+    "ref": "4.1 Motor Full-Load Current (FLC)",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "What is the FLC for a 5 hp, 115V, single-phase motor?",
+    "choices": {
+     "a": "28A",
+     "b": "32A",
+     "c": "40A",
+     "d": "56A"
+    },
+    "ref": "4.1 Motor Full-Load Current (FLC)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "What is the FLC for a 5 hp, 200V, single-phase motor?",
+    "choices": {
+     "a": "30.2A",
+     "b": "32.2A",
+     "c": "34.2A",
+     "d": "36.2A"
+    },
+    "ref": "4.1 Motor Full-Load Current (FLC)",
+    "answer": "b"
+   },
+   {
+    "n": 4,
+    "q": "What is the FLC for a 10 hp, 208V, three-phase motor?",
+    "choices": {
+     "a": "28.5A",
+     "b": "30.8A",
+     "c": "40.5A",
+     "d": "68.5A"
+    },
+    "ref": "4.1 Motor Full-Load Current (FLC)",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "What is the FLC for a 25 hp, 230V, three-phase motor?",
+    "choices": {
+     "a": "28A",
+     "b": "35A",
+     "c": "40A",
+     "d": "68A"
+    },
+    "ref": "4.1 Motor Full-Load Current (FLC)",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "What is the FLC for a 25 hp, 480V, three-phase motor?",
+    "choices": {
+     "a": "28A",
+     "b": "34A",
+     "c": "40A",
+     "d": "68A"
+    },
+    "ref": "4.1 Motor Full-Load Current (FLC)",
+    "answer": "b"
+   },
+   {
+    "n": 7,
+    "q": "What size conductor is required for a 1 hp, 115V, single-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "b"
+   },
+   {
+    "n": 8,
+    "q": "What size conductor is required for a 2 hp, 230V, single-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "What size conductor is required for a 5 hp, 208V, single-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "d"
+   },
+   {
+    "n": 10,
+    "q": "What size conductor is required for a 5 hp, 230V, single-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "What size conductor is required for a 5 hp, 208V, three-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "c"
+   },
+   {
+    "n": 12,
+    "q": "What size conductor is required for a 7½ hp, 230V, three-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "c"
+   },
+   {
+    "n": 13,
+    "q": "What size conductor is required for a 10 hp, 230V three-phase motor?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22",
+    "answer": "d"
+   },
+   {
+    "n": 14,
+    "q": "What size THW conductor is required for a 15 hp, 200V, three-phase motor, terminals rated 75°C?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "430.22",
+    "answer": "c"
+   },
+   {
+    "n": 15,
+    "q": "What size THW conductor is required for a 15 hp, 208V, three-phase induction type motor, terminals rated 75°C?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "3 AWG"
+    },
+    "ref": "430.22",
+    "answer": "b"
+   },
+   {
+    "n": 16,
+    "q": "What size THW conductor is required for a 15 hp, 230V, three-phase motor, terminals rated 75°C?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "3 AWG"
+    },
+    "ref": "430.22",
+    "answer": "b"
+   },
+   {
+    "n": 17,
+    "q": "What size THW conductor is required for a 25 hp, 460V, three-phase Design B motor, terminals rated 75°C?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "430.22",
+    "answer": "c"
+   },
+   {
+    "n": 18,
+    "q": "What size branch-circuit conductors are required for a 10 hp, three-phase, 208V motor with a nameplate FLA of 29A, rated for 5-minute service, used for intermittent duty, with terminals rated 75°C?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "430.22(E)",
+    "answer": "b"
+   },
+   {
+    "n": 19,
+    "q": "What size branch-circuit conductors are required for a 20 hp, three-phase, 230V motor with a nameplate FLA of 48A, rated for 30-minute service, used for short-time duty, with terminals rated 75°C?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "430.22(E)",
+    "answer": "c"
+   },
+   {
+    "n": 20,
+    "q": "Motors with a nameplate service factor (SF) rating of 1.15 or more must have the overload protective device sized at no more than ___ of the motor nameplate current rating.",
+    "choices": {
+     "a": "100 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "135 percent"
+    },
+    "ref": "430.32(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 21,
+    "q": "Motors with a nameplate temperature rise rating not over 40°C must have the overload protective device sized at no more than ___ of the motor nameplate current rating.",
+    "choices": {
+     "a": "100 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "135 percent"
+    },
+    "ref": "430.32(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "Motors that have a service factor rating of 1.10 must have the overload protective device sized at not more than ___ of the motor nameplate ampere rating.",
+    "choices": {
+     "a": "100 percent",
+     "b": "115 percent",
+     "c": "125 percent",
+     "d": "135 percent"
+    },
+    "ref": "430.32(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "What is the maximum overload setting for a continuous duty motor, with a nameplate current of 20A and service factor of 1.15?",
+    "choices": {
+     "a": "20A",
+     "b": "22A",
+     "c": "25A",
+     "d": "30A"
+    },
+    "ref": "4.6 Motor Overload Protection",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "What is the maximum overload setting for a three-phase motor, with a nameplate current of 30A, service factor of 1.15 and temperature rise of 40°C?",
+    "choices": {
+     "a": "31.50A",
+     "b": "35.70A",
+     "c": "37.50A",
+     "d": "39.50A"
+    },
+    "ref": "4.6 Motor Overload Protection",
+    "answer": "c"
+   },
+   {
+    "n": 25,
+    "q": "What is the maximum overload setting for an induction type motor, with a nameplate current of 30A and temperature rise of 50°C?",
+    "choices": {
+     "a": "31.5A",
+     "b": "34.5A",
+     "c": "37.5A",
+     "d": "39.5A"
+    },
+    "ref": "4.6 Motor Overload Protection",
+    "answer": "b"
+   },
+   {
+    "n": 26,
+    "q": "What is the maximum overload setting for a three-phase motor, with a nameplate current of 40A, service factor of 1.15 and temperature rise of 40°C?",
+    "choices": {
+     "a": "45A",
+     "b": "47A",
+     "c": "48A",
+     "d": "50A"
+    },
+    "ref": "4.6 Motor Overload Protection",
+    "answer": "d"
+   },
+   {
+    "n": 27,
+    "q": "If a dual-element time-delay fuse is used for overload protection, what size fuse is required for a 3 hp, 230V, motor, with a service factor of 1.15, if the motor nameplate current rating is 15A?",
+    "choices": {
+     "a": "15A",
+     "b": "20A",
+     "c": "25A",
+     "d": "30A"
+    },
+    "ref": "4.6 Motor Overload Protection",
+    "answer": "a"
+   },
+   {
+    "n": 28,
+    "q": "If a dual-element time-delay fuse is used for the overload protection, what size fuse is required for a 15 hp, 460V, three-phase motor, with a temperature rise of 40°C, and a motor nameplate current rating of 18A (FLA)?",
+    "choices": {
+     "a": "15A",
+     "b": "20A",
+     "c": "25A",
+     "d": "30A"
+    },
+    "ref": "4.6 Motor Overload Protection",
+    "answer": "b"
+   },
+   {
+    "n": 29,
+    "q": "The maximum rating or setting for the branch-circuit short-circuit and ground-fault protective device is ____ of the FLC on a motor if an inverse time breaker is used.",
+    "choices": {
+     "a": "150 percent",
+     "b": "175 percent",
+     "c": "250 percent",
+     "d": "300 percent"
+    },
+    "ref": "Table 430.52(C)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 30,
+    "q": "The maximum rating or setting for the branch-circuit short-circuit and ground-fault protective device is ____ of the FLC on a squirrel cage motor if a nontime delay fuse is used.",
+    "choices": {
+     "a": "150 percent",
+     "b": "175 percent",
+     "c": "250 percent",
+     "d": "300 percent"
+    },
+    "ref": "Table 430.52(C)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 31,
+    "q": "The maximum rating or setting for the branch-circuit short-circuit and ground-fault protective device is ____ of the FLC on Design-B motor if a dual element fuse is used.",
+    "choices": {
+     "a": "150 percent",
+     "b": "175 percent",
+     "c": "250 percent",
+     "d": "300 percent"
+    },
+    "ref": "Table 430.52(C)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 32,
+    "q": "What is the maximum size nontime delay fuses required for a 2 hp, 230V, single-phase motor?",
+    "choices": {
+     "a": "30A",
+     "b": "35A",
+     "c": "40A",
+     "d": "45A"
+    },
+    "ref": "Table 240.6(A), 430.52(C)(1), and Table 430.248",
+    "answer": "c"
+   },
+   {
+    "n": 33,
+    "q": "What is the maximum size dual-element time-delay fuses required for a 2 hp, 230V, single-phase motor?",
+    "choices": {
+     "a": "25A",
+     "b": "30A",
+     "c": "35A",
+     "d": "40A"
+    },
+    "ref": "Table 240.6(A), 430.52(C)(1), and Table 430.248",
+    "answer": "a"
+   },
+   {
+    "n": 34,
+    "q": "What is the maximum size inverse time circuit breaker required for a 5 hp, 208V, single-phase motor?",
+    "choices": {
+     "a": "35A",
+     "b": "40A",
+     "c": "60A",
+     "d": "80A"
+    },
+    "ref": "Table 240.6(A), 430.52(C)(1), and Table 430.248",
+    "answer": "d"
+   },
+   {
+    "n": 35,
+    "q": "What is the maximum size dual-element fuse for a 5 hp, 230V, three-phase squirrel-cage motor?",
+    "choices": {
+     "a": "20A",
+     "b": "25A",
+     "c": "30A",
+     "d": "35A"
+    },
+    "ref": "Table 240.6(A), 430.52(C)(1), and Table 430.250",
+    "answer": "c"
+   },
+   {
+    "n": 36,
+    "q": "What is the maximum size dual-element fuse for a 20 hp, 460V three-phase motor?",
+    "choices": {
+     "a": "35A",
+     "b": "40A",
+     "c": "45A",
+     "d": "50A"
+    },
+    "ref": "Table 240.6(A), 430.52(C)(1), and Table 430.250",
+    "answer": "d"
+   },
+   {
+    "n": 37,
+    "q": "What is the maximum size non-time delay fuse for a 20 hp, 460V three-phase squirrel cage resistor starting Design B motor?",
+    "choices": {
+     "a": "65A",
+     "b": "70A",
+     "c": "85A",
+     "d": "90A"
+    },
+    "ref": "Table 240.6(A), 430.52(C)(1), and Table 430.250",
+    "answer": "d"
+   },
+   {
+    "n": 38,
+    "q": "What size equipment grounding conductor is required for a 5 hp, 208V three-phase motor protected with an 80A breaker?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "Table 250.122 = 8 AWG",
+    "answer": "b"
+   },
+   {
+    "n": 39,
+    "q": "What size equipment grounding conductor is required for a 10 hp 230V three-phase motor protected with a 70A breaker?",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "3 AWG"
+    },
+    "ref": "Table 250.122 = 8 AWG",
+    "answer": "a"
+   },
+   {
+    "n": 40,
+    "q": "What size feeder is required for a 3 hp and 5 hp, 230V, single-phase motors?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "430.24",
+    "answer": "c"
+   },
+   {
+    "n": 41,
+    "q": "What size THW feeder is required for two 7½ hp, 240V, dc motors, terminals rated 75°C?",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "430.24",
+    "answer": "c"
+   },
+   {
+    "n": 42,
+    "q": "What size THW feeder is required for two 10 hp and one 20 hp, 208V, three-phase motors?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "430.24",
+    "answer": "a"
+   },
+   {
+    "n": 43,
+    "q": "What size THW feeder is required for two 7½ hp and two 15 hp, 230V three-phase motors, terminals rated 75°C?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "1/0 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "430.24",
+    "answer": "b"
+   },
+   {
+    "n": 44,
+    "q": "What is the maximum size inverse time breaker (ITB) required for a 3 hp and 5 hp, 230V three-phase motors?",
+    "choices": {
+     "a": "40A",
+     "b": "45A",
+     "c": "55A",
+     "d": "60A"
+    },
+    "ref": "Table 240.6(A), 430.62(A), and Table 430.52(C)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 45,
+    "q": "What is the maximum size dual-element fuse (DE) is required for a 7½ hp and 10 hp, 240V dc motors?",
+    "choices": {
+     "a": "80A",
+     "b": "90A",
+     "c": "100A",
+     "d": "110A"
+    },
+    "ref": "Table 240.6(A), 430.62(A), and Table 430.52(C)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 46,
+    "q": "What is the maximum size inverse time breaker (ITB) protection required for two 10 hp and one 20 hp, 208V, three-phase motors?",
+    "choices": {
+     "a": "125A",
+     "b": "150A",
+     "c": "175A",
+     "d": "200A"
+    },
+    "ref": "Table 240.6(A), 430.62(A), and Table 430.52(C)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 47,
+    "q": "What is the maximum size non-time delay fuse is required for two 7½ hp and one 15 hp, 230V three-phase motors?",
+    "choices": {
+     "a": "125A",
+     "b": "150A",
+     "c": "175A",
+     "d": "200A"
+    },
+    "ref": "Table 240.6(A), 430.62(A), and Table 430.52(C)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 48,
+    "q": "What size inverse time circuit breaker is required for the feeder supplying the three motors? • One 25 hp, 460V, 3-phase, squirrel-cage motor, nameplate full-load current 32A, Design B, Service Factor 1.15 • Two 30 hp, 460V, 3-phase, wound-rotor motors, primary current 38A, secondary current 65A",
+    "choices": {
+     "a": "100A",
+     "b": "125A",
+     "c": "150A",
+     "d": "175A"
+    },
+    "ref": "4.11 Feeder Short-Circuit and Ground-Fault Protection [430.62(A)]",
+    "answer": "c"
+   },
+   {
+    "n": 49,
+    "q": "What size conductor is permitted for an air-conditioning unit, where the nameplate states minimum circuit ampacity 30A, with maximum overcurrent protection of 50A?",
+    "choices": {
+     "a": "18 AWG",
+     "b": "16 AWG",
+     "c": "12 AWG",
+     "d": "10 AWG"
+    },
+    "ref": "440.4(B)",
+    "answer": "d"
+   },
+   {
+    "n": 50,
+    "q": "What size conductor is permitted for an air-conditioning unit, where the nameplate states minimum circuit ampacity 45A, with maximum overcurrent protection of 80A?",
+    "choices": {
+     "a": "12 AWG",
+     "b": "10 AWG",
+     "c": "8 AWG",
+     "d": "6 AWG"
+    },
+    "ref": "440.4(B)",
+    "answer": "d"
+   },
+   {
+    "n": 51,
+    "q": "What size branch-circuit short-circuit and ground-fault protective device is required for an 18.6A refrigerant motor-compressor with a 1.5A fan?",
+    "choices": {
+     "a": "35A",
+     "b": "40A",
+     "c": "45A",
+     "d": "50A"
+    },
+    "ref": "440.22(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 52,
+    "q": "What size branch-circuit short-circuit and ground-fault protective device is required for an 18.6A refrigerant motor-compressor with a 1.5A fan, where the 175% protective device rating is not sufficient for the starting current of the motor?",
+    "choices": {
+     "a": "35A",
+     "b": "40A",
+     "c": "45A",
+     "d": "50A"
+    },
+    "ref": "440.22(B)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 53,
+    "q": "What size minimum branch-circuit conductor is required for a 16A refrigerant motor-compressor with a 2A fan?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "440.33",
+    "answer": "c"
+   },
+   {
+    "n": 54,
+    "q": "What size minimum branch-circuit conductor is required for a 25A refrigerant motor-compressor with a 2A fan, terminals rated 75°C?",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "440.33",
+    "answer": "c"
+   },
+   {
+    "n": 55,
+    "q": "What is the maximum primary overcurrent device rating for a 25 kVA, 240V transformer with no secondary overcurrent protection?",
+    "choices": {
+     "a": "90A",
+     "b": "100A",
+     "c": "125A",
+     "d": "150A"
+    },
+    "ref": "Table 450.3(B) Note 1",
+    "answer": "d"
+   },
+   {
+    "n": 56,
+    "q": "What is the maximum primary overcurrent device rating for a 45 kVA, 208V three-phase transformer with no secondary overcurrent protection?",
+    "choices": {
+     "a": "175A",
+     "b": "200A",
+     "c": "225A",
+     "d": "250A"
+    },
+    "ref": "Table 450.3(B) Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 57,
+    "q": "What is the maximum primary overcurrent device rating for a 75 kVA, 208V three-phase transformer with no secondary overcurrent protection?",
+    "choices": {
+     "a": "250A",
+     "b": "300A",
+     "c": "350A",
+     "d": "400A"
+    },
+    "ref": "Table 450.3(B) Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 58,
+    "q": "What is the maximum primary overcurrent device rating for a 112.5 kVA, 480V, three-phase transformer with no secondary overcurrent protection?",
+    "choices": {
+     "a": "175A",
+     "b": "200A",
+     "c": "225A",
+     "d": "250A"
+    },
+    "ref": "Table 450.3(B) Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 59,
+    "q": "What is the maximum primary overcurrent protective device for a 40A autotransformer with no secondary overcurrent protection?",
+    "choices": {
+     "a": "50A",
+     "b": "60A",
+     "c": "70A",
+     "d": "80A"
+    },
+    "ref": "450.4",
+    "answer": "a"
+   },
+   {
+    "n": 60,
+    "q": "What is the maximum primary overcurrent protective device for a 60A autotransformer with no secondary overcurrent protection?",
+    "choices": {
+     "a": "60A",
+     "b": "70A",
+     "c": "80A",
+     "d": "90A"
+    },
+    "ref": "450.4",
+    "answer": "c"
+   },
+   {
+    "n": 61,
+    "q": "What size secondary conductor not over 10 ft is required for a 75 kVA, three-phase, 480V to 120/208V transformer that terminates in a 300A main breaker?",
+    "choices": {
+     "a": "350 kcmil",
+     "b": "400 kcmil",
+     "c": "500 kcmil",
+     "d": "600 kcmil"
+    },
+    "ref": "240.21(C)(2)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 62,
+    "q": "What size secondary conductor not over 10 ft is required for a 112.5 kVA, three-phase, 480V to 120/208V transformer that terminates in a 400A main breaker?",
+    "choices": {
+     "a": "350 kcmil",
+     "b": "400 kcmil",
+     "c": "500 kcmil",
+     "d": "600 kcmil"
+    },
+    "ref": "240.21(C)(2)(1)",
+    "answer": "d"
+   }
+  ]
+ },
+ "Exam_Prep_Unit_6": {
+  "book": "Exam Prep",
+  "quiz": "Unit 6",
+  "page": 407,
+  "unit": "Unit 6",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The following information applies to the next two questions. Using the optional method for a 1500 sq ft dwelling unit containing the following loads: • Disposal, waste (1 kVA) • Dishwasher (1.50 kVA) • Water heater (5 kW) • Dryer (5.50 kW) • Cooktop (6 kW) • Two ovens (each 3 kW) • Two separately controlled 5 kW space-electric heating-units • Air-conditioning (17A/240V) What is the service disconnecting rating?",
+    "choices": {
+     "a": "90A",
+     "b": "100A",
+     "c": "110A",
+     "d": "125A"
+    },
+    "ref": "The following information applies to the next two questions. Using the optional method for a 1500 sq ft dwelling unit containing the following loads: • Disposal, waste (1 kVA) • Dishwasher (1.50 kVA) • Water heater (5 kW) • Dryer (5.50 kW) • Cooktop (6 kW) • Two ovens (each 3 kW) • Two separately controlled 5 kW space-electric heating-units • Air-conditioning (17A/240V)",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "The following information applies to the next two questions. Using the optional method for a 1500 sq ft dwelling unit containing the following loads: • Disposal, waste (1 kVA) • Dishwasher (1.50 kVA) • Water heater (5 kW) • Dryer (5.50 kW) • Cooktop (6 kW) • Two ovens (each 3 kW) • Two separately controlled 5 kW space-electric heating-units • Air-conditioning (17A/240V) What size aluminum conductor is required for the service disconnect?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "1/0 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "The following information applies to the next two questions. Using the optional method for a 1500 sq ft dwelling unit containing the following loads: • Disposal, waste (1 kVA) • Dishwasher (1.50 kVA) • Water heater (5 kW) • Dryer (5.50 kW) • Cooktop (6 kW) • Two ovens (each 3 kW) • Two separately controlled 5 kW space-electric heating-units • Air-conditioning (17A/240V)",
+    "answer": "a"
+   },
+   {
+    "n": 3,
+    "q": "The following information applies to the next two questions. Using the optional method for a 3,000 sq ft dwelling unit plus 900 sq ft porch and 400 sq ft carport (not a garage) with the following loads: • Dishwasher, 1.50 kW) • Disposal, waste (1 kVA) • Trash compactor (1.50 kVA) • Hot tub (40A/240V) • RV outlet (50A/240V) • Two A/C heat-pumps (each at 21A/240V) • Radiant heating (totaling 50A/240V with six separately controlled units) What is the service disconnecting rating?",
+    "choices": {
+     "a": "125A",
+     "b": "150A",
+     "c": "175A",
+     "d": "200A"
+    },
+    "ref": "The following information applies to the next two questions. Using the optional method for a 3,000 sq ft dwelling unit plus 900 sq ft porch and 400 sq ft carport (not a garage) with the following loads: • Dishwasher, 1.50 kW) • Disposal, waste (1 kVA) • Trash compactor (1.50 kVA) • Hot tub (40A/240V) • RV outlet (50A/240V) • Two A/C heat-pumps (each at 21A/240V) • Radiant heating (totaling 50A/240V with six separately",
+    "answer": "b"
+   },
+   {
+    "n": 4,
+    "q": "The following information applies to the next two questions. Using the optional method for a 3,000 sq ft dwelling unit plus 900 sq ft porch and 400 sq ft carport (not a garage) with the following loads: • Dishwasher, 1.50 kW) • Disposal, waste (1 kVA) • Trash compactor (1.50 kVA) • Hot tub (40A/240V) • RV outlet (50A/240V) • Two A/C heat-pumps (each at 21A/240V) • Radiant heating (totaling 50A/240V with six separately controlled units) What size aluminum conductor is required for the service disconnect?",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "The following information applies to the next two questions. Using the optional method for a 3,000 sq ft dwelling unit plus 900 sq ft porch and 400 sq ft carport (not a garage) with the following loads: • Dishwasher, 1.50 kW) • Disposal, waste (1 kVA) • Trash compactor (1.50 kVA) • Hot tub (40A/240V) • RV outlet (50A/240V) • Two A/C heat-pumps (each at 21A/240V) • Radiant heating (totaling 50A/240V with six separately",
+    "answer": "b"
+   },
+   {
+    "n": 5,
+    "q": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has a: • Range (12 kW) • Water heater (2.5 kW) • Dishwasher (1.2 kW) • Electric space heating installed in five rooms (9 kW) • Clothes dryer (5 kW) • Room air-conditioning unit (6A, 230V) Using the optional method, what size service is required?",
+    "choices": {
+     "a": "81A",
+     "b": "85A",
+     "c": "88A",
+     "d": "90A"
+    },
+    "ref": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has a: • Range (12 kW) • Water heater (2.5 kW) • Dishwasher (1.2 kW) • Electric space heating installed in five rooms (9 kW) • Clothes dryer (5 kW) • Room air-conditioning unit (6A, 230V)",
+    "answer": "d"
+   },
+   {
+    "n": 6,
+    "q": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has a: • Range (12 kW) • Water heater (2.5 kW) • Dishwasher (1.2 kW) • Electric space heating installed in five rooms (9 kW) • Clothes dryer (5 kW) • Room air-conditioning unit (6A, 230V) What size neutral is required?",
+    "choices": {
+     "a": "45A",
+     "b": "57A",
+     "c": "64A",
+     "d": "73A"
+    },
+    "ref": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has a: • Range (12 kW) • Water heater (2.5 kW) • Dishwasher (1.2 kW) • Electric space heating installed in five rooms (9 kW) • Clothes dryer (5 kW) • Room air-conditioning unit (6A, 230V)",
+    "answer": "c"
+   },
+   {
+    "n": 7,
+    "q": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has: • Two wall-mounted ovens (4 kW) • One counter-mounted cooking unit (5.1 kW) • Water heater (4.5 kW) • Dishwasher (1.2 kW) • Combination clothes washer and dryer (5 kW) • Six room air-conditioning units (7A, 230V) • Permanently installed bathroom space heater (1.5 kW) Using the optional method, what size service is required?",
+    "choices": {
+     "a": "109A",
+     "b": "111A",
+     "c": "115A",
+     "d": "122A"
+    },
+    "ref": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has: • Two wall-mounted ovens (4 kW) • One counter-mounted cooking unit (5.1 kW) • Water heater (4.5 kW) • Dishwasher (1.2 kW) • Combination clothes washer and dryer (5 kW) • Six room air-conditioning units (7A, 230V) • Permanently installed bathroom space heater (1.5 kW)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has: • Two wall-mounted ovens (4 kW) • One counter-mounted cooking unit (5.1 kW) • Water heater (4.5 kW) • Dishwasher (1.2 kW) • Combination clothes washer and dryer (5 kW) • Six room air-conditioning units (7A, 230V) • Permanently installed bathroom space heater (1.5 kW) What size neutral is required?",
+    "choices": {
+     "a": "45A",
+     "b": "62A",
+     "c": "64A",
+     "d": "73A"
+    },
+    "ref": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has: • Two wall-mounted ovens (4 kW) • One counter-mounted cooking unit (5.1 kW) • Water heater (4.5 kW) • Dishwasher (1.2 kW) • Combination clothes washer and dryer (5 kW) • Six room air-conditioning units (7A, 230V) • Permanently installed bathroom space heater (1.5 kW)",
+    "answer": "b"
+   },
+   {
+    "n": 9,
+    "q": "The following information applies to the next question. The dwelling has a floor area of 2,000 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has a: • Range (12 kW) • Water heater (4.5 kW) • Dishwasher (1.2 kW) • Clothes dryer (5 kW) • Heat pump (24A) with 15 kW of backup heat Using the optional method, what size service is required?",
+    "choices": {
+     "a": "139A",
+     "b": "145A",
+     "c": "147A",
+     "d": "152A"
+    },
+    "ref": "The following information applies to the next question. The dwelling has a floor area of 2,000 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. It has a: • Range (12 kW) • Water heater (4.5 kW) • Dishwasher (1.2 kW) • Clothes dryer (5 kW) • Heat pump (24A) with 15 kW of backup heat",
+    "answer": "b"
+   },
+   {
+    "n": 10,
+    "q": "What is the general lighting demand load for a 2,500 sq ft dwelling unit, with a 1,000 sq ft open porch and 500 sq ft garage?",
+    "choices": {
+     "a": "6,575 VA",
+     "b": "6,675 VA",
+     "c": "6,775 VA",
+     "d": "6,825 VA"
+    },
+    "ref": "Table 220.45:",
+    "keysays": "(b) 6,575 VA",
+    "answer": "a",
+    "matched": "key says (b) “6,575 VA” (later printing wording for choice a)"
+   },
+   {
+    "n": 11,
+    "q": "What is the general lighting demand load for a 4,000 sq ft dwelling unit, with a 1,000 sq ft open porch and 1,000 sq ft garage?",
+    "choices": {
+     "a": "8,475 VA",
+     "b": "8,575 VA",
+     "c": "8,675 VA",
+     "d": "8,775 VA"
+    },
+    "ref": "Table 220.45:",
+    "answer": "d"
+   },
+   {
+    "n": 12,
+    "q": "What is the general lighting demand load for a 5,000 sq ft dwelling unit, with a 1,000 sq ft open porch and 1,000 sq ft garage?",
+    "choices": {
+     "a": "9,525 VA",
+     "b": "9,625 VA",
+     "c": "9,725 VA",
+     "d": "9,825 VA"
+    },
+    "ref": "Table 220.45",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. Appliances are a 12 kW range and a 5.5 kW, 240V dryer. Using the standard method, what size service is required?",
+    "choices": {
+     "a": "55A",
+     "b": "67A",
+     "c": "78A",
+     "d": "93A"
+    },
+    "ref": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. Appliances are a 12 kW range and a 5.5 kW, 240V dryer.",
+    "answer": "c"
+   },
+   {
+    "n": 14,
+    "q": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. Appliances are a 12 kW range and a 5.5 kW, 240V dryer. What size neutral is required?",
+    "choices": {
+     "a": "45A",
+     "b": "57A",
+     "c": "61A",
+     "d": "73A"
+    },
+    "ref": "The following information applies to the next two questions. The dwelling has a floor area of 1,500 ft2, exclusive of an unfinished cellar not adaptable for future use, unfinished attic, and open porches. Appliances are a 12 kW range and a 5.5 kW, 240V dryer.",
+    "answer": "c"
+   },
+   {
+    "n": 15,
+    "q": "What is the demand load for a dishwasher (1.2 kW) and water heater (4 kW)?",
+    "choices": {
+     "a": "4.8 kVA",
+     "b": "4.9 kVA",
+     "c": "5.1 kVA",
+     "d": "5.2 kVA"
+    },
+    "ref": "220.53",
+    "answer": "d"
+   },
+   {
+    "n": 16,
+    "q": "What is the demand load for a disposal (940 VA), a dishwasher (1,250 VA), and a water heater (4,500W)?",
+    "choices": {
+     "a": "5,018 VA",
+     "b": "6,272 VA",
+     "c": "6,690 VA",
+     "d": "8,363 VA"
+    },
+    "ref": "220.53",
+    "answer": "c"
+   },
+   {
+    "n": 17,
+    "q": "What is the demand load for a disposal (940 VA), a dishwasher (1,250 VA), a trash compactor (1,100 VA), and a water heater (4,500W)?",
+    "choices": {
+     "a": "5,843 VA",
+     "b": "7,303 VA",
+     "c": "7,490 VA",
+     "d": "9,738 VA"
+    },
+    "ref": "220.53",
+    "answer": "a"
+   },
+   {
+    "n": 18,
+    "q": "What is the demand load for a 4 kW dryer?",
+    "choices": {
+     "a": "3 kW",
+     "b": "4 kW",
+     "c": "5 kW",
+     "d": "6 kW"
+    },
+    "ref": "220.54",
+    "answer": "c"
+   },
+   {
+    "n": 19,
+    "q": "What is the demand load for a 5 kW dryer?",
+    "choices": {
+     "a": "3 kW",
+     "b": "4 kW",
+     "c": "5 kW",
+     "d": "6 kW"
+    },
+    "ref": "220.54",
+    "answer": "c"
+   },
+   {
+    "n": 20,
+    "q": "What is the demand load for a 5.5 kW dryer?",
+    "choices": {
+     "a": "3 kW",
+     "b": "4 kW",
+     "c": "5 kW",
+     "d": "5.5 kW"
+    },
+    "ref": "220.54",
+    "answer": "d"
+   },
+   {
+    "n": 21,
+    "q": "What is the demand load for a 9 kW range?",
+    "choices": {
+     "a": "7 kW",
+     "b": "8 kW",
+     "c": "9 kW",
+     "d": "1 kW"
+    },
+    "ref": "Table 220.55, Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 22,
+    "q": "What is the demand load for an 11.5 kW range?",
+    "choices": {
+     "a": "7 kW",
+     "b": "8 kW",
+     "c": "9 kW",
+     "d": "1 kW"
+    },
+    "ref": "Table 220.55, Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 23,
+    "q": "What is the demand load for a 13.6 kW range?",
+    "choices": {
+     "a": "6 kW",
+     "b": "8 kW",
+     "c": "8.8 kW",
+     "d": "9.2 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "c"
+   },
+   {
+    "n": 24,
+    "q": "What is the demand load for a 15 kW range?",
+    "choices": {
+     "a": "8.2 kW",
+     "b": "9.2 kW",
+     "c": "10.2 kW",
+     "d": "11.2 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 25,
+    "q": "What is the demand load for a 15.5 kW range?",
+    "choices": {
+     "a": "9.6 kW",
+     "b": "112 kW",
+     "c": "13.2 kW",
+     "d": "15.6 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 26,
+    "q": "What is the demand load for a 16 kW range?",
+    "choices": {
+     "a": "9.6 kW",
+     "b": "11,2 kW",
+     "c": "13.2 kW",
+     "d": "15.6 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 27,
+    "q": "What is the demand load for a 19 kW range?",
+    "choices": {
+     "a": "10.2 kW",
+     "b": "10.8 kW",
+     "c": "11.2 kW",
+     "d": "11.5 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 28,
+    "q": "What is the demand load for a 24 kW range?",
+    "choices": {
+     "a": "12.8 kW",
+     "b": "13.2 kW",
+     "c": "14.3 kW",
+     "d": "14.8 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 29,
+    "q": "What is the branch-circuit load for a 3 kW oven?",
+    "choices": {
+     "a": "3 kW",
+     "b": "4 kW",
+     "c": "5 kW",
+     "d": "6 kW"
+    },
+    "ref": "Table 220.55 Note 5",
+    "answer": "a"
+   },
+   {
+    "n": 30,
+    "q": "What is the branch-circuit demand load for a 6 kW counter-mounted cooking unit?",
+    "choices": {
+     "a": "3 kW",
+     "b": "4 kW",
+     "c": "5 kW",
+     "d": "6 kW"
+    },
+    "ref": "Table 220.55 Note 5",
+    "answer": "d"
+   },
+   {
+    "n": 31,
+    "q": "What is the branch-circuit demand load for two 3 kW ovens and one 6 kW cooktop connected to the same branch circuit in the same room?",
+    "choices": {
+     "a": "5 kW",
+     "b": "6 kW",
+     "c": "7 kW",
+     "d": "8 kW"
+    },
+    "ref": "Table 220.55 Note 6",
+    "answer": "d"
+   },
+   {
+    "n": 32,
+    "q": "What is the demand load for a 28A/240V air conditioner versus three baseboard heaters (3 kW each)?",
+    "choices": {
+     "a": "6 kW",
+     "b": "7 kW",
+     "c": "8 kW",
+     "d": "9 kW"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "d"
+   },
+   {
+    "n": 33,
+    "q": "What is the demand load for a 17A/240V air conditioner versus 8 kW of space electric heating?",
+    "choices": {
+     "a": "4 kW",
+     "b": "5 kW",
+     "c": "6 kW",
+     "d": "8 kW"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "d"
+   },
+   {
+    "n": 34,
+    "q": "What is the demand load for a 28A/240V air conditioner versus 8 kW of space electric heating?",
+    "choices": {
+     "a": "8.1 kVA",
+     "b": "8.2 kVA",
+     "c": "8.4 kVA",
+     "d": "8.6 kVA"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "c"
+   },
+   {
+    "n": 35,
+    "q": "What is the demand load for a 15A/240V heat-pump air conditioner with 6 kW of supplemental space electric heating?",
+    "choices": {
+     "a": "10.1 kVA",
+     "b": "10.2 kVA",
+     "c": "10.3 kVA",
+     "d": "10.5 kVA"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "d"
+   },
+   {
+    "n": 36,
+    "q": "What is the demand load for a 20A/240V air conditioner versus 8 kW of space electric heating?",
+    "choices": {
+     "a": "4 kW",
+     "b": "5 kW",
+     "c": "6 kW",
+     "d": "8 kW"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "d"
+   },
+   {
+    "n": 37,
+    "q": "What is the demand load for a 25A/240V air conditioner versus 8 kW of space electric heating?",
+    "choices": {
+     "a": "5 kW",
+     "b": "6 kW",
+     "c": "7 kW",
+     "d": "8 kW"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "d"
+   },
+   {
+    "n": 38,
+    "q": "What size service conductor is required if the demand load for a dwelling unit is 120A?",
+    "choices": {
+     "a": "2 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "Table 310.12(A)",
+    "answer": "a"
+   },
+   {
+    "n": 39,
+    "q": "What size service conductor is required if the demand load for a dwelling unit is 140A?",
+    "choices": {
+     "a": "1 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "Table 310.12(A)",
+    "answer": "a"
+   },
+   {
+    "n": 40,
+    "q": "What size aluminum feeder conductor is required if the demand load for a dwelling unit is 170A?",
+    "choices": {
+     "a": "2 AWG",
+     "b": "1 AWG",
+     "c": "1/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "Table 310.12(A)",
+    "answer": "d"
+   },
+   {
+    "n": 41,
+    "q": "What size feeder conductor is required if the demand load for a dwelling unit is 220A?",
+    "choices": {
+     "a": "2 AWG",
+     "b": "1 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "Table 310.12(A)",
+    "answer": "d"
+   },
+   {
+    "n": 42,
+    "q": "What size service conductor is required if the demand load for a dwelling unit is 300A?",
+    "choices": {
+     "a": "2 AWG",
+     "b": "1 AWG",
+     "c": "2/0 AWG",
+     "d": "250 kcmil"
+    },
+    "ref": "Table 310.12(A)",
+    "answer": "d"
+   },
+   {
+    "n": 43,
+    "q": "What is the general lighting demand load for a 1,500 sq ft dwelling unit?",
+    "choices": {
+     "a": "4,700 VA",
+     "b": "4,900 VA",
+     "c": "5,100 VA",
+     "d": "5,300 VA"
+    },
+    "ref": "220.52(A), 220.52(B), 220.41 and Table 220.45",
+    "answer": "c"
+   },
+   {
+    "n": 44,
+    "q": "What is the demand load for one dishwasher (1.5 kVA) and one water heater (4 kW)?",
+    "choices": {
+     "a": "5.1 kVA",
+     "b": "5.3 kVA",
+     "c": "5.5 kVA",
+     "d": "5.7 kVA"
+    },
+    "ref": "220.53",
+    "answer": "c"
+   },
+   {
+    "n": 45,
+    "q": "What is the demand load for a 4.5 kW dryer?",
+    "choices": {
+     "a": "4 kW",
+     "b": "5 kW",
+     "c": "6 kW",
+     "d": "7 kW"
+    },
+    "ref": "220.54",
+    "answer": "b"
+   },
+   {
+    "n": 46,
+    "q": "What is the demand load for a 14 kW range?",
+    "choices": {
+     "a": "8.5 kW",
+     "b": "8.6 kW",
+     "c": "8.8 kW",
+     "d": "8.9 kW"
+    },
+    "ref": "Table 220.55 Note 1",
+    "answer": "c"
+   },
+   {
+    "n": 47,
+    "q": "What is the demand load for a18A/240V air conditioner versus 6 kW electric heating?",
+    "choices": {
+     "a": "3 kW",
+     "b": "4 kW",
+     "c": "5 kW",
+     "d": "6 kW"
+    },
+    "ref": "220.50, 220.51, and 220.60",
+    "answer": "d"
+   },
+   {
+    "n": 48,
+    "q": "What is the minimum demand load for an electric vehicle outlet?",
+    "choices": {
+     "a": "6,900 VA",
+     "b": "7,000 VA",
+     "c": "7,200 VA",
+     "d": "7,400 VA"
+    },
+    "ref": "220.57",
+    "answer": "c"
+   },
+   {
+    "n": 49,
+    "q": "What size service conductor is required for a dwelling unit having a total demand load of 30 kVA?",
+    "choices": {
+     "a": "4 AWG",
+     "b": "2 AWG",
+     "c": "1/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "Table 310.12(A)",
+    "answer": "b"
+   },
+   {
+    "n": 50,
+    "q": "How many 15A, 120V general purpose circuits are required for a 2,000 sq ft dwelling unit?",
+    "choices": {
+     "a": "1 circuit",
+     "b": "2 circuits",
+     "c": "3 circuits",
+     "d": "4 circuits"
+    },
+    "ref": "220.11(A) and Annex D1(a) Example",
+    "answer": "d"
+   },
+   {
+    "n": 51,
+    "q": "How many 15A, 120V general purpose circuits are required for a 4,000 sq ft dwelling unit?",
+    "choices": {
+     "a": "4 circuits",
+     "b": "5 circuits",
+     "c": "6 circuits",
+     "d": "7 circuits"
+    },
+    "ref": "220.11(A) and Annex D1(a) Example",
+    "answer": "d"
+   },
+   {
+    "n": 52,
+    "q": "How many 20A, 120V general purpose circuits are required for a 2,000 sq ft dwelling unit?",
+    "choices": {
+     "a": "1 circuit",
+     "b": "2 circuits",
+     "c": "3 circuits",
+     "d": "4 circuits"
+    },
+    "ref": "220.11(A) and Annex D1(a) Example",
+    "answer": "c"
+   },
+   {
+    "n": 53,
+    "q": "How many 20 A, 120V general purpose circuits are required for a 4,000 sq ft dwelling unit?",
+    "choices": {
+     "a": "3 circuits",
+     "b": "4 circuits",
+     "c": "5 circuits",
+     "d": "6 circuits"
+    },
+    "ref": "220.11(A) and Annex D1(a) Example",
+    "answer": "c"
+   },
+   {
+    "n": 54,
+    "q": "The neutral load for household cooking appliances, such as electric ranges, wall-mounted ovens, or counter-mounted cooking units, is permitted to be calculated at ___ of the load as determined by 220.55.",
+    "choices": {
+     "a": "50 percent",
+     "b": "60 percent",
+     "c": "70 percent",
+     "d": "80 percent"
+    },
+    "ref": "220.61(B)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 55,
+    "q": "The neutral load for household electric clothes dryers is permitted to be calculated at ___ of the load as determined by 220.54.",
+    "choices": {
+     "a": "50 percent",
+     "b": "60 percent",
+     "c": "70 percent",
+     "d": "80 percent"
+    },
+    "ref": "220.61(B)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 56,
+    "q": "What is the neutral load for one 6 kW household dryer rated 120/240V?",
+    "choices": {
+     "a": "4.2 kW",
+     "b": "4.7 kW",
+     "c": "5.4 kW",
+     "d": "6.6 kW"
+    },
+    "ref": "220.61(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 57,
+    "q": "What is the neutral load for one 9 kW range?",
+    "choices": {
+     "a": "5.4 kW",
+     "b": "5.6 kW",
+     "c": "5.8 kW",
+     "d": "5.9 kW"
+    },
+    "ref": "6.15 Neutral Calculations—Dryers and Ranges [220.61]",
+    "answer": "b"
+   }
+  ]
+ },
+ "B&G_Art_250": {
+  "book": "B&G",
+  "quiz": "Art 250",
+  "page": 216,
+  "unit": "Article 250—Grounding and Bonding",
+  "questions": [
+   {
+    "n": 1,
+    "q": "General requirements for grounding and bonding of electrical installations and the location of grounding connections are within the scope of _____.",
+    "choices": {
+     "a": "Article 110",
+     "b": "Article 200",
+     "c": "Article 250",
+     "d": "Article 680"
+    },
+    "ref": "250.1",
+    "answer": "c"
+   },
+   {
+    "n": 2,
+    "q": "Grounded electrical systems shall be connected to earth in a manner that will _____.",
+    "choices": {
+     "a": "limit voltages due to lightning, line surges, or unintentional contact with higher-voltage lines",
+     "b": "stabilize the voltage to earth during normal operation",
+     "c": "facilitate overcurrent device operation in case of ground faults",
+     "d": "limit voltages due to lightning, line surges, or unintentional contact with higher-voltage lines and stabilize the voltage to earth during normal operation"
+    },
+    "ref": "250.4(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "An important consideration for limiting imposed voltage on electrical systems is to remember that bonding and grounding electrode conductors should not be any longer than _____ and unnecessary bends and loops should be avoided.",
+    "choices": {
+     "a": "necessary",
+     "b": "10 ft",
+     "c": "25 ft",
+     "d": "50 ft"
+    },
+    "ref": "250.4(A)(1) Note 1",
+    "answer": "a"
+   },
+   {
+    "n": 4,
+    "q": "For grounded systems, normally noncurrent-carrying conductive materials enclosing electrical conductors or equipment shall be connected to earth so as to limit _____ on these materials.",
+    "choices": {
+     "a": "the voltage to ground",
+     "b": "current",
+     "c": "arcing",
+     "d": "resistance"
+    },
+    "ref": "250.4(A)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 5,
+    "q": "For grounded systems, normally noncurrent-carrying conductive materials enclosing electrical conductors shall be connected together and to the _____ to establish an effective ground-fault current path.",
+    "choices": {
+     "a": "ground",
+     "b": "earth",
+     "c": "electrical supply source",
+     "d": "enclosure"
+    },
+    "ref": "250.4(A)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "In grounded systems, normally noncurrent-carrying electrically conductive materials that are likely to become energized shall be connected _____ in a manner that establishes an effective ground-fault current path.",
+    "choices": {
+     "a": "together",
+     "b": "to the electrical supply source",
+     "c": "to the closest grounded conductor",
+     "d": "together and to the electrical supply source"
+    },
+    "ref": "250.4(A)(4)",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "For grounded systems, electrical equipment, and other electrically conductive material likely to become energized shall be installed in a manner that creates a _____ from any point on the wiring system where a ground fault occurs to the electrical supply source.",
+    "choices": {
+     "a": "circuit facilitating the operation of the overcurrent device",
+     "b": "low-impedance circuit",
+     "c": "circuit capable of safely carrying the ground-fault current likely to be imposed on it",
+     "d": "all of these"
+    },
+    "ref": "250.4(A)(5)",
+    "answer": "d"
+   },
+   {
+    "n": 8,
+    "q": "For grounded systems, the earth _____ considered an effective ground-fault current path.",
+    "choices": {
+     "a": "shall be",
+     "b": "shall not be",
+     "c": "is",
+     "d": "is not"
+    },
+    "ref": "250.4(A)(5)",
+    "answer": "b"
+   },
+   {
+    "n": 9,
+    "q": "The grounding and bonding of electrical systems, circuit conductors, surge arresters, surge-protective devices, and conductive normally noncurrent-carrying metal parts of equipment shall be installed and arranged in a manner that will prevent _____.",
+    "choices": {
+     "a": "objectionable current",
+     "b": "voltage transients",
+     "c": "neutral to earth voltage",
+     "d": "an arc flash"
+    },
+    "ref": "250.6(A)",
+    "answer": "a"
+   },
+   {
+    "n": 10,
+    "q": "Equipment grounding conductors, grounding electrode conductors, and bonding jumpers shall be connected by _____.",
+    "choices": {
+     "a": "listed pressure connectors",
+     "b": "terminal bars",
+     "c": "exothermic welding",
+     "d": "any of these"
+    },
+    "ref": "250.8(A)(1), (2), and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "Ground clamps and fittings that are exposed to physical damage shall be enclosed in _____ or equivalent protective covering.",
+    "choices": {
+     "a": "metal or wood",
+     "b": "wood or rubber",
+     "c": "concrete",
+     "d": "metal or plastic"
+    },
+    "ref": "250.10",
+    "answer": "a"
+   },
+   {
+    "n": 12,
+    "q": "_____ on equipment to be grounded shall be removed from contact surfaces to ensure electrical continuity.",
+    "choices": {
+     "a": "Paint",
+     "b": "Lacquer",
+     "c": "Enamel",
+     "d": "any of these"
+    },
+    "ref": "250.12",
+    "answer": "d"
+   },
+   {
+    "n": 13,
+    "q": "Alternating-current circuits of less than 50V shall be grounded if supplied by a transformer whose supply system exceeds _____.",
+    "choices": {
+     "a": "150V to ground",
+     "b": "300V to ground",
+     "c": "600V to ground",
+     "d": "1,000V to ground"
+    },
+    "ref": "250.20(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 14,
+    "q": "_____ alternating-current systems operating at 480V shall have ground detectors installed on the system.",
+    "choices": {
+     "a": "Grounded",
+     "b": "Solidly grounded",
+     "c": "Effectively grounded",
+     "d": "Ungrounded"
+    },
+    "ref": "250.21(B)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 15,
+    "q": "Ungrounded alternating-current systems from 50V to 1,000V or less that are not required to be grounded in accordance with 250.21(B) shall have _____.",
+    "choices": {
+     "a": "ground detectors installed for ac systems operating at not less than 100V and at 1,000V or less",
+     "b": "the ground detection sensing equipment connected as far as practicable to where the system receives its supply",
+     "c": "ground detectors installed for ac systems operating at not less than 120V and at 1,000V or less, and have the ground detection sensing equipment connected as close as practicable to where the system receives its supply",
+     "d": "ground-fault protection for equipment"
+    },
+    "ref": "250.21(B)(1) and (2)",
+    "answer": "c"
+   },
+   {
+    "n": 16,
+    "q": "Ungrounded alternating-current systems from 50V to less than 1,000V shall be legibly marked “CAUTION: UNGROUNDED SYSTEM—OPERATING _____ VOLTS BETWEEN CONDUCTORS” at the _____ of the system, with sufficient durability to withstand the environment involved.",
+    "choices": {
+     "a": "source",
+     "b": "first disconnecting means",
+     "c": "every junction box",
+     "d": "the source or the first disconnecting means"
+    },
+    "ref": "250.21(C)",
+    "answer": "d"
+   },
+   {
+    "n": 17,
+    "q": "The grounding electrode conductor connection shall be made at any accessible point from the load end of the overhead service conductors, _____ to the terminal or bus to which the grounded service conductor is connected at the service disconnecting means.",
+    "choices": {
+     "a": "service drop",
+     "b": "underground service conductors",
+     "c": "service lateral",
+     "d": "any of these"
+    },
+    "ref": "250.24(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 18,
+    "q": "If the main bonding jumper is a wire or busbar and is installed from the grounded conductor terminal bar to the equipment grounding terminal bar in the service equipment, the _____ is permitted to be connected to the equipment grounding terminal bar to which the main bonding jumper is connected.",
+    "choices": {
+     "a": "equipment grounding conductor",
+     "b": "grounded service conductor",
+     "c": "grounding electrode conductor",
+     "d": "system bonding jumper"
+    },
+    "ref": "250.24(A)(4)",
+    "answer": "c"
+   },
+   {
+    "n": 19,
+    "q": "A grounded conductor shall not be connected to normally noncurrent-carrying metal parts of equipment, to equipment grounding conductor(s), or be reconnected to ground on the load side of the _____ except as otherwise permitted.",
+    "choices": {
+     "a": "service disconnecting means",
+     "b": "distribution panel",
+     "c": "switchgear",
+     "d": "switchboard"
+    },
+    "ref": "250.24(B)",
+    "answer": "a"
+   },
+   {
+    "n": 20,
+    "q": "For a grounded system, an unspliced _____ shall be used to connect the equipment grounding conductor(s) and the service disconnect enclosure to the grounded conductor of the system within the enclosure for each service disconnect.",
+    "choices": {
+     "a": "grounding electrode",
+     "b": "main bonding jumper",
+     "c": "busbar",
+     "d": "insulated copper conductor"
+    },
+    "ref": "250.24(C)",
+    "answer": "b"
+   },
+   {
+    "n": 21,
+    "q": "If an ac system operating at 1,000V or less is grounded at any point, the _____ shall be routed with the ungrounded conductors to each service disconnecting means and shall be connected to each disconnecting means grounded conductor(s) terminal or bus.",
+    "choices": {
+     "a": "system bonding jumper",
+     "b": "supply-side bonding jumper",
+     "c": "grounded conductor",
+     "d": "equipment grounding conductor"
+    },
+    "ref": "250.24(D)",
+    "answer": "c"
+   },
+   {
+    "n": 22,
+    "q": "The grounded conductor brought to service equipment shall be routed with the phase conductors and shall not be smaller than specified in Table _____ when the service-entrance conductors are 1,100 kcmil copper and smaller.",
+    "choices": {
+     "a": "250.102(C)(1)",
+     "b": "250.122",
+     "c": "310.16",
+     "d": "430.52"
+    },
+    "ref": "250.24(D)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 23,
+    "q": "If ungrounded service-entrance conductors are connected in parallel, the size of the grounded conductors in each raceway shall be based on the total circular mil area of the parallel ungrounded service-entrance conductors in the raceway, sized in accordance with 250.24(D)(1), but not smaller than _____.",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "250.24(D)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 24,
+    "q": "A grounding electrode conductor, sized in accordance with _____, shall be used to connect the equipment grounding conductors, the service-equipment enclosures, and, if the system is grounded, the grounded service conductor to the grounding electrode(s).",
+    "choices": {
+     "a": "250.66",
+     "b": "250.102(C)(1)",
+     "c": "250.122",
+     "d": "310.16"
+    },
+    "ref": "250.24(E)",
+    "answer": "a"
+   },
+   {
+    "n": 25,
+    "q": "A main bonding jumper shall be a _____ or similar suitable conductor.",
+    "choices": {
+     "a": "wire",
+     "b": "bus",
+     "c": "screw",
+     "d": "any of these"
+    },
+    "ref": "250.28(A)",
+    "answer": "d"
+   },
+   {
+    "n": 26,
+    "q": "If a main bonding jumper is a screw only, the screw shall be identified with a(an) _____ that shall be visible with the screw installed.",
+    "choices": {
+     "a": "silver or white finish",
+     "b": "etched ground symbol",
+     "c": "hexagonal head",
+     "d": "green finish"
+    },
+    "ref": "250.28(B)",
+    "answer": "d"
+   },
+   {
+    "n": 27,
+    "q": "Main bonding jumpers and system bonding jumpers shall not be smaller than specified in _____.",
+    "choices": {
+     "a": "Table 250.102(C)(1)",
+     "b": "Table 250.122",
+     "c": "Table 310.16",
+     "d": "Chapter 9, Table 8"
+    },
+    "ref": "250.28(D)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 28,
+    "q": "Where the supply conductors are larger than 1,100 kcmil copper or 1,750 kcmil aluminum, the main bonding jumper shall have an area that is _____ the area of the largest phase conductor when of the same material.",
+    "choices": {
+     "a": "at least equal to",
+     "b": "at least 50 percent of",
+     "c": "not less than 12½ percent of",
+     "d": "not more than 12½ percent of"
+    },
+    "ref": "250.28(D)(1) and Table 250.102(C)(1) Note 1",
+    "answer": "c"
+   },
+   {
+    "n": 29,
+    "q": "A grounded conductor shall not be connected to normally noncurrent-carrying metal parts of equipment, be connected to equipment grounding conductors, or be reconnected to ground on the_____ side of the system bonding jumper of a separately derived system.",
+    "choices": {
+     "a": "supply",
+     "b": "grounded",
+     "c": "high-voltage",
+     "d": "load"
+    },
+    "ref": "250.30(A)",
+    "answer": "d"
+   },
+   {
+    "n": 30,
+    "q": "The connection of the system bonding jumper for a separately derived system shall be made _____ on the separately derived system from the source to the first system disconnecting means or overcurrent device.",
+    "choices": {
+     "a": "in at least two locations",
+     "b": "in every location that the grounded conductor is present",
+     "c": "at any single point",
+     "d": "effectively"
+    },
+    "ref": "250.30(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 31,
+    "q": "If a building or structure is supplied by a feeder from an outdoor separately derived system, a system bonding jumper at both the source and the first disconnecting means shall be permitted if doing so does not establish a(an) _____ path for the grounded conductor.",
+    "choices": {
+     "a": "series",
+     "b": "parallel",
+     "c": "conductive",
+     "d": "effective"
+    },
+    "ref": "250.30(A)(1) Ex 2",
+    "answer": "b"
+   },
+   {
+    "n": 32,
+    "q": "A separately derived ac system supply-side bonding jumper shall be installed to the first disconnecting means enclosure, and it is not required to be larger than the _____.",
+    "choices": {
+     "a": "neutral conductor",
+     "b": "derived ungrounded conductors",
+     "c": "equipment grounding conductor",
+     "d": "main service grounding electrode conductor"
+    },
+    "ref": "250.30(A)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 33,
+    "q": "If the source of a separately derived system and the first disconnecting means are located in separate enclosures, a supply-side bonding jumper of the wire type shall comply with 250.102(C), based on _____.",
+    "choices": {
+     "a": "the size of the primary conductors",
+     "b": "the size of the secondary overcurrent protection",
+     "c": "the size of the derived ungrounded conductors",
+     "d": "one-third the size of the primary grounded conductor"
+    },
+    "ref": "250.30(A)(2)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 34,
+    "q": "The building or structure grounding electrode system shall be used as the _____ electrode for the separately derived system.",
+    "choices": {
+     "a": "grounding",
+     "b": "bonding",
+     "c": "grounded",
+     "d": "bonded"
+    },
+    "ref": "250.30(A)(4)",
+    "answer": "a"
+   },
+   {
+    "n": 35,
+    "q": "For a single separately derived system, the grounding electrode conductor connects the grounded conductor of the derived system to the grounding electrode at the same point on the separately derived system where the _____ is connected.",
+    "choices": {
+     "a": "metering equipment",
+     "b": "transfer switch",
+     "c": "system bonding jumper",
+     "d": "largest circuit breaker"
+    },
+    "ref": "250.30(A)(5)",
+    "answer": "c"
+   },
+   {
+    "n": 36,
+    "q": "Grounding electrode conductor taps from a separately derived system to a common grounding electrode conductor are permitted when a building or structure has multiple separately derived systems, provided that the taps terminate at the same point as the _____.",
+    "choices": {
+     "a": "system bonding jumper",
+     "b": "main bonding jumper",
+     "c": "supply-side bonding jumper",
+     "d": "neutral conductor"
+    },
+    "ref": "250.30(A)(6)",
+    "answer": "a"
+   },
+   {
+    "n": 37,
+    "q": "The common grounding electrode conductor installed for multiple separately derived systems shall not be smaller than _____ copper when using a wire-type conductor.",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "250.30(A)(6)(a)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 38,
+    "q": "The common grounding electrode conductor installed for multiple separately derived systems shall be permitted to be a _____ pipe in accordance with 250.68(C)(1).",
+    "choices": {
+     "a": "metal gas",
+     "b": "metal water",
+     "c": "PVC water",
+     "d": "any of these"
+    },
+    "ref": "250.30(A)(6)(a)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 39,
+    "q": "The common grounding electrode conductor installed for multiple separately derived systems shall be permitted to be the metal structural frame of the building or structure in accordance with 250.68(C)(2) or connected to the grounding electrode system by a conductor not smaller than _____.",
+    "choices": {
+     "a": "6 AWG copper",
+     "b": "1/0 AWG copper",
+     "c": "3/0 AWG copper or 250 kcmil aluminum",
+     "d": "4/0 AWG aluminum"
+    },
+    "ref": "250.30(A)(6)(a)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 40,
+    "q": "Each tap conductor to a common grounding electrode conductor for multiple separately derived systems shall be sized in accordance with _____, based on the derived ungrounded conductors of the separately derived system it serves.",
+    "choices": {
+     "a": "250.66",
+     "b": "250.118",
+     "c": "250.122",
+     "d": "310.15"
+    },
+    "ref": "250.30(A)(6)(b)",
+    "answer": "a"
+   },
+   {
+    "n": 41,
+    "q": "Tap connections to a common grounding electrode conductor for multiple separately derived systems may be made to a copper or aluminum busbar that is _____ and of sufficient length to accommodate the number of terminations necessary for the installation.",
+    "choices": {
+     "a": "smaller than ¼ in. thick × 4 in. wide",
+     "b": "not smaller than ¼ in. thick × 2 in. wide",
+     "c": "not smaller than ½ in. thick × 2 in. wide",
+     "d": "not smaller than ¼ in. thick × 2½ in. wide"
+    },
+    "ref": "250.30(A)(6)(c)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 42,
+    "q": "Tap connections to a common grounding electrode conductor for multiple separately derived systems shall be made at an accessible location by _____.",
+    "choices": {
+     "a": "a connector listed as grounding and bonding equipment",
+     "b": "listed connections to aluminum or copper busbars",
+     "c": "the exothermic welding process",
+     "d": "any of these"
+    },
+    "ref": "250.30(A)(6)(c)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 43,
+    "q": "A grounding electrode system and grounding electrode conductor at a building or structure shall not be required if only a _____ supplies the building or structure.",
+    "choices": {
+     "a": "4-wire service",
+     "b": "single or multiwire branch circuit",
+     "c": "3-wire service",
+     "d": "any of these"
+    },
+    "ref": "250.32(A) Ex",
+    "answer": "b"
+   },
+   {
+    "n": 44,
+    "q": "An equipment grounding conductor shall be run with the supply conductors and be connected to the building or structure _____ and to the grounding electrode.",
+    "choices": {
+     "a": "rebar",
+     "b": "disconnecting means",
+     "c": "structural steel",
+     "d": "ground rod"
+    },
+    "ref": "250.32(B)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 45,
+    "q": "The size of the grounding electrode conductor for a building or structure supplied by a feeder shall not be smaller than that identified in _____, based on the largest ungrounded supply conductor.",
+    "choices": {
+     "a": "250.66",
+     "b": "250.102",
+     "c": "250.122",
+     "d": "Table 310.16"
+    },
+    "ref": "250.32(E)",
+    "answer": "a"
+   },
+   {
+    "n": 46,
+    "q": "Impedance grounded systems in which a grounding impedance device, typically a resistor, limits the ground-fault current for a 480V up to 1,000V three-phase system are permitted where _____.",
+    "choices": {
+     "a": "the conditions of maintenance and supervision ensure that only qualified persons service the installation",
+     "b": "ground detectors are installed on the system",
+     "c": "line-to-neutral loads are not served",
+     "d": "all of these"
+    },
+    "ref": "250.36(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 47,
+    "q": "Concrete-encased electrodes _____ shall not be required to be part of the grounding electrode system if the rebar is not accessible for use without disturbing the concrete.",
+    "choices": {
+     "a": "in hazardous (classified) locations",
+     "b": "in health care facilities",
+     "c": "of existing buildings or structures",
+     "d": "in agricultural buildings with equipotential planes"
+    },
+    "ref": "250.50 Ex",
+    "answer": "c"
+   },
+   {
+    "n": 48,
+    "q": "In order for a metal underground water pipe to be used as a grounding electrode, it shall be in direct contact with the earth for _____.",
+    "choices": {
+     "a": "5 ft",
+     "b": "10 ft or more",
+     "c": "less than 10 ft",
+     "d": "20 ft or more"
+    },
+    "ref": "250.52(A)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 49,
+    "q": "One or more metal in-ground support structure(s) in direct contact with the earth vertically for _____ or more, with or without concrete encasement, is permitted to be a grounding electrode in accordance with 250.52.",
+    "choices": {
+     "a": "4 ft",
+     "b": "6 ft",
+     "c": "8 ft",
+     "d": "10 ft"
+    },
+    "ref": "250.52(A)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 50,
+    "q": "The minimum length of a 4 AWG concrete-encased electrode is at least _____.",
+    "choices": {
+     "a": "10 ft",
+     "b": "20 ft",
+     "c": "25 ft",
+     "d": "50 ft"
+    },
+    "ref": "250.52(A)(3)",
+    "answer": "b"
+   },
+   {
+    "n": 51,
+    "q": "Rebar in multiple pieces used as a concrete-encased electrode shall be connected together by _____ tie wires or other effective means.",
+    "choices": {
+     "a": "steel",
+     "b": "plastic",
+     "c": "aluminum",
+     "d": "fiber glass"
+    },
+    "ref": "250.52(A)(3)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 52,
+    "q": "An electrode encased by at least 2 in. of concrete, located horizontally near the bottom or vertically and within that portion of a concrete foundation or footing that is in direct contact with the earth, is permitted as a grounding electrode when it consists of a bare copper conductor not smaller than _____.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "1/0 AWG"
+    },
+    "ref": "250.52(A)(3)(2)",
+    "answer": "c"
+   },
+   {
+    "n": 53,
+    "q": "If multiple concrete-encased electrodes are present at a building or structure, it shall be permissible to bond only _____ into the grounding electrode system.",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "250.52(A)(3)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 54,
+    "q": "Concrete-encased grounding electrodes that are installed where the concrete is installed with _____ is not considered to be in direct contact with the earth.",
+    "choices": {
+     "a": "insulation",
+     "b": "vapor barriers",
+     "c": "films",
+     "d": "any of these"
+    },
+    "ref": "250.52(A)(3) Note",
+    "answer": "d"
+   },
+   {
+    "n": 55,
+    "q": "A ground ring encircling the building or structure can be used as a grounding electrode when the _____.",
+    "choices": {
+     "a": "ring is in direct contact with the earth",
+     "b": "ring consists of at least 20 ft of bare copper conductor",
+     "c": "bare copper conductor is not smaller than 2 AWG",
+     "d": "all of these"
+    },
+    "ref": "250.52(A)(4)",
+    "answer": "d"
+   },
+   {
+    "n": 56,
+    "q": "Rod and pipe grounding electrodes shall not be less than _____ in length.",
+    "choices": {
+     "a": "6 ft",
+     "b": "8 ft",
+     "c": "10 ft",
+     "d": "20 ft"
+    },
+    "ref": "250.52(A)(5)",
+    "answer": "b"
+   },
+   {
+    "n": 57,
+    "q": "Grounding electrodes of the rod type less than _____ in diameter shall be listed.",
+    "choices": {
+     "a": "½ in.",
+     "b": "⅝ in.",
+     "c": "¾ in.",
+     "d": "1 in."
+    },
+    "ref": "250.52(A)(5)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 58,
+    "q": "A buried iron or steel plate used as a grounding electrode shall expose not less than _____ of surface area to exterior soil.",
+    "choices": {
+     "a": "2 sq ft",
+     "b": "4 sq ft",
+     "c": "9 sq ft",
+     "d": "10 sq ft"
+    },
+    "ref": "250.52(A)(7)",
+    "answer": "a"
+   },
+   {
+    "n": 59,
+    "q": "Grounding electrodes of bare or electrically conductive coated iron or steel plates shall be at least _____ thick.",
+    "choices": {
+     "a": "1⁄8 in.",
+     "b": "¼ in.",
+     "c": "½ in.",
+     "d": "¾ in."
+    },
+    "ref": "250.52(A)(7)",
+    "answer": "b"
+   },
+   {
+    "n": 60,
+    "q": "Metal underground systems or structures such as piping systems, underground tanks, and underground metal well casings that are not bonded to a metal _____ are permitted as grounding electrodes.",
+    "choices": {
+     "a": "gas pipe",
+     "b": "fire-sprinkler pipe",
+     "c": "water pipe",
+     "d": "none of these"
+    },
+    "ref": "250.52(A)(8)",
+    "answer": "c"
+   },
+   {
+    "n": 61,
+    "q": "_____ shall not be used as a grounding electrode(s).",
+    "choices": {
+     "a": "Metal underground gas piping systems",
+     "b": "Aluminum",
+     "c": "Swimming pool structures and structural rebar",
+     "d": "all of these"
+    },
+    "ref": "250.52(B)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 62,
+    "q": "_____ electrodes shall be free from nonconductive coatings such as paint or enamel.",
+    "choices": {
+     "a": "Rod",
+     "b": "Pipe",
+     "c": "Plate",
+     "d": "all of these"
+    },
+    "ref": "250.53(A)",
+    "answer": "d"
+   },
+   {
+    "n": 63,
+    "q": "If practicable, rod, pipe, and plate electrodes shall be embedded _____.",
+    "choices": {
+     "a": "directly below the electrical meter",
+     "b": "on the north side of the building",
+     "c": "below permanent moisture level",
+     "d": "all of these"
+    },
+    "ref": "250.53(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 64,
+    "q": "The grounding electrode conductor to a ground rod that serves as a supplemental electrode for the metal water pipe electrode is not required to be larger than _____ copper wire.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "3 AWG"
+    },
+    "ref": "250.53(A)(2) and 250.66(A)",
+    "answer": "b"
+   },
+   {
+    "n": 65,
+    "q": "If a single rod grounding electrode has a resistance to earth of 25 ohms or less, the _____electrode shall not be required.",
+    "choices": {
+     "a": "additional",
+     "b": "supplemental",
+     "c": "auxiliary",
+     "d": "surplus"
+    },
+    "ref": "250.53(A)(2) Ex",
+    "answer": "b"
+   },
+   {
+    "n": 66,
+    "q": "If multiple rod, pipe, or plate electrodes are installed to supplement the water pipe electrode, they shall not be less than _____ apart.",
+    "choices": {
+     "a": "3 ft",
+     "b": "4 ft",
+     "c": "5 ft",
+     "d": "6 ft"
+    },
+    "ref": "250.53(A)(3)",
+    "answer": "d"
+   },
+   {
+    "n": 67,
+    "q": "A rod or pipe electrode shall be installed such that at least _____ of length is in contact with the soil.",
+    "choices": {
+     "a": "30 in.",
+     "b": "6 ft",
+     "c": "8 ft",
+     "d": "10 ft"
+    },
+    "ref": "250.53(A)(4)",
+    "answer": "c"
+   },
+   {
+    "n": 68,
+    "q": "Where rock bottom is encountered, a rod or pipe electrode shall be driven at an angle not to exceed _____ from the vertical.",
+    "choices": {
+     "a": "15 degrees",
+     "b": "30 degrees",
+     "c": "45 degrees",
+     "d": "60 degrees"
+    },
+    "ref": "250.53(A)(4)",
+    "answer": "c"
+   },
+   {
+    "n": 69,
+    "q": "The upper end of the rod electrode shall be _____ ground level unless the aboveground end and the grounding electrode conductor attachment are protected against physical damage as specified in 250.10.",
+    "choices": {
+     "a": "no more than 1 in. above",
+     "b": "no more than 2 in. above",
+     "c": "no more than 3 in. above",
+     "d": "flush with or below"
+    },
+    "ref": "250.53(A)(4)",
+    "answer": "d"
+   },
+   {
+    "n": 70,
+    "q": "Plate electrodes shall be installed not less than _____ below the surface of the earth.",
+    "choices": {
+     "a": "30 in.",
+     "b": "4 ft",
+     "c": "5 ft",
+     "d": "6 ft"
+    },
+    "ref": "250.53(A)(5)",
+    "answer": "a"
+   },
+   {
+    "n": 71,
+    "q": "Where bonding jumper(s) are used to connect the grounding electrodes together to form the grounding electrode system, _____ is not permitted to be used as a conductor to interconnect the electrodes.",
+    "choices": {
+     "a": "rebar",
+     "b": "structural steel",
+     "c": "a grounding plate",
+     "d": "none of these"
+    },
+    "ref": "250.53(C)",
+    "answer": "a"
+   },
+   {
+    "n": 72,
+    "q": "Where a metal underground water pipe is used as a grounding electrode, the continuity of the grounding path or the bonding connection to interior piping shall not rely on _____ and similar equipment.",
+    "choices": {
+     "a": "bonding jumpers",
+     "b": "water meters or filtering devices",
+     "c": "grounding clamps",
+     "d": "all of these"
+    },
+    "ref": "250.53(D)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 73,
+    "q": "If the supplemental electrode is a rod, pipe, or plate electrode, that portion of the bonding jumper that is the sole connection to the supplemental grounding electrode is not required to be larger than _____ copper.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "1 AWG"
+    },
+    "ref": "250.53(E)",
+    "answer": "b"
+   },
+   {
+    "n": 74,
+    "q": "When a ground ring is used as a grounding electrode, it shall be installed at a depth below the earth’s surface of not less than _____.",
+    "choices": {
+     "a": "18 in.",
+     "b": "24 in.",
+     "c": "30 in.",
+     "d": "8 ft"
+    },
+    "ref": "250.53(F)",
+    "answer": "c"
+   },
+   {
+    "n": 75,
+    "q": "When installing _____ electrodes, the earth shall not be used as an effective ground-fault current path.",
+    "choices": {
+     "a": "auxiliary",
+     "b": "supplemental",
+     "c": "oversized",
+     "d": "aluminum"
+    },
+    "ref": "250.54",
+    "answer": "a"
+   },
+   {
+    "n": 76,
+    "q": "Bare or covered aluminum or copper-clad aluminum grounding electrode conductors without an extruded polymeric covering shall not be installed where subject to corrosive conditions or be installed in direct contact with _____.",
+    "choices": {
+     "a": "concrete",
+     "b": "bare copper conductors",
+     "c": "wooden framing members",
+     "d": "all of these"
+    },
+    "ref": "250.64(A)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 77,
+    "q": "Aluminum or copper-clad aluminum grounding electrode conductors external to buildings or equipment enclosures shall not terminate within _____ of the earth.",
+    "choices": {
+     "a": "12 in. This question/answer was updated since first printing.",
+     "b": "18 in.",
+     "c": "20 in.",
+     "d": "24 in."
+    },
+    "ref": "250.64(A)(3)",
+    "answer": "b"
+   },
+   {
+    "n": 78,
+    "q": "If _____, a grounding electrode conductor or its enclosure shall be securely fastened to the surface on which it is carried.",
+    "choices": {
+     "a": "concealed",
+     "b": "exposed",
+     "c": "accessible",
+     "d": "none of these"
+    },
+    "ref": "250.64(B)",
+    "answer": "b"
+   },
+   {
+    "n": 79,
+    "q": "Grounding electrode conductors _____ and larger that are not exposed to physical damage can be run along the surface of the building construction without metal covering or protection.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.64(B)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 80,
+    "q": "A(An) _____ or larger grounding electrode conductor exposed to physical damage shall be protected in rigid metal conduit, IMC, Schedule 80 PVC conduit, reinforced thermosetting resin conduit Type XW (RTRC-XW), EMT, or cable armor.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.64(B)(2)",
+    "answer": "c"
+   },
+   {
+    "n": 81,
+    "q": "Grounding electrode conductors smaller than _____ shall be protected in rigid metal conduit, IMC, PVC conduit, electrical metallic tubing, or cable armor.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.64(B)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 82,
+    "q": "Grounding electrode conductors in contact with _____ shall not be required to comply with 300.5 but shall be protected if subject to physical damage.",
+    "choices": {
+     "a": "water",
+     "b": "the earth",
+     "c": "metal",
+     "d": "all of these"
+    },
+    "ref": "250.64(B)(4)",
+    "answer": "b"
+   },
+   {
+    "n": 83,
+    "q": "Grounding electrode conductors shall be installed in one continuous length without a splice or joint, unless spliced by _____.",
+    "choices": {
+     "a": "connecting together sections of a busbar",
+     "b": "irreversible compression-type connectors listed as grounding and bonding equipment",
+     "c": "the exothermic welding process",
+     "d": "any of these"
+    },
+    "ref": "250.64(C)(1) and (2)",
+    "answer": "d"
+   },
+   {
+    "n": 84,
+    "q": "The common grounding electrode conductor shall be sized in accordance with 250.66, based on the sum of the circular mil area of the _____ ungrounded conductor(s) of each set of conductors that supplies the disconnecting means.",
+    "choices": {
+     "a": "smallest",
+     "b": "largest",
+     "c": "color of the",
+     "d": "material of the"
+    },
+    "ref": "250.64(D)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 85,
+    "q": "Ferrous metal raceways for grounding electrode conductors shall be _____ continuous from the point of attachment to cabinets or equipment to the grounding electrode.",
+    "choices": {
+     "a": "electrically",
+     "b": "physically",
+     "c": "mechanically",
+     "d": "integrally"
+    },
+    "ref": "250.64(E)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 86,
+    "q": "Ferrous metal raceways for grounding electrode conductors shall be bonded at each end of the raceway or enclosure to the grounding electrode or grounding electrode conductor to create a(an) _____ parallel path.",
+    "choices": {
+     "a": "mechanically",
+     "b": "electrically",
+     "c": "physically",
+     "d": "effective"
+    },
+    "ref": "250.64(E)(1)",
+    "answer": "b"
+   },
+   {
+    "n": 87,
+    "q": "The grounding electrode conductor is permitted to be run to any _____ available in the grounding electrode system.",
+    "choices": {
+     "a": "panelboards",
+     "b": "bonding jumper",
+     "c": "switchgear",
+     "d": "convenient grounding electrode"
+    },
+    "ref": "250.64(F)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 88,
+    "q": "Grounding electrode conductors shall not be installed through a ventilation opening of a(an) _____.",
+    "choices": {
+     "a": "enclosure",
+     "b": "cabinet",
+     "c": "motor control center",
+     "d": "environmental air system"
+    },
+    "ref": "250.64(G)",
+    "answer": "a"
+   },
+   {
+    "n": 89,
+    "q": "A metal water pipe grounding electrode conductor sized at _____ is required for a 400A service supplied with 500 kcmil conductors.",
+    "choices": {
+     "a": "1 AWG",
+     "b": "1/0 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "250.66 Table",
+    "answer": "b"
+   },
+   {
+    "n": 90,
+    "q": "The minimum grounding electrode conductor to a rod, pipe, or plate electrode for a 30A service with 10 AWG conductors is _____.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "1/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "250.66 Table",
+    "answer": "a"
+   },
+   {
+    "n": 91,
+    "q": "A metal water pipe grounding electrode conductor sized at _____ is required for a service supplied with 350 kcmil conductors.",
+    "choices": {
+     "a": "6 AWG",
+     "b": "3 AWG",
+     "c": "2 AWG",
+     "d": "1/0 AWG"
+    },
+    "ref": "250.66 Table",
+    "answer": "c"
+   },
+   {
+    "n": 92,
+    "q": "A(An) _____ is the smallest size grounding electrode conductor permitted for a solidly grounded ac system.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "1/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "250.66 Table",
+    "answer": "a"
+   },
+   {
+    "n": 93,
+    "q": "A service consisting of 12 AWG service-entrance conductors requires a grounding electrode conductor sized no less than _____.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.66 Table",
+    "answer": "b"
+   },
+   {
+    "n": 94,
+    "q": "The largest size copper grounding electrode conductor required based on Table 250.66 is _____.",
+    "choices": {
+     "a": "6 AWG",
+     "b": "1/0 AWG",
+     "c": "3/0 AWG",
+     "d": "250 kcmil"
+    },
+    "ref": "250.66 Table",
+    "answer": "c"
+   },
+   {
+    "n": 95,
+    "q": "A grounding electrode conductor sized at _____ is required for a service supplied with 400 kcmil parallel conductors in three raceways.",
+    "choices": {
+     "a": "1 AWG",
+     "b": "1/0 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "250.66 Table Note 1",
+    "answer": "d"
+   },
+   {
+    "n": 96,
+    "q": "A grounding electrode conductor sized at _____ is required for a service supplied with 250 kcmil conductors paralleled in two raceways.",
+    "choices": {
+     "a": "1 AWG",
+     "b": "1/0 AWG",
+     "c": "2/0 AWG",
+     "d": "3/0 AWG"
+    },
+    "ref": "250.66 Table Note 1",
+    "answer": "b"
+   },
+   {
+    "n": 97,
+    "q": "The largest sized grounding electrode conductor to a rod, pipe, or plate electrode required for a 400A service with 500 kcmil conductors is _____.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "1/0 AWG",
+     "d": "4/0 AWG aluminum"
+    },
+    "ref": "250.66(A)",
+    "answer": "b"
+   },
+   {
+    "n": 98,
+    "q": "If the grounding electrode conductor to a ground rod does not extend on to other types of electrodes, the grounding electrode conductor shall not be required to be larger than _____ copper wire.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.66(A)",
+    "answer": "c"
+   },
+   {
+    "n": 99,
+    "q": "If the grounding electrode conductor to a concrete-encased electrode does not extend on to other types of electrodes, the grounding electrode conductor shall not be required to be larger than _____ copper wire.",
+    "choices": {
+     "a": "10 AWG",
+     "b": "8 AWG",
+     "c": "6 AWG",
+     "d": "4 AWG"
+    },
+    "ref": "250.66(B)",
+    "answer": "d"
+   },
+   {
+    "n": 100,
+    "q": "All mechanical elements used to terminate a grounding electrode conductor or bonding jumper to a grounding electrode shall be _____.",
+    "choices": {
+     "a": "accessible",
+     "b": "concealed",
+     "c": "exposed",
+     "d": "protected"
+    },
+    "ref": "250.68(A)",
+    "answer": "a"
+   },
+   {
+    "n": 101,
+    "q": "An encased or buried grounding electrode conductor or bonding jumper connection to a concrete-encased, driven, or buried grounding electrode shall not be required to be _____.",
+    "choices": {
+     "a": "readily accessible",
+     "b": "accessible",
+     "c": "available",
+     "d": "any of these"
+    },
+    "ref": "250.68(A) Ex 1",
+    "answer": "b"
+   },
+   {
+    "n": 102,
+    "q": "Where necessary to ensure the _____ path for a metal piping system used as a grounding electrode, bonding shall be provided around insulated joints and around any equipment that is likely to be disconnected for repairs or replacement.",
+    "choices": {
+     "a": "grounding",
+     "b": "bonding",
+     "c": "conductive",
+     "d": "termination"
+    },
+    "ref": "250.68(B)",
+    "answer": "a"
+   },
+   {
+    "n": 103,
+    "q": "Interior metal water piping that is electrically continuous with a metal underground water pipe electrode and is located not more than _____ from the point of entrance to the building, as measured along the water piping, is permitted to extend the connection to an electrode(s).",
+    "choices": {
+     "a": "2 ft",
+     "b": "3 ft",
+     "c": "4 ft",
+     "d": "5 ft"
+    },
+    "ref": "250.68(C)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 104,
+    "q": "The metal structural frame of a building is permitted to be used as a conductor to _____ electrodes that are part of the grounding electrode system, or as a grounding electrode conductor.",
+    "choices": {
+     "a": "interconnect",
+     "b": "identify",
+     "c": "separate",
+     "d": "none of these"
+    },
+    "ref": "250.68(C)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 105,
+    "q": "A rebar-type concrete-encased electrode with an additional rebar section extended from its location within the concrete foundation or footing to an accessible location that is not subject to _____ is permitted for connection of grounding electrode conductors.",
+    "choices": {
+     "a": "physical damage",
+     "b": "moisture",
+     "c": "corrosion",
+     "d": "any of these"
+    },
+    "ref": "250.68(C)(3)",
+    "answer": "c"
+   },
+   {
+    "n": 106,
+    "q": "Not more than _____ grounding or bonding conductor shall be connected to the grounding electrode by a single clamp or fitting unless the clamp or fitting is listed for multiple conductors.",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "250.70(A)",
+    "answer": "a"
+   },
+   {
+    "n": 107,
+    "q": "The grounding conductor connection to the grounding electrode shall be made by _____.",
+    "choices": {
+     "a": "listed lugs",
+     "b": "exothermic welding",
+     "c": "listed pressure connectors",
+     "d": "any of these"
+    },
+    "ref": "250.70(A)",
+    "answer": "d"
+   },
+   {
+    "n": 108,
+    "q": "Listed ground clamps that are identified for _____ are also suitable for concrete encasement.",
+    "choices": {
+     "a": "wet locations",
+     "b": "outdoor use",
+     "c": "direct burial",
+     "d": "corrosive environments"
+    },
+    "ref": "250.70(A) Note",
+    "answer": "c"
+   },
+   {
+    "n": 109,
+    "q": "Metal enclosures and raceways containing _____ conductors shall be connected to the grounded system conductor if the electrical system is grounded.",
+    "choices": {
+     "a": "service",
+     "b": "feeder",
+     "c": "branch-circuit",
+     "d": "outside feeder or branch-circuit"
+    },
+    "ref": "250.80",
+    "answer": "a"
+   },
+   {
+    "n": 110,
+    "q": "Metal components that are installed in a run of an underground nonmetallic raceway(s) and are isolated from possible contact by a minimum cover of _____ to all parts of the metal components shall not be required to be connected to the grounded conductor, supply-side bonding jumper, or grounding electrode conductor.",
+    "choices": {
+     "a": "12 in.",
+     "b": "18 in.",
+     "c": "24 in.",
+     "d": "30 in."
+    },
+    "ref": "250.80 Ex",
+    "answer": "b"
+   },
+   {
+    "n": 111,
+    "q": "Metal enclosures and raceways for other than service conductors shall be connected to the _____ conductor.",
+    "choices": {
+     "a": "neutral",
+     "b": "equipment grounding",
+     "c": "ungrounded",
+     "d": "grounded"
+    },
+    "ref": "250.86",
+    "answer": "b"
+   },
+   {
+    "n": 112,
+    "q": "Short sections of metal enclosures or raceways used to provide support or protection of _____ from physical damage shall not be required to be connected to the equipment grounding conductor.",
+    "choices": {
+     "a": "conduit",
+     "b": "feeders under 600V",
+     "c": "cable assemblies",
+     "d": "grounding electrode conductors"
+    },
+    "ref": "250.86 Ex 2",
+    "answer": "c"
+   },
+   {
+    "n": 113,
+    "q": "The normally noncurrent-carrying metal parts of service equipment, such as service _____, shall be bonded together.",
+    "choices": {
+     "a": "raceways or service cable armor",
+     "b": "equipment enclosures containing service conductors, including meter fittings, boxes, or the like, interposed in the service raceway or armor",
+     "c": "cable trays",
+     "d": "all of these"
+    },
+    "ref": "250.92(A)(1) and (2)",
+    "answer": "d"
+   },
+   {
+    "n": 114,
+    "q": "Bonding jumpers for service raceways shall be used around impaired connections such as _____.",
+    "choices": {
+     "a": "oversized concentric knockouts",
+     "b": "oversized eccentric knockouts",
+     "c": "reducing washers",
+     "d": "any of these"
+    },
+    "ref": "250.92(B)",
+    "answer": "d"
+   },
+   {
+    "n": 115,
+    "q": "Electrical continuity at service equipment, service raceways, and service conductor enclosures shall be ensured by _____.",
+    "choices": {
+     "a": "bonding equipment to the grounded service conductor",
+     "b": "connections made up wrenchtight utilizing threaded couplings",
+     "c": "other listed bonding devices, such as bonding-type locknuts, bushings, or bushings with bonding jumpers",
+     "d": "any of these"
+    },
+    "ref": "250.92(B)(1), (2), and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 116,
+    "q": "Connections of wrenchtight threaded couplings, threaded entries, or listed threaded hubs are considered to be effectively _____ to the service metal enclosure.",
+    "choices": {
+     "a": "attached",
+     "b": "bonded",
+     "c": "grounded",
+     "d": "secured"
+    },
+    "ref": "250.92(B)(2)",
+    "answer": "b"
+   },
+   {
+    "n": 117,
+    "q": "Service metal raceways and metal-clad cables are considered effectively bonded when using threadless couplings and connectors that are _____.",
+    "choices": {
+     "a": "nonmetallic",
+     "b": "made up tight",
+     "c": "sealed",
+     "d": "classified"
+    },
+    "ref": "250.92(B)(3)",
+    "answer": "b"
+   },
+   {
+    "n": 118,
+    "q": "A means external to enclosures for connecting intersystem _____ conductors shall be provided at the service equipment or metering equipment enclosure and disconnecting means of buildings or structures supplied by a feeder or branch circuit.",
+    "choices": {
+     "a": "bonding",
+     "b": "ungrounded",
+     "c": "secondary",
+     "d": "bonding and ungrounded"
+    },
+    "ref": "250.94(A)",
+    "answer": "a"
+   },
+   {
+    "n": 119,
+    "q": "In accordance with 250.94(A), the intersystem bonding termination device shall _____.",
+    "choices": {
+     "a": "be accessible for connection and inspection",
+     "b": "consist of a set of terminals with the capacity for connection of not less than three intersystem bonding conductors",
+     "c": "not interfere with opening the enclosure for a service, building/structure disconnecting means, or metering equipment",
+     "d": "all of these"
+    },
+    "ref": "250.94(A)(1), (2), and (3)",
+    "answer": "d"
+   },
+   {
+    "n": 120,
+    "q": "In accordance with 250.94(A), the intersystem bonding termination device shall _____.",
+    "choices": {
+     "a": "be securely mounted and electrically connected to service equipment, the meter enclosure, or exposed nonflexible metallic service raceway, or be mounted at one of these enclosures and be connected to the enclosure or grounding electrode conductor with a minimum 6 AWG copper conductor",
+     "b": "be securely mounted to the building/structure disconnecting means, or be mounted at the disconnecting means and be connected to the metallic enclosure or grounding electrode conductor with a minimum 6 AWG copper conductor",
+     "c": "have terminals that are listed as grounding and bonding equipment",
+     "d": "all of these"
+    },
+    "ref": "250.94(A)(4)(a) and (b), and (5)",
+    "answer": "d"
+   },
+   {
+    "n": 121,
+    "q": "At existing buildings or structures, an intersystem bonding termination is not required if other acceptable means of bonding exists. An external accessible means for bonding communications systems together can be by the use of a(an) _____.",
+    "choices": {
+     "a": "nonflexible metal raceway",
+     "b": "exposed grounding electrode conductor",
+     "c": "connection to a grounded raceway or equipment approved by the authority having jurisdiction",
+     "d": "any of these"
+    },
+    "ref": "250.94(A) Ex",
+    "answer": "d"
+   },
+   {
+    "n": 122,
+    "q": "Expansion, expansion-deflection, or deflection fittings and telescoping sections of metal raceways shall be made _____ continuous by equipment bonding jumpers or other means.",
+    "choices": {
+     "a": "physically",
+     "b": "mechanically",
+     "c": "electrically",
+     "d": "directly"
+    },
+    "ref": "250.98",
+    "answer": "c"
+   },
+   {
+    "n": 123,
+    "q": "The minimum size supply-side bonding jumper for a service raceway containing 4/0 AWG aluminum conductors is _____.",
+    "choices": {
+     "a": "6 AWG aluminum",
+     "b": "4 AWG aluminum",
+     "c": "4 AWG copper",
+     "d": "3 AWG copper"
+    },
+    "ref": "250.102(C)(1) Table",
+    "answer": "c"
+   },
+   {
+    "n": 124,
+    "q": "Where ungrounded supply conductors are paralleled in two or more raceways, the bonding jumper for each raceway shall be based on the size of the _____ in each raceway.",
+    "choices": {
+     "a": "overcurrent protection for conductors",
+     "b": "grounded conductors",
+     "c": "largest ungrounded supply conductors",
+     "d": "sum of all conductors"
+    },
+    "ref": "250.102(C)(2)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 125,
+    "q": "If 600 kcmil copper service conductors are connected in parallel in three separate metal raceways, the copper supply-side bonding jumper size for each service raceway is _____.",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "250.102(C)(2), 250.102(C)(2)(1), and Table 250.102(C)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 126,
+    "q": "The minimum size copper equipment bonding jumper for a 40A-rated circuit is _____.",
+    "choices": {
+     "a": "14 AWG",
+     "b": "12 AWG",
+     "c": "10 AWG",
+     "d": "8 AWG"
+    },
+    "ref": "250.102(D) and Table 250.122",
+    "answer": "c"
+   },
+   {
+    "n": 127,
+    "q": "An equipment bonding jumper can be installed on the outside of a raceway, provided the length of the equipment bonding jumper is not more than _____ long and the equipment bonding jumper is routed with the raceway.",
+    "choices": {
+     "a": "3 ft",
+     "b": "4 ft",
+     "c": "5 ft",
+     "d": "6 ft"
+    },
+    "ref": "250.102(E)(2)",
+    "answer": "d"
+   },
+   {
+    "n": 128,
+    "q": "Metal water piping systems shall be bonded to the _____, or to one or more grounding electrodes used if the grounding electrode conductor or bonding jumper to the grounding electrode is of sufficient size.",
+    "choices": {
+     "a": "grounded conductor at the service",
+     "b": "service equipment enclosure",
+     "c": "grounding electrode conductor if of sufficient size",
+     "d": "any of these"
+    },
+    "ref": "250.104(A)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 129,
+    "q": "Bonding jumper(s) for the metal water piping systems shall not be required to be larger than _____ copper.",
+    "choices": {
+     "a": "1/0 AWG",
+     "b": "2/0 AWG",
+     "c": "3/0 AWG",
+     "d": "4/0 AWG"
+    },
+    "ref": "250.104(A)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 130,
+    "q": "The metal water piping system(s) installed in or attached to a building or structure [250.104(A)(3)] shall be bonded to _____.",
+    "choices": {
+     "a": "the building or structure disconnecting means enclosure where located at the building or structure",
+     "b": "the equipment grounding conductor run with the supply conductors",
+     "c": "one or more grounding electrodes",
+     "d": "any of these"
+    },
+    "ref": "250.104(A)(3)",
+    "answer": "d"
+   },
+   {
+    "n": 131,
+    "q": "The bonding jumper(s) required for the metal water piping system(s) installed in or attached to a building or structure supplied by a feeder(s) or branch circuit(s) shall be sized in accordance with _____.",
+    "choices": {
+     "a": "250.66",
+     "b": "250.102(D)",
+     "c": "250.122",
+     "d": "310.16"
+    },
+    "ref": "250.104(A)(3)",
+    "answer": "b"
+   },
+   {
+    "n": 132,
+    "q": "Metal piping systems, including gas piping, if installed in or attached to a building that is likely to become energized shall be _____.",
+    "choices": {
+     "a": "isolated",
+     "b": "connected to Earth",
+     "c": "grounded",
+     "d": "bonded"
+    },
+    "ref": "250.104(B)",
+    "answer": "d"
+   },
+   {
+    "n": 133,
+    "q": "The building structural steel bonding jumper size for a 400A service supplied with 500 kcmil conductors is _____.",
+    "choices": {
+     "a": "6 AWG",
+     "b": "3 AWG",
+     "c": "2 AWG",
+     "d": "1/0 AWG"
+    },
+    "ref": "250.104(C) and 250.102(C)(1) Table",
+    "answer": "d"
+   },
+   {
+    "n": 134,
+    "q": "Exposed structural metal that is interconnected to form a metal building frame, not intentionally grounded or bonded, and is likely to become energized shall be bonded to the_____.",
+    "choices": {
+     "a": "service equipment enclosure",
+     "b": "grounded conductor at the service",
+     "c": "disconnecting means for buildings or structures supplied by a feeder or branch circuit",
+     "d": "any of these"
+    },
+    "ref": "250.104(C)(1)(2)(3)",
+    "answer": "d"
+   },
+   {
+    "n": 135,
+    "q": "A separately derived system supplies power to a 100A panelboard with 3 AWG conductors. The size of the bonding jumper required to bond the building steel to the secondary grounded conductor is _____.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "250.104(D)(1) and (2), and 250.102(C)(1) Table",
+    "answer": "a"
+   },
+   {
+    "n": 136,
+    "q": "A separately derived system supplies power to a 200A panelboard with 3/0 AWG conductors. The size of the bonding jumper required to bond the building steel to the secondary grounded conductor is _____.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "2 AWG"
+    },
+    "ref": "250.104(D)(1) and (2), and 250.102(C)(1) Table",
+    "answer": "c"
+   },
+   {
+    "n": 137,
+    "q": "A separate bonding jumper to the building structural metal shall not be required if the metal in-ground support structure is used as a grounding electrode or the metal frame of a building or structure is used as the _____ for the separately derived system.",
+    "choices": {
+     "a": "bonding jumper",
+     "b": "ground-fault current path",
+     "c": "grounding electrode or grounding electrode conductor",
+     "d": "lightning protection"
+    },
+    "ref": "250.104(D)(2) Ex 1",
+    "answer": "c"
+   },
+   {
+    "n": 138,
+    "q": "Lightning protection system ground terminals _____ bonded to the building or structure grounding electrode system.",
+    "choices": {
+     "a": "shall be",
+     "b": "shall not be",
+     "c": "shall be permitted to be",
+     "d": "shall be effectively"
+    },
+    "ref": "250.106",
+    "answer": "a"
+   },
+   {
+    "n": 139,
+    "q": "Metal enclosures shall be permitted to be used to connect bonding jumpers or _____ conductors, or both, together to become a part of an effective ground-fault current path.",
+    "choices": {
+     "a": "grounded",
+     "b": "neutral",
+     "c": "equipment grounding",
+     "d": "grounded phase"
+    },
+    "ref": "250.109",
+    "answer": "c"
+   },
+   {
+    "n": 140,
+    "q": "Exposed, normally noncurrent-carrying metal parts of cord-and-plug-connected equipment shall be connected to the equipment grounding conductor if operated at over _____ to ground.",
+    "choices": {
+     "a": "24V",
+     "b": "50V",
+     "c": "120V",
+     "d": "150V"
+    },
+    "ref": "250.114(2)",
+    "answer": "d"
+   },
+   {
+    "n": 141,
+    "q": "An equipment grounding conductor of the wire type is required in _____.",
+    "choices": {
+     "a": "rigid metal conduit",
+     "b": "intermediate metal conduit",
+     "c": "electrical metallic tubing",
+     "d": "none of these"
+    },
+    "ref": "250.118(A)(2), (3), and (4)",
+    "answer": "d"
+   },
+   {
+    "n": 142,
+    "q": "Flexible metal conduit used as an EGC where flexibility for movement of equipment is required after installation shall _____.",
+    "choices": {
+     "a": "be provided with a wire type equipment grounding conductor or bonding jumper",
+     "b": "not require a wire-type EGC if less than 6 ft",
+     "c": "not require a wire-type EGC if protected by 20A or less",
+     "d": "none of these"
+    },
+    "ref": "250.118(A)(5)e",
+    "answer": "a"
+   },
+   {
+    "n": 143,
+    "q": "FMC can be used as the equipment grounding conductor if the length in any ground return path does not exceed 6 ft and the circuit conductors contained in the conduit are protected by overcurrent devices rated at _____ or less.",
+    "choices": {
+     "a": "15A",
+     "b": "20A",
+     "c": "30A",
+     "d": "60A"
+    },
+    "ref": "250.118(A)(5)b and d",
+    "answer": "b"
+   },
+   {
+    "n": 144,
+    "q": "LFMC is acceptable as an equipment grounding conductor when it terminates in _____ and is protected by an overcurrent device rated 20A or less for trade sizes ⅜ through ½.",
+    "choices": {
+     "a": "labeled fittings",
+     "b": "identified fittings",
+     "c": "approved fittings",
+     "d": "listed fittings"
+    },
+    "ref": "250.118(A)(6)a and b",
+    "answer": "d"
+   },
+   {
+    "n": 145,
+    "q": "The _____ of Type AC cable is recognized as an equipment grounding conductor.",
+    "choices": {
+     "a": "armor",
+     "b": "cover",
+     "c": "sheath",
+     "d": "any of these"
+    },
+    "ref": "250.118(A)(8)",
+    "answer": "a"
+   },
+   {
+    "n": 146,
+    "q": "Type MC cable is recognized as an equipment grounding conductor when _____.",
+    "choices": {
+     "a": "it contains an insulated or uninsulated equipment grounding conductor in compliance with 250.118(1)",
+     "b": "the cable assembly contains a bare copper conductor",
+     "c": "it is only hospital grade Type MC cable",
+     "d": "it is terminated with bonding bushings"
+    },
+    "ref": "250.118(A)(10)a",
+    "answer": "a"
+   },
+   {
+    "n": 147,
+    "q": "A wire-type equipment grounding conductor can be identified by _____.",
+    "choices": {
+     "a": "a continuous outer finish that is green",
+     "b": "being bare",
+     "c": "a continuous outer finish that is green with one or more yellow stripes",
+     "d": "any of these"
+    },
+    "ref": "250.119(A)",
+    "answer": "d"
+   },
+   {
+    "n": 148,
+    "q": "An insulated or covered conductor _____ and larger is permitted, at the time of installation, to be permanently identified as an equipment grounding conductor at each end and at every point where the conductor is accessible.",
+    "choices": {
+     "a": "8 AWG",
+     "b": "6 AWG",
+     "c": "4 AWG",
+     "d": "1/0 AWG"
+    },
+    "ref": "250.119(B)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 149,
+    "q": "One or more insulated conductors in a multiconductor cable, at the time of installation, shall be permitted to be permanently identified as equipment grounding conductors at each end and at every point where the conductors are accessible by coloring the insulation _____.",
+    "choices": {
+     "a": "green",
+     "b": "grey",
+     "c": "green with a yellow stripe",
+     "d": "white or silver"
+    },
+    "ref": "250.119(C)(2)",
+    "answer": "a"
+   },
+   {
+    "n": 150,
+    "q": "Unless part of an applicable cable wiring method, bare or covered conductors shall not be installed if subject to _____ conditions or be installed in direct contact with concrete, masonry, or the earth.",
+    "choices": {
+     "a": "corrosive",
+     "b": "wet",
+     "c": "damp",
+     "d": "dry"
+    },
+    "ref": "250.120(B)(1)",
+    "answer": "a"
+   },
+   {
+    "n": 151,
+    "q": "Equipment grounding conductors are not required to be _____ than the circuit conductors.",
+    "choices": {
+     "a": "larger",
+     "b": "smaller",
+     "c": "less",
+     "d": "none of these"
+    },
+    "ref": "250.122(A)",
+    "answer": "a"
+   },
+   {
+    "n": 152,
+    "q": "If the ungrounded conductors are increased in size for any reason other than as required in 310.15(B) or 310.15(C), wire-type equipment grounding conductors shall be increased in size proportionately to the increase in _____ of the ungrounded conductors.",
+    "choices": {
+     "a": "ampacity",
+     "b": "circular mil area",
+     "c": "diameter",
+     "d": "temperature rating"
+    },
+    "ref": "250.122(B)",
+    "answer": "b"
+   },
+   {
+    "n": 153,
+    "q": "When a single equipment grounding conductor is used for multiple circuits in the same raceway, cable, or cable tray, the single equipment grounding conductor shall be sized according to the _____.",
+    "choices": {
+     "a": "combined rating of all the overcurrent devices",
+     "b": "largest overcurrent device protecting the circuit conductors",
+     "c": "combined rating of all the loads",
+     "d": "any of these"
+    },
+    "ref": "250.122(C)",
+    "answer": "b"
+   },
+   {
+    "n": 154,
+    "q": "Equipment grounding conductors for motor branch circuits shall be sized in accordance with Table 250.122(A), based on the rating of the _____ device.",
+    "choices": {
+     "a": "motor overload",
+     "b": "motor over-temperature",
+     "c": "branch-circuit short-circuit and ground-fault protective",
+     "d": "feeder overcurrent protection"
+    },
+    "ref": "250.122(D)(1)",
+    "answer": "c"
+   },
+   {
+    "n": 155,
+    "q": "If circuit conductors are connected in parallel in the same raceway, a single wire-type conductor shall be permitted as the equipment grounding conductor and shall be sized in accordance with 250.122 based on the _____ for the feeder or branch circuit.",
+    "choices": {
+     "a": "fuse",
+     "b": "circuit breaker",
+     "c": "overcurrent protective device",
+     "d": "any of these"
+    },
+    "ref": "250.122(F)(1)(a)",
+    "answer": "c"
+   },
+   {
+    "n": 156,
+    "q": "If conductors are installed in multiple raceways and are connected in _____, a wire-type equipment grounding conductor, if used, shall be installed in each raceway and shall be connected in parallel. The equipment grounding conductor installed in each raceway shall be sized in accordance with 250.122 based on the rating of the overcurrent protective device for the feeder or branch circuit.",
+    "choices": {
+     "a": "parallel",
+     "b": "series",
+     "c": "combination",
+     "d": "none of these"
+    },
+    "ref": "250.122(F)(1)(b)",
+    "answer": "a"
+   },
+   {
+    "n": 157,
+    "q": "Except as provided in 250.122(F)(2)(c) for raceway or cable tray installations, the equipment grounding conductor in each multiconductor cable shall be sized in accordance with 250.122 based on the _____.",
+    "choices": {
+     "a": "largest circuit conductor",
+     "b": "overcurrent protective device for the feeder or branch circuit",
+     "c": "smallest branch-circuit conductor",
+     "d": "overcurrent protective device for the service"
+    },
+    "ref": "250.122(F)(2)(a)",
+    "answer": "b"
+   },
+   {
+    "n": 158,
+    "q": "Equipment grounding conductors for feeder taps are not required to be _____ than the tap conductors.",
+    "choices": {
+     "a": "larger",
+     "b": "smaller",
+     "c": "less",
+     "d": "none of these"
+    },
+    "ref": "250.122(G)",
+    "answer": "a"
+   },
+   {
+    "n": 159,
+    "q": "In accordance with 250.134, non-current-carrying metal parts of fastened in place equipment, raceways, and other enclosures, shall be connected to an _____.",
+    "choices": {
+     "a": "grounded conductor",
+     "b": "equipment grounding conductor",
+     "c": "ungrounded conductor",
+     "d": "none of these"
+    },
+    "ref": "250.134",
+    "answer": "b"
+   },
+   {
+    "n": 160,
+    "q": "Metal parts of cord-and-plug-connected equipment, shall be connected to an _____ run with the power supply conductors in a cable assembly or flexible cord properly terminated in a grounding-type attachment plug with one fixed grounding contact.",
+    "choices": {
+     "a": "grounded conductor",
+     "b": "equipment grounding conductor",
+     "c": "ungrounded conductor",
+     "d": "none of these"
+    },
+    "ref": "250.138(A)",
+    "answer": "b"
+   },
+   {
+    "n": 161,
+    "q": "Frames of electric ranges, wall-mounted ovens, counter-mounted cooking units, _____, and outlet or junction boxes that are part of the circuit shall be connected to the equipment grounding conductor in accordance with 250.140(A) or the grounded conductor in accordance with 250.140(B).",
+    "choices": {
+     "a": "washing machines",
+     "b": "dishwashers",
+     "c": "microwaves",
+     "d": "clothes dryers"
+    },
+    "ref": "250.140",
+    "answer": "d"
+   },
+   {
+    "n": 162,
+    "q": "The circuit supplying _____ shall include an equipment grounding conductor. The frame of the appliance shall be connected to the equipment grounding conductor in the manner specified by 250.134 or 250.138.",
+    "choices": {
+     "a": "electric ranges or clothes dryers",
+     "b": "electric wall mounted ovens",
+     "c": "electric counter-mounted cooking units",
+     "d": "any of these"
+    },
+    "ref": "250.140(A)",
+    "answer": "d"
+   },
+   {
+    "n": 163,
+    "q": "A(An) _____ shall be used to connect the grounding terminal of a grounding-type receptacle to a metal box that is connected to an equipment grounding conductor.",
+    "choices": {
+     "a": "equipment bonding jumper",
+     "b": "grounded conductor jumper",
+     "c": "equipment bonding jumper or grounded conductor jumper",
+     "d": "equipment bonding jumper and grounded conductor jumper"
+    },
+    "ref": "250.146",
+    "answer": "a"
+   },
+   {
+    "n": 164,
+    "q": "Where the metal box for a receptacle is surface mounted, direct metal-to-metal contact between the device yoke and the box shall be permitted to ground the receptacle to the box if at least _____ of the insulating washers of the receptacle is (are) removed.",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "250.146(A)",
+    "answer": "a"
+   },
+   {
+    "n": 165,
+    "q": "A listed exposed work cover can be the grounding and bonding means for a surface-mounted metal box when the device is attached to the cover with at least _____ permanent fastener(s) and the exposed work cover mounting holes are located on a non-raised portion of the cover.",
+    "choices": {
+     "a": "one",
+     "b": "two",
+     "c": "three",
+     "d": "four"
+    },
+    "ref": "250.146(A)(1) and (2)",
+    "answer": "b"
+   },
+   {
+    "n": 166,
+    "q": "Receptacle yokes or contact devices designed and _____ as self-grounding can, in conjunction with the supporting screws, establish the equipment bonding between the device yoke and a flush-type box.",
+    "choices": {
+     "a": "approved",
+     "b": "advertised",
+     "c": "listed",
+     "d": "installed"
+    },
+    "ref": "250.146(B)",
+    "answer": "c"
+   },
+   {
+    "n": 167,
+    "q": "The receptacle grounding terminal of an isolated ground receptacle shall be connected to a(an) _____ equipment grounding conductor run with the circuit conductors.",
+    "choices": {
+     "a": "insulated",
+     "b": "covered",
+     "c": "bare",
+     "d": "solid"
+    },
+    "ref": "250.146(D)",
+    "answer": "a"
+   },
+   {
+    "n": 168,
+    "q": "All _____ that are spliced or terminated within the box shall be connected together. Connections and splices shall be made in accordance with 110.14(B) and 250.8 except that insulation shall not be required.",
+    "choices": {
+     "a": "neutral conductors",
+     "b": "equipment grounding conductors",
+     "c": "phase conductors",
+     "d": "switch-legs"
+    },
+    "ref": "250.148(A)",
+    "answer": "b"
+   },
+   {
+    "n": 169,
+    "q": "The arrangement of grounding connections shall ensure that the disconnection or the removal of a luminaire, receptacle, or other device fed from the box does not interrupt the electrical continuity of the _____ conductor(s) providing an effective ground-fault current path.",
+    "choices": {
+     "a": "grounded",
+     "b": "ungrounded",
+     "c": "equipment grounding",
+     "d": "all of these"
+    },
+    "ref": "250.148(B)",
+    "answer": "c"
+   },
+   {
+    "n": 170,
+    "q": "For the continuity of equipment grounding conductors and attachment in boxes, a connection used for _____ shall be made between the metal box and the equipment grounding conductor(s).",
+    "choices": {
+     "a": "bonding",
+     "b": "connections and splices",
+     "c": "extending the length of the circuit",
+     "d": "no other purpose"
+    },
+    "ref": "250.148(C)",
+    "answer": "d"
+   },
+   {
+    "n": 171,
+    "q": "A connection used for no other purpose shall be made between the metal box and the equipment grounding conductor(s).The equipment bonding jumper or equipment grounding conductor shall be sized from Table 250.122 based on the largest _____ conductors in the box.",
+    "choices": {
+     "a": "overcurrent device protecting circuit",
+     "b": "ungrounded",
+     "c": "grounded",
+     "d": "neutral"
+    },
+    "ref": "250.148(C)",
+    "answer": "a"
+   },
+   {
+    "n": 172,
+    "q": "One or more equipment grounding conductors brought into a nonmetallic outlet box shall be arranged to provide a connection to _____ in that box requiring connection to an equipment grounding conductor.",
+    "choices": {
+     "a": "any fitting or device",
+     "b": "a ground clip",
+     "c": "a clamp(s)",
+     "d": "the grounded conductor"
+    },
+    "ref": "250.148(D)",
+    "answer": "a"
+   }
+  ]
+ },
+ "B&G_Art_300": {
+  "book": "B&G",
+  "quiz": "Art 300",
+  "page": 284,
+  "unit": "Article 300—General Requirements For Wiring Methods And Materials",
+  "questions": [
+   {
+    "n": 1,
+    "q": "The requirements of Article 300 are not intended to apply to the conductors that form an _____ part of equipment or listed utilization equipment.",
+    "choices": {
+     "a": "exterior",
+     "b": "integral",
+     "c": "interior",
+     "d": "none of these"
+    },
+    "ref": "300.1(B)",
+    "answer": "b"
+   },
+   {
+    "n": 2,
+    "q": "All conductors of the same circuit, including the grounded and equipment grounding conductors and bonding conductors shall be contained within the same _____, unless otherwise permitted elsewhere in the Code.",
+    "choices": {
+     "a": "raceway",
+     "b": "conduit body",
+     "c": "trench",
+     "d": "all of these"
+    },
+    "ref": "300.3(B)",
+    "answer": "d"
+   },
+   {
+    "n": 3,
+    "q": "The requirement to run all paralleled circuit conductors within the same _____ applies separately to each portion of the paralleled installation.",
+    "choices": {
+     "a": "raceway or auxiliary gutter",
+     "b": "cable tray or trench",
+     "c": "cable or cord",
+     "d": "all of these"
+    },
+    "ref": "300.3(B)(1)",
+    "answer": "d"
+   },
+   {
+    "n": 4,
+    "q": "Conductors installed in nonmetallic raceways run underground shall be permitted to be arranged as isolated _____ installations. The raceways shall be installed in close proximity, and the conductors shall comply with 300.20(B).",
+    "choices": {
+     "a": "neutral",
+     "b": "grounded conductor",
+     "c": "phase",
+     "d": "all of these"
+    },
+    "ref": "300.3(B)(1) Ex",
+    "answer": "d"
+   },
+   {
+    "n": 5,
+    "q": "Raceways, cable trays, cablebus, auxiliary gutters, cable armor, boxes, cable sheathing, cabinets, enclosures (other than surrounding fences and walls), elbows, couplings, fittings, supports, and support hardware shall be of materials suitable for _____.",
+    "choices": {
+     "a": "corrosive locations",
+     "b": "wet locations",
+     "c": "the environment in which they are to be installed",
+     "d": "damp locations"
+    },
+    "ref": "300.6",
+    "answer": "c"
+   },
+   {
+    "n": 6,
+    "q": "Where corrosion protection is necessary and the conduit is threaded anywhere other than at the factory where the product is listed, the threads shall be coated with a(an) _____ electrically conductive, corrosion-resistant compound.",
+    "choices": {
+     "a": "marked",
+     "b": "listed",
+     "c": "labeled",
+     "d": "approved"
+    },
+    "ref": "300.6(A)",
+    "answer": "d"
+   },
+   {
+    "n": 7,
+    "q": "Metal raceways, cable armor, and other metal enclosures shall be _____ joined together into a continuous electric conductor so as to provide effective electrical continuity.",
+    "choices": {
+     "a": "electrically",
+     "b": "permanently",
+     "c": "metallically",
+     "d": "physically"
+    },
+    "ref": "300.10",
+    "answer": "c"
+   },
+   {
+    "n": 8,
+    "q": "Raceways, cable armors, and cable sheaths shall be _____ between cabinets, boxes, conduit bodies, fittings, or other enclosures or outlets.",
+    "choices": {
+     "a": "continuous",
+     "b": "protected",
+     "c": "buried",
+     "d": "encased in concrete"
+    },
+    "ref": "300.12",
+    "answer": "a"
+   },
+   {
+    "n": 9,
+    "q": "Mechanical continuity of raceways, cable armors, and cable sheaths as required by 300.12 does not apply to _____.",
+    "choices": {
+     "a": "Type MI Cable",
+     "b": "Type MC Cable",
+     "c": "short sections of raceways used for support or protection of cable assemblies",
+     "d": "any of these"
+    },
+    "ref": "300.12 Ex 1",
+    "answer": "c"
+   },
+   {
+    "n": 10,
+    "q": "Conductors carrying alternating current installed in ferrous metal raceways or enclosures shall be arranged so as to avoid heating the surrounding ferrous metal by induction. To accomplish this, the _____ conductor(s) shall be grouped together.",
+    "choices": {
+     "a": "phase",
+     "b": "grounded",
+     "c": "equipment grounding",
+     "d": "all of these"
+    },
+    "ref": "300.20(A)",
+    "answer": "d"
+   },
+   {
+    "n": 11,
+    "q": "_____ is(are) a nonferrous, nonmagnetic metal that has no heating due to hysteresis heating.",
+    "choices": {
+     "a": "Steel",
+     "b": "Iron",
+     "c": "Aluminum",
+     "d": "all of these"
+    },
+    "ref": "300.20(B) Informational Note",
+    "answer": "c"
+   }
+  ]
  }
 }
