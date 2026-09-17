@@ -145,7 +145,7 @@ for k, lines in enumerate([
 ]):
     exams.append({"n": len(sessions) + k + 1, "date": (sat + dt.timedelta(days=7 * k)).isoformat(), "exam": f"Simulated Exam {k + 1}", "lines": lines})
 
-fmt = lambda d: d.strftime("%b %-d")
+fmt = lambda d: d.strftime("%b ") + str(d.day)
 
 # ---- the printed checklist, resolved: how many seconds the stream list holds per row, and which days carry it ----
 CAT = {u["video_id"]: u for u in json.load(open("videos.json"))["units"]}
