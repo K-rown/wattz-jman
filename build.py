@@ -10,17 +10,22 @@ Rules it follows:
   * Monday to Friday only. Saturday and Sunday are catch-up days: the page
     prints them, but nothing is scheduled on them.
   * Holidays are off (HOLIDAYS below).
-  * A day is TARGET_S of video (at 1.5x that is ~90 min). A unit that
-    does not fit is split, unless finishing it runs the day to CAP_S.
-  * A quiz lands on the day its unit or chapter closes.
+  * A day is WALL_S of work: video at 1.5x plus the quiz, a minute a
+    question with the book open (QUIZ_S_PER_Q). A unit that does not fit
+    is split, unless finishing it runs the day to CAP_S.
+  * A quiz starts on the day its unit or chapter closes. One too long for
+    the room left that day continues the next day as a numbered range
+    (Q91–180), so a chapter's 281 questions are three sittings, not one.
   * Three simulated exams on the three Saturdays after the last video.
 """
 import json, re, sys, datetime as dt
 
-TARGET_S = 8100    # 2h15 of video = 90 min at 1.5x
-CAP_S = 10800      # 3h of video = 2h at 1.5x, the hard ceiling
-TAIL_S = 600       # a leftover under 10 min is not worth its own day
 SPEED = 1.5
+WALL_S = 5400      # 90 min of work a day: video at 1.5x + the quiz
+CAP_S = 7200       # 2 h, the hard ceiling for finishing a unit
+TAIL_S = 400       # a leftover under ~7 min is not worth its own day
+QUIZ_S_PER_Q = 45  # three quarters of a minute a question, NEC open, right after the video
+QUIZ_MIN_CHUNK = 15  # a quiz range shorter than this waits for tomorrow
 HOLIDAYS = {
     "2026-11-26": "Thanksgiving", "2026-11-27": "Thanksgiving",
     "2026-12-24": "Holidays", "2026-12-25": "Holidays", "2026-12-31": "Holidays", "2027-01-01": "Holidays",
@@ -44,26 +49,50 @@ for ch, printed in VOL2_PRINTED.items():
         u["dur"] = round(u["dur"] * printed / listed) if listed else printed
         u["est"] = True
 
-# ---- pack the units into days ----
+# ---- pack the units and their quizzes into days (wall-clock seconds) ----
+QUIZZES = json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}
+def quiz_key(q): return (q["book"] + " " + q["label"].replace(" quiz", "")).replace(" ", "_")
+def quiz_len(q): return len(QUIZZES.get(quiz_key(q), {}).get("questions", []))
 cursor = {"i": 0, "t": C["position"]["at"] if units[0]["id"] == C["position"]["id"] else 0}
+pending = None   # a quiz still being taken: {"meta", "key", "next", "total"}
 days = []
-while cursor["i"] < len(units):
-    parts, used = [], 0
-    while cursor["i"] < len(units):
+while cursor["i"] < len(units) or pending:
+    parts, quizzes, used_v, used_q = [], [], 0, 0.0
+    while cursor["i"] < len(units) or pending:
+        if pending:
+            left_q = pending["total"] - pending["next"] + 1
+            room = WALL_S - used_v - used_q
+            fit = int(room // QUIZ_S_PER_Q)
+            if left_q <= fit or (used_v + used_q + left_q * QUIZ_S_PER_Q <= CAP_S and (left_q - fit) * QUIZ_S_PER_Q < TAIL_S):
+                take = left_q
+            elif fit >= QUIZ_MIN_CHUNK:
+                take = fit
+            else:
+                break
+            take = int(take)
+            quizzes.append(dict(pending["meta"], key=pending["key"], **{"from": int(pending["next"]), "to": int(pending["next"] + take - 1), "total": int(pending["total"])}))
+            used_q += take * QUIZ_S_PER_Q
+            pending = None if take == left_q else dict(pending, next=pending["next"] + take)
+            if pending or used_v + used_q >= WALL_S - TAIL_S: break
+            continue
         u = units[cursor["i"]]
-        left = u["dur"] - cursor["t"]
-        room = TARGET_S - used
-        if left <= room or used + left <= CAP_S and left - room < TAIL_S:
+        left = (u["dur"] - cursor["t"]) / SPEED
+        room = WALL_S - used_v - used_q
+        if left <= room or used_v + used_q + left <= CAP_S and left - room < TAIL_S:
             parts.append({"unit": u, "t": cursor["t"], "end": None, "complete": True})
-            used += left; cursor["i"] += 1; cursor["t"] = 0
-            if used >= TARGET_S - TAIL_S: break
+            used_v += left; cursor["i"] += 1; cursor["t"] = 0
+            if "quiz" in u:
+                total = quiz_len(u["quiz"])
+                if total: pending = {"meta": u["quiz"], "key": quiz_key(u["quiz"]), "next": 1, "total": total}
+                else: quizzes.append(dict(u["quiz"], key=quiz_key(u["quiz"]), **{"from": 0, "to": 0, "total": 0}))
+            if used_v + used_q >= WALL_S - TAIL_S and not pending: break
         else:
             if room < TAIL_S: break
-            end = cursor["t"] + room
+            end = cursor["t"] + round(room * SPEED)
             parts.append({"unit": u, "t": cursor["t"], "end": end, "complete": False})
-            used += room; cursor["t"] = end
+            used_v += room; cursor["t"] = end
             break
-    days.append({"parts": parts, "used": used})
+    days.append({"parts": parts, "quizzes": quizzes, "used_v": used_v, "used_q": used_q})
 
 # ---- the calendar: a slot per weekday, holidays skipped ----
 def next_weekday(d):
@@ -113,23 +142,27 @@ for n, day in enumerate(days, 1):
     for p in day["parts"]:
         w = chapter_words(p["unit"])
         if w not in heads: heads.append(w)
+    quizzes = day["quizzes"]
+    for q in quizzes:
+        q["partial"] = bool(q["total"]) and not (q["from"] == 1 and q["to"] == q["total"])
+        q["words"] = q["label"].replace(" quiz", "") + (f" Q{q['from']}–{q['to']}" if q["partial"] else "")
+    if not heads: heads.append((quizzes[0]["book"] + " " + quizzes[0]["words"] + " quiz") if quizzes else "Quiz")
     head = heads[0] if len(heads) == 1 else heads[0] + ", then " + heads[-1]
-    quizzes = [dict(p["unit"]["quiz"], key=(p["unit"]["quiz"]["book"] + " " + p["unit"]["quiz"]["label"].replace(" quiz", "")).replace(" ", "_")) for p in day["parts"] if p["complete"] and "quiz" in p["unit"]]
-    quiz = "Quiz: " + ", ".join(q["label"].replace(" quiz", "") for q in quizzes) if quizzes else "No quiz today — the chapter continues"
+    quiz = "Quiz: " + ", ".join(q["words"] for q in quizzes) if quizzes else "No quiz today — the chapter continues"
     banner = None
     for p in day["parts"]:
         if p["complete"] and units.index(p["unit"]) == book_last[p["unit"]["book"]]:
             banner = BANNER.get(p["unit"]["book"])
     stop = None
-    lp = day["parts"][-1]
-    if not lp["complete"]:
-        stop = {"unit": lp["unit"] and {k: lp["unit"][k] for k in ("id", "book", "label", "dur", "kind")}, "at": lp["end"]}
-    elif n < len(days):
+    lp = day["parts"][-1] if day["parts"] else None
+    if lp and not lp["complete"]:
+        stop = {"unit": {k: lp["unit"][k] for k in ("id", "book", "label", "dur", "kind")}, "at": lp["end"]}
+    elif n < len(days) and days[n]["parts"]:
         nu = days[n]["parts"][0]
         stop = {"unit": {k: nu["unit"][k] for k in ("id", "book", "label", "dur", "kind")}, "at": nu["t"]}
     sessions.append({
         "n": n, "date": day["date"], "banner": banner,
-        "minutes": round(day["used"] / SPEED / 60),
+        "minutes": round(day["used_v"] / 60), "quiz_minutes": round(day["used_q"] / 60),
         "head": head, "note": "on paper" if any(p["unit"]["book"] == "Calcs" for p in day["parts"]) else None,
         "quiz": quiz, "quiz_links": quizzes, "groups": groups, "stop": stop,
     })
@@ -169,7 +202,7 @@ for book in C["checklist"]:
 DATA = {
     "player": C["player"], "books": C["books"], "generated": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
     "position": C["position"], "done": C["done"], "colors": C["colors"],
-    "start": days[0]["date"], "holidays": HOLIDAYS,
+    "start": days[0]["date"], "holidays": HOLIDAYS, "quiz_spq": QUIZ_S_PER_Q,
     "sessions": sessions, "exams": exams, "checklist": checklist,
     "quizzes": (json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}),
     "footer": {
@@ -204,10 +237,10 @@ html, k = re.subn(r"const DATA = \{.*?\};\n", lambda m: new, html, count=1, flag
 assert k == 1
 open("index.html", "w").write(html)
 
-total = sum(d["used"] for d in days)
+tv = sum(d["used_v"] for d in days); tq = sum(d["used_q"] for d in days)
 print(f"{len(days)} weekdays, {days[0]['date']} → {days[-1]['date']}, "
-      f"{total / 3600:.1f} h of video = {total / SPEED / 3600:.1f} h at 1.5x, "
-      f"avg {total / len(days) / SPEED / 60:.0f} min/day; exams {[e['date'] for e in exams]}")
+      f"{tv / 3600:.1f} h of video at 1.5x + {tq / 3600:.1f} h of quiz ({sum(q['to'] - q['from'] + 1 for d in days for q in d['quizzes'] if q['total'])} questions), "
+      f"avg {(tv + tq) / len(days) / 60:.0f} min/day + 20 office hours; exams {[e['date'] for e in exams]}")
 
 # ---- artifact.html: the same page for claude.ai, progress kept per viewer by Claude's own store ----
 A = html
