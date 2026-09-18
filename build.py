@@ -1,14 +1,14 @@
 #!/usr/bin/env python3
 """Packs the Mike Holt curriculum (curriculum.json, in watch order) into
-weekday sessions of about ninety minutes at 1.5x and writes the DATA block
+daily sessions of about ninety minutes at 1.5x and writes the DATA block
 into index.html. Run it again whenever the plan changes:
 
-    python3 build.py                # start on the next weekday
+    python3 build.py                # start tomorrow
     python3 build.py 2026-09-21     # start on that day
 
 Rules it follows:
-  * Monday to Friday only. Saturday and Sunday are catch-up days: the page
-    prints them, but nothing is scheduled on them.
+  * Every day of the week, holidays off (HOLIDAYS below). Kymani studies
+    daily; the journeyman exam is in January, so no day is left empty.
   * Holidays are off (HOLIDAYS below).
   * A day is WALL_S of work: video at 1.5x plus the quiz, a minute a
     question with the book open (QUIZ_S_PER_Q). A unit that does not fit
@@ -35,7 +35,7 @@ C = json.load(open("curriculum.json"))
 units = C["units"]
 today = dt.date.today()
 start = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else today + dt.timedelta(days=1)
-while start.weekday() >= 5 or start.isoformat() in HOLIDAYS:
+while start.isoformat() in HOLIDAYS:
     start += dt.timedelta(days=1)
 
 # ---- Vol 2's listed running times are wrong (the intro is 2:40 on the player, 4:35 in the list; six
@@ -94,9 +94,9 @@ while cursor["i"] < len(units) or pending:
             break
     days.append({"parts": parts, "quizzes": quizzes, "used_v": used_v, "used_q": used_q})
 
-# ---- the calendar: a slot per weekday, holidays skipped ----
+# ---- the calendar: a slot every day, holidays skipped ----
 def next_weekday(d):
-    while d.weekday() >= 5 or d.isoformat() in HOLIDAYS:
+    while d.isoformat() in HOLIDAYS:
         d += dt.timedelta(days=1)
     return d
 
@@ -217,8 +217,8 @@ DATA = {
         "rules": [
             "About two hours a day, in order: the video, the quiz, then office hours. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
             "A question during the video goes in the box under the player, not in your head. Keep watching. Office hours is where it gets answered.",
-            "Behind? The weekend is for catching up. Ahead? The weekend is yours.",
-            "Never more than two days behind. Say so on Friday and the crew watches with you Saturday.",
+            "Every day counts, weekends too — the exam is in January. Behind? Make it up the next day, never let it pile.",
+            "Never more than two days behind. Say so and the crew watches with you.",
             "Bring your NEC every day and tab it as you go. Tabs are the only thing you can take into the exam.",
             "Calcs are done on paper, before Mike shows the answer.",
         ],
@@ -238,7 +238,7 @@ assert k == 1
 open("index.html", "w").write(html)
 
 tv = sum(d["used_v"] for d in days); tq = sum(d["used_q"] for d in days)
-print(f"{len(days)} weekdays, {days[0]['date']} → {days[-1]['date']}, "
+print(f"{len(days)} days, {days[0]['date']} → {days[-1]['date']}, "
       f"{tv / 3600:.1f} h of video at 1.5x + {tq / 3600:.1f} h of quiz ({sum(q['to'] - q['from'] + 1 for d in days for q in d['quizzes'] if q['total'])} questions), "
       f"avg {(tv + tq) / len(days) / 60:.0f} min/day + 20 office hours; exams {[e['date'] for e in exams]}")
 
