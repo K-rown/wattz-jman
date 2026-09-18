@@ -203,6 +203,7 @@ DATA = {
     "player": C["player"], "books": C["books"], "generated": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
     "position": C["position"], "done": C["done"], "colors": C["colors"],
     "start": days[0]["date"], "holidays": HOLIDAYS, "quiz_spq": QUIZ_S_PER_Q,
+    "units": [{k: u[k] for k in ("id", "book", "label", "dur", "chapter") if k in u} for u in units],
     "sessions": sessions, "exams": exams, "checklist": checklist,
     "quizzes": (json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}),
     "footer": {
