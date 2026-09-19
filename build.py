@@ -211,13 +211,13 @@ DATA = {
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
             ["0:05", "The day's block at 1.5x with captions, NEC open, tabbing as you go"],
             ["Chapter day", "The quiz, on your own, scored before you put the book down"],
-            ["Then 20 min", "Office hours: the questions you typed during the video, answered one at a time. Still fuzzy? It goes on the exam-week rewatch list"],
+            ["Then", "Your questions: the ones you typed during the video, sent to Claude in one go and filed back under each question. Anything still open goes on the exam-week list"],
             ["Done", "Tick the day. The next one is ready whenever you are — tonight if you like"],
             ["Last minute", "Write the stop point on this wall"],
         ],
         "rules": [
-            "About two hours a day, in order: the video, the quiz, then office hours. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
-            "A question during the video goes in the box under the player, not in your head. Keep watching. Office hours is where it gets answered.",
+            "About an hour and a half a day, in order: the video, the quiz, then your questions. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
+            "A question during the video goes in the box under the player, not in your head. Keep watching. The day's Questions section is where it gets answered.",
             "Every day counts, weekends too — the exam is in January. Behind? Make it up the next day, never let it pile.",
             "Never more than two days behind. Say so and the crew watches with you.",
             "Bring your NEC every day and tab it as you go. Tabs are the only thing you can take into the exam.",
@@ -241,7 +241,7 @@ open("index.html", "w").write(html)
 tv = sum(d["used_v"] for d in days); tq = sum(d["used_q"] for d in days)
 print(f"{len(days)} days, {days[0]['date']} → {days[-1]['date']}, "
       f"{tv / 3600:.1f} h of video at 1.5x + {tq / 3600:.1f} h of quiz ({sum(q['to'] - q['from'] + 1 for d in days for q in d['quizzes'] if q['total'])} questions), "
-      f"avg {(tv + tq) / len(days) / 60:.0f} min/day + 20 office hours; exams {[e['date'] for e in exams]}")
+      f"avg {(tv + tq) / len(days) / 60:.0f} min/day; exams {[e['date'] for e in exams]}")
 
 # ---- artifact.html: the same page for claude.ai, progress kept per viewer by Claude's own store ----
 A = html
