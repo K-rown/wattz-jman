@@ -206,6 +206,7 @@ DATA = {
     "units": [{k: u[k] for k in ("id", "book", "label", "dur", "chapter") if k in u} for u in units],
     "sessions": sessions, "exams": exams, "checklist": checklist,
     "quizzes": (json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}),
+    "sectime": (json.load(open("sections.json")) if __import__("os").path.exists("sections.json") else {}),
     "footer": {
         "how": [
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
