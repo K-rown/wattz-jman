@@ -252,8 +252,8 @@ body = A[A.index("<body>") + len("<body>"):A.rindex("</body>")]
 # no name card, no Supabase
 body = re.sub(r'<div class="who" id="who" hidden>.*?</div>\n', "", body, count=1, flags=re.S)
 body = body.replace('  <div id="whoSlot"></div>\n', "")
-body = re.sub(r'// Progress sync: the Supabase project.*?\nconst SYNC = \{[^\n]*\n', "", body, count=1, flags=re.S)
-s0 = body.index("  const KEY = 'ptj.v2', WHO = 'ptj.who';")
+body = re.sub(r'// Progress follows you between devices.*?\nconst SYNC = \{[^\n]*\n', "", body, count=1, flags=re.S)
+s0 = body.index("  const KEY = 'ptj.v2', GIST = 'ptj.gist';")
 s1 = body.index("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n") + len("  document.addEventListener('visibilitychange', () => { if (!document.hidden) pull(); });\n")
 CLAUDE_SYNC = r"""  const KEY = 'ptj.v2';
   let state = { done: {}, open: {}, notes: {}, qs: [], scores: {} };
