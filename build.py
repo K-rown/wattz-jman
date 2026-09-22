@@ -248,7 +248,11 @@ for book in BOOK_ORDER:
             chapters.append(seen[key])
         sc = SCHED.get(v["video_id"])
         q = QUIZ_BY_UNIT.get(v["video_id"])
-        row = {"id": v["video_id"], "label": (sc or {}).get("label") or v["title"],
+        # every unit is named the same way, so the numbers Mike uses are visible
+        label = (sc or {}).get("label") or (
+            f'Unit {v["unit"]} {v["title"]}' if v.get("kind") == "unit" and v.get("unit")
+            and v["book"] in ("Electrical Theory", "Exam Prep") else v["title"])
+        row = {"id": v["video_id"], "label": label,
                "book": BOOK_SHORT[book], "dur": (sc or {}).get("dur") or v["duration_s"]}
         if (sc or {}).get("est"): row["est"] = True
         prog = PROGRAM.get(v["video_id"], {})
