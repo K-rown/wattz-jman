@@ -1,0 +1,38 @@
+[
+ {
+  "key": "Theory_Unit_1",
+  "n": 8,
+  "answer": "d",
+  "evidence": "Theory 1.4: the charge is balanced, negative or positive depending on electrons against protons — all three."
+ },
+ {
+  "key": "Theory_Unit_6",
+  "n": 5,
+  "answer": "b",
+  "evidence": "Theory 6.4(B): a shock can drive the heart over 350 beats a minute. That is ventricular fibrillation."
+ },
+ {
+  "key": "Theory_Unit_10",
+  "n": 17,
+  "answer": "a",
+  "evidence": "Theory 10.8: the square root of a number is the number that, squared, gives the original back."
+ },
+ {
+  "key": "Theory_Unit_20",
+  "n": 36,
+  "answer": "b",
+  "evidence": "240V × 100A = 24,000 VA. At unity power factor that is 24 kVA, so the smallest size listed that carries it is 25 kVA. (Theory 20.10)"
+ },
+ {
+  "key": "Theory_Unit_20",
+  "n": 37,
+  "answer": "c",
+  "evidence": "240V × 100A = 24,000 VA. 24,000 ÷ 0.85 = 28,235 VA, about 28.24 kVA, so the smallest size listed that carries it is 37.50 kVA. (Theory 20.10)"
+ },
+ {
+  "key": "NEC_Vol_1_Final_Exam_A",
+  "n": 6,
+  "answer": "b",
+  "evidence": "NEC 110.26(A)(2): the working space is at least 30 in. wide, or the width of the equipment, whichever is greater."
+ }
+]

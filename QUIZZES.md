@@ -1,14 +1,13 @@
-# Bringing the quizzes into the app
+# Where the quizzes come from
 
-Run this from a Claude Code session on the laptop with Claude in Chrome
-connected (`/chrome`), signed in to the Mike Holt account. This sandbox
-cannot reach mikeholt.com, so the transcription has to happen there.
+Every quiz in the app was read out of Mike Holt's own books. There are 135 of
+them and 5,270 questions: every unit review, every chapter review, every final
+exam, and the two Journeyman Simulated Exams.
 
-`quizzes.todo.json` lists all 58 quizzes: book, quiz name, the digital book
-viewer URL and the page the quiz starts on. Answer keys are under
-My Digital Products → Answer Keys in the same account.
+## The shape
 
-Write `quizzes.json` at the repo root in exactly this shape and push it:
+`quizzes.json` at the repo root, keyed `<Book>_<Quiz>` with spaces as underscores
+(`Theory_Unit_24`, `NEC_Vol_1_Ch_1`, `B&G_Art_250`, `Simulated_Exams_Exam_A`):
 
 ```json
 {
@@ -19,27 +18,45 @@ Write `quizzes.json` at the repo root in exactly this shape and push it:
     "questions": [
       {
         "n": 1,
-        "q": "The primary winding of a transformer is the winding that ____.",
+        "q": "The primary winding of a transformer is the winding that _____.",
         "choices": { "a": "receives the power", "b": "delivers the power", "c": "…", "d": "…" },
         "answer": "a",
-        "ref": "Unit 24.2"
+        "ref": "24.2 Primary versus Secondary",
+        "computed": "optional: the working, shown to somebody who got it wrong"
       }
     ]
   }
 }
 ```
 
-Rules:
-- The key is the `key` field from `quizzes.todo.json`.
-- Transcribe every question in the quiz, in order, with every choice, word for word.
-- `answer` is the letter from Mike Holt's answer key. `ref` is whatever the key cites (a section, an NEC article), or omit it.
-- Do one quiz, stop, and let Kymani check it against the book before doing the rest.
-- Never guess an answer. If a key is missing for a quiz, leave `answer` out and say which one.
-- This repo is private. The quizzes are Mike Holt's copyrighted text for Kymani's own study; never make the repo public with this file in it.
+`n` is the number printed in the book, so a gap is allowed and honest — it means
+that question was left out, and the quiz's `source` line says why.
 
-Suggested first prompt for that session:
+## How they got there
 
-> Read QUIZZES.md and quizzes.todo.json. Use Chrome to open the first quiz
-> (Theory Unit 24, page 224 in the Theory book viewer) and its answer key,
-> transcribe it into quizzes.json in the shape QUIZZES.md shows, then stop
-> so I can check it.
+The books and their answer keys are PDFs on the shop machine, outside this repo:
+
+```
+C:\Users\Kymani\projects\jmen\MikeHolt\books\
+C:\Users\Kymani\projects\jmen\MikeHolt\answer-keys\
+```
+
+One agent per book read its PDF with `pypdf`, wrote `paste2/<n>-<book>.json`, and
+had to reproduce the hand-checked quizzes exactly where they overlapped. They did:
+across the 58 quizzes that already existed, every answer agreed. `books.py` then
+folds the result into `quizzes.json`, keeping the hand-checked version wherever
+there is one, because those carry worked arithmetic the book does not.
+
+`resolved.json` holds answers for the handful of questions whose printed key did
+not settle them, each with the working or the rule behind it. One question,
+Theory Unit 10 Q23, is still unsettled and is left out rather than guessed.
+
+The earlier route — transcribing quizzes by eye through the book viewer in
+Chrome — is finished and not needed again.
+
+## Rules, unchanged
+
+- **Never guess an answer.** Leave the question out and say so in `source`.
+- `answer` must be one of that question's own choice letters. `check.py` fails otherwise.
+- This repo is private. The questions are Mike Holt's copyrighted text, kept here
+  for a crew who own the books. Never make it public with this file in it.

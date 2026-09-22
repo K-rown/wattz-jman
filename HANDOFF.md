@@ -1,3 +1,11 @@
+> **DONE — kept only as a record.** All three jobs in this brief were finished on
+> 21 September 2026: GitHub Pages is serving from `main`, every quiz is in the app
+> (135 of them now, not 58, read out of the books themselves), and the app has been
+> through a full pass for accuracy and clarity. Since then it has become a library
+> for the whole crew rather than one person's calendar. **Read `README.md` for what
+> the app is today, and `QUIZZES.md` for where the quizzes come from.** Nothing
+> below needs doing again.
+
 # HANDOFF — finish the quizzes, restore the app, leave it ready to study
 
 Run this on Kymani's PC in a Claude Code session with Claude in Chrome connected

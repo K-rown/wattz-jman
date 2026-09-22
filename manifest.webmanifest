@@ -1,15 +1,28 @@
 {
   "name": "Path to Journeyman",
   "short_name": "JMAN",
-  "description": "Wattz LED crew page: an hour or two of Mike Holt every day, aimed at the journeyman exam.",
+  "description": "Every Mike Holt video and every quiz in the 2023 Journeyman program, in one place, in order. A Wattz LED crew page.",
   "start_url": "/wattz-jman/",
   "scope": "/wattz-jman/",
   "display": "standalone",
   "background_color": "#0c0c0e",
   "theme_color": "#1e7a3a",
   "icons": [
-    { "src": "icons/icon-192.png", "sizes": "192x192", "type": "image/png" },
-    { "src": "icons/icon-512.png", "sizes": "512x512", "type": "image/png" },
-    { "src": "icons/icon-512-maskable.png", "sizes": "512x512", "type": "image/png", "purpose": "maskable" }
+    {
+      "src": "icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    },
+    {
+      "src": "icons/icon-512-maskable.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "maskable"
+    }
   ]
 }

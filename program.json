@@ -1,0 +1,1024 @@
+{
+"ETC1U1": {
+"quiz": {
+"label": "Unit 1 quiz",
+"book": "Theory",
+"key": "Theory_Unit_1",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 39
+}
+},
+"ETC1U2": {
+"quiz": {
+"label": "Unit 2 quiz",
+"book": "Theory",
+"key": "Theory_Unit_2",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 41
+}
+},
+"ETC1U3": {
+"quiz": {
+"label": "Unit 3 quiz",
+"book": "Theory",
+"key": "Theory_Unit_3",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 43
+}
+},
+"ETC1U4": {
+"quiz": {
+"label": "Unit 4 quiz",
+"book": "Theory",
+"key": "Theory_Unit_4",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 44
+}
+},
+"ETC2U5": {
+"quiz": {
+"label": "Unit 5 quiz",
+"book": "Theory",
+"key": "Theory_Unit_5",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 63
+}
+},
+"ETC2U6": {
+"quiz": {
+"label": "Unit 6 quiz",
+"book": "Theory",
+"key": "Theory_Unit_6",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 65
+}
+},
+"ETC2U7": {
+"quiz": {
+"label": "Unit 7 quiz",
+"book": "Theory",
+"key": "Theory_Unit_7",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 81
+}
+},
+"ETC3U8": {
+"quiz": {
+"label": "Unit 8 quiz",
+"book": "Theory",
+"key": "Theory_Unit_8",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 82
+}
+},
+"ETC3U9": {
+"quiz": {
+"label": "Unit 9 quiz",
+"book": "Theory",
+"key": "Theory_Unit_9",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 83
+}
+},
+"ETC4U10": {
+"quiz": {
+"label": "Unit 10 quiz",
+"book": "Theory",
+"key": "Theory_Unit_10",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 99
+}
+},
+"ETC4U11": {
+"quiz": {
+"label": "Unit 11 quiz",
+"book": "Theory",
+"key": "Theory_Unit_11",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 102
+}
+},
+"ETC5U12": {
+"quiz": {
+"label": "Unit 12 quiz",
+"book": "Theory",
+"key": "Theory_Unit_12",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 117
+}
+},
+"ETC5U13": {
+"quiz": {
+"label": "Unit 13 quiz",
+"book": "Theory",
+"key": "Theory_Unit_13",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 119
+}
+},
+"ETC6U14": {
+"quiz": {
+"label": "Unit 14 quiz",
+"book": "Theory",
+"key": "Theory_Unit_14",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 143
+}
+},
+"ETC6U15": {
+"quiz": {
+"label": "Unit 15 quiz",
+"book": "Theory",
+"key": "Theory_Unit_15",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 145
+}
+},
+"ETC6U16": {
+"quiz": {
+"label": "Unit 16 quiz",
+"book": "Theory",
+"key": "Theory_Unit_16",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 148
+}
+},
+"ETC7U17": {
+"quiz": {
+"label": "Unit 17 quiz",
+"book": "Theory",
+"key": "Theory_Unit_17",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 179
+}
+},
+"ETC7U18": {
+"quiz": {
+"label": "Unit 18 quiz",
+"book": "Theory",
+"key": "Theory_Unit_18",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 183
+}
+},
+"ETC7U19": {
+"quiz": {
+"label": "Unit 19 quiz",
+"book": "Theory",
+"key": "Theory_Unit_19",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 184
+}
+},
+"ETC7U20": {
+"quiz": {
+"label": "Unit 20 quiz",
+"book": "Theory",
+"key": "Theory_Unit_20",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 186
+}
+},
+"ETC8U21": {
+"quiz": {
+"label": "Unit 21 quiz",
+"book": "Theory",
+"key": "Theory_Unit_21",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 219
+}
+},
+"ETC8U22": {
+"quiz": {
+"label": "Unit 22 quiz",
+"book": "Theory",
+"key": "Theory_Unit_22",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 222
+}
+},
+"ETC8U23": {
+"quiz": {
+"label": "Unit 23 quiz",
+"book": "Theory",
+"key": "Theory_Unit_23",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 224
+}
+},
+"ETC8U24": {
+"quiz": {
+"label": "Unit 24 quiz",
+"book": "Theory",
+"key": "Theory_Unit_24",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 224
+}
+},
+"ETC9U25": {
+"quiz": {
+"label": "Unit 25 quiz",
+"book": "Theory",
+"key": "Theory_Unit_25",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 249
+}
+},
+"ETC9U26": {
+"quiz": {
+"label": "Unit 26 quiz",
+"book": "Theory",
+"key": "Theory_Unit_26",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 253
+}
+},
+"ETC10U27": {
+"quiz": {
+"label": "Unit 27 quiz",
+"book": "Theory",
+"key": "Theory_Unit_27",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 276
+}
+},
+"ETC10U28": {
+"quiz": {
+"label": "Unit 28 quiz",
+"book": "Theory",
+"key": "Theory_Unit_28",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 278
+}
+},
+"ETC10U29": {
+"quiz": {
+"label": "Unit 29 quiz",
+"book": "Theory",
+"key": "Theory_Unit_29",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+"page": 280
+}
+},
+"23UNEC1Article90": {
+"page": 7,
+"quiz": {
+"label": "Art 90 quiz",
+"book": "NEC Vol 1",
+"key": "NEC_Vol_1_Art_90",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+"page": 35
+}
+},
+"23UNEC1Chapter1": {
+"page": 17
+},
+"23UNEC1Article100": {
+"page": 19
+},
+"23UNEC1Article110": {
+"page": 63,
+"quiz": {
+"label": "Ch 1 quiz",
+"book": "NEC Vol 1",
+"key": "NEC_Vol_1_Ch_1",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+"page": 117
+}
+},
+"23UNEC1Chapter2": {
+"page": 101
+},
+"23UNEC1Article200": {
+"page": 103
+},
+"23UNEC1Article210": {
+"page": 109
+},
+"23UNEC1Article215": {
+"page": 153
+},
+"23UNEC1Article220": {
+"page": 163
+},
+"23UNEC1Article225": {
+"page": 187
+},
+"23UNEC1Article230": {
+"page": 197
+},
+"23UNEC1Article240": {
+"page": 223
+},
+"23UNEC1Article242": {
+"page": 247
+},
+"23UNEC1Article250": {
+"page": 253,
+"quiz": {
+"label": "Ch 2 quiz",
+"book": "NEC Vol 1",
+"key": "NEC_Vol_1_Ch_2",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+"page": 349
+}
+},
+"23UNEC1Article300": {
+"page": 339
+},
+"23UNEC1Article310": {
+"page": 367
+},
+"23UNEC1Article312": {
+"page": 387
+},
+"23UNEC1Article314": {
+"page": 395
+},
+"23UNEC1Article320": {
+"page": 417
+},
+"23UNEC1Article330": {
+"page": 423
+},
+"23UNEC1Article334": {
+"page": 431
+},
+"23UNEC1Article336": {
+"page": 441
+},
+"23UNEC1Article338": {
+"page": 445
+},
+"23UNEC1Article340": {
+"page": 449
+},
+"23UNEC1Article342": {
+"page": 453
+},
+"23UNEC1Article344": {
+"page": 461
+},
+"23UNEC1Article348": {
+"page": 467
+},
+"23UNEC1Article350": {
+"page": 473
+},
+"23UNEC1Article352": {
+"page": 479
+},
+"23UNEC1Article356": {
+"page": 487
+},
+"23UNEC1Article358": {
+"page": 493
+},
+"23UNEC1Article362": {
+"page": 499
+},
+"23UNEC1Article376": {
+"page": 505
+},
+"23UNEC1Article380": {
+"page": 513
+},
+"23UNEC1Article386": {
+"page": 515
+},
+"23UNEC1Article392": {
+"page": 519,
+"quiz": {
+"label": "Ch 3 quiz",
+"book": "NEC Vol 1",
+"key": "NEC_Vol_1_Ch_3",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+"page": 545
+}
+},
+"23UNEC1Article400": {
+"page": 533
+},
+"23UNEC1Article402": {
+"page": 539
+},
+"23UNEC1Article404": {
+"page": 543
+},
+"23UNEC1Article406": {
+"page": 553
+},
+"23UNEC1Article408": {
+"page": 565
+},
+"23UNEC1Article410": {
+"page": 573
+},
+"23UNEC1Article411": {
+"page": 585
+},
+"23UNEC1Article422": {
+"page": 589
+},
+"23UNEC1Article424": {
+"page": 597
+},
+"23UNEC1Article430": {
+"page": 601
+},
+"23UNEC1Article440": {
+"page": 623
+},
+"23UNEC1Article445": {
+"page": 629
+},
+"23UNEC1Article450": {
+"page": 633
+},
+"23UNEC1Article480": {
+"page": 639,
+"quiz": {
+"label": "Ch 4 quiz",
+"book": "NEC Vol 1",
+"key": "NEC_Vol_1_Ch_4",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+"page": 663
+}
+},
+"23UNECBGArticle250PartA": {
+"page": 127,
+"quiz": {
+"label": "Unit 3 quiz",
+"book": "B&G",
+"key": "B&G_Unit_3",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 30
+}
+},
+"23UNECBGArticle250PartB": {
+"page": 127,
+"quiz": {
+"label": "Art 250 quiz",
+"book": "B&G",
+"key": "B&G_Art_250",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 216
+}
+},
+"23UNECBGArticle300": {
+"page": 225,
+"quiz": {
+"label": "Art 300 quiz",
+"book": "B&G",
+"key": "B&G_Art_300",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 284
+}
+},
+"23UNECBGArticle314": {
+"page": 233,
+"quiz": {
+"label": "Art 314 quiz",
+"book": "B&G",
+"key": "B&G_Art_314",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 285
+}
+},
+"23UNECBGArticle320": {
+"page": 237,
+"quiz": {
+"label": "Art 320 quiz",
+"book": "B&G",
+"key": "B&G_Art_320",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 286
+}
+},
+"23UNECBGArticle330": {
+"page": 239,
+"quiz": {
+"label": "Art 330 quiz",
+"book": "B&G",
+"key": "B&G_Art_330",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 286
+}
+},
+"23UNECBGArticle334": {
+"page": 243,
+"quiz": {
+"label": "Art 334 quiz",
+"book": "B&G",
+"key": "B&G_Art_334",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 286
+}
+},
+"23UNECBGArticle342": {
+"page": 247,
+"quiz": {
+"label": "Art 342 quiz",
+"book": "B&G",
+"key": "B&G_Art_342",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 286
+}
+},
+"23UNECBGArticle344": {
+"page": 249,
+"quiz": {
+"label": "Art 344 quiz",
+"book": "B&G",
+"key": "B&G_Art_344",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 286
+}
+},
+"23UNECBGArticle350": {
+"page": 253,
+"quiz": {
+"label": "Art 350 quiz",
+"book": "B&G",
+"key": "B&G_Art_350",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 287
+}
+},
+"23UNECBGArticle352": {
+"page": 255,
+"quiz": {
+"label": "Art 352 quiz",
+"book": "B&G",
+"key": "B&G_Art_352",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 287
+}
+},
+"23UNECBGArticle356": {
+"page": 257,
+"quiz": {
+"label": "Art 356 quiz",
+"book": "B&G",
+"key": "B&G_Art_356",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 287
+}
+},
+"23UNECBGArticle358": {
+"page": 259,
+"quiz": {
+"label": "Art 358 quiz",
+"book": "B&G",
+"key": "B&G_Art_358",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 287
+}
+},
+"23UNECBGArticle362": {
+"page": 261,
+"quiz": {
+"label": "Art 362 quiz",
+"book": "B&G",
+"key": "B&G_Art_362",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 287
+}
+},
+"23UNECBGArticle376": {
+"page": 263,
+"quiz": {
+"label": "Art 376 quiz",
+"book": "B&G",
+"key": "B&G_Art_376",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 288
+}
+},
+"23UNECBGArticle386": {
+"page": 265,
+"quiz": {
+"label": "Art 386 quiz",
+"book": "B&G",
+"key": "B&G_Art_386",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 288
+}
+},
+"23UNECBGArticle392": {
+"page": 267,
+"quiz": {
+"label": "Art 392 quiz",
+"book": "B&G",
+"key": "B&G_Art_392",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 288
+}
+},
+"23UNECBGArticle404": {
+"page": 277,
+"quiz": {
+"label": "Art 404 quiz",
+"book": "B&G",
+"key": "B&G_Art_404",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 309
+}
+},
+"23UNECBGArticle406": {
+"page": 281,
+"quiz": {
+"label": "Art 406 quiz",
+"book": "B&G",
+"key": "B&G_Art_406",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 310
+}
+},
+"23UNECBGArticle408": {
+"page": 285,
+"quiz": {
+"label": "Art 408 quiz",
+"book": "B&G",
+"key": "B&G_Art_408",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 310
+}
+},
+"23UNECBGArticle410": {
+"page": 287,
+"quiz": {
+"label": "Art 410 quiz",
+"book": "B&G",
+"key": "B&G_Art_410",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 311
+}
+},
+"23UNECBGArticle440": {
+"page": 291,
+"quiz": {
+"label": "Art 440 quiz",
+"book": "B&G",
+"key": "B&G_Art_440",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 311
+}
+},
+"23UNECBGArticle450": {
+"page": 293,
+"quiz": {
+"label": "Art 450 quiz",
+"book": "B&G",
+"key": "B&G_Art_450",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 311
+}
+},
+"23UNECBGArticle501": {
+"page": 301,
+"quiz": {
+"label": "Art 501 quiz",
+"book": "B&G",
+"key": "B&G_Art_501",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 333
+}
+},
+"23UNECBGArticle502": {
+"page": 305,
+"quiz": {
+"label": "Art 502 quiz",
+"book": "B&G",
+"key": "B&G_Art_502",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 333
+}
+},
+"23UNECBGArticle517": {
+"page": 307,
+"quiz": {
+"label": "Art 517 quiz",
+"book": "B&G",
+"key": "B&G_Art_517",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 334
+}
+},
+"23UNECBGArticle547": {
+"page": 313,
+"quiz": {
+"label": "Art 547 quiz",
+"book": "B&G",
+"key": "B&G_Art_547",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 334
+}
+},
+"23UNECBGArticle555": {
+"page": 317,
+"quiz": {
+"label": "Art 555 quiz",
+"book": "B&G",
+"key": "B&G_Art_555",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 335
+}
+},
+"23UNECBGArticle600": {
+"page": 325,
+"quiz": {
+"label": "Art 600 quiz",
+"book": "B&G",
+"key": "B&G_Art_600",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 365
+}
+},
+"23UNECBGArticle645": {
+"page": 329,
+"quiz": {
+"label": "Art 645 quiz",
+"book": "B&G",
+"key": "B&G_Art_645",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 365
+}
+},
+"23UNECBGArticle680": {
+"page": 331,
+"quiz": {
+"label": "Art 680 quiz",
+"book": "B&G",
+"key": "B&G_Art_680",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 366
+}
+},
+"23UNECBGArticle690": {
+"page": 347,
+"quiz": {
+"label": "Art 690 quiz",
+"book": "B&G",
+"key": "B&G_Art_690",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 369
+}
+},
+"23UNECBGArticle810": {
+"page": 359,
+"quiz": {
+"label": "Art 810 quiz",
+"book": "B&G",
+"key": "B&G_Art_810",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+"page": 377
+}
+},
+"ObjectionableCurrentPrevention2506": {
+"page": 127
+},
+"GroundingandBondingServiceEquipment25024": {
+"page": 127
+},
+"TransformerSeparatelyDerivedSystems25030": {
+"page": 127
+},
+"GeneratorSeparatelyDerivedSystems25030": {
+"page": 127
+},
+"BuildingsSuppliedbyaFeeder25032": {
+"page": 127
+},
+"ImpedanceGroundedSystems25036": {
+"page": 127
+},
+"23UNEC2Article500": {
+"page": 145
+},
+"23UNEC2Article501": {
+"page": 155
+},
+"23UNEC2Article502": {
+"page": 171
+},
+"23UNEC2Article511": {
+"page": 179
+},
+"23UNEC2Article517": {
+"page": 189
+},
+"23UNEC2Article518": {
+"page": 197
+},
+"23UNEC2Article547": {
+"page": 205
+},
+"23UNEC2Article555": {
+"page": 211
+},
+"23UNEC2Article590": {
+"page": 221,
+"quiz": {
+"label": "Ch 5 quiz",
+"book": "NEC Vol 2",
+"key": "NEC_Vol_2_Ch_5",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+"page": 227
+}
+},
+"23UNEC2Chapter6Intro": {
+"page": 247
+},
+"23UNEC2Article600": {
+"page": 249
+},
+"23UNEC2Article604": {
+"page": 257
+},
+"23UNEC2Article625": {
+"page": 265
+},
+"23UNEC2Article680": {
+"page": 289
+},
+"23UNEC2Article690": {
+"page": 321
+},
+"23UNEC2Article695": {
+"page": 367,
+"quiz": {
+"label": "Ch 6 quiz",
+"book": "NEC Vol 2",
+"key": "NEC_Vol_2_Ch_6",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+"page": 375
+}
+},
+"23UNEC2Chapter7Intro": {
+"page": 403
+},
+"23UNEC2Article700": {
+"page": 405
+},
+"23UNEC2Article701": {
+"page": 417
+},
+"23UNEC2Article702": {
+"page": 423
+},
+"23UNEC2Article705": {
+"page": 429
+},
+"23UNEC2Article706": {
+"page": 451
+},
+"23UNEC2Article722": {
+"page": 463
+},
+"23UNEC2Article724": {
+"page": 475
+},
+"23UNEC2Article725": {
+"page": 479
+},
+"23UNEC2Article760": {
+"page": 487
+},
+"23UNEC2Article770": {
+"page": 497,
+"quiz": {
+"label": "Ch 7 quiz",
+"book": "NEC Vol 2",
+"key": "NEC_Vol_2_Ch_7",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+"page": 503
+}
+},
+"23UNEC2Chapter8Intro": {
+"page": 521
+},
+"23UNEC2Article800": {
+"page": 523
+},
+"23UNEC2Article810": {
+"page": 531,
+"quiz": {
+"label": "Ch 8 quiz",
+"book": "NEC Vol 2",
+"key": "NEC_Vol_2_Ch_8",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393",
+"page": 537
+}
+},
+"23FundCalcChapter1": {
+"page": 19,
+"quiz": {
+"label": "Calcs Ch 1 quiz",
+"book": "Calcs",
+"key": "Calcs_Calcs_Ch_1",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+"page": 51
+}
+},
+"23FundCalcChapter2": {
+"page": 45,
+"quiz": {
+"label": "Calcs Ch 2 quiz",
+"book": "Calcs",
+"key": "Calcs_Calcs_Ch_2",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+"page": 103
+}
+},
+"23FundCalcChapter3": {
+"page": 97,
+"quiz": {
+"label": "Calcs Ch 3 quiz",
+"book": "Calcs",
+"key": "Calcs_Calcs_Ch_3",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+"page": 137
+}
+},
+"23FundCalcChapter4": {
+"page": 129,
+"quiz": {
+"label": "Calcs Ch 4 quiz",
+"book": "Calcs",
+"key": "Calcs_Calcs_Ch_4",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+"page": 164
+}
+},
+"23FundCalcChapter6": {
+"page": 155,
+"quiz": {
+"label": "Calcs Ch 6 quiz",
+"book": "Calcs",
+"key": "Calcs_Calcs_Ch_6",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+"page": 173
+}
+},
+"23EPUnit1": {
+"page": 241,
+"quiz": {
+"label": "Unit 1 quiz",
+"book": "Exam Prep",
+"key": "Exam_Prep_Unit_1",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+"page": 279
+}
+},
+"23EPUnit2": {
+"page": 265,
+"quiz": {
+"label": "Unit 2 quiz",
+"book": "Exam Prep",
+"key": "Exam_Prep_Unit_2",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+"page": 299
+}
+},
+"23EPUnit3edit": {
+"page": 283,
+"quiz": {
+"label": "Unit 3 quiz",
+"book": "Exam Prep",
+"key": "Exam_Prep_Unit_3",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+"page": 327
+}
+},
+"23EPUnit4": {
+"page": 315,
+"quiz": {
+"label": "Unit 4 quiz",
+"book": "Exam Prep",
+"key": "Exam_Prep_Unit_4",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+"page": 365
+}
+},
+"23EPUnit5": {
+"page": 351,
+"quiz": {
+"label": "Unit 5 quiz",
+"book": "Exam Prep",
+"key": "Exam_Prep_Unit_5",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+"page": 385
+}
+},
+"23EPUnit6": {
+"page": 369,
+"quiz": {
+"label": "Unit 6 quiz",
+"book": "Exam Prep",
+"key": "Exam_Prep_Unit_6",
+"url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+"page": 407
+}
+}
+}

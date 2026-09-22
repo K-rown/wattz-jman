@@ -36,12 +36,35 @@ def cues(path):
         out.append((int(m.group(1)) * 3600 + int(m.group(2)) * 60 + int(m.group(3)), ' '.join(m.group(4).split())))
     return out
 
-def articles_in_play(C):
-    """the NEC articles this course teaches, so a stray number is not read as a section"""
+def own_article(v):
+    """the article this video teaches: the field when it is set, else the number
+    Mike puts in the title ("Objectionable Current Prevention [250.6]")"""
+    if v.get('article'): return str(v['article'])
+    m = re.search(r'\[(\d{2,3})\.\d+\]', v.get('title', ''))
+    return m.group(1) if m else None
+
+def key_sections(vid, C):
+    """the NEC sections the answer key for this video's own quiz cites.
+    A video that teaches no single article (a calculations chapter, an exam-prep
+    unit) names dozens of articles in passing. Only the ones Mike's own key cites
+    are kept, so a misheard number never becomes a jump."""
+    q = next((u.get('quiz') for u in C['units'] if u['id'] == vid and u.get('quiz')), None)
+    if not q: return set()
+    k = (q['book'] + ' ' + q['label'].replace(' quiz', '')).replace(' ', '_')
+    Q = json.load(open('quizzes.json', encoding='utf-8')) if os.path.exists('quizzes.json') else {}
+    out = set()
+    for x in Q.get(k, {}).get('questions', []):
+        m = re.match(r'^(?:Table\s+)?(\d{2,3}\.\d+)', (x.get('ref') or '').strip())
+        if m: out.add(m.group(1))
+    return out
+
+def articles_in_play(V):
+    """the NEC articles this course teaches, so a stray number is not read as a section.
+    Read off every video in the program, not just the ones still ahead of one person."""
     arts = {'90', '100'}
-    for u in C['units']:
-        m = re.match(r'^Art (\d+)', u['label'])
-        if m: arts.add(m.group(1))
+    for v in V.values():
+        a = own_article(v)
+        if a: arts.add(a)
     return arts
 
 def index(path, arts, own=None):
@@ -61,31 +84,51 @@ def index(path, arts, own=None):
     return hits
 
 def main():
-    C = json.load(open('curriculum.json', encoding='utf-8'))
+    """Walk EVERY video in the program, not only the ones left in one person's plan:
+    a coworker starting at Unit 1 needs the sections in the videos he starts with."""
     V = {u['video_id']: u for u in json.load(open(os.path.join(CAPS, 'videos.json'), encoding='utf-8'))['units']}
-    arts = articles_in_play(C)
+    arts = articles_in_play(V)
     out, total = {}, 0
-    for u in C['units']:
-        v = V.get(u['id'])
-        path = os.path.join(CAPS, v['transcript']) if v and v.get('transcript') else None
+    C = json.load(open('curriculum.json', encoding='utf-8'))
+    for vid, v in sorted(V.items(), key=lambda kv: kv[1]['seq']):
+        path = os.path.join(CAPS, v['transcript']) if v.get('transcript') else None
         if not path or not os.path.exists(path): continue
-        m = re.match(r'^Art (\d+)', u['label'])
-        hits = index(path, arts, m.group(1) if m else None)
+        own = own_article(v)
+        hits = index(path, arts, own)
+        if not own:
+            # no single article to anchor on: keep only what Mike's own answer key cites
+            allowed = key_sections(vid, C)
+            hits = {k: t for k, t in hits.items() if k in allowed}
         if hits:
-            out[u['id']] = dict(sorted(hits.items(), key=lambda kv: kv[1]))
+            out[vid] = dict(sorted(hits.items(), key=lambda kv: kv[1]))
             total += len(hits)
-            print(f"{u['id']:22} {len(hits):>4} sections  {u['label'][:44]}")
     json.dump(out, open(OUT, 'w', encoding='utf-8'), indent=0, ensure_ascii=False)
-    print()
-    print(f'{OUT}: {len(out)} videos, {total} section mentions indexed')
+    print(f'{OUT}: {len(out)} videos, {total} section mentions from the spoken word')
+    # the slides are read by eye and are more exact than the transcript: they win
+    for f in sorted(os.listdir('slides')):
+        if f.endswith('.json'): merge_slides(os.path.splitext(f)[0])
+    S = json.load(open(OUT, encoding='utf-8'))
+    print(f'{OUT}: {len(S)} videos, {sum(len(x) for x in S.values())} sections in all')
+
+def merge_slides(vid):
+    """fold a hand-read slides/<vid>.json into sections.json (see slides.py)"""
+    read = json.load(open(os.path.join('slides', vid + '.json'), encoding='utf-8'))
+    S = json.load(open(OUT, encoding='utf-8'))
+    cur = S.get(vid, {})
+    for t, sec in read.items():
+        m = re.match(r'^(\d{2,3}\.\d+(?:\([A-Za-z0-9]+\))*[a-z]?)', sec.strip())
+        if not m: continue
+        sec = m.group(1)
+        if sec not in cur or int(t) < cur[sec]: cur[sec] = int(t)
+    S[vid] = dict(sorted(cur.items(), key=lambda kv: kv[1]))
+    json.dump(S, open(OUT, 'w', encoding='utf-8'), indent=0, ensure_ascii=False)
+    print(f'  slides {vid}: {len(S[vid])} sections')
 
 if __name__ == '__main__':
     if len(sys.argv) > 1:
-        C = json.load(open('curriculum.json', encoding='utf-8'))
         V = {u['video_id']: u for u in json.load(open(os.path.join(CAPS, 'videos.json'), encoding='utf-8'))['units']}
         v = V[sys.argv[1]]
-        m = re.match(r'^Art (\d+)', next((x['label'] for x in C['units'] if x['id'] == sys.argv[1]), ''))
-        h = index(os.path.join(CAPS, v['transcript']), articles_in_play(C), m.group(1) if m else None)
+        h = index(os.path.join(CAPS, v['transcript']), articles_in_play(V), own_article(v))
         for sec, t in sorted(h.items(), key=lambda kv: kv[1]):
             print(f'  {t // 60:>3}:{t % 60:02d}  {sec}')
     else:

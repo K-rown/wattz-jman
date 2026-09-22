@@ -3,7 +3,7 @@
 daily sessions of about ninety minutes at 1.5x and writes the DATA block
 into index.html. Run it again whenever the plan changes:
 
-    python3 build.py                # start tomorrow
+    python3 build.py                # start on curriculum.json's "start"
     python3 build.py 2026-09-21     # start on that day
 
 Rules it follows:
@@ -19,6 +19,14 @@ Rules it follows:
   * Three simulated exams on the three Saturdays after the last video.
 """
 import json, re, sys, datetime as dt
+try: sys.stdout.reconfigure(encoding="utf-8", errors="replace")   # a build must not die on an arrow
+except Exception: pass
+
+# the stamp people read in the footer: local wall-clock, with the offset spelled out.
+# It used to be UTC, which reads a day ahead all evening on the east coast.
+_NOW = dt.datetime.now().astimezone()
+_OFF = int(_NOW.utcoffset().total_seconds() // 3600)
+GENERATED = _NOW.strftime("%Y-%m-%d %H:%M") + f" UTC{_OFF:+d}"
 
 SPEED = 1.5
 WALL_S = 5400      # 90 min of work a day: video at 1.5x + the quiz
@@ -31,10 +39,12 @@ HOLIDAYS = {
     "2026-12-24": "Holidays", "2026-12-25": "Holidays", "2026-12-31": "Holidays", "2027-01-01": "Holidays",
 }
 
-C = json.load(open("curriculum.json"))
+C = json.load(open("curriculum.json", encoding="utf-8"))
 units = C["units"]
 today = dt.date.today()
-start = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else today + dt.timedelta(days=1)
+# The plan's first day lives in curriculum.json so a plain rebuild never moves it.
+# Pass a date on the command line only when you mean to shift the whole plan.
+start = dt.date.fromisoformat(sys.argv[1]) if len(sys.argv) > 1 else dt.date.fromisoformat(C["start"])
 while start.isoformat() in HOLIDAYS:
     start += dt.timedelta(days=1)
 
@@ -50,7 +60,7 @@ for ch, printed in VOL2_PRINTED.items():
         u["est"] = True
 
 # ---- pack the units and their quizzes into days (wall-clock seconds) ----
-QUIZZES = json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}
+QUIZZES = json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}
 def quiz_key(q): return (q["book"] + " " + q["label"].replace(" quiz", "")).replace(" ", "_")
 def quiz_len(q): return len(QUIZZES.get(quiz_key(q), {}).get("questions", []))
 cursor = {"i": 0, "t": C["position"]["at"] if units[0]["id"] == C["position"]["id"] else 0}
@@ -181,7 +191,7 @@ for k, lines in enumerate([
 fmt = lambda d: d.strftime("%b ") + str(d.day)
 
 # ---- the printed checklist, resolved: how many seconds the stream list holds per row, and which days carry it ----
-CAT = {u["video_id"]: u for u in json.load(open("videos.json"))["units"]}
+CAT = {u["video_id"]: u for u in json.load(open("videos.json", encoding="utf-8"))["units"]}
 CATBOOK = {"Theory": "Electrical Theory", "NEC Vol 1": "NEC Vol 1", "B&G": "Bonding & Grounding", "NEC Vol 2": "NEC Vol 2", "Calcs": "Fundamental NEC Calculations", "Exam Prep": "Exam Prep"}
 checklist = []
 for book in C["checklist"]:
@@ -201,11 +211,27 @@ for book in C["checklist"]:
     checklist.append(dict(book, rows=rows))
 # ---- the whole program, by book and chapter: what a person sees who is starting at zero ----
 BOOK_ORDER = ["Electrical Theory", "NEC Vol 1", "Fundamental NEC Calculations", "Exam Prep", "Bonding & Grounding", "NEC Vol 2"]
+BOOK_LINK = {"Theory": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
+             "NEC Vol 1": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
+             "Calcs": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
+             "Exam Prep": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382",
+             "B&G": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380",
+             "NEC Vol 2": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC2-DB/5393"}
+QUIZMETA = {k: {"label": q["quiz"] + " quiz", "book": q["book"],
+                **({"page": q["page"]} if q.get("page") else {}),
+                **({"url": BOOK_LINK[q["book"]]} if q["book"] in BOOK_LINK else {})}
+            for k, q in QUIZZES.items()}
 BOOK_SHORT = {"Electrical Theory": "Theory", "NEC Vol 1": "NEC Vol 1", "Fundamental NEC Calculations": "Calcs",
               "Exam Prep": "Exam Prep", "Bonding & Grounding": "B&G", "NEC Vol 2": "NEC Vol 2"}
 QUIZ_BY_UNIT = {u["id"]: u["quiz"] for u in units if "quiz" in u}
+# what the books themselves say: a page and a quiz for every video, not only the
+# ones left in one person's plan. Written by books.py out of the seven PDFs.
+PROGRAM = json.load(open("program.json", encoding="utf-8")) if __import__("os").path.exists("program.json") else {}
 SCHED = {u["id"]: u for u in units}
-ALLV = json.load(open("videos.json"))["units"]
+ALLV = json.load(open("videos.json", encoding="utf-8"))["units"]
+ALL_UNITS = [{"id": v["video_id"], "book": BOOK_SHORT[v["book"]], "label": v["title"],
+              "dur": v["duration_s"], **({"chapter": v["chapter"]} if v.get("chapter") is not None else {})}
+             for v in ALLV if v["book"] in BOOK_SHORT]
 library = []
 for book in BOOK_ORDER:
     vids = [v for v in ALLV if v["book"] == book]
@@ -221,24 +247,74 @@ for book in BOOK_ORDER:
         sc = SCHED.get(v["video_id"])
         q = QUIZ_BY_UNIT.get(v["video_id"])
         row = {"id": v["video_id"], "label": (sc or {}).get("label") or v["title"],
-               "dur": (sc or {}).get("dur") or v["duration_s"]}
+               "book": BOOK_SHORT[book], "dur": (sc or {}).get("dur") or v["duration_s"]}
         if (sc or {}).get("est"): row["est"] = True
-        if (sc or {}).get("page"): row["page"] = sc["page"]
+        prog = PROGRAM.get(v["video_id"], {})
+        # the book's own page beats the plan's, which only ever knew the chapter's
+        page = prog.get("page") or (sc or {}).get("page")
+        if page: row["page"] = page
         if q: row["quiz"] = dict(q, key=(q["book"] + " " + q["label"].replace(" quiz", "")).replace(" ", "_"))
+        elif prog.get("quiz"): row["quiz"] = prog["quiz"]
         chapters[-1]["units"].append(row)
+    placed = {u["quiz"]["key"] for c in chapters for u in c["units"] if u.get("quiz")}
+    # in the order a reader meets them in the book, not alphabetical:
+    # "Unit 7" must not come after "Unit 29"
+    extra = [dict(QUIZMETA[k], key=k) for k in sorted(QUIZZES, key=lambda k: (QUIZZES[k].get("page") or 9999, k))
+             if QUIZZES[k]["book"] == BOOK_SHORT[book] and k not in placed]
     library.append({"book": BOOK_SHORT[book], "full": book, "chapters": chapters,
-                    "dur": sum(u["dur"] for c in chapters for u in c["units"])})
+                    "dur": sum(u["dur"] for c in chapters for u in c["units"]),
+                    **({"extra": extra} if extra else {})})
+
+# a book with no videos of its own still belongs in the library: the Journeyman
+# Simulated Exams are Mike's, and the app had never carried them.
+_shown = {b["book"] for b in library}
+for bk in sorted({q["book"] for q in QUIZZES.values()} - _shown):
+    rows = [dict(QUIZMETA[k], key=k) for k in sorted(QUIZZES, key=lambda k: (QUIZZES[k].get("page") or 9999, k))
+            if QUIZZES[k]["book"] == bk]
+    library.append({"book": bk, "full": bk, "chapters": [], "dur": 0, "extra": rows})
 
 DATA = {
-    "player": C["player"], "books": C["books"], "generated": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
+    "player": C["player"], "books": C["books"], "generated": GENERATED,
     "position": C["position"], "done": C["done"], "colors": C["colors"],
     "start": days[0]["date"], "holidays": HOLIDAYS, "quiz_spq": QUIZ_S_PER_Q,
-    "units": [{k: u[k] for k in ("id", "book", "label", "dur", "chapter") if k in u} for u in units],
+    "units": [{"id": u["id"], "book": u["book"], "label": u["label"], "dur": u["dur"],
+                **({"chapter": u["chapter"]} if "chapter" in u else {})}
+              for u in ({x["id"]: x for x in ALL_UNITS} | {x["id"]: x for x in units}).values()],
     "library": library,
+    # the headline numbers, worked out from the data so they can never go stale
+    "totals": {
+        "videos": sum(len(c["units"]) for b in library for c in b["chapters"]),
+        "hours": round(sum(b["dur"] for b in library) / 3600),
+        "books": len(library),
+        "quizzes": len(QUIZZES),
+        "questions": sum(len(q["questions"]) for q in QUIZZES.values()),
+    },
     "sessions": sessions, "exams": exams, "checklist": checklist,
-    "quizzes": (json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}),
-    "sectime": (json.load(open("sections.json")) if __import__("os").path.exists("sections.json") else {}),
+    "quizzes": (json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}),
+    "sectime": (json.load(open("sections.json", encoding="utf-8")) if __import__("os").path.exists("sections.json") else {}),
     "footer": {
+        # the library's own footer: read by anyone opening this for the first time,
+        # with no dates in it, because a crew does not share one person's pace
+        "lib": {
+            "how": [
+                ["Pick a book", "Open a chapter and tap Watch. The video plays on this page. You never need another tab."],
+                ["Tick it off", "The box beside a video remembers that you watched it, on this device. Nothing to sign up for."],
+                ["Take the quiz", "Every chapter ends in Mike's own quiz. It grades itself, shows the key, and names the NEC section behind each answer."],
+                ["Miss one", "A wrong answer offers Rewatch, which jumps the video to the part that covers it, and Ask Claude, which explains it with the section."],
+                ["Jump to a section", "Where a video's sections are listed, tapping one starts the video where Mike teaches it."],
+            ],
+            "rules": [
+                "Start at the top of Electrical Theory if you are new. The books are in the order Mike teaches them.",
+                "Bring a 2023 NEC code book and tab it as you watch. Tabs and highlights are the only things you can carry into the exam.",
+                "Do the calculations on paper before Mike shows the answer. Watching him do it is not the same as doing it.",
+                "Take the quiz before you move on, not at the end of the week. It is how you find out what you did not actually learn.",
+                "Go at your own pace. If you want dates, press My pace for a 52-day run at it.",
+            ],
+            "ends": [
+                ["Your progress", "lives in this browser. Copy a pick-up link below to carry it to another device, or connect a GitHub token to keep them in step."],
+                ["Passing", "is 70%. Aim higher — the real exam is not the practice one."],
+            ],
+        },
         "how": [
             ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
             ["0:05", "The day's block at 1.5x with captions, NEC open, tabbing as you go"],
@@ -250,7 +326,7 @@ DATA = {
         "rules": [
             "About an hour and a half a day, in order: the video, the quiz, then your questions. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
             "A question during the video goes in the box under the player, not in your head. Keep watching. The day's Questions section is where it gets answered.",
-            "Every day counts, weekends too — the exam is in January. Behind? Make it up the next day, never let it pile.",
+            "Every day counts, weekends too. Behind? Make it up the next day, never let it pile.",
             "Never more than two days behind. Say so and the crew watches with you.",
             "Bring your NEC every day and tab it as you go. Tabs are the only thing you can take into the exam.",
             "Calcs are done on paper, before Mike shows the answer.",
@@ -264,11 +340,11 @@ DATA = {
     },
 }
 
-html = open("index.html").read()
+html = open("index.html", encoding="utf-8").read()
 new = "const DATA = " + json.dumps(DATA, ensure_ascii=False, separators=(",", ":")) + ";\n"
 html, k = re.subn(r"const DATA = \{.*?\};\n", lambda m: new, html, count=1, flags=re.S)
 assert k == 1
-open("index.html", "w").write(html)
+open("index.html", "w", encoding="utf-8").write(html)
 
 tv = sum(d["used_v"] for d in days); tq = sum(d["used_q"] for d in days)
 print(f"{len(days)} days, {days[0]['date']} → {days[-1]['date']}, "
@@ -333,5 +409,5 @@ head = head.replace("</style>", """  @media (prefers-color-scheme: dark) { :root
   body { background: var(--bg); }
 </style>""", 1)
 body = body.replace("  pull();\n})();", "})();")
-open("artifact.html", "w").write(head + body)
+open("artifact.html", "w", encoding="utf-8").write(head + body)
 print("artifact.html written")
