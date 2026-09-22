@@ -191,6 +191,17 @@ def main():
             x["reffrom"] = "the same question, printed with its section elsewhere in these books"
             borrowed += 1
 
+    # fractions the way they are written on a tape measure: the books squash 2-1/8
+    # into 21/8 and print 1/16 as a superscript one over a plain sixteen, which on a
+    # phone read as twenty-one eighths and as 116
+    try:
+        import fractions as _f
+        if hasattr(_f, "walk"):
+            fixed = _f.walk(Q, apply=True)
+            if fixed: print(f"fractions made unambiguous in {len(fixed)} places")
+    except Exception as e:
+        print("fractions not normalised:", e)
+
     # which video each quiz follows, and which page each video starts on
     program, pageless, quizpage = {}, [], []
     by_book_pages = {}

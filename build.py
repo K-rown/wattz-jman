@@ -313,6 +313,7 @@ DATA = {
                 ["Take the quiz", "Every chapter ends in Mike's own quiz. It grades itself, shows the key, and names the NEC section behind each answer."],
                 ["Miss one", "A wrong answer offers Rewatch, which jumps the video to the part that covers it, and Ask Claude, which explains it with the section."],
                 ["Jump to a section", "Where a video's sections are listed, tapping one starts the video where Mike teaches it."],
+                ["Page numbers", "Every p. is a page of Mike's DIGITAL book \u2014 type it into the page box in his viewer. On paper the printed number runs lower, because the front matter is not counted."],
             ],
             "rules": [
                 "Start at the top of Electrical Theory if you are new. The books are in the order Mike teaches them.",

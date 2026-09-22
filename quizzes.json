@@ -3065,10 +3065,10 @@
     "n": 20,
     "q": "In installations within noncombustible walls or ceilings, the front edge of a box, plaster ring, extension ring, or listed extender employing a flush-type cover, shall be set back not more than _____ from the finished surface.",
     "choices": {
-     "a": "1⁄8 in.",
-     "b": "¼ in.",
-     "c": "⅜ in.",
-     "d": "½ in."
+     "a": "1/8 in.",
+     "b": "1/4 in.",
+     "c": "3/8 in.",
+     "d": "1/2 in."
     },
     "ref": "314.20",
     "answer": "b"
@@ -3173,10 +3173,10 @@
     "n": 29,
     "q": "The sheath on nonmetallic-sheathed cable shall extend not less than _____ beyond any cable clamp or cable entry.",
     "choices": {
-     "a": "1⁄8 in.",
-     "b": "¼ in.",
-     "c": "⅜ in.",
-     "d": "½ in."
+     "a": "1/8 in.",
+     "b": "1/4 in.",
+     "c": "3/8 in.",
+     "d": "1/2 in."
     },
     "ref": "334.19",
     "answer": "b"
@@ -3791,9 +3791,9 @@
     "n": 30,
     "q": "A recessed luminaire that is not identified for contact with insulation shall have all recessed parts spaced not less than _____ from combustible materials.",
     "choices": {
-     "a": "½ in.",
-     "b": "5⁄8 in.",
-     "c": "¾ in.",
+     "a": "1/2 in.",
+     "b": "5/8 in.",
+     "c": "3/4 in.",
      "d": "1 in."
     },
     "ref": "410.116(A)(1)",
@@ -5323,10 +5323,10 @@
     "n": 18,
     "q": "For raceways exposed to direct sunlight on or above rooftops where the distance above the roof to the bottom of the raceway or cable is less than _____, a temperature adder of 60°F shall be added to the outdoor temperature to determine the ambient temperature correction factor.",
     "choices": {
-     "a": "¼ in.",
-     "b": "1⁄3 in.",
-     "c": "½ in.",
-     "d": "¾ in."
+     "a": "1/4 in.",
+     "b": "1/3 in.",
+     "c": "1/2 in.",
+     "d": "3/4 in."
     },
     "ref": "310.15(B)(2)",
     "answer": "d"
@@ -6733,9 +6733,9 @@
     "n": 4,
     "q": "What size outlet box is the minimum required for three 12 AWG and six 12 AWG conductors?",
     "choices": {
-     "a": "4 × 1¼ in. square",
-     "b": "4 × 1½ in. square",
-     "c": "4 × 21⁄8 in. square",
+     "a": "4 × 1-1/4 in. square",
+     "b": "4 × 1-1/2 in. square",
+     "c": "4 × 2-1/8 in. square",
      "d": "any of these"
     },
     "ref": "Table 314.16(A) permits nine 12 AWG conductors; the insulation type isn’t a factor when calculating box fill.",
@@ -10543,10 +10543,10 @@
     "n": 59,
     "q": "Grounding electrodes of bare or electrically conductive coated iron or steel plates shall be at least _____ thick.",
     "choices": {
-     "a": "1⁄8 in.",
-     "b": "¼ in.",
-     "c": "½ in.",
-     "d": "¾ in."
+     "a": "1/8 in.",
+     "b": "1/4 in.",
+     "c": "1/2 in.",
+     "d": "3/4 in."
     },
     "ref": "250.52(A)(7)",
     "answer": "b"
@@ -14365,10 +14365,10 @@
     "n": 41,
     "q": "The minimum thickness of sealing compound in Class I locations shall not be less than the trade size of the conduit or sealing fitting and, in no case, shall the thickness of the compound be less than _____.",
     "choices": {
-     "a": "1⁄8 in.",
-     "b": "¼ in.",
-     "c": "3⁄8 in.",
-     "d": "⅝ in."
+     "a": "1/8 in.",
+     "b": "1/4 in.",
+     "c": "3/8 in.",
+     "d": "5/8 in."
     },
     "ref": "501.15(C)(3)",
     "answer": "d"
@@ -18719,10 +18719,10 @@
     "n": 214,
     "q": "The required label for buildings with PV systems having rapid shutdown shall be titled “SOLAR PV SYSTEM IS EQUIPPED WITH RAPID SHUTDOWN” in capitalized letters at least _____ high.",
     "choices": {
-     "a": "¼ in.",
-     "b": "5⁄16 in.",
-     "c": "3⁄8 in.",
-     "d": "½ in."
+     "a": "1/4 in.",
+     "b": "5/16 in.",
+     "c": "3/8 in.",
+     "d": "1/2 in."
     },
     "ref": "690.12(D)",
     "answer": "c"
@@ -23701,7 +23701,7 @@
    },
    {
     "n": 6,
-    "q": "The approximate decimal equivalent for the fraction “⁴⁄18” is _____.",
+    "q": "The approximate decimal equivalent for the fraction “4/18” is _____.",
     "choices": {
      "a": "0.22",
      "b": "2.52",
@@ -30469,9 +30469,9 @@
     "n": 84,
     "q": "Where cables and nonmetallic raceways are installed parallel to framing members, the nearest outside surface of the cable or raceway shall be _____ the nearest edge of the framing member where nails or screws are likely to penetrate.",
     "choices": {
-     "a": "not less than 1¼ in. from",
+     "a": "not less than 1-1/4 in. from",
      "b": "immediately adjacent to",
-     "c": "not less than 1⁄16 in. from",
+     "c": "not less than 1/16 in. from",
      "d": "90 degrees away from"
     },
     "answer": "a",
@@ -41471,10 +41471,10 @@
     "n": 5,
     "q": "For raceways exposed to direct sunlight on or above rooftops where the distance above the roof to the bottom of the raceway or cable is less than _____, a temperature adder of 60°F shall be added to the outdoor temperature to determine the ambient temperature correction factor.",
     "choices": {
-     "a": "¼ in.",
-     "b": "1⁄3 in.",
-     "c": "½ in.",
-     "d": "¾ in."
+     "a": "1/4 in.",
+     "b": "1/3 in.",
+     "c": "1/2 in.",
+     "d": "3/4 in."
     },
     "answer": "d",
     "ref": "310.15(B)(2)"
@@ -42687,7 +42687,7 @@
    },
    {
     "n": 6,
-    "q": "The approximate decimal equivalent for the fraction “⁴⁄18” is _____.",
+    "q": "The approximate decimal equivalent for the fraction “4/18” is _____.",
     "choices": {
      "a": "0.22",
      "b": "2.52",
@@ -47995,10 +47995,10 @@
     "n": 66,
     "q": "Nondwelling unit motors rated less than ____ and connected to a lighting circuit shall be considered general lighting load.",
     "choices": {
-     "a": "¹⁄16 hp",
-     "b": "⅛ hp",
-     "c": "¼ hp",
-     "d": "⅓ hp"
+     "a": "1/16 hp",
+     "b": "1/8 hp",
+     "c": "1/4 hp",
+     "d": "1/3 hp"
     },
     "ref": "220.42(A)",
     "answer": "b"
@@ -50345,9 +50345,9 @@
     "n": 2,
     "q": "Where a cable or raceway-type wiring method is installed through bored holes in joists, rafters, or wood members, the holes shall be bored so that the edge of the hole is ____ the edges of the wood member.",
     "choices": {
-     "a": "not less than 1¼ in. from",
+     "a": "not less than 1-1/4 in. from",
      "b": "immediately adjacent to",
-     "c": "not less than ¹⁄16 in. from",
+     "c": "not less than 1/16 in. from",
      "d": "90° away from"
     },
     "ref": "300.4(A)(1) and Ex 1",
@@ -50357,17 +50357,17 @@
     "n": 3,
     "q": "Cables laid in wood notches require protection against nails or screws by using a steel plate at least ____ thick, installed before the building finish is applied.",
     "choices": {
-     "a": "¹⁄16 in.",
-     "b": "⅛ in.",
-     "c": "¼ in.",
-     "d": "½ in."
+     "a": "1/16 in.",
+     "b": "1/8 in.",
+     "c": "1/4 in.",
+     "d": "1/2 in."
     },
     "ref": "300.4(A)(2)",
     "answer": "a"
    },
    {
     "n": 4,
-    "q": "A ¹⁄16-in. steel plate for ____ is not required for protection when installed in wood notches.",
+    "q": "A 1/16-in. steel plate for ____ is not required for protection when installed in wood notches.",
     "choices": {
      "a": "UF cable",
      "b": "NM cable",
@@ -50381,9 +50381,9 @@
     "n": 5,
     "q": "Where cables and nonmetallic raceways are installed parallel to framing members, the nearest outside surface of the cable or raceway shall be ____ the nearest edge of the framing member where nails or screws are likely to penetrate.",
     "choices": {
-     "a": "not less than 1¼ in. from",
+     "a": "not less than 1-1/4 in. from",
      "b": "immediately adjacent to",
-     "c": "not less than ¹⁄16 in. from",
+     "c": "not less than 1/16 in. from",
      "d": "90 degrees away from"
     },
     "ref": "300.4(D)",
@@ -51137,10 +51137,10 @@
     "n": 68,
     "q": "Noncombustible surfaces that are broken or incomplete shall be repaired so there will be no gaps or open spaces greater than ____ at the edge of a cabinet or cutout box employing a flush-type cover.",
     "choices": {
-     "a": "¹⁄32 in.",
-     "b": "¹⁄16 in.",
-     "c": "⅛ in.",
-     "d": "¼ in."
+     "a": "1/32 in.",
+     "b": "1/16 in.",
+     "c": "1/8 in.",
+     "d": "1/4 in."
     },
     "ref": "312.4",
     "answer": "c"
@@ -51377,10 +51377,10 @@
     "n": 88,
     "q": "Noncombustible surfaces that are broken or incomplete around boxes employing a flush-type cover shall be repaired so there will be no gaps or open spaces larger than ____ at the edge of the box.",
     "choices": {
-     "a": "¹⁄16 in.",
-     "b": "⅛ in.",
-     "c": "¼ in.",
-     "d": "½ in."
+     "a": "1/16 in.",
+     "b": "1/8 in.",
+     "c": "1/4 in.",
+     "d": "1/2 in."
     },
     "ref": "314.21",
     "answer": "b"
@@ -52109,10 +52109,10 @@
     "n": 149,
     "q": "Expansion fittings for PVC conduit shall be provided to compensate for thermal expansion and contraction where the length change, in accordance with Table 352.44(A), is expected to be ____ or greater in a straight run between securely mounted items such as boxes, cabinets, elbows, or other conduit terminations.",
     "choices": {
-     "a": "¹⁄16 in.",
-     "b": "⅛ in.",
-     "c": "¼ in.",
-     "d": "½ in."
+     "a": "1/16 in.",
+     "b": "1/8 in.",
+     "c": "1/4 in.",
+     "d": "1/2 in."
     },
     "ref": "352.44(A)",
     "answer": "c"
@@ -62165,9 +62165,9 @@
     "n": 22,
     "q": "The minimum size liquid tight flexible metal conduit is _____.",
     "choices": {
-     "a": "trade size 3⁄8",
-     "b": "trade size ½",
-     "c": "trade size ¾",
+     "a": "trade size 3/8",
+     "b": "trade size 1/2",
+     "c": "trade size 3/4",
      "d": "trade size 1"
     },
     "answer": "b",
@@ -63649,9 +63649,9 @@
     "n": 45,
     "q": "Where a cable or raceway-type wiring method is installed through bored holes in joists, rafters, or wood members, the holes shall be bored so that the edge of the hole is _____ the edges of the wood member.",
     "choices": {
-     "a": "not less than 1¼ in. from",
+     "a": "not less than 1-1/4 in. from",
      "b": "immediately adjacent to",
-     "c": "not less than 1⁄16 in. from",
+     "c": "not less than 1/16 in. from",
      "d": "90° away from"
     },
     "answer": "a",
