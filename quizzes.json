@@ -27045,7 +27045,8 @@
      "d": "none of these"
     },
     "ref": "23.3 Relay Contacts",
-    "answer": "b"
+    "answer": "a",
+    "computed": "Contacts that are closed while the coil is energized are normally OPEN. Question 4 of this same quiz says so: energise the coil and the NC contacts open, the NO contacts close."
    },
    {
     "n": 4,
@@ -34932,8 +34933,9 @@
      "c": "4 AWG",
      "d": "3 AWG"
     },
-    "answer": "d",
-    "ref": "250.64(F)(1)"
+    "answer": "b",
+    "ref": "250.64(F)(1)",
+    "computed": "NEC 250.66(A): a grounding electrode conductor to a rod need not be larger than 6 AWG copper. The same question is printed twice more in these books, in B&G Art 250 and Exam Prep Chapter 2, and both key 6 AWG."
    },
    {
     "n": 26,

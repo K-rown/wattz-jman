@@ -47,8 +47,9 @@ def js_parses(page):
 
 def main():
     D, page = load()
-    bad = []
+    bad, notes = [], []
     def no(*w): bad.append(" ".join(str(x) for x in w))
+    def note(*w): notes.append(" ".join(str(x) for x in w))
 
     js = js_parses(page)
     if js: no(js)
@@ -87,6 +88,9 @@ def main():
             nq += 1
             if not x.get("q", "").strip(): no("quiz", k, "question", x["n"], "has no text")
             if len(x.get("choices", {})) < 2: no("quiz", k, "question", x["n"], "has fewer than two choices")
+            vals = [str(v).strip().lower() for v in x.get("choices", {}).values()]
+            dupes = {v for v in vals if vals.count(v) > 1}
+            if dupes: note("quiz", k, "question", x["n"], "prints the same choice twice:", "; ".join(sorted(dupes))[:60])
             if not x.get("answer"): no("quiz", k, "question", x["n"], "has no answer")
             elif x["answer"] not in x.get("choices", {}):
                 no("quiz", k, "question", x["n"], "keys", x["answer"], "which is not one of its choices")
@@ -112,6 +116,9 @@ def main():
 
     print(f"{len(lib)} videos, {len(Q)} quizzes, {nq} questions, {ns} section jumps, {len(D.get('sessions', []))} days")
     if not __import__("shutil").which("node"): print("(node not installed — the javascript was not parsed)")
+    if notes:
+        print(f"\n{len(notes)} worth knowing, not failures")
+        for t in notes[:20]: print("  ~", t)
     if bad:
         print(f"\n{len(bad)} problems")
         for b in bad[:40]: print("  -", b)

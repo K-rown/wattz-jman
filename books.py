@@ -104,13 +104,23 @@ def main():
     books, added, kept, orphan = {}, [], [], []
     for f in sorted(glob.glob(os.path.join("paste2", "*.json"))):
         d = json.load(open(f, encoding="utf-8"))
+        if not isinstance(d, dict) or "quizzes" not in d: continue   # page caches and notes live here too
         books[os.path.basename(f)] = d
         for k, q in d["quizzes"].items():
             key = quiz_key(q["book"], q["quiz"])
-            if key in Q: kept.append(key); continue
+            if key in Q:
+                kept.append(key)
+                for x in Q[key]["questions"]:
+                    fix = RESOLVED.get(f"{key}:{x['n']}")
+                    if fix and (fix.get("override") or not x.get("answer")):
+                        x["answer"] = fix["answer"]
+                        if fix.get("evidence"): x["computed"] = fix["evidence"]
+                continue
             for x in q["questions"]:
                 fix = RESOLVED.get(f"{key}:{x['n']}")
-                if fix and not x.get("answer"):
+                # a plain entry fills an answer the printed key never settled;
+                # one marked override REPLACES a keyed answer the corpus disproves
+                if fix and (fix.get("override") or not x.get("answer")):
                     x["answer"] = fix["answer"]
                     if fix.get("evidence"): x["computed"] = fix["evidence"]
             bad = [x["n"] for x in q["questions"] if not x.get("answer") or x["answer"] not in x.get("choices", {})]

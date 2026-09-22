@@ -34,5 +34,19 @@
   "n": 6,
   "answer": "b",
   "evidence": "NEC 110.26(A)(2): the working space is at least 30 in. wide, or the width of the equipment, whichever is greater."
+ },
+ {
+  "key": "B&G_Final_Exam_B",
+  "n": 25,
+  "answer": "b",
+  "override": true,
+  "evidence": "NEC 250.66(A): a grounding electrode conductor to a rod need not be larger than 6 AWG copper. The same question is printed twice more in these books, in B&G Art 250 and Exam Prep Chapter 2, and both key 6 AWG."
+ },
+ {
+  "key": "Theory_Unit_23",
+  "n": 3,
+  "answer": "a",
+  "override": true,
+  "evidence": "Contacts that are closed while the coil is energized are normally OPEN. Question 4 of this same quiz says so: energise the coil and the NC contacts open, the NO contacts close."
  }
 ]

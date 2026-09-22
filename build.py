@@ -229,7 +229,9 @@ QUIZ_BY_UNIT = {u["id"]: u["quiz"] for u in units if "quiz" in u}
 PROGRAM = json.load(open("program.json", encoding="utf-8")) if __import__("os").path.exists("program.json") else {}
 SCHED = {u["id"]: u for u in units}
 ALLV = json.load(open("videos.json", encoding="utf-8"))["units"]
-ALL_UNITS = [{"id": v["video_id"], "book": BOOK_SHORT[v["book"]], "label": v["title"],
+ALL_UNITS = [{"id": v["video_id"], "book": BOOK_SHORT[v["book"]],
+              "label": (f'Unit {v["unit"]} {v["title"]}' if v.get("kind") == "unit" and v.get("unit")
+                        and v["book"] in ("Electrical Theory", "Exam Prep") else v["title"]),
               "dur": v["duration_s"], **({"chapter": v["chapter"]} if v.get("chapter") is not None else {})}
              for v in ALLV if v["book"] in BOOK_SHORT]
 library = []
@@ -308,7 +310,7 @@ DATA = {
                 "Bring a 2023 NEC code book and tab it as you watch. Tabs and highlights are the only things you can carry into the exam.",
                 "Do the calculations on paper before Mike shows the answer. Watching him do it is not the same as doing it.",
                 "Take the quiz before you move on, not at the end of the week. It is how you find out what you did not actually learn.",
-                "Go at your own pace. If you want dates, press My pace for a 52-day run at it.",
+                "Go at your own speed. Nothing here is timed and nothing is late. Kymani's own 52-day run at it is one press away, but it starts partway through Electrical Theory, so it is a look at how he is doing it rather than a plan for you.",
             ],
             "ends": [
                 ["Your progress", "lives in this browser. Copy a pick-up link below to carry it to another device, or connect a GitHub token to keep them in step."],
