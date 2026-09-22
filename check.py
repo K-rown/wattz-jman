@@ -105,6 +105,13 @@ def main():
             if not re.match(r"^\d{2,3}\.\d+", sec): no(vid, "has an odd section number:", sec)
             if not (0 <= t <= u["dur"]): no(vid, "section", sec, "jumps to", t, "s in a", u["dur"], "s video")
 
+    # --- the library follows Mike's own checklist, because the page says it does ---
+    lib_order = [b["book"] for b in D.get("library", []) if b.get("chapters")]
+    chk_order = [b.get("key") for b in D.get("checklist", []) if b.get("key") in lib_order]
+    if chk_order and lib_order[:len(chk_order)] != chk_order:
+        no("the library is in a different order from Mike Holt's checklist:",
+           " > ".join(lib_order), "against", " > ".join(chk_order))
+
     # --- the calendar ---
     for d in D.get("sessions", []):
         day = dt.date.fromisoformat(d["date"])

@@ -210,7 +210,9 @@ for book in C["checklist"]:
         rows.append(dict(r, ours=ours, est=estimated, days=days_, done_before=bool(ids) and not (ids & scheduled)))
     checklist.append(dict(book, rows=rows))
 # ---- the whole program, by book and chapter: what a person sees who is starting at zero ----
-BOOK_ORDER = ["Electrical Theory", "NEC Vol 1", "Fundamental NEC Calculations", "Exam Prep", "Bonding & Grounding", "NEC Vol 2"]
+# Mike Holt's own order, the one his checklist prints: theory, then the Code volume by
+# volume with bonding and grounding in its place, then the calculations and the exam prep.
+BOOK_ORDER = ["Electrical Theory", "NEC Vol 1", "Bonding & Grounding", "NEC Vol 2", "Fundamental NEC Calculations", "Exam Prep"]
 BOOK_LINK = {"Theory": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
              "NEC Vol 1": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
              "Calcs": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
