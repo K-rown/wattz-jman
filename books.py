@@ -53,7 +53,10 @@ def video_for(book, quiz, V):
         return hits[-1]["video_id"] if hits else None      # Part B follows Part A
 
     m = re.match(r"^Unit (\d+)$", quiz)
-    if m:
+    # Only Theory and Exam Prep number their lessons as units. In the Code books
+    # "unit" is just this video's place in the running order, so matching on it
+    # hung the B&G book's reprint of Theory Unit 3 on Article 250 Part A.
+    if m and book in ("Theory", "Exam Prep"):
         hits = [v for v in pool if v.get("unit") == int(m.group(1)) and v.get("kind") == "unit"]
         return hits[-1]["video_id"] if hits else None
 
