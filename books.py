@@ -136,6 +136,25 @@ def main():
             Q[key] = q
             added.append(key)
 
+    # a question printed twice, once with its section named and once without,
+    # can lend the name to its twin
+    import collections
+    seen = collections.defaultdict(collections.Counter)
+    for q in Q.values():
+        for x in q["questions"]:
+            if x.get("ref"): seen[re.sub(r"\s+", " ", x["q"].strip().lower())][x["ref"].strip()] += 1
+    borrowed = 0
+    for q in Q.values():
+        for x in q["questions"]:
+            if x.get("ref"): continue
+            c = seen.get(re.sub(r"\s+", " ", x["q"].strip().lower()))
+            if not c: continue
+            top = c.most_common(2)
+            if len(top) > 1 and top[0][1] == top[1][1]: continue   # two books disagree: leave it alone
+            x["ref"] = top[0][0]
+            x["reffrom"] = "the same question, printed with its section elsewhere in these books"
+            borrowed += 1
+
     # which video each quiz follows, and which page each video starts on
     program, pageless, quizpage = {}, [], []
     by_book_pages = {}
@@ -175,6 +194,7 @@ def main():
     standalone = sorted(k for k, q in Q.items() if not video_for(q["book"], q["quiz"], V))
 
     print(f"books read: {len(books)}")
+    print(f"section references borrowed from an identical question elsewhere: {borrowed}")
     print(f"quizzes: {before} before, {len(Q)} now ({len(added)} added, {len(kept)} already there and kept as they were)")
     if added: print("  added:", ", ".join(sorted(added)))
     if orphan:

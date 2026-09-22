@@ -27198,7 +27198,9 @@
      "c": "electron",
      "d": "none of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "5.5 Photoelectricity",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 13,
@@ -27209,7 +27211,9 @@
      "c": "LED",
      "d": "none of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "5.7 Lighting",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 14,
@@ -27220,7 +27224,9 @@
      "c": "fluorescent tube",
      "d": "none of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "5.7 Lighting",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 15,
@@ -27297,7 +27303,9 @@
      "c": "Earth’s",
      "d": "magnet’s"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "7.4 Theory of Magnetism",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 22,
@@ -27308,7 +27316,9 @@
      "c": "current",
      "d": "voltage"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "8.2 Electromagnetism in a Wire",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 23,
@@ -27319,7 +27329,9 @@
      "c": "combine with",
      "d": "none of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "8.3 Electromagnet Field Interaction",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 24,
@@ -27330,7 +27342,9 @@
      "c": "combine",
      "d": "none of these"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "8.3 Electromagnet Field Interaction",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 25,
@@ -27396,7 +27410,9 @@
      "c": "load",
      "d": "all of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "12.2 The Electrical Circuit",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 31,
@@ -27418,7 +27434,9 @@
      "c": "current",
      "d": "power"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "Theory 12.4(A)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 33,
@@ -27462,7 +27480,9 @@
      "c": "aversely",
      "d": "directly"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "Theory 12.6(A)(2)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 37,
@@ -27473,7 +27493,9 @@
      "c": "120V",
      "d": "125V"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "12.7 Ohm’s Law Formula Circle",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 38,
@@ -27484,7 +27506,9 @@
      "c": "13A",
      "d": "25A"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "Theory 29.3",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 39,
@@ -27517,7 +27541,9 @@
      "c": "10 kW",
      "d": "11 kW"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "13.4 Power Changes with the Square of the Voltage",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 42,
@@ -27561,7 +27587,9 @@
      "c": "The total voltage across all resistors is equal to the voltage source.",
      "d": "all of these"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "14.4 Series Circuit Summary",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 46,
@@ -27583,7 +27611,9 @@
      "c": "65A",
      "d": "75A"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "15.2 Understanding Parallel Circuits",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 48,
@@ -27594,7 +27624,9 @@
      "c": "Voltage is the same across each parallel branch.",
      "d": "all of these"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "15.4 Parallel Circuit Summary",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 49,
@@ -27605,7 +27637,9 @@
      "c": "gravity",
      "d": "all of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "17.2 How Alternating Current is Produced",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 50,
@@ -27616,7 +27650,9 @@
      "c": "sinusoidal",
      "d": "any of these"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "17.3 Waveforms",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 51,
@@ -27627,7 +27663,9 @@
      "c": "inductive",
      "d": "nonlinear"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "Theory 17.3(B)(3)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 52,
@@ -27649,7 +27687,9 @@
      "c": "coupled",
      "d": "any of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "Theory 17.5",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 54,
@@ -27693,7 +27733,9 @@
      "c": "distorts",
      "d": "any of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "18.3 Self-Inductance",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 58,
@@ -27704,7 +27746,9 @@
      "c": "Voltage",
      "d": "Current"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "18.4 Mutual Inductance",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 59,
@@ -27737,7 +27781,9 @@
      "c": "140W",
      "d": "150W"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "Theory 20.4",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 62,
@@ -27759,7 +27805,9 @@
      "c": "ohm",
      "d": "amp"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "20.6 Cost of Power",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 64,
@@ -27781,7 +27829,9 @@
      "c": "unity",
      "d": "any of these"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "20.7 Power Factor",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 66,
@@ -27792,7 +27842,9 @@
      "c": "1,920 VA",
      "d": "2,160 VA"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "20.8 Apparent Power",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 67,
@@ -27814,7 +27866,9 @@
      "c": "7 circuits",
      "d": "8 circuits"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "20.10 Effects of Power Factor on Circuits",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 69,
@@ -27825,7 +27879,9 @@
      "c": "winding A, winding B",
      "d": "none of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "21.2 Alternating-Current Motor Principles",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 70,
@@ -27869,7 +27925,9 @@
      "c": "shaft",
      "d": "any of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "21.4 Motor Amperes",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 74,
@@ -27891,7 +27949,9 @@
      "c": "series, series",
      "d": "parallel, parallel"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "21.6 Dual-Voltage Motors",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 76,
@@ -27913,7 +27973,9 @@
      "c": "180°",
      "d": "240°"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "22.3 Alternating-Current Generators",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 78,
@@ -27924,7 +27986,9 @@
      "c": "90A",
      "d": "100A"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "Theory 22.4",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 79,
@@ -27935,7 +27999,9 @@
      "c": "transformer",
      "d": "relay"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "23.2 How Relays Operate",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 80,
@@ -27946,7 +28012,9 @@
      "c": "high-leg, low-leg",
      "d": "none of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "24.3 Primary versus Secondary",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 81,
@@ -27957,7 +28025,9 @@
      "c": "motor",
      "d": "generator"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "24.4 Transformer Mutual Induction",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 82,
@@ -28056,7 +28126,9 @@
      "c": "Instantaneous trip",
      "d": "all of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "Theory 25.4(A)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 91,
@@ -28067,7 +28139,9 @@
      "c": "5 mA",
      "d": "10 mA"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "26.2 Ground-Fault Circuit Interrupters (GFCIs)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 92,
@@ -28100,7 +28174,9 @@
      "c": "arcing",
      "d": "any of these"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "26.5 Arc-Fault Circuit-Interrupters (AFCIs)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 95,
@@ -28111,7 +28187,9 @@
      "c": "Overcurrent",
      "d": "Surge"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "26.7 Surge Protective Devices (SPDs)",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 96,
@@ -28122,7 +28200,9 @@
      "c": "circular mils",
      "d": "none of these"
     },
-    "answer": "c"
+    "answer": "c",
+    "ref": "27.2 Wire Sizes",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 97,
@@ -28133,7 +28213,9 @@
      "c": "wire length and operating temperature",
      "d": "all of these"
     },
-    "answer": "d"
+    "answer": "d",
+    "ref": "27.3 Direct-Current Wire Resistance",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 98,
@@ -28144,7 +28226,9 @@
      "c": "copper",
      "d": "none of these"
     },
-    "answer": "a"
+    "answer": "a",
+    "ref": "28.2 Neutral Wire",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 99,
@@ -28155,7 +28239,9 @@
      "c": "opposition to",
      "d": "maximum"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "28.4 Current Flow on the Neutral Wire",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    },
    {
     "n": 100,
@@ -28166,7 +28252,9 @@
      "c": "phase",
      "d": "all of these"
     },
-    "answer": "b"
+    "answer": "b",
+    "ref": "28.6 Dangers of Multiwire Circuits",
+    "reffrom": "the same question, printed with its section elsewhere in these books"
    }
   ]
  },
