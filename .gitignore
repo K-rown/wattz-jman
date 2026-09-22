@@ -1,3 +1,7 @@
 __pycache__/
 paste2/
 slides/*/
+
+# scratch a review agent leaves behind when it looks at the page in a phone frame
+rev-snapshot.html
+phone.html
