@@ -400,3 +400,9 @@ head = head.replace("</style>", """  @media (prefers-color-scheme: dark) { :root
 body = body.replace("  pull();\n})();", "})();")
 open("artifact.html", "w", encoding="utf-8").write(head + body)
 print("artifact.html written")
+
+# the picture the link previews as, with the numbers taken from the page just built
+try:
+    import sharecard; sharecard.main()
+except Exception as e:
+    print("share card not redrawn:", e)

@@ -91,6 +91,27 @@ def main():
             elif x["answer"] not in x.get("choices", {}):
                 no("quiz", k, "question", x["n"], "keys", x["answer"], "which is not one of its choices")
 
+    # --- the same question printed in two books must key the same answer ---
+    def flat(t):
+        t = re.sub(r"[_—–-]+", " ", (t or "").replace("’", "'"))
+        return re.sub(r"\s+", " ", t).strip().lower()
+    seen = {}
+    twice = clash = 0
+    for k, q in Q.items():
+        for x in q["questions"]:
+            ch = tuple(sorted(flat(v) for v in x.get("choices", {}).values()))
+            key = (flat(x["q"]), ch)
+            mine = flat(x.get("choices", {}).get(x.get("answer"), ""))
+            if key in seen:
+                twice += 1
+                where, theirs = seen[key]
+                if theirs != mine:
+                    clash += 1
+                    no("the same question is keyed two ways:", where, "says", theirs[:34],
+                       "but", k, "Q" + str(x["n"]), "says", mine[:34])
+            else:
+                seen[key] = (k + " Q" + str(x["n"]), mine)
+
     # --- section jumps ---
     ns = 0
     for vid, secs in D.get("sectime", {}).items():
@@ -126,6 +147,8 @@ def main():
 
     print(f"{len(lib)} videos, {len(Q)} quizzes, {nq} questions, {ns} section jumps, "
           f"{sum(1 for u in lib if u.get('page'))} book pages")
+    print(f"{twice} questions are printed in more than one book; all of them key the same answer"
+          if not clash else f"{twice} questions printed twice, {clash} keyed two ways")
     if not __import__("shutil").which("node"): print("(node not installed — the javascript was not parsed)")
     if notes:
         print(f"\n{len(notes)} worth knowing, not failures")
