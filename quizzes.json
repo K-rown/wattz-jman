@@ -28261,7 +28261,7 @@
  "NEC_Vol_1_Final_Exam_A": {
   "book": "NEC Vol 1",
   "quiz": "Final Exam A",
-  "page": 649,
+  "page": 669,
   "unit": "Final Exam A—Straight Order",
   "questions": [
    {
@@ -29468,7 +29468,7 @@
  "NEC_Vol_1_Final_Exam_B": {
   "book": "NEC Vol 1",
   "quiz": "Final Exam B",
-  "page": 659,
+  "page": 679,
   "unit": "Final Exam B—Random Order",
   "questions": [
    {
@@ -30674,7 +30674,7 @@
  "B&G_Unit_1": {
   "book": "B&G",
   "quiz": "Unit 1",
-  "page": 15,
+  "page": 29,
   "unit": "Unit 1—Atomic Structure",
   "questions": [
    {
@@ -30922,7 +30922,7 @@
  "B&G_Unit_2": {
   "book": "B&G",
   "quiz": "Unit 2",
-  "page": 23,
+  "page": 37,
   "unit": "Unit 2—Electron Theory and Chemical Bonding",
   "questions": [
    {
@@ -31050,7 +31050,7 @@
  "B&G_Unit_3": {
   "book": "B&G",
   "quiz": "Unit 3",
-  "page": 30,
+  "page": 44,
   "unit": "Unit 3—Electrical Circuits and Power Sources",
   "questions": [
    {
@@ -31250,7 +31250,7 @@
  "B&G_Unit_4": {
   "book": "B&G",
   "quiz": "Unit 4",
-  "page": 36,
+  "page": 50,
   "unit": "Unit 4—The Electrical System",
   "questions": [
    {
@@ -31391,7 +31391,7 @@
  "B&G_Unit_6": {
   "book": "B&G",
   "quiz": "Unit 6",
-  "page": 45,
+  "page": 59,
   "unit": "Unit 6—Dangers of Electricity",
   "questions": [
    {
@@ -31615,7 +31615,7 @@
  "B&G_Unit_25": {
   "book": "B&G",
   "quiz": "Unit 25",
-  "page": 56,
+  "page": 70,
   "unit": "Unit 25—Overcurrent Protection",
   "questions": [
    {
@@ -31887,7 +31887,7 @@
  "B&G_Art_90": {
   "book": "B&G",
   "quiz": "Art 90",
-  "page": 69,
+  "page": 83,
   "unit": "Article 90—Introduction to the National Electrical Code",
   "questions": [
    {
@@ -32171,7 +32171,7 @@
  "B&G_Art_100": {
   "book": "B&G",
   "quiz": "Art 100",
-  "page": 113,
+  "page": 127,
   "unit": "Article 100—Definitions",
   "questions": [
    {
@@ -33137,7 +33137,7 @@
  "B&G_Art_110": {
   "book": "B&G",
   "quiz": "Art 110",
-  "page": 120,
+  "page": 134,
   "unit": "Article 110—General Requirements For Electrical Installations",
   "questions": [
    {
@@ -33421,7 +33421,7 @@
  "B&G_Art_215": {
   "book": "B&G",
   "quiz": "Art 215",
-  "page": 202,
+  "page": 216,
   "unit": "Article 215—Feeders",
   "questions": [
    {
@@ -33453,7 +33453,7 @@
  "B&G_Art_340": {
   "book": "B&G",
   "quiz": "Art 340",
-  "page": 272,
+  "page": 286,
   "unit": "Article 340—Underground Feeder and Branch-Circuit Cable (Type UF)",
   "questions": [
    {
@@ -33473,7 +33473,7 @@
  "B&G_Art_348": {
   "book": "B&G",
   "quiz": "Art 348",
-  "page": 272,
+  "page": 286,
   "unit": "Article 348—Flexible Metal Conduit (FMC)",
   "questions": [
    {
@@ -33517,7 +33517,7 @@
  "B&G_Final_Exam_A": {
   "book": "B&G",
   "quiz": "Final Exam A",
-  "page": 365,
+  "page": 379,
   "unit": "NEC Final Exam A—Straight Order",
   "questions": [
    {
@@ -34721,7 +34721,7 @@
  "B&G_Final_Exam_B": {
   "book": "B&G",
   "quiz": "Final Exam B",
-  "page": 377,
+  "page": 391,
   "unit": "NEC Final Exam B—Random Order",
   "questions": [
    {
@@ -41132,7 +41132,7 @@
  "Calcs_Calcs_Art_90": {
   "book": "Calcs",
   "quiz": "Calcs Art 90",
-  "page": 15,
+  "page": 27,
   "unit": "Article 90—Introduction to the National Electrical Code",
   "questions": [
    {
@@ -41416,7 +41416,7 @@
  "Calcs_Calcs_Final_Exam": {
   "book": "Calcs",
   "quiz": "Calcs Final Exam",
-  "page": 163,
+  "page": 175,
   "unit": "FINAL EXAM",
   "questions": [
    {
@@ -61906,7 +61906,7 @@
  "Simulated_Exams_Exam_A": {
   "book": "Simulated Exams",
   "quiz": "Exam A",
-  "page": 19,
+  "page": 27,
   "unit": "Journeyman Simulated Exam A",
   "questions": [
    {
@@ -63114,7 +63114,7 @@
  "Simulated_Exams_Exam_B": {
   "book": "Simulated Exams",
   "quiz": "Exam B",
-  "page": 39,
+  "page": 47,
   "unit": "Journeyman Simulated Exam B",
   "questions": [
    {

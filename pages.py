@@ -1,20 +1,26 @@
 #!/usr/bin/env python3
 # -*- coding: utf-8 -*-
-"""Find the page in the digital book where each quiz and each lesson begins.
+"""Check every page number in the app against the book it points into.
 
-The page numbers this app shows are the DIGITAL BOOK VIEWER's page count, which
-is the book PDF's own page order. The number PRINTED at the foot of the page is
-smaller — by 13 in the Theory book, by about 20 in NEC Vol 1 — because of the
-front matter, and it shifts again at some chapter breaks. Reading the printed
-number and calling it a page sends a person twenty pages short of the quiz.
+The page numbers here are the DIGITAL BOOK VIEWER's count, which is the book
+PDF's own page order. The number PRINTED at the foot of the page is smaller, by
+the size of the front matter: 14 in Bonding and Grounding, 12 in Calculations,
+20 in NEC Volume 1. Reading the printed number and calling it a page sends a man
+twenty pages short of his quiz, so books.py measures each book's difference
+against the pages Kymani had already checked and shifts the rest onto the same
+count. This is the tool that proves it worked.
 
-So nothing here is converted. Every page is FOUND and then read back:
+It opens each book PDF, finds where each quiz's own questions are actually
+printed, and says so. Nothing is written; it only reports.
 
-  * a quiz's page is the page its own first question is printed on
-  * a lesson's page is the page where that article or unit opens
+    python3 pages.py            # check every book that is on this machine
+    python3 pages.py "B&G"      # check one
 
-    python3 pages.py           # correct quizzes.json and program.json in place
-    python3 pages.py --dry     # say what it would change, write nothing
+The books are not in this repo. They live in:
+    C:\\Users\\Kymani\\projects\\jmen\\MikeHolt\\books
+
+Reading a 700-page PDF takes a few minutes, so each book's text is cached in
+paste2/text-<book>.json and reused.
 """
 import json, os, re, sys, unicodedata
 
@@ -34,14 +40,14 @@ PDF = {
 FULL = {"Theory": "Electrical Theory", "NEC Vol 1": "NEC Vol 1", "Calcs": "Fundamental NEC Calculations",
         "Exam Prep": "Exam Prep", "B&G": "Bonding & Grounding", "NEC Vol 2": "NEC Vol 2"}
 CACHE = "paste2"
-FRONT = 10          # never look for a lesson inside the front matter or the contents
+FRONT = 10          # the front matter and the table of contents are not the lesson
 
 
 def norm(s):
     s = unicodedata.normalize("NFKD", s or "")
-    for a, b in [("’", "'"), ("‘", "'"), ("“", '"'), ("”", '"'), (" ", " ")]:
+    for a, b in [("\u2019", "'"), ("\u2018", "'"), ("\u201c", '"'), ("\u201d", '"'), ("\u00a0", " ")]:
         s = s.replace(a, b)
-    s = re.sub(r"[_—–-]+", " ", s)
+    s = re.sub(r"[_\u2014\u2013-]+", " ", s)
     return re.sub(r"\s+", " ", s).strip().lower()
 
 
@@ -52,99 +58,70 @@ def page_text(book):
     if os.path.exists(c):
         return json.load(open(c, encoding="utf-8"))
     import pypdf
+    print(f"  reading {PDF[book]} \u2014 this takes a few minutes the first time")
     r = pypdf.PdfReader(os.path.join(BOOKS, PDF[book]))
     pages = [norm(p.extract_text() or "") for p in r.pages]
     json.dump(pages, open(c, "w", encoding="utf-8"), ensure_ascii=False)
     return pages
 
 
-def find(pages, probe, start=FRONT):
-    """the first page past the front matter that carries this text"""
-    probe = norm(probe)
-    if len(probe) < 20: return None
-    for n in (90, 70, 50):
+def hits_for(pages, text, start=FRONT):
+    """the viewer pages carrying this text, longest probe that still matches"""
+    probe = norm(text)
+    if len(probe) < 25: return []
+    for n in (110, 80, 60):
         p = probe[:n]
-        hits = [i for i, t in enumerate(pages) if i >= start and p in t]
-        if len(hits) == 1: return hits[0]
-        if hits: return hits[0]
-    return None
-
-
-def quiz_page(pages, q):
-    """the page the quiz starts on: where its own first question is printed"""
-    for x in q["questions"][:3]:
-        i = find(pages, x["q"])
-        if i is not None: return i
-    return None
-
-
-def lesson_page(pages, v):
-    """the page the lesson opens on"""
-    art = v.get("article") or (re.search(r"\[(\d{2,3})\.\d+\]", v.get("title", "")) or [None, None])[1]
-    if art:
-        for probe in (f"article {art} " + norm(v["title"].split("-", 1)[-1])[:40],
-                      f"{art}.1 scope", f"article {art} scope", f"article {art} "):
-            i = find(pages, probe)
-            if i is not None: return i
-        return None
-    if v.get("kind") == "unit" and v.get("unit"):
-        return find(pages, f"{v['unit']}.1 introduction")
-    return None
+        got = [i + 1 for i, t in enumerate(pages) if i >= start and p in t]
+        if got: return got
+    return []
 
 
 def main():
-    dry = "--dry" in sys.argv
-    V = json.load(open("videos.json", encoding="utf-8"))["units"]
+    want = [a for a in sys.argv[1:] if not a.startswith("--")]
     Q = json.load(open("quizzes.json", encoding="utf-8"))
     P = json.load(open("program.json", encoding="utf-8")) if os.path.exists("program.json") else {}
+    V = {v["video_id"]: v for v in json.load(open("videos.json", encoding="utf-8"))["units"]}
+    total_ok = total_bad = total_none = 0
 
-    moved, lost, lmoved, llost = [], [], [], []
-    for book in sorted({q["book"] for q in Q.values()} | {b for b in PDF}):
-        if book not in PDF: continue
+    for book in sorted(PDF):
+        if want and book not in want: continue
         if not os.path.exists(os.path.join(BOOKS, PDF[book])):
-            print(f"  {book}: no PDF on this machine, left alone"); continue
+            print(f"{book}: the PDF is not on this machine, skipped"); continue
         pages = page_text(book)
 
+        ok = near = bad = none = 0
+        wrong = []
         for k, q in sorted(Q.items()):
             if q["book"] != book: continue
-            i = quiz_page(pages, q)
-            if i is None: lost.append(k); continue
-            if q.get("page") != i: moved.append((k, q.get("page"), i))
-            if not dry: q["page"] = i
+            rec = q.get("page")
+            hits = []
+            for x in q["questions"][:6]: hits += hits_for(pages, x["q"])
+            if not hits: none += 1; continue
+            if rec in hits: ok += 1
+            elif rec is not None and any(abs(h - rec) <= 3 for h in hits): near += 1
+            else: bad += 1; wrong.append((k, rec, sorted(set(hits))[:4]))
 
-        full = FULL.get(book)
-        for v in V:
-            if v["book"] != full: continue
-            i = lesson_page(pages, v)
-            row = P.get(v["video_id"], {})
-            if i is None:
-                if row.get("page"): llost.append(v["video_id"])
-                continue
-            if row.get("page") != i: lmoved.append((v["video_id"], row.get("page"), i))
-            if not dry:
-                row["page"] = i
-                P[v["video_id"]] = row
-
-    # a quiz's page also rides on the library row, so keep those in step
-    if not dry:
+        lok = lbad = 0
+        lwrong = []
         for vid, row in P.items():
-            if row.get("quiz") and row["quiz"].get("key") in Q:
-                pg = Q[row["quiz"]["key"]].get("page")
-                if pg: row["quiz"]["page"] = pg
+            v = V.get(vid)
+            if not v or v["book"] != FULL.get(book) or not row.get("page"): continue
+            art = v.get("article")
+            if not art: continue
+            i = row["page"] - 1
+            t = pages[i] if 0 <= i < len(pages) else ""
+            if f"article {art}" in t or f"{art}.1" in t: lok += 1
+            else: lbad += 1; lwrong.append((vid, row["page"]))
 
-    print(f"quiz pages corrected: {len(moved)}")
-    for k, a, b in moved[:12]: print(f"   {k:<30} {a} -> {b}")
-    if len(moved) > 12: print(f"   ... and {len(moved) - 12} more")
-    if lost: print(f"quizzes whose first question could not be found ({len(lost)}): {lost[:8]}")
-    print(f"lesson pages set or corrected: {len(lmoved)}")
-    for k, a, b in lmoved[:10]: print(f"   {k:<30} {a} -> {b}")
-    if len(lmoved) > 10: print(f"   ... and {len(lmoved) - 10} more")
-    if llost: print(f"lessons whose opening page could not be found ({len(llost)}): {llost[:8]}")
+        print(f"{book:<16} quizzes on the exact page: {ok:>3}  within three: {near:>2}  WRONG: {bad:>2}  "
+              f"text not found: {none:>2}   |   lessons on their article: {lok:>3}  WRONG: {lbad:>2}")
+        for w in wrong[:6]: print(f"     {w[0]:<34} says page {w[1]}, its questions are on {w[2]}")
+        for w in lwrong[:6]: print(f"     {w[0]:<34} page {w[1]} does not open on its article")
+        total_ok += ok + lok; total_bad += bad + lbad; total_none += none
 
-    if dry: print("\n--dry: nothing written"); return
-    json.dump(Q, open("quizzes.json", "w", encoding="utf-8"), indent=1, ensure_ascii=False)
-    json.dump(P, open("program.json", "w", encoding="utf-8"), indent=0, ensure_ascii=False)
-    print("\nquizzes.json and program.json written")
+    print()
+    print(f"{total_ok} page numbers land where they should, {total_bad} do not, {total_none} could not be checked")
+    sys.exit(1 if total_bad else 0)
 
 
 if __name__ == "__main__":

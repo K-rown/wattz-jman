@@ -96,16 +96,46 @@ def main():
     Q = json.load(open("quizzes.json", encoding="utf-8")) if os.path.exists("quizzes.json") else {}
     before = len(Q)
 
+    # measured by pages.py against the book's own pages, for a book with no
+    # hand-checked quiz to compare against
+    MEASURED_SHIFT = {"Simulated Exams": 8}
+    shifts = {}
     RESOLVED = {}
     if os.path.exists("resolved.json"):
         for r in json.load(open("resolved.json", encoding="utf-8")):
             RESOLVED[f"{r['key']}:{r['n']}"] = r
+
+    # how far this book's printed numbers sit from the viewer's, measured against
+    # the quizzes that were already here with a checked page
+    def page_shift(book, quizzes):
+        import collections
+        seen = collections.Counter()
+        for k, e in quizzes.items():
+            old = Q.get(k)
+            if old and old.get("page") and e.get("page"): seen[old["page"] - e["page"]] += 1
+        if not seen:
+            # No quiz of this book was ever in the app by hand, so there is no pair to
+            # measure. pages.py read the book itself and found the gap; it is checked
+            # there on every run, so a wrong number here cannot go quiet.
+            return MEASURED_SHIFT.get(book)
+        if len(seen) > 1: return None                 # the pairs disagree: do not touch a page
+        return next(iter(seen))
 
     books, added, kept, orphan = {}, [], [], []
     for f in sorted(glob.glob(os.path.join("paste2", "*.json"))):
         d = json.load(open(f, encoding="utf-8"))
         if not isinstance(d, dict) or "quizzes" not in d: continue   # page caches and notes live here too
         books[os.path.basename(f)] = d
+        bk = next(iter(d["quizzes"].values()))["book"] if d["quizzes"] else None
+        shift = page_shift(bk, d["quizzes"])
+        if shift is None:
+            shifts[bk] = "not measurable"
+        else:
+            shifts[bk] = shift
+            if shift:
+                for q in d["quizzes"].values():
+                    if q.get("page"): q["page"] += shift
+                d["pages"] = {t: pg + shift for t, pg in (d.get("pages") or {}).items()}
         for k, q in d["quizzes"].items():
             key = quiz_key(q["book"], q["quiz"])
             if key in Q:
@@ -194,6 +224,8 @@ def main():
     standalone = sorted(k for k, q in Q.items() if not video_for(q["book"], q["quiz"], V))
 
     print(f"books read: {len(books)}")
+    print("page numbers shifted onto the viewer's count: "
+          + ", ".join(f"{b} {v:+d}" if isinstance(v, int) else f"{b} ({v})" for b, v in sorted(shifts.items()) if b))
     print(f"section references borrowed from an identical question elsewhere: {borrowed}")
     print(f"quizzes: {before} before, {len(Q)} now ({len(added)} added, {len(kept)} already there and kept as they were)")
     if added: print("  added:", ", ".join(sorted(added)))
