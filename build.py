@@ -412,6 +412,14 @@ body = body.replace("  pull();\n})();", "})();")
 open("artifact.html", "w", encoding="utf-8").write(head + body)
 print("artifact.html written")
 
+# the offline copy is named for this build, so a new build replaces the old one
+if __import__("os").path.exists("sw.js"):
+    _sw = open("sw.js", encoding="utf-8").read()
+    _sw, _k = re.subn(r"const V = '[^']*';", "const V = '" + re.sub(r"[^0-9]", "", GENERATED) + "';", _sw, count=1)
+    assert _k == 1, "sw.js has no version line"
+    open("sw.js", "w", encoding="utf-8").write(_sw)
+    print("sw.js stamped for this build")
+
 # the picture the link previews as, with the numbers taken from the page just built
 try:
     import sharecard; sharecard.main()
