@@ -199,11 +199,42 @@ for book in C["checklist"]:
         scheduled = {p["unit"]["id"] for s in sessions for g in s["groups"] for p in g["parts"]}
         rows.append(dict(r, ours=ours, est=estimated, days=days_, done_before=bool(ids) and not (ids & scheduled)))
     checklist.append(dict(book, rows=rows))
+# ---- the whole program, by book and chapter: what a person sees who is starting at zero ----
+BOOK_ORDER = ["Electrical Theory", "NEC Vol 1", "Fundamental NEC Calculations", "Exam Prep", "Bonding & Grounding", "NEC Vol 2"]
+BOOK_SHORT = {"Electrical Theory": "Theory", "NEC Vol 1": "NEC Vol 1", "Fundamental NEC Calculations": "Calcs",
+              "Exam Prep": "Exam Prep", "Bonding & Grounding": "B&G", "NEC Vol 2": "NEC Vol 2"}
+QUIZ_BY_UNIT = {u["id"]: u["quiz"] for u in units if "quiz" in u}
+SCHED = {u["id"]: u for u in units}
+ALLV = json.load(open("videos.json"))["units"]
+library = []
+for book in BOOK_ORDER:
+    vids = [v for v in ALLV if v["book"] == book]
+    if not vids: continue
+    chapters, seen = [], {}
+    for v in sorted(vids, key=lambda x: x["seq"]):
+        ch = v.get("chapter")
+        key = "intro" if ch is None else ch
+        title = v.get("chapter_title") or ("Introduction" if ch is None else "Chapter " + str(ch))
+        if key not in seen:
+            seen[key] = {"key": str(key), "title": title, "units": []}
+            chapters.append(seen[key])
+        sc = SCHED.get(v["video_id"])
+        q = QUIZ_BY_UNIT.get(v["video_id"])
+        row = {"id": v["video_id"], "label": (sc or {}).get("label") or v["title"],
+               "dur": (sc or {}).get("dur") or v["duration_s"]}
+        if (sc or {}).get("est"): row["est"] = True
+        if (sc or {}).get("page"): row["page"] = sc["page"]
+        if q: row["quiz"] = dict(q, key=(q["book"] + " " + q["label"].replace(" quiz", "")).replace(" ", "_"))
+        chapters[-1]["units"].append(row)
+    library.append({"book": BOOK_SHORT[book], "full": book, "chapters": chapters,
+                    "dur": sum(u["dur"] for c in chapters for u in c["units"])})
+
 DATA = {
     "player": C["player"], "books": C["books"], "generated": dt.datetime.utcnow().strftime("%Y-%m-%d %H:%M UTC"),
     "position": C["position"], "done": C["done"], "colors": C["colors"],
     "start": days[0]["date"], "holidays": HOLIDAYS, "quiz_spq": QUIZ_S_PER_Q,
     "units": [{k: u[k] for k in ("id", "book", "label", "dur", "chapter") if k in u} for u in units],
+    "library": library,
     "sessions": sessions, "exams": exams, "checklist": checklist,
     "quizzes": (json.load(open("quizzes.json")) if __import__("os").path.exists("quizzes.json") else {}),
     "sectime": (json.load(open("sections.json")) if __import__("os").path.exists("sections.json") else {}),
