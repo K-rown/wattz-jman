@@ -9,11 +9,11 @@ data the app actually ships, and checks the things a reader would notice:
     one of its own choices
   * every video in the program is listed, named, and playable
   * every section jump lands inside its video
-  * every day of the plan falls on the weekday it claims
+  * every video the old 52-day plan scheduled is still reachable in the library
 
     python3 check.py
 """
-import datetime as dt, json, os, re, sys
+import json, os, re, sys
 
 try: sys.stdout.reconfigure(encoding="utf-8", errors="replace")
 except Exception: pass
@@ -76,10 +76,6 @@ def main():
     for u in lib:
         if u.get("quiz") and u["quiz"]["key"] not in Q:
             no("library links a quiz that does not exist:", u["id"], u["quiz"]["key"])
-    for d in D.get("sessions", []):
-        for ql in d.get("quiz_links", []):
-            if ql.get("total") and ql["key"] not in Q:
-                no("day", d["n"], "links a quiz that does not exist:", ql["key"])
     for k, q in Q.items():
         ns = [x["n"] for x in q["questions"]]
         if len(set(ns)) != len(ns): no("quiz", k, "has two questions with the same number")
@@ -111,23 +107,25 @@ def main():
         if lp and q.get("page") and q["page"] < lp:
             no("quiz page", q["page"], "comes before the lesson page", lp, "for", u["id"])
 
-    # --- the library follows Mike's own checklist, because the page says it does ---
+    # --- the library follows Mike's own checklist order (Theory, the Code volumes
+    #     with bonding and grounding in its place, then calculations and exam prep) ---
+    MIKE = ["Theory", "NEC Vol 1", "B&G", "NEC Vol 2", "Calcs", "Exam Prep"]
     lib_order = [b["book"] for b in D.get("library", []) if b.get("chapters")]
-    chk_order = [b.get("key") for b in D.get("checklist", []) if b.get("key") in lib_order]
-    if chk_order and lib_order[:len(chk_order)] != chk_order:
-        no("the library is in a different order from Mike Holt's checklist:",
-           " > ".join(lib_order), "against", " > ".join(chk_order))
+    if lib_order[:len(MIKE)] != MIKE:
+        no("the library is not in Mike Holt's order:", " > ".join(lib_order),
+           "against", " > ".join(MIKE))
 
-    # --- the calendar ---
-    for d in D.get("sessions", []):
-        day = dt.date.fromisoformat(d["date"])
-        for k, v in d.items():
-            if not isinstance(v, str): continue
-            for w in ("Mon", "Tue", "Wed", "Thu", "Fri", "Sat", "Sun"):
-                if re.search(r"\b" + w, v) and w != day.strftime("%a"):
-                    no("day", d["n"], d["date"], "is a", day.strftime("%a"), "but", k, "says", w)
+    # --- a device that still holds finished days must be able to convert them ---
+    known = {u["id"] for u in lib}
+    dm = D.get("daymap", {})
+    if not dm: no("there is no daymap, so a device holding finished days cannot convert them")
+    for day, vids in dm.items():
+        for v in vids:
+            if v not in known: no("day", day, "maps to a video the library does not list:", v)
 
-    print(f"{len(lib)} videos, {len(Q)} quizzes, {nq} questions, {ns} section jumps, {len(D.get('sessions', []))} days")
+
+    print(f"{len(lib)} videos, {len(Q)} quizzes, {nq} questions, {ns} section jumps, "
+          f"{sum(1 for u in lib if u.get('page'))} book pages")
     if not __import__("shutil").which("node"): print("(node not installed — the javascript was not parsed)")
     if notes:
         print(f"\n{len(notes)} worth knowing, not failures")

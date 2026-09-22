@@ -10,7 +10,10 @@ you finish and it remembers, on that device, with nothing to sign up for. Where 
 video's NEC sections are known, each one is a button that jumps the video to the
 moment Mike teaches it.
 
-Kymani's own dated run at it is still there, one press away under **My pace**.
+There is one screen. A dated 52-day plan lived beside this until 22 September 2026
+and was deleted: it was a second app inside the first, and it handed one person's
+progress to everybody who opened it. A device that still holds finished days from
+it converts them into ticks on the videos those days covered, once, on first open.
 
 Not for sharing outside the crew: the quizzes are Mike Holt's, and everyone using
 this should own the books.
@@ -33,7 +36,7 @@ change, not on every push.
 
 | file | what it is |
 |---|---|
-| `curriculum.json` | the 52-day plan: units, the day it starts, what is already done |
+| `curriculum.json` | the units, their books and chapters, and the day packing the migration reads |
 | `videos.json` | all 169 videos: book, chapter, article, length, stream id |
 | `quizzes.json` | every quiz in the program, question by question, with the key |
 | `program.json` | each video's page in the book and the quiz that follows it |

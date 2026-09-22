@@ -283,8 +283,7 @@ for bk in sorted({q["book"] for q in QUIZZES.values()} - _shown):
 
 DATA = {
     "player": C["player"], "books": C["books"], "generated": GENERATED,
-    "position": C["position"], "done": C["done"], "colors": C["colors"],
-    "start": days[0]["date"], "holidays": HOLIDAYS, "quiz_spq": QUIZ_S_PER_Q,
+    "colors": C["colors"], "quiz_spq": QUIZ_S_PER_Q,
     "units": [{"id": u["id"], "book": u["book"], "label": u["label"], "dur": u["dur"],
                 **({"chapter": u["chapter"]} if "chapter" in u else {})}
               for u in ({x["id"]: x for x in ALL_UNITS} | {x["id"]: x for x in units}).values()],
@@ -297,7 +296,11 @@ DATA = {
         "quizzes": len(QUIZZES),
         "questions": sum(len(q["questions"]) for q in QUIZZES.values()),
     },
-    "sessions": sessions, "exams": exams, "checklist": checklist,
+    # THE 52-DAY PLAN IS GONE FROM THE APP (2026-09-22). The day packing above
+    # survives for exactly one thing: telling a device that still holds
+    # "day 3 is done" which videos day 3 covered, so that progress becomes ticks.
+    "daymap": {str(s["n"]): sorted({p["unit"]["id"] for g in s["groups"] for p in g["parts"]})
+               for s in sessions if s.get("groups")},
     "quizzes": (json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}),
     "sectime": (json.load(open("sections.json", encoding="utf-8")) if __import__("os").path.exists("sections.json") else {}),
     "footer": {
@@ -316,35 +319,13 @@ DATA = {
                 "Bring a 2023 NEC code book and tab it as you watch. Tabs and highlights are the only things you can carry into the exam.",
                 "Do the calculations on paper before Mike shows the answer. Watching him do it is not the same as doing it.",
                 "Take the quiz before you move on, not at the end of the week. It is how you find out what you did not actually learn.",
-                "Go at your own speed. Nothing here is timed and nothing is late. Kymani's own 52-day run at it is one press away, but it starts partway through Electrical Theory, so it is a look at how he is doing it rather than a plan for you.",
+                "Go at your own speed. Nothing here is timed and nothing is late. Two videos one night and none the next is fine — what matters is that the quiz is taken before you move on.",
             ],
             "ends": [
                 ["Your progress", "lives in this browser. Copy a pick-up link below to carry it to another device, or connect a GitHub token to keep them in step."],
                 ["Passing", "is 70%. Aim higher — the real exam is not the practice one."],
             ],
         },
-        "how": [
-            ["0:00", "Warm-up: 5 timed code lookups (2 calc reps on a calcs day)"],
-            ["0:05", "The day's block at 1.5x with captions, NEC open, tabbing as you go"],
-            ["Chapter day", "The quiz, on your own, scored before you put the book down"],
-            ["Then", "Your questions: the ones you typed during the video, sent to Claude in one go and filed back under each question. Anything still open goes on the exam-week list"],
-            ["Done", "Tick the day. The next one is ready whenever you are — tonight if you like"],
-            ["Last minute", "Write the stop point on this wall"],
-        ],
-        "rules": [
-            "About an hour and a half a day, in order: the video, the quiz, then your questions. The dates are the pace we agreed, not a lock — run ahead whenever you have the time.",
-            "A question during the video goes in the box under the player, not in your head. Keep watching. The day's Questions section is where it gets answered.",
-            "Every day counts, weekends too. Behind? Make it up the next day, never let it pile.",
-            "Never more than two days behind. Say so and the crew watches with you.",
-            "Bring your NEC every day and tab it as you go. Tabs are the only thing you can take into the exam.",
-            "Calcs are done on paper, before Mike shows the answer.",
-        ],
-        "ends": [
-            [fmt(last_video), "all video done"],
-            [", ".join(fmt(dt.date.fromisoformat(e["date"])) for e in exams), "three simulated exams, Saturdays, real conditions"],
-            ["80%+ on Exam 3", "book PSI. Not before."],
-            [(sat + dt.timedelta(days=14 + 28)).strftime("%B %Y"), "journeyman exam, for everyone eligible"],
-        ],
     },
 }
 
