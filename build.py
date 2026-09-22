@@ -213,6 +213,16 @@ for book in C["checklist"]:
 # Mike Holt's own order, the one his checklist prints: theory, then the Code volume by
 # volume with bonding and grounding in its place, then the calculations and the exam prep.
 BOOK_ORDER = ["Electrical Theory", "NEC Vol 1", "Bonding & Grounding", "NEC Vol 2", "Fundamental NEC Calculations", "Exam Prep"]
+# A fold called "Chapter 5" or "Chapter ADV" tells a man nothing. These are the NEC's
+# own chapter names, and Mike's own names for the two that are not NEC chapters.
+NEC_CHAPTERS = {"1": "General Rules", "2": "Wiring and Protection", "3": "Wiring Methods and Materials",
+                "4": "Equipment for General Use", "5": "Special Occupancies", "6": "Special Equipment",
+                "7": "Special Conditions", "8": "Communications Systems"}
+CHAPTER_NAME = {("NEC Vol 2", k): f"Chapter {k} - {v}" for k, v in NEC_CHAPTERS.items()}
+CHAPTER_NAME.update({("Fundamental NEC Calculations", k): f"Chapter {k} - {v}" for k, v in NEC_CHAPTERS.items()})
+CHAPTER_NAME[("Bonding & Grounding", "ADV")] = "Advanced Bonding and Grounding"
+CHAPTER_NAME[("Exam Prep", "3")] = "Module III - NEC Calculations"
+
 BOOK_LINK = {"Theory": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/TH-DB/1964",
              "NEC Vol 1": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392",
              "Calcs": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23FUNDCAL-DB/5383",
@@ -244,7 +254,7 @@ for book in BOOK_ORDER:
     for v in sorted(vids, key=lambda x: x["seq"]):
         ch = v.get("chapter")
         key = "intro" if ch is None else ch
-        title = v.get("chapter_title") or ("Introduction" if ch is None else "Chapter " + str(ch))
+        title = v.get("chapter_title") or CHAPTER_NAME.get((book, str(ch)))             or ("Introduction" if ch is None else "Chapter " + str(ch))
         if key not in seen:
             seen[key] = {"key": str(key), "title": title, "units": []}
             chapters.append(seen[key])
@@ -310,8 +320,8 @@ DATA = {
             "how": [
                 ["Pick a book", "Open a chapter and tap Watch. The video plays on this page. You never need another tab."],
                 ["Tick it off", "The box beside a video remembers that you watched it, on this device. Nothing to sign up for."],
-                ["Take the quiz", "Every chapter ends in Mike's own quiz. It grades itself, shows the key, and names the NEC section behind each answer."],
-                ["Miss one", "A wrong answer offers Rewatch, which jumps the video to the part that covers it, and Ask Claude, which explains it with the section."],
+                ["Take the quiz", "Most videos and every chapter have Mike's own quiz under them, and the rest of his quizzes sit under More quizzes in this book. They grade themselves and show the key."],
+                ["Miss one", "A wrong answer shows the key and, where the book names one, the NEC section it comes from. Ask Claude explains it in your own Claude account; where the video for it is known, Rewatch opens it."],
                 ["Jump to a section", "Where a video's sections are listed, tapping one starts the video where Mike teaches it."],
                 ["Page numbers", "Every p. is a page of Mike's DIGITAL book \u2014 type it into the page box in his viewer. On paper the printed number runs lower, because the front matter is not counted."],
             ],
