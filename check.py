@@ -105,6 +105,12 @@ def main():
             if not re.match(r"^\d{2,3}\.\d+", sec): no(vid, "has an odd section number:", sec)
             if not (0 <= t <= u["dur"]): no(vid, "section", sec, "jumps to", t, "s in a", u["dur"], "s video")
 
+    # --- a quiz is printed after the lesson it belongs to, never before ---
+    for u in lib:
+        lp, q = u.get("page"), u.get("quiz") or {}
+        if lp and q.get("page") and q["page"] < lp:
+            no("quiz page", q["page"], "comes before the lesson page", lp, "for", u["id"])
+
     # --- the library follows Mike's own checklist, because the page says it does ---
     lib_order = [b["book"] for b in D.get("library", []) if b.get("chapters")]
     chk_order = [b.get("key") for b in D.get("checklist", []) if b.get("key") in lib_order]

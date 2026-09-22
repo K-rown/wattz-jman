@@ -100,6 +100,9 @@ def main():
     # hand-checked quiz to compare against
     MEASURED_SHIFT = {"Simulated Exams": 8}
     shifts = {}
+    # lesson pages read off the books themselves, for videos whose book indexes
+    # only its review questions (see pages.py)
+    LESSON = json.load(open("lesson-pages.json", encoding="utf-8")) if os.path.exists("lesson-pages.json") else {}
     RESOLVED = {}
     if os.path.exists("resolved.json"):
         for r in json.load(open("resolved.json", encoding="utf-8")):
@@ -203,7 +206,9 @@ def main():
     for v in V:
         short = next((s for s, f in FULL.items() if f == v["book"]), None)
         row = {}
-        pg = page_for(v, by_book_pages.get(short, {}))
+        # a page found in the book by hand wins: some books index only their
+        # review-question pages, which is not where the lesson is
+        pg = LESSON.get(v["video_id"], {}).get("page") or page_for(v, by_book_pages.get(short, {}))
         key0 = quiz_of.get(v["video_id"])
         # Some books index only their review-question pages. A "lesson page" that
         # lands exactly on this video's own quiz is that, not the lesson, so it is
