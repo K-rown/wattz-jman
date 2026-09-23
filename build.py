@@ -333,7 +333,7 @@ DATA = {
                 "Go at your own speed. Nothing here is timed and nothing is late. Two videos one night and none the next is fine — what matters is that the quiz is taken before you move on.",
             ],
             "ends": [
-                ["Your progress", "lives in this browser. Copy a pick-up link below to carry it to another device, or connect a GitHub token to keep them in step."],
+                ["Your progress", "lives in this browser. There is no account. To pick it up on another phone, open “Use this on another phone” at the foot of the page — point that phone's camera at the code, or send yourself the link."],
                 ["Passing", "is 70%. Aim higher — the real exam is not the practice one."],
             ],
         },
