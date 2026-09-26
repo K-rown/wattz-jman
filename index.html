@@ -83,6 +83,10 @@
   .shout { background:#fde8e8; border:1px solid #c0392b; color:#7d1f14; border-radius:10px; padding:9px 11px; margin:0 0 10px; font-size:.86rem; line-height:1.45; }
   .shout.warn { background:#fffbe9; border-color:#e0b400; color:#6b5200; }
   .card.lib.nextup .top { background:#1d4ed8; color:#fff; }
+  .owed { margin:0 0 12px; padding:8px 12px; border-left:4px solid #f0913a; background:#fff8ec; border-radius:8px; font-size:14px; line-height:1.4; }
+  .owed .ow-h { font-weight:800; color:#8a4b08; margin-right:4px; }
+  .owed button { background:none; border:0; padding:6px 2px; min-height:32px; font:inherit; color:#1d4ed8; text-decoration:underline; cursor:pointer; }
+  .owed .ow-soon { color:#6b7280; }
   .nextb { padding:11px 12px 13px; }
   .nextb .nt { font-weight:800; font-size:1.02rem; line-height:1.3; }
   .nextb .nc { color:var(--mute); font-size:.82rem; margin:3px 0 2px; }
@@ -1546,6 +1550,44 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   }
 
   // the one thing the dated plan did that a list cannot: say what to do now
+  // A quiet line at the top: the quizzes behind videos already watched and not yet
+  // taken, each a tap that opens it. A chapter quiz that also needs a later video
+  // (Chapter 1's covers Art 100 and Art 110) is named with what it is waiting on.
+  function quizzesOwed() {
+    const ready = [], soon = [];
+    (DATA.library || []).forEach(b => b.chapters.forEach(c => {
+      let since = [];
+      c.units.forEach(u => {
+        since.push(u);
+        if (!u.quiz) return;
+        const k = skeyOf(u.quiz), covers = since; since = [];
+        if (state.scores[k] || !(DATA.quizzes || {})[u.quiz.key]) return;
+        if (unitDone(u)) ready.push({ b, c, u, k });
+        else if (covers.some(unitDone)) soon.push({ b, c, u, k });
+      });
+    }));
+    if (!ready.length && !soon.length) return null;
+    const bar = $('div', 'owed');
+    bar.appendChild($('span', 'ow-h', ready.length ? 'Quizzes to take:' : 'Quiz coming up:'));
+    const name = x => ((DATA.quizzes[x.u.quiz.key] || {}).quiz || x.u.label).replace(/\s*quiz$/i, '') + ' quiz';
+    const open = x => {
+      libOpen[x.b.book + ':' + x.c.key] = true; render();
+      setTimeout(() => { const h = document.querySelector('[data-quiz="' + x.k + '"]'); if (h) h.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
+    };
+    ready.forEach((x, i) => {
+      if (i) bar.appendChild(document.createTextNode(' \u00b7 '));
+      const n = (DATA.quizzes[x.u.quiz.key].questions || []).length;
+      const a = $('button', null, esc(name(x)) + ' (' + n + ' q)'); a.type = 'button';
+      a.addEventListener('click', e => { e.stopPropagation(); open(x); });
+      bar.appendChild(a);
+    });
+    soon.slice(0, 2).forEach((x, i) => {
+      if (ready.length || i) bar.appendChild(document.createTextNode(' \u00b7 '));
+      bar.appendChild($('span', 'ow-soon', esc(name(x)) + ' after ' + esc(x.u.label.replace(/^Art\s+(\d+).*/, 'Art $1'))));
+    });
+    return bar;
+  }
+
   function nextUp() {
     const rows = [];
     (DATA.library || []).forEach(b => b.chapters.forEach(c => c.units.forEach(u => rows.push([b, c, u]))));
@@ -1602,6 +1644,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     migrateDays();
     host.innerHTML = '';
     const sh = startHere(); if (sh) host.appendChild(sh);
+    const ow = quizzesOwed(); if (ow) host.appendChild(ow);
     const nx = nextUp(); if (nx) host.appendChild(nx);
     const qc = libQuestions(); if (qc) host.appendChild(qc);
     (DATA.library || []).forEach(b => {
