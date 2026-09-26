@@ -173,6 +173,11 @@
   .qrbox[hidden] { display:none; }
   .qrbox { margin:10px 0 2px; text-align:center; }
   .qstep[hidden] { display:none; }
+  .sync-on-btn { display:block; width:100%; min-height:52px; font-size:17px; font-weight:800; margin:10px 0 4px; }
+  .syncbox { margin:8px 0 14px; }
+  .syncbox .sbtns { display:flex; gap:8px; flex-wrap:wrap; margin-top:8px; }
+  .syncbox .sbtns button { min-height:44px; }
+  #whoOnce[hidden] { display:none; }
   .qstep { margin:0 0 8px; }
   .qstep button { display:block; margin:8px auto 0; min-height:44px; padding:0 18px; }
   .qrbox canvas { display:block; margin:0 auto 6px; width:100%; max-width:min(92vw,520px);
@@ -408,7 +413,7 @@
   <footer id="foot"></footer>
   </div>
 </main>
-<div class="who" id="who" hidden><div class="grow"><b>Use this on another phone</b><div class="sm">Everything you have ticked, scored and written is on <b>this</b> phone. There is no account and nothing to sign up for.</div><div class="qrbox" id="whoQRBox" hidden><canvas id="whoQR" role="img" aria-label="A code the other phone's camera can read"></canvas><div class="sm qstep" id="whoStep" hidden><b>Code 1 of 2</b> Your record is big, so it is split. Scan this one, say yes on the other phone, then tap Next and scan again. <button type="button">Next code</button></div><div class="sm"><b>Point the other phone's camera at this.</b> It opens this page with your place in it, and adds it to whatever is already on that phone.</div></div><div class="sm" id="whoOr">Or send yourself the link and open it on the other phone:</div><textarea id="whoLink" readonly rows="3" spellcheck="false"></textarea><div class="sm" id="whoNote"></div></div><button id="whoShare" type="button">Send it</button><button id="whoCopy" type="button">Copy</button><button id="whoLater" type="button" class="later">Close</button></div>
+<div class="who" id="who" hidden><div class="grow"><b id="whoHead">Your other devices</b><div class="syncbox" id="syncBox"></div><div id="whoOnce"><div class="sm">Or send a one-time copy: everything you have ticked, scored and written, as it is right now.</div><div class="qrbox" id="whoQRBox" hidden><canvas id="whoQR" role="img" aria-label="A code the other phone's camera can read"></canvas><div class="sm qstep" id="whoStep" hidden><b>Code 1 of 2</b> Your record is big, so it is split. Scan this one, say yes on the other phone, then tap Next and scan again. <button type="button">Next code</button></div><div class="sm"><b>Point the other phone's camera at this.</b> It opens this page with your place in it, and adds it to whatever is already on that phone.</div></div><div class="sm" id="whoOr">Or send yourself the link and open it on the other phone:</div><textarea id="whoLink" readonly rows="3" spellcheck="false"></textarea><div class="sm" id="whoNote"></div><button id="whoShare" type="button">Send it</button><button id="whoCopy" type="button">Copy</button></div></div><button id="whoLater" type="button" class="later">Close</button></div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.15/hls.min.js" onerror="window.__hlsDead=1"></script>
 <script>
 // There is no server and no account. A record lives in the browser that made it,
@@ -896,6 +901,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       localStorage.setItem(KEY, JSON.stringify(state));
       mark = marker();
     } catch (e) {}
+    schedulePush();
   };
   mark = marker();   // whatever was on this device when the page opened is this tab's baseline
   // the other tab just wrote: take what it added and redraw, rather than fight it
@@ -905,8 +911,106 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   });
   function paintSync() {
     const el = document.getElementById('syncWord'); if (!el) return;
-    el.textContent = 'Saved on this phone. Nothing is sent anywhere.';
+    const lk = document.getElementById('syncLink');
+    if (lk) lk.textContent = syncCode ? ' · Add another device' : ' · Sync my devices';
     el.className = 'sm';
+    if (!syncCode) { el.textContent = 'Saved on this phone. Nothing is sent anywhere.'; return; }
+    const hhmm = d => d.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' });
+    el.textContent = syncErr ? 'No connection right now — your devices will catch up when there is one.'
+      : syncAt ? 'In sync with your other devices · ' + hhmm(syncAt) : 'Syncing…';
+    if (!syncErr && syncAt) el.className = 'sm synced';
+  }
+
+  // ---- progress that follows you between your own devices ----
+  // One private code per person, made on the first device and carried to the next by a
+  // code on the screen, scanned once. After that every tick, score and note goes both
+  // ways by itself. The code reaches nothing but the two functions in sync.sql, which key
+  // the row by its SHA-256 and let nobody list the rows. Off until the person turns it
+  // on, so a workmate who never does is exactly where he was.
+  var syncCode = null, syncAt = null, syncErr = null, syncTimer = null, syncBusy = null;
+  try { syncCode = localStorage.getItem('ptj.sync'); } catch (e) {}
+  const SYNC = { url: 'https://buyasasesqnopwerusfd.supabase.co', key: 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJ1eWFzYXNlc3Fub3B3ZXJ1c2ZkIiwicm9sZSI6ImFub24iLCJpYXQiOjE3NjQzNDExMjIsImV4cCI6MjA3OTkxNzEyMn0.muCFmrxqJYyBDoUJQHRJH8My46DLyUMKvyG4YfT5jV4' };
+  async function syncRpc(f, body) {
+    const r = await fetch(SYNC.url + '/rest/v1/rpc/' + f, { method: 'POST', cache: 'no-store',
+      headers: { apikey: SYNC.key, Authorization: 'Bearer ' + SYNC.key, 'Content-Type': 'application/json' },
+      body: JSON.stringify(body) });
+    if (!r.ok) throw new Error('sync ' + r.status);
+    return r.json();
+  }
+  const newSyncCode = () => {
+    const A = 'ABCDEFGHJKLMNPQRSTUVWXYZ23456789', b = crypto.getRandomValues(new Uint8Array(16));
+    let t = ''; for (let i = 0; i < 16; i++) { if (i && i % 4 === 0) t += '-'; t += A[b[i] % 32]; }
+    return t;
+  };
+  const pairUrl = () => location.origin + location.pathname + '#sync=' + syncCode;
+  function syncNow() {
+    if (!syncCode) return Promise.resolve();
+    if (syncBusy) return syncBusy;
+    syncBusy = (async () => {
+      try {
+        const inc = await syncRpc('ptj_pull', { code: syncCode });
+        const newer = !!inc && (inc.updated || '') > (state.updated || '');
+        if (inc && merge(inc, newer)) {
+          if (newer) state.updated = inc.updated;
+          try { localStorage.setItem(KEY, JSON.stringify(state)); mark = marker(); } catch (e) {}
+          render();
+        }
+        await syncRpc('ptj_push', { code: syncCode, st: shared() });
+        syncAt = new Date(); syncErr = null;
+      } catch (e) { syncErr = String(e); }
+      finally { syncBusy = null; paintSync(); paintSyncCard(); }
+    })();
+    return syncBusy;
+  }
+  function schedulePush() { if (!syncCode) return; clearTimeout(syncTimer); syncTimer = setTimeout(syncNow, 1500); }
+  function setSyncCode(c) {
+    syncCode = c; syncAt = null; syncErr = null;
+    try { c ? localStorage.setItem('ptj.sync', c) : localStorage.removeItem('ptj.sync'); } catch (e) {}
+    paintSync(); paintSyncCard();
+    if (c) syncNow();
+  }
+  // the other device's code, scanned: #sync=<code>
+  function pairFromHash() {
+    const m = location.hash.match(/[#&]sync=([A-Za-z0-9-]{12,40})/); if (!m) return;
+    history.replaceState(null, '', location.pathname + location.search);
+    const code = m[1].toUpperCase();
+    if (code === syncCode) { syncNow(); return; }
+    if (!confirm('Sync this device with your other one?\n\nFrom now on, everything you tick, score and write on either one shows up on both. '
+      + 'Only say yes to your own code. If a workmate sent it, say no: you want your own record, not his.')) return;
+    setSyncCode(code);
+  }
+  function paintSyncCard() {
+    const box = document.getElementById('syncBox'); if (!box) return;
+    const once = document.getElementById('whoOnce');
+    box.innerHTML = '';
+    if (!syncCode) {
+      box.appendChild($('div', 'sm', 'Turn on sync, then scan the code it shows with your other phone or computer. You do that once. After that, every tick, score and note shows up on both by itself.'));
+      const on = $('button', 'sync-on-btn', 'Turn on sync'); on.type = 'button';
+      on.addEventListener('click', () => setSyncCode(newSyncCode()));
+      box.appendChild(on);
+      if (once) once.hidden = false;
+      return;
+    }
+    if (once) once.hidden = true;
+    const cv = document.createElement('canvas');
+    cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', "A code your other device's camera can read");
+    const wrap = $('div', 'qrbox'); wrap.id = 'syncQR'; wrap.appendChild(cv); box.appendChild(wrap);
+    try { if (!paintQR(cv, pairUrl())) wrap.hidden = true; } catch (e) { wrap.hidden = true; }
+    box.appendChild($('div', 'sm', '<b>Scan this with your other device, once.</b> It opens this page there and links the two. After that they stay in sync by themselves.'));
+    box.appendChild($('div', 'sm', syncErr ? 'No connection right now. It will catch up when there is one.'
+      : syncAt ? 'In sync as of ' + syncAt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) + '.' : 'Syncing…'));
+    const btns = $('div', 'sbtns');
+    const send = $('button', null, 'Send the link instead'); send.type = 'button';
+    send.addEventListener('click', async () => {
+      const url = pairUrl();
+      try {
+        if (navigator.share) { await navigator.share({ title: 'Path to Journeyman', text: 'Link my devices', url }); return; }
+        await navigator.clipboard.writeText(url); send.textContent = 'Copied';
+      } catch (e) {}
+    });
+    const off = $('button', 'later', 'Stop syncing this device'); off.type = 'button';
+    off.addEventListener('click', () => { if (confirm('Stop syncing this device? Everything stays on it; it just stops sharing with your other devices.')) setSyncCode(null); });
+    btns.appendChild(send); btns.appendChild(off); box.appendChild(btns);
   }
   const whoCard = document.getElementById('who'), whoSlot = document.getElementById('whoSlot');
   if (whoCard && whoSlot) {
@@ -915,6 +1019,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   }
   async function openCarry() {
     if (!whoCard) return;
+    paintSyncCard();
+    if (syncCode) { whoCard.hidden = false; window.scrollTo({ top: 0, behavior: 'smooth' }); return; }
     const box = document.getElementById('whoLink');
     const url = await carryUrl();
     box.value = url;
@@ -1594,7 +1700,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     hw.appendChild(lk); f.appendChild(hw); }
   f.appendChild($('p', 'sm', 'Built ' + DATA.generated));
   const sw = $('p', 'sm'); sw.appendChild($('span', null, '')); sw.lastChild.id = 'syncWord';
-  if (whoCard) { const lk = $('a', null, ' \u00b7 Use this on another phone'); lk.href = '#';
+  if (whoCard) { const lk = $('a', null, ' \u00b7 Sync my devices'); lk.href = '#'; lk.id = 'syncLink';
     lk.addEventListener('click', e => { e.preventDefault(); openCarry(); });
     sw.appendChild(lk); }
   if (false) { const pj = $('p', 'sm'); const cur = projectId();
@@ -1605,6 +1711,12 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   f.appendChild(sw); paintSync();
   }
   paintFoot();
+  pairFromHash();
+  window.addEventListener('hashchange', pairFromHash);
+  syncNow();
+  document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncNow(); });
+  window.addEventListener('online', () => syncNow());
+  setInterval(() => { if (document.visibilityState === 'visible') syncNow(); }, 60000);
   if (!storageWorks()) {
     const w = document.createElement('div'); w.className = 'shout warn';
     w.innerHTML = '<b>This browser will not let the page remember anything.</b> '

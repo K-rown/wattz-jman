@@ -18,6 +18,22 @@ it converts them into ticks on the videos those days covered, once, on first ope
 Not for sharing outside the crew: the quizzes are Mike Holt's, and everyone using
 this should own the books.
 
+## Sync between your own devices
+
+Off until you turn it on. "Sync my devices" at the foot of the page makes a private
+code and shows it as a QR code; scan it once with your other phone or computer and
+from then on every tick, score, note and unticking goes both ways by itself (on
+open, when the page comes back to the front, a minute apart while it is open, and a
+moment after every change). A workmate who never turns it on sends nothing anywhere.
+
+The store is one table in the Tradesman Supabase project, `ptj_sync`, set up by
+`sync.sql` (applied 2026-09-26). The page holds only the public anon key and the
+table is closed to it; it reaches the table through `ptj_pull(code)` and
+`ptj_push(code, state)`, which key the row by the code's SHA-256. Nobody can list
+the rows, and nobody can read or write one without its code (16 characters, 80 bits).
+
+The one-time copy link (`#p=`) is still there for when sync is off.
+
 ## How it is built
 
 `index.html` is generated. **Never hand-edit the data block inside it.**
