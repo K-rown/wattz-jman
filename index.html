@@ -172,6 +172,9 @@
   .who button.later { background:#e5e7eb; color:#333; }
   .qrbox[hidden] { display:none; }
   .qrbox { margin:10px 0 2px; text-align:center; }
+  .qstep[hidden] { display:none; }
+  .qstep { margin:0 0 8px; }
+  .qstep button { display:block; margin:8px auto 0; min-height:44px; padding:0 18px; }
   .qrbox canvas { display:block; margin:0 auto 6px; width:100%; max-width:min(92vw,520px);
                   height:auto; border-radius:8px; background:#fff; }
   .synced { color: var(--green); }
@@ -405,7 +408,7 @@
   <footer id="foot"></footer>
   </div>
 </main>
-<div class="who" id="who" hidden><div class="grow"><b>Use this on another phone</b><div class="sm">Everything you have ticked, scored and written is on <b>this</b> phone. There is no account and nothing to sign up for.</div><div class="qrbox" id="whoQRBox" hidden><canvas id="whoQR" role="img" aria-label="A code the other phone's camera can read"></canvas><div class="sm"><b>Point the other phone's camera at this.</b> It opens this page with your place in it, and adds it to whatever is already on that phone.</div></div><div class="sm" id="whoOr">Or send yourself the link and open it on the other phone:</div><textarea id="whoLink" readonly rows="3" spellcheck="false"></textarea><div class="sm" id="whoNote"></div></div><button id="whoShare" type="button">Send it</button><button id="whoCopy" type="button">Copy</button><button id="whoLater" type="button" class="later">Close</button></div>
+<div class="who" id="who" hidden><div class="grow"><b>Use this on another phone</b><div class="sm">Everything you have ticked, scored and written is on <b>this</b> phone. There is no account and nothing to sign up for.</div><div class="qrbox" id="whoQRBox" hidden><canvas id="whoQR" role="img" aria-label="A code the other phone's camera can read"></canvas><div class="sm qstep" id="whoStep" hidden><b>Code 1 of 2</b> Your record is big, so it is split. Scan this one, say yes on the other phone, then tap Next and scan again. <button type="button">Next code</button></div><div class="sm"><b>Point the other phone's camera at this.</b> It opens this page with your place in it, and adds it to whatever is already on that phone.</div></div><div class="sm" id="whoOr">Or send yourself the link and open it on the other phone:</div><textarea id="whoLink" readonly rows="3" spellcheck="false"></textarea><div class="sm" id="whoNote"></div></div><button id="whoShare" type="button">Send it</button><button id="whoCopy" type="button">Copy</button><button id="whoLater" type="button" class="later">Close</button></div>
 <script defer src="https://cdnjs.cloudflare.com/ajax/libs/hls.js/1.5.15/hls.min.js" onerror="window.__hlsDead=1"></script>
 <script>
 // There is no server and no account. A record lives in the browser that made it,
@@ -498,20 +501,53 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   const b64u = t => btoa(unescape(encodeURIComponent(t))).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, '');
   const unb64u = t => decodeURIComponent(escape(atob(t.replace(/-/g, '+').replace(/_/g, '/'))));
 
-  function packUp() {
-    const watched = Object.keys(state.unit || {}).filter(k => state.unit[k]).map(tag).join('');
-    const removed = Object.keys((state.gone || {}).unit || {}).map(tag).join('');
-    // a score is the quiz and how many he got right; how many there were to get is the
-    // quiz's own business, and the page already knows it
-    const scores = Object.keys(state.scores || {}).map(k => tag(k) + b36(state.scores[k].right)).join('');
-    const qs = (state.qs || []).map(q => ({ id: q.id, q: q.q, unit: q.unit, at: q.at, answer: q.answer || '', resolved: !!q.resolved }));
-    return ['2', watched, removed, scores, qs.length ? b64u(JSON.stringify(qs)) : ''].join('~');
+  // the record as four lists, so it can travel whole or in pieces
+  function recordBits() {
+    return {
+      w: Object.keys(state.unit || {}).filter(k => state.unit[k]).map(tag),
+      r: Object.keys((state.gone || {}).unit || {}).map(tag),
+      // a score is the quiz and how many he got right; how many there were to get is the
+      // quiz's own business, and the page already knows it
+      s: Object.keys(state.scores || {}).map(k => tag(k) + b36(state.scores[k].right)),
+      q: (state.qs || []).map(q => ({ id: q.id, q: q.q, unit: q.unit, at: q.at, answer: q.answer || '', resolved: !!q.resolved })),
+    };
+  }
+  // His written questions are most of a record, and words squeeze to about a third, so
+  // where the browser can (every current phone) they travel squeezed, as version 3.
+  const ZIP = typeof CompressionStream === 'function' && typeof DecompressionStream === 'function';
+  const bytesB64u = u8 => { let t = ''; for (let i = 0; i < u8.length; i += 8192) t += String.fromCharCode.apply(null, u8.subarray(i, i + 8192));
+    return btoa(t).replace(/\+/g, '-').replace(/\//g, '_').replace(/=+$/, ''); };
+  const b64uBytes = t => Uint8Array.from(atob(t.replace(/-/g, '+').replace(/_/g, '/')), c => c.charCodeAt(0));
+  const squeeze = async t => bytesB64u(new Uint8Array(await new Response(new Blob([t]).stream().pipeThrough(new CompressionStream('deflate-raw'))).arrayBuffer()));
+  const unsqueeze = async t => new Response(new Blob([b64uBytes(t)]).stream().pipeThrough(new DecompressionStream('deflate-raw'))).text();
+  const packOf = async b => {
+    const q = b.q.length ? JSON.stringify(b.q) : '';
+    return [ZIP ? '3' : '2', b.w.join(''), b.r.join(''), b.s.join(''), q ? (ZIP ? await squeeze(q) : b64u(q)) : ''].join('~');
+  };
+  function packUp() { return packOf(recordBits()); }
+  // A record with a lot of his own written questions outgrows one code a phone camera
+  // can read off a screen. Picking up only ever ADDS (ticks add up, scores keep the
+  // newest, questions join by id), so the record is cut into pieces that are each a
+  // whole link of their own, and scanning them one after another lands all of it.
+  async function packParts(budget) {
+    const all = recordBits(), parts = [];
+    let cur = { w: [], r: [], s: [], q: [] };
+    const empty = b => !(b.w.length || b.r.length || b.s.length || b.q.length);
+    for (const k of ['w', 'r', 's', 'q']) for (const x of all[k]) {
+      cur[k].push(x);
+      if ((await packOf(cur)).length > budget && !(cur[k].length === 1 && empty({ ...cur, [k]: [] }))) {
+        cur[k].pop(); parts.push(await packOf(cur));
+        cur = { w: [], r: [], s: [], q: [] }; cur[k].push(x);
+      }
+    }
+    if (!empty(cur) || !parts.length) parts.push(await packOf(cur));
+    return parts;
   }
 
-  function unpack(code) {
+  async function unpack(code) {
     const bits = String(code).split('~');
     const v = bits[0];                        // links sent before today still read
-    if (v !== '1' && v !== '2') return null;
+    if (v !== '1' && v !== '2' && v !== '3') return null;
     const T = tags(), out = { unit: {}, done: {}, notes: {}, scores: {}, qs: [], gone: { unit: {}, qs: {} } };
     const chunk = (t, w) => { const a = []; for (let i = 0; i + w <= t.length; i += w) a.push(t.slice(i, i + w)); return a; };
     chunk(bits[1] || '', 5).forEach(t => { if (T.unit[t]) out.unit[T.unit[t]] = true; });
@@ -524,7 +560,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
                               : (((DATA.quizzes || {})[k] || {}).questions || []).length;
       if (total) out.scores[k] = { right, total, pct: Math.round(100 * right / total), when: '' };
     });
-    if (bits[4]) { try { out.qs = JSON.parse(unb64u(bits[4])); } catch (e) {} }
+    if (bits[4]) { try { out.qs = JSON.parse(v === '3' ? await unsqueeze(bits[4]) : unb64u(bits[4])); } catch (e) {} }
     out.updated = new Date().toISOString();
     return out;
   }
@@ -774,17 +810,20 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     return q.version;
   }
 
-  const carryUrl = () => location.origin + location.pathname + '#p=' + packUp();
+  const carryUrl = async () => location.origin + location.pathname + '#p=' + await packUp();
+  // about 1,200 characters a code: small enough to read off a laptop screen at arm's length
+  const CODE_BUDGET = 1200;
+  const carryUrls = async () => (await packParts(CODE_BUDGET)).map(c => location.origin + location.pathname + '#p=' + c);
 
   // pick up from a link: #p=<record> merges another device's progress into this one, once.
   // It also runs on a hash change, because a phone that already has the page open answers a
   // scanned code by changing the address without loading anything, and doing nothing at all
   // is the one outcome a man holding his phone up to a screen cannot make sense of.
-  function pickUp(live) {
+  async function pickUp() {
     const m = location.hash.match(/[#&](?:p|import)=([^&]+)/); if (!m) return;
     try {
       const inc = location.hash.indexOf('#p=') === 0 || location.hash.indexOf('&p=') >= 0
-        ? unpack(decodeURIComponent(m[1]))
+        ? await unpack(decodeURIComponent(m[1]))
         : JSON.parse(decodeURIComponent(escape(atob(m[1].replace(/-/g, '+').replace(/_/g, '/')))));
       if (!inc) throw new Error('not a pick-up link');
       // merging is one way and cannot be undone, and a link passed between two men
@@ -800,11 +839,11 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       try { localStorage.setItem(KEY, JSON.stringify(state)); } catch (e) {}
       history.replaceState(null, '', location.pathname + location.search);
       window.__imported = true;
-      if (live) render();          // on first load the page is about to draw itself anyway
+      render();                    // reading a link can wait on unsqueezing, so the page may already be drawn
     } catch (e) { window.__importError = String(e); }
   }
-  pickUp(false);
-  window.addEventListener('hashchange', () => pickUp(true));
+  pickUp();
+  window.addEventListener('hashchange', () => pickUp());
 
   const clock = iso => { if (!iso) return 'nothing yet'; try { return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } };
   const shared = () => ({ done: state.done, unit: state.unit || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
@@ -874,15 +913,27 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     whoSlot.appendChild(whoCard);
     whoCard.hidden = true;   // carrying it over is opt-in from the footer, never the first thing a person sees
   }
-  function openCarry() {
+  async function openCarry() {
     if (!whoCard) return;
     const box = document.getElementById('whoLink');
-    const url = carryUrl();
+    const url = await carryUrl();
     box.value = url;
     // a record far enough along can outgrow the biggest code there is; say so and
     // leave the link, rather than drawing something no camera can read
-    let drew = 0;
-    try { drew = paintQR(document.getElementById('whoQR'), url); } catch (e) { drew = 0; }
+    // too much for one code a camera can read: cut it into pieces and show them in turn
+    const urls = url.length > CODE_BUDGET + 60 ? await carryUrls() : [url];
+    let drew = 0, at = 0;
+    const cv = document.getElementById('whoQR'), step = document.getElementById('whoStep');
+    const show = () => {
+      try { drew = paintQR(cv, urls[at]); } catch (e) { drew = 0; }
+      if (step) {
+        step.hidden = urls.length < 2;
+        step.querySelector('b').textContent = 'Code ' + (at + 1) + ' of ' + urls.length;
+        step.querySelector('button').textContent = at + 1 < urls.length ? 'Next code' : 'Back to code 1';
+      }
+    };
+    if (step) step.querySelector('button').onclick = () => { at = (at + 1) % urls.length; show(); };
+    show();
     document.getElementById('whoQRBox').hidden = !drew;
     document.getElementById('whoOr').textContent = drew
       ? 'Or send yourself the link and open it on the other phone:'
@@ -897,7 +948,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   // it not being there; otherwise that build dies on its first line
   if (whoCard) {
   document.getElementById('whoShare').addEventListener('click', async () => {
-    const url = carryUrl(), b = document.getElementById('whoShare');
+    // the link in the box was made when the card opened; making it again here would
+    // wait on the squeeze and could cost the tap the right to open the share sheet
+    const b = document.getElementById('whoShare'), url = document.getElementById('whoLink').value || await carryUrl();
     try {
       if (navigator.share) { await navigator.share({ title: 'Path to Journeyman', text: 'My place in the Mike Holt program', url }); return; }
       await navigator.clipboard.writeText(url);
@@ -906,7 +959,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   });
   document.getElementById('whoCopy').addEventListener('click', async () => {
     const b = document.getElementById('whoCopy');
-    try { await navigator.clipboard.writeText(carryUrl()); b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 2500); }
+    try { await navigator.clipboard.writeText(document.getElementById('whoLink').value || await carryUrl()); b.textContent = 'Copied'; setTimeout(() => { b.textContent = 'Copy'; }, 2500); }
     catch (e) { document.getElementById('whoLink').select(); b.textContent = 'Copy what is in the box'; }
   });
   document.getElementById('whoLater').addEventListener('click', () => { whoCard.hidden = true; try { localStorage.setItem('ptj.nosync', '1'); } catch (e) {} });
@@ -1388,10 +1441,28 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     return card;
   }
 
+  // Every tap redraws the page, and the cards above the tapped row change height as
+  // they do (the next-up card moves on the moment a video is ticked), so on a phone
+  // the row jumped out from under the thumb and read as a tick that never took. The
+  // row a finger last went down on is held where it was across the redraw.
+  let anchorKey = null;
+  document.addEventListener('pointerdown', e => {
+    const a = e.target.closest && e.target.closest('#cards [data-k]');
+    anchorKey = a ? a.dataset.k : null;
+  }, true);
+  const byKey = (host, k) => { for (const el of host.querySelectorAll('[data-k]')) if (el.dataset.k === k) return el; return null; };
   function render() {
+    const host = document.getElementById('cards');
+    const k = anchorKey; anchorKey = null;
+    const before = k && byKey(host, k), top = before ? before.getBoundingClientRect().top : null;
+    draw(host);
+    const after = before && byKey(host, k);
+    if (after) { const d = after.getBoundingClientRect().top - top; if (Math.abs(d) > 1) window.scrollBy(0, d); }
+  }
+  function draw(host) {
     document.querySelector('main').classList.remove('focus');
     migrateDays();
-    const host = document.getElementById('cards'); host.innerHTML = '';
+    host.innerHTML = '';
     const sh = startHere(); if (sh) host.appendChild(sh);
     const nx = nextUp(); if (nx) host.appendChild(nx);
     const qc = libQuestions(); if (qc) host.appendChild(qc);
@@ -1414,6 +1485,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
         const key = b.book + ':' + c.key, open = !!libOpen[key];
         const cdone = c.units.filter(unitDone).length;
         const cd = $('div', 'chap' + (open ? ' open' : ''));
+        cd.dataset.k = 'c:' + key;
         const ch = $('button', 'chaph', '<span class="ct">' + esc(c.title) + '</span><span class="cc">' + cdone + '/' + c.units.length + '</span>');
         ch.type = 'button';
         ch.addEventListener('click', e => { e.stopPropagation(); libOpen[key] = !open; render(); });
@@ -1422,6 +1494,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
           const body = $('div', 'chapb');
           c.units.forEach(u => {
             const row = $('div', 'urow' + (unitDone(u) ? ' done' : ''));
+            row.dataset.k = 'u:' + u.id;
             const tick = $('button', 'utick' + (unitDone(u) ? ' on' : ''), unitDone(u) ? '\u2713' : '');
             tick.type = 'button'; tick.title = unitDone(u) ? 'Watched' : 'Mark watched';
             tick.addEventListener('click', e => { e.stopPropagation(); markUnit(u, !unitDone(u)); });
@@ -1472,6 +1545,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       if (b.extra && b.extra.length) {
         const key = b.book + ':extra', open = !!libOpen[key];
         const cd = $('div', 'chap' + (open ? ' open' : ''));
+        cd.dataset.k = 'c:' + key;
         const dn = b.extra.filter(q => state.scores[q.key]).length;
         const onlyQuizzes = !units.length;
         const ch = $('button', 'chaph', '<span class="ct">'
