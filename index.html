@@ -471,17 +471,48 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   const unbury = (kind, id) => { if (gone()[kind]) delete gone()[kind][id]; };
   const buried = (kind, id) => !!(state.gone && state.gone[kind] && state.gone[kind][id]);
 
+  // A tick and an untick each carry WHEN, and the latest act on a video wins. Before
+  // this an untick won for ever: once a video had been unticked on any device, ticking
+  // it again was undone by the very next save, and sync spread that to every device.
+  // Ticks made before times were kept are dated to this device's last save, which is
+  // when this device last said they were ticked.
+  const tickAt = () => (state.tickAt = state.tickAt || {});
+  if (!state.tickAt) {
+    const t = state.updated || new Date().toISOString();
+    Object.keys(state.unit || {}).forEach(id => { if (state.unit[id]) tickAt()[id] = t; });
+  }
+  // somebody unticked this video at time g: it goes, unless it was ticked after that
+  function untickAt(id, g) {
+    if (!g || (tickAt()[id] || '') >= g) return false;
+    if (!(gone().unit = gone().unit || {})[id] || gone().unit[id] < g) gone().unit[id] = g;
+    if (state.unit && state.unit[id]) { delete state.unit[id]; return true; }
+    return false;
+  }
+  // somebody ticked this video at time t ('' when they did not say): it is ticked,
+  // unless it was unticked after that
+  function tickedAt(id, t) {
+    const g = ((state.gone || {}).unit || {})[id];
+    if (g && (t || '') <= g) return false;
+    state.unit = state.unit || {};
+    if (t && (tickAt()[id] || '') < t) tickAt()[id] = t;
+    if (g) delete state.gone.unit[id];
+    if (state.unit[id]) return false;
+    state.unit[id] = true; return true;
+  }
+
   function merge(inc, incNewer) {
     if (!inc) return false;
     const before = JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores]);
     Object.keys(inc.done || {}).forEach(k => { if (inc.done[k]) state.done[k] = true; });
     state.unit = state.unit || {};
-    ['unit', 'qs'].forEach(k => Object.keys((inc.gone || {})[k] || {}).forEach(id => {
-      gone()[k][id] = gone()[k][id] || inc.gone[k][id];
-      if (k === 'unit') delete state.unit[id];
-      if (k === 'qs') state.qs = (state.qs || []).filter(q => q.id !== id);
-    }));
-    Object.keys(inc.unit || {}).forEach(k => { if (inc.unit[k] && !buried('unit', k)) state.unit[k] = true; });   // a video watched anywhere is watched
+    Object.keys((inc.gone || {}).qs || {}).forEach(id => {
+      gone().qs = gone().qs || {};
+      gone().qs[id] = gone().qs[id] || inc.gone.qs[id];
+      state.qs = (state.qs || []).filter(q => q.id !== id);
+    });
+    // ticks and unticks: the latest act on each video wins, wherever it was made
+    Object.keys((inc.gone || {}).unit || {}).forEach(id => untickAt(id, inc.gone.unit[id]));
+    Object.keys(inc.unit || {}).forEach(id => { if (inc.unit[id]) tickedAt(id, (inc.tickAt || {})[id]); });
     Object.keys(inc.notes || {}).forEach(k => { const a = state.notes[k] || '', b = inc.notes[k] || ''; if (!a && b) state.notes[k] = b; else if (a && b && a !== b) state.notes[k] = incNewer ? b : a; });
     const ids = new Set((state.qs || []).map(q => q.id));
     (inc.qs || []).forEach(q => { if (buried('qs', q.id)) return; if (!ids.has(q.id)) { state.qs.push(q); ids.add(q.id); } else if (incNewer) { const i = state.qs.findIndex(x => x.id === q.id); state.qs[i] = q; } });
@@ -851,7 +882,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   window.addEventListener('hashchange', () => pickUp());
 
   const clock = iso => { if (!iso) return 'nothing yet'; try { return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } };
-  const shared = () => ({ done: state.done, unit: state.unit || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
+  const shared = () => ({ done: state.done, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
 
   // What this tab last put in storage. Anything that turns up in storage which is
   // NOT in here was done by another tab and is adopted; anything in here that this
@@ -866,16 +897,16 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     if (!other || !mark) return false;
     let took = false;
     // take on whatever the other side says it removed
-    ['unit', 'qs'].forEach(k => {
-      Object.keys((other.gone || {})[k] || {}).forEach(id => {
-        if (!buried(k, id)) {
-          gone()[k][id] = other.gone[k][id];
-          if (k === 'unit' && state.unit && state.unit[id]) { delete state.unit[id]; took = true; }
-          if (k === 'qs' && (state.qs || []).some(q => q.id === id)) { state.qs = state.qs.filter(q => q.id !== id); took = true; }
-        }
-      });
+    Object.keys((other.gone || {}).qs || {}).forEach(id => {
+      if (!buried('qs', id)) {
+        gone().qs = gone().qs || {};
+        gone().qs[id] = other.gone.qs[id];
+        if ((state.qs || []).some(q => q.id === id)) { state.qs = state.qs.filter(q => q.id !== id); took = true; }
+      }
     });
-    ['done', 'unit'].forEach(k => {
+    Object.keys((other.gone || {}).unit || {}).forEach(id => { if (untickAt(id, other.gone.unit[id])) took = true; });
+    Object.keys(other.unit || {}).forEach(id => { if (other.unit[id] && tickedAt(id, (other.tickAt || {})[id])) took = true; });
+    ['done'].forEach(k => {
       state[k] = state[k] || {};
       Object.keys(other[k] || {}).forEach(id => {
         if (other[k][id] && !state[k][id] && !mark[k][id] && !buried(k, id)) { state[k][id] = true; took = true; }
@@ -1402,7 +1433,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   const unitDone = u => !!(state.unit || {})[u.id];
   function markUnit(u, on) {
     state.unit = state.unit || {};
-    if (on) { state.unit[u.id] = true; unbury('unit', u.id); }
+    if (on) { state.unit[u.id] = true; tickAt()[u.id] = new Date().toISOString(); unbury('unit', u.id); }
     else { delete state.unit[u.id]; bury('unit', u.id); }
     save(); render();
   }
@@ -1419,7 +1450,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     state.unit = state.unit || {};
     let moved = 0;
     Object.keys(last).forEach(v => {
-      if (state.done[last[v]] && !state.unit[v]) { state.unit[v] = true; moved++; }
+      if (state.done[last[v]] && !state.unit[v]) { state.unit[v] = true; tickAt()[v] = state.updated || new Date().toISOString(); moved++; }
     });
     try { localStorage.setItem('ptj.daysmoved', '1'); } catch (e) {}
     if (moved) save();
