@@ -1015,8 +1015,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const once = document.getElementById('whoOnce');
     box.innerHTML = '';
     if (!syncCode) {
-      box.appendChild($('div', 'sm', 'Turn on sync, then scan the code it shows with your other phone or computer. You do that once. After that, every tick, score and note shows up on both by itself.'));
-      const on = $('button', 'sync-on-btn', 'Turn on sync'); on.type = 'button';
+      box.appendChild($('div', 'sm', 'Turn on sync on <b>one</b> device, then scan the code it shows with your other phone or computer. You do that once. After that, every tick, score and note shows up on both by itself.'));
+      box.appendChild($('div', 'sm', '<b>Already turned it on somewhere else?</b> Do not press this here — that makes a second, separate sync. Open Sync my devices on that device and scan its code with this one.'));
+      const on = $('button', 'sync-on-btn', 'Turn on sync — first device'); on.type = 'button';
       on.addEventListener('click', () => setSyncCode(newSyncCode()));
       box.appendChild(on);
       if (once) once.hidden = false;
@@ -1027,7 +1028,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     cv.setAttribute('role', 'img'); cv.setAttribute('aria-label', "A code your other device's camera can read");
     const wrap = $('div', 'qrbox'); wrap.id = 'syncQR'; wrap.appendChild(cv); box.appendChild(wrap);
     try { if (!paintQR(cv, pairUrl())) wrap.hidden = true; } catch (e) { wrap.hidden = true; }
-    box.appendChild($('div', 'sm', '<b>Scan this with your other device, once.</b> It opens this page there and links the two. After that they stay in sync by themselves.'));
+    box.appendChild($('div', 'sm', '<b>Scan this with your other device, once.</b> It opens this page there and links the two. After that they stay in sync by themselves. If the other device already made its own code, scanning this one still works: it joins this one and brings its ticks with it.'));
     box.appendChild($('div', 'sm', syncErr ? 'No connection right now. It will catch up when there is one.'
       : syncAt ? 'In sync as of ' + syncAt.toLocaleTimeString('en-US', { hour: 'numeric', minute: '2-digit' }) + '.' : 'Syncing…'));
     const btns = $('div', 'sbtns');
