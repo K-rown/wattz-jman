@@ -1606,13 +1606,13 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     return bar;
   }
 
-  // ---- a plan of one's own: two hours of video every weekday, the quizzes at the
+  // ---- a plan of one's own: 90 minutes of video a weekday (two hours at the desk), quizzes at the
   // weekend, and whether he is ahead or behind. It lives in this person's record
   // (state.plan), set by his own link, so it follows his sync code to his devices and
   // nobody else's page ever draws it.
   function planCard() {
     const P = state.plan; if (!P || !P.start || P.off) return null;
-    const perDay = P.perDay || 120, speed = P.speed || 1.5;
+    const perDay = P.perDay || 90, speed = P.speed || 1.5;
     const vmin = u => (u.dur || 0) / 60 / speed;
     const dayOf = t => t ? iso(new Date(t)) : '';
     const wk = d => d.getDay() > 0 && d.getDay() < 6;
@@ -1651,8 +1651,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const qmin = ready.reduce((t, x) => t + ((DATA.quizzes[x.u.quiz.key] || {}).questions || []).length * 0.75, 0);
     if (videosLeft > 0 && isWk) {
       const left = Math.max(0, perDay - doneToday);
-      body.appendChild($('div', 'sm', left ? 'Two hours of video today, at ' + speed + 'x. ' + words(doneToday) + ' done, ' + words(left) + ' to go.'
-        : 'Today’s two hours are done. Anything more puts you ahead.'));
+      body.appendChild($('div', 'sm', left ? words(perDay) + ' of video today at ' + speed + 'x — about ' + words(perDay * 4 / 3) + ' at the desk with pausing to highlight. ' + words(doneToday) + ' done, ' + words(left) + ' to go.'
+        : 'Today’s video is done. Anything more puts you ahead.'));
       mine.filter(x => unitDone(x.u) && dayOf(tickAt()[x.u.id]) === today).forEach(x =>
         body.appendChild($('div', 'prow done', '<span class="pl">' + esc(x.u.label) + '</span><span class="pm">' + words(vmin(x.u)) + '</span>')));
       let room = left;
@@ -1680,9 +1680,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
         const leftIn = mine.filter(y => y.b === nxt.b && !unitDone(y.u)).reduce((t, y) => t + vmin(y.u), 0);
         body.appendChild($('div', 'pnext', 'Next checkpoint: <b>' + esc(nxt.b.full) + '</b> videos done by <b>' + esc(dname(dueOn(nxt.cum))) + '</b> · ' + words(leftIn) + ' left'));
       }
-      body.appendChild($('div', 'pend', 'All videos by ' + esc(dname(dueOn(total))) + ' on pace · practice exams from ' + esc(dname(D(P.sims || '2026-11-23'))) + ' · exam ' + esc(P.exam || 'Dec 7–11')));
+      body.appendChild($('div', 'pend', 'All videos by ' + esc(dname(dueOn(total))) + ' on pace · practice exams from ' + esc(dname(D(P.sims || '2026-11-30'))) + ' · exam ' + esc(P.exam || 'Dec 14–18')));
     } else {
-      body.appendChild($('div', 'pend', 'Practice exams from ' + esc(dname(D(P.sims || '2026-11-23'))) + ' · exam ' + esc(P.exam || 'Dec 7–11')));
+      body.appendChild($('div', 'pend', 'Practice exams from ' + esc(dname(D(P.sims || '2026-11-30'))) + ' · exam ' + esc(P.exam || 'Dec 14–18')));
     }
     const off = $('button', 'poff', 'Remove my plan from this page'); off.type = 'button';
     off.addEventListener('click', e => { e.stopPropagation(); if (confirm('Remove your plan? Your ticks and scores stay; only this card goes.')) { state.plan = { off: true, set: new Date().toISOString() }; save(); render(); } });
@@ -1692,9 +1692,12 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   }
   // his link: #plan=<start date> puts the plan in his record, and sync carries it
   function planFromHash() {
-    const m = location.hash.match(/[#&]plan=(\d{4}-\d{2}-\d{2})/); if (!m) return;
+    const m = location.hash.match(/[#&]plan=(\d{4}-\d{2}-\d{2})(?:,(\d{2,3}))?/); if (!m) return;
     history.replaceState(null, '', location.pathname + location.search);
-    state.plan = { start: m[1], perDay: 120, speed: 1.5, sims: '2026-11-23', exam: 'Dec 7–11', set: new Date().toISOString() };
+    // minutes of video a weekday: 90 by default, because pausing to highlight the way
+    // Mike asks turns 90 minutes of video into about two hours at the desk
+    const per = Math.min(240, Math.max(30, +(m[2] || 90)));
+    state.plan = { start: m[1], perDay: per, speed: 1.5, sims: per >= 120 ? '2026-11-23' : '2026-11-30', exam: per >= 120 ? 'Dec 7–11' : 'Dec 14–18', set: new Date().toISOString() };
     save(); render();
   }
 
