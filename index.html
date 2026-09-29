@@ -83,6 +83,19 @@
   .shout { background:#fde8e8; border:1px solid #c0392b; color:#7d1f14; border-radius:10px; padding:9px 11px; margin:0 0 10px; font-size:.86rem; line-height:1.45; }
   .shout.warn { background:#fffbe9; border-color:#e0b400; color:#6b5200; }
   .card.lib.nextup .top { background:#1d4ed8; color:#fff; }
+  .card.lib.plan .top { background:#15803d; color:#fff; }
+  .plan .pb { padding:12px 14px; }
+  .plan .pace { font-weight:800; margin:0 0 8px; }
+  .plan .pace.behind { color:#b45309; }
+  .plan .pace.ahead { color:#15803d; }
+  .plan .prow { display:flex; gap:10px; align-items:baseline; padding:5px 0; border-top:1px solid #eef0f3; }
+  .plan .prow:first-of-type { border-top:0; }
+  .plan .prow .pl { flex:1; }
+  .plan .prow .pm { color:#6b7280; font-size:13px; white-space:nowrap; }
+  .plan .prow.done .pl { color:#6b7280; text-decoration:line-through; }
+  .plan .pnext { margin-top:10px; font-size:14px; color:#374151; }
+  .plan .pend { margin-top:4px; font-size:13px; color:#6b7280; }
+  .plan .poff { background:none; border:0; padding:8px 0 0; color:#6b7280; text-decoration:underline; font:inherit; font-size:12px; cursor:pointer; min-height:32px; }
   .owed { margin:0 0 12px; padding:8px 12px; border-left:4px solid #f0913a; background:#fff8ec; border-radius:8px; font-size:14px; line-height:1.4; }
   .owed .ow-h { font-weight:800; color:#8a4b08; margin-right:4px; }
   .owed button { background:none; border:0; padding:6px 2px; min-height:32px; font:inherit; color:#1d4ed8; text-decoration:underline; cursor:pointer; }
@@ -506,7 +519,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
 
   function merge(inc, incNewer) {
     if (!inc) return false;
-    const before = JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores]);
+    const before = JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores, state.plan || null]);
     Object.keys(inc.done || {}).forEach(k => { if (inc.done[k]) state.done[k] = true; });
     state.unit = state.unit || {};
     Object.keys((inc.gone || {}).qs || {}).forEach(id => {
@@ -522,7 +535,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     (inc.qs || []).forEach(q => { if (buried('qs', q.id)) return; if (!ids.has(q.id)) { state.qs.push(q); ids.add(q.id); } else if (incNewer) { const i = state.qs.findIndex(x => x.id === q.id); state.qs[i] = q; } });
     Object.keys(inc.scores || {}).forEach(k => { const a = state.scores[k], b = inc.scores[k]; if (!a || (b && (b.when || '') > (a.when || ''))) state.scores[k] = b; });
     if (inc.gotbook && !state.gotbook) state.gotbook = inc.gotbook;
-    return before !== JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores]);
+    if (inc.plan && (!state.plan || (inc.plan.set || '') > (state.plan.set || ''))) state.plan = inc.plan;
+    return before !== JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores, state.plan || null]);
   }
 
   // ---- carrying your record to another phone ----
@@ -886,7 +900,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   window.addEventListener('hashchange', () => pickUp());
 
   const clock = iso => { if (!iso) return 'nothing yet'; try { return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } };
-  const shared = () => ({ done: state.done, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
+  const shared = () => ({ done: state.done, plan: state.plan || null, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
 
   // What this tab last put in storage. Anything that turns up in storage which is
   // NOT in here was done by another tab and is adopted; anything in here that this
@@ -1553,7 +1567,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   // A quiet line at the top: the quizzes behind videos already watched and not yet
   // taken, each a tap that opens it. A chapter quiz that also needs a later video
   // (Chapter 1's covers Art 100 and Art 110) is named with what it is waiting on.
-  function quizzesOwed() {
+  function owedQuizzes() {
     const ready = [], soon = [];
     (DATA.library || []).forEach(b => b.chapters.forEach(c => {
       let since = [];
@@ -1566,6 +1580,10 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
         else if (covers.some(unitDone)) soon.push({ b, c, u, k });
       });
     }));
+    return { ready, soon };
+  }
+  function quizzesOwed() {
+    const { ready, soon } = owedQuizzes();
     if (!ready.length && !soon.length) return null;
     const bar = $('div', 'owed');
     bar.appendChild($('span', 'ow-h', ready.length ? 'Quizzes to take:' : 'Quiz coming up:'));
@@ -1586,6 +1604,98 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       bar.appendChild($('span', 'ow-soon', esc(name(x)) + ' after ' + esc(x.u.label.replace(/^Art\s+(\d+).*/, 'Art $1'))));
     });
     return bar;
+  }
+
+  // ---- a plan of one's own: two hours of video every weekday, the quizzes at the
+  // weekend, and whether he is ahead or behind. It lives in this person's record
+  // (state.plan), set by his own link, so it follows his sync code to his devices and
+  // nobody else's page ever draws it.
+  function planCard() {
+    const P = state.plan; if (!P || !P.start || P.off) return null;
+    const perDay = P.perDay || 120, speed = P.speed || 1.5;
+    const vmin = u => (u.dur || 0) / 60 / speed;
+    const dayOf = t => t ? iso(new Date(t)) : '';
+    const wk = d => d.getDay() > 0 && d.getDay() < 6;
+    const step = d => { const n = new Date(d); n.setDate(n.getDate() + 1); return n; };
+    const today = iso(new Date()), isWk = wk(new Date());
+    const all = [];
+    (DATA.library || []).forEach(b => { if (b.book === 'Theory') return; b.chapters.forEach(c => c.units.forEach(u => all.push({ b, c, u }))); });
+    // what was already watched before the plan began is not part of it
+    const pre = x => unitDone(x.u) && dayOf(tickAt()[x.u.id]) && dayOf(tickAt()[x.u.id]) < P.start;
+    const mine = all.filter(x => !pre(x));
+    const total = mine.reduce((t, x) => t + vmin(x.u), 0);
+    const watched = mine.filter(x => unitDone(x.u)).reduce((t, x) => t + vmin(x.u), 0);
+    let owedBy = 0;   // minutes due by the end of yesterday
+    for (let d = D(P.start); iso(d) < today; d = step(d)) if (wk(d)) owedBy += perDay;
+    owedBy = Math.min(owedBy, total);
+    const doneToday = mine.filter(x => unitDone(x.u) && dayOf(tickAt()[x.u.id]) === today).reduce((t, x) => t + vmin(x.u), 0);
+    const words = m => { m = Math.round(Math.abs(m)); return m >= 60 ? Math.floor(m / 60) + ' h ' + String(m % 60).padStart(2, '0') + ' min' : m + ' min'; };
+    // the weekday a minute of the plan falls due on
+    const dueOn = m => { let d = D(P.start), left = m; for (let i = 0; i < 400; i++, d = step(d)) { if (!wk(d)) continue; if (left <= perDay + 0.5) return d; left -= perDay; } return d; };
+    const dname = d => d.toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+
+    const card = $('div', 'card lib plan');
+    const videosLeft = total - watched;
+    const head = !videosLeft ? 'QUIZZES' : isWk ? 'TODAY' : 'WEEKEND';
+    card.appendChild($('div', 'top', '<span>' + head + ' · ' + esc(dname(new Date())).toUpperCase() + '</span><span>my plan</span>'));
+    const body = $('div', 'pb');
+    const diff = watched - doneToday - owedBy;   // how today began
+    if (videosLeft > 0) {
+      const pace = $('div', 'pace ' + (diff >= -5 ? 'ahead' : 'behind'),
+        diff >= 5 ? 'Ahead by ' + words(diff) + ' of video'
+        : diff >= -5 ? 'On pace'
+        : 'Behind by ' + words(-diff) + ' of video — about ' + Math.ceil(-diff / perDay) + ' weekday' + (Math.ceil(-diff / perDay) === 1 ? '' : 's'));
+      body.appendChild(pace);
+    }
+    const { ready } = owedQuizzes();
+    const qmin = ready.reduce((t, x) => t + ((DATA.quizzes[x.u.quiz.key] || {}).questions || []).length * 0.75, 0);
+    if (videosLeft > 0 && isWk) {
+      const left = Math.max(0, perDay - doneToday);
+      body.appendChild($('div', 'sm', left ? 'Two hours of video today, at ' + speed + 'x. ' + words(doneToday) + ' done, ' + words(left) + ' to go.'
+        : 'Today’s two hours are done. Anything more puts you ahead.'));
+      mine.filter(x => unitDone(x.u) && dayOf(tickAt()[x.u.id]) === today).forEach(x =>
+        body.appendChild($('div', 'prow done', '<span class="pl">' + esc(x.u.label) + '</span><span class="pm">' + words(vmin(x.u)) + '</span>')));
+      let room = left;
+      for (const x of mine) {
+        if (room <= 0) break;
+        if (unitDone(x.u)) continue;
+        const m = vmin(x.u), part = m > room + 10;
+        const r = $('div', 'prow', '<span class="pl">' + esc(x.u.label) + '</span><span class="pm">' + (part ? 'first ' + words(room) + ' of ' + words(m) : words(m)) + '</span>');
+        body.appendChild(r);
+        room -= m;
+      }
+    } else if (videosLeft > 0) {
+      body.appendChild($('div', 'sm', ready.length ? 'Weekend: the week’s quizzes. ' + ready.length + ' to take, about ' + words(qmin) + '. They are in the orange line below.'
+        : 'Weekend: no quizzes owed. Redo the misses from this week, or rest.'));
+    } else {
+      body.appendChild($('div', 'sm', ready.length ? 'Every video is watched. Two hours of quizzes a weekday: ' + ready.length + ' to take, about ' + words(qmin) + ' in all.'
+        : 'Every video watched and every quiz taken. Practice exams next.'));
+    }
+    // the next book to finish, and the day it is due on pace
+    if (videosLeft > 0) {
+      let cum = 0; const ends = [];
+      mine.forEach((x, i) => { cum += vmin(x.u); const nx = mine[i + 1]; if (!nx || nx.b !== x.b) ends.push({ b: x.b, cum, done: mine.filter(y => y.b === x.b).every(y => unitDone(y.u)) }); });
+      const nxt = ends.find(e => !e.done);
+      if (nxt) {
+        const leftIn = mine.filter(y => y.b === nxt.b && !unitDone(y.u)).reduce((t, y) => t + vmin(y.u), 0);
+        body.appendChild($('div', 'pnext', 'Next checkpoint: <b>' + esc(nxt.b.full) + '</b> videos done by <b>' + esc(dname(dueOn(nxt.cum))) + '</b> · ' + words(leftIn) + ' left'));
+      }
+      body.appendChild($('div', 'pend', 'All videos by ' + esc(dname(dueOn(total))) + ' on pace · practice exams from ' + esc(dname(D(P.sims || '2026-11-23'))) + ' · exam ' + esc(P.exam || 'Dec 7–11')));
+    } else {
+      body.appendChild($('div', 'pend', 'Practice exams from ' + esc(dname(D(P.sims || '2026-11-23'))) + ' · exam ' + esc(P.exam || 'Dec 7–11')));
+    }
+    const off = $('button', 'poff', 'Remove my plan from this page'); off.type = 'button';
+    off.addEventListener('click', e => { e.stopPropagation(); if (confirm('Remove your plan? Your ticks and scores stay; only this card goes.')) { state.plan = { off: true, set: new Date().toISOString() }; save(); render(); } });
+    body.appendChild(off);
+    card.appendChild(body);
+    return card;
+  }
+  // his link: #plan=<start date> puts the plan in his record, and sync carries it
+  function planFromHash() {
+    const m = location.hash.match(/[#&]plan=(\d{4}-\d{2}-\d{2})/); if (!m) return;
+    history.replaceState(null, '', location.pathname + location.search);
+    state.plan = { start: m[1], perDay: 120, speed: 1.5, sims: '2026-11-23', exam: 'Dec 7–11', set: new Date().toISOString() };
+    save(); render();
   }
 
   function nextUp() {
@@ -1644,6 +1754,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     migrateDays();
     host.innerHTML = '';
     const sh = startHere(); if (sh) host.appendChild(sh);
+    const pc = planCard(); if (pc) host.appendChild(pc);
     const ow = quizzesOwed(); if (ow) host.appendChild(ow);
     const nx = nextUp(); if (nx) host.appendChild(nx);
     const qc = libQuestions(); if (qc) host.appendChild(qc);
@@ -1788,6 +1899,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   paintFoot();
   pairFromHash();
   window.addEventListener('hashchange', pairFromHash);
+  planFromHash();
+  window.addEventListener('hashchange', planFromHash);
   syncNow();
   document.addEventListener('visibilitychange', () => { if (document.visibilityState === 'visible') syncNow(); });
   window.addEventListener('online', () => syncNow());
