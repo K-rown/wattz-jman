@@ -177,7 +177,10 @@ def index(path, arts, own=None):
             if L and f'{sec}({L})' not in NOT_SAID.get(os.path.basename(path), ()): hit(f'{sec}({L})', t)
     return hits
 
-CAPTION_COPIES = {'23UNECBGArticle250PartB'}
+# Part B's caption file is a byte-for-byte copy of Part A's; 406 and 680 in Bonding &
+# Grounding stream shorter than their captions run (a different cut: 680's captions
+# name 680.40 past the stream's end), so their times come from the slides alone
+CAPTION_COPIES = {'23UNECBGArticle250PartB', '23UNECBGArticle406', '23UNECBGArticle680'}
 
 def main():
     """Walk EVERY video in the program, not only the ones left in one person's plan:
@@ -189,7 +192,7 @@ def main():
     for vid, v in sorted(V.items(), key=lambda kv: kv[1]['seq']):
         path = os.path.join(CAPS, v['transcript']) if v.get('transcript') else None
         if not path or not os.path.exists(path): continue
-        # its caption file is a byte-for-byte copy of Part A's, so its times are Part A's
+        # captions that do not belong to the stream that plays (see CAPTION_COPIES)
         if vid in CAPTION_COPIES: continue
         own = own_article(v)
         hits = index(path, arts, own)

@@ -50,7 +50,7 @@
    "chapter_title": "Protective Devices",
    "page": 215,
    "label": "Unit 25 Overcurrent Protection",
-   "dur": 10455,
+   "dur": 10353,
    "kind": "unit",
    "quiz": {
     "label": "Unit 25 quiz",
@@ -834,7 +834,7 @@
    "chapter_title": "",
    "page": 315,
    "label": "Unit 4 Motor, AC, and Transformer Calculations",
-   "dur": 5108,
+   "dur": 10215,
    "kind": "unit",
    "quiz": {
     "label": "Unit 4 quiz",
@@ -850,7 +850,7 @@
    "chapter_title": "",
    "page": 369,
    "label": "Unit 6 Dwelling Unit Calculations",
-   "dur": 4640,
+   "dur": 9280,
    "kind": "unit",
    "quiz": {
     "label": "Unit 6 quiz",
@@ -906,7 +906,7 @@
    "chapter_title": "Wiring and Protection",
    "page": 123,
    "label": "Art 250 Grounding and Bonding Part B",
-   "dur": 14074,
+   "dur": 12398,
    "kind": "unit",
    "quiz": {
     "label": "Art 250 quiz",
@@ -1178,7 +1178,7 @@
    "chapter_title": "Equipment for General Use",
    "page": 275,
    "label": "Art 406 Receptacles, Attachment Plugs, and Flanged Inlets",
-   "dur": 799,
+   "dur": 721,
    "kind": "unit",
    "quiz": {
     "label": "Art 406 quiz",
@@ -1370,7 +1370,7 @@
    "chapter_title": "Special Equipment",
    "page": 323,
    "label": "Art 680 Swimming Pools, Spas, Hot Tubs, Fountains, and Similar Installations",
-   "dur": 3822,
+   "dur": 3244,
    "kind": "unit",
    "quiz": {
     "label": "Art 680 quiz",
@@ -1478,7 +1478,7 @@
    "chapter_title": "",
    "page": null,
    "label": "Team Introduction",
-   "dur": 275,
+   "dur": 160,
    "kind": "intro"
   },
   {
@@ -1518,7 +1518,7 @@
    "chapter_title": "",
    "page": 125,
    "label": "Art 511 Commercial Garages, Repair and Storage",
-   "dur": 83,
+   "dur": 1621,
    "kind": "unit"
   },
   {
@@ -1528,7 +1528,7 @@
    "chapter_title": "",
    "page": 125,
    "label": "Art 517 Health Care Facilities",
-   "dur": 1621,
+   "dur": 2373,
    "kind": "unit"
   },
   {
@@ -1548,7 +1548,7 @@
    "chapter_title": "",
    "page": 125,
    "label": "Art 547 Agricultural Buildings",
-   "dur": 356,
+   "dur": 1369,
    "kind": "unit"
   },
   {
@@ -1558,7 +1558,7 @@
    "chapter_title": "",
    "page": 125,
    "label": "Art 555 Marinas, Boatyards, Docking Facilities",
-   "dur": 1368,
+   "dur": 4946,
    "kind": "unit"
   },
   {
@@ -1614,7 +1614,7 @@
    "chapter_title": "",
    "page": 229,
    "label": "Art 625 Electric Vehicle Power Transfer System",
-   "dur": 299,
+   "dur": 3132,
    "kind": "unit"
   },
   {
@@ -1644,7 +1644,7 @@
    "chapter_title": "",
    "page": 229,
    "label": "Art 695 Fire Pumps",
-   "dur": 99,
+   "dur": 1935,
    "kind": "unit",
    "quiz": {
     "label": "Ch 6 quiz",
@@ -1670,7 +1670,7 @@
    "chapter_title": "",
    "page": 385,
    "label": "Art 700 Emergency Systems",
-   "dur": 1935,
+   "dur": 4682,
    "kind": "unit"
   },
   {
@@ -1720,7 +1720,7 @@
    "chapter_title": "",
    "page": 385,
    "label": "Art 722 Cables for Power-Limited Circuits",
-   "dur": 19,
+   "dur": 2275,
    "kind": "unit"
   },
   {
@@ -1740,7 +1740,7 @@
    "chapter_title": "",
    "page": 385,
    "label": "Art 725 Remote-Control, Signaling, Power-Limited Circuits",
-   "dur": 883,
+   "dur": 2174,
    "kind": "unit"
   },
   {
@@ -1770,7 +1770,7 @@
    "chapter_title": "",
    "page": 385,
    "label": "Art 760 Fire Alarm Systems",
-   "dur": 205,
+   "dur": 1292,
    "kind": "unit"
   },
   {
@@ -1796,7 +1796,7 @@
    "chapter_title": "",
    "page": 503,
    "label": "Chapter 8 Introduction",
-   "dur": 99,
+   "dur": 275,
    "kind": "chapter-intro"
   },
   {
@@ -1806,7 +1806,7 @@
    "chapter_title": "",
    "page": 503,
    "label": "Art 800 General Requirements for Communications Systems",
-   "dur": 160,
+   "dur": 229,
    "kind": "unit"
   },
   {
@@ -1816,7 +1816,7 @@
    "chapter_title": "",
    "page": 503,
    "label": "Art 810 Radio and Television Antenna Equipment",
-   "dur": 230,
+   "dur": 661,
    "kind": "unit",
    "quiz": {
     "label": "Ch 8 quiz",
