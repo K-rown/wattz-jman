@@ -313,6 +313,8 @@ DATA = {
                for s in sessions if s.get("groups")},
     "quizzes": (json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}),
     "sectime": (json.load(open("sections.json", encoding="utf-8")) if __import__("os").path.exists("sections.json") else {}),
+    # every section Mike's book covers for a video's article, in book order (book_sections.py)
+    "booksec": (json.load(open("book_sections.json", encoding="utf-8")) if __import__("os").path.exists("book_sections.json") else {}),
     "footer": {
         # the library's own footer: read by anyone opening this for the first time,
         # with no dates in it, because a crew does not share one person's pace

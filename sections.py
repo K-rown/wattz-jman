@@ -177,6 +177,8 @@ def index(path, arts, own=None):
             if L and f'{sec}({L})' not in NOT_SAID.get(os.path.basename(path), ()): hit(f'{sec}({L})', t)
     return hits
 
+CAPTION_COPIES = {'23UNECBGArticle250PartB'}
+
 def main():
     """Walk EVERY video in the program, not only the ones left in one person's plan:
     a coworker starting at Unit 1 needs the sections in the videos he starts with."""
@@ -187,6 +189,8 @@ def main():
     for vid, v in sorted(V.items(), key=lambda kv: kv[1]['seq']):
         path = os.path.join(CAPS, v['transcript']) if v.get('transcript') else None
         if not path or not os.path.exists(path): continue
+        # its caption file is a byte-for-byte copy of Part A's, so its times are Part A's
+        if vid in CAPTION_COPIES: continue
         own = own_article(v)
         hits = index(path, arts, own)
         if not own:
