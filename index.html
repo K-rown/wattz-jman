@@ -91,7 +91,7 @@
   .plan .prow { display:flex; gap:10px; align-items:baseline; padding:5px 0; border-top:1px solid #eef0f3; }
   .plan .prow:first-of-type { border-top:0; }
   .plan .prow .pl { flex:1; }
-  .plan .prow .pm { color:#6b7280; font-size:13px; white-space:nowrap; }
+  .plan .prow .pm { color:#6b7280; font-size:13px; white-space:nowrap; text-align:right; line-height:1.35; }
   .plan .prow.done .pl { color:#6b7280; text-decoration:line-through; }
   .plan .pnext { margin-top:10px; font-size:14px; color:#374151; }
   .plan .pend { margin-top:4px; font-size:13px; color:#6b7280; }
@@ -1651,16 +1651,22 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const qmin = ready.reduce((t, x) => t + ((DATA.quizzes[x.u.quiz.key] || {}).questions || []).length * 0.75, 0);
     if (videosLeft > 0 && isWk) {
       const left = Math.max(0, perDay - doneToday);
-      body.appendChild($('div', 'sm', left ? words(perDay) + ' of video today at ' + speed + 'x — about ' + words(perDay * 4 / 3) + ' at the desk with pausing to highlight. ' + words(doneToday) + ' done, ' + words(left) + ' to go.'
+      body.appendChild($('div', 'sm', left ? words(perDay) + ' of your time today, watching at ' + speed + 'x (about ' + words(perDay * 4 / 3) + ' at the desk with pausing to highlight). The times below are the video’s own clock, the one the player shows. ' + words(doneToday) + ' done, ' + words(left) + ' to go.'
         : 'Today’s video is done. Anything more puts you ahead.'));
       mine.filter(x => unitDone(x.u) && dayOf(tickAt()[x.u.id]) === today).forEach(x =>
-        body.appendChild($('div', 'prow done', '<span class="pl">' + esc(x.u.label) + '</span><span class="pm">' + words(vmin(x.u)) + '</span>')));
+        body.appendChild($('div', 'prow done', '<span class="pl">' + esc(x.u.label) + '</span><span class="pm">' + hms(x.u.dur || 0) + '</span>')));
       let room = left;
       for (const x of mine) {
         if (room <= 0) break;
         if (unitDone(x.u)) continue;
         const m = vmin(x.u), part = m > room + 10;
-        const r = $('div', 'prow', '<span class="pl">' + esc(x.u.label) + '</span><span class="pm">' + (part ? 'first ' + words(room) + ' of ' + words(m) : words(m)) + '</span>');
+        // on the video's own clock, the one the player shows: "watch to 2:15:00 of 2:36:48",
+        // with what that costs at his speed beside it — two clocks side by side confused him
+        const upTo = Math.min(x.u.dur || 0, room * 60 * speed), at = posOf(x.u.id);
+        const r = $('div', 'prow', '<span class="pl">' + esc(x.u.label)
+          + (at > 30 ? '<br><span class="sm">You’re at ' + hms(at) + '</span>' : '') + '</span><span class="pm">'
+          + (part ? 'watch to ' + hms(upTo) + ' of ' + hms(x.u.dur || 0) : hms(x.u.dur || 0))
+          + '<br>' + (part ? 'about ' + words(room) : words(m)) + ' at ' + speed + 'x</span>');
         body.appendChild(r);
         room -= m;
       }
