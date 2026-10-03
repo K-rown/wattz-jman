@@ -130,6 +130,7 @@
   #sesbar button[hidden] { display:none; }
   body.insession { padding-top:62px; }
   .plan .sesgo { display:block; width:100%; min-height:52px; margin:10px 0 4px; border:0; border-radius:14px; background:#15803d; color:#fff; font:inherit; font-size:17px; font-weight:800; cursor:pointer; }
+  .plan .sesahead { display:block; width:100%; min-height:48px; margin:6px 0 4px; border:2px solid #15803d; border-radius:14px; background:#fff; color:#15803d; font:inherit; font-size:16px; font-weight:800; cursor:pointer; }
   .plan .sesdone { margin:10px 0 4px; padding:12px 14px; border-radius:12px; background:#dcfce7; color:#14532d; font-weight:800; }
   .owed { margin:0 0 12px; padding:8px 12px; border-left:4px solid #f0913a; background:#fff8ec; border-radius:8px; font-size:14px; line-height:1.4; }
   .owed .ow-h { font-weight:800; color:#8a4b08; margin-right:4px; }
@@ -576,6 +577,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       const a = state.hl[v][k], b = inc.hl[v][k];
       if (b && (!a || (b[1] || '') > (a[1] || ''))) state.hl[v][k] = b;
     }));
+    Object.keys(inc.taken || {}).forEach(k => { state.taken = state.taken || {}; if (!state.taken[k]) state.taken[k] = inc.taken[k]; });
     Object.keys(inc.sessions || {}).forEach(k => { state.sessions = state.sessions || {}; if ((inc.sessions[k] || 0) > (state.sessions[k] || 0)) state.sessions[k] = inc.sessions[k]; });
     return before !== JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores, state.plan || null]);
   }
@@ -941,7 +943,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   window.addEventListener('hashchange', () => pickUp());
 
   const clock = iso => { if (!iso) return 'nothing yet'; try { return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } };
-  const shared = () => ({ done: state.done, plan: state.plan || null, sessions: state.sessions || {}, hl: state.hl || {}, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
+  const shared = () => ({ done: state.done, plan: state.plan || null, sessions: state.sessions || {}, hl: state.hl || {}, taken: state.taken || {}, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
 
   // What this tab last put in storage. Anything that turns up in storage which is
   // NOT in here was done by another tab and is adopted; anything in here that this
@@ -1388,6 +1390,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const Q = qlink.partial ? Object.assign({}, Qall, { questions: Qall.questions.filter(q => q.n >= qlink.from && q.n <= qlink.to) }) : Qall;
     const key = skeyOf(qlink), sc = state.scores[key];
     const box = $('div', 'qz'); box.dataset.quiz = key;
+    if (!sc && (state.taken || {})[qlink.key]) box.appendChild($('div', 'sm qafter', '✓ Taken in class — no score kept. Retake it here any time.'));
     const hh = $('div', 'qzh', qname(Q.quiz) + (qlink.partial ? ' · Q' + qlink.from + '–' + qlink.to + ' of ' + Qall.questions.length : '') + ' · ' + Q.questions.length + (Q.questions.length === 1 ? ' question' : ' questions') + ' · about ' + mins(Math.round(Q.questions.length * (DATA.quiz_spq || 60) / 60)));
     if (sc) hh.appendChild($('span', 'sc' + (sc.pct >= 80 ? ' good' : ' bad'), sc.right + '/' + sc.total + ' · ' + sc.pct + '%'));
     const tb = $('button', null, quizOpen[key] ? 'Close' : (sc ? 'See what you missed' : 'Take quiz')); tb.type = 'button';
@@ -1616,7 +1619,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
         since.push(u);
         if (!u.quiz) return;
         const k = skeyOf(u.quiz), covers = since; since = [];
-        if (state.scores[k] || !(DATA.quizzes || {})[u.quiz.key]) return;
+        // a quiz he took somewhere the app never saw (in class with his team) is not owed
+        if (state.scores[k] || (state.taken || {})[u.quiz.key] || !(DATA.quizzes || {})[u.quiz.key]) return;
         if (unitDone(u)) ready.push({ b, c, u, k });
         else if (covers.some(unitDone)) soon.push({ b, c, u, k });
       });
@@ -1781,15 +1785,23 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   };
   function todayOf() {
     const P = state.plan; if (!P || P.kind !== 'calendar' || P.off) return null;
+    const today = iso(new Date()), S = sesRead();
+    const want = S && S.day === today && S.target ? S.target : today;
+    return calendarDays(P).find(x => x.day === want) || null;
+  }
+  // the next calendar day after today whose work is not done yet — the head start
+  function aheadDay() {
+    const P = state.plan; if (!P || P.kind !== 'calendar' || P.off) return null;
     const today = iso(new Date());
-    return calendarDays(P).find(x => x.day === today) || null;
+    return calendarDays(P).find(x => x.day > today && (x.kind === 'video' || (x.quizzes || []).length) && !dayDoneT(x)) || null;
   }
   const pieceDoneT = x => (unitDone(x.u) && (!x.end || !hlLeft(x.u.id).length)) || (!x.end && posOf(x.u.id) >= x.to - 60);
   const dayDoneT = dd => dd.kind === 'video' ? dd.pieces.every(pieceDoneT)
     : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[skeyOf(x.q)] && !(x.u && hlLeft(x.u.id).length)) : true;
-  function sesStart() {
+  function sesStart(target) {
     const today = iso(new Date()), S = sesRead();
-    const o = S && S.day === today ? S : { day: today, ms: 0, runAt: null };
+    const same = S && S.day === today && (target === undefined || (S.target || today) === target) && !S.done;
+    const o = same ? S : { day: today, target: target || today, ms: 0, runAt: null };
     if (!o.runAt) o.runAt = Date.now();
     o.away = false; sesWrite(o); keepAwake(true); sesPaint(); render();
     // a video day starts the first thing left to watch, from where it is due
@@ -1803,8 +1815,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   function sesFinish() {
     const o = sesRead(); if (!o) return;
     if (o.runAt) { o.ms += Date.now() - o.runAt; o.runAt = null; }
+    if (o.done) { sesWrite(o); return; }
     o.done = true; sesWrite(o); keepAwake(false);
-    state.sessions = state.sessions || {}; state.sessions[o.day] = Math.max(state.sessions[o.day] || 0, o.ms);
+    state.sessions = state.sessions || {}; state.sessions[o.day] = (state.sessions[o.day] || 0) + o.ms;
     save(); render(); sesPaint();
   }
   // the bar at the top: the clock, where he is against today's mark, Pause, and what is next
@@ -1842,6 +1855,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       if (!left) what = 'Highlighting left';
       if (left) what = left + ' quiz' + (left === 1 ? '' : 'zes') + ' left today';
     }
+    if (o.target && o.target !== today && what) what = 'Head start · ' + what;
     if (!run) what = (o.away ? 'Paused while you were away' : 'Paused') + (what ? ' · ' + what : '');
     bar.querySelector('.what').textContent = what;
     const nb = bar.querySelector('.nxt');
@@ -1852,7 +1866,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   document.addEventListener('visibilitychange', () => {
     const o = sesRead(); if (!o || o.day !== iso(new Date())) return;
     if (document.visibilityState === 'hidden' && o.runAt) sesPause(true);
-    else if (document.visibilityState === 'visible' && o.away && !o.done) sesStart();
+    else if (document.visibilityState === 'visible' && o.away && !o.done) sesStart(o.target || o.day);
   });
   // the player drives the day: today's mark stops a cut video; an ended one is ticked
   // and the next thing on today's list starts by itself
@@ -1931,10 +1945,22 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       else if (!dayDone(days[ti]) && days[ti].kind !== 'off') {
         const go = $('button', 'sesgo', mine ? (S.runAt ? 'Session running \u2014 see the bar at the top' : 'Resume today\u2019s session') : 'Start today\u2019s session');
         go.type = 'button';
-        go.addEventListener('click', e => { e.stopPropagation(); sesStart(); });
+        go.addEventListener('click', e => { e.stopPropagation(); sesStart(today); });
         body.appendChild(go);
       }
     }
+    // once today is done (or there is nothing today), the next day's work is one press away
+    const runningAhead = (() => { const S2 = sesRead(); return S2 && S2.day === today && S2.target && S2.target !== today && S2.runAt; })();
+    if ((ti < 0 || dayDone(days[ti])) && !runningAhead) {
+      const nx = aheadDay();
+      if (nx) {
+        const ah = $('button', 'sesahead', 'Get a head start \u00b7 ' + esc(dname(nx.day)));
+        ah.type = 'button';
+        ah.title = 'Work on that day\u2019s list now; when you get there it is already checked off';
+        ah.addEventListener('click', e => { e.stopPropagation(); sesStart(nx.day); });
+        body.appendChild(ah);
+      }
+    } else if (runningAhead) body.appendChild($('div', 'sm', 'Head start running \u2014 see the bar at the top.'));
     else if (n < 0) body.appendChild($('div', 'sm', 'Every day on the calendar is behind you. Book the exam.'));
     else body.appendChild($('div', 'sm', 'Nothing on the calendar today. Next: ' + esc(dname(days[n].day)) + '.'));
     // what is still open from earlier days, said plainly, without moving anything
