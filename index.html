@@ -104,6 +104,17 @@
   .plan .pnext { margin-top:10px; font-size:14px; color:#374151; }
   .plan .pend { margin-top:4px; font-size:13px; color:#6b7280; }
   .plan .poff { background:none; border:0; padding:8px 0 0; color:#6b7280; text-decoration:underline; font:inherit; font-size:12px; cursor:pointer; min-height:32px; }
+  .plan .cday { display:grid; grid-template-columns:118px 1fr; gap:8px; padding:7px 0; border-top:1px solid #eef0f3; }
+  .plan .cday.today { background:#f0fdf4; margin:4px -14px; padding:10px 14px; border-top:0; border-left:4px solid #15803d; }
+  .plan .cday.past:not(.done) .cdate { color:#b45309; }
+  .plan .cday.done .cdate { color:#15803d; }
+  .plan .cdate { font-weight:800; font-size:13px; }
+  .plan .cwhat { display:grid; gap:4px; min-width:0; }
+  .plan .cpiece { text-align:left; background:none; border:0; padding:0; font:inherit; font-size:14px; color:inherit; }
+  .plan button.cpiece { min-height:40px; padding:6px 10px; border:1px solid #d1d5db; border-radius:10px; background:#fff; cursor:pointer; }
+  .plan .cpiece.got { color:#6b7280; text-decoration:line-through; }
+  .plan .cleft { margin-top:8px; font-size:13px; color:#b45309; }
+  .plan .chead { margin-top:12px; font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#6b7280; }
   .owed { margin:0 0 12px; padding:8px 12px; border-left:4px solid #f0913a; background:#fff8ec; border-radius:8px; font-size:14px; line-height:1.4; }
   .owed .ow-h { font-weight:800; color:#8a4b08; margin-right:4px; }
   .owed button { background:none; border:0; padding:6px 2px; min-height:32px; font:inherit; color:#1d4ed8; text-decoration:underline; cursor:pointer; }
@@ -1618,8 +1629,165 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   // weekend, and whether he is ahead or behind. It lives in this person's record
   // (state.plan), set by his own link, so it follows his sync code to his devices and
   // nobody else's page ever draws it.
+  // ---- HIS CALENDAR: every day's work written down in advance, and it never moves ----
+  // Kymani, 2026-10-03: "a static calendar … when I make my session I immediately know
+  // what I have left and where I'm at, not this weird math update kinda live thing." So the
+  // days are laid out ONCE from fixed inputs (the start, the minutes of video a weekday, the
+  // first video), the same every time the page opens; ticking a video only puts a check on
+  // the day that held it. Nothing slides, nothing says "behind".
+  const QSEC = 45;   // seconds a question, book open
+  // What the quizzes cost, cut so December holds (2026-10-03): the unit quizzes of the
+  // three NEC books on their ODD questions only, Calcs and Exam Prep whole (the math and
+  // the exam-style questions are the ones that pay), the NEC books' own final exams left
+  // to the two simulated exams at the end. A day of quizzes is about 120 questions.
+  const QDAY = 120;
+  const HALF_BOOKS = new Set(['NEC Vol 1', 'B&G', 'NEC Vol 2']);
+  function quizCost(b, key, isExtra) {
+    const n = ((DATA.quizzes[key] || {}).questions || []).length;
+    if (isExtra && /Final_Exam/.test(key) && /^NEC_Vol/.test(key)) return null;   // the sims stand in
+    const half = HALF_BOOKS.has(b.book);
+    return { n, half, cost: half ? Math.ceil(n / 2) : n };
+  }
+  function calendarDays(P) {
+    const speed = P.speed || 1.5, per = (P.perDay || 75) * 60 * speed;   // seconds of VIDEO a weekday
+    const off = new Set(P.skip || []);   // days off; P.off means the plan was removed
+    const units = [], extras = [];
+    let on = false;
+    (DATA.library || []).forEach(b => {
+      if (b.book === 'Theory') return;
+      b.chapters.forEach(c => c.units.forEach(u => { if (u.id === P.from) on = true; if (on) units.push({ b, c, u }); }));
+      (b.extra || []).forEach(q => { if (on && DATA.quizzes[q.key] && b.book !== 'Simulated Exams') extras.push({ b, q }); });
+    });
+    const sims = ((DATA.library || []).find(b => b.book === 'Simulated Exams') || { extra: [] }).extra.filter(q => DATA.quizzes[q.key]);
+    const days = [], wk = x => x.getDay() > 0 && x.getDay() < 6;
+    let d = D(P.start), ui = 0, t = 0;
+    const next = () => { const n = new Date(d); n.setDate(n.getDate() + 1); d = n; };
+    // ONE queue of quizzes in the order their videos are watched; each quiz day takes ~QDAY
+    // of them and a quiz too long for one day is cut into question ranges
+    const queue = [];
+    const enqueue = (b, c, u, q, isExtra) => {
+      const k = quizCost(b, q.key, isExtra); if (!k) return;
+      if (k.cost <= QDAY + 30) { queue.push({ b, c, u, q, half: k.half, cost: k.cost }); return; }
+      const step = k.half ? QDAY * 2 : QDAY;
+      for (let f = 1; f <= k.n; f += step) queue.push({ b, c, u, q, half: k.half, from: f, to: Math.min(k.n, f + step - 1), cost: Math.ceil((Math.min(k.n, f + step - 1) - f + 1) / (k.half ? 2 : 1)) });
+    };
+    const quizDay = (note) => {
+      let left = QDAY; const qs = [];
+      while (queue.length && (left >= queue[0].cost - 30 || !qs.length)) { const x = queue.shift(); qs.push(x); left -= x.cost; }
+      days.push({ day: iso(d), kind: 'quiz', quizzes: qs, note });
+    };
+    // quizzes already owed on the first day (his Chapter 1 quiz on 2026-10-03)
+    (P.pre || []).forEach(key => (DATA.library || []).forEach(bk => bk.chapters.forEach(c => c.units.forEach(u => {
+      if (u.quiz && u.quiz.key === key) enqueue(bk, c, u, u.quiz, false);
+    }))));
+    let watchedThisWeek = false;
+    while (ui < units.length) {
+      const day = iso(d);
+      if (off.has(day)) { days.push({ day, kind: 'off', note: 'Day off' }); next(); continue; }
+      if (!wk(d)) {
+        if (queue.length) quizDay(d.getDay() === 6 ? 'Quizzes from the videos you’ve watched' : 'More quizzes, then redo what you missed');
+        else if (watchedThisWeek) days.push({ day, kind: 'off', note: 'No quizzes waiting — rest' });
+        next(); continue;
+      }
+      watchedThisWeek = true;
+      let room = per; const pieces = [];
+      while (room > 0 && ui < units.length) {
+        const { b, c, u } = units[ui], dur = u.dur || 0, rem = dur - t;
+        if (rem <= room + 15 * 60 * speed) {
+          pieces.push({ b, c, u, from: t, to: dur, end: true }); room -= rem; ui++; t = 0;
+          if (u.quiz && DATA.quizzes[u.quiz.key]) enqueue(b, c, u, u.quiz, false);
+        } else { pieces.push({ b, c, u, from: t, to: t + room, end: false }); t += room; room = 0; }
+      }
+      days.push({ day, kind: 'video', pieces });
+      next();
+    }
+    // every video watched: the book quizzes with no video of their own join the queue, and
+    // every day is a quiz day until it is empty
+    extras.forEach(x => enqueue(x.b, null, null, x.q, true));
+    while (queue.length) {
+      if (off.has(iso(d))) { days.push({ day: iso(d), kind: 'off', note: 'Day off' }); next(); continue; }
+      quizDay('Quiz day'); next();
+    }
+    // two timed practice exams, a review day after each, then the exam
+    sims.forEach(q => {
+      while (!wk(d) || off.has(iso(d))) next();
+      days.push({ day: iso(d), kind: 'sim', quizzes: [{ b: null, q, cost: 100 }], note: 'Practice exam — timed, code book only, like the real one' }); next();
+      while (!wk(d) || off.has(iso(d))) next();
+      days.push({ day: iso(d), kind: 'review', note: 'Go over every question you missed on the practice exam' }); next();
+    });
+    while (!wk(d) || off.has(iso(d))) next();
+    days.push({ day: iso(d), kind: 'exam', note: 'Your exam window opens — book the sitting for this week' });
+    return days;
+  }
+  function calendarCard(P) {
+    const days = calendarDays(P), today = iso(new Date());
+    const qKey = x => skeyOf(x.q);
+    const pieceDone = x => unitDone(x.u) || (!x.end && posOf(x.u.id) >= x.to - 60);
+    const dayDone = dd => dd.kind === 'video' ? dd.pieces.every(pieceDone)
+      : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[qKey(x)]) : iso(new Date()) > dd.day;
+    const dname = s2 => D(s2).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
+    const lastVideo = [...days].reverse().find(x => x.kind === 'video');
+    const firstSim = days.find(x => x.kind === 'sim');
+    const card = $('div', 'card lib plan');
+    const n = days.findIndex(x => x.day >= today);
+    const examDay = days.find(x => x.kind === 'exam');
+    card.appendChild($('div', 'top', '<span>MY CALENDAR</span><span>' + (examDay ? 'exam week of ' + esc(dname(examDay.day)) : '') + '</span>'));
+    const body = $('div', 'pb');
+    body.appendChild($('div', 'sm', 'Weekdays: ' + (P.perDay || 75) + ' min of video at ' + (P.speed || 1.5) + 'x — about an hour and a half at the desk. Watch to understand, then highlight the ★ sections. Weekends: that week’s quizzes.'
+      + (lastVideo ? ' Videos done <b>' + esc(dname(lastVideo.day)) + '</b>' : '') + (firstSim ? ' · practice exams from <b>' + esc(dname(firstSim.day)) + '</b>' : '') + '.'));
+    const open = x => {
+      if (x.c) libOpen[x.b.book + ':' + x.c.key] = true; else if (x.b) libOpen[x.b.book + ':extra'] = true;
+      else { const sb = (DATA.library || []).find(b => b.book === 'Simulated Exams'); if (sb) libOpen[sb.book + ':extra'] = true; }
+      render();
+      setTimeout(() => { const h = document.querySelector('[data-quiz="' + qKey(x) + '"]'); if (h) h.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
+    };
+    const line = (dd, big) => {
+      const row = $('div', 'cday' + (dd.day === today ? ' today' : '') + (dd.day < today ? ' past' : '') + (dayDone(dd) && dd.kind !== 'off' ? ' done' : ''));
+      row.appendChild($('div', 'cdate', (dayDone(dd) && dd.kind !== 'off' ? '✓ ' : '') + esc(dd.day === today ? 'Today · ' + dname(dd.day) : dname(dd.day))));
+      const what = $('div', 'cwhat');
+      if (dd.kind === 'video') dd.pieces.forEach(x => {
+        const k = $(big ? 'button' : 'div', 'cpiece' + (pieceDone(x) ? ' got' : ''),
+          esc(x.u.label) + ' <span class="sm">' + (x.from === 0 && x.end ? hms(x.u.dur || 0) : hms(x.from) + ' → ' + (x.end ? 'end' : hms(x.to))) + '</span>');
+        if (big) { k.type = 'button'; k.addEventListener('click', e => { e.stopPropagation(); libOpen[x.b.book + ':' + x.c.key] = true; play(x.u, x.from || posOf(x.u.id), null); }); }
+        what.appendChild(k);
+      });
+      else {
+        if (dd.note) what.appendChild($('div', 'sm', esc(dd.note)));
+        (dd.quizzes || []).forEach(x => {
+          const nq = ((DATA.quizzes[x.q.key] || {}).questions || []).length;
+          const part = x.from ? 'Q' + x.from + '\u2013' + x.to : '';
+          const k = $(big ? 'button' : 'div', 'cpiece' + (state.scores[qKey(x)] ? ' got' : ''),
+            esc(((DATA.quizzes[x.q.key] || {}).quiz || x.q.label || x.q.key)) + ' <span class="sm">'
+            + (part ? part + ' \u00b7 ' : '') + (x.half ? 'odd questions only \u00b7 ' + (x.cost || Math.ceil(nq / 2)) + ' q' : (x.cost || nq) + ' q') + '</span>');
+          if (big) { k.type = 'button'; k.addEventListener('click', e => { e.stopPropagation(); open(x); }); }
+          what.appendChild(k);
+        });
+      }
+      row.appendChild(what);
+      return row;
+    };
+    const ti = days.findIndex(x => x.day === today);
+    if (ti >= 0) body.appendChild(line(days[ti], true));
+    else if (n < 0) body.appendChild($('div', 'sm', 'Every day on the calendar is behind you. Book the exam.'));
+    else body.appendChild($('div', 'sm', 'Nothing on the calendar today. Next: ' + esc(dname(days[n].day)) + '.'));
+    // what is still open from earlier days, said plainly, without moving anything
+    const open2 = days.filter(x => x.day < today && x.kind === 'video').flatMap(x => x.pieces.filter(p2 => !pieceDone(p2)).map(p2 => ({ p2, day: x.day })));
+    if (open2.length) body.appendChild($('div', 'cleft', 'Still open from earlier days: ' + open2.map(o => esc(o.p2.u.label.replace(/^Art\s+(\d+).*/, 'Art $1')) + ' (' + esc(dname(o.day).split(',')[0]) + ')').join(' · ')));
+    const after = days.filter(x => x.day > today).slice(0, 5);
+    if (after.length) { body.appendChild($('div', 'chead', 'Coming up')); after.forEach(x => body.appendChild(line(x, false))); }
+    const ck = 'calendar:all', copen = !!libOpen[ck];
+    const tog = $('button', 'secfold' + (copen ? ' open' : ''), '<span>The whole calendar · ' + days.length + ' days, ' + days.filter(x => x.day >= today).length + ' to go</span>');
+    tog.type = 'button';
+    tog.addEventListener('click', e => { e.stopPropagation(); libOpen[ck] = !copen; render(); });
+    body.appendChild(tog);
+    if (copen) days.forEach(x => body.appendChild(line(x, false)));
+    card.appendChild(body);
+    return card;
+  }
+
   function planCard() {
     const P = state.plan; if (!P || !P.start || P.off) return null;
+    if (P.kind === 'calendar') return calendarCard(P);
     const perDay = P.perDay || 90, speed = P.speed || 1.5;
     const vmin = u => (u.dur || 0) / 60 / speed;
     const dayOf = t => t ? iso(new Date(t)) : '';
