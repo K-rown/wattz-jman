@@ -115,6 +115,18 @@
   .plan .cpiece.got { color:#6b7280; text-decoration:line-through; }
   .plan .cleft { margin-top:8px; font-size:13px; color:#b45309; }
   .plan .chead { margin-top:12px; font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#6b7280; }
+  #sesbar { position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; gap:10px; padding:10px 14px; padding-top:max(10px, env(safe-area-inset-top)); background:#14532d; color:#fff; font-size:14px; box-shadow:0 2px 10px rgba(0,0,0,.25); }
+  #sesbar.paused { background:#78350f; }
+  #sesbar .dot { width:10px; height:10px; border-radius:50%; background:#4ade80; flex:none; animation:sespulse 1.6s infinite; }
+  #sesbar.paused .dot { background:#fbbf24; animation:none; }
+  @keyframes sespulse { 50% { opacity:.35; } }
+  #sesbar .clk { font-weight:800; font-variant-numeric:tabular-nums; font-size:17px; flex:none; }
+  #sesbar .what { flex:1; min-width:0; white-space:nowrap; overflow:hidden; text-overflow:ellipsis; opacity:.9; }
+  #sesbar button { flex:none; min-height:40px; padding:0 12px; border-radius:20px; border:1px solid rgba(255,255,255,.5); background:transparent; color:#fff; font:inherit; font-weight:700; cursor:pointer; }
+  #sesbar button[hidden] { display:none; }
+  body.insession { padding-top:62px; }
+  .plan .sesgo { display:block; width:100%; min-height:52px; margin:10px 0 4px; border:0; border-radius:14px; background:#15803d; color:#fff; font:inherit; font-size:17px; font-weight:800; cursor:pointer; }
+  .plan .sesdone { margin:10px 0 4px; padding:12px 14px; border-radius:12px; background:#dcfce7; color:#14532d; font-weight:800; }
   .owed { margin:0 0 12px; padding:8px 12px; border-left:4px solid #f0913a; background:#fff8ec; border-radius:8px; font-size:14px; line-height:1.4; }
   .owed .ow-h { font-weight:800; color:#8a4b08; margin-right:4px; }
   .owed button { background:none; border:0; padding:6px 2px; min-height:32px; font:inherit; color:#1d4ed8; text-decoration:underline; cursor:pointer; }
@@ -555,6 +567,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     Object.keys(inc.scores || {}).forEach(k => { const a = state.scores[k], b = inc.scores[k]; if (!a || (b && (b.when || '') > (a.when || ''))) state.scores[k] = b; });
     if (inc.gotbook && !state.gotbook) state.gotbook = inc.gotbook;
     if (inc.plan && (!state.plan || (inc.plan.set || '') > (state.plan.set || ''))) state.plan = inc.plan;
+    Object.keys(inc.sessions || {}).forEach(k => { state.sessions = state.sessions || {}; if ((inc.sessions[k] || 0) > (state.sessions[k] || 0)) state.sessions[k] = inc.sessions[k]; });
     return before !== JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores, state.plan || null]);
   }
 
@@ -919,7 +932,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   window.addEventListener('hashchange', () => pickUp());
 
   const clock = iso => { if (!iso) return 'nothing yet'; try { return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } };
-  const shared = () => ({ done: state.done, plan: state.plan || null, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
+  const shared = () => ({ done: state.done, plan: state.plan || null, sessions: state.sessions || {}, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
 
   // What this tab last put in storage. Anything that turns up in storage which is
   // NOT in here was done by another tab and is adopted; anything in here that this
@@ -1719,6 +1732,117 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     days.push({ day: iso(d), kind: 'exam', note: 'Your exam window opens — book the sitting for this week' });
     return days;
   }
+  // ---- THE SESSION: press Start when he sits down, and leave it alone ----
+  // It counts time AT THE DESK (highlighting with the video paused counts), keeps the
+  // screen awake, pauses itself when he leaves the app and picks up when he is back. It
+  // drives the day: a video that ends is ticked and the next one starts; a video cut
+  // mid-way stops at today's mark; when the day's work is done the session ends itself
+  // and the time is kept on his record. One session per day, on this device.
+  const SES = 'ptj.session';
+  const sesRead = () => { try { return JSON.parse(localStorage.getItem(SES) || 'null'); } catch (e) { return null; } };
+  const sesWrite = o => { try { localStorage.setItem(SES, JSON.stringify(o)); } catch (e) {} };
+  const sesMs = o => o ? o.ms + (o.runAt ? Date.now() - o.runAt : 0) : 0;
+  const deskWords = ms => { const m = Math.round(ms / 60000); return m >= 60 ? Math.floor(m / 60) + ' h ' + String(m % 60).padStart(2, '0') + ' min' : m + ' min'; };
+  const clockOf = ms => { const t = Math.floor(ms / 1000); return Math.floor(t / 3600) + ':' + String(Math.floor(t % 3600 / 60)).padStart(2, '0') + ':' + String(t % 60).padStart(2, '0'); };
+  let wake = null;
+  const keepAwake = async on => {
+    try {
+      if (on && !wake && navigator.wakeLock) { wake = await navigator.wakeLock.request('screen'); wake.addEventListener('release', () => { wake = null; }); }
+      if (!on && wake) { await wake.release(); wake = null; }
+    } catch (e) {}
+  };
+  function todayOf() {
+    const P = state.plan; if (!P || P.kind !== 'calendar' || P.off) return null;
+    const today = iso(new Date());
+    return calendarDays(P).find(x => x.day === today) || null;
+  }
+  const pieceDoneT = x => unitDone(x.u) || (!x.end && posOf(x.u.id) >= x.to - 60);
+  const dayDoneT = dd => dd.kind === 'video' ? dd.pieces.every(pieceDoneT)
+    : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[skeyOf(x.q)]) : true;
+  function sesStart() {
+    const today = iso(new Date()), S = sesRead();
+    const o = S && S.day === today ? S : { day: today, ms: 0, runAt: null };
+    if (!o.runAt) o.runAt = Date.now();
+    o.away = false; sesWrite(o); keepAwake(true); sesPaint(); render();
+    // a video day starts the first thing left to watch, from where it is due
+    const dd = todayOf();
+    if (dd && dd.kind === 'video' && !playing) { const x = dd.pieces.find(y => !pieceDoneT(y)); if (x) play(x.u, Math.max(x.from, posOf(x.u.id)), null); }
+  }
+  function sesPause(away) {
+    const o = sesRead(); if (!o || !o.runAt) return;
+    o.ms += Date.now() - o.runAt; o.runAt = null; o.away = !!away; sesWrite(o); keepAwake(false); sesPaint();
+  }
+  function sesFinish() {
+    const o = sesRead(); if (!o) return;
+    if (o.runAt) { o.ms += Date.now() - o.runAt; o.runAt = null; }
+    o.done = true; sesWrite(o); keepAwake(false);
+    state.sessions = state.sessions || {}; state.sessions[o.day] = Math.max(state.sessions[o.day] || 0, o.ms);
+    save(); render(); sesPaint();
+  }
+  // the bar at the top: the clock, where he is against today's mark, Pause, and what is next
+  function sesPaint() {
+    let bar = document.getElementById('sesbar');
+    const o = sesRead(), today = iso(new Date());
+    if (!o || o.day !== today || (o.done && !o.runAt)) { if (bar) bar.remove(); document.body.classList.remove('insession'); return; }
+    if (!bar) {
+      bar = document.createElement('div'); bar.id = 'sesbar';
+      bar.innerHTML = '<span class="dot"></span><span class="clk"></span><span class="what"></span><button type="button" class="nxt"></button><button type="button" class="pz"></button>';
+      document.body.appendChild(bar);
+      bar.querySelector('.pz').addEventListener('click', () => { const c = sesRead(); if (c && c.runAt) sesPause(false); else sesStart(); });
+      bar.querySelector('.nxt').addEventListener('click', () => { const dd = todayOf(); if (!dd) return; const x = (dd.pieces || []).find(y => !pieceDoneT(y)); if (x) play(x.u, Math.max(x.from, posOf(x.u.id)), null); });
+    }
+    document.body.classList.add('insession');
+    const run = !!o.runAt;
+    bar.classList.toggle('paused', !run);
+    bar.querySelector('.clk').textContent = clockOf(sesMs(o));
+    bar.querySelector('.pz').textContent = run ? 'Pause' : 'Resume';
+    const dd = todayOf(); let what = '', next = null;
+    if (dd && dd.kind === 'video') {
+      const x = dd.pieces.find(y => !pieceDoneT(y));
+      if (x) {
+        const at = playing && playing.unit.id === x.u.id ? video.currentTime : posOf(x.u.id);
+        what = x.u.label.replace(/^(Art \d+).*/, '$1') + ' · ' + hms(Math.max(at, x.from)) + ' of ' + (x.end ? hms(x.u.dur || 0) : hms(x.to));
+        if (!(playing && playing.unit.id === x.u.id)) next = x;
+      }
+    } else if (dd && (dd.quizzes || []).length) {
+      const left = dd.quizzes.filter(x => !state.scores[skeyOf(x.q)]).length;
+      what = left + ' quiz' + (left === 1 ? '' : 'zes') + ' left today';
+    }
+    if (!run) what = (o.away ? 'Paused while you were away' : 'Paused') + (what ? ' · ' + what : '');
+    bar.querySelector('.what').textContent = what;
+    const nb = bar.querySelector('.nxt');
+    nb.hidden = !next || !run; if (next) nb.textContent = 'Watch ' + next.u.label.replace(/^(Art \d+).*/, '$1');
+    if (dd && run && dayDoneT(dd)) sesFinish();
+  }
+  setInterval(() => { const o = sesRead(); if (o && o.runAt) sesPaint(); }, 1000);
+  document.addEventListener('visibilitychange', () => {
+    const o = sesRead(); if (!o || o.day !== iso(new Date())) return;
+    if (document.visibilityState === 'hidden' && o.runAt) sesPause(true);
+    else if (document.visibilityState === 'visible' && o.away && !o.done) sesStart();
+  });
+  // the player drives the day: today's mark stops a cut video; an ended one is ticked
+  // and the next thing on today's list starts by itself
+  video.addEventListener('timeupdate', () => {
+    const o = sesRead(); if (!o || !o.runAt || !playing) return;
+    const dd = todayOf(); if (!dd || dd.kind !== 'video') return;
+    const x = dd.pieces.find(y => y.u.id === playing.unit.id && !y.end && video.currentTime < y.to + 5);
+    if (x && video.currentTime >= x.to) {
+      video.pause();
+      try { localStorage.setItem(POS + x.u.id, String(x.to)); } catch (e) {}
+      verr('That’s today’s stop for ' + x.u.label.replace(/^(Art \d+).*/, '$1') + '. Highlight the ★ sections and you’re done.');
+      sesPaint();
+    }
+  });
+  video.addEventListener('ended', () => {
+    const o = sesRead(); if (!o || !o.runAt || !playing) return;
+    const dd = todayOf(); if (!dd || dd.kind !== 'video') return;
+    const u = playing.unit;
+    if (dd.pieces.some(y => y.u.id === u.id) && !unitDone(u)) markUnit(u, true);
+    const x = dd.pieces.find(y => !pieceDoneT(y));
+    if (x) setTimeout(() => play(x.u, Math.max(x.from, posOf(x.u.id)), null), 1500); else sesPaint();
+  });
+  setTimeout(() => { const o = sesRead(); if (o && o.runAt) keepAwake(true); sesPaint(); }, 0);
+
   function calendarCard(P) {
     const days = calendarDays(P), today = iso(new Date());
     const qKey = x => skeyOf(x.q);
@@ -1767,7 +1891,17 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       return row;
     };
     const ti = days.findIndex(x => x.day === today);
-    if (ti >= 0) body.appendChild(line(days[ti], true));
+    if (ti >= 0) {
+      body.appendChild(line(days[ti], true));
+      const S = sesRead(), mine = S && S.day === today, finished = (state.sessions || {})[today];
+      if (finished && !(mine && S.runAt)) body.appendChild($('div', 'sesdone', '\u2713 Done for today \u00b7 ' + esc(deskWords(finished)) + ' at the desk'));
+      else if (!dayDone(days[ti]) && days[ti].kind !== 'off') {
+        const go = $('button', 'sesgo', mine ? (S.runAt ? 'Session running \u2014 see the bar at the top' : 'Resume today\u2019s session') : 'Start today\u2019s session');
+        go.type = 'button';
+        go.addEventListener('click', e => { e.stopPropagation(); sesStart(); });
+        body.appendChild(go);
+      }
+    }
     else if (n < 0) body.appendChild($('div', 'sm', 'Every day on the calendar is behind you. Book the exam.'));
     else body.appendChild($('div', 'sm', 'Nothing on the calendar today. Next: ' + esc(dname(days[n].day)) + '.'));
     // what is still open from earlier days, said plainly, without moving anything
