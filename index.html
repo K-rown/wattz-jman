@@ -72,6 +72,10 @@
   .seclist button.sec.at { background:#eef7ee; border-color:var(--green); color:var(--green); }
   .seclist button.sec.at span { font-weight:600; opacity:.75; margin-left:4px; }
   .seclist .sec.hot { border-color:#1a1a1a; }
+  .seclist button.sec.tick { cursor:pointer; font:inherit; font-weight:700; font-size:.82rem; min-height:40px; display:inline-flex; align-items:center; gap:6px; padding:4px 10px; }
+  .seclist .sec.tick .box { width:18px; height:18px; border:2px solid #1a1a1a; border-radius:4px; display:inline-grid; place-items:center; font-size:13px; line-height:1; background:#fff; }
+  .seclist .sec.tick.ticked { background:#dcfce7; border-color:#15803d; color:#14532d; }
+  .seclist .sec.tick.ticked .box { background:#15803d; border-color:#15803d; color:#fff; }
   .seclist .sec .star { color:#b45309; font-weight:800; margin-left:2px; }
   .seclist .sec .tag { font-style:normal; font-size:.66rem; font-weight:700; background:#fde68a; color:#78350f; border-radius:4px; padding:0 4px; margin-left:3px; }
   .seclist .sec.new { background:#f3f4f6; border-color:#d1d5db; color:#6b7280; }
@@ -567,6 +571,11 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     Object.keys(inc.scores || {}).forEach(k => { const a = state.scores[k], b = inc.scores[k]; if (!a || (b && (b.when || '') > (a.when || ''))) state.scores[k] = b; });
     if (inc.gotbook && !state.gotbook) state.gotbook = inc.gotbook;
     if (inc.plan && (!state.plan || (inc.plan.set || '') > (state.plan.set || ''))) state.plan = inc.plan;
+    Object.keys(inc.hl || {}).forEach(v => Object.keys(inc.hl[v] || {}).forEach(k => {
+      state.hl = state.hl || {}; state.hl[v] = state.hl[v] || {};
+      const a = state.hl[v][k], b = inc.hl[v][k];
+      if (b && (!a || (b[1] || '') > (a[1] || ''))) state.hl[v][k] = b;
+    }));
     Object.keys(inc.sessions || {}).forEach(k => { state.sessions = state.sessions || {}; if ((inc.sessions[k] || 0) > (state.sessions[k] || 0)) state.sessions[k] = inc.sessions[k]; });
     return before !== JSON.stringify([state.done, state.unit, state.notes, state.qs, state.scores, state.plan || null]);
   }
@@ -932,7 +941,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   window.addEventListener('hashchange', () => pickUp());
 
   const clock = iso => { if (!iso) return 'nothing yet'; try { return new Date(iso).toLocaleString('en-US', { month: 'short', day: 'numeric', hour: 'numeric', minute: '2-digit' }); } catch (e) { return ''; } };
-  const shared = () => ({ done: state.done, plan: state.plan || null, sessions: state.sessions || {}, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
+  const shared = () => ({ done: state.done, plan: state.plan || null, sessions: state.sessions || {}, hl: state.hl || {}, unit: state.unit || {}, tickAt: state.tickAt || {}, notes: state.notes, qs: state.qs, scores: state.scores, gone: state.gone || { unit: {}, qs: {} }, gotbook: state.gotbook || null, updated: state.updated || null });
 
   // What this tab last put in storage. Anything that turns up in storage which is
   // NOT in here was done by another tab and is adopted; anything in here that this
@@ -1732,6 +1741,25 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     days.push({ day: iso(d), kind: 'exam', note: 'Your exam window opens — book the sitting for this week' });
     return days;
   }
+  // ---- HIGHLIGHTED: a tick per starred section, so "done" includes the highlighting ----
+  // A video's stars are its book sections that answer quiz/exam questions, minus anything
+  // new in 2023 or in an article the 2020 code does not have — exactly the ★ list.
+  function starsOf(uid) {
+    const book = (DATA.booksec || {})[uid] || [], tested0 = (DATA.tested || {})[uid] || {}, changed = (DATA.changes || {})[uid] || {};
+    const art = parseInt((book[0] || '').split('.')[0], 10);
+    const in2020 = new Set((DATA.art2020 || []).concat([460, 516, 640, 646, 650]));
+    const gone = !!art && (DATA.art2020 || []).length > 0 && !in2020.has(art);
+    if (gone) return [];
+    return book.filter(x => tested0[x] && changed[x] !== 'new');
+  }
+  // his ticks: hl[video][section] = [on, when]; the newer act wins across devices
+  const hlOn = (uid, sec) => { const v = ((state.hl || {})[uid] || {})[sec]; return !!(v && v[0]); };
+  function hlSet(uid, sec, on) {
+    state.hl = state.hl || {}; state.hl[uid] = state.hl[uid] || {};
+    state.hl[uid][sec] = [on ? 1 : 0, new Date().toISOString()]; save(); render(); sesPaint();
+  }
+  const hlLeft = uid => starsOf(uid).filter(x => !hlOn(uid, x));
+
   // ---- THE SESSION: press Start when he sits down, and leave it alone ----
   // It counts time AT THE DESK (highlighting with the video paused counts), keeps the
   // screen awake, pauses itself when he leaves the app and picks up when he is back. It
@@ -1756,9 +1784,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const today = iso(new Date());
     return calendarDays(P).find(x => x.day === today) || null;
   }
-  const pieceDoneT = x => unitDone(x.u) || (!x.end && posOf(x.u.id) >= x.to - 60);
+  const pieceDoneT = x => (unitDone(x.u) && (!x.end || !hlLeft(x.u.id).length)) || (!x.end && posOf(x.u.id) >= x.to - 60);
   const dayDoneT = dd => dd.kind === 'video' ? dd.pieces.every(pieceDoneT)
-    : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[skeyOf(x.q)]) : true;
+    : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[skeyOf(x.q)] && !(x.u && hlLeft(x.u.id).length)) : true;
   function sesStart() {
     const today = iso(new Date()), S = sesRead();
     const o = S && S.day === today ? S : { day: today, ms: 0, runAt: null };
@@ -1797,7 +1825,12 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     bar.querySelector('.clk').textContent = clockOf(sesMs(o));
     bar.querySelector('.pz').textContent = run ? 'Pause' : 'Resume';
     const dd = todayOf(); let what = '', next = null;
-    if (dd && dd.kind === 'video') {
+    const hlNext = dd ? (dd.kind === 'video' ? dd.pieces.filter(y => y.end && unitDone(y.u)).map(y => y.u)
+      : (dd.quizzes || []).filter(y => y.u).map(y => y.u)).find(u2 => hlLeft(u2.id).length) : null;
+    if (hlNext && !(dd.kind === 'video' && dd.pieces.some(y => !unitDone(y.u) && !pieceDoneT(y) && playing && playing.unit.id === y.u.id))) {
+      const all = starsOf(hlNext.id).length;
+      what = 'Highlight \u2605 in ' + hlNext.label.replace(/^(Art \d+).*/, '$1') + ' \u00b7 ' + (all - hlLeft(hlNext.id).length) + '/' + all + ' ticked';
+    } else if (dd && dd.kind === 'video') {
       const x = dd.pieces.find(y => !pieceDoneT(y));
       if (x) {
         const at = playing && playing.unit.id === x.u.id ? video.currentTime : posOf(x.u.id);
@@ -1806,7 +1839,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       }
     } else if (dd && (dd.quizzes || []).length) {
       const left = dd.quizzes.filter(x => !state.scores[skeyOf(x.q)]).length;
-      what = left + ' quiz' + (left === 1 ? '' : 'zes') + ' left today';
+      if (!left) what = 'Highlighting left';
+      if (left) what = left + ' quiz' + (left === 1 ? '' : 'zes') + ' left today';
     }
     if (!run) what = (o.away ? 'Paused while you were away' : 'Paused') + (what ? ' · ' + what : '');
     bar.querySelector('.what').textContent = what;
@@ -1846,9 +1880,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   function calendarCard(P) {
     const days = calendarDays(P), today = iso(new Date());
     const qKey = x => skeyOf(x.q);
-    const pieceDone = x => unitDone(x.u) || (!x.end && posOf(x.u.id) >= x.to - 60);
-    const dayDone = dd => dd.kind === 'video' ? dd.pieces.every(pieceDone)
-      : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[qKey(x)]) : iso(new Date()) > dd.day;
+    const pieceDone = pieceDoneT;
+    const dayDone = dd => dd.kind === 'video' || (dd.quizzes || []).length ? dayDoneT(dd) : iso(new Date()) > dd.day;
     const dname = s2 => D(s2).toLocaleDateString('en-US', { weekday: 'short', month: 'short', day: 'numeric' });
     const lastVideo = [...days].reverse().find(x => x.kind === 'video');
     const firstSim = days.find(x => x.kind === 'sim');
@@ -2148,7 +2181,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
               const tog = $('button', 'secfold' + (sopen ? ' open' : ''), '<span>' + (book.length
                 ? (gone ? 'Article ' + art + ' is not in your 2020 book · ' + book.length + ' sections'
                   : book.length + ' section' + (book.length === 1 ? '' : 's') + ' to highlight'
-                    + (nT ? ' · ★ ' + nT + ' tested' : '') + (nC ? ' · ' + nC + ' differ from 2020' : ''))
+                    + (nT ? ' · ★ ' + book.filter(x => tested[x] && hlOn(u.id, x)).length + '/' + nT + ' highlighted' : '') + (nC ? ' · ' + nC + ' differ from 2020' : ''))
                 : keys.length + ' NEC section' + (keys.length === 1 ? '' : 's') + ' in this video') + '</span>');
               tog.type = 'button';
               tog.title = book.length ? 'Every section the book covers for this article, marked for your 2020 code book' : 'Jump straight to where Mike teaches a section';
@@ -2164,6 +2197,15 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
                 };
                 // one section: its number, a star with the questions it answers, 2023 / new, and
                 // its moment in the video when that is known (then it is a key that jumps there)
+                const tick = x => {
+                  const on = hlOn(u.id, x), q = tested[x], ch = changed[x] === 'changed';
+                  const el = $('button', 'sec tick' + (on ? ' ticked' : '') + ' hot',
+                    '<span class="box">' + (on ? '\u2713' : '') + '</span>' + esc(x) + ' <b class="star">\u2605' + q[0] + '</b>' + (ch ? ' <i class="tag">2023</i>' : ''));
+                  el.type = 'button'; el.setAttribute('aria-pressed', on ? 'true' : 'false');
+                  el.title = on ? 'Highlighted — tap to undo' : 'Tap once it is highlighted in your book';
+                  el.addEventListener('click', e => { e.stopPropagation(); hlSet(u.id, x, !on); });
+                  return el;
+                };
                 const chip = x => {
                   const t = at[x], q = tested[x], nw = isNew(x), ch = !nw && changed[x] === 'changed';
                   const el = $(t != null ? 'button' : 'span', 'sec' + (t != null ? ' at' : '') + (q ? ' hot' : '') + (nw ? ' new' : ch ? ' chg' : ''),
@@ -2194,8 +2236,12 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
                     sl.appendChild(seg);
                   }
                   const show = onlyT ? book.filter(x => tested[x]).sort((a, z) => tested[z][0] - tested[a][0]) : book;
-                  if (onlyT) sl.appendChild($('div', 'sm secnote', 'Most-tested first.'));
-                  show.forEach(x => sl.appendChild(chip(x)));
+
+                  if (onlyT) {
+                    const done2 = show.filter(x => hlOn(u.id, x)).length;
+                    sl.appendChild($('div', 'sm secnote', '<b>' + done2 + ' of ' + show.length + ' highlighted.</b> Tap a box once it\u2019s highlighted in your book.'));
+                  }
+                  show.forEach(x => sl.appendChild(onlyT ? tick(x) : chip(x)));
                   if (extra.length && !onlyT) {
                     sl.appendChild($('div', 'sm secnote', 'Also named in the video:'));
                     extra.forEach(x => sl.appendChild(jumpBtn(x)));
