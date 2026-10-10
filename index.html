@@ -1961,11 +1961,13 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
         body.appendChild(ah);
       }
     } else if (runningAhead) body.appendChild($('div', 'sm', 'Head start running \u2014 see the bar at the top.'));
-    else if (n < 0) body.appendChild($('div', 'sm', 'Every day on the calendar is behind you. Book the exam.'));
-    else body.appendChild($('div', 'sm', 'Nothing on the calendar today. Next: ' + esc(dname(days[n].day)) + '.'));
+    if (ti < 0) {
+      if (n < 0) body.appendChild($('div', 'sm', 'Every day on the calendar is behind you. Book the exam.'));
+      else body.appendChild($('div', 'sm', 'Nothing on the calendar today. Next: ' + esc(dname(days[n].day)) + '.'));
+    }
     // what is still open from earlier days, said plainly, without moving anything
     const open2 = days.filter(x => x.day < today && x.kind === 'video').flatMap(x => x.pieces.filter(p2 => !pieceDone(p2)).map(p2 => ({ p2, day: x.day })));
-    if (open2.length) body.appendChild($('div', 'cleft', 'Still open from earlier days: ' + open2.map(o => esc(o.p2.u.label.replace(/^Art\s+(\d+).*/, 'Art $1')) + ' (' + esc(dname(o.day).split(',')[0]) + ')').join(' · ')));
+    if (open2.length) body.appendChild($('div', 'cleft', 'Still open from earlier days: ' + open2.map(o => esc(o.p2.u.label.replace(/^Art\s+(\d+).*/, 'Art $1')) + (unitDone(o.p2.u) ? ' — watched, ★ ' + hlLeft(o.p2.u.id).length + ' to highlight' : '') + ' (' + esc(dname(o.day).split(',')[0]) + ')').join(' · ')));
     const after = days.filter(x => x.day > today).slice(0, 5);
     if (after.length) { body.appendChild($('div', 'chead', 'Coming up')); after.forEach(x => body.appendChild(line(x, false))); }
     const ck = 'calendar:all', copen = !!libOpen[ck];
