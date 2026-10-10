@@ -117,6 +117,10 @@
   .plan .cpiece { text-align:left; background:none; border:0; padding:0; font:inherit; font-size:14px; color:inherit; }
   .plan button.cpiece { min-height:40px; padding:6px 10px; border:1px solid #d1d5db; border-radius:10px; background:#fff; cursor:pointer; }
   .plan .cpiece.got { color:#6b7280; text-decoration:line-through; }
+  .plan .cstat { margin:0 0 10px; padding:12px 14px; border-radius:12px; font-size:16px; }
+  .plan .cstat.ok { background:#dcfce7; color:#14532d; }
+  .plan .cstat.behind { background:#fef3c7; color:#78350f; }
+  .plan .cstat .sm { font-size:12.5px; opacity:.85; margin-top:2px; }
   .plan .cleft { margin-top:8px; font-size:13px; color:#b45309; }
   .plan .chead { margin-top:12px; font-weight:800; font-size:12px; letter-spacing:.06em; text-transform:uppercase; color:#6b7280; }
   #sesbar { position:fixed; top:0; left:0; right:0; z-index:50; display:flex; align-items:center; gap:10px; padding:10px 14px; padding-top:max(10px, env(safe-area-inset-top)); background:#14532d; color:#fff; font-size:14px; box-shadow:0 2px 10px rgba(0,0,0,.25); }
@@ -163,11 +167,12 @@
   .chapb { padding:0 12px 10px; }
   .chapb .xnote { margin:8px 0 4px; }
   /* indented so it reads as part of the video above it, not of the chapter */
-  .secfold { display:flex; align-items:center; gap:7px; width:100%; border:0; background:none; font:inherit;
-             font-size:.78rem; font-weight:700; color:#1d4ed8; padding:6px 0 8px 30px; cursor:pointer; text-align:left; }
+  .secfold { display:flex; align-items:center; gap:7px; width:100%; border:0; border-bottom:1px solid var(--line); background:none; font:inherit;
+             font-size:.8rem; font-weight:700; color:#1d4ed8; padding:0 0 10px 52px; margin-top:-4px; cursor:pointer; text-align:left; min-height:36px; }
+  .urow:has(+ .secfold) { border-bottom:0; }
   .secfold::after { content:'\203a'; color:var(--mute); font-size:1rem; transform:rotate(90deg); }
   .secfold.open::after { transform:rotate(-90deg); }
-  .seclist { padding-left:30px; }
+  .seclist { padding-left:52px; }
   .seclist .secnote { flex-basis:100%; margin:0 0 5px; }
   .pwarn { border:1px solid #e0b400; background:#fffbe9; border-radius:10px; padding:9px 11px; margin:0 0 10px; font-size:.86rem; line-height:1.45; }
   .libq .askallq { display:inline-block; margin:8px 0 4px; background:var(--ink); color:#fff; border-radius:8px; padding:6px 11px; font-size:.78rem; font-weight:700; text-decoration:none; }
@@ -1904,8 +1909,26 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const examDay = days.find(x => x.kind === 'exam');
     card.appendChild($('div', 'top', '<span>MY CALENDAR</span><span>' + (examDay ? 'exam week of ' + esc(dname(examDay.day)) : '') + '</span>'));
     const body = $('div', 'pb');
-    body.appendChild($('div', 'sm', 'Weekdays: ' + (P.perDay || 75) + ' min of video at ' + (P.speed || 1.5) + 'x — about an hour and a half at the desk. Watch to understand, then highlight the ★ sections. Weekends: that week’s quizzes.'
-      + (lastVideo ? ' Videos done <b>' + esc(dname(lastVideo.day)) + '</b>' : '') + (firstSim ? ' · practice exams from <b>' + esc(dname(firstSim.day)) + '</b>' : '') + '.'));
+    // WHERE HE STANDS, first and in words: everything open from days already past, added up
+    {
+      const today0 = iso(new Date()), speed = P.speed || 1.5;
+      let vid = 0, stars = 0, qs = 0;
+      days.filter(x => x.day < today0).forEach(x => {
+        if (x.kind === 'video') x.pieces.forEach(y => {
+          if (unitDone(y.u)) { if (y.end) stars += hlLeft(y.u.id).length; return; }
+          const at = Math.max(y.from, posOf(y.u.id));
+          if (at < y.to - 60) vid += (y.to - at) / speed;
+        });
+        (x.quizzes || []).forEach(y => { if (!state.scores[skeyOf(y.q)] && !(state.taken || {})[y.q.key]) qs++; });
+      });
+      const m = Math.round(vid / 60), parts = [];
+      if (m) parts.push((m >= 60 ? Math.floor(m / 60) + ' h ' + String(m % 60).padStart(2, '0') + ' min' : m + ' min') + ' of video');
+      if (stars) parts.push(stars + ' ★ to highlight');
+      if (qs) parts.push(qs + ' quiz' + (qs === 1 ? '' : 'zes'));
+      body.appendChild($('div', 'cstat ' + (parts.length ? 'behind' : 'ok'), parts.length
+        ? '<b>Catch up:</b> ' + parts.join(' · ') + '<div class="sm">from days already past — do it before or after today’s list</div>'
+        : '<b>On track ✓</b> — nothing left from earlier days'));
+    }
     const open = x => {
       if (x.c) libOpen[x.b.book + ':' + x.c.key] = true; else if (x.b) libOpen[x.b.book + ':extra'] = true;
       else { const sb = (DATA.library || []).find(b => b.book === 'Simulated Exams'); if (sb) libOpen[sb.book + ':extra'] = true; }
@@ -1975,7 +1998,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     tog.type = 'button';
     tog.addEventListener('click', e => { e.stopPropagation(); libOpen[ck] = !copen; render(); });
     body.appendChild(tog);
-    if (copen) days.forEach(x => body.appendChild(line(x, false)));
+    const explain = $('div', 'sm', 'Weekdays: ' + (P.perDay || 75) + ' min of video at ' + (P.speed || 1.5) + 'x — about an hour and a half at the desk. Watch to understand, then highlight the ★ sections. Weekends: that week’s quizzes.'
+      + (lastVideo ? ' Videos done <b>' + esc(dname(lastVideo.day)) + '</b>' : '') + (firstSim ? ' · practice exams from <b>' + esc(dname(firstSim.day)) + '</b>' : '') + '.');
+    if (copen) { body.appendChild(explain); days.forEach(x => body.appendChild(line(x, false))); }
     card.appendChild(body);
     return card;
   }
@@ -2207,9 +2232,9 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
               const sk = u.id + ':secs', sopen = !!libOpen[sk];
               const tk = u.id + ':tested', onlyT = libOpen[tk] !== false && nT > 0;   // the ★ list is what he highlights; All is one press away
               const tog = $('button', 'secfold' + (sopen ? ' open' : ''), '<span>' + (book.length
-                ? (gone ? 'Article ' + art + ' is not in your 2020 book · ' + book.length + ' sections'
-                  : book.length + ' section' + (book.length === 1 ? '' : 's') + ' to highlight'
-                    + (nT ? ' · ★ ' + book.filter(x => tested[x] && hlOn(u.id, x)).length + '/' + nT + ' highlighted' : '') + (nC ? ' · ' + nC + ' differ from 2020' : ''))
+                ? (gone ? 'Not in your 2020 book \u2014 skip highlighting'
+                  : nT ? '\u2605 ' + book.filter(x => tested[x] && hlOn(u.id, x)).length + '/' + nT + ' highlighted'
+                  : book.length + ' sections, none tested')
                 : keys.length + ' NEC section' + (keys.length === 1 ? '' : 's') + ' in this video') + '</span>');
               tog.type = 'button';
               tog.title = book.length ? 'Every section the book covers for this article, marked for your 2020 code book' : 'Jump straight to where Mike teaches a section';
