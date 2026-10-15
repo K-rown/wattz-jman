@@ -1673,10 +1673,11 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
   // to the two simulated exams at the end. A day of quizzes is about 120 questions.
   const QDAY = 120;
   const HALF_BOOKS = new Set(['NEC Vol 1', 'B&G', 'NEC Vol 2']);
-  function quizCost(b, key, isExtra) {
+  function quizCost(b, key, isExtra, P) {
     const n = ((DATA.quizzes[key] || {}).questions || []).length;
     if (isExtra && /Final_Exam/.test(key) && /^NEC_Vol/.test(key)) return null;   // the sims stand in
-    const half = HALF_BOOKS.has(b.book);
+    if ((P && P.dropQuiz || []).some(pre => key.startsWith(pre))) return null;    // covered by the exam-style sets
+    const half = HALF_BOOKS.has(b.book) || (b.book === 'Exam Prep' && isExtra && !/Practice_Exam/.test(key));
     return { n, half, cost: half ? Math.ceil(n / 2) : n };
   }
   function calendarDays(P) {
@@ -1684,20 +1685,35 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const off = new Set(P.skip || []);   // days off; P.off means the plan was removed
     const units = [], extras = [];
     let on = false;
-    (DATA.library || []).forEach(b => {
-      if (b.book === 'Theory') return;
+    const books = (DATA.library || []).filter(b => b.book !== 'Theory');
+    const rank = b => { const i = (P.order || []).indexOf(b.book); return i < 0 ? 99 : i; };
+    books.slice().sort((a, z) => rank(a) - rank(z)).forEach(b => {
       b.chapters.forEach(c => c.units.forEach(u => { if (u.id === P.from) on = true; if (on) units.push({ b, c, u }); }));
       (b.extra || []).forEach(q => { if (on && DATA.quizzes[q.key] && b.book !== 'Simulated Exams') extras.push({ b, q }); });
     });
+    units.forEach((x, i) => { x.lastOfBook = !units[i + 1] || units[i + 1].b !== x.b; });
     const sims = ((DATA.library || []).find(b => b.book === 'Simulated Exams') || { extra: [] }).extra.filter(q => DATA.quizzes[q.key]);
-    const days = [], wk = x => x.getDay() > 0 && x.getDay() < 6;
+    const workDays = new Set(P.days || [1, 2, 3, 4, 5]), quizDays = new Set(P.quizDays || [6]);
+    const days = [], wk = x => workDays.has(x.getDay());
+    const watch = P.watch ? new Set(P.watch) : null;
+    const STAR_S = 45;   // reading one starred section in the book and highlighting it
+    // what each unit costs: a watched video its length; a skipped one its uncovered stars
+    const covered = new Set();
+    if (watch) units.forEach(x => { if (watch.has(x.u.id)) (DATA.booksec[x.u.id] || []).forEach(sec => covered.add(sec)); });
+    units.forEach(x => {
+      if (!watch || watch.has(x.u.id)) { x.mode = 'watch'; return; }
+      const minQ = P.minQ || 1, tq = (DATA.tested || {})[x.u.id] || {};
+      x.mode = 'read'; x.stars = starsOf(x.u.id).filter(sec => !covered.has(sec) && (tq[sec] || [0])[0] >= minQ); x.stars.forEach(sec => covered.add(sec));
+    });
     let d = D(P.start), ui = 0, t = 0;
     const next = () => { const n = new Date(d); n.setDate(n.getDate() + 1); d = n; };
     // ONE queue of quizzes in the order their videos are watched; each quiz day takes ~QDAY
     // of them and a quiz too long for one day is cut into question ranges
     const queue = [];
+    const queued = new Set();
     const enqueue = (b, c, u, q, isExtra) => {
-      const k = quizCost(b, q.key, isExtra); if (!k) return;
+      if (queued.has(q.key)) return; queued.add(q.key);   // a quiz owed on day one is not queued again when its video is passed
+      const k = quizCost(b, q.key, isExtra, P); if (!k) return;
       if (k.cost <= QDAY + 30) { queue.push({ b, c, u, q, half: k.half, cost: k.cost }); return; }
       const step = k.half ? QDAY * 2 : QDAY;
       for (let f = 1; f <= k.n; f += step) queue.push({ b, c, u, q, half: k.half, from: f, to: Math.min(k.n, f + step - 1), cost: Math.ceil((Math.min(k.n, f + step - 1) - f + 1) / (k.half ? 2 : 1)) });
@@ -1711,22 +1727,37 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     (P.pre || []).forEach(key => (DATA.library || []).forEach(bk => bk.chapters.forEach(c => c.units.forEach(u => {
       if (u.quiz && u.quiz.key === key) enqueue(bk, c, u, u.quiz, false);
     }))));
+    (P.preStars || []).forEach(uid => {
+      const x = units.find(y => y.u.id === uid) || (() => { let f = null; (DATA.library || []).forEach(bk => bk.chapters.forEach(c => c.units.forEach(u => { if (u.id === uid) f = { b: bk, c, u }; }))); return f; })();
+      if (x) units.unshift({ b: x.b, c: x.c, u: x.u, mode: 'read', stars: starsOf(uid), pre: true });
+    });
     let watchedThisWeek = false;
     while (ui < units.length) {
       const day = iso(d);
       if (off.has(day)) { days.push({ day, kind: 'off', note: 'Day off' }); next(); continue; }
-      if (!wk(d)) {
-        if (queue.length) quizDay(d.getDay() === 6 ? 'Quizzes from the videos you’ve watched' : 'More quizzes, then redo what you missed');
-        else if (watchedThisWeek) days.push({ day, kind: 'off', note: 'No quizzes waiting — rest' });
-        next(); continue;
-      }
+      const qd = quizDays.has(d.getDay()), overflow = d.getDay() === 0 && queue.length && days.length && days[days.length - 1].kind === 'quiz';
+      if ((qd || overflow) && queue.length) { quizDay(qd ? 'Quizzes from what you’ve done this week' : 'More quizzes, then redo what you missed'); next(); continue; }
+      if (!wk(d)) { next(); continue; }
       watchedThisWeek = true;
       let room = per; const pieces = [];
       while (room > 0 && ui < units.length) {
         const { b, c, u } = units[ui], dur = u.dur || 0, rem = dur - t;
+        if (units[ui].mode === 'read') {
+          // a skipped video: read its starred sections in the book and highlight them, in
+          // chunks that fit the day; a unit with no stars is simply passed over
+          const st = units[ui].stars, left = st.slice(t);
+          if (!left.length) { ui++; t = 0; if (u.quiz && DATA.quizzes[u.quiz.key]) enqueue(b, c, u, u.quiz, false); if (units[ui - 1].lastOfBook) extras.filter(x => x.b === b).forEach(x => enqueue(x.b, null, null, x.q, true)); continue; }
+          const fit = Math.max(1, Math.floor(room / (STAR_S * speed)));
+          const take = left.length <= fit + 3 ? left : left.slice(0, fit);
+          pieces.push({ b, c, u, read: true, stars: take, end: take.length === left.length });
+          room -= take.length * STAR_S * speed; t += take.length;
+          if (take.length === left.length) { ui++; t = 0; if (u.quiz && DATA.quizzes[u.quiz.key]) enqueue(b, c, u, u.quiz, false); if (units[ui - 1].lastOfBook) extras.filter(x => x.b === b).forEach(x => enqueue(x.b, null, null, x.q, true)); }
+          continue;
+        }
         if (rem <= room + 15 * 60 * speed) {
           pieces.push({ b, c, u, from: t, to: dur, end: true }); room -= rem; ui++; t = 0;
           if (u.quiz && DATA.quizzes[u.quiz.key]) enqueue(b, c, u, u.quiz, false);
+          if (units[ui - 1].lastOfBook) extras.filter(x => x.b === b).forEach(x => enqueue(x.b, null, null, x.q, true));
         } else { pieces.push({ b, c, u, from: t, to: t + room, end: false }); t += room; room = 0; }
       }
       days.push({ day, kind: 'video', pieces });
@@ -1762,7 +1793,12 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     return book.filter(x => tested0[x] && changed[x] !== 'new');
   }
   // his ticks: hl[video][section] = [on, when]; the newer act wins across devices
-  const hlOn = (uid, sec) => { const v = ((state.hl || {})[uid] || {})[sec]; return !!(v && v[0]); };
+  let SEC_IDX = null;
+  const secVids = sec => {
+    if (!SEC_IDX) { SEC_IDX = {}; Object.keys(DATA.booksec || {}).forEach(v => (DATA.booksec[v] || []).forEach(x => (SEC_IDX[x] = SEC_IDX[x] || []).push(v))); }
+    return SEC_IDX[sec] || [];
+  };
+  const hlOn = (uid, sec) => secVids(sec).concat(uid).some(v => { const x = ((state.hl || {})[v] || {})[sec]; return !!(x && x[0]); });
   function hlSet(uid, sec, on) {
     state.hl = state.hl || {}; state.hl[uid] = state.hl[uid] || {};
     state.hl[uid][sec] = [on ? 1 : 0, new Date().toISOString()]; save(); render(); sesPaint();
@@ -1800,7 +1836,8 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     const today = iso(new Date());
     return calendarDays(P).find(x => x.day > today && (x.kind === 'video' || (x.quizzes || []).length) && !dayDoneT(x)) || null;
   }
-  const pieceDoneT = x => (unitDone(x.u) && (!x.end || !hlLeft(x.u.id).length)) || (!x.end && posOf(x.u.id) >= x.to - 60);
+  const pieceDoneT = x => x.read ? x.stars.every(sec => hlOn(x.u.id, sec))
+    : (unitDone(x.u) && (!x.end || !hlLeft(x.u.id).length)) || (!x.end && posOf(x.u.id) >= x.to - 60);
   const dayDoneT = dd => dd.kind === 'video' ? dd.pieces.every(pieceDoneT)
     : (dd.quizzes || []).length ? dd.quizzes.every(x => state.scores[skeyOf(x.q)] && !(x.u && hlLeft(x.u.id).length)) : true;
   function sesStart(target) {
@@ -1811,7 +1848,11 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     o.away = false; sesWrite(o); keepAwake(true); sesPaint(); render();
     // a video day starts the first thing left to watch, from where it is due
     const dd = todayOf();
-    if (dd && dd.kind === 'video' && !playing) { const x = dd.pieces.find(y => !pieceDoneT(y)); if (x) play(x.u, Math.max(x.from, posOf(x.u.id)), null); }
+    if (dd && dd.kind === 'video' && !playing) {
+      const x = dd.pieces.find(y => !pieceDoneT(y));
+      if (x && !x.read) play(x.u, Math.max(x.from, posOf(x.u.id)), null);
+      else if (x) { libOpen[x.b.book + ':' + x.c.key] = true; libOpen[x.u.id + ':secs'] = true; libOpen[x.u.id + ':tested'] = true; render(); setTimeout(() => { const h = document.querySelector('[data-stars="' + x.u.id + '"]'); if (h) h.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 40); }
+    }
   }
   function sesPause(away) {
     const o = sesRead(); if (!o || !o.runAt) return;
@@ -1835,7 +1876,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       bar.innerHTML = '<span class="dot"></span><span class="clk"></span><span class="what"></span><button type="button" class="nxt"></button><button type="button" class="pz"></button>';
       document.body.appendChild(bar);
       bar.querySelector('.pz').addEventListener('click', () => { const c = sesRead(); if (c && c.runAt) sesPause(false); else sesStart(); });
-      bar.querySelector('.nxt').addEventListener('click', () => { const dd = todayOf(); if (!dd) return; const x = (dd.pieces || []).find(y => !pieceDoneT(y)); if (x) play(x.u, Math.max(x.from, posOf(x.u.id)), null); });
+      bar.querySelector('.nxt').addEventListener('click', () => { const dd = todayOf(); if (!dd) return; const x = (dd.pieces || []).find(y => !pieceDoneT(y)); if (x && !x.read) play(x.u, Math.max(x.from, posOf(x.u.id)), null); });
     }
     document.body.classList.add('insession');
     const run = !!o.runAt;
@@ -1843,14 +1884,15 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     bar.querySelector('.clk').textContent = clockOf(sesMs(o));
     bar.querySelector('.pz').textContent = run ? 'Pause' : 'Resume';
     const dd = todayOf(); let what = '', next = null;
-    const hlNext = dd ? (dd.kind === 'video' ? dd.pieces.filter(y => y.end && unitDone(y.u)).map(y => y.u)
+    const hlNext = dd ? (dd.kind === 'video' ? dd.pieces.filter(y => !y.read && y.end && unitDone(y.u)).map(y => y.u)
       : (dd.quizzes || []).filter(y => y.u).map(y => y.u)).find(u2 => hlLeft(u2.id).length) : null;
     if (hlNext && !(dd.kind === 'video' && dd.pieces.some(y => !unitDone(y.u) && !pieceDoneT(y) && playing && playing.unit.id === y.u.id))) {
       const all = starsOf(hlNext.id).length;
       what = 'Highlight \u2605 in ' + hlNext.label.replace(/^(Art \d+).*/, '$1') + ' \u00b7 ' + (all - hlLeft(hlNext.id).length) + '/' + all + ' ticked';
     } else if (dd && dd.kind === 'video') {
       const x = dd.pieces.find(y => !pieceDoneT(y));
-      if (x) {
+      if (x && x.read) what = 'Read & highlight ' + x.u.label.replace(/^(Art \d+).*/, '$1') + ' \u00b7 \u2605 ' + x.stars.filter(sec => hlOn(x.u.id, sec)).length + '/' + x.stars.length;
+      else if (x) {
         const at = playing && playing.unit.id === x.u.id ? video.currentTime : posOf(x.u.id);
         what = x.u.label.replace(/^(Art \d+).*/, '$1') + ' · ' + hms(Math.max(at, x.from)) + ' of ' + (x.end ? hms(x.u.dur || 0) : hms(x.to));
         if (!(playing && playing.unit.id === x.u.id)) next = x;
@@ -1915,6 +1957,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       let vid = 0, stars = 0, qs = 0;
       days.filter(x => x.day < today0).forEach(x => {
         if (x.kind === 'video') x.pieces.forEach(y => {
+          if (y.read) { stars += y.stars.filter(sec => !hlOn(y.u.id, sec)).length; return; }
           if (unitDone(y.u)) { if (y.end) stars += hlLeft(y.u.id).length; return; }
           const at = Math.max(y.from, posOf(y.u.id));
           if (at < y.to - 60) vid += (y.to - at) / speed;
@@ -1935,11 +1978,23 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
       render();
       setTimeout(() => { const h = document.querySelector('[data-quiz="' + qKey(x) + '"]'); if (h) h.scrollIntoView({ behavior: 'smooth', block: 'center' }); }, 40);
     };
+    const openStars = x => {
+      libOpen[x.b.book + ':' + x.c.key] = true; libOpen[x.u.id + ':secs'] = true; libOpen[x.u.id + ':tested'] = true; render();
+      setTimeout(() => { const h = document.querySelector('[data-stars="' + x.u.id + '"]'); if (h) h.scrollIntoView({ behavior: 'smooth', block: 'start' }); }, 40);
+    };
     const line = (dd, big) => {
       const row = $('div', 'cday' + (dd.day === today ? ' today' : '') + (dd.day < today ? ' past' : '') + (dayDone(dd) && dd.kind !== 'off' ? ' done' : ''));
       row.appendChild($('div', 'cdate', (dayDone(dd) && dd.kind !== 'off' ? '✓ ' : '') + esc(dd.day === today ? 'Today · ' + dname(dd.day) : dname(dd.day))));
       const what = $('div', 'cwhat');
       if (dd.kind === 'video') dd.pieces.forEach(x => {
+        if (x.read) {
+          const done3 = x.stars.filter(sec => hlOn(x.u.id, sec)).length;
+          const k = $(big ? 'button' : 'div', 'cpiece' + (pieceDone(x) ? ' got' : ''),
+            'Read & highlight ' + esc(x.u.label.replace(/^(Art \d+).*/, '$1')) + ' <span class="sm">\u2605 ' + done3 + '/' + x.stars.length + (x.end ? '' : ' (part)') + ' \u00b7 no video</span>');
+          if (big) { k.type = 'button'; k.addEventListener('click', e => { e.stopPropagation(); openStars(x); }); }
+          what.appendChild(k);
+          return;
+        }
         const k = $(big ? 'button' : 'div', 'cpiece' + (pieceDone(x) ? ' got' : ''),
           esc(x.u.label) + ' <span class="sm">' + (x.from === 0 && x.end ? hms(x.u.dur || 0) : hms(x.from) + ' → ' + (x.end ? 'end' : hms(x.to))) + '</span>');
         if (big) { k.type = 'button'; k.addEventListener('click', e => { e.stopPropagation(); libOpen[x.b.book + ':' + x.c.key] = true; play(x.u, x.from || posOf(x.u.id), null); }); }
@@ -1990,7 +2045,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
     }
     // what is still open from earlier days, said plainly, without moving anything
     const open2 = days.filter(x => x.day < today && x.kind === 'video').flatMap(x => x.pieces.filter(p2 => !pieceDone(p2)).map(p2 => ({ p2, day: x.day })));
-    if (open2.length) body.appendChild($('div', 'cleft', 'Still open from earlier days: ' + open2.map(o => esc(o.p2.u.label.replace(/^Art\s+(\d+).*/, 'Art $1')) + (unitDone(o.p2.u) ? ' — watched, ★ ' + hlLeft(o.p2.u.id).length + ' to highlight' : '') + ' (' + esc(dname(o.day).split(',')[0]) + ')').join(' · ')));
+    if (open2.length) body.appendChild($('div', 'cleft', 'Still open from earlier days: ' + open2.map(o => esc(o.p2.u.label.replace(/^Art\s+(\d+).*/, 'Art $1')) + (o.p2.read ? ' \u2014 read, \u2605 ' + o.p2.stars.filter(sec => !hlOn(o.p2.u.id, sec)).length + ' to highlight' : unitDone(o.p2.u) ? ' — watched, ★ ' + hlLeft(o.p2.u.id).length + ' to highlight' : '') + ' (' + esc(dname(o.day).split(',')[0]) + ')').join(' · ')));
     const after = days.filter(x => x.day > today).slice(0, 5);
     if (after.length) { body.appendChild($('div', 'chead', 'Coming up')); after.forEach(x => body.appendChild(line(x, false))); }
     const ck = 'calendar:all', copen = !!libOpen[ck];
@@ -2241,7 +2296,7 @@ const DATA = {"player":"https://k-rown.github.io/wattz-jman/player.html","books"
               tog.addEventListener('click', e => { e.stopPropagation(); libOpen[sk] = !sopen; render(); });
               body.appendChild(tog);
               if (sopen) {
-                const sl = $('div', 'seclist');
+                const sl = $('div', 'seclist'); sl.dataset.stars = u.id;
                 const jumpBtn = (x, t) => {
                   t = t == null ? secs[x] : t;
                   const b2 = $('button', 'sec at', esc(x) + ' <span>' + hms(t) + '</span>'); b2.type = 'button';
