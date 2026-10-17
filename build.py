@@ -318,6 +318,19 @@ DATA = {
     # the book's own name for each of those sections, read off its headings (book_titles.py)
     # 2023 sections that carry another number in his 2020 book (moved2020.json)
     "moved": ({k: v for k, v in json.load(open("moved2020.json", encoding="utf-8")).items() if not k.startswith("_")} if __import__("os").path.exists("moved2020.json") else {}),
+    # THE WATCH LIST (2026-10-17): the videos that teach; every other article is read and
+    # highlighted from its ★ list. #watch=final puts it on his plan.
+    "watch": [
+        "23UNEC1Article300", "23UNEC1Article310", "23UNEC1Article314",
+        "23UNEC1Article334", "23UNEC1Article358", "23UNEC1Article352", "23UNEC1Article330", "23UNEC1Article344",
+        "23UNEC1Article406", "23UNEC1Article430",
+        "23UNECBGArticle250PartA", "23UNECBGArticle250PartB",
+        "GroundingandBondingServiceEquipment25024", "TransformerSeparatelyDerivedSystems25030",
+        "GeneratorSeparatelyDerivedSystems25030", "BuildingsSuppliedbyaFeeder25032",
+        "23UNECBGArticle680",
+        "23FundCalcChapter1", "23FundCalcChapter2", "23FundCalcChapter3", "23FundCalcChapter4", "23FundCalcChapter6",
+        "23EPChapter3Intro", "23EPUnit1", "23EPUnit2", "23EPUnit3edit", "23EPUnit4", "23EPUnit5", "23EPUnit6", "23EPOutro",
+    ],
     "sectitle": (json.load(open("book_titles.json", encoding="utf-8")) if __import__("os").path.exists("book_titles.json") else {}),
     # how often each section is the answer to a quiz or exam question (exam_refs.py)
     "tested": (json.load(open("exam_refs.json", encoding="utf-8")) if __import__("os").path.exists("exam_refs.json") else {}),
