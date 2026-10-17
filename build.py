@@ -316,6 +316,8 @@ DATA = {
     # every section Mike's book covers for a video's article, in book order (book_sections.py)
     "booksec": (json.load(open("book_sections.json", encoding="utf-8")) if __import__("os").path.exists("book_sections.json") else {}),
     # the book's own name for each of those sections, read off its headings (book_titles.py)
+    # 2023 sections that carry another number in his 2020 book (moved2020.json)
+    "moved": ({k: v for k, v in json.load(open("moved2020.json", encoding="utf-8")).items() if not k.startswith("_")} if __import__("os").path.exists("moved2020.json") else {}),
     "sectitle": (json.load(open("book_titles.json", encoding="utf-8")) if __import__("os").path.exists("book_titles.json") else {}),
     # how often each section is the answer to a quiz or exam question (exam_refs.py)
     "tested": (json.load(open("exam_refs.json", encoding="utf-8")) if __import__("os").path.exists("exam_refs.json") else {}),
