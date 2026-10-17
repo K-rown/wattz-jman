@@ -28,8 +28,23 @@ MAXLEN = 120
 
 def tidy(s):
     s = re.sub(r"\s+", " ", s.replace("\x03", " ")).strip()
+    s = re.sub(r"(?<=[a-z])- (?=[a-z])", "", s)         # "Replace- ments" was one word, broken at the line end
+    s = re.sub(r"(?<=[a-z])- (?=[A-Z])", "-", s)         # "Service- Entrance" was the hyphenated pair
     s = re.sub(r"\s*\.$", "", s)            # "(A) General." -> "General"
     return s[:MAXLEN].strip()
+
+
+def whole_fractions(lines):
+    """Set a heading's fraction (a slash with its small numerator and denominator spans) as one span."""
+    small = [r for r in lines if r[4] < 8 and r[6].isdigit()]
+    for r in [r for r in lines if r[6] == "⁄" and r[4] >= 8]:
+        nu = [q for q in small if q[0] == r[0] and abs(q[1] - r[1]) < 6 and 0 < r[2] - q[2] < 12]
+        de = [q for q in small if q[0] == r[0] and abs(q[1] - r[1]) < 6 and 0 < q[2] - r[2] < 12]
+        if nu and de:
+            used = (nu[0], de[0])
+            lines = [q for q in lines if not any(q is u for u in used)]
+            lines = [(*q[:6], nu[0][6] + "⁄" + de[0][6]) if q is r else q for q in lines]
+    return lines
 
 
 def titles(book, pages):
@@ -50,6 +65,7 @@ def titles(book, pages):
             sec = sub = None
             prev = art
         if not art: continue
+        lines = whole_fractions(lines)
         for col, y, x, font, size, color, t in lines:
             if y < 45 or y > 735: continue
             hea = font.endswith("-Hea")
@@ -58,11 +74,14 @@ def titles(book, pages):
             # same line or the line just under it
             if open_ and col == open_[1]:
                 same = abs(y - open_[2]) < 1.5
+                # an italic word in the heading ("of the NEC") rides on the same line
+                if same and (font.endswith("-HeaIta") if open_[4] == "sec" else font.endswith("-BolIta"))                         and abs(size - (12 if open_[4] == "sec" else 11)) < 0.3:
+                    open_[3].append(t); continue
                 below = 0 < y - open_[2] < 18
                 if open_[4] == "sec" and hea and 11.5 <= size < 13.5 and (same or below) and not bs.SEC.match(t):
                     open_[3].append(t); open_[2] = y; continue
                 if open_[4] == "sub" and bold and abs(size - 11) < 0.3 and color == bs.BODY \
-                        and (same or below) and not open_[3][-1].rstrip().endswith(".") \
+                        and (same or below) and (not open_[3] or not open_[3][-1].rstrip().endswith(".")) \
                         and not bs.LETTER.match(t) and not bs.NUMBER.match(t):
                     open_[3].append(t); open_[2] = y; continue
             if hea and size >= 11.5:
