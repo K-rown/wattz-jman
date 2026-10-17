@@ -324,12 +324,20 @@ DATA = {
         "23UNEC1Article300", "23UNEC1Article310", "23UNEC1Article314",
         "23UNEC1Article334", "23UNEC1Article358", "23UNEC1Article352", "23UNEC1Article330", "23UNEC1Article344",
         "23UNEC1Article406", "23UNEC1Article430",
+        "23UNEC1Article225", "23UNEC1Article408", "23UNEC1Article410",   # pole lights, panels, luminaires: his trade
         "23UNECBGArticle250PartA", "23UNECBGArticle250PartB",
         "GroundingandBondingServiceEquipment25024", "TransformerSeparatelyDerivedSystems25030",
         "GeneratorSeparatelyDerivedSystems25030", "BuildingsSuppliedbyaFeeder25032",
         "23UNECBGArticle680",
         "23FundCalcChapter1", "23FundCalcChapter2", "23FundCalcChapter3", "23FundCalcChapter4", "23FundCalcChapter6",
         "23EPChapter3Intro", "23EPUnit1", "23EPUnit2", "23EPUnit3edit", "23EPUnit4", "23EPUnit5", "23EPUnit6", "23EPOutro",
+    ],
+    # WORTH HEARING ON THE DRIVE: read-only articles whose video is his everyday work, or the
+    # Theory units that explain the why. Audio at 1.5x on the commute costs no desk time.
+    "drive": [
+        "23UNEC1Article110", "23UNEC1Article210", "23UNEC1Article230",
+        "23UNEC2Article590", "23UNEC2Article625", "23UNEC2Article700",
+        "ETC8U24", "ETC9U25", "ETC10U27", "ETC7U20",
     ],
     "sectitle": (json.load(open("book_titles.json", encoding="utf-8")) if __import__("os").path.exists("book_titles.json") else {}),
     # how often each section is the answer to a quiz or exam question (exam_refs.py)
