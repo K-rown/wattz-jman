@@ -360,7 +360,7 @@ DATA = {
             ],
             "rules": [
                 "Start at the top of Electrical Theory if you are new. The books are in the order Mike teaches them.",
-                "Bring a 2023 NEC code book and tab it as you watch. Tabs and highlights are the only things you can carry into the exam.",
+                "Bring your 2020 NEC code book (the Maryland exam uses 2020) and tab it as you watch. Tabs and highlights are the only things you can carry into the exam.",
                 "Do the calculations on paper before Mike shows the answer. Watching him do it is not the same as doing it.",
                 "Take the quiz before you move on, not at the end of the week. It is how you find out what you did not actually learn.",
                 "Go at your own speed. Nothing here is timed and nothing is late. Two videos one night and none the next is fine — what matters is that the quiz is taken before you move on.",
