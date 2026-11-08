@@ -61,12 +61,12 @@ def add(day, kind, title, **k):
     days.append(dict(day=day.isoformat(), kind=kind, title=title, **k))
 
 # ---- Sat Nov 7: the restart ----
-add(D(2026, 11, 7), "setup", "Restart: tabs, pace, the notebook",
-    steps=["Tab the 2020 code book: Ch 9 Table 1, 4, 5, 8; Annex C; Table 310.16; 310.15(B)(1) and (C)(1); 250.66; 250.122; 250.102(C)(1); 314.16; Table 220.55; 240.6; Table 430.52; 430.248 and 430.250; 450.3(B); the Index.",
-           "Read the Sim Exams book, Ch 2 How to Use the NEC (viewer p15–24) and Ch 4 test-taking tips (viewer p67–70).",
-           "The notebook is this page: every quiz you grade here keeps its misses, and the Notebook fold below collects them by article. Nothing to write out by hand."],
+add(D(2026, 11, 7), "setup", "Restart night",
+    steps=["Sim Exams book, Ch 2 How to Use the NEC: viewer p15\u201324. Read it once, 15 min.",
+           "Sim Exams book, Ch 4 test-taking tips: viewer p67\u201370. 5 min.",
+           "Your book is already tabbed. Nothing else tonight."],
     drill=quiz("Exam_Prep_Art_90", 1, 13), quiz=quiz("Exam_Prep_Module_II_Practice_Exam", 1, 20),
-    note="Light night. Tomorrow at 9 am is the baseline.")
+    note="Light night. Sim A tomorrow, 4 hours, start by 9 am.")
 
 # ---- the six Sunday sims, 100 questions, four hours ----
 SIMS = [
