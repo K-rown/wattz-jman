@@ -340,6 +340,9 @@ DATA = {
         "ETC8U24", "ETC9U25", "ETC10U27", "ETC7U20",
     ],
     "sectitle": (json.load(open("book_titles.json", encoding="utf-8")) if __import__("os").path.exists("book_titles.json") else {}),
+    # HIS SIX WEEKS (2026-11-07): the dated plan to the December exam, written by plan.py;
+    # #plan=six puts it on his record and the page draws it from this
+    "sixweeks": (json.load(open("sixweeks.json", encoding="utf-8")) if __import__("os").path.exists("sixweeks.json") else None),
     # how often each section is the answer to a quiz or exam question (exam_refs.py)
     "tested": (json.load(open("exam_refs.json", encoding="utf-8")) if __import__("os").path.exists("exam_refs.json") else {}),
     # what Mike's 2023 books mark as new or reworded since the 2020 code (book_changes.py)

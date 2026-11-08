@@ -41,6 +41,7 @@ The one-time copy link (`#p=`) is still there for when sync is off.
 ```
 python3 sections.py     # NEC section timestamps, from the captions and the slides
 python3 books.py        # quizzes and page numbers, out of the seven book PDFs
+python3 plan.py         # the six-week plan, sixweeks.json
 python3 build.py        # write index.html
 python3 check.py        # read the built page back and fail on anything wrong
 python3 pages.py        # open the books and prove every page number lands right
@@ -53,6 +54,7 @@ change, not on every push.
 | file | what it is |
 |---|---|
 | `curriculum.json` | the units, their books and chapters, and the day packing the migration reads |
+| `sixweeks.json` | Kymani's six weeks to the December exam, day by day, written by `plan.py`; `#plan=six` puts it on a device |
 | `videos.json` | all 169 videos: book, chapter, article, length, stream id |
 | `quizzes.json` | every quiz in the program, question by question, with the key |
 | `program.json` | each video's page in the book and the quiz that follows it |
