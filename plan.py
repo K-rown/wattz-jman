@@ -334,6 +334,7 @@ WEEKS = [
     ("Holding", "2026-12-20", "2027-01-10", "Only if the date comes later: a sim a Sunday, an hour a night"),
 ]
 out = {"id": "six", "title": "Six weeks to the exam", "start": "2026-11-07", "exam_week": "2026-12-14",
+       "chat": "https://claude.ai/code/session_01StANTDh1Xk6D1iJErq86dB",   # the Claude chat that keeps this plan: a press after grading lands back in it
        "exam": {"questions": 70, "minutes": 210, "pass": 49, "shape": "Theory 20 · Wiring & Protection (100–285) 20 · Wiring Methods (300–398) 12 · Equipment (400–490) 6 · Special Occupancies 4 · Special Equipment 2 · Communications (700–830) 6", "source": "PSI Maryland Master and Journeyperson Electrician bulletin, read 2026-11-07"},
        "ready": "Ready is both benchmarks (Dec 6 and Dec 13, in the exam's shape) at 80% or better. Both 74–79: sit it anyway and taper. Either under 72: move the date.",
        "offsets": OFF, "weeks": [dict(zip(("label", "from", "to", "theme"), w)) for w in WEEKS],
