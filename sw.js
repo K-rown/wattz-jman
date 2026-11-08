@@ -10,7 +10,7 @@
 // they are his; they stream when there is signal and say so plainly when there is not.
 //
 // V is rewritten by build.py on every build, so a new build replaces the old copy.
-const V = '2026110723485';
+const V = '2026110814335';
 const SHELL = [
   './',
   './index.html',

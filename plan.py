@@ -52,11 +52,12 @@ BLOCKS = {  # name: (low article, high article)
 def art_of(q):
     m = re.match(r"^(?:Table\s+)?(\d{3})(?:\.|\b)", q.get("ref") or "")
     return int(m.group(1)) if m else None
+ART2020 = set(json.load(open("nec2020_articles.json", encoding="utf-8"))["articles"]) | {460, 516, 640, 646, 650}
 POOL = collections.defaultdict(list)   # block -> [(key, n), ...] in bank order
 for key in BANKS:
     for q in Q[key]["questions"]:
         a = art_of(q)
-        if a is None: continue
+        if a is None or a not in ART2020: continue   # a 2023-only article is not on his exam
         for name, (lo, hi) in BLOCKS.items():
             if lo <= a <= hi: POOL[name].append((key, q["n"])); break
 USED = set()
@@ -179,11 +180,12 @@ W2 = [
      ["230.2 number of services, 230.6 outside a building, 230.9 clearances, 230.24 overhead clearances, 230.42 sizing, 230.43 wiring methods, 230.70–230.72 the disconnect, 230.79 ratings, 230.85 emergency disconnect, 230.90 overload protection.",
       "Highlight the whole article from its ★ list. Art 230 is three of the twenty Wiring & Protection questions."],
      pool_quiz("Art 215–230 · 20 timed", [("230", 15), ("215-225", 5)], 30), ["23UNEC1Article230"]),
-    ("Cables and raceways · 334, 358 and their neighbours",
-     [vid("23UNEC1Article334", 0, None, "Art 334 NM cable"), vid("23UNEC1Article358", 0, None, "Art 358 EMT")],
-     [pages("NEC Vol 1", 431, 440, "Art 334"), pages("NEC Vol 1", 497, 503, "Art 358")],
-     ["Highlight 334, 358 from their ★ lists; then read and highlight 320, 330, 344, 352 from theirs: uses permitted and not permitted, support spacing, bends. Twelve of the seventy are wiring methods, and they are almost all lookups."],
-     pool_quiz("Art 320–362 · 20 timed", [("320-330", 4), ("332-356", 11), ("358-374", 5)], 30), ["23UNEC1Article334", "23UNEC1Article358", "23UNEC1Article320", "23UNEC1Article330", "23UNEC1Article344", "23UNEC1Article352"]),
+    ("Theory I · Ohm's law, Watt's law, the formula wheel",
+     [vid("ETC5U12", 0, None, "Unit 12 Ohm's law"), vid("ETC5U13", 0, None, "Unit 13 Watt's law"), vid("ETC10U29", 0, None, "Unit 29 the formula wheel")],
+     [pages("Exam Prep", 19, 28, "Units 12–13"), pages("Exam Prep", 105, 107, "Unit 29")],
+     ["Sim #1 said theory 2 of 10, and theory is 20 of the 70 on the real exam. Pen and paper the whole hour: every example Mike works, you work first. E = I × R, P = E × I, and the wheel for the rest.",
+      "Also tonight, no video needed: highlight 320, 330, 334, 344, 352, 358 from their ★ lists (uses permitted and not, support spacing). Twelve of the seventy are wiring methods, and they are lookups."],
+     mix("Theory · Ohm's and Watt's law", [quiz("Exam_Prep_Unit_12", 1, 11), quiz("Exam_Prep_Unit_13", 1, 9)], 30), ["23UNEC1Article334", "23UNEC1Article358", "23UNEC1Article320", "23UNEC1Article330", "23UNEC1Article344", "23UNEC1Article352"]),
 ]
 for i, (title, video, pg, steps, q, stars) in enumerate(W2):
     add(D(2026, 11, 16) + dt.timedelta(days=i), "study", title, video=video, pages=pg, steps=steps, drill=drill(2, i), quiz=q, stars=stars)
@@ -200,9 +202,11 @@ W3 = [
     ("Voltage drop · the formula", [vid(U5, 0, None, "Unit 5 whole: circular mils, Table 8, 2KID/CM and the three-phase 1.732")],
      [pages("Exam Prep", 351, 364, "Unit 5")],
      ["Work six: three single-phase, three three-phase, in volts and in percent. 3% and 5% are informational notes under 210.19 and 215.2."], quiz("Exam_Prep_Unit_5", 1, 20)),
-    ("Voltage drop · sizing the conductor; Art 250 again (Thanksgiving, 60 min)", [],
-     [pages("Exam Prep", 360, 364, "5.7 and 5.8")],
-     ["CM = 2 × K × I × D ÷ VD, then up to the next Table 8 size. Distance is one way. Work four.", "Then redo every miss in the Missed questions fold, cold. Tonight's twenty are Art 250: two weeks on, does it hold?"], quiz("B&G_Art_250", 101, 120)),
+    ("Theory II · series and parallel circuits (Thanksgiving)",
+     [vid("ETC6U14", 0, None, "Unit 14 series circuits"), vid("ETC6U15", 0, None, "Unit 15 parallel circuits")],
+     [pages("Exam Prep", 31, 50, "Units 14–15")],
+     ["On paper: resistors in series add; in parallel 1/R = 1/R1 + 1/R2 + 1/R3, and equal resistors in parallel are R ÷ n (three 5 Ω in parallel is 1.66 Ω). Voltage divides across series resistors by their share of the resistance.",
+      "Voltage drop sizing from last night, four problems: CM = 2 × K × I × D ÷ VD, then up to the next Table 8 size."], quiz("Exam_Prep_Unit_14", 1, 20)),
     ("Conductor sizing · insulation, terminals, ampacity", [vid(U3, 0, 4431, "Unit 3, first half: 110.14(C), 240.4, Table 310.16, correction and adjustment")],
      [pages("Exam Prep", 283, 296, "Unit 3 Parts A and B to 3.9")],
      ["Work eight: pick from the 75°C column, then check against the corrected 90°C ampacity. In the 2020 book the insulation table is Table 310.4(A)."], quiz("Exam_Prep_Unit_3", 1, 20)),
@@ -232,8 +236,11 @@ W4 = [
      [pages("NEC Vol 1", 561, 575, "Art 422 and 424")],
      ["Highlight 422, 424, 440 from their ★ lists: 422.10, 422.11, 422.16 cords, 422.31 disconnects, 424.3, 440.4(B), 440.14. One transformer problem by Table 450.3(B) and that is enough transformers."],
      mix("Unit 4 AC and Art 422–427 · 20 timed", [quiz("Exam_Prep_Unit_4", 41, 55)] + ranges(take("422-427", 5)), 30), ["23UNEC1Article422", "23UNEC1Article424", "23UNEC1Article440"]),
-    ("Rework 240 / 310 / 430; finish the highlighting", [], [],
-     ["Redo every 240, 310, 430, 440 miss in the Missed questions fold, cold.", "Any ★ list on this page still open (225, 408, 410 included): close it tonight.", "Sim Exams book Ch 4 tips once more (printed p59–62). Tomorrow is benchmark 1."],
+    ("Theory III · AC, power factor, transformers",
+     [vid("ETC7U20", 0, None, "Unit 20 true power, power factor, apparent power"), vid("ETC8U24", 0, 2400, "Unit 24 transformers, the first 40 minutes: ratios, kVA, primary and secondary current")],
+     [pages("Exam Prep", 83, 93, "Unit 20"), pages("Exam Prep", 117, 123, "Unit 24")],
+     ["On paper: RMS = peak × 0.707; PF = W ÷ VA; I = VA ÷ (E × 1.732) for three-phase; a 4:1 transformer divides voltage by 4. Work every example before Mike does.",
+      "Then redo every 240, 310, 430 miss in the Missed questions fold, and close any ★ list still open (225, 408, 410). Tomorrow is benchmark 1."],
      quiz("Theory_Final_Exam", 1, 20), ["23UNEC1Article225", "23UNEC1Article408", "23UNEC1Article410"]),
 ]
 for i, (title, video, pg, steps, q, stars) in enumerate(W4):
@@ -243,7 +250,7 @@ for i, (title, video, pg, steps, q, stars) in enumerate(W4):
 W5 = [
     ("All sim misses, cold", r"^", "Every miss from Sims #1–#5. Redo them below without looking at the old answer; anything missed twice is red and comes back Saturday.",
      ["Lookup drill: shut the book, then find the section of each sim miss in under 60 seconds. Time every one."],
-     mix("Art 215–230 and 250 · 20 timed", ranges(take("215-225", 8)) + [quiz("B&G_Art_250", 161, 172)], 30)),
+     quiz("B&G_Art_250", 101, 120)),
     ("Article 250 misses", r"^(Table\s+)?250\.", "Every 250 miss. For each, read the whole section in the 2020 book, not just the line.",
      ["Lookup drill: the 250 sections in the notebook, 60 seconds each, then Table 250.66 and Table 250.122 blind."], quiz("B&G_Art_250", 121, 140)),
     ("220 and 314 misses", r"^(Table\s+)?(220|314)\.", "Every load-calc and box-fill miss. Then Exam Prep 6.13 and 6.2 once more, on paper.",
@@ -272,7 +279,7 @@ def md_mix(k, theory):
 SIM_STEPS = lambda mins: [
     "Start by 9 am. " + ("Four hours" if mins == 240 else "3½ hours") + " on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."]
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."]
 SIMS = [
     (D(2026, 11, 8), "Sim #1 · baseline", quiz("Simulated_Exams_Exam_A"), 240, "Mike's Exam A, 100 questions, 4 hours. Whatever the score, it is the starting line. On paper, note the clock at every tenth question: your real pace, from day one."),
     (D(2026, 11, 15), "Sim #2 · Maryland shape", md_mix(1, [quiz("Exam_Prep_Module_I_Practice_Exam", 1, 20)]), 210, "70 questions in PSI Maryland's own proportions, 3½ hours. 49 right passes the real one. The first 20 are theory: under 15 of them means theory joins every Saturday from here."),

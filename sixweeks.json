@@ -170,7 +170,7 @@
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -497,8 +497,8 @@
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 88,
-      "to": 90
+      "from": 80,
+      "to": 82
      },
      {
       "key": "Exam_Prep_Ch_2",
@@ -532,18 +532,18 @@
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 113,
-      "to": 113
+      "from": 109,
+      "to": 109
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 138,
-      "to": 140
+      "from": 127,
+      "to": 129
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 45,
-      "to": 45
+      "key": "Exam_Prep_Ch_3",
+      "from": 154,
+      "to": 154
      },
      {
       "key": "Exam_Prep_Ch_3",
@@ -597,8 +597,8 @@
      },
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 164,
-      "to": 166
+      "from": 185,
+      "to": 187
      }
     ],
     "name": "Maryland mix 1",
@@ -609,7 +609,7 @@
    "steps": [
     "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -851,46 +851,53 @@
   {
    "day": "2026-11-21",
    "kind": "study",
-   "title": "Cables and raceways · 334, 358 and their neighbours",
+   "title": "Theory I · Ohm's law, Watt's law, the formula wheel",
    "video": [
     {
-     "id": "23UNEC1Article334",
+     "id": "ETC5U12",
      "from": 0,
-     "to": 2257,
-     "say": "Art 334 NM cable"
+     "to": 2503,
+     "say": "Unit 12 Ohm's law"
     },
     {
-     "id": "23UNEC1Article358",
+     "id": "ETC5U13",
      "from": 0,
-     "to": 2415,
-     "say": "Art 358 EMT"
+     "to": 1159,
+     "say": "Unit 13 Watt's law"
+    },
+    {
+     "id": "ETC10U29",
+     "from": 0,
+     "to": 985,
+     "say": "Unit 29 the formula wheel"
     }
    ],
    "pages": [
     {
-     "book": "NEC Vol 1",
-     "printed": "431–440",
-     "viewer": "451–460",
-     "what": "Art 334",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
+     "book": "Exam Prep",
+     "printed": "19–28",
+     "viewer": "39–48",
+     "what": "Units 12–13",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     },
     {
-     "book": "NEC Vol 1",
-     "printed": "497–503",
-     "viewer": "517–523",
-     "what": "Art 358",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
+     "book": "Exam Prep",
+     "printed": "105–107",
+     "viewer": "125–127",
+     "what": "Unit 29",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Highlight 334, 358 from their ★ lists; then read and highlight 320, 330, 344, 352 from theirs: uses permitted and not permitted, support spacing, bends. Twelve of the seventy are wiring methods, and they are almost all lookups."
+    "Sim #1 said theory 2 of 10, and theory is 20 of the 70 on the real exam. Pen and paper the whole hour: every example Mike works, you work first. E = I × R, P = E × I, and the wheel for the rest.",
+    "Also tonight, no video needed: highlight 320, 330, 334, 344, 352, 358 from their ★ lists (uses permitted and not, support spacing). Twelve of the seventy are wiring methods, and they are lookups."
    ],
    "drill": {
     "mix": [
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 134,
-      "to": 148
+      "from": 155,
+      "to": 169
      }
     ],
     "name": "Lookup drill · Art 720–830",
@@ -899,22 +906,17 @@
    "quiz": {
     "mix": [
      {
-      "key": "Exam_Prep_Ch_3",
-      "from": 106,
-      "to": 109
+      "key": "Exam_Prep_Unit_12",
+      "from": 1,
+      "to": 11
      },
      {
-      "key": "Exam_Prep_Ch_3",
-      "from": 115,
-      "to": 125
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 151,
-      "to": 155
+      "key": "Exam_Prep_Unit_13",
+      "from": 1,
+      "to": 9
      }
     ],
-    "name": "Art 320–362 · 20 timed",
+    "name": "Theory · Ohm's and Watt's law",
     "minutes": 30
    },
    "stars": [
@@ -938,7 +940,7 @@
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -1056,13 +1058,13 @@
     "mix": [
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 110,
-      "to": 112
+      "from": 106,
+      "to": 108
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 126,
-      "to": 137
+      "from": 115,
+      "to": 126
      }
     ],
     "name": "Lookup drill · Art 320–356",
@@ -1078,20 +1080,33 @@
   {
    "day": "2026-11-26",
    "kind": "study",
-   "title": "Voltage drop · sizing the conductor; Art 250 again (Thanksgiving, 60 min)",
-   "video": [],
+   "title": "Theory II · series and parallel circuits (Thanksgiving)",
+   "video": [
+    {
+     "id": "ETC6U14",
+     "from": 0,
+     "to": 2482,
+     "say": "Unit 14 series circuits"
+    },
+    {
+     "id": "ETC6U15",
+     "from": 0,
+     "to": 2429,
+     "say": "Unit 15 parallel circuits"
+    }
+   ],
    "pages": [
     {
      "book": "Exam Prep",
-     "printed": "360–364",
-     "viewer": "380–384",
-     "what": "5.7 and 5.8",
+     "printed": "31–50",
+     "viewer": "51–70",
+     "what": "Units 14–15",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "CM = 2 × K × I × D ÷ VD, then up to the next Table 8 size. Distance is one way. Work four.",
-    "Then redo every miss in the Missed questions fold, cold. Tonight's twenty are Art 250: two weeks on, does it hold?"
+    "On paper: resistors in series add; in parallel 1/R = 1/R1 + 1/R2 + 1/R3, and equal resistors in parallel are R ÷ n (three 5 Ω in parallel is 1.66 Ω). Voltage divides across series resistors by their share of the resistance.",
+    "Voltage drop sizing from last night, four problems: CM = 2 × K × I × D ÷ VD, then up to the next Table 8 size."
    ],
    "drill": {
     "mix": [
@@ -1105,9 +1120,7 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "B&G_Art_250",
-    "from": 101,
-    "to": 120
+    "key": "Exam_Prep_Unit_14"
    },
    "stars": []
   },
@@ -1228,8 +1241,8 @@
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 91,
-      "to": 93
+      "from": 83,
+      "to": 85
      },
      {
       "key": "Exam_Prep_Ch_2",
@@ -1268,18 +1281,18 @@
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 114,
-      "to": 114
+      "from": 110,
+      "to": 110
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 141,
-      "to": 143
+      "from": 130,
+      "to": 132
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 46,
-      "to": 46
+      "key": "Exam_Prep_Ch_3",
+      "from": 155,
+      "to": 155
      },
      {
       "key": "Exam_Prep_Ch_3",
@@ -1333,8 +1346,8 @@
      },
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 167,
-      "to": 169
+      "from": 188,
+      "to": 190
      }
     ],
     "name": "Maryland mix 2",
@@ -1345,7 +1358,7 @@
    "steps": [
     "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -1483,7 +1496,12 @@
     "mix": [
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 156,
+      "from": 151,
+      "to": 153
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 159,
       "to": 170
      }
     ],
@@ -1624,20 +1642,47 @@
   {
    "day": "2026-12-05",
    "kind": "study",
-   "title": "Rework 240 / 310 / 430; finish the highlighting",
-   "video": [],
-   "pages": [],
+   "title": "Theory III · AC, power factor, transformers",
+   "video": [
+    {
+     "id": "ETC7U20",
+     "from": 0,
+     "to": 3121,
+     "say": "Unit 20 true power, power factor, apparent power"
+    },
+    {
+     "id": "ETC8U24",
+     "from": 0,
+     "to": 2400,
+     "say": "Unit 24 transformers, the first 40 minutes: ratios, kVA, primary and secondary current"
+    }
+   ],
+   "pages": [
+    {
+     "book": "Exam Prep",
+     "printed": "83–93",
+     "viewer": "103–113",
+     "what": "Unit 20",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
+    },
+    {
+     "book": "Exam Prep",
+     "printed": "117–123",
+     "viewer": "137–143",
+     "what": "Unit 24",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
+    }
+   ],
    "steps": [
-    "Redo every 240, 310, 430, 440 miss in the Missed questions fold, cold.",
-    "Any ★ list on this page still open (225, 408, 410 included): close it tonight.",
-    "Sim Exams book Ch 4 tips once more (printed p59–62). Tomorrow is benchmark 1."
+    "On paper: RMS = peak × 0.707; PF = W ÷ VA; I = VA ÷ (E × 1.732) for three-phase; a 4:1 transformer divides voltage by 4. Work every example before Mike does.",
+    "Then redo every 240, 310, 430 miss in the Missed questions fold, and close any ★ list still open (225, 408, 410). Tomorrow is benchmark 1."
    ],
    "drill": {
     "mix": [
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 149,
-      "to": 163
+      "from": 170,
+      "to": 184
      }
     ],
     "name": "Lookup drill · Art 720–830",
@@ -1682,8 +1727,8 @@
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 94,
-      "to": 96
+      "from": 86,
+      "to": 88
      },
      {
       "key": "NEC_Vol_1_Ch_2",
@@ -1726,19 +1771,19 @@
       "to": 103
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 24,
-      "to": 24
+      "key": "Exam_Prep_Ch_3",
+      "from": 111,
+      "to": 111
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 144,
-      "to": 146
+      "from": 133,
+      "to": 135
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 47,
-      "to": 47
+      "key": "Exam_Prep_Ch_3",
+      "from": 156,
+      "to": 156
      },
      {
       "key": "Exam_Prep_Ch_3",
@@ -1792,8 +1837,8 @@
      },
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 170,
-      "to": 172
+      "from": 191,
+      "to": 193
      }
     ],
     "name": "Maryland mix 3",
@@ -1804,7 +1849,7 @@
    "steps": [
     "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -1820,20 +1865,9 @@
     "Lookup drill: shut the book, then find the section of each sim miss in under 60 seconds. Time every one."
    ],
    "quiz": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 80,
-      "to": 87
-     },
-     {
-      "key": "B&G_Art_250",
-      "from": 161,
-      "to": 172
-     }
-    ],
-    "name": "Art 215–230 and 250 · 20 timed",
-    "minutes": 30
+    "key": "B&G_Art_250",
+    "from": 101,
+    "to": 120
    },
    "video": [],
    "stars": [],
@@ -1968,8 +2002,8 @@
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 97,
-      "to": 99
+      "from": 89,
+      "to": 91
      },
      {
       "key": "NEC_Vol_1_Ch_2",
@@ -2002,19 +2036,19 @@
       "to": 104
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 25,
-      "to": 25
+      "key": "Exam_Prep_Ch_3",
+      "from": 112,
+      "to": 112
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 147,
-      "to": 149
+      "from": 136,
+      "to": 138
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 48,
-      "to": 48
+      "key": "Exam_Prep_Ch_3",
+      "from": 157,
+      "to": 157
      },
      {
       "key": "Exam_Prep_Ch_3",
@@ -2073,8 +2107,8 @@
      },
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 173,
-      "to": 175
+      "from": 194,
+      "to": 196
      }
     ],
     "name": "Maryland mix 4",
@@ -2085,7 +2119,7 @@
    "steps": [
     "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -2169,7 +2203,7 @@
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -2281,7 +2315,7 @@
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -2393,7 +2427,7 @@
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
@@ -2519,7 +2553,7 @@
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
     "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
    ],
    "video": [],
    "stars": [],
