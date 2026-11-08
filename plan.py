@@ -113,8 +113,8 @@ def add(day, kind, title, **k):
 
 # ---- Sat Nov 7: the restart ----
 add(D(2026, 11, 7), "setup", "Restart night",
-    steps=["Sim Exams book, Ch 2 How to Use the NEC: viewer p15–24. Read it once, 15 min.",
-           "Sim Exams book, Ch 4 test-taking tips: viewer p67–70. 5 min.",
+    steps=["Sim Exams book, Ch 2 How to Use the NEC (printed p7–8). Read it once, 15 min.",
+           "Sim Exams book, Ch 4 test-taking tips (printed p59–62). 5 min.",
            "Check the code book against PSI's rules: tabs must be permanent plastic (Avery Swift Tabs or Redi-Tag), not Post-it flags; highlighter is fine, pen anywhere in the book is not; nothing loose inside."],
     drill=quiz("Exam_Prep_Art_90", 1, 13), quiz=quiz("Exam_Prep_Module_II_Practice_Exam", 1, 20),
     note="Light night. Sim A tomorrow, 4 hours, start by 9 am.")
@@ -233,7 +233,7 @@ W4 = [
      ["Highlight 422, 424, 440 from their ★ lists: 422.10, 422.11, 422.16 cords, 422.31 disconnects, 424.3, 440.4(B), 440.14. One transformer problem by Table 450.3(B) and that is enough transformers."],
      mix("Unit 4 AC and Art 422–427 · 20 timed", [quiz("Exam_Prep_Unit_4", 41, 55)] + ranges(take("422-427", 5)), 30), ["23UNEC1Article422", "23UNEC1Article424", "23UNEC1Article440"]),
     ("Rework 240 / 310 / 430; finish the highlighting", [], [],
-     ["Redo every 240, 310, 430, 440 miss in the Missed questions fold, cold.", "Any ★ list on this page still open (225, 408, 410 included): close it tonight.", "Sim Exams book Ch 4 tips once more (viewer p67–70). Tomorrow is benchmark 1."],
+     ["Redo every 240, 310, 430, 440 miss in the Missed questions fold, cold.", "Any ★ list on this page still open (225, 408, 410 included): close it tonight.", "Sim Exams book Ch 4 tips once more (printed p59–62). Tomorrow is benchmark 1."],
      quiz("Theory_Final_Exam", 1, 20), ["23UNEC1Article225", "23UNEC1Article408", "23UNEC1Article410"]),
 ]
 for i, (title, video, pg, steps, q, stars) in enumerate(W4):
@@ -290,7 +290,7 @@ for i, (title, steps) in enumerate([
     ("Taper, one hour", ["Same. Rework only what is still red in the Missed questions fold."]),
     ("Taper, one hour", ["Same. Call PSI once: calculator rules (the bulletin does not say), arrival time, what ID they want. Use that calculator on every quiz from today."]),
     ("Taper, one hour", ["Lookup drill only. Pack: the 2020 NEC, tabbed with permanent plastic tabs only (no Post-it flags, no paper inserts, nothing written in it, nothing loose), two forms of ID with the name on the application, the PSI confirmation."]),
-    ("Night before", ["Sim Exams book Ch 4 (viewer p67–70). Nothing else. No swim in the morning, or a short easy one done two hours before the slot. In bed early."]),
+    ("Night before", ["Sim Exams book Ch 4 (printed p59–62). Nothing else. No swim in the morning, or a short easy one done two hours before the slot. In bed early."]),
     ("Exam day", ["Breakfast. Arrive 30 minutes early. Read every question twice before touching the book. Flag the long ones and come back. 49 right is a pass."]),
 ]):
     add(D(2026, 12, 14) + dt.timedelta(days=i), "taper", title, steps=steps)
