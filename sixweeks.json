@@ -3,6 +3,13 @@
  "title": "Six weeks to the exam",
  "start": "2026-11-07",
  "exam_week": "2026-12-14",
+ "exam": {
+  "questions": 70,
+  "minutes": 210,
+  "pass": 49,
+  "shape": "Theory 20 · Wiring & Protection (100–285) 20 · Wiring Methods (300–398) 12 · Equipment (400–490) 6 · Special Occupancies 4 · Special Equipment 2 · Communications (700–830) 6",
+  "source": "PSI Maryland Master and Journeyperson Electrician bulletin, read 2026-11-07"
+ },
  "offsets": {
   "NEC Vol 1": 20,
   "B&G": 14,
@@ -152,11 +159,12 @@
    "quiz": {
     "key": "Simulated_Exams_Exam_A"
    },
-   "note": "Whatever the score, this is the starting line. Sort the misses by article in the Notebook fold tonight: that list is what the five weeks attack.",
+   "minutes": 240,
+   "note": "Mike's Exam A, 100 questions, 4 hours. Whatever the score, it is the starting line.",
    "steps": [
-    "Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-    "Answer every question; flag the long calculations and come back to them.",
-    "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."
+    "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
+    "Answer every question; flag the long ones and come back.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."
    ],
    "video": [],
    "stars": [],
@@ -403,23 +411,72 @@
     "to": 15
    },
    "quiz": {
-    "key": "B&G_Art_250",
-    "from": 101,
-    "to": 120
+    "key": "Exam_Prep_Unit_10",
+    "from": 1,
+    "to": 20
    }
   },
   {
    "day": "2026-11-15",
    "kind": "sim",
-   "title": "Sim #2",
+   "title": "Sim #2 · Maryland shape",
    "quiz": {
-    "key": "NEC_Vol_1_Final_Exam_A"
+    "mix": [
+     {
+      "key": "Theory_Final_Exam",
+      "from": 1,
+      "to": 20
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 69,
+      "to": 72
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 244,
+      "to": 259
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 166,
+      "to": 177
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 125,
+      "to": 130
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 1,
+      "to": 4
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 1,
+      "to": 2
+     },
+     {
+      "key": "NEC_Vol_2_Ch_7",
+      "from": 1,
+      "to": 4
+     },
+     {
+      "key": "NEC_Vol_2_Ch_8",
+      "from": 1,
+      "to": 2
+     }
+    ],
+    "name": "Maryland mix 1",
+    "minutes": 210
    },
-   "note": "Code-wide, straight Code order. Count the Art 250 misses against Sim #1.",
+   "minutes": 210,
+   "note": "70 questions in PSI Maryland's own proportions: 20 theory, 20 wiring and protection, 12 wiring methods, 6 equipment, 12 from Chapters 5–8. 3½ hours, like the real one. 49 right passes.",
    "steps": [
-    "Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-    "Answer every question; flag the long calculations and come back to them.",
-    "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."
+    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
+    "Answer every question; flag the long ones and come back.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."
    ],
    "video": [],
    "stars": [],
@@ -588,9 +645,9 @@
     "Work example 7.2 and one six-unit building the standard way."
    ],
    "drill": {
-    "key": "Exam_Prep_Ch_5",
-    "from": 16,
-    "to": 30
+    "key": "Exam_Prep_Ch_6",
+    "from": 1,
+    "to": 15
    },
    "quiz": {
     "key": "Exam_Prep_Unit_6",
@@ -615,17 +672,28 @@
    ],
    "steps": [
     "Lighting by occupancy (2020: Table 220.12), lighting demand (2020: 220.42), receptacles 180 VA and the demand in 2020's 220.44, show windows 200 VA/ft, sign 1,200 VA, kitchen equipment 220.56, the office example 8.9.",
-    "Copy the 2020 crosswalk at the foot of this card onto an index card and keep it in the code book. Then redo the week's calc misses in the Notebook fold."
+    "Pencil the 2020 numbers from the crosswalk into the Exam Prep margins (nothing loose goes into the code book at PSI). Then redo the week's calc misses in the Notebook fold."
    ],
    "drill": {
-    "key": "Exam_Prep_Ch_7",
-    "from": 16,
-    "to": 30
+    "key": "Exam_Prep_Ch_8",
+    "from": 1,
+    "to": 15
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_8",
-    "from": 1,
-    "to": 20
+    "mix": [
+     {
+      "key": "Exam_Prep_Unit_12",
+      "from": 1,
+      "to": 11
+     },
+     {
+      "key": "Exam_Prep_Unit_13",
+      "from": 1,
+      "to": 9
+     }
+    ],
+    "name": "Ohm's law and Watt's law",
+    "minutes": 30
    },
    "stars": []
   },
@@ -634,13 +702,14 @@
    "kind": "sim",
    "title": "Sim #3",
    "quiz": {
-    "key": "Calcs_Calcs_Final_Exam"
+    "key": "NEC_Vol_1_Final_Exam_A"
    },
-   "note": "All calculations. Expect it to hurt. The Notebook keeps every miss with its section.",
+   "minutes": 240,
+   "note": "Code-wide, 100 questions, straight Code order.",
    "steps": [
-    "Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-    "Answer every question; flag the long calculations and come back to them.",
-    "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."
+    "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
+    "Answer every question; flag the long ones and come back.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."
    ],
    "video": [],
    "stars": [],
@@ -810,8 +879,8 @@
    ],
    "drill": {
     "key": "Exam_Prep_Ch_5",
-    "from": 31,
-    "to": 45
+    "from": 16,
+    "to": 30
    },
    "quiz": {
     "key": "Exam_Prep_Unit_3",
@@ -846,28 +915,77 @@
    ],
    "drill": {
     "key": "Exam_Prep_Ch_7",
-    "from": 31,
-    "to": 45
+    "from": 16,
+    "to": 30
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_3",
-    "from": 21,
-    "to": 40
+    "key": "Exam_Prep_Unit_14",
+    "from": 1,
+    "to": 20
    },
    "stars": []
   },
   {
    "day": "2026-11-29",
    "kind": "sim",
-   "title": "Sim #4",
+   "title": "Sim #4 · Maryland shape",
    "quiz": {
-    "key": "Exam_Prep_Module_II_Practice_Exam"
+    "mix": [
+     {
+      "key": "Theory_Final_Exam",
+      "from": 21,
+      "to": 40
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 65,
+      "to": 68
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 228,
+      "to": 243
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 154,
+      "to": 165
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 119,
+      "to": 124
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 5,
+      "to": 8
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 3,
+      "to": 4
+     },
+     {
+      "key": "NEC_Vol_2_Ch_7",
+      "from": 5,
+      "to": 8
+     },
+     {
+      "key": "NEC_Vol_2_Ch_8",
+      "from": 3,
+      "to": 4
+     }
+    ],
+    "name": "Maryland mix 2",
+    "minutes": 210
    },
-   "note": "Code-wide. You did Q1–20 on Nov 7; sit all 100 again, timed.",
+   "minutes": 210,
+   "note": "70 questions, 3½ hours, Maryland's proportions, none seen before.",
    "steps": [
-    "Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-    "Answer every question; flag the long calculations and come back to them.",
-    "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."
+    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
+    "Answer every question; flag the long ones and come back.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."
    ],
    "video": [],
    "stars": [],
@@ -942,8 +1060,8 @@
    },
    "quiz": {
     "key": "Exam_Prep_Unit_3",
-    "from": 41,
-    "to": 60
+    "from": 21,
+    "to": 40
    },
    "stars": [
     "23UNEC1Article310"
@@ -1073,9 +1191,9 @@
     "Work three transformer problems: primary breaker by Table 450.3(B), secondary conductor, secondary conductor by 240.21(C)(6). Highlight 440.4(B), 440.22, Table 450.3(B)."
    ],
    "drill": {
-    "key": "Exam_Prep_Ch_5",
-    "from": 46,
-    "to": 59
+    "key": "Exam_Prep_Ch_6",
+    "from": 16,
+    "to": 30
    },
    "quiz": {
     "key": "Exam_Prep_Unit_4",
@@ -1100,11 +1218,11 @@
    ],
    "drill": {
     "key": "Exam_Prep_Ch_8",
-    "from": 1,
-    "to": 15
+    "from": 16,
+    "to": 30
    },
    "quiz": {
-    "key": "NEC_Vol_1_Ch_4",
+    "key": "Exam_Prep_Unit_15",
     "from": 1,
     "to": 20
    },
@@ -1121,11 +1239,12 @@
    "quiz": {
     "key": "Simulated_Exams_Exam_B"
    },
-   "note": "80 or better. The first of the two scores that say ready.",
+   "minutes": 240,
+   "note": "Mike's Exam B. 80 or better: the first of the two scores that say ready.",
    "steps": [
-    "Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-    "Answer every question; flag the long calculations and come back to them.",
-    "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."
+    "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
+    "Answer every question; flag the long ones and come back.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."
    ],
    "video": [],
    "stars": [],
@@ -1142,8 +1261,8 @@
    ],
    "quiz": {
     "key": "B&G_Art_250",
-    "from": 121,
-    "to": 140
+    "from": 101,
+    "to": 120
    },
    "video": [],
    "stars": [],
@@ -1160,8 +1279,8 @@
    ],
    "quiz": {
     "key": "B&G_Art_250",
-    "from": 141,
-    "to": 160
+    "from": 121,
+    "to": 140
    },
    "video": [],
    "stars": [],
@@ -1178,8 +1297,8 @@
    ],
    "quiz": {
     "key": "B&G_Art_250",
-    "from": 161,
-    "to": 172
+    "from": 141,
+    "to": 160
    },
    "video": [],
    "stars": [],
@@ -1195,9 +1314,9 @@
     "Lookup drill: Ch 9 Tables 1, 4, 5, 8, Annex C, Table 310.16, 310.15(B)(1), 310.15(C)(1), blind and timed."
    ],
    "quiz": {
-    "key": "Exam_Prep_Unit_1",
-    "from": 41,
-    "to": 59
+    "key": "B&G_Art_250",
+    "from": 161,
+    "to": 172
    },
    "video": [],
    "stars": [],
@@ -1231,9 +1350,9 @@
     "Lookup drill: twenty random index words from the 2020 book, 60 seconds each."
    ],
    "quiz": {
-    "key": "NEC_Vol_1_Ch_2",
-    "from": 41,
-    "to": 50
+    "key": "Exam_Prep_Unit_20",
+    "from": 1,
+    "to": 20
    },
    "video": [],
    "stars": [],
@@ -1244,13 +1363,62 @@
    "kind": "sim",
    "title": "Sim #6 · benchmark 2",
    "quiz": {
-    "key": "NEC_Vol_1_Final_Exam_B"
+    "mix": [
+     {
+      "key": "Theory_Final_Exam",
+      "from": 41,
+      "to": 60
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 61,
+      "to": 64
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 212,
+      "to": 227
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 142,
+      "to": 153
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 113,
+      "to": 118
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 9,
+      "to": 12
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 5,
+      "to": 6
+     },
+     {
+      "key": "NEC_Vol_2_Ch_7",
+      "from": 9,
+      "to": 12
+     },
+     {
+      "key": "NEC_Vol_2_Ch_8",
+      "from": 5,
+      "to": 6
+     }
+    ],
+    "name": "Maryland mix 3",
+    "minutes": 210
    },
-   "note": "80 or better. Two in a row and you book the exam. Under 80: the notebook week again, and the date moves.",
+   "minutes": 210,
+   "note": "70 questions, 3½ hours, the exam's shape. 80 or better. Two in a row and you book it; under 80, the notebook week again and the date moves.",
    "steps": [
-    "Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-    "Answer every question; flag the long calculations and come back to them.",
-    "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."
+    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
+    "Answer every question; flag the long ones and come back.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."
    ],
    "video": [],
    "stars": [],
@@ -1294,7 +1462,7 @@
    "kind": "taper",
    "title": "Taper, one hour",
    "steps": [
-    "Lookup drill only. Pack: 2020 NEC tabbed and highlighted, approved calculator, two forms of ID, the PSI confirmation."
+    "Lookup drill only. Pack: the 2020 NEC, tabbed with permanent plastic tabs only (Avery Swift Tabs or Redi-Tag; no Post-it flags, no paper inserts, nothing written in it, nothing loose), two forms of ID, the PSI confirmation."
    ],
    "video": [],
    "stars": [],

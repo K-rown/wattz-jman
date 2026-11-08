@@ -39,6 +39,23 @@ def quiz(key, lo=None, hi=None):
     if lo is None: return {"key": key}
     assert 1 <= lo <= hi <= n, (key, lo, hi, n)
     return {"key": key, "from": lo, "to": hi}
+def mix(name, k, minutes):
+    """70 questions in PSI Maryland's own proportions, from Mike's banks, no two sims sharing a question:
+    theory 20, wiring and protection 20, wiring methods 12, equipment 6, Ch 5 4, Ch 6 2, Ch 7–8 6."""
+    parts = []
+    def take(key, n, from_end=False):
+        N = len(Q[key]["questions"])
+        lo = (N - k * n + 1) if from_end else ((k - 1) * n + 1)
+        assert 1 <= lo and lo + n - 1 <= N, (key, k, n, N)
+        parts.append({"key": key, "from": lo, "to": lo + n - 1})
+    take("Theory_Final_Exam", 20)
+    take("Exam_Prep_Ch_1", 4, True); take("Exam_Prep_Ch_2", 16, True)
+    take("Exam_Prep_Ch_3", 12, True)
+    take("Exam_Prep_Ch_4", 6, True)
+    take("NEC_Vol_2_Ch_5", 4); take("NEC_Vol_2_Ch_6", 2); take("NEC_Vol_2_Ch_7", 4); take("NEC_Vol_2_Ch_8", 2)
+    assert sum(x["to"] - x["from"] + 1 for x in parts) == 70
+    return {"mix": parts, "name": name, "minutes": minutes}
+
 def vid(id_, frm=0, to=None, say=""):
     assert id_ in V, id_
     return {"id": id_, "from": int(frm), "to": int(to if to is not None else dur(id_)), "say": say}
@@ -46,11 +63,11 @@ def vid(id_, frm=0, to=None, say=""):
 # the lookup drill: fifteen of Mike's Exam Prep NEC practice questions, code book only,
 # 90 seconds each. One chapter a night, the week's fifteen moving on each week.
 CH_N = {c: len(Q[f"Exam_Prep_Ch_{c}"]["questions"]) for c in range(1, 9)}
-ROT = [1, 2, 3, 4, 5, 7]
+ROT = {1: [1, 2, 3, 4, 5, 7], 2: [1, 2, 3, 4, 6, 8], 3: [1, 2, 3, 4, 5, 7], 4: [1, 2, 3, 4, 6, 8]}
 def drill(week, dow):
-    ch = ROT[dow]
+    ch = ROT[week][dow]
     lo = 15 * (week - 1) + 1
-    if week == 4 and dow == 5: ch, lo = 8, 1
+    if ch in (5, 6, 7, 8): lo = 15 * ((week - 1) // 2) + 1   # each of 5–8 is drilled twice, not four times
     hi = min(lo + 14, CH_N[ch])
     return quiz(f"Exam_Prep_Ch_{ch}", lo, hi)
 
@@ -70,18 +87,18 @@ add(D(2026, 11, 7), "setup", "Restart night",
 
 # ---- the six Sunday sims, 100 questions, four hours ----
 SIMS = [
-    (D(2026, 11, 8), "Sim #1 · baseline", "Simulated_Exams_Exam_A", "Whatever the score, this is the starting line. Sort the misses by article in the Notebook fold tonight: that list is what the five weeks attack."),
-    (D(2026, 11, 15), "Sim #2", "NEC_Vol_1_Final_Exam_A", "Code-wide, straight Code order. Count the Art 250 misses against Sim #1."),
-    (D(2026, 11, 22), "Sim #3", "Calcs_Calcs_Final_Exam", "All calculations. Expect it to hurt. The Notebook keeps every miss with its section."),
-    (D(2026, 11, 29), "Sim #4", "Exam_Prep_Module_II_Practice_Exam", "Code-wide. You did Q1–20 on Nov 7; sit all 100 again, timed."),
-    (D(2026, 12, 6), "Sim #5 · benchmark 1", "Simulated_Exams_Exam_B", "80 or better. The first of the two scores that say ready."),
-    (D(2026, 12, 13), "Sim #6 · benchmark 2", "NEC_Vol_1_Final_Exam_B", "80 or better. Two in a row and you book the exam. Under 80: the notebook week again, and the date moves."),
+    (D(2026, 11, 8), "Sim #1 · baseline", quiz("Simulated_Exams_Exam_A"), 240, "Mike's Exam A, 100 questions, 4 hours. Whatever the score, it is the starting line."),
+    (D(2026, 11, 15), "Sim #2 · Maryland shape", mix("Maryland mix 1", 1, 210), 210, "70 questions in PSI Maryland's own proportions: 20 theory, 20 wiring and protection, 12 wiring methods, 6 equipment, 12 from Chapters 5–8. 3½ hours, like the real one. 49 right passes."),
+    (D(2026, 11, 22), "Sim #3", quiz("NEC_Vol_1_Final_Exam_A"), 240, "Code-wide, 100 questions, straight Code order."),
+    (D(2026, 11, 29), "Sim #4 · Maryland shape", mix("Maryland mix 2", 2, 210), 210, "70 questions, 3½ hours, Maryland's proportions, none seen before."),
+    (D(2026, 12, 6), "Sim #5 · benchmark 1", quiz("Simulated_Exams_Exam_B"), 240, "Mike's Exam B. 80 or better: the first of the two scores that say ready."),
+    (D(2026, 12, 13), "Sim #6 · benchmark 2", mix("Maryland mix 3", 3, 210), 210, "70 questions, 3½ hours, the exam's shape. 80 or better. Two in a row and you book it; under 80, the notebook week again and the date moves."),
 ]
-for day, title, key, note in SIMS:
-    add(day, "sim", title, quiz=quiz(key), note=note,
-        steps=["Start by 9 am. Four hours on the timer below, 2020 code book only, phone face down.",
-               "Answer every question; flag the long calculations and come back to them.",
-               "Grade when time is called, not before. Then read every miss and press Rewatch where it offers one."])
+for day, title, q, mins, note in SIMS:
+    add(day, "sim", title, quiz=q, minutes=mins, note=note,
+        steps=["Start by 9 am. " + ("Four hours" if mins == 240 else "3½ hours") + " on the clock, 2020 code book only, phone face down.",
+               "Answer every question; flag the long ones and come back.",
+               "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one."])
 
 # ---- Week 1 · Article 250 · the Bonding & Grounding videos, at 1.5x ----
 A, B = "23UNECBGArticle250PartA", "23UNECBGArticle250PartB"
@@ -118,7 +135,7 @@ W1 = [
      [vid(B, sec(B, "250.109"), None, "250.109 to 250.148: what counts as an EGC, Table 250.122, receptacles, boxes")],
      [pages("B&G", 186, 201, "Parts VI and VII")],
      ["Work ten Table 250.122 problems, including the proportional upsizing in (B). 250.140 in your 2020 book is the main paragraph and its exception, not an (A). Then redo every 250 miss from Sim #1 in the Notebook fold."],
-     quiz("B&G_Art_250", 101, 120)),
+     quiz("Exam_Prep_Unit_10", 1, 20)),
 ]
 for i, (title, video, pg, steps, q) in enumerate(W1):
     add(D(2026, 11, 9) + dt.timedelta(days=i), "study", title, video=video, stars=[A] if i < 4 else [B], pages=pg, steps=steps, drill=drill(1, i), quiz=q)
@@ -145,8 +162,8 @@ W2 = [
     ("Commercial loads · 220 Part III", [],
      [pages("Exam Prep", 435, 447, "Unit 8 Parts A and B, no video: read it")],
      ["Lighting by occupancy (2020: Table 220.12), lighting demand (2020: 220.42), receptacles 180 VA and the demand in 2020's 220.44, show windows 200 VA/ft, sign 1,200 VA, kitchen equipment 220.56, the office example 8.9.",
-      "Copy the 2020 crosswalk at the foot of this card onto an index card and keep it in the code book. Then redo the week's calc misses in the Notebook fold."],
-     quiz("Exam_Prep_Unit_8", 1, 20)),
+      "Pencil the 2020 numbers from the crosswalk into the Exam Prep margins (nothing loose goes into the code book at PSI). Then redo the week's calc misses in the Notebook fold."],
+     {"mix": [quiz("Exam_Prep_Unit_12", 1, 11), quiz("Exam_Prep_Unit_13", 1, 9)], "name": "Ohm's law and Watt's law", "minutes": 30}),
 ]
 for i, (title, video, pg, steps, q) in enumerate(W2):
     add(D(2026, 11, 16) + dt.timedelta(days=i), "study", title, video=video, pages=pg, steps=steps, drill=drill(2, i), quiz=q)
@@ -171,7 +188,7 @@ W3 = [
      ["Work eight: pick from the 75°C column, then check against the corrected 90°C ampacity. In the 2020 book the insulation table is Table 310.4(A)."], quiz("Exam_Prep_Unit_3", 1, 20)),
     ("Conductor sizing · branch circuits, feeders, taps", [vid(U3, 4431, None, "Unit 3, second half: 210.19, 210.20, 215.2, 215.3, the tap rules of 240.21(B)")],
      [pages("Exam Prep", 297, 306, "3.10–3.16")],
-     ["Highlight 210.19(A)(1), 210.20(A), 215.2(A)(1), 240.4(B), 240.4(D), 240.21(B)."], quiz("Exam_Prep_Unit_3", 21, 40)),
+     ["Highlight 210.19(A)(1), 210.20(A), 215.2(A)(1), 240.4(B), 240.4(D), 240.21(B)."], quiz("Exam_Prep_Unit_14", 1, 20)),
 ]
 for i, (title, video, pg, steps, q) in enumerate(W3):
     add(D(2026, 11, 23) + dt.timedelta(days=i), "study", title, video=video, pages=pg, steps=steps, drill=drill(3, i), quiz=q)
@@ -184,7 +201,7 @@ W4 = [
      ["Memorize 240.6(A). Highlight the whole article from its ★ list; 240.21(B) and (C), 240.24 first."], quiz("NEC_Vol_1_Ch_2", 1, 20), ["23UNEC1Article240"]),
     ("Article 310 · conductors for general wiring", [vid("23UNEC1Article310", 0, None, "Art 310 whole")],
      [pages("NEC Vol 1", 367, 386, "Art 310")],
-     ["Highlight from the ★ list: 310.10, 310.12 and Table 310.12(A), 310.15(B), (C), (E), Table 310.16."], quiz("Exam_Prep_Unit_3", 41, 60), ["23UNEC1Article310"]),
+     ["Highlight from the ★ list: 310.10, 310.12 and Table 310.12(A), 310.15(B), (C), (E), Table 310.16."], quiz("Exam_Prep_Unit_3", 21, 40), ["23UNEC1Article310"]),
     ("Motors · FLC, conductors, the breaker", [vid(U4, 0, 3405, "Unit 4 Part A: Tables 430.248/250, 430.22, Table 430.52, 250.122(D)")],
      [pages("Exam Prep", 315, 334, "Unit 4 Part A")],
      ["Work four complete motor circuits: conductor, overload, breaker, feeder (430.24, 430.62)."], quiz("Exam_Prep_Unit_4", 1, 20), []),
@@ -197,7 +214,7 @@ W4 = [
     ("Rework 240 / 310 / 430; finish the highlighting", [],
      [],
      ["Redo every 240, 310, 430, 440, 450 miss in the Notebook fold, cold.", "Any ★ list on this page still open (225, 408, 410 included): close it tonight.", "Sim Exams book Ch 4 tips once more (viewer p67–70). Tomorrow is benchmark 1."],
-     quiz("NEC_Vol_1_Ch_4", 1, 20), ["23UNEC1Article225", "23UNEC1Article408", "23UNEC1Article410"]),
+     quiz("Exam_Prep_Unit_15", 1, 20), ["23UNEC1Article225", "23UNEC1Article408", "23UNEC1Article410"]),
 ]
 for i, (title, video, pg, steps, q, stars) in enumerate(W4):
     add(D(2026, 11, 30) + dt.timedelta(days=i), "study", title, video=video, pages=pg, steps=steps, drill=drill(4, i), quiz=q, stars=stars)
@@ -205,17 +222,17 @@ for i, (title, video, pg, steps, q, stars) in enumerate(W4):
 # ---- Week 5 · the notebook only ----
 W5 = [
     ("All sim misses, cold", r"^", "Every miss from Sims #1–#5. Redo them below without looking at the old answer; anything missed twice is red and comes back Saturday.",
-     ["Lookup drill: shut the book, then find the section of each sim miss in under 60 seconds. Time every one."], quiz("B&G_Art_250", 121, 140)),
+     ["Lookup drill: shut the book, then find the section of each sim miss in under 60 seconds. Time every one."], quiz("B&G_Art_250", 101, 120)),
     ("Article 250 misses", r"^(Table\s+)?250\.", "Every 250 miss. For each, read the whole section in the 2020 book, not just the line.",
-     ["Lookup drill: the 250 sections in the notebook, 60 seconds each, then Table 250.66 and Table 250.122 blind."], quiz("B&G_Art_250", 141, 160)),
+     ["Lookup drill: the 250 sections in the notebook, 60 seconds each, then Table 250.66 and Table 250.122 blind."], quiz("B&G_Art_250", 121, 140)),
     ("220 and 314 misses", r"^(Table\s+)?(220|314)\.", "Every load-calc and box-fill miss. Then Exam Prep 6.13 and 6.2 once more, on paper.",
-     ["Lookup drill: Table 220.55 and its notes, Table 220.54, Table 220.42, 314.16(B), 314.28(A), timed."], quiz("B&G_Art_250", 161, 172)),
+     ["Lookup drill: Table 220.55 and its notes, Table 220.54, Table 220.42, 314.16(B), 314.28(A), timed."], quiz("B&G_Art_250", 141, 160)),
     ("Chapter 9, voltage drop and 310 misses", r"^(Table\s+)?(310\.|Chapter 9|Ch\.? 9|Annex|Table [1458]\b)", "Every conduit-fill, voltage-drop and ampacity miss. Two fresh fills, two fresh drops, two corrections with both factors.",
-     ["Lookup drill: Ch 9 Tables 1, 4, 5, 8, Annex C, Table 310.16, 310.15(B)(1), 310.15(C)(1), blind and timed."], quiz("Exam_Prep_Unit_1", 41, 59)),
+     ["Lookup drill: Ch 9 Tables 1, 4, 5, 8, Annex C, Table 310.16, 310.15(B)(1), 310.15(C)(1), blind and timed."], quiz("B&G_Art_250", 161, 172)),
     ("240, 430, 440, 450 misses", r"^(Table\s+)?(240|430|440|450)\.", "Every overcurrent, motor, AC and transformer miss. One full motor circuit and one transformer, end to end.",
      ["Lookup drill: 240.6(A), 240.21(B), Table 430.52, 430.248, 430.250, 430.110, 440.4(B), Table 450.3(B), blind and timed."], quiz("NEC_Vol_1_Ch_2", 21, 40)),
     ("Twice-missed, and theory if it showed", r"^", "Everything red. If theory misses were a pattern on the sims, the Exam Prep Module I unit they came from, review questions only.",
-     ["Lookup drill: twenty random index words from the 2020 book, 60 seconds each."], quiz("NEC_Vol_1_Ch_2", 41, 50)),
+     ["Lookup drill: twenty random index words from the 2020 book, 60 seconds each."], quiz("Exam_Prep_Unit_20", 1, 20)),
 ]
 for i, (title, redo, what, steps, q) in enumerate(W5):
     add(D(2026, 12, 7) + dt.timedelta(days=i), "notebook", title, redo=redo, what=what, steps=steps, quiz=q)
@@ -225,7 +242,7 @@ for i, (title, steps) in enumerate([
     ("Taper, one hour", ["30 min lookup drill from the notebook, then 20 timed questions from any sim you have not re-sat. No new material."]),
     ("Taper, one hour", ["Same. Rework only what is still red in the Notebook fold."]),
     ("Taper, one hour", ["Same. Read the PSI candidate bulletin: which code book edition, tabs, highlighting, calculator type."]),
-    ("Taper, one hour", ["Lookup drill only. Pack: 2020 NEC tabbed and highlighted, approved calculator, two forms of ID, the PSI confirmation."]),
+    ("Taper, one hour", ["Lookup drill only. Pack: the 2020 NEC, tabbed with permanent plastic tabs only (Avery Swift Tabs or Redi-Tag; no Post-it flags, no paper inserts, nothing written in it, nothing loose), two forms of ID, the PSI confirmation."]),
     ("Night before", ["Sim Exams book Ch 4 (viewer p67–70). Nothing else. In bed early."]),
     ("Exam day", ["Breakfast. Arrive 30 minutes early. Read every question twice before touching the book. Flag the long calculations and come back."]),
 ]):
@@ -253,10 +270,11 @@ WEEKS = [
     ("Exam week", "2026-12-14", "2026-12-19", "Taper. Sit it when PSI gives the date."),
 ]
 out = {"id": "six", "title": "Six weeks to the exam", "start": "2026-11-07", "exam_week": "2026-12-14",
+       "exam": {"questions": 70, "minutes": 210, "pass": 49, "shape": "Theory 20 · Wiring & Protection (100–285) 20 · Wiring Methods (300–398) 12 · Equipment (400–490) 6 · Special Occupancies 4 · Special Equipment 2 · Communications (700–830) 6", "source": "PSI Maryland Master and Journeyperson Electrician bulletin, read 2026-11-07"},
        "offsets": OFF, "weeks": [dict(zip(("label", "from", "to", "theme"), w)) for w in WEEKS],
        "crosswalk": CROSSWALK, "days": days}
 json.dump(out, open("sixweeks.json", "w", encoding="utf-8"), ensure_ascii=False, indent=1)
 vm = sum((v["to"] - v["from"]) / 1.5 for d in days for v in d["video"]) / 60
-qn = sum((d["quiz"]["to"] - d["quiz"]["from"] + 1) if "from" in d["quiz"] else len(Q[d["quiz"]["key"]]["questions"]) for d in days if d.get("quiz"))
+qn = sum(sum(x["to"] - x["from"] + 1 for x in d["quiz"]["mix"]) if "mix" in d["quiz"] else (d["quiz"]["to"] - d["quiz"]["from"] + 1) if "from" in d["quiz"] else len(Q[d["quiz"]["key"]]["questions"]) for d in days if d.get("quiz"))
 dn = sum(d["drill"]["to"] - d["drill"]["from"] + 1 for d in days if d.get("drill"))
 print(f"sixweeks.json: {len(days)} days, {vm:.0f} min of video at 1.5x, {qn} quiz questions + {dn} drill questions")
