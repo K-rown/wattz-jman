@@ -76,12 +76,14 @@ def ranges(items):
         if out and out[-1]["key"] == key and out[-1]["to"] == n - 1: out[-1]["to"] = n
         else: out.append({"key": key, "from": n, "to": n})
     return out
-def quiz(key, lo=None, hi=None):
+def quiz(key, lo=None, hi=None, retake=None):
+    """retake=(lo, hi): questions already handed out that this quiz gives again on purpose"""
     assert key in Q, key
     N = len(Q[key]["questions"])
     if lo is None: lo, hi = 1, N
     assert 1 <= lo <= hi <= N, (key, lo, hi, N)
-    used_range(key, lo, hi)
+    if retake: assert lo == retake[0] and retake[1] < hi; used_range(key, retake[1] + 1, hi)
+    else: used_range(key, lo, hi)
     return {"key": key, "from": lo, "to": hi} if (lo, hi) != (1, N) else {"key": key}
 def mix(name, parts, minutes):
     """several ranges, one sitting, one score"""
@@ -140,7 +142,7 @@ W1 = [
      [pages("B&G", 138, 153, "Part II")],
      ["The quiz is last night's twenty again, now that the video has taught them, plus the six that finish Part II. Each night's quiz covers that night's video or earlier, never ahead of it.",
       "Work five supply-side bonding jumper sizes from Table 250.102(C)(1). Highlight 250.24(A)(1), (A)(5), (B), (C); 250.28(D); 250.30(A); 250.32(A), (B)(1).", "The generator video (250.30 for generators, 19 min) is for the drive, not tonight."],
-     quiz("B&G_Art_250", 21, 46)),
+     quiz("B&G_Art_250", 21, 46, retake=(21, 40))),
     ("Art 250 Part III · electrodes and the grounding electrode conductor",
      [vid(A, sec(A, "250.50"), None, "250.50 to 250.70: every electrode, the rod rules, 250.64, Table 250.66")],
      [pages("B&G", 154, 172, "Part III")],

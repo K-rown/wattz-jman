@@ -306,6 +306,7 @@
     }
    ],
    "steps": [
+    "The quiz is last night's twenty again, now that the video has taught them, plus the six that finish Part II. Each night's quiz covers that night's video or earlier, never ahead of it.",
     "Work five supply-side bonding jumper sizes from Table 250.102(C)(1). Highlight 250.24(A)(1), (A)(5), (B), (C); 250.28(D); 250.30(A); 250.32(A), (B)(1).",
     "The generator video (250.30 for generators, 19 min) is for the drive, not tonight."
    ],
@@ -322,8 +323,8 @@
    },
    "quiz": {
     "key": "B&G_Art_250",
-    "from": 41,
-    "to": 60
+    "from": 21,
+    "to": 46
    }
   },
   {
@@ -366,8 +367,8 @@
    },
    "quiz": {
     "key": "B&G_Art_250",
-    "from": 61,
-    "to": 80
+    "from": 47,
+    "to": 72
    }
   },
   {
@@ -410,7 +411,7 @@
    },
    "quiz": {
     "key": "B&G_Art_250",
-    "from": 81,
+    "from": 73,
     "to": 100
    }
   },
