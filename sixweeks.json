@@ -3,6 +3,10 @@
  "title": "Six weeks to the exam",
  "start": "2026-11-07",
  "exam_week": "2026-12-14",
+ "off": {
+  "2026-11-11": "Skipped · admin and the Germantown drive",
+  "2026-11-14": "Day off"
+ },
  "chat": "https://claude.ai/code/session_01StANTDh1Xk6D1iJErq86dB",
  "exam": {
   "questions": 70,
