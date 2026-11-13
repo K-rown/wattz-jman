@@ -34,31 +34,31 @@
    "label": "Week 1",
    "from": "2026-11-09",
    "to": "2026-11-15",
-   "theme": "Article 250, the Bonding & Grounding videos"
+   "theme": "Article 250 Parts I–II, and the first theory night"
   },
   {
    "label": "Week 2",
    "from": "2026-11-16",
    "to": "2026-11-22",
-   "theme": "Box fill, dwelling loads, Art 230, cables and raceways"
+   "theme": "Electrodes and equipment grounding, theory, box fill, the dwelling load"
   },
   {
    "label": "Week 3",
    "from": "2026-11-23",
    "to": "2026-11-29",
-   "theme": "Chapter 9 fill, voltage drop, conductor sizing"
+   "theme": "Art 230, raceway fill, wiring methods, voltage drop, theory"
   },
   {
    "label": "Week 4",
    "from": "2026-11-30",
    "to": "2026-12-06",
-   "theme": "Articles 240, 310, 430, 422–440"
+   "theme": "Conductor sizing, Art 240, motors, theory review"
   },
   {
    "label": "Week 5",
    "from": "2026-12-07",
    "to": "2026-12-13",
-   "theme": "The notebook only"
+   "theme": "The notebook, then Chapters 7 and 8"
   },
   {
    "label": "Exam week",
@@ -173,8 +173,8 @@
    "note": "Mike's Exam A, 100 questions, 4 hours. Whatever the score, it is the starting line. On paper, note the clock at every tenth question: your real pace, from day one.",
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 100 questions in 240 minutes is 2.4 minutes each. At 60 min you have answered 25; at 120 min, 50. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
@@ -334,29 +334,46 @@
   {
    "day": "2026-11-12",
    "kind": "study",
-   "title": "Art 250 Part III · electrodes and the grounding electrode conductor",
+   "title": "Theory I · Ohm's law, Watt's law, the formula wheel",
    "video": [
     {
-     "id": "23UNECBGArticle250PartA",
-     "from": 8108,
-     "to": 14074,
-     "say": "250.50 to 250.70: every electrode, the rod rules, 250.64, Table 250.66"
+     "id": "ETC5U12",
+     "from": 0,
+     "to": 2503,
+     "say": "Unit 12 Ohm's law"
+    },
+    {
+     "id": "ETC5U13",
+     "from": 0,
+     "to": 1159,
+     "say": "Unit 13 Watt's law"
+    },
+    {
+     "id": "ETC10U29",
+     "from": 0,
+     "to": 985,
+     "say": "Unit 29 the formula wheel"
     }
    ],
-   "stars": [
-    "23UNECBGArticle250PartA"
-   ],
+   "stars": [],
    "pages": [
     {
-     "book": "B&G",
-     "printed": "154–172",
-     "viewer": "168–186",
-     "what": "Part III",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380"
+     "book": "Exam Prep",
+     "printed": "19–28",
+     "viewer": "39–48",
+     "what": "Units 12–13",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
+    },
+    {
+     "book": "Exam Prep",
+     "printed": "105–107",
+     "viewer": "125–127",
+     "what": "Unit 29",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Work ten Table 250.66 problems, with the 6 AWG rod cap and the 4 AWG concrete-encased cap. Highlight 250.52(A), 250.53(A), 250.64, 250.66, 250.68."
+    "Sim #1 said theory 2 of 10, and theory is 20 of the 70 on the real exam; the next sim has twenty of them. Pen and paper the whole hour: every example Mike works, you work first. E = I × R, P = E × I, and the wheel for the rest."
    ],
    "drill": {
     "mix": [
@@ -370,37 +387,328 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "B&G_Art_250",
-    "from": 47,
-    "to": 72
-   }
+    "mix": [
+     {
+      "key": "Exam_Prep_Unit_12",
+      "from": 1,
+      "to": 11
+     },
+     {
+      "key": "Exam_Prep_Unit_13",
+      "from": 1,
+      "to": 9
+     }
+    ],
+    "name": "Theory · Ohm's and Watt's law",
+    "minutes": 30
+   },
+   "minutes_real": 104
   },
   {
-   "day": "2026-11-13",
+   "day": "2026-11-15",
+   "kind": "sim",
+   "title": "Sim #2 · Maryland shape",
+   "quiz": {
+    "mix": [
+     {
+      "key": "Exam_Prep_Module_I_Practice_Exam",
+      "from": 1,
+      "to": 20
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 28,
+      "to": 28
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 34,
+      "to": 34
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 61,
+      "to": 61
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 68,
+      "to": 68
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 36,
+      "to": 36
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 48,
+      "to": 48
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 8,
+      "to": 8
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 80,
+      "to": 80
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 91,
+      "to": 91
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 102,
+      "to": 102
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 139,
+      "to": 139
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 23,
+      "to": 23
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 110,
+      "to": 110
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 153,
+      "to": 153
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 156,
+      "to": 156
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 159,
+      "to": 159
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 198,
+      "to": 198
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 230,
+      "to": 230
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 241,
+      "to": 241
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 258,
+      "to": 258
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 32,
+      "to": 32
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 2,
+      "to": 2
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 61,
+      "to": 61
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 13,
+      "to": 13
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 96,
+      "to": 96
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 26,
+      "to": 26
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 147,
+      "to": 147
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 33,
+      "to": 33
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 38,
+      "to": 38
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 157,
+      "to": 157
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 174,
+      "to": 174
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 176,
+      "to": 176
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 46,
+      "to": 46
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 10,
+      "to": 10
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 84,
+      "to": 84
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 118,
+      "to": 118
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 122,
+      "to": 122
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 130,
+      "to": 130
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 29,
+      "to": 29
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 103,
+      "to": 103
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 137,
+      "to": 137
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 160,
+      "to": 160
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 49,
+      "to": 49
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 181,
+      "to": 181
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 65,
+      "to": 65
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 94,
+      "to": 94
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 114,
+      "to": 114
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 193,
+      "to": 193
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 9,
+      "to": 9
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 29,
+      "to": 29
+     }
+    ],
+    "name": "Maryland mix 1",
+    "minutes": 210
+   },
+   "minutes": 210,
+   "note": "70 questions in PSI Maryland's own proportions, 3½ hours. 49 right passes the real one. Twenty of them are theory, mixed in with the rest.",
+   "steps": [
+    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
+    "Checkpoints: 70 questions in 210 minutes is 3.0 minutes each. At 60 min you have answered 20; at 120 min, 40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
+   ],
+   "video": [],
+   "stars": [],
+   "pages": []
+  },
+  {
+   "day": "2026-11-16",
    "kind": "study",
-   "title": "Art 250 Parts IV–V · enclosures, bonding at the service, bonding jumper sizing",
+   "title": "Art 250 Part III · electrodes and the grounding electrode conductor",
    "video": [
     {
-     "id": "23UNECBGArticle250PartB",
-     "from": 3,
-     "to": 6647,
-     "say": "250.80 to 250.106: service bonding, intersystem bonding, 250.102, piping and structural metal"
+     "id": "23UNECBGArticle250PartA",
+     "from": 8108,
+     "to": 10303,
+     "say": "250.50 to 250.53: every electrode, the rod rules"
+    },
+    {
+     "id": "23UNECBGArticle250PartA",
+     "from": 11384,
+     "to": 13696,
+     "say": "250.64 the GEC, Table 250.66, 250.68"
     }
-   ],
-   "stars": [
-    "23UNECBGArticle250PartB"
    ],
    "pages": [
     {
      "book": "B&G",
-     "printed": "173–185",
-     "viewer": "187–199",
-     "what": "Parts IV and V",
+     "printed": "154–172",
+     "viewer": "168–186",
+     "what": "Part III",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380"
     }
    ],
    "steps": [
-    "Video runs long tonight (74 min): skip the pages, keep the problems. Five bonding jumper sizes, supply side by 250.102(C)(1) and load side by 250.122. Highlight 250.92(B), 250.94, 250.97, 250.102(C), (D), 250.104(A), (B), (C)."
+    "Work five Table 250.66 problems, with the 6 AWG rod cap and the 4 AWG concrete-encased cap. Highlight 250.52(A), 250.53(A), 250.64, 250.66, 250.68."
    ],
    "drill": {
     "mix": [
@@ -414,37 +722,66 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "B&G_Art_250",
-    "from": 73,
-    "to": 100
-   }
+    "mix": [
+     {
+      "key": "B&G_Art_250",
+      "from": 47,
+      "to": 58
+     },
+     {
+      "key": "B&G_Art_250",
+      "from": 62,
+      "to": 66
+     },
+     {
+      "key": "B&G_Art_250",
+      "from": 89,
+      "to": 91
+     }
+    ],
+    "name": "Art 250 · electrodes and the GEC",
+    "minutes": 30
+   },
+   "stars": [
+    "23UNECBGArticle250PartA"
+   ],
+   "minutes_real": 102
   },
   {
-   "day": "2026-11-14",
+   "day": "2026-11-17",
    "kind": "study",
-   "title": "Art 250 Parts VI–VII · equipment grounding conductors and their connections",
+   "title": "Art 250 Parts V–VI · the bonding jumper and the equipment grounding conductor",
    "video": [
     {
      "id": "23UNECBGArticle250PartB",
-     "from": 6647,
-     "to": 12398,
-     "say": "250.109 to 250.148: what counts as an EGC, Table 250.122, receptacles, boxes"
+     "from": 3156,
+     "to": 4849,
+     "say": "250.102: bonding jumpers, Table 250.102(C)(1)"
+    },
+    {
+     "id": "23UNECBGArticle250PartB",
+     "from": 6846,
+     "to": 8175,
+     "say": "250.118: what counts as an EGC"
+    },
+    {
+     "id": "23UNECBGArticle250PartB",
+     "from": 8757,
+     "to": 10469,
+     "say": "250.122 and its table"
     }
-   ],
-   "stars": [
-    "23UNECBGArticle250PartB"
    ],
    "pages": [
     {
      "book": "B&G",
-     "printed": "186–201",
-     "viewer": "200–215",
-     "what": "Parts VI and VII",
+     "printed": "173–201",
+     "viewer": "187–215",
+     "what": "Parts IV to VII: read 250.92, 250.94, 250.104, 250.146, 250.148 from the star list",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNECBG-DB/5380"
     }
    ],
    "steps": [
-    "Work ten Table 250.122 problems, including the proportional upsizing in (B). 250.140 in your 2020 book is the main paragraph and its exception, not an (A). Then redo every 250 miss from Sim #1 in the Missed questions fold."
+    "Five bonding jumper sizes, supply side by 250.102(C)(1); five EGCs by Table 250.122, two with the proportional upsizing in (B). 250.140 in your 2020 book is the main paragraph and its exception, not an (A). The rest of Parts IV to VII is lookup: highlight it from the star list, do not watch it."
    ],
    "drill": {
     "mix": [
@@ -460,189 +797,58 @@
    "quiz": {
     "mix": [
      {
-      "key": "Exam_Prep_Module_I_Practice_Exam",
-      "from": 41,
-      "to": 50
+      "key": "B&G_Art_250",
+      "from": 123,
+      "to": 127
      },
      {
-      "key": "Theory_Final_Exam",
-      "from": 91,
-      "to": 100
+      "key": "B&G_Art_250",
+      "from": 141,
+      "to": 146
+     },
+     {
+      "key": "B&G_Art_250",
+      "from": 151,
+      "to": 158
      }
     ],
-    "name": "Theory · 20 timed",
+    "name": "Art 250 · bonding jumpers and EGCs",
     "minutes": 30
-   }
-  },
-  {
-   "day": "2026-11-15",
-   "kind": "sim",
-   "title": "Sim #2 · Maryland shape",
-   "quiz": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Module_I_Practice_Exam",
-      "from": 1,
-      "to": 20
-     },
-     {
-      "key": "Exam_Prep_Ch_1",
-      "from": 24,
-      "to": 25
-     },
-     {
-      "key": "Exam_Prep_Ch_1",
-      "from": 58,
-      "to": 59
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 31,
-      "to": 33
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 80,
-      "to": 82
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 136,
-      "to": 138
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 152,
-      "to": 154
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 161,
-      "to": 164
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 16,
-      "to": 17
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 61,
-      "to": 62
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 101,
-      "to": 101
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 109,
-      "to": 109
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 127,
-      "to": 129
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 154,
-      "to": 154
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 171,
-      "to": 172
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 31,
-      "to": 32
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 82,
-      "to": 82
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 115,
-      "to": 117
-     },
-     {
-      "key": "Exam_Prep_Ch_5",
-      "from": 24,
-      "to": 25
-     },
-     {
-      "key": "NEC_Vol_2_Ch_5",
-      "from": 136,
-      "to": 136
-     },
-     {
-      "key": "Exam_Prep_Ch_5",
-      "from": 58,
-      "to": 58
-     },
-     {
-      "key": "Exam_Prep_Ch_6",
-      "from": 9,
-      "to": 9
-     },
-     {
-      "key": "Exam_Prep_Ch_6",
-      "from": 35,
-      "to": 35
-     },
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 31,
-      "to": 33
-     },
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 185,
-      "to": 187
-     }
-    ],
-    "name": "Maryland mix 1",
-    "minutes": 210
    },
-   "minutes": 210,
-   "note": "70 questions in PSI Maryland's own proportions, 3½ hours. 49 right passes the real one. The first 20 are theory: under 15 of them means theory joins every Saturday from here.",
-   "steps": [
-    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+   "stars": [
+    "23UNECBGArticle250PartB"
    ],
-   "video": [],
-   "stars": [],
-   "pages": []
+   "minutes_real": 103
   },
   {
-   "day": "2026-11-16",
+   "day": "2026-11-18",
    "kind": "study",
-   "title": "Box fill · 314.16",
+   "title": "Theory II · series and parallel circuits",
    "video": [
     {
-     "id": "23EPUnit2",
+     "id": "ETC6U14",
      "from": 0,
-     "to": 2900,
-     "say": "Unit 2 Part A: Table 314.16(A), the volume rules of 314.16(B), worked examples"
+     "to": 2482,
+     "say": "Unit 14 series circuits"
+    },
+    {
+     "id": "ETC6U15",
+     "from": 0,
+     "to": 2429,
+     "say": "Unit 15 parallel circuits"
     }
    ],
    "pages": [
     {
      "book": "Exam Prep",
-     "printed": "265–272",
-     "viewer": "285–292",
-     "what": "Unit 2 Part A",
+     "printed": "31–46",
+     "viewer": "51–66",
+     "what": "Units 14–15",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Work ten box-fill problems with mixed sizes, a device yoke and an EGC. Highlight 314.16(A) and (B)(1)–(5)."
+    "On paper: resistors in series add; in parallel 1/R = 1/R1 + 1/R2 + 1/R3, and equal resistors in parallel are R ÷ n (three 5 Ω in parallel is 1.66 Ω). Voltage divides across series resistors by their share of the resistance."
    ],
    "drill": {
     "mix": [
@@ -656,64 +862,76 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_2",
-    "from": 1,
-    "to": 20
+    "mix": [
+     {
+      "key": "Exam_Prep_Unit_14",
+      "from": 1,
+      "to": 10
+     },
+     {
+      "key": "Exam_Prep_Unit_15",
+      "from": 1,
+      "to": 10
+     }
+    ],
+    "name": "Theory · series and parallel",
+    "minutes": 30
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 107
   },
   {
-   "day": "2026-11-17",
+   "day": "2026-11-19",
    "kind": "study",
-   "title": "Pull and junction boxes · 314.28",
+   "title": "Box fill and pull boxes · 314.16, 314.28",
    "video": [
     {
      "id": "23EPUnit2",
-     "from": 2900,
+     "from": 0,
      "to": 4831,
-     "say": "Unit 2 Part B: 8× straight, 6× plus the rest for angle and U pulls"
+     "say": "Unit 2 whole: Table 314.16(A), 314.16(B), then 8× straight, 6× angle and U pulls"
     }
    ],
    "pages": [
     {
      "book": "Exam Prep",
-     "printed": "273–278",
-     "viewer": "293–298",
-     "what": "Unit 2 Part B",
+     "printed": "265–278",
+     "viewer": "285–298",
+     "what": "Unit 2",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Work six pull-box problems: two straight, two angle, two with several raceways on one wall. Highlight 314.28(A)(1)–(3)."
+    "Work five box fills with mixed sizes, a device yoke and an EGC, and three pull boxes: straight, angle, several raceways on one wall. Highlight 314.16(A), (B)(1)–(5), 314.28(A)(1)–(3)."
    ],
    "drill": {
     "mix": [
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 65,
-      "to": 79
+      "from": 60,
+      "to": 68
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 70,
+      "to": 75
      }
     ],
     "name": "Lookup drill · Art 215–225",
     "minutes": 30
    },
    "quiz": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 66,
-      "to": 85
-     }
-    ],
-    "name": "Art 312–314 · 20 timed",
-    "minutes": 30
+    "key": "Exam_Prep_Unit_2",
+    "from": 1,
+    "to": 20
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 106
   },
   {
-   "day": "2026-11-18",
+   "day": "2026-11-20",
    "kind": "study",
-   "title": "Dwelling load · standard and optional, first half",
+   "title": "Dwelling load · the standard method, Table 220.55",
    "video": [
     {
      "id": "23EPUnit6",
@@ -732,14 +950,14 @@
     }
    ],
    "steps": [
-    "Work example 6.13 start to finish on paper before Mike finishes it. In the 2020 book the lighting load is 220.12 and the demand table is Table 220.42; pencil those in the Exam Prep margin."
+    "Work example 6.13 start to finish on paper before Mike finishes it. In the 2020 book the lighting load is 220.12 and the demand table is Table 220.42. PSI's own sample question is a range off Table 220.55: do three of those."
    ],
    "drill": {
     "mix": [
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 86,
-      "to": 100
+      "from": 66,
+      "to": 80
      }
     ],
     "name": "Lookup drill · Art 312–314",
@@ -750,31 +968,32 @@
     "from": 1,
     "to": 20
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 104
   },
   {
-   "day": "2026-11-19",
+   "day": "2026-11-21",
    "kind": "study",
-   "title": "Dwelling load · second half, neutral",
+   "title": "Theory III · alternating current",
    "video": [
     {
-     "id": "23EPUnit6",
-     "from": 4640,
-     "to": 9280,
-     "say": "Unit 6, second half: ranges, dryers, AC vs heat, 310.12, the neutral"
+     "id": "ETC7U17",
+     "from": 0,
+     "to": 6009,
+     "say": "Unit 17 AC fundamentals: frequency, peak and RMS, phase"
     }
    ],
    "pages": [
     {
      "book": "Exam Prep",
-     "printed": "383–386",
-     "viewer": "403–406",
-     "what": "Unit 6 Part C",
+     "printed": "55–62",
+     "viewer": "75–82",
+     "what": "Unit 17",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Work the same house both ways, standard and optional, and compare the service sizes. Highlight 220.52–220.61 and 220.82."
+    "On paper: RMS = peak × 0.707, peak = RMS × 1.414. The quiz is the rest of parallel circuits from the last theory night; Unit 17's own questions come on the next one."
    ],
    "drill": {
     "mix": [
@@ -793,29 +1012,48 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_6",
-    "from": 21,
-    "to": 40
+    "key": "Exam_Prep_Unit_15",
+    "from": 11,
+    "to": 22
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 107
   },
   {
-   "day": "2026-11-20",
+   "day": "2026-11-22",
+   "kind": "sim",
+   "title": "Sim #3",
+   "quiz": {
+    "key": "Simulated_Exams_Exam_B"
+   },
+   "minutes": 240,
+   "note": "Mike's Exam B, 100 questions, 4 hours: the one code-wide stress test. Heavier on Chapters 5–8 than Maryland is.",
+   "steps": [
+    "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
+    "Checkpoints: 100 questions in 240 minutes is 2.4 minutes each. At 60 min you have answered 25; at 120 min, 50. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
+   ],
+   "video": [],
+   "stars": [],
+   "pages": []
+  },
+  {
+   "day": "2026-11-23",
    "kind": "study",
    "title": "Article 230 · services",
    "video": [],
    "pages": [
     {
      "book": "NEC Vol 1",
-     "printed": "217–242",
-     "viewer": "237–262",
+     "printed": "197–222",
+     "viewer": "217–242",
      "what": "Art 230, no video tonight: read it with the book open",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
     }
    ],
    "steps": [
     "230.2 number of services, 230.6 outside a building, 230.9 clearances, 230.24 overhead clearances, 230.42 sizing, 230.43 wiring methods, 230.70–230.72 the disconnect, 230.79 ratings, 230.85 emergency disconnect, 230.90 overload protection.",
-    "Highlight the whole article from its ★ list. Art 230 is three of the twenty Wiring & Protection questions."
+    "Highlight the whole article from its ★ list."
    ],
    "drill": {
     "mix": [
@@ -838,123 +1076,92 @@
      {
       "key": "Exam_Prep_Ch_2",
       "from": 106,
-      "to": 120
+      "to": 109
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 60,
-      "to": 64
+      "from": 111,
+      "to": 121
      }
     ],
-    "name": "Art 215–230 · 20 timed",
-    "minutes": 30
+    "name": "Art 230 · 15 timed",
+    "minutes": 25
    },
    "stars": [
     "23UNEC1Article230"
-   ]
+   ],
+   "minutes_real": 44
   },
   {
-   "day": "2026-11-21",
+   "day": "2026-11-24",
    "kind": "study",
-   "title": "Theory I · Ohm's law, Watt's law, the formula wheel",
+   "title": "Theory IV · power factor, series-parallel",
    "video": [
     {
-     "id": "ETC5U12",
+     "id": "ETC7U20",
      "from": 0,
-     "to": 2503,
-     "say": "Unit 12 Ohm's law"
+     "to": 3121,
+     "say": "Unit 20 true power, power factor, apparent power"
     },
     {
-     "id": "ETC5U13",
+     "id": "ETC6U16",
      "from": 0,
-     "to": 1159,
-     "say": "Unit 13 Watt's law"
-    },
-    {
-     "id": "ETC10U29",
-     "from": 0,
-     "to": 985,
-     "say": "Unit 29 the formula wheel"
+     "to": 841,
+     "say": "Unit 16 series-parallel circuits"
     }
    ],
    "pages": [
     {
      "book": "Exam Prep",
-     "printed": "19–28",
-     "viewer": "39–48",
-     "what": "Units 12–13",
+     "printed": "67–73",
+     "viewer": "87–93",
+     "what": "Unit 20",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     },
     {
      "book": "Exam Prep",
-     "printed": "105–107",
-     "viewer": "125–127",
-     "what": "Unit 29",
+     "printed": "51–52",
+     "viewer": "71–72",
+     "what": "Unit 16",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Sim #1 said theory 2 of 10, and theory is 20 of the 70 on the real exam. Pen and paper the whole hour: every example Mike works, you work first. E = I × R, P = E × I, and the wheel for the rest.",
-    "Also tonight, no video needed: highlight 320, 330, 334, 344, 352, 358 from their ★ lists (uses permitted and not, support spacing). Twelve of the seventy are wiring methods, and they are lookups."
+    "On paper: PF = W ÷ VA; VA = E × I, × 1.732 for three-phase. Work every example before Mike does. The quiz is Unit 17, from the last theory night."
    ],
    "drill": {
     "mix": [
      {
       "key": "Exam_Prep_Ch_7",
       "from": 155,
-      "to": 169
+      "to": 156
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 159,
+      "to": 162
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 164,
+      "to": 172
      }
     ],
     "name": "Lookup drill · Art 720–830",
     "minutes": 30
    },
    "quiz": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Unit_12",
-      "from": 1,
-      "to": 11
-     },
-     {
-      "key": "Exam_Prep_Unit_13",
-      "from": 1,
-      "to": 9
-     }
-    ],
-    "name": "Theory · Ohm's and Watt's law",
-    "minutes": 30
+    "key": "Exam_Prep_Unit_17",
+    "from": 1,
+    "to": 20
    },
-   "stars": [
-    "23UNEC1Article334",
-    "23UNEC1Article358",
-    "23UNEC1Article320",
-    "23UNEC1Article330",
-    "23UNEC1Article344",
-    "23UNEC1Article352"
-   ]
-  },
-  {
-   "day": "2026-11-22",
-   "kind": "sim",
-   "title": "Sim #3",
-   "quiz": {
-    "key": "Simulated_Exams_Exam_B"
-   },
-   "minutes": 240,
-   "note": "Mike's Exam B, 100 questions, 4 hours: the one code-wide stress test. Heavier on Chapters 5–8 than Maryland is.",
-   "steps": [
-    "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
-   ],
-   "video": [],
    "stars": [],
-   "pages": []
+   "minutes_real": 96
   },
   {
-   "day": "2026-11-23",
+   "day": "2026-11-25",
    "kind": "study",
-   "title": "Raceway fill · Chapter 9, first half",
+   "title": "Raceway fill · Chapter 9 and Annex C",
    "video": [
     {
      "id": "23EPUnit1",
@@ -973,7 +1180,7 @@
     }
    ],
    "steps": [
-    "Work eight fills: four straight from Annex C, four with mixed sizes through Tables 4 and 5. Note 7: round up at 0.8. Note 4: nipples at 60%."
+    "Work six fills: three straight from Annex C, three with mixed sizes through Tables 4 and 5. Note 7: round up at 0.8. Note 4: nipples at 60%. Wireways are 20% (376.22). Tab Annex C by raceway type (permanent tabs)."
    ],
    "drill": {
     "mix": [
@@ -991,52 +1198,67 @@
     "from": 1,
     "to": 20
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 100
   },
   {
-   "day": "2026-11-24",
+   "day": "2026-11-26",
    "kind": "study",
-   "title": "Raceway fill · second half, wireways, cables",
-   "video": [
-    {
-     "id": "23EPUnit1",
-     "from": 4318,
-     "to": 8636,
-     "say": "Unit 1, second half"
-    }
-   ],
+   "title": "Wiring methods · Art 300 and the cable and raceway articles (no video)",
+   "video": [],
    "pages": [
     {
-     "book": "Exam Prep",
-     "printed": "241–258",
-     "viewer": "261–278",
-     "what": "Unit 1, 1.4–1.7",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
+     "book": "NEC Vol 1",
+     "printed": "339–366",
+     "viewer": "359–386",
+     "what": "Art 300: 300.4, 300.5 and its table, 300.11, 300.14",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
     }
    ],
    "steps": [
-    "Highlight the notes to Ch 9 Table 1 and the heads of Tables 4, 5 and 8; tab Annex C by raceway type (permanent tabs). Wireways are 20% (376.22)."
+    "Every 3xx article is numbered alike: .10 uses permitted, .12 not permitted, .24 bends, .30 support. Learn that once and twelve of the seventy are lookups.",
+    "Highlight 300, 320, 330, 334, 344, 352, 358 from their ★ lists."
    ],
    "drill": {
     "mix": [
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 121,
-      "to": 135
+      "from": 122,
+      "to": 136
      }
     ],
     "name": "Lookup drill · Art 230",
     "minutes": 30
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_1",
-    "from": 21,
-    "to": 40
+    "mix": [
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 16,
+      "to": 25
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 115,
+      "to": 124
+     }
+    ],
+    "name": "Art 300–356 · 20 timed",
+    "minutes": 30
    },
-   "stars": []
+   "stars": [
+    "23UNEC1Article300",
+    "23UNEC1Article334",
+    "23UNEC1Article358",
+    "23UNEC1Article320",
+    "23UNEC1Article330",
+    "23UNEC1Article344",
+    "23UNEC1Article352"
+   ],
+   "minutes_real": 52
   },
   {
-   "day": "2026-11-25",
+   "day": "2026-11-27",
    "kind": "study",
    "title": "Voltage drop · the formula",
    "video": [
@@ -1068,8 +1290,8 @@
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 115,
-      "to": 126
+      "from": 125,
+      "to": 136
      }
     ],
     "name": "Lookup drill · Art 320–356",
@@ -1080,38 +1302,45 @@
     "from": 1,
     "to": 20
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 94
   },
   {
-   "day": "2026-11-26",
+   "day": "2026-11-28",
    "kind": "study",
-   "title": "Theory II · series and parallel circuits (Thanksgiving)",
+   "title": "Theory V · transformers and generators",
    "video": [
     {
-     "id": "ETC6U14",
+     "id": "ETC8U24",
      "from": 0,
-     "to": 2482,
-     "say": "Unit 14 series circuits"
+     "to": 2820,
+     "say": "Unit 24 transformers, the first 47 minutes: ratios, kVA, primary and secondary current"
     },
     {
-     "id": "ETC6U15",
+     "id": "ETC8U22",
      "from": 0,
-     "to": 2429,
-     "say": "Unit 15 parallel circuits"
+     "to": 2066,
+     "say": "Unit 22 generators"
     }
    ],
    "pages": [
     {
      "book": "Exam Prep",
-     "printed": "31–50",
-     "viewer": "51–70",
-     "what": "Units 14–15",
+     "printed": "91–96",
+     "viewer": "111–116",
+     "what": "Unit 24",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
+    },
+    {
+     "book": "Exam Prep",
+     "printed": "83–84",
+     "viewer": "103–104",
+     "what": "Unit 22",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "On paper: resistors in series add; in parallel 1/R = 1/R1 + 1/R2 + 1/R3, and equal resistors in parallel are R ÷ n (three 5 Ω in parallel is 1.66 Ω). Voltage divides across series resistors by their share of the resistance.",
-    "Voltage drop sizing from last night, four problems: CM = 2 × K × I × D ÷ VD, then up to the next Table 8 size."
+    "On paper: a 4:1 transformer divides voltage by 4 and multiplies current by 4; I = VA ÷ (E × 1.732) for three-phase. The quiz is Unit 20, from the last theory night."
    ],
    "drill": {
     "mix": [
@@ -1125,14 +1354,283 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_14"
+    "key": "Exam_Prep_Unit_20",
+    "from": 1,
+    "to": 20
    },
-   "stars": []
+   "stars": [],
+   "minutes_real": 106
   },
   {
-   "day": "2026-11-27",
+   "day": "2026-11-29",
+   "kind": "sim",
+   "title": "Sim #4 · Maryland shape",
+   "quiz": {
+    "mix": [
+     {
+      "key": "Exam_Prep_Module_I_Practice_Exam",
+      "from": 21,
+      "to": 40
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 25,
+      "to": 25
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 31,
+      "to": 31
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 64,
+      "to": 64
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 71,
+      "to": 71
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 39,
+      "to": 39
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 51,
+      "to": 51
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 4,
+      "to": 4
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 83,
+      "to": 83
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 96,
+      "to": 96
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 105,
+      "to": 105
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 20,
+      "to": 21
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 24,
+      "to": 24
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 143,
+      "to": 143
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 30,
+      "to": 31
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 201,
+      "to": 201
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 227,
+      "to": 227
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 244,
+      "to": 244
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 253,
+      "to": 253
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 29,
+      "to": 29
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 39,
+      "to": 39
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 64,
+      "to": 64
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 12,
+      "to": 12
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 93,
+      "to": 93
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 110,
+      "to": 110
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 138,
+      "to": 138
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 30,
+      "to": 30
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 43,
+      "to": 43
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 48,
+      "to": 48
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 171,
+      "to": 171
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 50,
+      "to": 50
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 49,
+      "to": 49
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 20,
+      "to": 20
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 87,
+      "to": 87
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 115,
+      "to": 115
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 129,
+      "to": 129
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 50,
+      "to": 50
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 39,
+      "to": 39
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 96,
+      "to": 96
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 140,
+      "to": 140
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 164,
+      "to": 164
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 53,
+      "to": 53
+     },
+     {
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 177,
+      "to": 177
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 62,
+      "to": 62
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 91,
+      "to": 91
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 122,
+      "to": 122
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 190,
+      "to": 190
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 5,
+      "to": 5
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 26,
+      "to": 26
+     }
+    ],
+    "name": "Maryland mix 2",
+    "minutes": 210
+   },
+   "minutes": 210,
+   "note": "70 questions, 3½ hours, Maryland's proportions.",
+   "steps": [
+    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
+    "Checkpoints: 70 questions in 210 minutes is 3.0 minutes each. At 60 min you have answered 20; at 120 min, 40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
+   ],
+   "video": [],
+   "stars": [],
+   "pages": []
+  },
+  {
+   "day": "2026-11-30",
    "kind": "study",
-   "title": "Conductor sizing · insulation, terminals, ampacity",
+   "title": "Conductor sizing · insulation, terminals, ampacity, Art 310",
    "video": [
     {
      "id": "23EPUnit3edit",
@@ -1151,7 +1649,7 @@
     }
    ],
    "steps": [
-    "Work eight: pick from the 75°C column, then check against the corrected 90°C ampacity. In the 2020 book the insulation table is Table 310.4(A)."
+    "Work six: pick from the 75°C column, then check against the corrected 90°C ampacity. In the 2020 book the insulation table is Table 310.4(A). Highlight Art 310 from its ★ list: 310.10, 310.12 and Table 310.12(A), 310.15(B), (C), (E), Table 310.16."
    ],
    "drill": {
     "mix": [
@@ -1174,234 +1672,55 @@
     "from": 1,
     "to": 20
    },
-   "stars": []
+   "stars": [
+    "23UNEC1Article310"
+   ],
+   "minutes_real": 101
   },
   {
-   "day": "2026-11-28",
+   "day": "2026-12-01",
    "kind": "study",
-   "title": "Conductor sizing · branch circuits, feeders, taps",
-   "video": [
-    {
-     "id": "23EPUnit3edit",
-     "from": 4431,
-     "to": 8862,
-     "say": "Unit 3, second half: 210.19, 210.20, 215.2, 215.3, the tap rules of 240.21(B)"
-    }
-   ],
-   "pages": [
-    {
-     "book": "Exam Prep",
-     "printed": "297–306",
-     "viewer": "317–326",
-     "what": "3.10–3.16",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
-    }
-   ],
-   "steps": [
-    "Highlight 210.19(A)(1), 210.20(A), 215.2(A)(1), 240.4(B), 240.4(D), 240.21(B)."
-   ],
-   "drill": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 16,
-      "to": 30
-     }
-    ],
-    "name": "Lookup drill · Art 700–708",
-    "minutes": 30
-   },
-   "quiz": {
-    "key": "Exam_Prep_Unit_3",
-    "from": 44,
-    "to": 63
-   },
-   "stars": []
-  },
-  {
-   "day": "2026-11-29",
-   "kind": "sim",
-   "title": "Sim #4 · Maryland shape",
-   "quiz": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Module_I_Practice_Exam",
-      "from": 21,
-      "to": 40
-     },
-     {
-      "key": "Exam_Prep_Ch_1",
-      "from": 26,
-      "to": 27
-     },
-     {
-      "key": "Exam_Prep_Ch_1",
-      "from": 60,
-      "to": 61
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 34,
-      "to": 36
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 83,
-      "to": 85
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 139,
-      "to": 140
-     },
-     {
-      "key": "NEC_Vol_1_Ch_2",
-      "from": 20,
-      "to": 20
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 155,
-      "to": 157
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 165,
-      "to": 168
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 18,
-      "to": 19
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 63,
-      "to": 64
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 102,
-      "to": 102
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 110,
-      "to": 110
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 130,
-      "to": 132
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 155,
-      "to": 155
-     },
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 173,
-      "to": 174
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 33,
-      "to": 34
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 83,
-      "to": 83
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 118,
-      "to": 120
-     },
-     {
-      "key": "Exam_Prep_Ch_5",
-      "from": 26,
-      "to": 27
-     },
-     {
-      "key": "NEC_Vol_2_Ch_5",
-      "from": 137,
-      "to": 137
-     },
-     {
-      "key": "Exam_Prep_Ch_5",
-      "from": 59,
-      "to": 59
-     },
-     {
-      "key": "Exam_Prep_Ch_6",
-      "from": 10,
-      "to": 10
-     },
-     {
-      "key": "Exam_Prep_Ch_6",
-      "from": 36,
-      "to": 36
-     },
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 34,
-      "to": 36
-     },
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 188,
-      "to": 190
-     }
-    ],
-    "name": "Maryland mix 2",
-    "minutes": 210
-   },
-   "minutes": 210,
-   "note": "70 questions, 3½ hours, Maryland's proportions, none seen before.",
-   "steps": [
-    "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
-   ],
-   "video": [],
-   "stars": [],
-   "pages": []
-  },
-  {
-   "day": "2026-11-30",
-   "kind": "study",
-   "title": "Article 240 · overcurrent protection",
+   "title": "Article 240 · overcurrent protection, feeders and taps",
    "video": [
     {
      "id": "23UNEC1Article240",
      "from": 0,
      "to": 2657,
      "say": "Art 240 whole"
+    },
+    {
+     "id": "23EPUnit3edit",
+     "from": 6380,
+     "to": 8862,
+     "say": "Unit 3, the end: 215.2, 215.3, the tap rules of 240.21(B)"
     }
    ],
    "pages": [
     {
      "book": "NEC Vol 1",
-     "printed": "223–245",
-     "viewer": "243–265",
+     "printed": "223–246",
+     "viewer": "243–266",
      "what": "Art 240",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
     }
    ],
    "steps": [
-    "Memorize 240.6(A). Highlight the whole article from its ★ list; 240.21(B) and (C), 240.24 first."
+    "Memorize 240.6(A). Highlight the whole article from its ★ list; 240.4(B), 240.4(D), 240.21(B) and (C), 240.24 first."
    ],
    "drill": {
     "mix": [
      {
-      "key": "Exam_Prep_Ch_2",
+      "key": "Exam_Prep_Ch_7",
       "from": 16,
-      "to": 30
+      "to": 22
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 30,
+      "to": 37
      }
     ],
-    "name": "Lookup drill · Art 200–210",
+    "name": "Lookup drill · Art 700–708",
     "minutes": 30
    },
    "quiz": {
@@ -1411,78 +1730,19 @@
    },
    "stars": [
     "23UNEC1Article240"
-   ]
-  },
-  {
-   "day": "2026-12-01",
-   "kind": "study",
-   "title": "Article 310 · conductors for general wiring",
-   "video": [
-    {
-     "id": "23UNEC1Article310",
-     "from": 0,
-     "to": 2974,
-     "say": "Art 310 whole"
-    }
    ],
-   "pages": [
-    {
-     "book": "NEC Vol 1",
-     "printed": "367–386",
-     "viewer": "387–406",
-     "what": "Art 310",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
-    }
-   ],
-   "steps": [
-    "Highlight from the ★ list: 310.10, 310.12 and Table 310.12(A), 310.15(B), (C), (E), Table 310.16."
-   ],
-   "drill": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 141,
-      "to": 151
-     },
-     {
-      "key": "Exam_Prep_Ch_2",
-      "from": 160,
-      "to": 160
-     },
-     {
-      "key": "NEC_Vol_1_Ch_2",
-      "from": 33,
-      "to": 35
-     }
-    ],
-    "name": "Lookup drill · Art 240–242",
-    "minutes": 30
-   },
-   "quiz": {
-    "mix": [
-     {
-      "key": "Exam_Prep_Ch_3",
-      "from": 41,
-      "to": 60
-     }
-    ],
-    "name": "Art 310 · 20 timed",
-    "minutes": 30
-   },
-   "stars": [
-    "23UNEC1Article310"
-   ]
+   "minutes_real": 101
   },
   {
    "day": "2026-12-02",
    "kind": "study",
-   "title": "Motors · FLC, conductors, the breaker",
+   "title": "Motors · full-load current and conductors",
    "video": [
     {
      "id": "23EPUnit4",
      "from": 0,
-     "to": 3405,
-     "say": "Unit 4 Part A: Tables 430.248/250, 430.22, Table 430.52, 250.122(D)"
+     "to": 3150,
+     "say": "Unit 4, the first 52 minutes: the FLC tables 430.248 and 430.250, conductors by 430.22, duty cycle"
     }
    ],
    "pages": [
@@ -1495,214 +1755,295 @@
     }
    ],
    "steps": [
-    "Work four complete motor circuits: conductor, overload, breaker, feeder (430.24, 430.62)."
+    "Work three motors on paper: FLC from the table, never the nameplate, then the conductor at 125% by 430.22. Highlight Art 430 from its ★ list; tab Table 430.52 and the FLC tables."
    ],
    "drill": {
     "mix": [
      {
-      "key": "Exam_Prep_Ch_3",
-      "from": 151,
-      "to": 153
+      "key": "Exam_Prep_Ch_2",
+      "from": 16,
+      "to": 18
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 141,
+      "to": 142
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 144,
+      "to": 144
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 160,
+      "to": 160
      },
      {
       "key": "Exam_Prep_Ch_3",
       "from": 159,
-      "to": 170
+      "to": 160
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 16,
+      "to": 18
+     },
+     {
+      "key": "Exam_Prep_Ch_5",
+      "from": 16,
+      "to": 17
+     },
+     {
+      "key": "Exam_Prep_Ch_6",
+      "from": 28,
+      "to": 28
      }
     ],
-    "name": "Lookup drill · Art 358–398",
+    "name": "Lookup drill · mixed, say the article first",
     "minutes": 30
    },
    "quiz": {
     "key": "Exam_Prep_Unit_4",
     "from": 1,
-    "to": 20
+    "to": 19
    },
-   "stars": []
+   "stars": [
+    "23UNEC1Article430"
+   ],
+   "minutes_real": 85
   },
   {
    "day": "2026-12-03",
    "kind": "study",
-   "title": "Motors · overloads, AC; Article 430 itself",
+   "title": "Motors · overloads, the breaker, the equipment grounding conductor",
    "video": [
     {
      "id": "23EPUnit4",
-     "from": 3405,
-     "to": 6810,
-     "say": "Unit 4: 430.32 overloads, 440.4(B), 440.22, 440.33, Table 450.3(B)"
-    },
-    {
-     "id": "23UNEC1Article430",
-     "from": 0,
-     "to": 2030,
-     "say": "Art 430: disconnects 430.102, 430.107, 430.109, 430.110"
+     "from": 3150,
+     "to": 7254,
+     "say": "Unit 4, the middle: overloads 430.32, short-circuit and ground-fault protection by Table 430.52, the EGC by 250.122(D)"
     }
    ],
    "pages": [
     {
-     "book": "NEC Vol 1",
-     "printed": "599–618",
-     "viewer": "619–638",
-     "what": "Art 430",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
+     "book": "Exam Prep",
+     "printed": "315–344",
+     "viewer": "335–364",
+     "what": "Unit 4",
+     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
     }
    ],
    "steps": [
-    "Highlight Art 430 from its ★ list; tab Table 430.52 and the FLC tables."
+    "Finish the three motors from the last motor night: the overload by 430.32, the breaker by Table 430.52 and 430.52(C)(1) Ex 1, the EGC."
    ],
    "drill": {
     "mix": [
      {
+      "key": "Exam_Prep_Ch_2",
+      "from": 19,
+      "to": 21
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 145,
+      "to": 146
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 34,
+      "to": 34
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 151,
+      "to": 151
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 161,
+      "to": 162
+     },
+     {
       "key": "Exam_Prep_Ch_4",
-      "from": 16,
-      "to": 30
+      "from": 19,
+      "to": 21
+     },
+     {
+      "key": "Exam_Prep_Ch_5",
+      "from": 18,
+      "to": 19
+     },
+     {
+      "key": "Exam_Prep_Ch_6",
+      "from": 29,
+      "to": 29
      }
     ],
-    "name": "Lookup drill · Art 400–411",
+    "name": "Lookup drill · mixed, say the article first",
     "minutes": 30
    },
    "quiz": {
     "key": "Exam_Prep_Unit_4",
-    "from": 21,
-    "to": 40
+    "from": 20,
+    "to": 39
    },
-   "stars": [
-    "23UNEC1Article430"
-   ]
+   "stars": [],
+   "minutes_real": 98
   },
   {
    "day": "2026-12-04",
    "kind": "study",
-   "title": "Appliances, heating, air conditioning · 422, 424, 440",
+   "title": "Motor feeders, air conditioning, transformers · Art 422, 424, 440",
    "video": [
     {
      "id": "23EPUnit4",
-     "from": 6810,
+     "from": 7254,
      "to": 10215,
-     "say": "Unit 4, last part: transformers 450.3(B), 240.21(C)"
-    },
-    {
-     "id": "23UNEC1Article422",
-     "from": 0,
-     "to": 1212,
-     "say": "Art 422"
-    },
-    {
-     "id": "23UNEC1Article424",
-     "from": 0,
-     "to": 545,
-     "say": "Art 424"
+     "say": "Unit 4, the end: feeders 430.24 and 430.62, air conditioning 440, transformers 450.3"
     }
    ],
    "pages": [
     {
      "book": "NEC Vol 1",
-     "printed": "561–575",
-     "viewer": "581–595",
+     "printed": "589–600",
+     "viewer": "609–620",
      "what": "Art 422 and 424",
      "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23UNEC1-DB/5392"
     }
    ],
    "steps": [
-    "Highlight 422, 424, 440 from their ★ lists: 422.10, 422.11, 422.16 cords, 422.31 disconnects, 424.3, 440.4(B), 440.14. One transformer problem by Table 450.3(B) and that is enough transformers."
+    "One feeder for three motors, conductor and breaker. Then highlight 422, 424 and 440 from their ★ lists: 422.10, 422.11, 422.16 cords, 422.31 disconnects, 424.3, 440.4(B), 440.14. Six of the seventy are Articles 400–490."
    ],
    "drill": {
     "mix": [
      {
-      "key": "Exam_Prep_Ch_5",
-      "from": 16,
-      "to": 23
+      "key": "Exam_Prep_Ch_2",
+      "from": 22,
+      "to": 24
      },
      {
-      "key": "Exam_Prep_Ch_6",
-      "from": 28,
-      "to": 34
-     }
-    ],
-    "name": "Lookup drill · Art 500 and 680",
-    "minutes": 30
-   },
-   "quiz": {
-    "mix": [
+      "key": "Exam_Prep_Ch_2",
+      "from": 147,
+      "to": 148
+     },
      {
-      "key": "Exam_Prep_Unit_4",
-      "from": 41,
-      "to": 55
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 35,
+      "to": 35
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 152,
+      "to": 152
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 163,
+      "to": 165
      },
      {
       "key": "Exam_Prep_Ch_4",
-      "from": 77,
-      "to": 81
+      "from": 22,
+      "to": 24
+     },
+     {
+      "key": "Exam_Prep_Ch_5",
+      "from": 20,
+      "to": 20
+     },
+     {
+      "key": "Exam_Prep_Ch_6",
+      "from": 30,
+      "to": 30
      }
     ],
-    "name": "Unit 4 AC and Art 422–427 · 20 timed",
+    "name": "Lookup drill · mixed, say the article first",
     "minutes": 30
+   },
+   "quiz": {
+    "key": "Exam_Prep_Unit_4",
+    "from": 40,
+    "to": 62
    },
    "stars": [
     "23UNEC1Article422",
     "23UNEC1Article424",
     "23UNEC1Article440"
-   ]
+   ],
+   "minutes_real": 89
   },
   {
    "day": "2026-12-05",
-   "kind": "study",
-   "title": "Theory III · AC, power factor, transformers",
-   "video": [
-    {
-     "id": "ETC7U20",
-     "from": 0,
-     "to": 3121,
-     "say": "Unit 20 true power, power factor, apparent power"
-    },
-    {
-     "id": "ETC8U24",
-     "from": 0,
-     "to": 2400,
-     "say": "Unit 24 transformers, the first 40 minutes: ratios, kVA, primary and secondary current"
-    }
-   ],
-   "pages": [
-    {
-     "book": "Exam Prep",
-     "printed": "83–93",
-     "viewer": "103–113",
-     "what": "Unit 20",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
-    },
-    {
-     "book": "Exam Prep",
-     "printed": "117–123",
-     "viewer": "137–143",
-     "what": "Unit 24",
-     "url": "https://www.mikeholt.com/checkout/#/account/digital-books/book-viewer/23EP-DB/5382"
-    }
-   ],
+   "kind": "notebook",
+   "title": "Theory VI · every theory miss, then twenty mixed",
+   "redo": "^(Theory\\b|\\d{1,2}\\.\\d)",
+   "what": "Every theory miss from Sims #1 to #4 and the theory nights, redone on paper. Twenty of benchmark 1's seventy are theory.",
    "steps": [
-    "On paper: RMS = peak × 0.707; PF = W ÷ VA; I = VA ÷ (E × 1.732) for three-phase; a 4:1 transformer divides voltage by 4. Work every example before Mike does.",
-    "Then redo every 240, 310, 430 miss in the Missed questions fold, and close any ★ list still open (225, 408, 410). Tomorrow is benchmark 1."
+    "",
+    "Then ten formula-wheel questions from Exam Prep Unit 29 (printed p105–107), each one written out: what is given, what is asked, which formula."
    ],
    "drill": {
     "mix": [
      {
-      "key": "Exam_Prep_Ch_7",
-      "from": 170,
-      "to": 184
+      "key": "Exam_Prep_Ch_2",
+      "from": 25,
+      "to": 28
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 149,
+      "to": 150
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 153,
+      "to": 153
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 166,
+      "to": 168
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 25,
+      "to": 27
+     },
+     {
+      "key": "Exam_Prep_Ch_5",
+      "from": 21,
+      "to": 21
+     },
+     {
+      "key": "Exam_Prep_Ch_6",
+      "from": 31,
+      "to": 31
      }
     ],
-    "name": "Lookup drill · Art 720–830",
+    "name": "Lookup drill · mixed, say the article first",
     "minutes": 30
    },
    "quiz": {
-    "key": "Theory_Final_Exam",
-    "from": 1,
-    "to": 20
+    "mix": [
+     {
+      "key": "Exam_Prep_Module_I_Practice_Exam",
+      "from": 41,
+      "to": 50
+     },
+     {
+      "key": "Exam_Prep_Unit_24",
+      "from": 1,
+      "to": 10
+     }
+    ],
+    "name": "Theory · 20 timed",
+    "minutes": 30
    },
-   "stars": [
-    "23UNEC1Article225",
-    "23UNEC1Article408",
-    "23UNEC1Article410"
-   ]
+   "video": [],
+   "stars": [],
+   "pages": [],
+   "minutes_real": 52
   },
   {
    "day": "2026-12-06",
@@ -1712,38 +2053,178 @@
     "mix": [
      {
       "key": "Theory_Final_Exam",
-      "from": 51,
+      "from": 41,
+      "to": 41
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 45,
+      "to": 45
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 50,
+      "to": 50
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 58,
+      "to": 58
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 64,
+      "to": 64
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 66,
+      "to": 66
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 68,
+      "to": 68
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 70,
       "to": 70
      },
      {
+      "key": "Theory_Final_Exam",
+      "from": 72,
+      "to": 72
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 74,
+      "to": 74
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 76,
+      "to": 76
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 79,
+      "to": 79
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 81,
+      "to": 81
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 86,
+      "to": 86
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 88,
+      "to": 88
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 90,
+      "to": 90
+     },
+     {
+      "key": "Theory_Unit_14",
+      "from": 15,
+      "to": 15
+     },
+     {
+      "key": "Theory_Unit_17",
+      "from": 35,
+      "to": 35
+     },
+     {
+      "key": "Theory_Unit_21",
+      "from": 17,
+      "to": 17
+     },
+     {
+      "key": "Theory_Unit_25",
+      "from": 19,
+      "to": 19
+     },
+     {
       "key": "Exam_Prep_Ch_1",
-      "from": 28,
-      "to": 29
+      "from": 27,
+      "to": 27
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 33,
+      "to": 33
      },
      {
       "key": "Exam_Prep_Ch_1",
       "from": 62,
-      "to": 63
+      "to": 62
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 69,
+      "to": 69
      },
      {
       "key": "Exam_Prep_Ch_2",
       "from": 37,
-      "to": 39
+      "to": 37
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 86,
-      "to": 88
+      "from": 49,
+      "to": 49
      },
      {
       "key": "NEC_Vol_1_Ch_2",
-      "from": 21,
-      "to": 23
+      "from": 6,
+      "to": 6
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 158,
-      "to": 159
+      "from": 81,
+      "to": 81
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 92,
+      "to": 92
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 103,
+      "to": 103
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 138,
+      "to": 138
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 22,
+      "to": 22
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 27,
+      "to": 27
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 154,
+      "to": 154
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 157,
+      "to": 157
      },
      {
       "key": "NEC_Vol_1_Ch_2",
@@ -1752,18 +2233,38 @@
      },
      {
       "key": "Exam_Prep_Ch_2",
-      "from": 169,
-      "to": 172
+      "from": 199,
+      "to": 199
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 229,
+      "to": 229
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 242,
+      "to": 242
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 257,
+      "to": 257
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 20,
-      "to": 21
+      "from": 31,
+      "to": 31
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 1,
+      "to": 1
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 65,
-      "to": 65
+      "from": 62,
+      "to": 62
      },
      {
       "key": "NEC_Vol_1_Ch_3",
@@ -1772,48 +2273,83 @@
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 103,
-      "to": 103
+      "from": 95,
+      "to": 95
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 111,
-      "to": 111
+      "from": 112,
+      "to": 112
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 133,
-      "to": 135
+      "from": 140,
+      "to": 140
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 32,
+      "to": 32
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 39,
+      "to": 39
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 156,
-      "to": 156
+      "from": 158,
+      "to": 158
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 175,
-      "to": 176
+      "from": 173,
+      "to": 173
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 177,
+      "to": 177
      },
      {
       "key": "Exam_Prep_Ch_4",
+      "from": 47,
+      "to": 47
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 11,
+      "to": 11
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 85,
+      "to": 85
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 117,
+      "to": 117
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 125,
+      "to": 125
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 41,
+      "to": 41
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
       "from": 35,
-      "to": 36
+      "to": 35
      },
      {
-      "key": "Exam_Prep_Ch_4",
-      "from": 84,
-      "to": 84
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 121,
-      "to": 123
-     },
-     {
-      "key": "Exam_Prep_Ch_5",
-      "from": 28,
-      "to": 29
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 101,
+      "to": 101
      },
      {
       "key": "NEC_Vol_2_Ch_5",
@@ -1822,28 +2358,48 @@
      },
      {
       "key": "NEC_Vol_2_Ch_5",
-      "from": 141,
-      "to": 141
+      "from": 162,
+      "to": 162
      },
      {
-      "key": "Exam_Prep_Ch_6",
-      "from": 11,
-      "to": 11
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 50,
+      "to": 50
      },
      {
-      "key": "Exam_Prep_Ch_6",
-      "from": 37,
-      "to": 37
-     },
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 37,
-      "to": 39
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 180,
+      "to": 180
      },
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 191,
-      "to": 193
+      "from": 64,
+      "to": 64
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 93,
+      "to": 93
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 120,
+      "to": 120
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 192,
+      "to": 192
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 8,
+      "to": 8
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 28,
+      "to": 28
      }
     ],
     "name": "Maryland mix 3",
@@ -1853,8 +2409,8 @@
    "note": "Benchmark 1, in the exam's shape. 80 or better (56 of 70): on track. 74–79: sit it and taper. Under 72 (50): this score alone moves the date, today, while a reschedule is still free.",
    "steps": [
     "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 70 questions in 210 minutes is 3.0 minutes each. At 60 min you have answered 20; at 120 min, 40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
@@ -1865,68 +2421,52 @@
    "kind": "notebook",
    "title": "All sim misses, cold",
    "redo": "^",
-   "what": "Every miss from Sims #1–#5. Redo them below without looking at the old answer; anything missed twice is red and comes back Saturday.",
+   "what": "Every miss from Sims #1–#5. Redo them below without looking at the old answer; anything missed twice is red and comes back on the twice-missed night.",
    "steps": [
     "Lookup drill: shut the book, then find the section of each sim miss in under 60 seconds. Time every one."
    ],
    "quiz": {
-    "key": "B&G_Art_250",
-    "from": 101,
-    "to": 120
+    "key": "Exam_Prep_Module_III_Practice_Exam",
+    "from": 1,
+    "to": 20
    },
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 30
   },
   {
    "day": "2026-12-08",
    "kind": "notebook",
-   "title": "Article 250 misses",
-   "redo": "^(Table\\s+)?250\\.",
-   "what": "Every 250 miss. For each, read the whole section in the 2020 book, not just the line.",
+   "title": "250, 220 and 314 misses",
+   "redo": "^(Table\\s+)?(250|220|314)\\.",
+   "what": "Every grounding, load-calc and box-fill miss. For each, read the whole section in the 2020 book, not just the line. Then Exam Prep 6.13 once more, on paper.",
    "steps": [
-    "Lookup drill: the 250 sections in the notebook, 60 seconds each, then Table 250.66 and Table 250.122 blind."
-   ],
-   "quiz": {
-    "key": "B&G_Art_250",
-    "from": 121,
-    "to": 140
-   },
-   "video": [],
-   "stars": [],
-   "pages": []
-  },
-  {
-   "day": "2026-12-09",
-   "kind": "notebook",
-   "title": "220 and 314 misses",
-   "redo": "^(Table\\s+)?(220|314)\\.",
-   "what": "Every load-calc and box-fill miss. Then Exam Prep 6.13 and 6.2 once more, on paper.",
-   "steps": [
-    "Lookup drill: Table 220.55 and its notes, Table 220.54, Table 220.42, 314.16(B), 314.28(A), timed."
+    "Lookup drill: Table 250.66, Table 250.102(C)(1), Table 250.122, Table 220.55 and its notes, Table 220.42, 314.16(B), 314.28(A), blind and timed."
    ],
    "quiz": {
     "mix": [
      {
-      "key": "Exam_Prep_Unit_6",
-      "from": 41,
-      "to": 57
+      "key": "B&G_Art_250",
+      "from": 76,
+      "to": 87
      },
      {
-      "key": "Exam_Prep_Unit_2",
-      "from": 21,
-      "to": 22
+      "key": "B&G_Art_250",
+      "from": 92,
+      "to": 99
      }
     ],
-    "name": "Unit 6 and Unit 2 · 20 timed",
+    "name": "Art 250 · the grounding electrode conductor",
     "minutes": 30
    },
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 30
   },
   {
-   "day": "2026-12-10",
+   "day": "2026-12-09",
    "kind": "notebook",
    "title": "Chapter 9, voltage drop and 310 misses",
    "redo": "^(Table\\s+)?(310\\.|Chapter 9|Ch\\.? 9|Annex|Table [1458]\\b)",
@@ -1935,16 +2475,23 @@
     "Lookup drill: Ch 9 Tables 1, 4, 5, 8, Annex C, Table 310.16, 310.15(B)(1), 310.15(C)(1), blind and timed."
    ],
    "quiz": {
-    "key": "B&G_Art_250",
-    "from": 141,
-    "to": 160
+    "mix": [
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 41,
+      "to": 60
+     }
+    ],
+    "name": "Art 310 · 20 timed",
+    "minutes": 30
    },
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 30
   },
   {
-   "day": "2026-12-11",
+   "day": "2026-12-10",
    "kind": "notebook",
    "title": "240, 430, 440 misses",
    "redo": "^(Table\\s+)?(240|430|440|450)\\.",
@@ -1954,15 +2501,16 @@
    ],
    "quiz": {
     "key": "Exam_Prep_Module_III_Practice_Exam",
-    "from": 1,
-    "to": 20
+    "from": 21,
+    "to": 40
    },
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 30
   },
   {
-   "day": "2026-12-12",
+   "day": "2026-12-11",
    "kind": "notebook",
    "title": "Twice-missed, and theory",
    "redo": "^",
@@ -1977,7 +2525,86 @@
    },
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 30
+  },
+  {
+   "day": "2026-12-12",
+   "kind": "study",
+   "title": "Chapters 7 and 8 · emergency systems, fire alarm, where the rest lives",
+   "video": [
+    {
+     "id": "23UNEC2Article700",
+     "from": 0,
+     "to": 2576,
+     "say": "Art 700 to 700.12: tests, transfer equipment, wiring kept apart"
+    },
+    {
+     "id": "23UNEC2Article760",
+     "from": 0,
+     "to": 1292,
+     "say": "Art 760 fire alarm"
+    }
+   ],
+   "pages": [],
+   "steps": [
+    "Six of the seventy are Articles 700–830. In the 2020 book find, by the index and without the contents page: 700.10(B), 700.12, 701.12, 702.5, 725.121, 725.136, 760.41, 760.121, 800.24, 810.21. Mike's video is the 2023 Code: where a number differs, yours is the 2020 one in the book.",
+    "Read the scope (.1) of 700, 701, 702, 725, 760, 770, 800, 810, 820: one line each, so a question names its article."
+   ],
+   "drill": {
+    "mix": [
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 29,
+      "to": 31
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 151,
+      "to": 152
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 169,
+      "to": 170
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 28,
+      "to": 30
+     },
+     {
+      "key": "Exam_Prep_Ch_5",
+      "from": 22,
+      "to": 23
+     },
+     {
+      "key": "Exam_Prep_Ch_6",
+      "from": 32,
+      "to": 34
+     }
+    ],
+    "name": "Lookup drill · mixed, say the article first",
+    "minutes": 30
+   },
+   "quiz": {
+    "mix": [
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 41,
+      "to": 50
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 173,
+      "to": 182
+     }
+    ],
+    "name": "Art 700–830 · 20 timed",
+    "minutes": 30
+   },
+   "stars": [],
+   "minutes_real": 95
   },
   {
    "day": "2026-12-13",
@@ -1987,78 +2614,258 @@
     "mix": [
      {
       "key": "Theory_Final_Exam",
-      "from": 71,
-      "to": 90
+      "from": 44,
+      "to": 44
      },
      {
-      "key": "Exam_Prep_Ch_1",
-      "from": 30,
-      "to": 31
+      "key": "Theory_Final_Exam",
+      "from": 49,
+      "to": 49
      },
      {
-      "key": "Exam_Prep_Ch_1",
-      "from": 64,
+      "key": "Theory_Final_Exam",
+      "from": 57,
+      "to": 57
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 63,
+      "to": 63
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 65,
       "to": 65
      },
      {
-      "key": "Exam_Prep_Ch_2",
-      "from": 40,
-      "to": 42
+      "key": "Theory_Final_Exam",
+      "from": 67,
+      "to": 67
      },
      {
-      "key": "Exam_Prep_Ch_2",
+      "key": "Theory_Final_Exam",
+      "from": 69,
+      "to": 69
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 71,
+      "to": 71
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 73,
+      "to": 73
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 75,
+      "to": 75
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 77,
+      "to": 77
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 80,
+      "to": 80
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 84,
+      "to": 84
+     },
+     {
+      "key": "Theory_Final_Exam",
+      "from": 87,
+      "to": 87
+     },
+     {
+      "key": "Theory_Final_Exam",
       "from": 89,
-      "to": 91
+      "to": 89
      },
      {
-      "key": "NEC_Vol_1_Ch_2",
+      "key": "Theory_Unit_12",
+      "from": 11,
+      "to": 11
+     },
+     {
+      "key": "Theory_Unit_15",
       "from": 24,
+      "to": 24
+     },
+     {
+      "key": "Theory_Unit_20",
+      "from": 22,
+      "to": 22
+     },
+     {
+      "key": "Theory_Unit_24",
+      "from": 17,
+      "to": 17
+     },
+     {
+      "key": "Theory_Unit_16",
+      "from": 4,
+      "to": 4
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 26,
       "to": 26
      },
      {
-      "key": "NEC_Vol_1_Ch_2",
-      "from": 30,
+      "key": "Exam_Prep_Ch_1",
+      "from": 32,
       "to": 32
      },
      {
+      "key": "Exam_Prep_Ch_1",
+      "from": 63,
+      "to": 63
+     },
+     {
+      "key": "Exam_Prep_Ch_1",
+      "from": 70,
+      "to": 70
+     },
+     {
       "key": "Exam_Prep_Ch_2",
-      "from": 173,
-      "to": 176
+      "from": 38,
+      "to": 38
      },
      {
-      "key": "Exam_Prep_Ch_3",
-      "from": 22,
-      "to": 23
+      "key": "Exam_Prep_Ch_2",
+      "from": 50,
+      "to": 50
      },
      {
-      "key": "NEC_Vol_1_Ch_3",
-      "from": 12,
-      "to": 13
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 5,
+      "to": 5
      },
      {
-      "key": "Exam_Prep_Ch_3",
+      "key": "Exam_Prep_Ch_2",
+      "from": 82,
+      "to": 82
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 93,
+      "to": 93
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
       "from": 104,
       "to": 104
      },
      {
-      "key": "Exam_Prep_Ch_3",
-      "from": 112,
-      "to": 112
+      "key": "Exam_Prep_Ch_2",
+      "from": 137,
+      "to": 137
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 140,
+      "to": 140
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 28,
+      "to": 28
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 155,
+      "to": 155
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 158,
+      "to": 158
+     },
+     {
+      "key": "NEC_Vol_1_Ch_2",
+      "from": 32,
+      "to": 32
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 200,
+      "to": 200
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 228,
+      "to": 228
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 243,
+      "to": 243
+     },
+     {
+      "key": "Exam_Prep_Ch_2",
+      "from": 254,
+      "to": 254
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 136,
-      "to": 138
+      "from": 30,
+      "to": 30
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 157,
-      "to": 157
+      "from": 40,
+      "to": 40
      },
      {
       "key": "Exam_Prep_Ch_3",
-      "from": 177,
-      "to": 177
+      "from": 63,
+      "to": 63
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 65,
+      "to": 65
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 94,
+      "to": 94
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 111,
+      "to": 111
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 139,
+      "to": 139
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 31,
+      "to": 31
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 40,
+      "to": 40
+     },
+     {
+      "key": "NEC_Vol_1_Ch_3",
+      "from": 46,
+      "to": 46
+     },
+     {
+      "key": "Exam_Prep_Ch_3",
+      "from": 172,
+      "to": 172
      },
      {
       "key": "NEC_Vol_1_Ch_3",
@@ -2067,23 +2874,43 @@
      },
      {
       "key": "Exam_Prep_Ch_4",
-      "from": 37,
+      "from": 48,
+      "to": 48
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 18,
+      "to": 18
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 86,
+      "to": 86
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 116,
+      "to": 116
+     },
+     {
+      "key": "Exam_Prep_Ch_4",
+      "from": 128,
+      "to": 128
+     },
+     {
+      "key": "NEC_Vol_1_Ch_4",
+      "from": 44,
+      "to": 44
+     },
+     {
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 38,
       "to": 38
      },
      {
-      "key": "Exam_Prep_Ch_4",
-      "from": 85,
-      "to": 85
-     },
-     {
-      "key": "Exam_Prep_Ch_4",
-      "from": 124,
-      "to": 126
-     },
-     {
-      "key": "Exam_Prep_Ch_5",
-      "from": 30,
-      "to": 31
+      "key": "NEC_Vol_2_Ch_5",
+      "from": 100,
+      "to": 100
      },
      {
       "key": "NEC_Vol_2_Ch_5",
@@ -2092,28 +2919,48 @@
      },
      {
       "key": "NEC_Vol_2_Ch_5",
-      "from": 142,
-      "to": 142
+      "from": 163,
+      "to": 163
      },
      {
-      "key": "Exam_Prep_Ch_6",
-      "from": 12,
-      "to": 12
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 51,
+      "to": 51
      },
      {
-      "key": "Exam_Prep_Ch_6",
-      "from": 38,
-      "to": 38
-     },
-     {
-      "key": "Exam_Prep_Ch_7",
-      "from": 40,
-      "to": 42
+      "key": "NEC_Vol_2_Ch_6",
+      "from": 179,
+      "to": 179
      },
      {
       "key": "Exam_Prep_Ch_7",
-      "from": 194,
-      "to": 196
+      "from": 63,
+      "to": 63
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 92,
+      "to": 92
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 121,
+      "to": 121
+     },
+     {
+      "key": "Exam_Prep_Ch_7",
+      "from": 191,
+      "to": 191
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 7,
+      "to": 7
+     },
+     {
+      "key": "Exam_Prep_Ch_8",
+      "from": 27,
+      "to": 27
      }
     ],
     "name": "Maryland mix 4",
@@ -2123,8 +2970,8 @@
    "note": "Benchmark 2, same shape. Both benchmarks 80 or better: sit it. Both 74–79: sit it; Mike's questions run harder than PSI's. Either under 72: the holding weeks below, and the date moves.",
    "steps": [
     "Start by 9 am. 3½ hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 70 questions in 210 minutes is 3.0 minutes each. At 60 min you have answered 20; at 120 min, 40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
@@ -2157,7 +3004,7 @@
    "kind": "taper",
    "title": "Taper, one hour",
    "steps": [
-    "Same. Call PSI once: calculator rules (the bulletin does not say), arrival time, what ID they want. Use that calculator on every quiz from today."
+    "Same. Call PSI once: arrival time, what ID they want. The bulletin gives an on-screen calculator and nothing else: use the computer's calculator on every quiz from today."
    ],
    "video": [],
    "stars": [],
@@ -2207,8 +3054,8 @@
    "note": "Only if PSI has not given you a date yet. Same conditions, same clock.",
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 70 questions in 240 minutes is 3.4 minutes each. At 60 min you have answered 18; at 120 min, 35. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
@@ -2319,8 +3166,8 @@
    "note": "Only if PSI has not given you a date yet. Same conditions, same clock.",
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 70 questions in 240 minutes is 3.4 minutes each. At 60 min you have answered 18; at 120 min, 35. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
@@ -2431,8 +3278,8 @@
    "note": "Only if PSI has not given you a date yet. Same conditions, same clock.",
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 70 questions in 240 minutes is 3.4 minutes each. At 60 min you have answered 18; at 120 min, 35. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
@@ -2557,12 +3404,13 @@
    "note": "Only if PSI has not given you a date yet. Same conditions, same clock.",
    "steps": [
     "Start by 9 am. Four hours on the clock, 2020 code book only, phone face down.",
-    "Checkpoints: at 60 min you are past Q20; at 120 min past Q40. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
-    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook and Saturday redoes them."
+    "Checkpoints: 70 questions in 240 minutes is 3.4 minutes each. At 60 min you have answered 18; at 120 min, 35. Behind that, best-guess the flagged ones and move. No scheduled break; the clock runs if you leave the room.",
+    "Grade when time is called, not before. Then read every miss; press Rewatch where it offers one. Theory misses first: open the Exam Prep unit the reference names and work that example on paper. Review stops at 60 min: the misses are in the notebook, and the notebook nights redo them."
    ],
    "video": [],
    "stars": [],
    "pages": []
   }
- ]
+ ],
+ "checked": "Plan checked Nov 12: every night through Dec 13 fits two hours, every count and minute shown is the real one, page ranges match the books' contents, no quiz asks ahead of its video, and the two benchmarks hold no question seen before."
 }
