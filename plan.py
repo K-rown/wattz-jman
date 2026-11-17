@@ -157,8 +157,29 @@ def drill(week, dow): return pool_quiz("Lookup drill · " + DRILL_NAME[week][dow
 
 D = dt.date
 days = []
+# THE PAPER WORK (2026-11-16): a night's problems are written out here, each with its answer, and the
+# page shows them under the videos with the answer behind a tap. A step that only says "work five"
+# gave him nothing to work. Keyed by the night's written date. Two minutes a problem in THE CHECK.
+WORK = {
+    "2026-11-16": [   # Table 250.66 and its caps; all GECs copper
+        ("3/0 AWG copper service conductors. The GEC runs to the metal water pipe. What size GEC?", "4 AWG copper. Table 250.66: 2/0 or 3/0 copper."),
+        ("500 kcmil copper service conductors. The GEC runs to building steel. What size GEC?", "1/0 AWG copper. Table 250.66: over 350 through 600 kcmil."),
+        ("500 kcmil copper service conductors. The GEC runs to a ground rod and nothing else. What size GEC?", "6 AWG copper. The table says 1/0, but 250.66(A) caps a GEC to a rod, pipe or plate at 6 AWG copper."),
+        ("400 kcmil copper service conductors. The GEC runs to a concrete-encased electrode and nothing else. What size GEC?", "4 AWG copper. The table says 1/0, but 250.66(B) caps a GEC to a concrete-encased electrode at 4 AWG copper."),
+        ("4/0 AWG aluminum service conductors. The GEC runs to the metal water pipe. What size copper GEC?", "4 AWG copper. Table 250.66, aluminum column: 4/0 or 250 kcmil."),
+    ],
+    "2026-11-17": [   # Table 250.102(C)(1) and Table 250.122; all copper
+        ("2/0 AWG copper service conductors. What size copper main bonding jumper?", "4 AWG copper. Table 250.102(C)(1): 2/0 or 3/0 copper."),
+        ("600 kcmil copper service conductors. What size copper supply-side bonding jumper?", "1/0 AWG copper. Table 250.102(C)(1): over 350 through 600 kcmil."),
+        ("Three parallel sets of 500 kcmil copper service conductors, and one main bonding jumper for all of them. What size?", "4/0 AWG copper. 3 × 500 = 1,500 kcmil, over 1,100, so Note 1 applies: 12.5% of 1,500 = 187.5 kcmil. The next size up in Chapter 9 Table 8 is 4/0 (211.6 kcmil)."),
+        ("A feeder on a 100 A breaker. What size copper equipment grounding conductor?", "8 AWG copper. Table 250.122, by the rating of the breaker, not the size of the wire."),
+        ("A feeder on a 400 A breaker. What size copper equipment grounding conductor?", "3 AWG copper. Table 250.122."),
+        ("A 60 A circuit would normally be 6 AWG copper with a 10 AWG EGC. The circuit conductors are increased to 3 AWG for voltage drop. What size EGC now?", "6 AWG copper. 250.122(B): the EGC grows in the same proportion. 52,620 ÷ 26,240 = 2.005; 10,380 × 2.005 = 20,815 cmil; 8 AWG is 16,510, too small, so 6 AWG (26,240)."),
+    ],
+}
 def add(day, kind, title, **k):
     k.setdefault("steps", []); k.setdefault("video", []); k.setdefault("stars", []); k.setdefault("pages", [])
+    if day.isoformat() in WORK: k["work"] = [{"q": q, "a": a} for q, a in WORK[day.isoformat()]]
     days.append(dict(day=day.isoformat(), kind=kind, title=title, **k))
 
 # ---- Sat Nov 7: the restart ----
@@ -208,14 +229,14 @@ NIGHTS = [
      [vid(A, sec(A, "250.50"), sec(A, "250.54"), "250.50 to 250.53: every electrode, the rod rules"),
       vid(A, sec(A, "250.64"), sec(A, "250.70"), "250.64 the GEC, Table 250.66, 250.68")],
      [pages("B&G", 154, 172, "Part III")],
-     ["Work five Table 250.66 problems, with the 6 AWG rod cap and the 4 AWG concrete-encased cap. Highlight 250.52(A), 250.53(A), 250.64, 250.66, 250.68."],
+     ["Highlight 250.52(A), 250.53(A), 250.64, 250.66, 250.68 in the 2020 book."],
      mix("Art 250 · electrodes and the GEC", [quiz("B&G_Art_250", 47, 58), quiz("B&G_Art_250", 62, 66), quiz("B&G_Art_250", 89, 91)], 30), [A]),
     (D(2026, 11, 17), (1, 5), "Art 250 Parts V–VI · the bonding jumper and the equipment grounding conductor",
      [vid(B, sec(B, "250.102"), sec(B, "250.104"), "250.102: bonding jumpers, Table 250.102(C)(1)"),
       vid(B, sec(B, "250.118"), sec(B, "250.119"), "250.118: what counts as an EGC"),
       vid(B, sec(B, "250.122"), sec(B, "250.138"), "250.122 and its table")],
      [pages("B&G", 173, 201, "Parts IV to VII: read 250.92, 250.94, 250.104, 250.146, 250.148 from the star list")],
-     ["Five bonding jumper sizes, supply side by 250.102(C)(1); five EGCs by Table 250.122, two with the proportional upsizing in (B). 250.140 in your 2020 book is the main paragraph and its exception, not an (A). The rest of Parts IV to VII is lookup: highlight it from the star list, do not watch it."],
+     ["250.140 in your 2020 book is the main paragraph and its exception, not an (A). The rest of Parts IV to VII is lookup: highlight it from the star list, do not watch it."],
      mix("Art 250 · bonding jumpers and EGCs", [quiz("B&G_Art_250", 123, 127), quiz("B&G_Art_250", 141, 146), quiz("B&G_Art_250", 151, 158)], 30), [B]),
     (D(2026, 11, 18), (2, 0), "Theory II · series and parallel circuits",
      [vid("ETC6U14", 0, None, "Unit 14 series circuits"), vid("ETC6U15", 0, None, "Unit 15 parallel circuits")],
@@ -465,7 +486,9 @@ for d in days:
     if d["kind"] in ("study", "notebook"):
         t = round(count(d.get("drill")) * MIN_Q) + sum(v["to"] - v["from"] for v in d["video"]) / 90 + round(count(d.get("quiz")) * MIN_Q)
         d["minutes_real"] = round(t)
-        if t > NIGHT - 10: bad.append((d["day"], "night is %d min before any paper work" % t))
+        w = 2 * len(d.get("work", []))
+        d["minutes_real"] = round(t + w)
+        if t > NIGHT - 10 or t + w > NIGHT: bad.append((d["day"], "night is %d min, %d of it the written problems" % (t + w, w)))
     for spec in (d.get("drill"), d.get("quiz")):
         if not spec: continue
         m = re.search(r"(\d+) timed", spec.get("name") or "")

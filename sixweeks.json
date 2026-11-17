@@ -708,7 +708,7 @@
     }
    ],
    "steps": [
-    "Work five Table 250.66 problems, with the 6 AWG rod cap and the 4 AWG concrete-encased cap. Highlight 250.52(A), 250.53(A), 250.64, 250.66, 250.68."
+    "Highlight 250.52(A), 250.53(A), 250.64, 250.66, 250.68 in the 2020 book."
    ],
    "drill": {
     "mix": [
@@ -745,7 +745,29 @@
    "stars": [
     "23UNECBGArticle250PartA"
    ],
-   "minutes_real": 102
+   "work": [
+    {
+     "q": "3/0 AWG copper service conductors. The GEC runs to the metal water pipe. What size GEC?",
+     "a": "4 AWG copper. Table 250.66: 2/0 or 3/0 copper."
+    },
+    {
+     "q": "500 kcmil copper service conductors. The GEC runs to building steel. What size GEC?",
+     "a": "1/0 AWG copper. Table 250.66: over 350 through 600 kcmil."
+    },
+    {
+     "q": "500 kcmil copper service conductors. The GEC runs to a ground rod and nothing else. What size GEC?",
+     "a": "6 AWG copper. The table says 1/0, but 250.66(A) caps a GEC to a rod, pipe or plate at 6 AWG copper."
+    },
+    {
+     "q": "400 kcmil copper service conductors. The GEC runs to a concrete-encased electrode and nothing else. What size GEC?",
+     "a": "4 AWG copper. The table says 1/0, but 250.66(B) caps a GEC to a concrete-encased electrode at 4 AWG copper."
+    },
+    {
+     "q": "4/0 AWG aluminum service conductors. The GEC runs to the metal water pipe. What size copper GEC?",
+     "a": "4 AWG copper. Table 250.66, aluminum column: 4/0 or 250 kcmil."
+    }
+   ],
+   "minutes_real": 112
   },
   {
    "day": "2026-11-17",
@@ -781,7 +803,7 @@
     }
    ],
    "steps": [
-    "Five bonding jumper sizes, supply side by 250.102(C)(1); five EGCs by Table 250.122, two with the proportional upsizing in (B). 250.140 in your 2020 book is the main paragraph and its exception, not an (A). The rest of Parts IV to VII is lookup: highlight it from the star list, do not watch it."
+    "250.140 in your 2020 book is the main paragraph and its exception, not an (A). The rest of Parts IV to VII is lookup: highlight it from the star list, do not watch it."
    ],
    "drill": {
     "mix": [
@@ -818,7 +840,33 @@
    "stars": [
     "23UNECBGArticle250PartB"
    ],
-   "minutes_real": 103
+   "work": [
+    {
+     "q": "2/0 AWG copper service conductors. What size copper main bonding jumper?",
+     "a": "4 AWG copper. Table 250.102(C)(1): 2/0 or 3/0 copper."
+    },
+    {
+     "q": "600 kcmil copper service conductors. What size copper supply-side bonding jumper?",
+     "a": "1/0 AWG copper. Table 250.102(C)(1): over 350 through 600 kcmil."
+    },
+    {
+     "q": "Three parallel sets of 500 kcmil copper service conductors, and one main bonding jumper for all of them. What size?",
+     "a": "4/0 AWG copper. 3 × 500 = 1,500 kcmil, over 1,100, so Note 1 applies: 12.5% of 1,500 = 187.5 kcmil. The next size up in Chapter 9 Table 8 is 4/0 (211.6 kcmil)."
+    },
+    {
+     "q": "A feeder on a 100 A breaker. What size copper equipment grounding conductor?",
+     "a": "8 AWG copper. Table 250.122, by the rating of the breaker, not the size of the wire."
+    },
+    {
+     "q": "A feeder on a 400 A breaker. What size copper equipment grounding conductor?",
+     "a": "3 AWG copper. Table 250.122."
+    },
+    {
+     "q": "A 60 A circuit would normally be 6 AWG copper with a 10 AWG EGC. The circuit conductors are increased to 3 AWG for voltage drop. What size EGC now?",
+     "a": "6 AWG copper. 250.122(B): the EGC grows in the same proportion. 52,620 ÷ 26,240 = 2.005; 10,380 × 2.005 = 20,815 cmil; 8 AWG is 16,510, too small, so 6 AWG (26,240)."
+    }
+   ],
+   "minutes_real": 115
   },
   {
    "day": "2026-11-18",
