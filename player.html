@@ -32,7 +32,7 @@
   <div class="row" id="ctl" hidden>
     <button id="speed">1.5×</button>
     <button id="resume" class="alt" hidden>Pick up at <span id="resumeAt"></span></button>
-    <a class="btn alt" id="back" href="./">Calendar</a>
+    <a class="btn alt" id="back" href="./">All videos</a>
   </div>
   <div id="err" class="err" hidden></div>
   <div class="list" id="list"></div>
@@ -44,7 +44,9 @@
 (async function () {
   const q = new URLSearchParams(location.search);
   const id = (q.get('v') || '').replace(/[^A-Za-z0-9]/g, '');
-  const t0 = parseFloat(q.get('t') || '0') || 0;           // seconds to start at
+  const t0 = parseFloat(q.get('t') || '0') || 0;
+  const bk = q.get('book') || '';   // ?book=bg: that book's videos only
+  const BOOK = { bg: 'Bonding & Grounding' }[bk] || '';           // seconds to start at
   const video = document.getElementById('v');
   const $ = s => document.getElementById(s);
 
@@ -57,8 +59,8 @@
   function label(x) { return (x.kind === 'unit' ? (x.book === 'Fundamental NEC Calculations' ? 'Ch ' + x.chapter + ' ' : x.article ? 'Art ' + x.article + ' ' : 'Unit ' + x.unit + ' ') : '') + x.title; }
 
   if (!id) {
-    $('title').textContent = 'Wattz LED · Path to Journeyman';
-    $('sub').textContent = 'Pick a video. Same order as the wall.';
+    $('title').textContent = BOOK ? BOOK + ' · every video' : 'Wattz LED · Path to Journeyman';
+    $('sub').textContent = BOOK ? 'Tap a video to play it here. Mike Holt, 2023 Bonding & Grounding.' : 'Pick a video. Same order as the wall.';
     renderList();
     return;
   }
@@ -68,6 +70,7 @@
   $('sub').textContent = u ? u.book + ' · Chapter ' + u.chapter + (u.chapter_title ? ' ' + u.chapter_title : '') + ' · ' + fmt(u.duration_s) : '';
   document.title = (u ? label(u) : id) + ' · Wattz';
   $('ctl').hidden = false;
+  if (bk) $('back').href = 'player.html?book=' + bk;
 
   // playback speed toggle: 1.5 (default, per the wall) → 1.25 → 1 → 1.5
   const speeds = [1.5, 1.25, 1];
@@ -100,10 +103,10 @@
   function renderList() {
     if (!units.length) return;
     const host = $('list'); let book = '';
-    units.filter(x => x.kind === 'unit').forEach(x => {
+    units.filter(x => x.kind === 'unit' && (!BOOK || x.book === BOOK)).forEach(x => {
       if (x.book !== book) { book = x.book; const h = document.createElement('h2'); h.textContent = book; host.appendChild(h); }
       const a = document.createElement('a');
-      a.href = 'player.html?v=' + x.video_id;
+      a.href = 'player.html?v=' + x.video_id + (bk ? '&book=' + bk : '');
       a.textContent = label(x) + '  ·  ' + fmt(x.duration_s);
       if (x.video_id === id) a.style.color = '#fff';
       host.appendChild(a);
