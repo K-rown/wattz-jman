@@ -33575,7 +33575,7 @@
      "a": "making interpretations of rules",
      "b": "approval of equipment and materials",
      "c": "granting special permission",
-     "d": "all of these CHAPTER 1—GENERAL RULES"
+     "d": "all of these"
     },
     "answer": "d",
     "ref": "90.4(B)"
@@ -33863,7 +33863,7 @@
      "a": "identified",
      "b": "listed",
      "c": "approved",
-     "d": "designed CHAPTER 2—WIRING AND PROTECTION"
+     "d": "designed"
     },
     "answer": "a",
     "ref": "110.14"
@@ -34295,7 +34295,7 @@
      "a": "electric ranges or clothes dryers",
      "b": "electric wall mounted ovens",
      "c": "electric counter-mounted cooking units",
-     "d": "any of these CHAPTER 3—WIRING METHODS AND MATERIALS"
+     "d": "any of these"
     },
     "answer": "d",
     "ref": "250.140(A)"
@@ -34377,7 +34377,7 @@
      "a": "grounded",
      "b": "ungrounded",
      "c": "equipment grounding",
-     "d": "all of these CHAPTER 4—EQUIPMENT FOR GENERAL USE"
+     "d": "all of these"
     },
     "answer": "c",
     "ref": "386.60"
@@ -34485,7 +34485,7 @@
      "a": "motors and motor control centers",
      "b": "refrigeration and air-conditioning equipment",
      "c": "transformers",
-     "d": "generators CHAPTER 5—SPECIAL OCCUPANCIES"
+     "d": "generators"
     },
     "answer": "c",
     "ref": "450.1"
@@ -34509,7 +34509,7 @@
      "a": "ampacity",
      "b": "resistance",
      "c": "effectiveness",
-     "d": "impedance CHAPTER 6—SPECIAL EQUIPMENT"
+     "d": "impedance"
     },
     "answer": "d",
     "ref": "517.16(B)(2) Informational Note 2"
@@ -34651,7 +34651,7 @@
      "a": "equipment grounding conductor",
      "b": "grounding conductor",
      "c": "grounded conductor",
-     "d": "any of these CHAPTER 8—COMMUNICATIONS SYSTEMS"
+     "d": "any of these"
     },
     "answer": "a",
     "ref": "690.47(A)(1)"

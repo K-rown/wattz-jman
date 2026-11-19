@@ -167,7 +167,7 @@
     if (BOOK) quizzes().then(all => {
       if (!all.length) return;
       const h = document.createElement('h2'); h.textContent = 'Quizzes · ' + all.length + ' · from the book, graded here'; host.appendChild(h);
-      all.forEach(x => { const a = document.createElement('a'); a.href = 'player.html?book=' + bk + '&quiz=' + encodeURIComponent(x.key); a.textContent = x.quiz + '  ·  ' + x.questions.length + ' questions'; host.appendChild(a); });
+      all.forEach(x => { const a = document.createElement('a'); a.href = 'player.html?book=' + bk + '&quiz=' + encodeURIComponent(x.key); a.textContent = x.quiz + '  ·  ' + x.questions.length + (x.questions.length === 1 ? ' question' : ' questions'); host.appendChild(a); });
     });
   }
 })();
