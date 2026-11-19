@@ -22,6 +22,15 @@
   .list a { display: block; color: #93c5fd; padding: 6px 0; border-bottom: 1px solid #222; text-decoration: none; }
   .list h2 { font-size: 0.9rem; color: #aaa; margin: 18px 0 4px; text-transform: uppercase; letter-spacing: .04em; }
   small { color: #777; }
+  .qz { margin-top: 8px; }
+  .q { padding: 12px 0; border-bottom: 1px solid #222; }
+  .q p { margin: 0 0 8px; }
+  .q .ref { color: #888; font-size: .85rem; }
+  .q label { display: block; padding: 7px 8px; margin: 3px 0; border-radius: 6px; background: #1a1a1a; cursor: pointer; }
+  .q label.right { background: #064e3b; }
+  .q label.wrong { background: #7f1d1d; }
+  .q input { margin-right: 8px; }
+  .score { font-size: 1.2rem; font-weight: 700; margin: 14px 0 6px; }
 </style>
 </head>
 <body>
@@ -58,9 +67,11 @@
     return (h ? h + ':' + String(m).padStart(2, '0') : m) + ':' + String(x).padStart(2, '0'); }
   function label(x) { return (x.kind === 'unit' ? (x.book === 'Fundamental NEC Calculations' ? 'Ch ' + x.chapter + ' ' : x.article ? 'Art ' + x.article + ' ' : 'Unit ' + x.unit + ' ') : '') + x.title; }
 
+  const qkey = q.get('quiz') || '';
+  if (BOOK && qkey) { await showQuiz(qkey); return; }
   if (!id) {
-    $('title').textContent = BOOK ? BOOK + ' · every video' : 'Wattz LED · Path to Journeyman';
-    $('sub').textContent = BOOK ? 'Tap a video to play it here. Mike Holt, 2023 Bonding & Grounding.' : 'Pick a video. Same order as the wall.';
+    $('title').textContent = BOOK ? BOOK + ' · videos and quizzes' : 'Wattz LED · Path to Journeyman';
+    $('sub').textContent = BOOK ? 'Every video and every quiz in Mike Holt\'s 2023 Bonding & Grounding. Tap one to open it here.' : 'Pick a video. Same order as the wall.';
     renderList();
     return;
   }
@@ -100,6 +111,48 @@
   function showErr(m) { const e = $('err'); e.textContent = m; e.hidden = false; }
   renderList();
 
+  async function quizzes() {
+    try { return await (await fetch('quizzes-bg.json')).json(); } catch (e) { return []; }
+  }
+  async function showQuiz(key) {
+    const all = await quizzes(), Q = all.find(x => x.key === key);
+    $('back').href = 'player.html?book=' + bk; $('ctl').hidden = false; $('speed').hidden = true;
+    document.querySelector('.wrap').hidden = true;
+    if (!Q) { $('title').textContent = 'Quiz not found'; return; }
+    $('title').textContent = 'Quiz · ' + Q.quiz + ' · ' + Q.questions.length + ' questions';
+    $('sub').textContent = (Q.unit || '') + ' · Mike Holt, 2023 Bonding & Grounding. Answer them all, then press Grade.';
+    document.title = 'Quiz · ' + Q.quiz + ' · Wattz';
+    const host = document.createElement('div'); host.className = 'qz'; $('list').before(host);
+    const L = ['a', 'b', 'c', 'd', 'e'];
+    Q.questions.forEach(x => {
+      const box = document.createElement('div'); box.className = 'q';
+      const p = document.createElement('p'); p.innerHTML = '<b>' + x.n + '.</b> '; p.appendChild(document.createTextNode(x.q)); box.appendChild(p);
+      Object.keys(x.choices).sort().forEach(c => {
+        const lab = document.createElement('label'); const r = document.createElement('input');
+        r.type = 'radio'; r.name = 'q' + x.n; r.value = c; lab.appendChild(r);
+        lab.appendChild(document.createTextNode(c + '. ' + x.choices[c])); lab.dataset.c = c; box.appendChild(lab);
+      });
+      box.dataset.n = x.n; host.appendChild(box);
+    });
+    const res = document.createElement('div'); res.className = 'score'; host.appendChild(res);
+    const g = document.createElement('button'); g.textContent = 'Grade'; host.appendChild(g);
+    const again = document.createElement('button'); again.textContent = 'Clear and retake'; again.className = 'alt'; again.style.marginLeft = '8px'; host.appendChild(again);
+    g.onclick = () => {
+      let right = 0, blank = 0;
+      Q.questions.forEach(x => {
+        const box = host.querySelector('.q[data-n="' + x.n + '"]'), pick = box.querySelector('input:checked');
+        box.querySelectorAll('label').forEach(l => { l.classList.toggle('right', l.dataset.c === x.answer); l.classList.toggle('wrong', !!pick && l.dataset.c === pick.value && pick.value !== x.answer); });
+        let note = box.querySelector('.ref'); if (!note) { note = document.createElement('div'); note.className = 'ref'; box.appendChild(note); }
+        note.textContent = (pick ? (pick.value === x.answer ? 'Right' : 'Key: ' + x.answer) : 'Left blank · key: ' + x.answer) + (x.ref ? ' · ' + x.ref : '');
+        if (!pick) blank++; else if (pick.value === x.answer) right++;
+      });
+      const n = Q.questions.length;
+      res.textContent = right + ' of ' + n + ' · ' + Math.round(100 * right / n) + '%' + (blank ? ' · ' + blank + ' left blank' : '');
+      res.scrollIntoView({ behavior: 'smooth', block: 'center' });
+    };
+    again.onclick = () => { host.querySelectorAll('input').forEach(r => { r.checked = false; }); host.querySelectorAll('label').forEach(l => l.classList.remove('right', 'wrong')); host.querySelectorAll('.ref').forEach(e => e.remove()); res.textContent = ''; window.scrollTo(0, 0); };
+  }
+
   function renderList() {
     if (!units.length) return;
     const host = $('list'); let book = '';
@@ -110,6 +163,11 @@
       a.textContent = label(x) + '  ·  ' + fmt(x.duration_s);
       if (x.video_id === id) a.style.color = '#fff';
       host.appendChild(a);
+    });
+    if (BOOK) quizzes().then(all => {
+      if (!all.length) return;
+      const h = document.createElement('h2'); h.textContent = 'Quizzes · ' + all.length + ' · from the book, graded here'; host.appendChild(h);
+      all.forEach(x => { const a = document.createElement('a'); a.href = 'player.html?book=' + bk + '&quiz=' + encodeURIComponent(x.key); a.textContent = x.quiz + '  ·  ' + x.questions.length + ' questions'; host.appendChild(a); });
     });
   }
 })();

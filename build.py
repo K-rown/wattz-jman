@@ -381,6 +381,13 @@ new = "const DATA = " + json.dumps(DATA, ensure_ascii=False, separators=(",", ":
 html, k = re.subn(r"const DATA = \{.*?\};\n", lambda m: new, html, count=1, flags=re.S)
 assert k == 1
 open("index.html", "w", encoding="utf-8").write(html)
+# ---- quizzes-bg.json: the Bonding & Grounding book's quizzes alone, in the book's order, for the
+# videos-and-quizzes page player.html?book=bg (no plan, no scores, nothing of his) ----
+_QA = json.load(open("quizzes.json", encoding="utf-8"))
+_bg = sorted((k for k in _QA if k.startswith("B&G_")), key=lambda k: (_QA[k].get("page") or 9999, k))
+json.dump([{"key": k, "quiz": _QA[k]["quiz"], "unit": _QA[k].get("unit", ""), "questions": _QA[k]["questions"]} for k in _bg],
+          open("quizzes-bg.json", "w", encoding="utf-8"), ensure_ascii=False, separators=(",", ":"))
+print("quizzes-bg.json:", len(_bg), "quizzes,", sum(len(_QA[k]["questions"]) for k in _bg), "questions")
 
 tv = sum(d["used_v"] for d in days); tq = sum(d["used_q"] for d in days)
 print(f"{len(days)} days, {days[0]['date']} → {days[-1]['date']}, "
