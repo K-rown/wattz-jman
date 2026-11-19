@@ -103,7 +103,7 @@
   function renderList() {
     if (!units.length) return;
     const host = $('list'); let book = '';
-    units.filter(x => x.kind === 'unit' && (!BOOK || x.book === BOOK)).forEach(x => {
+    units.filter(x => BOOK ? x.book === BOOK : x.kind === 'unit').forEach(x => {
       if (x.book !== book) { book = x.book; const h = document.createElement('h2'); h.textContent = book; host.appendChild(h); }
       const a = document.createElement('a');
       a.href = 'player.html?v=' + x.video_id + (bk ? '&book=' + bk : '');
