@@ -549,6 +549,17 @@ def SIM_STEPS2(mins, n):
         f"Second pass, the last {mins - first} minutes: tap Second pass at the top. It shows only what you marked. Open the book on each one, code lookups first, calculations after. Tap ⚑ again when the book agrees with your answer.",
         "Do not grade while the clock has time and marks are left. Sim #2 was 46 of 70, three short of passing, graded with 45 minutes unused. 16 of its 23 wrong answers were given in under two minutes.",
         "After grading, read every miss and press Rewatch where it offers one. Mike writes to the 2023 code and your exam is the 2020: a miss on a rule that changed between them says so. Review stops at 60 min; the redo nights bring the misses back."]
+# 9. WHAT SUNDAY SHOWED (2026-11-20). He asked for each Sunday sim to be read that evening and the week adjusted
+#    from it. simreview.py reads the graded sim out of his record and writes one short note per sim into
+#    simnotes.json, keyed by the next study night; it is laid on that night's card as `coach`. This is the only
+#    thing the unattended Sunday run may change: no question, video, minute or row moves because of it.
+import os as _os
+SIMNOTES = json.load(open("simnotes.json", encoding="utf-8")) if _os.path.exists("simnotes.json") else {}
+for _day, _n in SIMNOTES.items():
+    assert _day in DAY and DAY[_day]["kind"] != "sim", "simnotes.json: %s is not a study night" % _day
+    assert _n.get("sim") in DAY and DAY[_n["sim"]]["kind"] == "sim" and _n["sim"] < _day, "simnotes.json: %s names no sim before it" % _day
+    assert isinstance(_n.get("text"), str) and 20 <= len(_n["text"]) <= 480, "simnotes.json: the note for %s must be 20 to 480 characters" % _day
+    DAY[_day]["coach"] = {"sim": _n["sim"], "text": _n["text"]}
 # 8. THE SEAT (2026-11-19). PSI's "Your Application was received" email for MD Journey Electrician is dated
 #    Nov 17 and allows ten business days to approve: Nov 18, 19, 20, 23, 24, 25, 27, 30, Dec 1, Dec 2.
 #    The plan's exam day is Sat Dec 19 and a December Saturday fills, so the night the ten days run out says so.
