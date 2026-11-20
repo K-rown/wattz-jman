@@ -176,6 +176,13 @@ WORK = {
         ("A feeder on a 400 A breaker. What size copper equipment grounding conductor?", "3 AWG copper. Table 250.122."),
         ("A 60 A circuit would normally be 6 AWG copper with a 10 AWG EGC. The circuit conductors are increased to 3 AWG for voltage drop. What size EGC now?", "6 AWG copper. 250.122(B): the EGC grows in the same proportion. 52,620 ÷ 26,240 = 2.005; 10,380 × 2.005 = 20,815 cmil; 8 AWG is 16,510, too small, so 6 AWG (26,240)."),
     ],
+    "2026-11-19": [   # 314.16(B) box fill, Table 314.16(B) volumes; 314.28(A) pull boxes
+        ("A box has four 12 AWG and two 14 AWG insulated conductors that come in and are spliced there, plus two 12 AWG EGCs. No clamps, no device. What volume does the box need?", "15.25 cu in. Table 314.16(B): 12 AWG = 2.25, 14 AWG = 2.00. Four 12s = 9.00, two 14s = 4.00, and all the EGCs together count once at the largest EGC: 2.25. 9 + 4 + 2.25 = 15.25."),
+        ("A single-gang box with internal cable clamps holds one receptacle. Two 12/2 cables with ground come in: four 12 AWG insulated conductors and two 12 AWG EGCs. What volume does the box need?", "18.00 cu in. Count 8 at 2.25: four conductors, 1 for all the EGCs (314.16(B)(5)), 1 for the clamps (B)(2), 2 for the receptacle yoke (B)(4). 8 × 2.25 = 18."),
+        ("A box holds a switch fed with 14 AWG. Two 12 AWG conductors pass straight through without a splice (less than 12 in. of loop). Four 14 AWG conductors come in and terminate. The EGCs are one 12 AWG and one 14 AWG. No clamps. What volume?", "18.75 cu in. Pass-throughs count 1 each: 2 × 2.25 = 4.50. Four 14s: 4 × 2.00 = 8.00. The EGCs count once at the largest, 12 AWG: 2.25. The switch yoke counts 2 at the largest conductor on the switch, 14 AWG: 4.00. 4.5 + 8 + 2.25 + 4 = 18.75."),
+        ("A straight pull through a pull box. The largest raceway is 3 in. trade size. How long must the box be?", "24 in. at least. 314.28(A)(1): 8 × the largest raceway, 8 × 3 = 24."),
+        ("An angle pull. On the wall where the conductors enter, in one row: one 3 in. raceway and two 2 in. raceways. How far must that wall be from the opposite wall? And how far apart must the entries of the 3 in. raceway be, if its conductors leave through the bottom wall?", "22 in. to the opposite wall: 314.28(A)(2), 6 × the largest (6 × 3 = 18) plus the others in the same row (2 + 2) = 22. The two entries of the 3 in. raceway: 6 × 3 = 18 in. apart at least."),
+    ],
 }
 def add(day, kind, title, **k):
     k.setdefault("steps", []); k.setdefault("video", []); k.setdefault("stars", []); k.setdefault("pages", [])
@@ -246,7 +253,7 @@ NIGHTS = [
     (D(2026, 11, 19), (2, 1), "Box fill and pull boxes · 314.16, 314.28",
      [vid(U2, 0, None, "Unit 2 whole: Table 314.16(A), 314.16(B), then 8× straight, 6× angle and U pulls")],
      [pages("Exam Prep", 265, 278, "Unit 2")],
-     ["Work five box fills with mixed sizes, a device yoke and an EGC, and three pull boxes: straight, angle, several raceways on one wall. Highlight 314.16(A), (B)(1)–(5), 314.28(A)(1)–(3)."],
+     ["Highlight 314.16(A), (B)(1)–(5), 314.28(A)(1)–(3)."],
      quiz("Exam_Prep_Unit_2", 1, 20), []),
     (D(2026, 11, 20), (2, 2), "Dwelling load · the standard method, Table 220.55",
      [vid(U6, 0, 4640, "Unit 6, first half")],
