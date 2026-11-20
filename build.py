@@ -70,6 +70,10 @@ def _with_figs(Q):
         hit = [q for q in Q[qk]["questions"] if str(q["n"]) == n]
         assert hit, "figures.json names a question that is not in the bank: " + k
         hit[0]["fig"] = "data:image/png;base64," + base64.b64encode(open(path, "rb").read()).decode()
+    # 2026-11-19: a question that names one of the book's figures is never built without it
+    import re as _re
+    bare = ["%s #%s" % (k, q["n"]) for k in Q for q in Q[k]["questions"] if _re.search(r"\bFigure \d", q["q"]) and not q.get("fig")]
+    assert not bare, "these questions name a figure the page does not have (add them to figures.json): " + ", ".join(bare)
     return Q
 QUIZZES = json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}
 def quiz_key(q): return (q["book"] + " " + q["label"].replace(" quiz", "")).replace(" ", "_")

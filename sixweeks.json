@@ -111,8 +111,12 @@
    "220.18"
   ],
   [
-   "220.5(C) floor area",
-   "220.11"
+   "220.5(C) floor area (2023 counts the garage)",
+   "220.11 (garage left out)"
+  ],
+  [
+   "Table 220.55 Notes 4, 5, 6 cooking branch circuits",
+   "Table 220.55 Note 4"
   ],
   [
    "Table 310.4(1) insulation",
@@ -329,7 +333,8 @@
     "key": "B&G_Art_250",
     "from": 21,
     "to": 46
-   }
+   },
+   "drill_at": "2026-12-22"
   },
   {
    "day": "2026-11-12",
@@ -402,6 +407,7 @@
     "name": "Theory · Ohm's and Watt's law",
     "minutes": 30
    },
+   "carried_to": "2026-12-05",
    "minutes_real": 104
   },
   {
@@ -767,6 +773,7 @@
      "a": "4 AWG copper. Table 250.66, aluminum column: 4/0 or 250 kcmil."
     }
    ],
+   "drill_at": "2026-12-23",
    "minutes_real": 112
   },
   {
@@ -866,6 +873,7 @@
      "a": "6 AWG copper. 250.122(B): the EGC grows in the same proportion. 52,620 ÷ 26,240 = 2.005; 10,380 × 2.005 = 20,815 cmil; 8 AWG is 16,510, too small, so 6 AWG (26,240)."
     }
    ],
+   "drill_at": "2026-12-26",
    "minutes_real": 115
   },
   {
@@ -926,6 +934,7 @@
     "minutes": 30
    },
    "stars": [],
+   "drill_at": "2026-12-28",
    "minutes_real": 107
   },
   {
@@ -996,6 +1005,8 @@
      "a": "22 in. to the opposite wall: 314.28(A)(2), 6 × the largest (6 × 3 = 18) plus the others in the same row (2 + 2) = 22. The two entries of the 3 in. raceway: 6 × 3 = 18 in. apart at least."
     }
    ],
+   "drill_at": "2026-12-29",
+   "carried_to": "2026-11-23",
    "minutes_real": 116
   },
   {
@@ -1020,7 +1031,9 @@
     }
    ],
    "steps": [
-    "Work example 6.13 start to finish on paper before Mike finishes it. In the 2020 book the lighting load is 220.12 and the demand table is Table 220.42. PSI's own sample question is a range off Table 220.55: do three of those."
+    "In your 2020 book the lighting load is Table 220.12 and its demand table is Table 220.42; Mike's 2023 book calls them 220.41 and Table 220.45.",
+    "Your 2020 book leaves garages out of the square footage, along with open porches (220.11). The 2023 Code counts the garage. If Mike adds a garage's square feet, the 2020 exam does not.",
+    "PSI's own sample question is a range off Table 220.55. In your 2020 book the oven and cooktop rules are all in Note 4 under that table; Mike's 2023 book splits them into Notes 4, 5 and 6."
    ],
    "drill": {
     "mix": [
@@ -1034,11 +1047,40 @@
     "minutes": 30
    },
    "quiz": {
-    "key": "Exam_Prep_Unit_6",
-    "from": 1,
-    "to": 20
+    "mix": [
+     {
+      "key": "Exam_Prep_Unit_6",
+      "from": 15,
+      "to": 33
+     },
+     {
+      "key": "Exam_Prep_Unit_6",
+      "from": 43,
+      "to": 43
+     }
+    ],
+    "name": "Dwelling load · 20 timed",
+    "minutes": 30
    },
    "stars": [],
+   "work": [
+    {
+     "q": "A 2,000 sq ft house. What is the demand load for the general lighting, the two small-appliance circuits and the laundry circuit together?",
+     "a": "5,625 VA. Lighting 2,000 × 3 VA = 6,000. Two small-appliance circuits = 3,000. Laundry = 1,500. Total 10,500. Table 220.42: the first 3,000 at 100% = 3,000; the other 7,500 at 35% = 2,625. 3,000 + 2,625 = 5,625. (Mike's 2023 book calls these 220.41 and Table 220.45.)",
+     "min": 3
+    },
+    {
+     "q": "Table 220.55, Column C. What is the demand load for (a) one 12 kW range, (b) five 12 kW ranges, (c) one 16 kW range?",
+     "a": "(a) 8 kW. (b) 20 kW. (c) 9.6 kW: 16 kW is 4 kW over 12, and Note 1 adds 5% for each kW over 12, so 8 kW × 1.20 = 9.6.",
+     "min": 3
+    },
+    {
+     "q": "The whole standard method on one house: 1,500 sq ft, 120/240 V, one 12 kW range, one 5.5 kW dryer, nothing else. What is the service load in amperes?",
+     "a": "78 A. Lighting 1,500 × 3 = 4,500, plus 3,000 small-appliance, plus 1,500 laundry = 9,000; the first 3,000 at 100% and the other 6,000 at 35% = 5,100 VA. Range 8,000 (Table 220.55). Dryer 5,500 (220.54: 5,000 or the nameplate, whichever is larger). 5,100 + 8,000 + 5,500 = 18,600 VA ÷ 240 V = 77.5 A.",
+     "min": 4
+    }
+   ],
+   "drill_at": "2026-12-07",
    "minutes_real": 104
   },
   {
@@ -1063,7 +1105,7 @@
     }
    ],
    "steps": [
-    "On paper: RMS = peak × 0.707, peak = RMS × 1.414. The quiz is the rest of parallel circuits from the last theory night; Unit 17's own questions come on the next one."
+    "Two numbers to keep from tonight: RMS = peak × 0.707, peak = RMS × 1.414. The quiz is the rest of parallel circuits from the last theory night; Unit 17's own questions come on the next one."
    ],
    "drill": {
     "mix": [
@@ -1087,7 +1129,7 @@
     "to": 22
    },
    "stars": [],
-   "minutes_real": 107
+   "minutes_real": 124
   },
   {
    "day": "2026-11-22",
@@ -1160,7 +1202,25 @@
    "stars": [
     "23UNEC1Article230"
    ],
-   "minutes_real": 44
+   "drill_at": "2026-12-08",
+   "carry": [
+    {
+     "day": "2026-11-19",
+     "from": "Thu Nov 19",
+     "say": "the last 23 minutes of the box fill video and the rest of its 20 questions",
+     "video": [
+      {
+       "id": "23EPUnit2",
+       "from": 3200,
+       "to": 4831,
+       "say": "Pull boxes: 8× for a straight pull, 6× for angle and U pulls, the distance between raceways holding the same conductor"
+      }
+     ],
+     "quiz": true
+    }
+   ],
+   "read_min": 25,
+   "minutes_real": 100
   },
   {
    "day": "2026-11-24",
@@ -1197,7 +1257,7 @@
     }
    ],
    "steps": [
-    "On paper: PF = W ÷ VA; VA = E × I, × 1.732 for three-phase. Work every example before Mike does. The quiz is Unit 17, from the last theory night."
+    "The formulas tonight: PF = W ÷ VA; VA = E × I, × 1.732 for three-phase. The quiz is Unit 17, from the last theory night."
    ],
    "drill": {
     "mix": [
@@ -1226,7 +1286,8 @@
     "to": 20
    },
    "stars": [],
-   "minutes_real": 96
+   "drill_at": "2026-12-09",
+   "minutes_real": 85
   },
   {
    "day": "2026-11-25",
@@ -1250,7 +1311,7 @@
     }
    ],
    "steps": [
-    "Work six fills: three straight from Annex C, three with mixed sizes through Tables 4 and 5. Note 7: round up at 0.8. Note 4: nipples at 60%. Wireways are 20% (376.22). Tab Annex C by raceway type (permanent tabs)."
+    "The Chapter 9 notes that decide answers: Note 7, round up only at 0.8 or more; Note 4, a nipple 24 in. or shorter fills to 60%. Wireways are 20% (376.22). Tab Annex C by raceway type (permanent tabs)."
    ],
    "drill": {
     "mix": [
@@ -1269,6 +1330,27 @@
     "to": 20
    },
    "stars": [],
+   "work": [
+    {
+     "q": "How many 12 AWG THHN conductors fit in trade size ¾ EMT?",
+     "a": "16. All one size, so go straight to Annex C, Table C.1."
+    },
+    {
+     "q": "Three 4 AWG THHN and four 8 AWG THHN in one EMT. What trade size?",
+     "a": "Trade size 1¼. Table 5: 4 THHN = 0.0824 sq in., 8 THHN = 0.0366. 3 × 0.0824 = 0.2472; 4 × 0.0366 = 0.1464; together 0.3936 sq in. Table 4, EMT, 40% column: trade size 1 is 0.346, too small; 1¼ is 0.598.",
+     "min": 3
+    },
+    {
+     "q": "How many 6 AWG THHN conductors fit in a 20 in. nipple of trade size 1 RMC?",
+     "a": "10. A nipple 24 in. or shorter fills to 60% (Chapter 9, Note 4). Table 4, RMC trade size 1, 60% column: 0.532 sq in. Table 5: 6 THHN = 0.0507. 0.532 ÷ 0.0507 = 10.49. Note 7 rounds up only at 0.8 or more, so 10.",
+     "min": 3
+    },
+    {
+     "q": "By Tables 4 and 5, not Annex C: how many 10 AWG THHN fit in trade size ½ EMT?",
+     "a": "5. Table 4, EMT ½, 40% column: 0.122 sq in. Table 5: 10 THHN = 0.0211. 0.122 ÷ 0.0211 = 5.78. Under 0.8, so it stays 5. Annex C says 5 too."
+    }
+   ],
+   "drill_at": "2026-12-10",
    "minutes_real": 100
   },
   {
@@ -1325,7 +1407,8 @@
     "23UNEC1Article344",
     "23UNEC1Article352"
    ],
-   "minutes_real": 52
+   "read_min": 30,
+   "minutes_real": 82
   },
   {
    "day": "2026-11-27",
@@ -1349,7 +1432,7 @@
     }
    ],
    "steps": [
-    "Work six: three single-phase, three three-phase, in volts and in percent. 3% and 5% are informational notes under 210.19 and 215.2."
+    "K is 12.9 for copper and 21.2 for aluminum; the circular mils are in Chapter 9, Table 8. The 3% and 5% are informational notes under 210.19 and 215.2: a recommendation, not a rule."
    ],
    "drill": {
     "mix": [
@@ -1373,6 +1456,28 @@
     "to": 20
    },
    "stars": [],
+   "work": [
+    {
+     "q": "A 24 A load, 120 V single-phase, 160 ft from the panel on 10 AWG copper. What is the voltage drop, in volts and in percent?",
+     "a": "9.54 V, 7.95%. Table 8: 10 AWG = 10,380 cmil. VD = 2 × 12.9 × 24 × 160 ÷ 10,380 = 99,072 ÷ 10,380 = 9.54 V. 9.54 ÷ 120 = 7.95%.",
+     "min": 3
+    },
+    {
+     "q": "A 40 A load, 208 V three-phase, 200 ft away on 8 AWG copper. Voltage drop in volts and in percent?",
+     "a": "10.83 V, 5.2%. Table 8: 8 AWG = 16,510 cmil. VD = 1.732 × 12.9 × 40 × 200 ÷ 16,510 = 178,742 ÷ 16,510 = 10.83 V. 10.83 ÷ 208 = 5.2%.",
+     "min": 3
+    },
+    {
+     "q": "A 16 A load, 120 V single-phase, 150 ft away. What size copper keeps the drop to 3%?",
+     "a": "6 AWG. 3% of 120 V = 3.6 V. cmil = 2 × 12.9 × 16 × 150 ÷ 3.6 = 17,200. Table 8: 8 AWG is 16,510, too small; 6 AWG is 26,240.",
+     "min": 3
+    },
+    {
+     "q": "What is the resistance of 300 ft of 12 AWG stranded copper?",
+     "a": "0.594 Ω. Chapter 9, Table 8: 12 AWG stranded, uncoated copper is 1.98 Ω per 1,000 ft. 1.98 × 0.3 = 0.594."
+    }
+   ],
+   "drill_at": "2026-12-11",
    "minutes_real": 94
   },
   {
@@ -1410,7 +1515,7 @@
     }
    ],
    "steps": [
-    "On paper: a 4:1 transformer divides voltage by 4 and multiplies current by 4; I = VA ÷ (E × 1.732) for three-phase. The quiz is Unit 20, from the last theory night."
+    "Keep from tonight: a 4:1 transformer divides voltage by 4 and multiplies current by 4; I = VA ÷ (E × 1.732) for three-phase. The quiz is Unit 20, from the last theory night."
    ],
    "drill": {
     "mix": [
@@ -1429,7 +1534,7 @@
     "to": 20
    },
    "stars": [],
-   "minutes_real": 106
+   "minutes_real": 120
   },
   {
    "day": "2026-11-29",
@@ -1719,7 +1824,7 @@
     }
    ],
    "steps": [
-    "Work six: pick from the 75°C column, then check against the corrected 90°C ampacity. In the 2020 book the insulation table is Table 310.4(A). Highlight Art 310 from its ★ list: 310.10, 310.12 and Table 310.12(A), 310.15(B), (C), (E), Table 310.16."
+    "The method every time: size from the 75°C column for the terminals, then check that the corrected and adjusted 90°C ampacity still carries the load. In the 2020 book the insulation table is Table 310.4(A). Highlight Art 310 from its ★ list: 310.10, 310.12 and Table 310.12(A), 310.15(B), (C), (E), Table 310.16."
    ],
    "drill": {
     "mix": [
@@ -1745,6 +1850,26 @@
    "stars": [
     "23UNEC1Article310"
    ],
+   "work": [
+    {
+     "q": "A 100 A breaker with terminals rated 75°C, a 100 A load. What is the smallest copper THHN you can land on it?",
+     "a": "3 AWG. Size by the terminals: Table 310.16, 75°C column, 3 AWG = 100 A. THHN is 90°C wire, but 110.14(C) holds it to the terminal's column."
+    },
+    {
+     "q": "What is the ampacity of 8 AWG THHN copper in a 110°F ambient? Three current-carrying conductors.",
+     "a": "47.85 A. Table 310.16, 90°C column: 55 A. Table 310.15(B)(1), 105–113°F, 90°C wire: 0.87. 55 × 0.87 = 47.85."
+    },
+    {
+     "q": "Six current-carrying 12 AWG THHN copper conductors share one raceway, normal ambient. What is the ampacity of each?",
+     "a": "24 A. 90°C column: 30 A. Table 310.15(C)(1), 4 to 6 conductors: 80%. 30 × 0.80 = 24."
+    },
+    {
+     "q": "Eight current-carrying 10 AWG THHN copper conductors in one raceway at 100°F. What is the ampacity of each?",
+     "a": "25.48 A. 90°C column: 40 A. Correction for 96–104°F: 0.91. Adjustment for 7 to 9 conductors: 70%. 40 × 0.91 × 0.70 = 25.48.",
+     "min": 3
+    }
+   ],
+   "drill_at": "2026-12-14",
    "minutes_real": 101
   },
   {
@@ -1801,6 +1926,8 @@
    "stars": [
     "23UNEC1Article240"
    ],
+   "drill_at": "2026-12-15",
+   "minq": 2,
    "minutes_real": 101
   },
   {
@@ -1825,7 +1952,7 @@
     }
    ],
    "steps": [
-    "Work three motors on paper: FLC from the table, never the nameplate, then the conductor at 125% by 430.22. Highlight Art 430 from its ★ list; tab Table 430.52 and the FLC tables."
+    "FLC comes from the table, never the nameplate; the conductor is 125% of it by 430.22. Highlight Art 430 from its ★ list; tab Table 430.52 and the FLC tables."
    ],
    "drill": {
     "mix": [
@@ -1881,7 +2008,24 @@
    "stars": [
     "23UNEC1Article430"
    ],
-   "minutes_real": 85
+   "work": [
+    {
+     "q": "A 3 hp, 230 V, single-phase motor. What is its FLC, and the smallest ampacity its branch-circuit conductors may have?",
+     "a": "17 A and 21.25 A. Table 430.248: 3 hp at 230 V = 17 A. 430.22: 17 × 1.25 = 21.25 A."
+    },
+    {
+     "q": "A 10 hp, 208 V, three-phase motor, terminals rated 75°C. What size copper branch-circuit conductors?",
+     "a": "8 AWG. Table 430.250: 10 hp at 208 V = 30.8 A. 30.8 × 1.25 = 38.5 A. Table 310.16, 75°C: 10 AWG is 35 A, too small; 8 AWG is 50 A.",
+     "min": 3
+    },
+    {
+     "q": "A 25 hp, 460 V, three-phase motor, terminals rated 75°C. What size copper branch-circuit conductors?",
+     "a": "8 AWG. Table 430.250: 25 hp at 460 V = 34 A. 34 × 1.25 = 42.5 A. Table 310.16, 75°C: 8 AWG = 50 A.",
+     "min": 3
+    }
+   ],
+   "drill_at": "2026-12-16",
+   "minutes_real": 80
   },
   {
    "day": "2026-12-03",
@@ -1905,7 +2049,7 @@
     }
    ],
    "steps": [
-    "Finish the three motors from the last motor night: the overload by 430.32, the breaker by Table 430.52 and 430.52(C)(1) Ex 1, the EGC."
+    "Overloads go by the nameplate (430.32). The breaker or fuse goes by the table FLC and Table 430.52, and 430.52(C)(1) Exception 1 allows the next size up. The EGC goes by the breaker (Table 250.122)."
    ],
    "drill": {
     "mix": [
@@ -1959,7 +2103,27 @@
     "to": 39
    },
    "stars": [],
-   "minutes_real": 98
+   "work": [
+    {
+     "q": "A motor's nameplate reads 24 A, service factor 1.15. What is the largest overload setting?",
+     "a": "30 A. 430.32(A)(1): service factor 1.15 or more, 125% of the nameplate current. 24 × 1.25 = 30. Overloads are the one place the nameplate is used."
+    },
+    {
+     "q": "A 10 hp, 208 V, three-phase motor (FLC 30.8 A). What size inverse time breaker?",
+     "a": "80 A. Table 430.52: inverse time breaker, 250%. 30.8 × 2.5 = 77 A. That is not a standard size, so 430.52(C)(1) Exception 1 allows the next size up in 240.6(A): 80 A.",
+     "min": 3
+    },
+    {
+     "q": "The same motor on that 80 A breaker. What size copper equipment grounding conductor?",
+     "a": "8 AWG. Table 250.122, by the breaker: 80 A is over the 60 A row, so use the 100 A row."
+    },
+    {
+     "q": "The same motor on dual-element time-delay fuses instead. What size?",
+     "a": "60 A. Table 430.52: dual-element fuse, 175%. 30.8 × 1.75 = 53.9 A; next size up, 60 A."
+    }
+   ],
+   "drill_at": "2026-12-17",
+   "minutes_real": 96
   },
   {
    "day": "2026-12-04",
@@ -1983,7 +2147,7 @@
     }
    ],
    "steps": [
-    "One feeder for three motors, conductor and breaker. Then highlight 422, 424 and 440 from their ★ lists: 422.10, 422.11, 422.16 cords, 422.31 disconnects, 424.3, 440.4(B), 440.14. Six of the seventy are Articles 400–490."
+    "Highlight 422, 424 and 440 from their ★ lists: 422.10, 422.11, 422.16 cords, 422.31 disconnects, 424.3, 440.4(B), 440.14. Six of the seventy are Articles 400–490."
    ],
    "drill": {
     "mix": [
@@ -2041,18 +2205,29 @@
     "23UNEC1Article424",
     "23UNEC1Article440"
    ],
-   "minutes_real": 89
+   "work": [
+    {
+     "q": "One feeder supplies three 460 V, three-phase motors: 10 hp, 15 hp and 25 hp. Terminals rated 75°C. What size copper feeder conductors?",
+     "a": "4 AWG. Table 430.250 at 460 V: 14 A, 21 A, 34 A. 430.24: 125% of the largest plus the others. 34 × 1.25 = 42.5; 42.5 + 21 + 14 = 77.5 A. Table 310.16, 75°C: 6 AWG is 65 A, too small; 4 AWG is 85 A.",
+     "min": 3
+    },
+    {
+     "q": "The same three motors, each on its own inverse time breaker. What is the largest feeder breaker?",
+     "a": "125 A. 430.62(A): the largest branch breaker plus the FLC of the other motors. Largest: 34 × 2.5 = 85, next size up 90 A. 90 + 21 + 14 = 125 A. A feeder may not round up; 125 A happens to be a standard size.",
+     "min": 3
+    }
+   ],
+   "drill_at": "2026-12-17",
+   "minq": 2,
+   "minutes_real": 93
   },
   {
    "day": "2026-12-05",
    "kind": "notebook",
    "title": "Theory VI · every theory miss, then twenty mixed",
    "redo": "^(Theory\\b|\\d{1,2}\\.\\d)",
-   "what": "Every theory miss from Sims #1 to #4 and the theory nights, redone on paper. Twenty of benchmark 1's seventy are theory.",
-   "steps": [
-    "",
-    "Then ten formula-wheel questions from Exam Prep Unit 29 (printed p105–107), each one written out: what is given, what is asked, which formula."
-   ],
+   "what": "Your theory misses from Sims #1 to #4 and the theory nights, redone below. Twenty of benchmark 1's seventy are theory.",
+   "steps": [],
    "drill": {
     "mix": [
      {
@@ -2113,7 +2288,17 @@
    "video": [],
    "stars": [],
    "pages": [],
-   "minutes_real": 52
+   "drill_at": "2026-12-21",
+   "carry": [
+    {
+     "day": "2026-11-12",
+     "from": "Fri Nov 13",
+     "say": "the Ohm's and Watt's law quiz that was never taken",
+     "quiz": true
+    }
+   ],
+   "redo_max": 36,
+   "minutes_real": 114
   },
   {
    "day": "2026-12-06",
@@ -2491,10 +2676,8 @@
    "kind": "notebook",
    "title": "All sim misses, cold",
    "redo": "^",
-   "what": "Every miss from Sims #1–#5. Redo them below without looking at the old answer; anything missed twice is red and comes back on the twice-missed night.",
-   "steps": [
-    "Lookup drill: shut the book, then find the section of each sim miss in under 60 seconds. Time every one."
-   ],
+   "what": "Your misses from Sims #1–#5, the newest first. Redo them below without looking at the old answer; anything missed twice comes back on the twice-missed night.",
+   "steps": [],
    "quiz": {
     "key": "Exam_Prep_Module_III_Practice_Exam",
     "from": 1,
@@ -2503,17 +2686,21 @@
    "video": [],
    "stars": [],
    "pages": [],
-   "minutes_real": 30
+   "drills_in": [
+    "2026-11-20"
+   ],
+   "minq": 2,
+   "redo_max": 26,
+   "redo_sort": "new",
+   "minutes_real": 102
   },
   {
    "day": "2026-12-08",
    "kind": "notebook",
    "title": "250, 220 and 314 misses",
    "redo": "^(Table\\s+)?(250|220|314)\\.",
-   "what": "Every grounding, load-calc and box-fill miss. For each, read the whole section in the 2020 book, not just the line. Then Exam Prep 6.13 once more, on paper.",
-   "steps": [
-    "Lookup drill: Table 250.66, Table 250.102(C)(1), Table 250.122, Table 220.55 and its notes, Table 220.42, 314.16(B), 314.28(A), blind and timed."
-   ],
+   "what": "Your grounding, load-calc and box-fill misses. For each one you miss again, read the whole section in the 2020 book, not just the line. Then the one whole dwelling calculation written out under them.",
+   "steps": [],
    "quiz": {
     "mix": [
      {
@@ -2533,17 +2720,26 @@
    "video": [],
    "stars": [],
    "pages": [],
-   "minutes_real": 30
+   "work": [
+    {
+     "q": "The standard method, start to finish: a 2,000 sq ft house, 120/240 V, with a 10 kW range, a 5 kW dryer, a 4.5 kW water heater and a 1.2 kW dishwasher. What is the service load in amperes?",
+     "a": "101 A. Lighting 6,000 + small-appliance 3,000 + laundry 1,500 = 10,500; 3,000 at 100% and 7,500 at 35% = 5,625 VA (Table 220.42). Water heater and dishwasher: only two appliances, so no 75% (220.53 needs four): 5,700. Dryer 5,000 (220.54). Range 8,000 (Table 220.55, Column C). 5,625 + 5,700 + 5,000 + 8,000 = 24,325 VA ÷ 240 V = 101 A.",
+     "min": 7
+    }
+   ],
+   "drills_in": [
+    "2026-11-23"
+   ],
+   "redo_max": 28,
+   "minutes_real": 102
   },
   {
    "day": "2026-12-09",
    "kind": "notebook",
    "title": "Chapter 9, voltage drop and 310 misses",
    "redo": "^(Table\\s+)?(310\\.|Chapter 9|Ch\\.? 9|Annex|Table [1458]\\b)",
-   "what": "Every conduit-fill, voltage-drop and ampacity miss. Two fresh fills, two fresh drops, two corrections with both factors.",
-   "steps": [
-    "Lookup drill: Ch 9 Tables 1, 4, 5, 8, Annex C, Table 310.16, 310.15(B)(1), 310.15(C)(1), blind and timed."
-   ],
+   "what": "Your conduit-fill, voltage-drop and ampacity misses, then the four problems written out under them.",
+   "steps": [],
    "quiz": {
     "mix": [
      {
@@ -2558,17 +2754,40 @@
    "video": [],
    "stars": [],
    "pages": [],
-   "minutes_real": 30
+   "work": [
+    {
+     "q": "How many 10 AWG THHN conductors fit in trade size 1 EMT?",
+     "a": "16. Annex C, Table C.1."
+    },
+    {
+     "q": "Four 6 AWG THHN and three 10 AWG THHN in one EMT. What trade size?",
+     "a": "Trade size 1. Table 5: 4 × 0.0507 = 0.2028; 3 × 0.0211 = 0.0633; together 0.2661 sq in. Table 4, EMT, 40% column: ¾ is 0.213, too small; 1 is 0.346.",
+     "min": 3
+    },
+    {
+     "q": "A 20 A load, 240 V single-phase, 120 ft away on 12 AWG copper. Voltage drop in volts and in percent?",
+     "a": "9.48 V, 3.95%. Table 8: 12 AWG = 6,530 cmil. VD = 2 × 12.9 × 20 × 120 ÷ 6,530 = 61,920 ÷ 6,530 = 9.48 V. 9.48 ÷ 240 = 3.95%.",
+     "min": 3
+    },
+    {
+     "q": "Four current-carrying 8 AWG THHN copper conductors in one raceway at 120°F. What is the ampacity of each?",
+     "a": "36.08 A. Table 310.16, 90°C column: 55 A. Correction for 114–122°F: 0.82. Adjustment for 4 to 6 conductors: 80%. 55 × 0.82 × 0.80 = 36.08.",
+     "min": 3
+    }
+   ],
+   "drills_in": [
+    "2026-11-24"
+   ],
+   "redo_max": 26,
+   "minutes_real": 102
   },
   {
    "day": "2026-12-10",
    "kind": "notebook",
    "title": "240, 430, 440 misses",
    "redo": "^(Table\\s+)?(240|430|440|450)\\.",
-   "what": "Every overcurrent, motor and AC miss. One full motor circuit, end to end.",
-   "steps": [
-    "Lookup drill: 240.6(A), 240.21(B), Table 430.52, 430.248, 430.250, 430.110, 440.4(B), blind and timed."
-   ],
+   "what": "Your overcurrent, motor and air-conditioning misses, then one whole motor circuit written out under them.",
+   "steps": [],
    "quiz": {
     "key": "Exam_Prep_Module_III_Practice_Exam",
     "from": 21,
@@ -2577,17 +2796,27 @@
    "video": [],
    "stars": [],
    "pages": [],
-   "minutes_real": 30
+   "work": [
+    {
+     "q": "One motor circuit, end to end: 15 hp, 230 V, three-phase, nameplate 40 A, service factor 1.15, terminals 75°C. Give the conductor, the overload setting, the inverse time breaker and the copper EGC.",
+     "a": "6 AWG, 50 A, 110 A, 6 AWG. FLC from Table 430.250: 42 A. Conductor: 42 × 1.25 = 52.5 A, so 6 AWG (65 A at 75°C). Overload, from the nameplate: 40 × 1.25 = 50 A. Breaker: 42 × 2.5 = 105 A, next size up 110 A. EGC by the 110 A breaker: over the 100 A row of Table 250.122, so the 200 A row, 6 AWG.",
+     "min": 7
+    }
+   ],
+   "drills_in": [
+    "2026-11-25"
+   ],
+   "minq": 2,
+   "redo_max": 22,
+   "minutes_real": 102
   },
   {
    "day": "2026-12-11",
    "kind": "notebook",
    "title": "Twice-missed, and theory",
    "redo": "^",
-   "what": "Everything red. Then the Theory questions below: 20 of the 70 are theory, the biggest block on the exam.",
-   "steps": [
-    "Lookup drill: twenty random index words from the 2020 book, 60 seconds each."
-   ],
+   "what": "Whatever you have missed twice comes first. Then the theory questions: 20 of the 70 are theory, the biggest block on the exam.",
+   "steps": [],
    "quiz": {
     "key": "Theory_Final_Exam",
     "from": 21,
@@ -2596,7 +2825,12 @@
    "video": [],
    "stars": [],
    "pages": [],
-   "minutes_real": 30
+   "drills_in": [
+    "2026-11-27"
+   ],
+   "redo_max": 30,
+   "redo_sort": "twice",
+   "minutes_real": 98
   },
   {
    "day": "2026-12-12",
@@ -2674,7 +2908,7 @@
     "minutes": 30
    },
    "stars": [],
-   "minutes_real": 95
+   "minutes_real": 106
   },
   {
    "day": "2026-12-13",
@@ -3051,45 +3285,72 @@
    "day": "2026-12-14",
    "kind": "taper",
    "title": "Taper, one hour",
-   "steps": [
-    "30 min lookup drill from the notebook, then 20 timed questions from any sim you have not re-sat. No new material."
-   ],
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-11-30"
+   ],
+   "redo": "^",
+   "redo_max": 20,
+   "redo_sort": "new",
+   "what": "Sunday's benchmark misses come first. No new material this week.",
+   "minutes_real": 52
   },
   {
    "day": "2026-12-15",
    "kind": "taper",
    "title": "Taper, one hour",
-   "steps": [
-    "Same. Rework only what is still red in the Missed questions fold."
-   ],
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-12-01"
+   ],
+   "redo": "^(Theory\\b|\\d{1,2}\\.\\d)",
+   "redo_max": 20,
+   "redo_sort": "twice",
+   "what": "Theory tonight. What you have missed twice comes first.",
+   "minutes_real": 52
   },
   {
    "day": "2026-12-16",
    "kind": "taper",
    "title": "Taper, one hour",
    "steps": [
-    "Same. Call PSI once: arrival time, what ID they want. The bulletin gives an on-screen calculator and nothing else: use the computer's calculator on every quiz from today."
+    "Call PSI once: arrival time, what ID they want. The bulletin gives an on-screen calculator and nothing else: use the computer's calculator on every quiz from today."
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-12-02"
+   ],
+   "redo": "^",
+   "redo_max": 20,
+   "redo_sort": "twice",
+   "what": "Any article. What you have missed twice comes first.",
+   "tick_name": "Call PSI",
+   "minutes_real": 52
   },
   {
    "day": "2026-12-17",
    "kind": "taper",
    "title": "Taper, one hour",
    "steps": [
-    "Lookup drill only. Pack: the 2020 NEC, tabbed with permanent plastic tabs only (no Post-it flags, no paper inserts, nothing written in it, nothing loose), two forms of ID with the name on the application, the PSI confirmation."
+    "Pack: the 2020 NEC, tabbed with permanent plastic tabs only (no Post-it flags, no paper inserts, nothing written in it, nothing loose), two forms of ID with the name on the application, the PSI confirmation."
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-12-03",
+    "2026-12-04"
+   ],
+   "tick_name": "Pack the bag",
+   "minutes_real": 45
   },
   {
    "day": "2026-12-18",
@@ -3100,7 +3361,8 @@
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 0
   },
   {
    "day": "2026-12-19",
@@ -3111,7 +3373,8 @@
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 0
   },
   {
    "day": "2026-12-20",
@@ -3134,56 +3397,68 @@
   {
    "day": "2026-12-21",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
    "quiz": {
     "key": "Exam_Prep_Module_II_Practice_Exam",
     "from": 21,
     "to": 40
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-12-05"
+   ],
+   "minutes_real": 68
   },
   {
    "day": "2026-12-22",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
    "quiz": {
     "key": "Exam_Prep_Module_II_Practice_Exam",
     "from": 41,
     "to": 60
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-11-11"
+   ],
+   "minutes_real": 68
   },
   {
    "day": "2026-12-23",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
    "quiz": {
     "key": "Exam_Prep_Module_II_Practice_Exam",
     "from": 61,
     "to": 80
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-11-16"
+   ],
+   "minutes_real": 68
   },
   {
    "day": "2026-12-24",
@@ -3194,7 +3469,8 @@
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 0
   },
   {
    "day": "2026-12-25",
@@ -3205,25 +3481,30 @@
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 0
   },
   {
    "day": "2026-12-26",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
    "quiz": {
     "key": "Exam_Prep_Module_II_Practice_Exam",
     "from": 81,
     "to": 100
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-11-17"
+   ],
+   "minutes_real": 68
   },
   {
    "day": "2026-12-27",
@@ -3246,56 +3527,66 @@
   {
    "day": "2026-12-28",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_A",
     "from": 1,
     "to": 20
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-11-18"
+   ],
+   "minutes_real": 68
   },
   {
    "day": "2026-12-29",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_A",
     "from": 21,
     "to": 40
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "drills_in": [
+    "2026-11-19"
+   ],
+   "minutes_real": 68
   },
   {
    "day": "2026-12-30",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_A",
     "from": 41,
     "to": 60
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2026-12-31",
@@ -3306,7 +3597,8 @@
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 0
   },
   {
    "day": "2027-01-01",
@@ -3317,25 +3609,28 @@
    ],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 0
   },
   {
    "day": "2027-01-02",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_A",
     "from": 61,
     "to": 80
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-03",
@@ -3358,110 +3653,122 @@
   {
    "day": "2027-01-04",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_A",
     "from": 81,
     "to": 100
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-05",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_B",
     "from": 1,
     "to": 20
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-06",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_B",
     "from": 21,
     "to": 40
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-07",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_B",
     "from": 41,
     "to": 60
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-08",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_B",
     "from": 61,
     "to": 80
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-09",
    "kind": "notebook",
-   "title": "Holding week · one hour",
+   "title": "Holding week · about an hour",
    "redo": "^",
-   "what": "Until PSI gives a date: every miss still red, then twenty timed questions. No new material; the book does not get thicker.",
-   "steps": [
-    "Lookup drill: ten sections from the notebook, blind, 60 seconds each."
-   ],
+   "redo_max": 10,
+   "redo_sort": "twice",
+   "what": "Until PSI gives a date: ten of the misses still red, then twenty timed questions. No new material; the book does not get thicker.",
+   "drill_note": "Ten sections from the Missed questions list, book shut to start, 60 seconds each to find.",
    "quiz": {
     "key": "NEC_Vol_2_Final_Exam_B",
     "from": 81,
     "to": 100
    },
+   "steps": [],
    "video": [],
    "stars": [],
-   "pages": []
+   "pages": [],
+   "minutes_real": 65
   },
   {
    "day": "2027-01-10",
@@ -3482,5 +3789,6 @@
    "pages": []
   }
  ],
- "checked": "Plan checked Nov 19: every night through Dec 13 fits two hours, every count and minute shown is the real one, page ranges match the books' contents, no quiz asks ahead of its video, and the two benchmarks hold no question seen before."
+ "checked": "Plan checked Nov 19: every weeknight from Nov 20 fits 1 h 45 and every Saturday 2 h 05 at the pace you really watch, every count and minute shown is the real one, every problem a night asks for is written on its card, page ranges match the books' contents, no quiz asks ahead of its video, and the two benchmarks hold no question seen before.",
+ "pace": 1.2
 }

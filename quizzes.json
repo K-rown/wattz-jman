@@ -9444,7 +9444,7 @@
     "q": "What is the demand load for a 15.5 kW range?",
     "choices": {
      "a": "9.6 kW",
-     "b": "112 kW",
+     "b": "11.2 kW",
      "c": "13.2 kW",
      "d": "15.6 kW"
     },
@@ -9456,7 +9456,7 @@
     "q": "What is the demand load for a 16 kW range?",
     "choices": {
      "a": "9.6 kW",
-     "b": "11,2 kW",
+     "b": "11.2 kW",
      "c": "13.2 kW",
      "d": "15.6 kW"
     },
@@ -9496,7 +9496,7 @@
      "c": "5 kW",
      "d": "6 kW"
     },
-    "ref": "Table 220.55 Note 5",
+    "ref": "Table 220.55 Note 5 · in the 2020 book: Note 4",
     "answer": "a"
    },
    {
@@ -9508,7 +9508,7 @@
      "c": "5 kW",
      "d": "6 kW"
     },
-    "ref": "Table 220.55 Note 5",
+    "ref": "Table 220.55 Note 5 · in the 2020 book: Note 4",
     "answer": "d"
    },
    {
@@ -9520,7 +9520,7 @@
      "c": "7 kW",
      "d": "8 kW"
     },
-    "ref": "Table 220.55 Note 6",
+    "ref": "Table 220.55 Note 6 · in the 2020 book: Note 4",
     "answer": "d"
    },
    {
@@ -9664,7 +9664,7 @@
      "c": "5,100 VA",
      "d": "5,300 VA"
     },
-    "ref": "220.52(A), 220.52(B), 220.41 and Table 220.45",
+    "ref": "220.52(A), 220.52(B), 220.41 and Table 220.45 · in the 2020 book: Table 220.12 and Table 220.42",
     "answer": "c"
    },
    {
@@ -59886,7 +59886,7 @@
      "a": "45A",
      "b": "50A",
      "c": "60A",
-     "d": "65A 3.13 Feeder Conductor Sizing [215.2(A)(1)]"
+     "d": "65A"
     },
     "ref": "210.20(A)",
     "answer": "c"
@@ -60161,7 +60161,7 @@
     "choices": {
      "a": "139A",
      "b": "145A",
-     "c": "145A",
+     "c": "147A",
      "d": "152A"
     },
     "ref": "See NEC Annex D Example D2(c) for solution.",
@@ -60236,7 +60236,7 @@
      "c": "5 kW",
      "d": "6 kW"
     },
-    "ref": "Table 220.55 Note 5",
+    "ref": "Table 220.55 Note 5 · in the 2020 book: Note 4",
     "answer": "d"
    },
    {
@@ -63107,7 +63107,7 @@
      "d": "6 kW"
     },
     "answer": "d",
-    "ref": "Table 220.55 Note 5"
+    "ref": "Table 220.55 Note 5 · in the 2020 book: Note 4"
    }
   ]
  },
