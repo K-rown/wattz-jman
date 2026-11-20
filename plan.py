@@ -195,6 +195,8 @@ WORK = {
          "(a) 8 kW. (b) 20 kW. (c) 9.6 kW: 16 kW is 4 kW over 12, and Note 1 adds 5% for each kW over 12, so 8 kW × 1.20 = 9.6.", 3),
         ("The whole standard method on one house: 1,500 sq ft, 120/240 V, one 12 kW range, one 5.5 kW dryer, nothing else. What is the service load in amperes?",
          "78 A. Lighting 1,500 × 3 = 4,500, plus 3,000 small-appliance, plus 1,500 laundry = 9,000; the first 3,000 at 100% and the other 6,000 at 35% = 5,100 VA. Range 8,000 (Table 220.55). Dryer 5,500 (220.54: 5,000 or the nameplate, whichever is larger). 5,100 + 8,000 + 5,500 = 18,600 VA ÷ 240 V = 77.5 A.", 4),
+        ("A 5.5 kW dryer and one 12 kW range. What is the neutral load of each?",
+         "Dryer 3.85 kW, range 5.6 kW. 220.61(B)(1): the neutral for a household range or dryer is 70% of its demand load. Dryer: demand 5.5 kW (220.54) × 0.70 = 3.85. Range: demand 8 kW (Table 220.55, Column C) × 0.70 = 5.6.", 3),
     ],
     "2026-11-25": [   # Annex C; Chapter 9 Tables 4 and 5, Notes 4 and 7
         ("How many 12 AWG THHN conductors fit in trade size ¾ EMT?", "16. All one size, so go straight to Annex C, Table C.1."),
@@ -314,11 +316,19 @@ NIGHTS = [
      ["Highlight 314.16(A), (B)(1)–(5), 314.28(A)(1)–(3)."],
      quiz("Exam_Prep_Unit_2", 1, 20), []),
     (D(2026, 11, 20), (2, 2), "Dwelling load · the standard method, Table 220.55",
-     [vid(U6, 0, 4640, "Unit 6, first half")],
+     # 2026-11-20: he asked whether this is on the journeyperson exam at all, then said to do whatever prepares him
+     # best. Read against the captions: the first 26 minutes of this video are the optional method (220.82), a
+     # whole-house calculation, and PSI's journeyperson outline has no calculations section. Everything tonight's
+     # twenty questions ask is taught from 26:35 on (lighting 27:23, appliances 39:00, dryers 42:00, ranges 45:00,
+     # A/C against heat 60:00, service conductors 69:00, the steps again 72:00). So the video starts at 26:25.
+     # The neutral rule, 220.61(B), is in the second half of the video, which no night plays: it is on the card instead.
+     [vid(U6, 1585, 4640, "Unit 6: the standard method, load by load")],
      [pages("Exam Prep", 369, 382, "Unit 6 Parts A and B")],
-     ["In your 2020 book the house's 3 VA per square foot is in 220.14(J) and its demand table is Table 220.42; Mike's 2023 book calls them 220.41 and Table 220.45. Table 220.12 in your book is for buildings that are not dwellings.",
-      "Your 2020 book leaves garages out of the square footage, along with open porches (220.11). The 2023 Code counts the garage. If Mike adds a garage's square feet, the 2020 exam does not.",
-      "PSI's own sample question is a range off Table 220.55. In your 2020 book the oven and cooktop rules are all in Note 4 under that table; Mike's 2023 book splits them into Notes 4, 5 and 6."],
+     ["The video starts at 26:25, where the standard method begins. The 26 minutes before it are the optional method, a whole-house calculation, and PSI's journeyperson outline has no calculations section. One line to know from it: 220.82(B), the first 10 kVA at 100% and the rest at 40%.",
+      "In your 2020 book the house's 3 VA per square foot is in 220.14(J) and its demand table is Table 220.42; Mike's 2023 book calls them 220.41 and Table 220.45. Table 220.12 in your book is for buildings that are not dwellings.",
+      "Your 2020 book leaves garages out of the square footage, along with open porches (220.11). The 2023 Code counts the garage. If Mike adds a garage's square feet, the 2020 exam does not. The electric-vehicle rule he reads near the hour mark, 220.57, is 2023 only: it is not in your book.",
+      "PSI's own sample question is a range off Table 220.55. In your 2020 book the oven and cooktop rules are all in Note 4 under that table; Mike's 2023 book splits them into Notes 4, 5 and 6.",
+      "One rule this stretch of video does not reach: the neutral for a household range or dryer is 70% of its demand load, 220.61(B)(1). Problem 4 uses it."],
      # 2026-11-19: Q1-14 of this unit are whole-house service calculations, five to ten minutes each, and Q10-12 are
      # keyed to the 2023 garage rule. Tonight's twenty are the one-step ones the first half of the video teaches:
      # appliances, dryers, ranges, cooking branch circuits, A/C against heat, the lighting demand. The old call
