@@ -549,6 +549,12 @@ def SIM_STEPS2(mins, n):
         f"Second pass, the last {mins - first} minutes: tap Second pass at the top. It shows only what you marked. Open the book on each one, code lookups first, calculations after. Tap ⚑ again when the book agrees with your answer.",
         "Do not grade while the clock has time and marks are left. Sim #2 was 46 of 70, three short of passing, graded with 45 minutes unused. 16 of its 23 wrong answers were given in under two minutes.",
         "After grading, read every miss and press Rewatch where it offers one. Mike writes to the 2023 code and your exam is the 2020: a miss on a rule that changed between them says so. Review stops at 60 min; the redo nights bring the misses back."]
+# 8. THE SEAT (2026-11-19). PSI's "Your Application was received" email for MD Journey Electrician is dated
+#    Nov 17 and allows ten business days to approve: Nov 18, 19, 20, 23, 24, 25, 27, 30, Dec 1, Dec 2.
+#    The plan's exam day is Sat Dec 19 and a December Saturday fills, so the night the ten days run out says so.
+DAY["2026-12-02"]["note"] = ("PSI got your application on Nov 17 and allows ten business days to approve it. They run out about today. "
+                             "Approval email in your work inbox? Book the seat tonight: a morning slot on Sat Dec 19, or the first morning after it. "
+                             "No email yet? Call PSI tomorrow and ask where the application stands.")
 for d in days:
     if d["kind"] == "sim" and d["day"] >= "2026-11-22":
         q = d["quiz"]
