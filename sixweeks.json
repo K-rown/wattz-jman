@@ -1088,6 +1088,7 @@
     }
    ],
    "drill_at": "2026-12-07",
+   "carried_to": "2026-12-08",
    "minutes_real": 85
   },
   {
@@ -1296,7 +1297,28 @@
    },
    "stars": [],
    "drill_at": "2026-12-09",
-   "minutes_real": 85
+   "carry": [
+    {
+     "day": "2026-11-20",
+     "from": "Fri Nov 20",
+     "say": "the 12 minutes of the dwelling video that work the lighting load",
+     "vsay": "the lighting load, worked on video",
+     "video": [
+      {
+       "id": "23EPUnit6",
+       "from": 1643,
+       "to": 2340,
+       "say": "The lighting load, worked: 3 VA a square foot, then the 35%"
+      }
+     ],
+     "steps": [
+      "He teaches from the 2023 book. When he says 220.41, open 220.14(J); when he says Table 220.45, open Table 220.42. Both are highlighted in your book already.",
+      "Three steps, the same for every house. One: square feet × 3 VA, plus 1,500 VA for each of the two small-appliance circuits, plus 1,500 VA for the laundry circuit (220.52). Two: Table 220.42, the first 3,000 VA counts in full and the rest at 35%. Three: add those two.",
+      "A 2,000 sq ft house: 6,000 + 3,000 + 1,500 = 10,500 VA. First 3,000 in full; the other 7,500 × 0.35 = 2,625. 3,000 + 2,625 = 5,625 VA."
+     ]
+    }
+   ],
+   "minutes_real": 95
   },
   {
    "day": "2026-11-25",
@@ -2744,7 +2766,24 @@
    "drills_in": [
     "2026-11-23"
    ],
-   "redo_max": 28,
+   "carry": [
+    {
+     "day": "2026-11-20",
+     "from": "Fri Nov 20",
+     "say": "the 20 dwelling load questions that were never taken",
+     "quiz": true,
+     "steps": [
+      "Book open at Article 220. Every question is one of these rules used once; all of them are on the pages you highlighted on Nov 20.",
+      "Lighting, 220.14(J) and Table 220.42: square feet × 3 VA, plus 3,000 VA for the two small-appliance circuits, plus 1,500 VA for the laundry. The first 3,000 VA in full, the rest at 35%.",
+      "Appliances, 220.53: four or more fastened in place count at 75% of their total; three or fewer count in full. Four that add up to 8,000 VA count as 6,000 VA.",
+      "Dryer, 220.54: 5,000 W or the nameplate, whichever is larger. A 4.5 kW dryer counts as 5 kW; a 6 kW dryer counts as 6 kW.",
+      "Range, Table 220.55, Column C: one range over 8¾ kW and up to 12 kW is 8 kW. Over 12 kW, Note 1 adds 5% for each kW over 12, and half a kW or more counts as a whole one. A 14 kW range: 2 over, 8 × 1.10 = 8.8 kW. A 17.5 kW range: 5.5 over counts as 6, 8 × 1.30 = 10.4 kW.",
+      "Oven and cooktop, Note 4 under Table 220.55: one wall oven or one cooktop counts at its nameplate. A cooktop and up to two wall ovens on one circuit in the same room: add the nameplates and treat the total as one range. A 6 kW cooktop and two 4 kW ovens are one 14 kW range, 8.8 kW.",
+      "Air conditioning against heat, 220.60: count only the larger. Heat counts in full (220.51). A/C in VA is amperes × volts: 25 A at 240 V is 6,000 VA, so against 10 kW of heat you count the 10 kW."
+     ]
+    }
+   ],
+   "redo_max": 8,
    "minutes_real": 102
   },
   {

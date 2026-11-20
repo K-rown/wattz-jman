@@ -532,11 +532,31 @@ assert round((dur(U2) - CARRY_FROM) / 60 / PACE) == 23
 DAY["2026-11-19"]["carried_to"] = "2026-11-23"
 DAY["2026-12-05"]["carry"] = [{"day": "2026-11-12", "from": "Fri Nov 13", "say": "the Ohm's and Watt's law quiz that was never taken", "quiz": True}]
 DAY["2026-11-12"]["carried_to"] = "2026-12-05"
+# 2b. FRI NOV 20 DID NOT LAND (2026-11-20). He sat down to it at the shop at four, the video put him to sleep, and
+#     reading the rules cold did not teach him the lighting load: he could not find the 3 VA in his book until he
+#     was told 220.14(J), because Mike says 220.41. Nothing was graded. So the lighting load, the one rule with
+#     three steps, is watched on Tue Nov 24 (12 minutes: 27:23 to 39:00, where Mike works it), and the twenty
+#     questions go to Tue Dec 8, the night that already redoes 220 misses, with every rule written above them under
+#     its 2020 number. That night redoes twenty fewer misses to hold the same length.
+DAY["2026-11-24"]["carry"] = [{"day": "2026-11-20", "from": "Fri Nov 20", "say": "the 12 minutes of the dwelling video that work the lighting load", "vsay": "the lighting load, worked on video",
+                               "video": [vid(U6, 1643, 2340, "The lighting load, worked: 3 VA a square foot, then the 35%")],
+                               "steps": ["He teaches from the 2023 book. When he says 220.41, open 220.14(J); when he says Table 220.45, open Table 220.42. Both are highlighted in your book already.",
+                                         "Three steps, the same for every house. One: square feet × 3 VA, plus 1,500 VA for each of the two small-appliance circuits, plus 1,500 VA for the laundry circuit (220.52). Two: Table 220.42, the first 3,000 VA counts in full and the rest at 35%. Three: add those two.",
+                                         "A 2,000 sq ft house: 6,000 + 3,000 + 1,500 = 10,500 VA. First 3,000 in full; the other 7,500 × 0.35 = 2,625. 3,000 + 2,625 = 5,625 VA."]}]
+DAY["2026-12-08"]["carry"] = [{"day": "2026-11-20", "from": "Fri Nov 20", "say": "the 20 dwelling load questions that were never taken", "quiz": True,
+                               "steps": ["Book open at Article 220. Every question is one of these rules used once; all of them are on the pages you highlighted on Nov 20.",
+                                         "Lighting, 220.14(J) and Table 220.42: square feet × 3 VA, plus 3,000 VA for the two small-appliance circuits, plus 1,500 VA for the laundry. The first 3,000 VA in full, the rest at 35%.",
+                                         "Appliances, 220.53: four or more fastened in place count at 75% of their total; three or fewer count in full. Four that add up to 8,000 VA count as 6,000 VA.",
+                                         "Dryer, 220.54: 5,000 W or the nameplate, whichever is larger. A 4.5 kW dryer counts as 5 kW; a 6 kW dryer counts as 6 kW.",
+                                         "Range, Table 220.55, Column C: one range over 8¾ kW and up to 12 kW is 8 kW. Over 12 kW, Note 1 adds 5% for each kW over 12, and half a kW or more counts as a whole one. A 14 kW range: 2 over, 8 × 1.10 = 8.8 kW. A 17.5 kW range: 5.5 over counts as 6, 8 × 1.30 = 10.4 kW.",
+                                         "Oven and cooktop, Note 4 under Table 220.55: one wall oven or one cooktop counts at its nameplate. A cooktop and up to two wall ovens on one circuit in the same room: add the nameplates and treat the total as one range. A 6 kW cooktop and two 4 kW ovens are one 14 kW range, 8.8 kW.",
+                                         "Air conditioning against heat, 220.60: count only the larger. Heat counts in full (220.51). A/C in VA is amperes × volts: 25 A at 240 V is 6,000 VA, so against 10 kW of heat you count the 10 kW."]}]
+DAY["2026-11-20"]["carried_to"] = "2026-12-08"
 # 3. Minutes that are true. A question that is a whole calculation gets two minutes; a reading night says how
 #    long the reading is; a notebook night redoes only as many misses as the night holds.
 for _day, _m in {"2026-12-01": 2, "2026-12-04": 2, "2026-12-07": 2, "2026-12-10": 2}.items(): DAY[_day]["minq"] = _m
 for _day, _m in {"2026-11-23": 25, "2026-11-26": 30}.items(): DAY[_day]["read_min"] = _m
-for _day, _m in {"2026-12-05": 36, "2026-12-07": 26, "2026-12-08": 28, "2026-12-09": 26, "2026-12-10": 22, "2026-12-11": 30}.items(): DAY[_day]["redo_max"] = _m
+for _day, _m in {"2026-12-05": 36, "2026-12-07": 26, "2026-12-08": 8, "2026-12-09": 26, "2026-12-10": 22, "2026-12-11": 30}.items(): DAY[_day]["redo_max"] = _m
 DAY["2026-12-07"]["redo_sort"] = "new"; DAY["2026-12-11"]["redo_sort"] = "twice"
 # 4. Exam week is rows to press, like every other night: twenty of the misses, then a drill.
 for _day, _re, _sort, _what in [
