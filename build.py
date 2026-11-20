@@ -60,6 +60,17 @@ for ch, printed in VOL2_PRINTED.items():
         u["est"] = True
 
 # ---- pack the units and their quizzes into days (wall-clock seconds) ----
+# ---- the figures a few questions need (figures.json), put inside the page as data so they show offline too ----
+def _with_figs(Q):
+    import base64
+    F = json.load(open("figures.json", encoding="utf-8")) if __import__("os").path.exists("figures.json") else {}
+    for k, path in F.items():
+        if k.startswith("_"): continue
+        qk, n = k.rsplit("#", 1)
+        hit = [q for q in Q[qk]["questions"] if str(q["n"]) == n]
+        assert hit, "figures.json names a question that is not in the bank: " + k
+        hit[0]["fig"] = "data:image/png;base64," + base64.b64encode(open(path, "rb").read()).decode()
+    return Q
 QUIZZES = json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}
 def quiz_key(q): return (q["book"] + " " + q["label"].replace(" quiz", "")).replace(" ", "_")
 def quiz_len(q): return len(QUIZZES.get(quiz_key(q), {}).get("questions", []))
@@ -311,7 +322,7 @@ DATA = {
     # "day 3 is done" which videos day 3 covered, so that progress becomes ticks.
     "daymap": {str(s["n"]): sorted({p["unit"]["id"] for g in s["groups"] for p in g["parts"]})
                for s in sessions if s.get("groups")},
-    "quizzes": (json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}),
+    "quizzes": _with_figs(json.load(open("quizzes.json", encoding="utf-8")) if __import__("os").path.exists("quizzes.json") else {}),
     "sectime": (json.load(open("sections.json", encoding="utf-8")) if __import__("os").path.exists("sections.json") else {}),
     # every section Mike's book covers for a video's article, in book order (book_sections.py)
     "booksec": (json.load(open("book_sections.json", encoding="utf-8")) if __import__("os").path.exists("book_sections.json") else {}),
