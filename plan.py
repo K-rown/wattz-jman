@@ -188,7 +188,7 @@ WORK = {
     ],
     # From here on (2026-11-19) a problem may name its own minutes as a third item; two if it does not.
     # Every value below was read off the 2020 tables and the arithmetic redone before it was written.
-    "2026-11-20": [   # Table 220.12 and Table 220.42 (2020 numbers), 220.52, 220.54, Table 220.55
+    "2026-11-20": [   # 220.14(J) and Table 220.42 (2020 numbers), 220.52, 220.54, Table 220.55
         ("A 2,000 sq ft house. What is the demand load for the general lighting, the two small-appliance circuits and the laundry circuit together?",
          "5,625 VA. Lighting 2,000 × 3 VA = 6,000. Two small-appliance circuits = 3,000. Laundry = 1,500. Total 10,500. Table 220.42: the first 3,000 at 100% = 3,000; the other 7,500 at 35% = 2,625. 3,000 + 2,625 = 5,625. (Mike's 2023 book calls these 220.41 and Table 220.45.)", 3),
         ("Table 220.55, Column C. What is the demand load for (a) one 12 kW range, (b) five 12 kW ranges, (c) one 16 kW range?",
@@ -316,7 +316,7 @@ NIGHTS = [
     (D(2026, 11, 20), (2, 2), "Dwelling load · the standard method, Table 220.55",
      [vid(U6, 0, 4640, "Unit 6, first half")],
      [pages("Exam Prep", 369, 382, "Unit 6 Parts A and B")],
-     ["In your 2020 book the lighting load is Table 220.12 and its demand table is Table 220.42; Mike's 2023 book calls them 220.41 and Table 220.45.",
+     ["In your 2020 book the house's 3 VA per square foot is in 220.14(J) and its demand table is Table 220.42; Mike's 2023 book calls them 220.41 and Table 220.45. Table 220.12 in your book is for buildings that are not dwellings.",
       "Your 2020 book leaves garages out of the square footage, along with open porches (220.11). The 2023 Code counts the garage. If Mike adds a garage's square feet, the 2020 exam does not.",
       "PSI's own sample question is a range off Table 220.55. In your 2020 book the oven and cooktop rules are all in Note 4 under that table; Mike's 2023 book splits them into Notes 4, 5 and 6."],
      # 2026-11-19: Q1-14 of this unit are whole-house service calculations, five to ten minutes each, and Q10-12 are
